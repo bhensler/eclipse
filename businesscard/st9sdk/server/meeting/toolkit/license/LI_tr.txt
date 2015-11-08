@@ -1,0 +1,41 @@
+LÝSANS BÝLGÝLERÝ
+
+Aþaðýda listelenen programlar, Garanti Verilmeyen Programlar Ýçin Uluslararasý Lisans Sözleþmesi koþullarýna ek olarak aþaðýdaki koþullar kapsamýnda lisanslanýr.
+
+Program Adý: IBM Sametime Remote Meeting Client SDK
+Program Numarasý: 5724-J23
+
+Sýnýrlý Kullaným Programý
+
+Bu Program yalnýzca aþaðýda belirtilen Adý Belirlenmiþ Program(lar)la veya bunlarýn halefleriyle kullanýlmak üzere saðlanýr. Lisans Alan Tarafýn, bu Programý diðer herhangi bir yazýlýmla baðlantýlý olarak kullanmasý yasaktýr.
+
+Adý Belirlenmiþ Program(lar):
+IBM Sametime Standard or IBM Sametime Advanced
+
+Geliþtirme Aracý
+
+Bu Program, yazýlým uygulamalarýnýn ve sistemlerinin geliþtirilmesine yardýmcý olmak üzere tasarlanmýþtýr. Lisans Alan Taraf yalnýzca, bu Programý kullanarak geliþtirdiði uygulamalar ve sistemlerden sorumludur ve bu uygulamalar ve sistemlerle ilgili olarak ortaya çýkan tüm riskleri üstlenir.
+
+Yeniden Daðýtýlabilenler
+
+Bu Program, Yeniden Daðýtýlabilenler olarak adlandýrýlan bileþenleri içeriyorsa bunlar, bu Programla birlikte gönderilen REDIST adlý dosyada tanýmlanýr. Bu Sözleþmede saðlanan lisans haklarýna ek olarak Lisans Alan Taraf Yeniden Daðýtýlabilenleri aþaðýdaki koþullara uygun olarak daðýtabilir:
+1) Yeniden Daðýtým iþlemi, yalnýzca nesne kodu biçiminde ve bu Programla birlikte gönderilen REDIST adlý dosyada veya diðer belgelerde yer alan yönergelere ve belirtimlere uygun olarak gerçekleþtirilebilir;
+2) Bu Programla birlikte gönderilen belgelerde Lisans Alan Tarafa, Yeniden Daðýtýlabilenleri deðiþtirme izni açýkça veriliyorsa, Lisans Alan Tarafýn yapacaðý deðiþikliklerin ilgili belgelerdeki yönergelerin ve belirtimlerin tümüne uygun olmasý gerekir; eðer varsa, bu tür deðiþiklikler, Yeniden Daðýtýlabilenler olarak deðerlendirilmelidir;
+3) Yeniden Daðýtýlabilenler, yalnýzca bu Program kullanýlarak geliþtirilen Lisans Alan Tarafýn Uygulamasýnýn ("Lisans Alan Tarafýn Uygulamasý") bir parçasý olarak ve yalnýzca Lisans Alan Tarafýn müþterilerini, ilgili Uygulamayý kullanmalarýyla baðlantýlý olarak desteklemek amacýyla daðýtýlabilir. Lisans Alan Tarafýn Uygulamasýnýn son kullanýcýlara, Lisans Alan Tarafýn yazýlým ürününün son kullanýcýlar tarafýndan edinilmesinde bu Yeniden Daðýtýlabilenlerin temel motivasyon olmayacaðý þekilde, önemli bir katma deðer saðlamasý gerekir;
+4) Yeniden Daðýtýlabilenlerin Java Çalýþtýrma Zamaný Ortamý (Java Runtime Environment) içermesi durumunda, Uygulama, yalnýzca genel bilgisayar aygýtlarýnda (örneðin: dizüstü bilgisayarlar, masaüstü bilgisayarlar ve sunucular) çalýþtýrýlmak üzere tasarlandýysa ve elde taþýnabilen veya yaygýn olarak kullanýlan diðer aygýtlarda (örneðin: bir mikroiþlemci içeren ancak bilgiiþlem, birincil çalýþma amaçlarý olarak belirlenmiþ olmayan aygýtlar) çalýþtýrýlmak üzere tasarlanmadýysa, Lisans Alan Tarafýn kendi Uygulamasýyla birlikte diðer Java-dýþý Yeniden Daðýtýlabilenleri de içermesi gerekir;
+5) Lisans Alan Taraf, Yeniden Daðýtýlabilenlerde yer alan herhangi bir telif hakký bildirimini veya bildirim dosyasýný kaldýramaz;
+6) Lisans Alan Taraf, Lisans Alan Tarafýn Uygulamasýnýn kullanýlmasý veya daðýtýlmasýndan dolayý yöneltilen iddialara karþý IBM'i, IBM'in saðlayýcýlarýný ve distribütörlerini tazmin etmekle yükümlüdür;
+7) Lisans Alan Taraf, orijinal Yeniden Daðýtýlabilen dosyalar/modüller ile ayný yol adýný kullanamaz;
+8) Lisans Alan Taraf, IBM'in, saðlayýcýlarýnýn veya distribütörlerinin önceden yazýlý izni olmadan, IBM'in, saðlayýcýlarýnýn veya distribütörlerinin adlarýný veya ticari markalarýný, Lisans Alan Tarafýn Uygulamasýnýn pazarlanmasýyla baðlantýlý olarak kullanamaz;
+9) IBM, saðlayýcýlarý veya distribütörleri, Yeniden Daðýtýlabilenleri ve iliþkili belgeleri herhangi bir destek yükümlülüðü olmaksýzýn ve MÜLKÝYETE, HAK ÝHLALÝ YAPILMAYACAÐINA VEYA MÜDAHALEYE DAÝR GARANTÝLER ÝLE TÝCARÝLÝÐE VE BELÝRLÝ BÝR AMACA UYGUNLUÐA DAÝR ZIMNÝ GARANTÝLER VE KOÞULLAR DA DAHÝL OLMAK, ANCAK TÜMÜ BUNLARLA SINIRLI OLMAMAK ÜZERE, AÇIK VEYA ZIMNÝ HÝÇBÝR GARANTÝ VERMEKSÝZÝN "OLDUÐU GÝBÝ" ESASIYLA SAÐLAR;
+10) Lisans Alan Tarafýn Uygulamasýnda ve Yeniden Daðýtýlabilenlerde yaptýðý deðiþikliklere iliþkin tüm teknik desteðin saðlanmasýndan tamamen Lisans Alan Taraf sorumludur; ve
+11) Lisans Alan Taraf, Uygulamasýnýn son kullanýcýsý ile gerçekleþtireceði lisans sözleþmesinde, bu Yeniden Daðýtýlabilenlerin veya bunlardaki deðiþikliklerin, i) Uygulamasýnýn geçerli kýlýnmasý dýþýnda bir amaçla kullanýlamayacaðý, ii) kopyalanamayacaðý (yedekleme amacý dýþýnda), iii) Lisans Alan Tarafýn Uygulamasýndan ayrý olarak baþkalarýna daðýtýlamayacaðý veya devredilemeyeceði ya da iv) geçerli yasalarýn sözleþme ile deðiþtirilmesine olanak tanýmayarak açýkça izin verdiði durumlar dýþýnda, ters çevrilemeyeceði, ters derlenemeyeceði veya baþka bir yolla çevrilemeyeceði konusunda son kullanýcýyý önceden bilgilendirecektir. Ayrýca, Lisans Alan Tarafýn lisans sözleþmesindeki koþullarýn, IBM açýsýndan, en az bu Sözleþmede yer alan koþullar kadar koruyucu olmasý gereklidir.
+
+Kaynak Bileþenler ve Örnek Malzemeler
+
+Bu Program, kaynak kodu biçimindeki bazý bileþenleri ("Kaynak Bileþenler") ve Örnek Malzemeler olarak tanýmlanan diðer malzemeleri içerebilir. Lisans Alan Taraf, Kaynak Bileþenleri ve Örnek Malzemeleri ancak Kaynak Bileþenleri ve Örnek Malzemeleri kullanýmýnýn bu Sözleþme kapsamýndaki lisans haklarý tarafýndan çizilen sýnýrlar içinde kalmasý ve ancak Kaynak Bileþenlerde ya da Örnek Malzemelerde içerilen hiçbir telif hakký bilgisini veya bildirimini deðiþtirmemek veya silmemek koþuluyla dahili olarak kullanmak amacýyla kopyalayabilir ve kullanabilir. IBM, Kaynak Bileþenleri ve Örnek Malzemeleri, destek yükümlülüðü olmaksýzýn ve MÜLKÝYETE, HAK ÝHLALÝ YAPILMAYACAÐINA VEYA MÜDAHALE EDÝLMEYECEÐÝNE DAÝR GARANTÝLER ÝLE TÝCARÝLÝÐE VE BELÝRLÝ BÝR AMACA UYGUNLUÐA DAÝR ZIMNÝ GARANTÝLER VE KOÞULLAR DA DAHÝL OLMAK, ANCAK TÜMÜ BUNLARLA SINIRLI OLMAMAK ÜZERE, AÇIK VEYA ZIMNÝ HÝÇBÝR GARANTÝ VERMEKSÝZÝN "OLDUÐU GÝBÝ" ESASIYLA SAÐLAR.
+
+Lisans Alan Taraf, bir Programýn REDIST dosyasýnda listelenen Kaynak Bileþenlerin ve Örnek Malzemelerin deðiþtirilmiþ sürümlerini, bu lisansta ve REDIST dosyasýnda yer alan koþullara uygun olarak yeniden daðýtabilir.
+
+D/N:  L-KBIM-8G3SXW
+P/N:  L-KBIM-8G3SXW 

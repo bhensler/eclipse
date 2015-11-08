@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+  <feature id="com.ibm.collaboration.realtime.sample.telephonenumberservice.feature" patch="false" url="features/com.ibm.collaboration.realtime.sample.telephonenumberservice.feature_8.5.2.jar" version="8.5.2">
+    <category name="IBM Sametime" />
+  </feature>
+  <feature id="com.ibm.collaboration.realtime.sample.telephony.callaction.feature" patch="false" url="features/com.ibm.collaboration.realtime.sample.telephony.callaction.feature_8.5.2.jar" version="8.5.2">
+    <category name="IBM Sametime" />
+  </feature>
+  <feature id="com.ibm.collaboration.realtime.sample.telephony.participant.display.feature" patch="false" url="features/com.ibm.collaboration.realtime.sample.telephony.participant.display.feature_8.5.2.jar" version="8.5.2">
+    <category name="IBM Sametime" />
+  </feature>
+  <category-def label="IBM Sametime" name="IBM Sametime">
+    <description>IBM Sametime</description>
+  </category-def>
+</site>

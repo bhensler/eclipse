@@ -1,0 +1,16 @@
+com.ibm.collaboration.realtime.sample.acronymexpander
+com.ibm.collaboration.realtime.sample.alerts
+com.ibm.collaboration.realtime.sample.branding
+com.ibm.collaboration.realtime.sample.buddynote
+com.ibm.collaboration.realtime.sample.cwbrowser
+com.ibm.collaboration.realtime.sample.eventlogger
+com.ibm.collaboration.realtime.sample.login.extensibility
+com.ibm.collaboration.realtime.sample.quickfindhistory
+com.ibm.collaboration.realtime.sample.quickresponse
+com.ibm.collaboration.realtime.sample.recentbuddies
+com.ibm.collaboration.realtime.sample.recentbuddies.servlet
+com.ibm.collaboration.realtime.sample.recentbuddies.ui
+com.ibm.collaboration.realtime.sample.snippets
+com.ibm.collaboration.realtime.sample.snippets.actions
+com.ibm.collaboration.realtime.sample.snippets.dialogs
+com.ibm.collaboration.realtime.sample.status.ext

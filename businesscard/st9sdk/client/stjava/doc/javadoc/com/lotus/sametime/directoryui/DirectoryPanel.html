@@ -1,0 +1,1109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>DirectoryPanel</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="DirectoryPanel";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/directoryui/DirectoryNode.html" title="class in com.lotus.sametime.directoryui"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/directoryui/DirectoryPanel.html" target="_top">Frames</a></li>
+<li><a href="DirectoryPanel.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_java.awt.Panel">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_java.awt.Component">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.directoryui</div>
+<h2 title="Class DirectoryPanel" class="title">Class DirectoryPanel</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Component</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Container</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Panel</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.directoryui.DirectoryPanel</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a>, java.awt.image.ImageObserver, java.awt.MenuContainer, java.io.Serializable, javax.accessibility.Accessible</dd>
+</dl>
+<hr>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;
+<div class="deprecatedContent">due to the availability of additional non-AWT GUI frameworks.
+             This component is no longer supported.</div>
+</div>
+<br>
+<pre>public class <span class="strong">DirectoryPanel</span>
+extends java.awt.Panel
+implements <a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a></pre>
+<div class="block">The panel provides a view of the available directories and their contents.
+ Enables performing the following operations: Select a specific directory from
+ the list of available directories, browse and search for users and groups
+ within a directory, and extract the selected user and group information.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../serialized-form.html#com.lotus.sametime.directoryui.DirectoryPanel">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Panel">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Panel</h3>
+<code>java.awt.Panel.AccessibleAWTPanel</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Container">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Container</h3>
+<code>java.awt.Container.AccessibleAWTContainer</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Component">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Component</h3>
+<code>java.awt.Component.AccessibleAWTComponent, java.awt.Component.BaselineResizeBehavior, java.awt.Component.BltBufferStrategy, java.awt.Component.FlipBufferStrategy</code></li>
+</ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_java.awt.Component">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;java.awt.Component</h3>
+<code>BOTTOM_ALIGNMENT, CENTER_ALIGNMENT, LEFT_ALIGNMENT, RIGHT_ALIGNMENT, TOP_ALIGNMENT</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_java.awt.image.ImageObserver">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;java.awt.image.ImageObserver</h3>
+<code>ABORT, ALLBITS, ERROR, FRAMEBITS, HEIGHT, PROPERTIES, SOMEBITS, WIDTH</code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#DirectoryPanel(com.lotus.sametime.core.comparch.STSession)">DirectoryPanel</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructs the default directory panel.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#DirectoryPanel(com.lotus.sametime.core.comparch.STSession, java.lang.String)">DirectoryPanel</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session,
+              java.lang.String&nbsp;bundleFileName)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructs the directory panel with a specific resource bundle.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#actionPerformed(java.awt.event.ActionEvent)">actionPerformed</a></strong>(java.awt.event.ActionEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Handle action events</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#addDirectoryListViewListener(com.lotus.sametime.directoryui.DirectoryListViewListener)">addDirectoryListViewListener</a></strong>(<a href="../../../../com/lotus/sametime/directoryui/DirectoryListViewListener.html" title="interface in com.lotus.sametime.directoryui">DirectoryListViewListener</a>&nbsp;listener)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Adds the specifed new DirectoryListViewListener to receive directory view
+ events.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#addNotify()">addNotify</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Makes this component displayable by connecting it to a native screen
+ resource.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#allDirectoriesQueried(com.lotus.sametime.directory.DirectoryEvent)">allDirectoriesQueried</a></strong>(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">All directories query response</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#allDirectoriesQueryFailed(com.lotus.sametime.directory.DirectoryEvent)">allDirectoriesQueryFailed</a></strong>(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">All directories query failed</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#cleanup()">cleanup</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#createErrorDialog()">createErrorDialog</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Helper function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#createListeners()">createListeners</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates the inner class listeners.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#directoryOpened(com.lotus.sametime.directory.DirectoryEvent)">directoryOpened</a></strong>(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Directory opened</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#directoryOpenFailed(com.lotus.sametime.directory.DirectoryEvent)">directoryOpenFailed</a></strong>(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Request to open the Directory failed</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#displayErrorMessage(java.lang.String)">displayErrorMessage</a></strong>(java.lang.String&nbsp;text)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Displays error message.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#enableMultiSelection(boolean)">enableMultiSelection</a></strong>(boolean&nbsp;b)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Enables/Disables multi selection in the list.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#enableSubComponents(boolean)">enableSubComponents</a></strong>(boolean&nbsp;b)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Helper function.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#entriesQueried(com.lotus.sametime.directory.DirectoryEvent)">entriesQueried</a></strong>(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Entries query response</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#entriesQueryFailed(com.lotus.sametime.directory.DirectoryEvent)">entriesQueryFailed</a></strong>(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Entries query failed</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Enumeration</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#getActionKeys()">getActionKeys</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#getColumnHeader(com.lotus.sametime.guiutils.tree.ColumnAttributes)">getColumnHeader</a></strong>(<a href="../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets the column header.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#getContent(com.lotus.sametime.guiutils.tree.ColumnAttributes, java.util.Hashtable)">getContent</a></strong>(<a href="../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column,
+          java.util.Hashtable&nbsp;values)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Provides content to be displayed in a column according to the specified
+ attribute value.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#getEmptyContent(com.lotus.sametime.guiutils.tree.ColumnAttributes)">getEmptyContent</a></strong>(<a href="../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets the display for an empty column.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Vector</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#getSelectedEntries()">getSelectedEntries</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets selected entries from view.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#initializeUI()">initializeUI</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates and lays out AWT components.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#itemStateChanged(java.awt.event.ItemEvent)">itemStateChanged</a></strong>(java.awt.event.ItemEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">handle item events</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#loggedIn(com.lotus.sametime.community.LoginEvent)">loggedIn</a></strong>(<a href="../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Logged in event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#loggedOut(com.lotus.sametime.community.LoginEvent)">loggedOut</a></strong>(<a href="../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Logged out event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#nodeDoubleClicked(com.lotus.sametime.guiutils.tree.TreeNode)">nodeDoubleClicked</a></strong>(<a href="../../../../com/lotus/sametime/guiutils/tree/TreeNode.html" title="class in com.lotus.sametime.guiutils.tree">TreeNode</a>&nbsp;node)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Node was double clicked.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#paint(java.awt.Graphics)">paint</a></strong>(java.awt.Graphics&nbsp;g)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Paints this component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#removeDirectoryListViewListener(com.lotus.sametime.directoryui.DirectoryListViewListener)">removeDirectoryListViewListener</a></strong>(<a href="../../../../com/lotus/sametime/directoryui/DirectoryListViewListener.html" title="interface in com.lotus.sametime.directoryui">DirectoryListViewListener</a>&nbsp;listener)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the specified DirectoryListViewListener so that it no longer
+ receives directory view events.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#removeNotify()">removeNotify</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Makes this component undisplayable by destroying its native screen
+ resource.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#removeServiceListeners()">removeServiceListeners</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the specified listeners to the services so that it no longer
+ receives directory events.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#selectionChanged(java.util.Vector)">selectionChanged</a></strong>(java.util.Vector&nbsp;selectedNodes)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Selection state changed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#sendEvent(com.lotus.sametime.directoryui.DirectoryListViewEvent)">sendEvent</a></strong>(<a href="../../../../com/lotus/sametime/directoryui/DirectoryListViewEvent.html" title="class in com.lotus.sametime.directoryui">DirectoryListViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Dispatch a 'selection changed' event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#serviceAvailable(com.lotus.sametime.directory.DirectoryEvent)">serviceAvailable</a></strong>(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notification received from the storage component when the service is up.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#serviceUnavailable(com.lotus.sametime.directory.DirectoryEvent)">serviceUnavailable</a></strong>(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notification received from the directory component when the service is
+ down.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#setMaxEntries(short)">setMaxEntries</a></strong>(short&nbsp;chunkSize)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Sets the maximum enteries displayed in a single chunk.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#setShowGroups(boolean)">setShowGroups</a></strong>(boolean&nbsp;show_groups)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#textValueChanged(java.awt.event.TextEvent)">textValueChanged</a></strong>(java.awt.event.TextEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Text value was changed in the search text field.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/directoryui/DirectoryPanel.html#updateStartEndLabel(com.lotus.sametime.core.types.STObject[])">updateStartEndLabel</a></strong>(<a href="../../../../com/lotus/sametime/core/types/STObject.html" title="interface in com.lotus.sametime.core.types">STObject</a>[]&nbsp;entries)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Helper function.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Panel">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Panel</h3>
+<code>getAccessibleContext</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Container">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Container</h3>
+<code>add, add, add, add, add, addContainerListener, addImpl, addPropertyChangeListener, addPropertyChangeListener, applyComponentOrientation, areFocusTraversalKeysSet, countComponents, deliverEvent, doLayout, findComponentAt, findComponentAt, getAlignmentX, getAlignmentY, getComponent, getComponentAt, getComponentAt, getComponentCount, getComponents, getComponentZOrder, getContainerListeners, getFocusTraversalKeys, getFocusTraversalPolicy, getInsets, getLayout, getListeners, getMaximumSize, getMinimumSize, getMousePosition, getPreferredSize, insets, invalidate, isAncestorOf, isFocusCycleRoot, isFocusCycleRoot, isFocusTraversalPolicyProvider, isFocusTraversalPolicySet, isValidateRoot, layout, list, list, locate, minimumSize, paintComponents, paramString, preferredSize, print, printComponents, processContainerEvent, processEvent, remove, remove, removeAll, removeContainerListener, setComponentZOrder, setFocusCycleRoot, setFocusTraversalKeys, setFocusTraversalPolicy, setFocusTraversalPolicyProvider, setFont, setLayout, transferFocusDownCycle, update, validate, validateTree</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Component">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Component</h3>
+<code>action, add, addComponentListener, addFocusListener, addHierarchyBoundsListener, addHierarchyListener, addInputMethodListener, addKeyListener, addMouseListener, addMouseMotionListener, addMouseWheelListener, bounds, checkImage, checkImage, coalesceEvents, contains, contains, createImage, createImage, createVolatileImage, createVolatileImage, disable, disableEvents, dispatchEvent, enable, enable, enableEvents, enableInputMethods, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, getBackground, getBaseline, getBaselineResizeBehavior, getBounds, getBounds, getColorModel, getComponentListeners, getComponentOrientation, getCursor, getDropTarget, getFocusCycleRootAncestor, getFocusListeners, getFocusTraversalKeysEnabled, getFont, getFontMetrics, getForeground, getGraphics, getGraphicsConfiguration, getHeight, getHierarchyBoundsListeners, getHierarchyListeners, getIgnoreRepaint, getInputContext, getInputMethodListeners, getInputMethodRequests, getKeyListeners, getLocale, getLocation, getLocation, getLocationOnScreen, getMouseListeners, getMouseMotionListeners, getMousePosition, getMouseWheelListeners, getName, getParent, getPeer, getPropertyChangeListeners, getPropertyChangeListeners, getSize, getSize, getToolkit, getTreeLock, getWidth, getX, getY, gotFocus, handleEvent, hasFocus, hide, imageUpdate, inside, isBackgroundSet, isCursorSet, isDisplayable, isDoubleBuffered, isEnabled, isFocusable, isFocusOwner, isFocusTraversable, isFontSet, isForegroundSet, isLightweight, isMaximumSizeSet, isMinimumSizeSet, isOpaque, isPreferredSizeSet, isShowing, isValid, isVisible, keyDown, keyUp, list, list, list, location, lostFocus, mouseDown, mouseDrag, mouseEnter, mouseExit, mouseMove, mouseUp, move, nextFocus, paintAll, postEvent, prepareImage, prepareImage, printAll, processComponentEvent, processFocusEvent, processHierarchyBoundsEvent, processHierarchyEvent, processInputMethodEvent, processKeyEvent, processMouseEvent, processMouseMotionEvent, processMouseWheelEvent, remove, removeComponentListener, removeFocusListener, removeHierarchyBoundsListener, removeHierarchyListener, removeInputMethodListener, removeKeyListener, removeMouseListener, removeMouseMotionListener, removeMouseWheelListener, removePropertyChangeListener, removePropertyChangeListener, repaint, repaint, repaint, repaint, requestFocus, requestFocus, requestFocusInWindow, requestFocusInWindow, reshape, resize, resize, revalidate, setBackground, setBounds, setBounds, setComponentOrientation, setCursor, setDropTarget, setEnabled, setFocusable, setFocusTraversalKeysEnabled, setForeground, setIgnoreRepaint, setLocale, setLocation, setLocation, setMaximumSize, setMinimumSize, setName, setPreferredSize, setSize, setSize, setVisible, show, show, size, toString, transferFocus, transferFocusBackward, transferFocusUpCycle</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="DirectoryPanel(com.lotus.sametime.core.comparch.STSession, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DirectoryPanel</h4>
+<pre>public&nbsp;DirectoryPanel(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session,
+              java.lang.String&nbsp;bundleFileName)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructs the directory panel with a specific resource bundle.
+ Specifying a bundle name enables modifying the text labels within the
+ panel.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>session</code> - The session object associated with this component.</dd><dd><code>bundleFileName</code> - PropertyResourceBundle file name.</dd></dl>
+</li>
+</ul>
+<a name="DirectoryPanel(com.lotus.sametime.core.comparch.STSession)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DirectoryPanel</h4>
+<pre>public&nbsp;DirectoryPanel(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructs the default directory panel.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>session</code> - The session object associated with this component.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getSelectedEntries()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSelectedEntries</h4>
+<pre>public&nbsp;java.util.Vector&nbsp;getSelectedEntries()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets selected entries from view.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The vector of the Sametime objects which are currentlly selected.</dd></dl>
+</li>
+</ul>
+<a name="initializeUI()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initializeUI</h4>
+<pre>protected&nbsp;void&nbsp;initializeUI()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates and lays out AWT components.</div>
+</li>
+</ul>
+<a name="cleanup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cleanup</h4>
+<pre>public&nbsp;void&nbsp;cleanup()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="enableSubComponents(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>enableSubComponents</h4>
+<pre>protected&nbsp;void&nbsp;enableSubComponents(boolean&nbsp;b)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Helper function. Enables/Disables sub components.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>b</code> - </dd></dl>
+</li>
+</ul>
+<a name="addDirectoryListViewListener(com.lotus.sametime.directoryui.DirectoryListViewListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addDirectoryListViewListener</h4>
+<pre>public&nbsp;void&nbsp;addDirectoryListViewListener(<a href="../../../../com/lotus/sametime/directoryui/DirectoryListViewListener.html" title="interface in com.lotus.sametime.directoryui">DirectoryListViewListener</a>&nbsp;listener)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Adds the specifed new DirectoryListViewListener to receive directory view
+ events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - DirectoryListViewListener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeDirectoryListViewListener(com.lotus.sametime.directoryui.DirectoryListViewListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeDirectoryListViewListener</h4>
+<pre>public&nbsp;void&nbsp;removeDirectoryListViewListener(<a href="../../../../com/lotus/sametime/directoryui/DirectoryListViewListener.html" title="interface in com.lotus.sametime.directoryui">DirectoryListViewListener</a>&nbsp;listener)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the specified DirectoryListViewListener so that it no longer
+ receives directory view events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - DirectoryListViewListener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="sendEvent(com.lotus.sametime.directoryui.DirectoryListViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendEvent</h4>
+<pre>protected&nbsp;void&nbsp;sendEvent(<a href="../../../../com/lotus/sametime/directoryui/DirectoryListViewEvent.html" title="class in com.lotus.sametime.directoryui">DirectoryListViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Dispatch a 'selection changed' event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd></dl>
+</li>
+</ul>
+<a name="paint(java.awt.Graphics)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>paint</h4>
+<pre>public&nbsp;void&nbsp;paint(java.awt.Graphics&nbsp;g)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Paints this component.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>paint</code>&nbsp;in class&nbsp;<code>java.awt.Container</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>g</code> - Graphics context.</dd><dt><span class="strong">See Also:</span></dt><dd><code>Container.paint(java.awt.Graphics)</code></dd></dl>
+</li>
+</ul>
+<a name="actionPerformed(java.awt.event.ActionEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>actionPerformed</h4>
+<pre>protected&nbsp;void&nbsp;actionPerformed(java.awt.event.ActionEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Handle action events</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="selectionChanged(java.util.Vector)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>selectionChanged</h4>
+<pre>protected&nbsp;void&nbsp;selectionChanged(java.util.Vector&nbsp;selectedNodes)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Selection state changed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>selectedNodes</code> - vector of currently selected nodes</dd></dl>
+</li>
+</ul>
+<a name="nodeDoubleClicked(com.lotus.sametime.guiutils.tree.TreeNode)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>nodeDoubleClicked</h4>
+<pre>protected&nbsp;void&nbsp;nodeDoubleClicked(<a href="../../../../com/lotus/sametime/guiutils/tree/TreeNode.html" title="class in com.lotus.sametime.guiutils.tree">TreeNode</a>&nbsp;node)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Node was double clicked.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>node</code> - clicked node.</dd></dl>
+</li>
+</ul>
+<a name="itemStateChanged(java.awt.event.ItemEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>itemStateChanged</h4>
+<pre>protected&nbsp;void&nbsp;itemStateChanged(java.awt.event.ItemEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">handle item events</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - item event</dd></dl>
+</li>
+</ul>
+<a name="allDirectoriesQueried(com.lotus.sametime.directory.DirectoryEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allDirectoriesQueried</h4>
+<pre>protected&nbsp;void&nbsp;allDirectoriesQueried(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">All directories query response</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd></dl>
+</li>
+</ul>
+<a name="allDirectoriesQueryFailed(com.lotus.sametime.directory.DirectoryEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allDirectoriesQueryFailed</h4>
+<pre>protected&nbsp;void&nbsp;allDirectoriesQueryFailed(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">All directories query failed</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd></dl>
+</li>
+</ul>
+<a name="serviceAvailable(com.lotus.sametime.directory.DirectoryEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serviceAvailable</h4>
+<pre>protected&nbsp;void&nbsp;serviceAvailable(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notification received from the storage component when the service is up.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/directory/DirectoryServiceListener.html" title="interface in com.lotus.sametime.directory"><code>DirectoryServiceListener</code></a></dd></dl>
+</li>
+</ul>
+<a name="serviceUnavailable(com.lotus.sametime.directory.DirectoryEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serviceUnavailable</h4>
+<pre>protected&nbsp;void&nbsp;serviceUnavailable(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notification received from the directory component when the service is
+ down.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/directory/DirectoryServiceListener.html" title="interface in com.lotus.sametime.directory"><code>DirectoryServiceListener</code></a></dd></dl>
+</li>
+</ul>
+<a name="directoryOpened(com.lotus.sametime.directory.DirectoryEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>directoryOpened</h4>
+<pre>protected&nbsp;void&nbsp;directoryOpened(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Directory opened</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/directory/DirectoryListener.html" title="interface in com.lotus.sametime.directory"><code>DirectoryListener</code></a></dd></dl>
+</li>
+</ul>
+<a name="directoryOpenFailed(com.lotus.sametime.directory.DirectoryEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>directoryOpenFailed</h4>
+<pre>protected&nbsp;void&nbsp;directoryOpenFailed(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Request to open the Directory failed</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/directory/DirectoryListener.html" title="interface in com.lotus.sametime.directory"><code>DirectoryListener</code></a></dd></dl>
+</li>
+</ul>
+<a name="entriesQueried(com.lotus.sametime.directory.DirectoryEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>entriesQueried</h4>
+<pre>protected&nbsp;void&nbsp;entriesQueried(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Entries query response</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/directory/DirectoryListener.html" title="interface in com.lotus.sametime.directory"><code>DirectoryListener</code></a></dd></dl>
+</li>
+</ul>
+<a name="updateStartEndLabel(com.lotus.sametime.core.types.STObject[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateStartEndLabel</h4>
+<pre>protected&nbsp;void&nbsp;updateStartEndLabel(<a href="../../../../com/lotus/sametime/core/types/STObject.html" title="interface in com.lotus.sametime.core.types">STObject</a>[]&nbsp;entries)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Helper function. Updates the start end label.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>entries</code> - </dd></dl>
+</li>
+</ul>
+<a name="entriesQueryFailed(com.lotus.sametime.directory.DirectoryEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>entriesQueryFailed</h4>
+<pre>protected&nbsp;void&nbsp;entriesQueryFailed(<a href="../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Entries query failed</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/directory/DirectoryListener.html" title="interface in com.lotus.sametime.directory"><code>DirectoryListener</code></a></dd></dl>
+</li>
+</ul>
+<a name="loggedIn(com.lotus.sametime.community.LoginEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loggedIn</h4>
+<pre>protected&nbsp;void&nbsp;loggedIn(<a href="../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Logged in event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd></dl>
+</li>
+</ul>
+<a name="loggedOut(com.lotus.sametime.community.LoginEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loggedOut</h4>
+<pre>protected&nbsp;void&nbsp;loggedOut(<a href="../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Logged out event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd></dl>
+</li>
+</ul>
+<a name="removeServiceListeners()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeServiceListeners</h4>
+<pre>public&nbsp;void&nbsp;removeServiceListeners()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the specified listeners to the services so that it no longer
+ receives directory events. The container of this panel should call this
+ method upon disposal of the dialog.</div>
+</li>
+</ul>
+<a name="addNotify()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addNotify</h4>
+<pre>public&nbsp;void&nbsp;addNotify()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Makes this component displayable by connecting it to a native screen
+ resource.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>addNotify</code>&nbsp;in class&nbsp;<code>java.awt.Panel</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Panel.addNotify()</code></dd></dl>
+</li>
+</ul>
+<a name="removeNotify()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeNotify</h4>
+<pre>public&nbsp;void&nbsp;removeNotify()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Makes this component undisplayable by destroying its native screen
+ resource.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>removeNotify</code>&nbsp;in class&nbsp;<code>java.awt.Container</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Container.removeNotify()</code></dd></dl>
+</li>
+</ul>
+<a name="createErrorDialog()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createErrorDialog</h4>
+<pre>protected&nbsp;void&nbsp;createErrorDialog()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Helper function.</div>
+</li>
+</ul>
+<a name="displayErrorMessage(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>displayErrorMessage</h4>
+<pre>protected&nbsp;void&nbsp;displayErrorMessage(java.lang.String&nbsp;text)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Displays error message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The text message.</dd></dl>
+</li>
+</ul>
+<a name="setMaxEntries(short)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMaxEntries</h4>
+<pre>public&nbsp;void&nbsp;setMaxEntries(short&nbsp;chunkSize)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Sets the maximum enteries displayed in a single chunk.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>chunkSize</code> - The chunk size object.</dd></dl>
+</li>
+</ul>
+<a name="textValueChanged(java.awt.event.TextEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>textValueChanged</h4>
+<pre>protected&nbsp;void&nbsp;textValueChanged(java.awt.event.TextEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Text value was changed in the search text field. Enable/Disable the
+ button accordingly.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="enableMultiSelection(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>enableMultiSelection</h4>
+<pre>public&nbsp;void&nbsp;enableMultiSelection(boolean&nbsp;b)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Enables/Disables multi selection in the list.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>b</code> - True for multi selection, false for single selection</dd></dl>
+</li>
+</ul>
+<a name="getActionKeys()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getActionKeys</h4>
+<pre>public&nbsp;java.util.Enumeration&nbsp;getActionKeys()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="createListeners()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createListeners</h4>
+<pre>protected&nbsp;void&nbsp;createListeners()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates the inner class listeners. We use inner classes to avoid exposing
+ them at the api level.</div>
+</li>
+</ul>
+<a name="getColumnHeader(com.lotus.sametime.guiutils.tree.ColumnAttributes)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getColumnHeader</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a>&nbsp;getColumnHeader(<a href="../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html#getColumnHeader(com.lotus.sametime.guiutils.tree.ColumnAttributes)">ContentProvider</a></code></span></div>
+<div class="block">Gets the column header.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html#getColumnHeader(com.lotus.sametime.guiutils.tree.ColumnAttributes)">getColumnHeader</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>column</code> - The column that requested the data.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The CellData, containing the string or image that will be
+         displayed in the title above the column.</dd></dl>
+</li>
+</ul>
+<a name="getContent(com.lotus.sametime.guiutils.tree.ColumnAttributes, java.util.Hashtable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContent</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a>&nbsp;getContent(<a href="../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column,
+                  java.util.Hashtable&nbsp;values)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html#getContent(com.lotus.sametime.guiutils.tree.ColumnAttributes, java.util.Hashtable)">ContentProvider</a></code></span></div>
+<div class="block">Provides content to be displayed in a column according to the specified
+ attribute value.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html#getContent(com.lotus.sametime.guiutils.tree.ColumnAttributes, java.util.Hashtable)">getContent</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>column</code> - The column that requested the data.</dd><dd><code>values</code> - A vector of attributes's value which needs a appropriate
+        content displayed.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The CellData, containing the String or Image that will be
+         displayed in the column cell according to the attribute's value.</dd></dl>
+</li>
+</ul>
+<a name="getEmptyContent(com.lotus.sametime.guiutils.tree.ColumnAttributes)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEmptyContent</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a>&nbsp;getEmptyContent(<a href="../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html#getEmptyContent(com.lotus.sametime.guiutils.tree.ColumnAttributes)">ContentProvider</a></code></span></div>
+<div class="block">Gets the display for an empty column.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html#getEmptyContent(com.lotus.sametime.guiutils.tree.ColumnAttributes)">getEmptyContent</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>column</code> - The column that requested the data.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The CellData, containing the String or Image that will be
+         displayed in the column cell when this attribute is not defined.</dd></dl>
+</li>
+</ul>
+<a name="setShowGroups(boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setShowGroups</h4>
+<pre>public&nbsp;void&nbsp;setShowGroups(boolean&nbsp;show_groups)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/directoryui/DirectoryNode.html" title="class in com.lotus.sametime.directoryui"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/directoryui/DirectoryPanel.html" target="_top">Frames</a></li>
+<li><a href="DirectoryPanel.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_java.awt.Panel">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_java.awt.Component">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+CallEventFactory (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CallEventFactory (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CallEventFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.event</FONT>
+<BR>
+Class CallEventFactory</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.telephony.event.CallEventFactory</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>CallEventFactory</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+CallEventFactory is used to create event objects. This class is for
+ service provider use only.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (replaces com.ibm.collaboration.realtime.telephony.service.event.CallEventFactory)</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#CallEventFactory()">CallEventFactory</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createCallEvent()">createCallEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a CallEvent instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallPropertiesEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createCallPropertiesEvent()">createCallPropertiesEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a CallPropertiesEvent instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallStartedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallStartedEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createCallStartedEvent()">createCallStartedEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a CallStartedEvent instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CapabilityEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createCapabilityEvent(java.lang.String, boolean)">createCapabilityEvent</A></B>(java.lang.String&nbsp;capability,
+                      boolean&nbsp;supported)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a CapabilityEvent instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">IncomingCallEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createIncomingCallEvent()">createIncomingCallEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a IncomingCallEvent instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ParticipantAddedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ParticipantAddedEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createParticipantAddedEvent()">createParticipantAddedEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a ParticipantAddedEvent instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/PropertyChangeEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">PropertyChangeEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createPropertyChangeEvent()">createPropertyChangeEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a PropertyChangeEvent instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesChangedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ProviderPropertiesChangedEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createProviderPropertiesChangedEvent(java.lang.String, java.lang.String, java.util.Properties, java.util.Set)">createProviderPropertiesChangedEvent</A></B>(java.lang.String&nbsp;providerId,
+                                     java.lang.String&nbsp;communityId,
+                                     java.util.Properties&nbsp;properties,
+                                     java.util.Set&lt;java.lang.String&gt;&nbsp;capabilities)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a ProviderPropertiesChangedEvent instance for the specified
+ service provider, used to indicate a change to a provider's TCSPI
+ configuration properties or capabilities.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ProviderPropertiesEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createProviderPropertiesEvent(java.util.Properties, java.util.Set)">createProviderPropertiesEvent</A></B>(java.util.Properties&nbsp;properties,
+                              java.util.Set&lt;java.lang.String&gt;&nbsp;capabilities)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a ProviderPropertiesEvent instance, used to publish TCSPI
+ configuration properties and capabilities for a service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createServiceAvailableEvent()">createServiceAvailableEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a ServiceEvent instance and sets the event type to
+ EVENT_SERVICE_AVAILABLE.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceErrorEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceErrorEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createServiceErrorEvent()">createServiceErrorEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a ServiceErrorEvent instance, and sets the event type
+ EVENT_SERVICE_ERROR.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createServiceEvent()">createServiceEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a ServiceEvent instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createServiceUnavailableEvent()">createServiceUnavailableEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a ServiceEvent instance and sets the event type to
+ EVENT_SERVICE_UNAVAILABLE.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html" title="class in com.ibm.collaboration.realtime.telephony.event">CallEventFactory</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#getInstance()">getInstance</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets a CallEventFactory instance, creating it if necessary.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CallEventFactory()"><!-- --></A><H3>
+CallEventFactory</H3>
+<PRE>
+public <B>CallEventFactory</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="createCallEvent()"><!-- --></A><H3>
+createCallEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A> <B>createCallEvent</B>()</PRE>
+<DL>
+<DD>Creates a CallEvent instance.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New CallEvent instance.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createCallPropertiesEvent()"><!-- --></A><H3>
+createCallPropertiesEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallPropertiesEvent</A> <B>createCallPropertiesEvent</B>()</PRE>
+<DL>
+<DD>Creates a CallPropertiesEvent instance.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New CallPropertiesEvent instance.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createCallStartedEvent()"><!-- --></A><H3>
+createCallStartedEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallStartedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallStartedEvent</A> <B>createCallStartedEvent</B>()</PRE>
+<DL>
+<DD>Creates a CallStartedEvent instance.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New CallStartedEvent instance.<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createCapabilityEvent(java.lang.String, boolean)"><!-- --></A><H3>
+createCapabilityEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CapabilityEvent</A> <B>createCapabilityEvent</B>(java.lang.String&nbsp;capability,
+                                                      boolean&nbsp;supported)</PRE>
+<DL>
+<DD>Creates a CapabilityEvent instance.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>capability</CODE> - capability name, as defined in <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>Capability</CODE></A> interface<DD><CODE>supported</CODE> - true if capability is supported, false otherwise
+<DT><B>Returns:</B><DD>New CapabilityEvent instance with event type EVENT_CAPABILITY.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createIncomingCallEvent()"><!-- --></A><H3>
+createIncomingCallEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">IncomingCallEvent</A> <B>createIncomingCallEvent</B>()</PRE>
+<DL>
+<DD>Creates a IncomingCallEvent instance.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New IncomingCallEvent instance.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createParticipantAddedEvent()"><!-- --></A><H3>
+createParticipantAddedEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ParticipantAddedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ParticipantAddedEvent</A> <B>createParticipantAddedEvent</B>()</PRE>
+<DL>
+<DD>Creates a ParticipantAddedEvent instance.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New ParticipantAddedEvent instance.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createPropertyChangeEvent()"><!-- --></A><H3>
+createPropertyChangeEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/PropertyChangeEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">PropertyChangeEvent</A> <B>createPropertyChangeEvent</B>()</PRE>
+<DL>
+<DD>Creates a PropertyChangeEvent instance.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New PropertyChangeEvent instance.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createProviderPropertiesEvent(java.util.Properties, java.util.Set)"><!-- --></A><H3>
+createProviderPropertiesEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ProviderPropertiesEvent</A> <B>createProviderPropertiesEvent</B>(java.util.Properties&nbsp;properties,
+                                                                      java.util.Set&lt;java.lang.String&gt;&nbsp;capabilities)</PRE>
+<DL>
+<DD>Creates a ProviderPropertiesEvent instance, used to publish TCSPI
+ configuration properties and capabilities for a service provider.
+ The configuration properties must include the service provider ID
+ property PropertyNames.PROPERTY_TCSPI_SERVICE_ID. Sets the event
+ type to EVENT_PROVIDER_PROPERTIES.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>properties</CODE> - TCSPI configuration properties, cannot be null or empty<DD><CODE>capabilities</CODE> - supported capabilities, cannot be null or empty
+<DT><B>Returns:</B><DD>New ProviderPropertiesEvent instance.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createProviderPropertiesChangedEvent(java.lang.String, java.lang.String, java.util.Properties, java.util.Set)"><!-- --></A><H3>
+createProviderPropertiesChangedEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesChangedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ProviderPropertiesChangedEvent</A> <B>createProviderPropertiesChangedEvent</B>(java.lang.String&nbsp;providerId,
+                                                                                    java.lang.String&nbsp;communityId,
+                                                                                    java.util.Properties&nbsp;properties,
+                                                                                    java.util.Set&lt;java.lang.String&gt;&nbsp;capabilities)</PRE>
+<DL>
+<DD>Creates a ProviderPropertiesChangedEvent instance for the specified
+ service provider, used to indicate a change to a provider's TCSPI
+ configuration properties or capabilities. If any properties have
+ changed, the properties parameter should only include the updated
+ properties. If any capabilities have changed, the capabilities
+ parameter should include the complete set of supported capabilities,
+ not just the additional capabilities. Sets the event type to
+ EVENT_PROVIDER_PROPERTY_CHANGE.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>providerId</CODE> - service provider ID, cannot be null<DD><CODE>communityId</CODE> - service provider community ID, cannot be null<DD><CODE>properties</CODE> - updated configuration properties, null if none changed<DD><CODE>capabilities</CODE> - complete set supported capabilities, null if none changed
+<DT><B>Returns:</B><DD>New ProviderPropertiesChangedEvent instance.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createServiceAvailableEvent()"><!-- --></A><H3>
+createServiceAvailableEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceEvent</A> <B>createServiceAvailableEvent</B>()</PRE>
+<DL>
+<DD>Creates a ServiceEvent instance and sets the event type to
+ EVENT_SERVICE_AVAILABLE.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New ServiceEvent instance with event type EVENT_SERVICE_AVAILABLE.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createServiceErrorEvent()"><!-- --></A><H3>
+createServiceErrorEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceErrorEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceErrorEvent</A> <B>createServiceErrorEvent</B>()</PRE>
+<DL>
+<DD>Creates a ServiceErrorEvent instance, and sets the event type
+ EVENT_SERVICE_ERROR.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New ServiceErrorEvent instance.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createServiceEvent()"><!-- --></A><H3>
+createServiceEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceEvent</A> <B>createServiceEvent</B>()</PRE>
+<DL>
+<DD>Creates a ServiceEvent instance. For service event types
+ EVENT_SERVICE_AVAILABLE and EVENT_SERVICE_UNAVAILABLE,
+ you can use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createServiceAvailableEvent()"><CODE>createServiceAvailableEvent()</CODE></A> and
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html#createServiceUnavailableEvent()"><CODE>createServiceUnavailableEvent()</CODE></A> instead of this
+ method.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New ServiceEvent instance.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createServiceUnavailableEvent()"><!-- --></A><H3>
+createServiceUnavailableEvent</H3>
+<PRE>
+public abstract <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceEvent</A> <B>createServiceUnavailableEvent</B>()</PRE>
+<DL>
+<DD>Creates a ServiceEvent instance and sets the event type to
+ EVENT_SERVICE_UNAVAILABLE.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>New ServiceEvent instance with event type EVENT_SERVICE_UNAVAILABLE.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInstance()"><!-- --></A><H3>
+getInstance</H3>
+<PRE>
+public static <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html" title="class in com.ibm.collaboration.realtime.telephony.event">CallEventFactory</A> <B>getInstance</B>()</PRE>
+<DL>
+<DD>Gets a CallEventFactory instance, creating it if necessary.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>CallFactory instance.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CallEventFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

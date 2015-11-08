@@ -1,0 +1,432 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>SportsClient (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">SportsClient</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.*;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.*;
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.NdrOutputStream;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.NdrInputStream;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.constants.*;
+<A NAME="17"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="18"><A>
+<A NAME="19"><A><FONT ID="Import">import</FONT> java.awt.*;
+<A NAME="20"><A><FONT ID="Import">import</FONT> java.awt.event.*;
+<A NAME="21"><A><FONT ID="Import">import</FONT> java.io.IOException;
+<A NAME="22"><A><FONT ID="Import">import</FONT> java.util.Vector;
+<A NAME="23"><A><FONT ID="Import">import</FONT> java.util.Hashtable;
+<A NAME="24"><A><FONT ID="Import">import</FONT> java.util.Enumeration;
+<A NAME="25"><A><FONT ID="Import">import</FONT> java.util.StringTokenizer;
+<A NAME="26"><A>
+<A NAME="27"><A><FONT ID="FormalComment">/**
+<A NAME="28"><A> * SportsClient: The SportsUpdater client
+<A NAME="29"><A> */</FONT>
+<A NAME="30"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> SportsClient <FONT ID="Extends">extends</FONT> Frame 
+<A NAME="31"><A>        <FONT ID="Implements">implements</FONT> LoginListener, ActionListener, ChannelListener
+<A NAME="32"><A>{
+<A NAME="33"><A>    <FONT ID="FormalComment">/**
+<A NAME="34"><A>     * The session object.
+<A NAME="35"><A>     */</FONT>
+<A NAME="36"><A>    <FONT ID="Private">private</FONT> STSession m_session;
+<A NAME="37"><A>    
+<A NAME="38"><A>    <FONT ID="FormalComment">/**
+<A NAME="39"><A>     * Our channel
+<A NAME="40"><A>     */</FONT>
+<A NAME="41"><A>    Channel m_cnl;
+<A NAME="42"><A>
+<A NAME="43"><A>    <FONT ID="FormalComment">/**  * the messages list     */</FONT> <FONT ID="Private">private</FONT> List m_lst;
+<A NAME="44"><A>    
+<A NAME="45"><A>    <FONT ID="FormalComment">/**
+<A NAME="46"><A>     * The MatchFrame dictionary (for each subscribed match we have a frame)
+<A NAME="47"><A>     */</FONT>
+<A NAME="48"><A>    <FONT ID="Private">private</FONT> Hashtable m_frames = <FONT ID="New">new</FONT> Hashtable();
+<A NAME="49"><A>    
+<A NAME="50"><A>    
+<A NAME="51"><A>    <FONT ID="Public">public</FONT> SportsClient()
+<A NAME="52"><A>    {
+<A NAME="53"><A>        <FONT ID="Super">super</FONT>(<FONT ID="StringLiteral">"Sports Client"</FONT>);
+<A NAME="54"><A>    }
+<A NAME="55"><A>    
+<A NAME="56"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> run(String name, String password, String server)
+<A NAME="57"><A>    {
+<A NAME="58"><A>        <FONT ID="SingleLineComment">// Create and load the session of components.
+<A NAME="59"><A></FONT>        <FONT ID="Try">try</FONT>
+<A NAME="60"><A>        {
+<A NAME="61"><A>            m_session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">"SportsUpdaterClient"</FONT>);
+<A NAME="62"><A>            m_session.loadAllComponents();
+<A NAME="63"><A>            m_session.start();
+<A NAME="64"><A>        }
+<A NAME="65"><A>        <FONT ID="Catch">catch</FONT>(DuplicateObjectException e)
+<A NAME="66"><A>        {
+<A NAME="67"><A>            e.printStackTrace();
+<A NAME="68"><A>            System.exit(<FONT ID="IntegerLiteral">1</FONT>);
+<A NAME="69"><A>        }
+<A NAME="70"><A>        
+<A NAME="71"><A>        <FONT ID="SingleLineComment">// Login to the communiuty    
+<A NAME="72"><A></FONT>        login(name, password, server);  
+<A NAME="73"><A>        
+<A NAME="74"><A>    }
+<A NAME="75"><A>    
+<A NAME="76"><A>    <FONT ID="FormalComment">/**
+<A NAME="77"><A>     * Login to the sametime server.
+<A NAME="78"><A>     */</FONT>
+<A NAME="79"><A>    <FONT ID="Void">void</FONT> login(String name, String password, String hostName)
+<A NAME="80"><A>    {
+<A NAME="81"><A>        CommunityService commService
+<A NAME="82"><A>            = (CommunityService)m_session.getCompApi(CommunityService.COMP_NAME);
+<A NAME="83"><A>
+<A NAME="84"><A>        commService.addLoginListener(<FONT ID="This">this</FONT>);
+<A NAME="85"><A>        commService.loginByPassword(hostName, name, password);
+<A NAME="86"><A>    }
+<A NAME="87"><A>    
+<A NAME="88"><A>    
+<A NAME="89"><A>    
+<A NAME="90"><A>    <FONT ID="SingleLineComment">//
+<A NAME="91"><A></FONT>    <FONT ID="SingleLineComment">// Channel Service Listener.
+<A NAME="92"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="93"><A></FONT>
+<A NAME="94"><A>    <FONT ID="FormalComment">/**
+<A NAME="95"><A>     * Indicates that we were successfully logged in to the Sametime community.
+<A NAME="96"><A>     * 
+<A NAME="97"><A>     * @param            event The event object.
+<A NAME="98"><A>     * @see              LoginEvent#getCommunity
+<A NAME="99"><A>     */</FONT>
+<A NAME="100"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event)  
+<A NAME="101"><A>    {
+<A NAME="102"><A>         <FONT ID="SingleLineComment">// Get a reference to the channel services.
+<A NAME="103"><A></FONT>        ChannelService channelService =
+<A NAME="104"><A>            (ChannelService)m_session.getCompApi(ChannelService.COMP_NAME);
+<A NAME="105"><A>        
+<A NAME="106"><A>        <FONT ID="SingleLineComment">// Create a channel to the sports updater SA
+<A NAME="107"><A></FONT>        m_cnl = channelService.createChannel(SportsUpdater.SPORTS_SA_SERVICE_TYPE, <FONT ID="IntegerLiteral">0</FONT>, <FONT ID="IntegerLiteral">0</FONT>,
+<A NAME="108"><A>                                       EncLevel.ENC_LEVEL_ALL, <FONT ID="Null">null</FONT>, <FONT ID="Null">null</FONT>);
+<A NAME="109"><A>        
+<A NAME="110"><A>        <FONT ID="SingleLineComment">// Listen to this channel
+<A NAME="111"><A></FONT>        m_cnl.addChannelListener(<FONT ID="This">this</FONT>);
+<A NAME="112"><A>        
+<A NAME="113"><A>        <FONT ID="SingleLineComment">// Open, the channel
+<A NAME="114"><A></FONT>        m_cnl.open();
+<A NAME="115"><A>    }
+<A NAME="116"><A>    
+<A NAME="117"><A>    
+<A NAME="118"><A>    
+<A NAME="119"><A>    <FONT ID="FormalComment">/**
+<A NAME="120"><A>     * Indicates that we were successfully logged out of the Sametime community,
+<A NAME="121"><A>     * or a login request was refused.
+<A NAME="122"><A>     * 
+<A NAME="123"><A>     * @param            event The event object.
+<A NAME="124"><A>     * @see              LoginEvent#getReason
+<A NAME="125"><A>     * @see              LoginEvent#getCommunity
+<A NAME="126"><A>     */</FONT>
+<A NAME="127"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event) 
+<A NAME="128"><A>    {   
+<A NAME="129"><A>        System.out.println(<FONT ID="StringLiteral">"Loged out, reason = "</FONT> + event.getReason() );
+<A NAME="130"><A>        exit();
+<A NAME="131"><A>    }
+<A NAME="132"><A>    
+<A NAME="133"><A>    <FONT ID="SingleLineComment">//
+<A NAME="134"><A></FONT>    <FONT ID="SingleLineComment">// ChannelListener
+<A NAME="135"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="136"><A></FONT>    <FONT ID="FormalComment">/**
+<A NAME="137"><A>     * The channel was opened.
+<A NAME="138"><A>     *
+<A NAME="139"><A>     * @param event The event object.
+<A NAME="140"><A>     */</FONT>
+<A NAME="141"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelOpened(ChannelEvent event)
+<A NAME="142"><A>    {
+<A NAME="143"><A>        System.out.println(<FONT ID="StringLiteral">"SportClent::channelOpened"</FONT>);
+<A NAME="144"><A>        
+<A NAME="145"><A>        <FONT ID="SingleLineComment">// The channel is opened, create the UI
+<A NAME="146"><A></FONT>        createUI(); 
+<A NAME="147"><A>    }
+<A NAME="148"><A>    
+<A NAME="149"><A>    <FONT ID="FormalComment">/**
+<A NAME="150"><A>     * Open request has failed.
+<A NAME="151"><A>     *
+<A NAME="152"><A>     * @param event The event object.
+<A NAME="153"><A>     */</FONT>
+<A NAME="154"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelOpenFailed(ChannelEvent event)
+<A NAME="155"><A>    {
+<A NAME="156"><A>        System.out.println(<FONT ID="StringLiteral">"SportClent::channelOpenFailed"</FONT>);
+<A NAME="157"><A>        System.out.println(<FONT ID="StringLiteral">"Server Application is probably no running"</FONT>);
+<A NAME="158"><A>
+<A NAME="159"><A>        exit();
+<A NAME="160"><A>    }
+<A NAME="161"><A>
+<A NAME="162"><A>    <FONT ID="FormalComment">/**
+<A NAME="163"><A>     * The channel was closed.
+<A NAME="164"><A>     *
+<A NAME="165"><A>     * @param event The event object.
+<A NAME="166"><A>     */</FONT>
+<A NAME="167"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelClosed(ChannelEvent event)
+<A NAME="168"><A>    {
+<A NAME="169"><A>        System.out.println(<FONT ID="StringLiteral">"SportClent::channelClosed"</FONT>);
+<A NAME="170"><A>        System.out.println(<FONT ID="StringLiteral">"Reason = "</FONT> + event.getReason() );
+<A NAME="171"><A>        
+<A NAME="172"><A>        exit();
+<A NAME="173"><A>    }
+<A NAME="174"><A>
+<A NAME="175"><A>    <FONT ID="FormalComment">/**
+<A NAME="176"><A>     * A message was received on the channel.
+<A NAME="177"><A>     *
+<A NAME="178"><A>     * @param event The event object.
+<A NAME="179"><A>     */</FONT>
+<A NAME="180"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelMsgReceived(ChannelEvent event)
+<A NAME="181"><A>    {
+<A NAME="182"><A>        <FONT ID="SingleLineComment">// What kind of message did we get?
+<A NAME="183"><A></FONT>        <FONT ID="Int">int</FONT> msgType = event.getMessageType();
+<A NAME="184"><A>        <FONT ID="Switch">switch</FONT> ( msgType )
+<A NAME="185"><A>        {
+<A NAME="186"><A>            <FONT ID="Case">case</FONT> SportsUpdater.MSG_AVAILABLE_MATCHES:
+<A NAME="187"><A>                handleAvailableMatches(event);
+<A NAME="188"><A>                <FONT ID="Break">break</FONT>;
+<A NAME="189"><A>            <FONT ID="Case">case</FONT> SportsUpdater.MSG_UPDATE_MATCH:
+<A NAME="190"><A>                handleUpdateMatch(event);
+<A NAME="191"><A>                <FONT ID="Break">break</FONT>;
+<A NAME="192"><A>            <FONT ID="Case">case</FONT> SportsUpdater.MSG_SUBSCRIBE_2_MATCH:
+<A NAME="193"><A>            <FONT ID="Case">case</FONT> SportsUpdater.MSG_UNSUBSCRIBE_FROM_MATCH:
+<A NAME="194"><A>            <FONT ID="Default">default</FONT>:
+<A NAME="195"><A>                System.out.println(<FONT ID="StringLiteral">"Error in SportsClient::channelMsgReceived error in mdg type"</FONT>);
+<A NAME="196"><A>                <FONT ID="Break">break</FONT>;
+<A NAME="197"><A>        };
+<A NAME="198"><A>    }
+<A NAME="199"><A>
+<A NAME="200"><A>    <FONT ID="FormalComment">/**
+<A NAME="201"><A>     * Handle matches to go request
+<A NAME="202"><A>     */</FONT>
+<A NAME="203"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> handleAvailableMatches(ChannelEvent event)
+<A NAME="204"><A>    {
+<A NAME="205"><A>        <FONT ID="Try">try</FONT>
+<A NAME="206"><A>        {
+<A NAME="207"><A>            <FONT ID="SingleLineComment">// Get the data
+<A NAME="208"><A></FONT>            NdrInputStream ndr = <FONT ID="New">new</FONT> NdrInputStream(event.getData());
+<A NAME="209"><A>
+<A NAME="210"><A>            <FONT ID="SingleLineComment">// How many matches do we have?
+<A NAME="211"><A></FONT>            <FONT ID="Int">int</FONT> size = ndr.readInt();
+<A NAME="212"><A>        
+<A NAME="213"><A>            <FONT ID="SingleLineComment">// Read all matches
+<A NAME="214"><A></FONT>            <FONT ID="For">for</FONT> (<FONT ID="Int">int</FONT> i = <FONT ID="IntegerLiteral">0</FONT>; i &lt; size; i++)
+<A NAME="215"><A>            {
+<A NAME="216"><A>                <A HREF="Match.java.html">Match</A> m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="217"><A>                m.load(ndr);
+<A NAME="218"><A>                
+<A NAME="219"><A>                <FONT ID="SingleLineComment">// Add each matches to our list
+<A NAME="220"><A></FONT>                addMatchToList(m);
+<A NAME="221"><A>            }
+<A NAME="222"><A>        }
+<A NAME="223"><A>        <FONT ID="Catch">catch</FONT> (IOException e)
+<A NAME="224"><A>        {
+<A NAME="225"><A>            e.printStackTrace();
+<A NAME="226"><A>            event.getChannel().close(STError.ST_INVALID_DATA, <FONT ID="Null">null</FONT>);
+<A NAME="227"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="228"><A>        }
+<A NAME="229"><A>
+<A NAME="230"><A>    }
+<A NAME="231"><A>    
+<A NAME="232"><A>    <FONT ID="FormalComment">/**
+<A NAME="233"><A>     * Handle matche was updated request
+<A NAME="234"><A>     */</FONT>
+<A NAME="235"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> handleUpdateMatch(ChannelEvent event)
+<A NAME="236"><A>    {
+<A NAME="237"><A>        <FONT ID="SingleLineComment">// Get the data
+<A NAME="238"><A></FONT>        NdrInputStream ndr = <FONT ID="New">new</FONT> NdrInputStream(event.getData());
+<A NAME="239"><A>
+<A NAME="240"><A>        <FONT ID="SingleLineComment">// Read the match details
+<A NAME="241"><A></FONT>        <A HREF="Match.java.html">Match</A> m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="242"><A>        <FONT ID="Try">try</FONT>
+<A NAME="243"><A>        {
+<A NAME="244"><A>            m.load(ndr);
+<A NAME="245"><A>        }
+<A NAME="246"><A>        <FONT ID="Catch">catch</FONT>(IOException e)
+<A NAME="247"><A>        {
+<A NAME="248"><A>            e.printStackTrace();
+<A NAME="249"><A>            System.out.println(<FONT ID="StringLiteral">"Error loading Match"</FONT>);
+<A NAME="250"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="251"><A>        }
+<A NAME="252"><A>            
+<A NAME="253"><A>        <FONT ID="SingleLineComment">// Find the match frame
+<A NAME="254"><A></FONT>        <A HREF="MatchFrame.java.html">MatchFrame</A> f = (<A HREF="MatchFrame.java.html">MatchFrame</A>)m_frames.get( m.getID() );
+<A NAME="255"><A>        
+<A NAME="256"><A>        <FONT ID="SingleLineComment">// Update frame
+<A NAME="257"><A></FONT>        f.updateMatch( m );
+<A NAME="258"><A>    }
+<A NAME="259"><A>    
+<A NAME="260"><A>    <FONT ID="FormalComment">/**
+<A NAME="261"><A>     * Send a subscribe/unsubscribe message
+<A NAME="262"><A>     */</FONT>
+<A NAME="263"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> subscribeToMatch(String id, <FONT ID="Boolean">boolean</FONT> subscribe)
+<A NAME="264"><A>    {
+<A NAME="265"><A>        <FONT ID="SingleLineComment">// Write the mathc ID on the NDR
+<A NAME="266"><A></FONT>        NdrOutputStream ndr = <FONT ID="New">new</FONT> NdrOutputStream();
+<A NAME="267"><A>        <FONT ID="Try">try</FONT>
+<A NAME="268"><A>        {
+<A NAME="269"><A>            ndr.writeUTF(id);
+<A NAME="270"><A>        }
+<A NAME="271"><A>        <FONT ID="Catch">catch</FONT>(IOException e)
+<A NAME="272"><A>        {
+<A NAME="273"><A>            e.printStackTrace();
+<A NAME="274"><A>            System.out.println(<FONT ID="StringLiteral">"Error in subscribeToMatch"</FONT>);
+<A NAME="275"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="276"><A>        }               
+<A NAME="277"><A>        
+<A NAME="278"><A>        <FONT ID="SingleLineComment">// Are we subscribing or unsubscribing
+<A NAME="279"><A></FONT>        <FONT ID="Short">short</FONT> cmd = subscribe ? SportsUpdater.MSG_SUBSCRIBE_2_MATCH : 
+<A NAME="280"><A>                                SportsUpdater.MSG_UNSUBSCRIBE_FROM_MATCH;
+<A NAME="281"><A>        
+<A NAME="282"><A>        <FONT ID="SingleLineComment">// Send the message
+<A NAME="283"><A></FONT>        m_cnl.sendMsg(cmd, ndr.toByteArray(), <FONT ID="False">false</FONT>);
+<A NAME="284"><A>    }
+<A NAME="285"><A>    
+<A NAME="286"><A>    <FONT ID="FormalComment">/**
+<A NAME="287"><A>     * Create the UI
+<A NAME="288"><A>     */</FONT>
+<A NAME="289"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT>  createUI()
+<A NAME="290"><A>    {
+<A NAME="291"><A>        m_lst = <FONT ID="New">new</FONT> List();
+<A NAME="292"><A>        m_lst.addActionListener(<FONT ID="This">this</FONT>);
+<A NAME="293"><A>        add(m_lst);     setSize(<FONT ID="IntegerLiteral">200</FONT>, <FONT ID="IntegerLiteral">300</FONT>);
+<A NAME="294"><A>        
+<A NAME="295"><A>        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+<A NAME="296"><A>        setLocation(
+<A NAME="297"><A>        ( screen.width - getSize().width ) / <FONT ID="IntegerLiteral">2</FONT>,
+<A NAME="298"><A>        ( screen.height - getSize().height ) / <FONT ID="IntegerLiteral">2</FONT> );
+<A NAME="299"><A>
+<A NAME="300"><A>        setVisible(<FONT ID="True">true</FONT>);
+<A NAME="301"><A>        addWindowListener(                          <FONT ID="New">new</FONT> WindowAdapter()                         {                               <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> windowClosing(WindowEvent event)                                {                                   exit();                             }                           }                       );  
+<A NAME="302"><A>    }
+<A NAME="303"><A>    
+<A NAME="304"><A>    <FONT ID="FormalComment">/**
+<A NAME="305"><A>     * User double click a list item
+<A NAME="306"><A>     */</FONT>
+<A NAME="307"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> actionPerformed(ActionEvent event)
+<A NAME="308"><A>    {
+<A NAME="309"><A>        <FONT ID="SingleLineComment">// Get the line
+<A NAME="310"><A></FONT>        String s = event.getActionCommand();
+<A NAME="311"><A>        <FONT ID="If">if</FONT> ( s.length() == <FONT ID="IntegerLiteral">0</FONT> )
+<A NAME="312"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="313"><A>        
+<A NAME="314"><A>        <FONT ID="SingleLineComment">// Get the first token from the line (match ID)
+<A NAME="315"><A></FONT>        StringTokenizer st = <FONT ID="New">new</FONT> StringTokenizer(s);
+<A NAME="316"><A>        s = st.nextToken();
+<A NAME="317"><A>        
+<A NAME="318"><A>        <FONT ID="SingleLineComment">// Ok, add a new MatchFrame to our dictionary
+<A NAME="319"><A></FONT>        addMatchFrame(s);
+<A NAME="320"><A>    }
+<A NAME="321"><A>    
+<A NAME="322"><A>    <FONT ID="FormalComment">/**
+<A NAME="323"><A>     * Add a Match header to our list of matches
+<A NAME="324"><A>     */</FONT>
+<A NAME="325"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> addMatchToList(<A HREF="Match.java.html">Match</A> m)
+<A NAME="326"><A>    {
+<A NAME="327"><A>        <FONT ID="SingleLineComment">// Create a string for this match
+<A NAME="328"><A></FONT>        String s ;
+<A NAME="329"><A>        s = m.getID() +  <FONT ID="StringLiteral">" "</FONT> +  m.getHomeTeamName() + 
+<A NAME="330"><A>                        <FONT ID="StringLiteral">" Vs. "</FONT> + m.getVisitorsTeamName();
+<A NAME="331"><A>        
+<A NAME="332"><A>        <FONT ID="SingleLineComment">// Add it to our list
+<A NAME="333"><A></FONT>        m_lst.add(s);
+<A NAME="334"><A>    }
+<A NAME="335"><A>    
+<A NAME="336"><A>    <FONT ID="FormalComment">/**
+<A NAME="337"><A>     * Add a new MatchFrame
+<A NAME="338"><A>     */</FONT>
+<A NAME="339"><A>    <FONT ID="Private">private</FONT> <FONT ID="Synchronized">synchronized</FONT> <FONT ID="Void">void</FONT> addMatchFrame(String matchID)
+<A NAME="340"><A>    {
+<A NAME="341"><A>        <FONT ID="SingleLineComment">// Create a new MatchFrame and add it to our hashtable
+<A NAME="342"><A></FONT>        Hashtable temp = (Hashtable) m_frames.clone();
+<A NAME="343"><A>        temp.put( matchID, <FONT ID="New">new</FONT> <A HREF="MatchFrame.java.html">MatchFrame</A>(<FONT ID="This">this</FONT>, matchID) );
+<A NAME="344"><A>        m_frames = temp;
+<A NAME="345"><A>        
+<A NAME="346"><A>        <FONT ID="SingleLineComment">// Subscribe to this match
+<A NAME="347"><A></FONT>        subscribeToMatch(matchID, <FONT ID="True">true</FONT> );
+<A NAME="348"><A>    }
+<A NAME="349"><A>    
+<A NAME="350"><A>    <FONT ID="FormalComment">/**
+<A NAME="351"><A>     * Remove th frame for this match from our record
+<A NAME="352"><A>     */</FONT>
+<A NAME="353"><A>    <FONT ID="Public">public</FONT> <FONT ID="Synchronized">synchronized</FONT> <FONT ID="Void">void</FONT> removeMatchFrame(String matchID)
+<A NAME="354"><A>    {
+<A NAME="355"><A>        <FONT ID="SingleLineComment">// Remove it from out hashtable
+<A NAME="356"><A></FONT>        Hashtable temp = (Hashtable) m_frames.clone();
+<A NAME="357"><A>        temp.remove(matchID);
+<A NAME="358"><A>        m_frames = temp;
+<A NAME="359"><A>        
+<A NAME="360"><A>        <FONT ID="SingleLineComment">// Unsubscribe to this match
+<A NAME="361"><A></FONT>        subscribeToMatch(matchID, <FONT ID="False">false</FONT>);
+<A NAME="362"><A>    }
+<A NAME="363"><A>    
+<A NAME="364"><A>    
+<A NAME="365"><A>    
+<A NAME="366"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> exit()
+<A NAME="367"><A>    {
+<A NAME="368"><A>        <FONT ID="SingleLineComment">// Unload the Samertime components and session
+<A NAME="369"><A></FONT>        m_session.stop();
+<A NAME="370"><A>        m_session.unloadSession();
+<A NAME="371"><A>        
+<A NAME="372"><A>        <FONT ID="SingleLineComment">// Cloase all frames
+<A NAME="373"><A></FONT>        <A HREF="MatchFrame.java.html">MatchFrame</A> f;
+<A NAME="374"><A>        Hashtable temp = (Hashtable)m_frames.clone();
+<A NAME="375"><A>        Enumeration enumeration = temp.elements();
+<A NAME="376"><A>        <FONT ID="While">while</FONT>(enumeration.hasMoreElements())
+<A NAME="377"><A>        {
+<A NAME="378"><A>            f = (<A HREF="MatchFrame.java.html">MatchFrame</A>) enumeration.nextElement();
+<A NAME="379"><A>            f.dispose();
+<A NAME="380"><A>        }
+<A NAME="381"><A>        
+<A NAME="382"><A>        <FONT ID="SingleLineComment">// Exit
+<A NAME="383"><A></FONT>        dispose();
+<A NAME="384"><A>        System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="385"><A>    }
+<A NAME="386"><A>    
+<A NAME="387"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args)
+<A NAME="388"><A>    {
+<A NAME="389"><A>         <FONT ID="If">if</FONT> (args.length != <FONT ID="IntegerLiteral">3</FONT>)
+<A NAME="390"><A>        {
+<A NAME="391"><A>            System.err.println(<FONT ID="StringLiteral">"Usage: Client [name] [password] [serverName]"</FONT>);
+<A NAME="392"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="393"><A>        }
+<A NAME="394"><A>         
+<A NAME="395"><A>        <FONT ID="New">new</FONT> <A HREF="SportsClient.java.html">SportsClient</A>().run(args[<FONT ID="IntegerLiteral">0</FONT>], args[<FONT ID="IntegerLiteral">1</FONT>], args[<FONT ID="IntegerLiteral">2</FONT>]);
+<A NAME="396"><A>    }
+<A NAME="397"><A>}
+<A NAME="398"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">SportsClient</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

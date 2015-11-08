@@ -1,0 +1,10 @@
+LIBRARY "StAuthToken.dll"
+
+EXPORTS
+	stVerifyToken
+	stTokenInit
+	stTokenTerminate
+    stGetToken
+    stVerifyTokenAndExtractUserId
+	stGetTokens
+	

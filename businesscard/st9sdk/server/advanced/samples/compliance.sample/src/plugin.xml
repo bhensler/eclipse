@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright IBM Corp. 2010, 2014  All Rights Reserved.              -->
+
+<plugin id="com.ibm.rtc.compliance.sample"
+	name="Sametime Advanced Sample Compliance Plug-ins" version="1.0.0"
+	provider-name="IBM">
+	<extension point="com.ibm.collaboration.realtime.plugin.chat_text_handler"
+		id="sampleTextHandlerPlugin" name="Sample Text Handler">
+		<action
+			class="com.ibm.rtc.compliance.sample.SampleTextHandler">
+		</action>
+	</extension>
+	<extension point="com.ibm.collaboration.realtime.plugin.user_join_handler"
+		id="sampleJoinHandlerPlugin" name="Sample Join Handler">
+		<action
+			class="com.ibm.rtc.compliance.sample.SampleJoinHandler">
+		</action>
+	</extension>
+	<extension point="com.ibm.collaboration.realtime.plugin.file_post_handler"
+		id="sampleFileHandlerPlugin" name="Sample File Handler">
+		<action
+			class="com.ibm.rtc.compliance.sample.SampleFileHandler">
+		</action>
+	</extension>
+	<extension point="com.ibm.collaboration.realtime.plugin.chat_room_handler"
+		id="sampleRoomHandlerPlugin" name="Sample Room Handler">
+		<action
+			class="com.ibm.rtc.compliance.sample.SampleRoomHandler">
+		</action>
+	</extension>
+	<!-- DevTest:  for verification of init behavior, SampleDeleteHandler also
+		implements AddFAQHandler and identifies itself as an extension for that (actions log only)
+		// temp - move end-comment line to enable
+	<extension point="com.ibm.collaboration.realtime.plugin.chat_faq_handler"
+		id="sampleDeleteHandlerPlugin" name="Sample Delete Handler">
+		<action
+			class="com.ibm.rtc.compliance.sample.SampleDeleteHandler">
+		</action>
+	</extension>
+	//end-comment section  -->
+	<extension point="com.ibm.collaboration.realtime.plugin.chat_faq_handler"
+		id="sampleFaqHandlerPlugin" name="Sample Faq Handler">
+		<action
+			class="com.ibm.rtc.compliance.sample.SampleFaqHandler">
+		</action>
+	</extension>
+	<extension point="com.ibm.collaboration.realtime.plugin.broadcast_handler"
+		id="sampleBroadcastHandlerPlugin" name="Sample Broadcast Handler">
+		<action
+			class="com.ibm.rtc.compliance.sample.SampleBroadcastHandler">
+		</action>
+	</extension>
+	<requires>
+		<import plugin="com.ibm.collaboration.realtime.plugin" />
+	</requires>
+</plugin>

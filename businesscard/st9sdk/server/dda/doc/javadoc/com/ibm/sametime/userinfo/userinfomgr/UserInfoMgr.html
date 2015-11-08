@@ -1,0 +1,571 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>UserInfoMgr</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="UserInfoMgr";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html" title="class in com.ibm.sametime.userinfo.userinfomgr"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html" target="_top">Frames</a></li>
+<li><a href="UserInfoMgr.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.ibm.sametime.userinfo.userinfomgr</div>
+<h2 title="Class UserInfoMgr" class="title">Class UserInfoMgr</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.ibm.sametime.userinfo.userinfomgr.UserInfoMgr</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html" title="interface in com.ibm.sametime.userinfo.servletservice">UserInfoServletService</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public final class <span class="strong">UserInfoMgr</span>
+extends java.lang.Object
+implements <a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html" title="interface in com.ibm.sametime.userinfo.servletservice">UserInfoServletService</a></pre>
+<div class="block">Recieves requests from the servlets activetaes bb instances and handles
+ responses from the black boxes</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#ERROR_XML">ERROR_XML</a></strong></code>
+<div class="block">A constant string that represents an error xml to be sent as a response</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#XML_HEADER">XML_HEADER</a></strong></code>
+<div class="block">A constant that represents the first line in every xml sent as response</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#activateBlackBoxes(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl, com.ibm.sametime.userinfo.userInfobbapi.Response)">activateBlackBoxes</a></strong>(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl&nbsp;req,
+                  <a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/Response.html" title="class in com.ibm.sametime.userinfo.userInfobbapi">Response</a>&nbsp;cleanResponse)</code>
+<div class="block">The method which queries the different blackboxes and aggregates the
+ results
+ 
+ If there are multiple bbs a query is sent to other black boxes using the
+ first black box's common field as userid.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#buildResponse(com.ibm.sametime.userinfo.userInfobbapi.RequestContext, com.ibm.sametime.userinfo.userInfobbapi.Response[], com.ibm.sametime.userinfo.userInfobbapi.Response)">buildResponse</a></strong>(<a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/RequestContext.html" title="interface in com.ibm.sametime.userinfo.userInfobbapi">RequestContext</a>&nbsp;req,
+             <a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/Response.html" title="class in com.ibm.sametime.userinfo.userInfobbapi">Response</a>[]&nbsp;responses,
+             <a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/Response.html" title="class in com.ibm.sametime.userinfo.userInfobbapi">Response</a>&nbsp;resultResponse)</code>
+<div class="block">build a response object that will contain the data from all the black
+ boxes according to the black box proiority :e listed first have higer
+ priority therefore if a detail read is already there from a previous bb-
+ the old one stays</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#buildXmlFromRetrievedData(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl, com.ibm.sametime.userinfo.userInfobbapi.Response)">buildXmlFromRetrievedData</a></strong>(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl&nbsp;req,
+                         <a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/Response.html" title="class in com.ibm.sametime.userinfo.userInfobbapi">Response</a>&nbsp;response)</code>
+<div class="block">This method is used to build an XML string it using the request data and
+ the retrieved information in the response object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#constructPools(java.lang.String[])">constructPools</a></strong>(java.lang.String[]&nbsp;implNames)</code>
+<div class="block">building pool objects to later query for black boxes instances build a
+ pool object for each type of black box</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#generateSetContentXml(java.lang.String[])">generateSetContentXml</a></strong>(java.lang.String[]&nbsp;setDetails)</code>
+<div class="block">A function that create an XML that describes the content of an available
+ param set</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#getDetailsForUser(java.lang.String, java.lang.String[])">getDetailsForUser</a></strong>(java.lang.String&nbsp;userId,
+                 java.lang.String[]&nbsp;params)</code>
+<div class="block">The function activated by the sevlet object This method deals with type 1
+ requests: get specific details for specific userid</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#getDetailsListInSet(int)">getDetailsListInSet</a></strong>(int&nbsp;setId)</code>
+<div class="block">function activated by the sevlet object This method deals with type 2
+ requests: returns list of details in a specific set</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html" title="class in com.ibm.sametime.userinfo.userinfomgr">UserInfoMgr</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#getInstance()">getInstance</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#getPoolSize(int)">getPoolSize</a></strong>(int&nbsp;poolIndex)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#getSetValuesForUser(java.lang.String, int)">getSetValuesForUser</a></strong>(java.lang.String&nbsp;userId,
+                   int&nbsp;setId)</code>
+<div class="block">function activated by the sevlet object This sigature deals with type 3
+ requests: get values for details listed in a specific set for specific
+ userid</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#handleRequest(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl)">handleRequest</a></strong>(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl&nbsp;req)</code>
+<div class="block">This metod handles the request by activating blackboxes</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#init()">init</a></strong>()</code>
+<div class="block">Initializing Pools, configuration object and</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#isMgrInitialized()">isMgrInitialized</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html#terminate()">terminate</a></strong>()</code>
+<div class="block">signals pools to stop providing objects and cleanup</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="XML_HEADER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>XML_HEADER</h4>
+<pre>public static final&nbsp;java.lang.String XML_HEADER</pre>
+<div class="block">A constant that represents the first line in every xml sent as response</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.ibm.sametime.userinfo.userinfomgr.UserInfoMgr.XML_HEADER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ERROR_XML">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ERROR_XML</h4>
+<pre>public static final&nbsp;java.lang.String ERROR_XML</pre>
+<div class="block">A constant string that represents an error xml to be sent as a response</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.ibm.sametime.userinfo.userinfomgr.UserInfoMgr.ERROR_XML">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getInstance()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInstance</h4>
+<pre>public static&nbsp;<a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html" title="class in com.ibm.sametime.userinfo.userinfomgr">UserInfoMgr</a>&nbsp;getInstance()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the singleton insatnce</dd></dl>
+</li>
+</ul>
+<a name="init()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;void&nbsp;init()</pre>
+<div class="block">Initializing Pools, configuration object and</div>
+</li>
+</ul>
+<a name="constructPools(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>constructPools</h4>
+<pre>public&nbsp;void&nbsp;constructPools(java.lang.String[]&nbsp;implNames)</pre>
+<div class="block">building pool objects to later query for black boxes instances build a
+ pool object for each type of black box</div>
+</li>
+</ul>
+<a name="getDetailsForUser(java.lang.String, java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDetailsForUser</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getDetailsForUser(java.lang.String&nbsp;userId,
+                                 java.lang.String[]&nbsp;params)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html#getDetailsForUser(java.lang.String, java.lang.String[])">UserInfoServletService</a></code></span></div>
+<div class="block">The function activated by the sevlet object This method deals with type 1
+ requests: get specific details for specific userid</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html#getDetailsForUser(java.lang.String, java.lang.String[])">getDetailsForUser</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html" title="interface in com.ibm.sametime.userinfo.servletservice">UserInfoServletService</a></code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>UserInfoServletListener#getDetailsForUser(int, java.lang.String,
+      java.lang.String[]) Performs processing of data recieved and handles
+      as a type 1 request (Retrieving requested fields for a requested
+      userid).</code></dd></dl>
+</li>
+</ul>
+<a name="isMgrInitialized()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMgrInitialized</h4>
+<pre>public&nbsp;boolean&nbsp;isMgrInitialized()</pre>
+</li>
+</ul>
+<a name="getDetailsListInSet(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDetailsListInSet</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getDetailsListInSet(int&nbsp;setId)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html#getDetailsListInSet(int)">UserInfoServletService</a></code></span></div>
+<div class="block">function activated by the sevlet object This method deals with type 2
+ requests: returns list of details in a specific set</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html#getDetailsListInSet(int)">getDetailsListInSet</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html" title="interface in com.ibm.sametime.userinfo.servletservice">UserInfoServletService</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>setId</code> - the set number to fetch its details</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an xml string that contains the available details in the set or
+         an error xml if there are no details for this set.</dd><dt><span class="strong">See Also:</span></dt><dd><code>UserInfoServletListener#getDetailsListInSet(int, int) fetches the
+      details names and mapping in a specified set</code></dd></dl>
+</li>
+</ul>
+<a name="getSetValuesForUser(java.lang.String, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSetValuesForUser</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getSetValuesForUser(java.lang.String&nbsp;userId,
+                                   int&nbsp;setId)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html#getSetValuesForUser(java.lang.String, int)">UserInfoServletService</a></code></span></div>
+<div class="block">function activated by the sevlet object This sigature deals with type 3
+ requests: get values for details listed in a specific set for specific
+ userid</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html#getSetValuesForUser(java.lang.String, int)">getSetValuesForUser</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/ibm/sametime/userinfo/servletservice/UserInfoServletService.html" title="interface in com.ibm.sametime.userinfo.servletservice">UserInfoServletService</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>userid</code> - -
+            the user to retrieve data about setId the predefined details
+            set number</dd><dt><span class="strong">See Also:</span></dt><dd><code>UserInfoServletListener#getDetailsForUser(int, java.lang.String,
+      int) Fetches data from storages for a specific user id and specific
+      setid</code></dd></dl>
+</li>
+</ul>
+<a name="handleRequest(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleRequest</h4>
+<pre>public&nbsp;java.lang.String&nbsp;handleRequest(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl&nbsp;req)</pre>
+<div class="block">This metod handles the request by activating blackboxes</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>req</code> - -
+            the request to process</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the final XML string</dd></dl>
+</li>
+</ul>
+<a name="activateBlackBoxes(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl, com.ibm.sametime.userinfo.userInfobbapi.Response)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>activateBlackBoxes</h4>
+<pre>public&nbsp;void&nbsp;activateBlackBoxes(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl&nbsp;req,
+                      <a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/Response.html" title="class in com.ibm.sametime.userinfo.userInfobbapi">Response</a>&nbsp;cleanResponse)</pre>
+<div class="block">The method which queries the different blackboxes and aggregates the
+ results
+ 
+ If there are multiple bbs a query is sent to other black boxes using the
+ first black box's common field as userid. The default value for
+ Common_Field is "MailAddress"</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>req</code> - -the request to process Gets an instance from each pool and
+            run relevant bb generates response data</dd><dd><code>cleanResponse</code> - the Response object that will hold the data retrieved from all
+            resources.</dd></dl>
+</li>
+</ul>
+<a name="buildXmlFromRetrievedData(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl, com.ibm.sametime.userinfo.userInfobbapi.Response)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildXmlFromRetrievedData</h4>
+<pre>public&nbsp;java.lang.String&nbsp;buildXmlFromRetrievedData(com.ibm.sametime.userinfo.userinfomgr.RequestContextImpl&nbsp;req,
+                                         <a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/Response.html" title="class in com.ibm.sametime.userinfo.userInfobbapi">Response</a>&nbsp;response)</pre>
+<div class="block">This method is used to build an XML string it using the request data and
+ the retrieved information in the response object.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>req</code> - -
+            the RequestContext object that holds information about the
+            request (such as request id and user id)</dd><dd><code>response</code> - -
+            the response object that holds data retrieved from the data
+            resource/s</dd></dl>
+</li>
+</ul>
+<a name="generateSetContentXml(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>generateSetContentXml</h4>
+<pre>public&nbsp;java.lang.String&nbsp;generateSetContentXml(java.lang.String[]&nbsp;setDetails)</pre>
+<div class="block">A function that create an XML that describes the content of an available
+ param set</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>setDetails</code> - -
+            the details of a requested set</dd></dl>
+</li>
+</ul>
+<a name="buildResponse(com.ibm.sametime.userinfo.userInfobbapi.RequestContext, com.ibm.sametime.userinfo.userInfobbapi.Response[], com.ibm.sametime.userinfo.userInfobbapi.Response)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildResponse</h4>
+<pre>public&nbsp;void&nbsp;buildResponse(<a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/RequestContext.html" title="interface in com.ibm.sametime.userinfo.userInfobbapi">RequestContext</a>&nbsp;req,
+                 <a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/Response.html" title="class in com.ibm.sametime.userinfo.userInfobbapi">Response</a>[]&nbsp;responses,
+                 <a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/Response.html" title="class in com.ibm.sametime.userinfo.userInfobbapi">Response</a>&nbsp;resultResponse)</pre>
+<div class="block">build a response object that will contain the data from all the black
+ boxes according to the black box proiority :e listed first have higer
+ priority therefore if a detail read is already there from a previous bb-
+ the old one stays</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>req</code> - the matching request object</dd><dd><code>responses</code> - the Response list that holds all the data from all resources</dd><dd><code>resultResponse</code> - -
+            a Response object that will eventually hold aggregated data
+            from all resources according to their priority.</dd></dl>
+</li>
+</ul>
+<a name="terminate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>terminate</h4>
+<pre>public&nbsp;void&nbsp;terminate()</pre>
+<div class="block">signals pools to stop providing objects and cleanup</div>
+</li>
+</ul>
+<a name="getPoolSize(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getPoolSize</h4>
+<pre>public&nbsp;int&nbsp;getPoolSize(int&nbsp;poolIndex)</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html" title="class in com.ibm.sametime.userinfo.userinfomgr"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html" target="_top">Frames</a></li>
+<li><a href="UserInfoMgr.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

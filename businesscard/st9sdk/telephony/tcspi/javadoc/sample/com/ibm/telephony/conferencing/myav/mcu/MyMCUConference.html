@@ -1,0 +1,415 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MyMCUConference (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration Sample API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MyMCUConference (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration Sample API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUCommandSocketServer.html" title="class in com.ibm.telephony.conferencing.myav.mcu"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUServlet.html" title="class in com.ibm.telephony.conferencing.myav.mcu"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MyMCUConference.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.telephony.conferencing.myav.mcu</FONT>
+<BR>
+Class MyMCUConference</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.telephony.conferencing.myav.mcu.MyMCUConference</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html" title="interface in com.ibm.telephony.conferencing.myav">MyAVConstants</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>MyMCUConference</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html" title="interface in com.ibm.telephony.conferencing.myav">MyAVConstants</A></DL>
+</PRE>
+
+<P>
+Simple "fake conference" that manages conference identity and lifecycle.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.telephony.conferencing.myav.MyAVConstants"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.telephony.conferencing.myav.<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html" title="interface in com.ibm.telephony.conferencing.myav">MyAVConstants</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#DIAL_FAILURE">DIAL_FAILURE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#GENERAL_EXCEPTION_FAILURE">GENERAL_EXCEPTION_FAILURE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#INVALID_ENDPOINT">INVALID_ENDPOINT</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_ASSOCIATE">MYAV_CMD_ASSOCIATE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_CREATE_CONFERENCE">MYAV_CMD_CREATE_CONFERENCE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DELETE_CONFERENCE">MYAV_CMD_DELETE_CONFERENCE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DIAL">MYAV_CMD_DIAL</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DIAL_EXTENDED">MYAV_CMD_DIAL_EXTENDED</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DISCONNECT_USER">MYAV_CMD_DISCONNECT_USER</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_MEDIA_CONTROL">MYAV_CMD_MEDIA_CONTROL</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_REGISTER_USER">MYAV_CMD_REGISTER_USER</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_REGISTER_USER_SIP">MYAV_CMD_REGISTER_USER_SIP</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_SET_CONFERENCE_PROPERTY">MYAV_CMD_SET_CONFERENCE_PROPERTY</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_SET_USER_PROPERTY">MYAV_CMD_SET_USER_PROPERTY</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_START_CONFERENCE_CONTROL">MYAV_CMD_START_CONFERENCE_CONTROL</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_STOP_CONFERENCE_CONTROL">MYAV_CMD_STOP_CONFERENCE_CONTROL</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_TIMEOUT_ERROR">MYAV_CMD_TIMEOUT_ERROR</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_UNREGISTER_USER">MYAV_CMD_UNREGISTER_USER</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_ACK">MYAV_NOTIFICATION_USER_ACK</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_BYE">MYAV_NOTIFICATION_USER_BYE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_INVITE">MYAV_NOTIFICATION_USER_INVITE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_SET_PROPERTY">MYAV_NOTIFICATION_USER_SET_PROPERTY</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYMCU_CONFERENCE_AGENT_ID_PREFIX">MYMCU_CONFERENCE_AGENT_ID_PREFIX</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYMCU_SERVLET_CONTEXT">MYMCU_SERVLET_CONTEXT</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SERVICE_UNAVAILABLE">SERVICE_UNAVAILABLE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_APP_SESSION_EXPIRES_MINUTES">SIP_APP_SESSION_EXPIRES_MINUTES</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_REGISTER_DELAY_MS">SIP_REGISTER_DELAY_MS</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_REGISTER_EXPIRES_SECONDS">SIP_REGISTER_EXPIRES_SECONDS</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_REGISTER_INTERVAL_MS">SIP_REGISTER_INTERVAL_MS</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#TIMEOUT_FAILURE">TIMEOUT_FAILURE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#UNKNOWN_USER_NAME">UNKNOWN_USER_NAME</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_CONNECTED">USER_CONNECTED</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_CONNECTION_PROPERTY">USER_CONNECTION_PROPERTY</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_DISCONNECTED">USER_DISCONNECTED</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_DISPLAY_NAME">USER_DISPLAY_NAME</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_TALKING_PROPERTY">USER_TALKING_PROPERTY</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html#MyMCUConference(javax.servlet.sip.SipFactory)">MyMCUConference</A></B>(javax.servlet.sip.SipFactory&nbsp;sipFactory)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html#getConnectedUserNames()">getConnectedUserNames</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html#getId()">getId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html#renewRegistration()">renewRegistration</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html#sessionExpired(javax.servlet.sip.SipApplicationSession)">sessionExpired</A></B>(javax.servlet.sip.SipApplicationSession&nbsp;expiredSipAppSession)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html#setUserProperty(java.lang.String, java.lang.String, java.lang.String)">setUserProperty</A></B>(java.lang.String&nbsp;userName,
+                java.lang.String&nbsp;propertyName,
+                java.lang.String&nbsp;propertyValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html#start()">start</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html#stop()">stop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MyMCUConference(javax.servlet.sip.SipFactory)"><!-- --></A><H3>
+MyMCUConference</H3>
+<PRE>
+public <B>MyMCUConference</B>(javax.servlet.sip.SipFactory&nbsp;sipFactory)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getId()"><!-- --></A><H3>
+getId</H3>
+<PRE>
+public java.lang.String <B>getId</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUserProperty(java.lang.String, java.lang.String, java.lang.String)"><!-- --></A><H3>
+setUserProperty</H3>
+<PRE>
+public void <B>setUserProperty</B>(java.lang.String&nbsp;userName,
+                            java.lang.String&nbsp;propertyName,
+                            java.lang.String&nbsp;propertyValue)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConnectedUserNames()"><!-- --></A><H3>
+getConnectedUserNames</H3>
+<PRE>
+public java.lang.String[] <B>getConnectedUserNames</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="renewRegistration()"><!-- --></A><H3>
+renewRegistration</H3>
+<PRE>
+public boolean <B>renewRegistration</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="start()"><!-- --></A><H3>
+start</H3>
+<PRE>
+public void <B>start</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stop()"><!-- --></A><H3>
+stop</H3>
+<PRE>
+public void <B>stop</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sessionExpired(javax.servlet.sip.SipApplicationSession)"><!-- --></A><H3>
+sessionExpired</H3>
+<PRE>
+public boolean <B>sessionExpired</B>(javax.servlet.sip.SipApplicationSession&nbsp;expiredSipAppSession)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUCommandSocketServer.html" title="class in com.ibm.telephony.conferencing.myav.mcu"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUServlet.html" title="class in com.ibm.telephony.conferencing.myav.mcu"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MyMCUConference.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

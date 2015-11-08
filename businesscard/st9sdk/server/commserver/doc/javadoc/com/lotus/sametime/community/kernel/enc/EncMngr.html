@@ -1,0 +1,527 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>EncMngr</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="EncMngr";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMethod.html" title="class in com.lotus.sametime.community.kernel.enc"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncParams.html" title="class in com.lotus.sametime.community.kernel.enc"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/community/kernel/enc/EncMngr.html" target="_top">Frames</a></li>
+<li><a href="EncMngr.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.community.kernel.enc</div>
+<h2 title="Class EncMngr" class="title">Class EncMngr</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.community.kernel.enc.EncMngr</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">EncMngr</span>
+extends java.lang.Object</pre>
+<div class="block">The encryption manager class.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#ENC_ERR_CODE_BAD_ARG">ENC_ERR_CODE_BAD_ARG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#ENC_ERR_CODE_NO_METHOD">ENC_ERR_CODE_NO_METHOD</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#ENC_ERR_CODE_NOT_INITIALIZED">ENC_ERR_CODE_NOT_INITIALIZED</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#ENC_ERR_CODE_OK">ENC_ERR_CODE_OK</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#ENC_ERR_CODE_TOO_WEAK">ENC_ERR_CODE_TOO_WEAK</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static short</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#ENC_TYPE_RC2_128">ENC_TYPE_RC2_128</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static short</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#ENC_TYPE_RC2_40">ENC_TYPE_RC2_40</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#EncMngr()">EncMngr</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#createRequest(com.lotus.sametime.community.kernel.enc.EncData)">createRequest</a></strong>(<a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)</code>
+<div class="block">Get the minimum encryption level from the encryption data object, and
+ fill it's parameter list with possible ciphers matching that encryption
+ level.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#decrypt(byte[], com.lotus.sametime.community.kernel.enc.EncData)">decrypt</a></strong>(byte[]&nbsp;cyphered,
+       <a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)</code>
+<div class="block">Decrypt a message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#encrypt(byte[], com.lotus.sametime.community.kernel.enc.EncData)">encrypt</a></strong>(byte[]&nbsp;message,
+       <a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)</code>
+<div class="block">Encrypt a message.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#getEncError()">getEncError</a></strong>()</code>
+<div class="block">Return the last EncMngr error.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMethod.html" title="class in com.lotus.sametime.community.kernel.enc">EncMethod</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#getEncMethod(int)">getEncMethod</a></strong>(int&nbsp;type)</code>
+<div class="block">Get the encryption method that matches the given encryption type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#localizeReply(com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.community.kernel.enc.EncData)">localizeReply</a></strong>(<a href="../../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;originalLevel,
+             <a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)</code>
+<div class="block">This function is called on the side of the creator of the channel, after
+ the other side has accepted it, to make sure that the selected method
+ matches the requested level, and to initialize the method.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMngr.html#localizeRequest(com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.community.kernel.enc.EncData)">localizeRequest</a></strong>(<a href="../../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;requestedLevel,
+               <a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)</code>
+<div class="block">Find an encryption method matching the requested encryption level
+ in the list of methods offered by the other side.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ENC_TYPE_RC2_40">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENC_TYPE_RC2_40</h4>
+<pre>public static final&nbsp;short ENC_TYPE_RC2_40</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.community.kernel.enc.EncMngr.ENC_TYPE_RC2_40">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENC_TYPE_RC2_128">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENC_TYPE_RC2_128</h4>
+<pre>public static final&nbsp;short ENC_TYPE_RC2_128</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.community.kernel.enc.EncMngr.ENC_TYPE_RC2_128">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENC_ERR_CODE_OK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENC_ERR_CODE_OK</h4>
+<pre>public static final&nbsp;int ENC_ERR_CODE_OK</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.community.kernel.enc.EncMngr.ENC_ERR_CODE_OK">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENC_ERR_CODE_NOT_INITIALIZED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENC_ERR_CODE_NOT_INITIALIZED</h4>
+<pre>public static final&nbsp;int ENC_ERR_CODE_NOT_INITIALIZED</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.community.kernel.enc.EncMngr.ENC_ERR_CODE_NOT_INITIALIZED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENC_ERR_CODE_TOO_WEAK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENC_ERR_CODE_TOO_WEAK</h4>
+<pre>public static final&nbsp;int ENC_ERR_CODE_TOO_WEAK</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.community.kernel.enc.EncMngr.ENC_ERR_CODE_TOO_WEAK">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENC_ERR_CODE_BAD_ARG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENC_ERR_CODE_BAD_ARG</h4>
+<pre>public static final&nbsp;int ENC_ERR_CODE_BAD_ARG</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.community.kernel.enc.EncMngr.ENC_ERR_CODE_BAD_ARG">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENC_ERR_CODE_NO_METHOD">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ENC_ERR_CODE_NO_METHOD</h4>
+<pre>public static final&nbsp;int ENC_ERR_CODE_NO_METHOD</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.community.kernel.enc.EncMngr.ENC_ERR_CODE_NO_METHOD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="EncMngr()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>EncMngr</h4>
+<pre>public&nbsp;EncMngr()</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="createRequest(com.lotus.sametime.community.kernel.enc.EncData)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createRequest</h4>
+<pre>public static&nbsp;int&nbsp;createRequest(<a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)</pre>
+<div class="block">Get the minimum encryption level from the encryption data object, and
+ fill it's parameter list with possible ciphers matching that encryption
+ level. This function is called on channel creation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>encData</code> - The encryption data to work on. The minimum encryption
+ level is extracted from this object, and the possible methods are also
+ returned in this objct.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>An error code. Also, if no error has occured, encData.paramsList
+ holds possible encryption parameters to use.</dd></dl>
+</li>
+</ul>
+<a name="localizeRequest(com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.community.kernel.enc.EncData)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>localizeRequest</h4>
+<pre>public static&nbsp;int&nbsp;localizeRequest(<a href="../../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;requestedLevel,
+                  <a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)</pre>
+<div class="block">Find an encryption method matching the requested encryption level
+ in the list of methods offered by the other side. If such a method was
+ found, localize the parameters for it. (I.e. create all data that is
+ needed for us to talk to the other side).
+ This function is called after a channel was accepted.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>requestedLevel</code> - The encryption level this side requested.</dd><dd><code>encData</code> - The encryption data object we got from the other side.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>An error code. Also, if the operation was successfull,
+ encData.remoteParams holds the params for the preferred encryption
+ method.</dd></dl>
+</li>
+</ul>
+<a name="localizeReply(com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.community.kernel.enc.EncData)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>localizeReply</h4>
+<pre>public static&nbsp;int&nbsp;localizeReply(<a href="../../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;originalLevel,
+                <a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)
+                         throws java.io.IOException</pre>
+<div class="block">This function is called on the side of the creator of the channel, after
+ the other side has accepted it, to make sure that the selected method
+ matches the requested level, and to initialize the method.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>originalLevel</code> - The encryption level requested for this channel When
+ it was first created.</dd><dd><code>encData</code> - The encryption data object to work with.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>An error code. ENC_ERR_CODE_OK if the method was initialized.
+ Also, if the function was successfull, the remoteParams and localParams
+ fields are set correctly.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - If something went wrong in reading the remote
+ data.</dd></dl>
+</li>
+</ul>
+<a name="encrypt(byte[], com.lotus.sametime.community.kernel.enc.EncData)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encrypt</h4>
+<pre>public static&nbsp;byte[]&nbsp;encrypt(byte[]&nbsp;message,
+             <a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)</pre>
+<div class="block">Encrypt a message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - The message to encypher.</dd><dd><code>encData</code> - The encryption data object to work with.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The cyphered text. If an error occured, the return value is
+ null. Use getEncError to get the code of the error.</dd></dl>
+</li>
+</ul>
+<a name="decrypt(byte[], com.lotus.sametime.community.kernel.enc.EncData)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>decrypt</h4>
+<pre>public static&nbsp;byte[]&nbsp;decrypt(byte[]&nbsp;cyphered,
+             <a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncData.html" title="class in com.lotus.sametime.community.kernel.enc">EncData</a>&nbsp;encData)</pre>
+<div class="block">Decrypt a message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cyphered</code> - The cyphered message to decrypt.</dd><dd><code>encData</code> - The encryption data object to work with.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The decyphered text. If an error occured, the return value is
+ null. Use getEncError to get the code of the error.</dd></dl>
+</li>
+</ul>
+<a name="getEncMethod(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEncMethod</h4>
+<pre>public static&nbsp;<a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMethod.html" title="class in com.lotus.sametime.community.kernel.enc">EncMethod</a>&nbsp;getEncMethod(int&nbsp;type)</pre>
+<div class="block">Get the encryption method that matches the given encryption type.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - The type of the method we are looking for.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an EncMethod object matching the method we were looking for, or
+ null if an error occured. In case of error, use getEncError to get it's
+ code.</dd></dl>
+</li>
+</ul>
+<a name="getEncError()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getEncError</h4>
+<pre>public static&nbsp;int&nbsp;getEncError()</pre>
+<div class="block">Return the last EncMngr error.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the code of the error.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncMethod.html" title="class in com.lotus.sametime.community.kernel.enc"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../com/lotus/sametime/community/kernel/enc/EncParams.html" title="class in com.lotus.sametime.community.kernel.enc"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/community/kernel/enc/EncMngr.html" target="_top">Frames</a></li>
+<li><a href="EncMngr.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

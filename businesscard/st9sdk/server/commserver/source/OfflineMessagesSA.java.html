@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>OfflineMessagesSA (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">OfflineMessagesSA</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.*;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.constants.STError;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.NdrInputStream;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.connection.*;
+<A NAME="17"><A><FONT ID="Import">import</FONT> com.lotus.sametime.communityevents.*;
+<A NAME="18"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.*;
+<A NAME="19"><A><FONT ID="Import">import</FONT> com.lotus.sametime.token.*;
+<A NAME="20"><A>
+<A NAME="21"><A><FONT ID="Import">import</FONT> java.io.IOException;
+<A NAME="22"><A><FONT ID="Import">import</FONT> java.util.Hashtable;
+<A NAME="23"><A>
+<A NAME="24"><A>
+<A NAME="25"><A><FONT ID="FormalComment">/**
+<A NAME="26"><A> * The 'offline messages' server application.
+<A NAME="27"><A> *
+<A NAME="28"><A> * @author Assaf Azaria, July 2001.
+<A NAME="29"><A> */</FONT>
+<A NAME="30"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> OfflineMessagesSA <FONT ID="Implements">implements</FONT> LoginListener, UserLoginListener,
+<A NAME="31"><A>    ChannelServiceListener
+<A NAME="32"><A>{
+<A NAME="33"><A>    <FONT ID="FormalComment">/**
+<A NAME="34"><A>     * Our service type.
+<A NAME="35"><A>     */</FONT>
+<A NAME="36"><A>    <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> SERVICE_TYPE = <FONT ID="IntegerLiteral">0x80000055</FONT>;
+<A NAME="37"><A>
+<A NAME="38"><A>    <FONT ID="FormalComment">/**
+<A NAME="39"><A>     * The session object.
+<A NAME="40"><A>     */</FONT>
+<A NAME="41"><A>    <FONT ID="Private">private</FONT> STSession m_session;
+<A NAME="42"><A>
+<A NAME="43"><A>    <FONT ID="FormalComment">/**
+<A NAME="44"><A>     * The community events component.
+<A NAME="45"><A>     */</FONT>
+<A NAME="46"><A>    <FONT ID="Private">private</FONT> CommunityEventsService m_commEvents;
+<A NAME="47"><A>
+<A NAME="48"><A>    <FONT ID="FormalComment">/**
+<A NAME="49"><A>     * The list of users we watch.
+<A NAME="50"><A>     */</FONT>
+<A NAME="51"><A>    <FONT ID="Private">private</FONT> Hashtable m_watchedUsers = <FONT ID="New">new</FONT> Hashtable();
+<A NAME="52"><A>
+<A NAME="53"><A>    <FONT ID="FormalComment">/**
+<A NAME="54"><A>     * The name of the server to connect to.
+<A NAME="55"><A>     */</FONT>
+<A NAME="56"><A>    <FONT ID="Private">private</FONT> String m_hostName;
+<A NAME="57"><A>
+<A NAME="58"><A>    <FONT ID="FormalComment">/**
+<A NAME="59"><A>     * Constructor.
+<A NAME="60"><A>     *
+<A NAME="61"><A>     * @param hostName The name of the server to connect to.
+<A NAME="62"><A>     */</FONT>
+<A NAME="63"><A>    <FONT ID="Public">public</FONT> OfflineMessagesSA(String hostName)
+<A NAME="64"><A>    {
+<A NAME="65"><A>        <FONT ID="SingleLineComment">// Create and load the session of components.
+<A NAME="66"><A></FONT>        <FONT ID="Try">try</FONT>
+<A NAME="67"><A>        {
+<A NAME="68"><A>            m_session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">"OfflineMessages"</FONT>);
+<A NAME="69"><A>
+<A NAME="70"><A>            String [] compNames  = { ServerAppService.COMP_NAME, 
+<A NAME="71"><A>                    CommunityEventsComp.COMP_NAME, SATokenComp.COMP_NAME };
+<A NAME="72"><A>            m_session.loadComponents( compNames );
+<A NAME="73"><A>
+<A NAME="74"><A>            m_session.start();
+<A NAME="75"><A>        }
+<A NAME="76"><A>        <FONT ID="Catch">catch</FONT>(DuplicateObjectException e)
+<A NAME="77"><A>        {
+<A NAME="78"><A>            e.printStackTrace();
+<A NAME="79"><A>            exit();
+<A NAME="80"><A>        }
+<A NAME="81"><A>
+<A NAME="82"><A>        m_hostName = hostName;
+<A NAME="83"><A>
+<A NAME="84"><A>        <FONT ID="SingleLineComment">// Get a reference to the needed components.
+<A NAME="85"><A></FONT>        m_commEvents =
+<A NAME="86"><A>            (CommunityEventsService)m_session.getCompApi(CommunityEventsService.COMP_NAME);
+<A NAME="87"><A>        m_commEvents.addUserLoginListener(<FONT ID="This">this</FONT>);
+<A NAME="88"><A>
+<A NAME="89"><A>        ChannelService channelService =
+<A NAME="90"><A>            (ChannelService)m_session.getCompApi(ChannelService.COMP_NAME);
+<A NAME="91"><A>        channelService.addChannelServiceListener(<FONT ID="This">this</FONT>);
+<A NAME="92"><A>
+<A NAME="93"><A>        login(hostName);
+<A NAME="94"><A>    }
+<A NAME="95"><A>
+<A NAME="96"><A>    <FONT ID="FormalComment">/**
+<A NAME="97"><A>     * Login to the sametime server as a server application.
+<A NAME="98"><A>     *
+<A NAME="99"><A>     * @param hostName The name of the host.
+<A NAME="100"><A>     */</FONT>
+<A NAME="101"><A>    <FONT ID="Void">void</FONT> login(String hostName)
+<A NAME="102"><A>    {
+<A NAME="103"><A>        ServerAppService saService =
+<A NAME="104"><A>            (ServerAppService)m_session.getCompApi(ServerAppService.COMP_NAME);
+<A NAME="105"><A>
+<A NAME="106"><A>        <FONT ID="Short">short</FONT> loginType = STUserInstance.LT_SERVER_APP;
+<A NAME="107"><A>        <FONT ID="Int">int</FONT>[] supportedServices = { SERVICE_TYPE };
+<A NAME="108"><A>
+<A NAME="109"><A>        <FONT ID="SingleLineComment">// Server applications login directly to the server, and not through
+<A NAME="110"><A></FONT>        <FONT ID="SingleLineComment">// the mux. So we can't use the default port.
+<A NAME="111"><A></FONT>        Connection[] connections = {
+<A NAME="112"><A>            <FONT ID="New">new</FONT> SocketConnection(<FONT ID="IntegerLiteral">1516</FONT>, <FONT ID="IntegerLiteral">17000</FONT>),
+<A NAME="113"><A>        };
+<A NAME="114"><A>        saService.setConnectivity(connections);
+<A NAME="115"><A>
+<A NAME="116"><A>        saService.addLoginListener(<FONT ID="This">this</FONT>);
+<A NAME="117"><A>        saService.loginAsServerApp(hostName, loginType, <FONT ID="StringLiteral">"OfflineMessages"</FONT>,
+<A NAME="118"><A>                                   supportedServices);
+<A NAME="119"><A>    }
+<A NAME="120"><A>
+<A NAME="121"><A>    <FONT ID="FormalComment">/**
+<A NAME="122"><A>     * Terminate the application.
+<A NAME="123"><A>     */</FONT>
+<A NAME="124"><A>    <FONT ID="Void">void</FONT> exit()
+<A NAME="125"><A>    {
+<A NAME="126"><A>        m_session.stop();
+<A NAME="127"><A>        m_session.unloadSession();
+<A NAME="128"><A>        System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="129"><A>    }
+<A NAME="130"><A>
+<A NAME="131"><A>    <FONT ID="SingleLineComment">//
+<A NAME="132"><A></FONT>    <FONT ID="SingleLineComment">// Channel Service Listener.
+<A NAME="133"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="134"><A></FONT>    <FONT ID="FormalComment">/**
+<A NAME="135"><A>     * A channel was received. If a 'channel received' notification is not
+<A NAME="136"><A>     * handled by any listener (handling means accepting it, closing it,
+<A NAME="137"><A>     * or explicitly putting it in a pending state) it will be closed, to
+<A NAME="138"><A>     * make sure we have no zombie channels.
+<A NAME="139"><A>     *
+<A NAME="140"><A>     * @param event The event object.
+<A NAME="141"><A>     */</FONT>
+<A NAME="142"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelReceived(ChannelEvent event)
+<A NAME="143"><A>    {
+<A NAME="144"><A>        <FONT ID="SingleLineComment">// Get the incoming data.
+<A NAME="145"><A></FONT>        Channel cnl = event.getChannel();
+<A NAME="146"><A>        <FONT ID="Try">try</FONT>
+<A NAME="147"><A>        {
+<A NAME="148"><A>            Channel channel = event.getChannel();
+<A NAME="149"><A>
+<A NAME="150"><A>            <FONT ID="SingleLineComment">// Check the service type of the event to make sure it is an offline message service type
+<A NAME="151"><A></FONT>            <FONT ID="If">if</FONT> (channel.getServiceType() == SERVICE_TYPE)
+<A NAME="152"><A>            {
+<A NAME="153"><A>                NdrInputStream inStream = <FONT ID="New">new</FONT> NdrInputStream(cnl.getCreateData());
+<A NAME="154"><A>    
+<A NAME="155"><A>                STId receiverId = <FONT ID="New">new</FONT> STId(inStream);
+<A NAME="156"><A>                String receiverName = inStream.readUTF();
+<A NAME="157"><A>                String message = inStream.readUTF();
+<A NAME="158"><A>    
+<A NAME="159"><A>                STUser receiver = <FONT ID="New">new</FONT> STUser(receiverId, receiverName, <FONT ID="StringLiteral">""</FONT>);
+<A NAME="160"><A>                <A HREF="UsersHandler.java.html">UsersHandler</A> handler = <FONT ID="New">new</FONT> <A HREF="UsersHandler.java.html">UsersHandler</A>(m_session, m_hostName,
+<A NAME="161"><A>                                                      cnl.getRemoteInfo(), receiver,
+<A NAME="162"><A>                                                      message);
+<A NAME="163"><A>    
+<A NAME="164"><A>                m_watchedUsers.put(receiverId.getId(), handler);
+<A NAME="165"><A>            }
+<A NAME="166"><A>        }
+<A NAME="167"><A>        <FONT ID="Catch">catch</FONT> (IOException e)
+<A NAME="168"><A>        {
+<A NAME="169"><A>            e.printStackTrace();
+<A NAME="170"><A>            cnl.close(STError.ST_INVALID_DATA, <FONT ID="Null">null</FONT>);
+<A NAME="171"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="172"><A>        }
+<A NAME="173"><A>        <FONT ID="SingleLineComment">// No need for the channel anymore.
+<A NAME="174"><A></FONT>        cnl.close(STError.ST_OK, <FONT ID="Null">null</FONT>);
+<A NAME="175"><A>    }
+<A NAME="176"><A>
+<A NAME="177"><A>    <FONT ID="SingleLineComment">//
+<A NAME="178"><A></FONT>    <FONT ID="SingleLineComment">// User Login Listener.
+<A NAME="179"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="180"><A></FONT>    <FONT ID="FormalComment">/**
+<A NAME="181"><A>     * Indicates that a user was successfully logged in to the Sametime
+<A NAME="182"><A>     *  community.
+<A NAME="183"><A>     *
+<A NAME="184"><A>     * @param event The event object.
+<A NAME="185"><A>     * @see UserLoginEvent#getUserInstance
+<A NAME="186"><A>     */</FONT>
+<A NAME="187"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> userLoggedIn (UserLoginEvent  event)
+<A NAME="188"><A>    {
+<A NAME="189"><A>        <FONT ID="SingleLineComment">// Check if we are interested in this user.
+<A NAME="190"><A></FONT>        STUser user = event.getUserInstance();
+<A NAME="191"><A>        Object o = m_watchedUsers.remove(user.getId().getId());
+<A NAME="192"><A>        <FONT ID="If">if</FONT> (o != <FONT ID="Null">null</FONT>)
+<A NAME="193"><A>        {
+<A NAME="194"><A>            ((<A HREF="UsersHandler.java.html">UsersHandler</A>)o).receiverOnline();
+<A NAME="195"><A>        }
+<A NAME="196"><A>    }
+<A NAME="197"><A>
+<A NAME="198"><A>    <FONT ID="FormalComment">/**
+<A NAME="199"><A>     * Indicates that a user was logged out from the Sametime community.
+<A NAME="200"><A>     *
+<A NAME="201"><A>     * @param event The event object.
+<A NAME="202"><A>     * @see UserLoginEvent#getUserInstance
+<A NAME="203"><A>     */</FONT>
+<A NAME="204"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> userLoggedOut(UserLoginEvent  event)
+<A NAME="205"><A>    {}
+<A NAME="206"><A>
+<A NAME="207"><A>
+<A NAME="208"><A>    <FONT ID="SingleLineComment">//
+<A NAME="209"><A></FONT>    <FONT ID="SingleLineComment">// Login Listener.
+<A NAME="210"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="211"><A></FONT>
+<A NAME="212"><A>    <FONT ID="FormalComment">/**
+<A NAME="213"><A>     * Indicates that we were successfully logged in to the Sametime community.
+<A NAME="214"><A>     *
+<A NAME="215"><A>     * @param event The event object.
+<A NAME="216"><A>     * @see LoginEvent#getCommunity
+<A NAME="217"><A>     */</FONT>
+<A NAME="218"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event)
+<A NAME="219"><A>    {
+<A NAME="220"><A>        System.out.println(<FONT ID="StringLiteral">"SA: LoggedIn"</FONT>);
+<A NAME="221"><A>    }
+<A NAME="222"><A>
+<A NAME="223"><A>    <FONT ID="FormalComment">/**
+<A NAME="224"><A>     * Indicates that we were successfully logged out of the Sametime community, or a login
+<A NAME="225"><A>     * request was refused.
+<A NAME="226"><A>     *
+<A NAME="227"><A>     * @param event The event object.
+<A NAME="228"><A>     * @see LoginEvent#getReason
+<A NAME="229"><A>     * @see LoginEvent#getCommunity
+<A NAME="230"><A>     */</FONT>
+<A NAME="231"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event)
+<A NAME="232"><A>    {
+<A NAME="233"><A>        System.out.println(<FONT ID="StringLiteral">"SA: LoggedOut "</FONT> + event.getReason());
+<A NAME="234"><A>        exit();
+<A NAME="235"><A>    }
+<A NAME="236"><A>
+<A NAME="237"><A>    <FONT ID="FormalComment">/**
+<A NAME="238"><A>     * Application entry point.
+<A NAME="239"><A>     */</FONT>
+<A NAME="240"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args)
+<A NAME="241"><A>    {
+<A NAME="242"><A>        <FONT ID="If">if</FONT> (args.length != <FONT ID="IntegerLiteral">1</FONT>)
+<A NAME="243"><A>        {
+<A NAME="244"><A>            System.err.println(<FONT ID="StringLiteral">"Usage: OfflineMessagesSA [serverName]"</FONT>);
+<A NAME="245"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="246"><A>        }
+<A NAME="247"><A>
+<A NAME="248"><A>        <FONT ID="New">new</FONT> <A HREF="OfflineMessagesSA.java.html">OfflineMessagesSA</A>(args[<FONT ID="IntegerLiteral">0</FONT>]);
+<A NAME="249"><A>    }
+<A NAME="250"><A>}
+<A NAME="251"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">OfflineMessagesSA</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

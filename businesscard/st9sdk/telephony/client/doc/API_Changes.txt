@@ -1,0 +1,137 @@
+
+This document provides a list of IBM(R) Sametime(R) Telephony API
+interfaces and classes that have been added, deprecated or removed since
+the IBM Sametime 9.0.0 release.
+
+Note the following:
+
+1. Most deprecated APIs have been replaced with equivalent APIs. In some
+   cases, the deprecated APIs were simply renamed for consistency with
+   other IBM Sametime Telephony APIs.
+   
+2. Deprecated APIs are marked as deprecated in the API Javadoc.
+   
+3. Classes and members (constructors, fields, methods, inner classes) that were
+   added for 9.0.0 are marked as "Since Sametime 9.0.0" in the API Javadoc.
+
+--------------------------------------------------------------------------------
+     New Interfaces and Classes
+--------------------------------------------------------------------------------
+
+com.ibm.collaboration.realtime.contacts.storage.PhoneNumber
+com.ibm.collaboration.realtime.contacts.storage.Contact
+com.ibm.collaboration.realtime.telephony.TelephonyUtil
+com.ibm.collaboration.realtime.telephony.sut.phonebook.external.PhoneBookExternalImpl
+com.ibm.collaboration.realtime.telephony.sut.phonebook.external.PhoneBookExternal
+com.ibm.collaboration.realtime.telephony.sut.phonebook.external.InvalidContactException
+com.ibm.collaboration.realtime.telephony.sut.phonebook.external.util.PhoneBookExternalUtil
+com.ibm.collaboration.realtime.telephony.ui.extension.ParticipantDisplayInformation
+
+--------------------------------------------------------------------------------
+     New Members in Existing Interfaces and Classes
+--------------------------------------------------------------------------------
+
+com.ibm.collaboration.realtime.telephony.service.CallServiceProvider
+     requestParticipantUnmute(CallId, String, boolean)
+com.ibm.collaboration.realtime.telephony.service.AbstractCallServiceProvider
+     requestParticipantUnmute(CallId, String, boolean)
+com.ibm.collaboration.realtime.telephony.PropertyNames
+     PROPERTY_TCSPI_SERVICE_LOCATION
+     PROPERTY_TCSPI_REUSE_DYNAMIC_CONFERENCES_DIAL_IN
+     PROPERTY_TCSPI_AUTO_MUTE_SUPPORTED
+     PROPERTY_TCSPI_MUTE_LOCK_SUPPORTED
+     PROPERTY_TCSPI_PARTICIPANT_DISPLAY_NAME
+     PROPERTY_TCSPI_PARTICIPANT_ASSOCIATED_ID
+     PROPERTY_IS_MODERATOR
+     PROPERTY_IS_ROOM_OWNER
+     PROPERTY_IS_PRESENTER
+     PROPERTY_CONFERENCE_URI
+     PROPERTY_TCSPI_TELEPHONY_ENABLED_INTERNAL
+com.ibm.collaboration.realtime.telephony.Participant
+     getImage()
+     requestUnmute(boolean)
+     setDisplayName(String)
+     setImage(ImageDescriptor)
+     isMuteLocked()
+     muteLocked()
+     muteUnLocked()
+     silenceAudio()
+     unSilenceAudio()
+     isUnmuteRequested()
+com.ibm.collaboration.realtime.telephony.event.IncomingCallEvent
+     getCalledAddressUris()
+     setCalledAddressUris(List<String>)
+com.ibm.collaboration.realtime.telephony.Call
+     PROPERTY_STATUS
+     isMissedCall()
+     getAllowedVideoLayouts(boolean)
+     setVideoLayout(String)
+     dockUndockCallWindow(Canvas)
+     aboutToDockUndockCallWindow()
+com.ibm.collaboration.realtime.telephony.media.MediaEvent
+     SIP_REGISTRATION_FAILURE
+     ICE_ALLOCATION_FAILURE
+     TURN_AUTHENTICATION_CONF_FAILURE
+     TURN_UNAVILABLE_HTTP_FAILURE
+     TURN_UNAVILABLE_FAILURE
+     TURN_SERVER_SETTING_FAILURE
+     TURN_FAILED_DOWN_FAILURE
+     TLS_CERT_AVAILABLE_FAILURE
+     TLS_SELF_SIGNED_CERT_FAILURE
+     TLS_HOSTNAME_FAILURE
+     INVALID_PROPERTIES_FAILURE
+     CAMERA_NOT_SUPPORTED
+     INVALID_CAMERA_DEVICE
+     INVALID_MICROPHONE_DEVICE
+     INVALID_SPEAKER_DEVICE
+     AUDIO_DEVICE_FAILURE
+     START_VIDEO_FAILURE
+     SIP_CALL_FAILURE
+com.ibm.collaboration.realtime.telephony.event.CallEvent
+     EVENT_PARTICIPANT_UNMUTE_REQUESTED
+     EVENT_PARTICIPANT_ASSOCIATED_ID
+     EVENT_PARTICIPANT_MUTE_LOCKED
+     EVENT_PARTICIPANT_MUTE_UNLOCKED
+     EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED
+com.ibm.collaboration.realtime.telephony.Capability
+     CAPABILITY_ANSWER_CALL
+com.ibm.collaboration.realtime.telephony.ui.extension.CallAction
+     PATH_ACCEPT_CALL
+     PATH_DECLINE_CALL
+     PATH_FORWARD_CALL
+     PATH_INCOMING_CALL_BUTTON
+     PATH_LAYOUT
+     getIncomingCallEvent()
+     getControlShell()
+
+--------------------------------------------------------------------------------
+     Deprecated Interfaces and Classes
+--------------------------------------------------------------------------------
+
+None identified for this release.
+
+
+--------------------------------------------------------------------------------
+     Deprecated Members in Existing Interfaces and Classes
+--------------------------------------------------------------------------------
+
+None identified for this release.
+
+
+--------------------------------------------------------------------------------
+     Interfaces and Classes that have been removed
+--------------------------------------------------------------------------------
+
+None identified for this release.
+
+
+--------------------------------------------------------------------------------
+     Members in Existing Interfaces and Classes that have been removed
+--------------------------------------------------------------------------------
+
+com.ibm.collaboration.realtime.telephony.service.AbstractCallServiceProvider
+     requestParticipantUnmute(CallId, String)
+com.ibm.collaboration.realtime.telephony.Participant
+     requestUnmute()
+com.ibm.collaboration.realtime.telephony.service.CallServiceProvider
+     requestParticipantUnmute(CallId, String)

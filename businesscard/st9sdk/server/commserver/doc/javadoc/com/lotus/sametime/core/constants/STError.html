@@ -1,0 +1,3584 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>STError</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="STError";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/core/constants/PriorityLevel.html" title="class in com.lotus.sametime.core.constants"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/core/constants/SvcTypes.html" title="class in com.lotus.sametime.core.constants"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/core/constants/STError.html" target="_top">Frames</a></li>
+<li><a href="STError.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.core.constants</div>
+<h2 title="Class STError" class="title">Class STError</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.core.constants.STError</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">STError</span>
+extends java.lang.Object</pre>
+<div class="block">Sametime version 2.0 error codes.<br>
+ High bit is 1 to indicate an error.<br>
+ Low 2 bytes are the generic error code (understood by everyone).<br>
+ High 2 bytes - service specific error code (provided in addition to the
+ generic error code for those who can interpret it).</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#MEETING_LISTENER_NOT_REGISTERED">MEETING_LISTENER_NOT_REGISTERED</a></strong></code>
+<div class="block">(0x80000505)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#MISSING_TOKEN">MISSING_TOKEN</a></strong></code>
+<div class="block">(0x80000506)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ABORT">ST_ABORT</a></strong></code>
+<div class="block">Operation has been aborted (0x80000004).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ALREADY_INIT">ST_ALREADY_INIT</a></strong></code>
+<div class="block">Initialization has already taken place (0x80000013).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ALREADY_SUBSCRIBED">ST_ALREADY_SUBSCRIBED</a></strong></code>
+<div class="block">Already subscribed to object(s) or event(s) (0x8000001B).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_BL_ATTR_OWNER_ID_UNKNOWN">ST_BL_ATTR_OWNER_ID_UNKNOWN</a></strong></code>
+<div class="block">an owner of an attribute was not found in BuddyList.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_BL_ERROR">ST_BL_ERROR</a></strong></code>
+<div class="block">Reserved for buddy list (0x80010000).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CHANNEL_EXISTS">ST_CHANNEL_EXISTS</a></strong></code>
+<div class="block">The requested channel already exists (0x8000000C).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CHANNEL_NONAVAIL">ST_CHANNEL_NONAVAIL</a></strong></code>
+<div class="block">The requested channel is not supported (0x8000000B).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CHANNEL_REDIRECT">ST_CHANNEL_REDIRECT</a></strong></code>
+<div class="block">The channel has been redirected to another destination (0x00000023).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CHANNEL_REDIRECTION_RECOMMEND">ST_CHANNEL_REDIRECTION_RECOMMEND</a></strong></code>
+<div class="block">The channel is destroyed after a recommendation is made to connect
+ elsewhere (0x80000022).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNAGENT_TIMED_OUT_WAITING_AGENT_EXE">ST_CONNAGENT_TIMED_OUT_WAITING_AGENT_EXE</a></strong></code>
+<div class="block">AgentLink timed out while waiting for the StConagentXX.exe to be ready</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNAGENT_UNABLE_TO_CREATE_MMF_OBJS">ST_CONNAGENT_UNABLE_TO_CREATE_MMF_OBJS</a></strong></code>
+<div class="block">AgentLink unable to create memory mapped file objects</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNAGENT_UNABLE_TO_CREATE_SYNC_OBJS">ST_CONNAGENT_UNABLE_TO_CREATE_SYNC_OBJS</a></strong></code>
+<div class="block">AgentLink was not able to create synchronization objects</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNAGENT_UNABLE_TO_RUN_AGENT_EXE">ST_CONNAGENT_UNABLE_TO_RUN_AGENT_EXE</a></strong></code>
+<div class="block">AgentLink was not able to create an instance of StConnagentXX.exe</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_ABORTED">ST_CONNECT_ABORTED</a></strong></code>
+<div class="block">An established connection was aborted by the software in the host machine
+ (0x80000222).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_ALREADY_SIGN_ON">ST_CONNECT_ALREADY_SIGN_ON</a></strong></code>
+<div class="block">The user is already signed on (0x80000218).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_BAD_LOGIN">ST_CONNECT_BAD_LOGIN</a></strong></code>
+<div class="block">Incorrect login (0x80000211).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_BAD_SEARCH_FILTER">ST_CONNECT_BAD_SEARCH_FILTER</a></strong></code>
+<div class="block">Bad search filter error</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_BROKEN">ST_CONNECT_BROKEN</a></strong></code>
+<div class="block">The connection has been broken (0x80000221).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_CANNOT_CONNECT">ST_CONNECT_CANNOT_CONNECT</a></strong></code>
+<div class="block">Cannot connect (0x8000020D).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_CANNOT_VERIFY">ST_CONNECT_CANNOT_VERIFY</a></strong></code>
+<div class="block">Verification service down (0x80000214).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_CLOSED">ST_CONNECT_CLOSED</a></strong></code>
+<div class="block">The connection has been closed (0x80000226).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_DIR_BAD_CONFIG">ST_CONNECT_DIR_BAD_CONFIG</a></strong></code>
+<div class="block">Directory bad config error</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_DNS_FATAL_ERROR">ST_CONNECT_DNS_FATAL_ERROR</a></strong></code>
+<div class="block">Fatal error in DNS (0x8000021F).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_DNS_TRANSIENT_ERROR">ST_CONNECT_DNS_TRANSIENT_ERROR</a></strong></code>
+<div class="block">Error in DNS (0x8000021E).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_GUEST_NAME_FORBIDDEN">ST_CONNECT_GUEST_NAME_FORBIDDEN</a></strong></code>
+<div class="block">The name cannot be used (0x8000021A).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_GUEST_NAME_OCCUPIED">ST_CONNECT_GUEST_NAME_OCCUPIED</a></strong></code>
+<div class="block">The guest name is currently being used (0x80000217).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_HARDWARE_ERROR">ST_CONNECT_HARDWARE_ERROR</a></strong></code>
+<div class="block">Hardware error occurred (0x80000204).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_HOME_SERVER_TOO_OLD">ST_CONNECT_HOME_SERVER_TOO_OLD</a></strong></code>
+<div class="block">Unable to log in to home Sametime server through the requested server,
+ since your home server needs to be upgraded (0x8000022C).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_HOST_DOWN">ST_CONNECT_HOST_DOWN</a></strong></code>
+<div class="block">Host down (0x80000206).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_HOST_UNREACHABLE">ST_CONNECT_HOST_UNREACHABLE</a></strong></code>
+<div class="block">Host unreachable (0x80000207).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_IDLE_TOOMUCH">ST_CONNECT_IDLE_TOOMUCH</a></strong></code>
+<div class="block">User has been idle for too long (0x80000216).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_IN_KICK_MODE">ST_CONNECT_IN_KICK_MODE</a></strong></code>
+<div class="block">Cannot connect because user has been restricted (0x80000210).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_JAVA_APPLET_STOPPED">ST_CONNECT_JAVA_APPLET_STOPPED</a></strong></code>
+<div class="block">The applet was logged out with this reason (0x8000022D).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_MISMATCH_USER_NAME">ST_CONNECT_MISMATCH_USER_NAME</a></strong></code>
+<div class="block">Obsolete (0x80000215).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_MSG_OVERFLOW">ST_CONNECT_MSG_OVERFLOW</a></strong></code>
+<div class="block">The message is too large (0x80000209).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_MUST_USE_EMAIL">ST_CONNECT_MUST_USE_EMAIL</a></strong></code>
+<div class="block">Email address must be used (0x8000021D).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_NET_DOWN">ST_CONNECT_NET_DOWN</a></strong></code>
+<div class="block">Network down (0x80000205).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_NET_PROTOCOL_ERROR">ST_CONNECT_NET_PROTOCOL_ERROR</a></strong></code>
+<div class="block">TCP/IP protocol error (0x80000208).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_NO_CONNECTION_WITH_HOME_SERVER">ST_CONNECT_NO_CONNECTION_WITH_HOME_SERVER</a></strong></code>
+<div class="block">This error is thrown when there is no connection to the home server of the user. (0x80000239).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_NO_FILES">ST_CONNECT_NO_FILES</a></strong></code>
+<div class="block">Not enough resources for connection (socket id) (0x80000203).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_NO_HOME_SERVER">ST_CONNECT_NO_HOME_SERVER</a></strong></code>
+<div class="block">Unable to log in because the server is either unreachable or not
+ configured properly (0x8000022B).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_NO_PERMISSION">ST_CONNECT_NO_PERMISSION</a></strong></code>
+<div class="block">There is no permission to connect (0x80000202).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_NO_RESOURCES">ST_CONNECT_NO_RESOURCES</a></strong></code>
+<div class="block">There are no resources to connect (0x80000201).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_NOT_PRIVILEGED">ST_CONNECT_NOT_PRIVILEGED</a></strong></code>
+<div class="block">User does not have appropriate privilege level (0x8000021C).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_PROTOCOL_ERROR">ST_CONNECT_PROTOCOL_ERROR</a></strong></code>
+<div class="block">VP protocol error (0x8000020F).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_PROXY_ERROR">ST_CONNECT_PROXY_ERROR</a></strong></code>
+<div class="block">Proxy error (0x8000020A).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_REFUSED">ST_CONNECT_REFUSED</a></strong></code>
+<div class="block">The connection has been refused (0x80000223).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_REG_MODE_NOT_ALLOWED">ST_CONNECT_REG_MODE_NOT_ALLOWED</a></strong></code>
+<div class="block">The registration mode is not supported (0x8000021B).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_REJECT_FORWARDED_LOGINS">ST_CONNECT_REJECT_FORWARDED_LOGINS</a></strong></code>
+<div class="block">This error is thrown when the user is trying to connect through remote server, but he is allowed only to connect to his home server. (0x80000235).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_REQUIRE_ENCRYPTION">ST_CONNECT_REQUIRE_ENCRYPTION</a></strong></code>
+<div class="block">Encryption mismatch (0x80000212).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_RESET">ST_CONNECT_RESET</a></strong></code>
+<div class="block">The connection has been reset (0x80000224).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_SERVER_IS_FULL">ST_CONNECT_SERVER_IS_FULL</a></strong></code>
+<div class="block">Server is full (0x8000020B).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_SERVER_NAME_NOT_FOUND">ST_CONNECT_SERVER_NAME_NOT_FOUND</a></strong></code>
+<div class="block">Server name not found (0x80000220).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_SERVER_NOT_RESPONDING">ST_CONNECT_SERVER_NOT_RESPONDING</a></strong></code>
+<div class="block">Server is not responding (0x8000020C).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_SIGNED_ON_AGAIN">ST_CONNECT_SIGNED_ON_AGAIN</a></strong></code>
+<div class="block">The user has signed on again (0x80000219).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_SSO_ERROR">ST_CONNECT_SSO_ERROR</a></strong></code>
+<div class="block">SSO Error</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_THROWN_OUT">ST_CONNECT_THROWN_OUT</a></strong></code>
+<div class="block">The user has been removed from the server (0x8000020E).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_TIMEDOUT">ST_CONNECT_TIMEDOUT</a></strong></code>
+<div class="block">The connection has timed out (0x80000225).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_TOO_MANY_CLIENT_LOGINS">ST_CONNECT_TOO_MANY_CLIENT_LOGINS</a></strong></code>
+<div class="block">A second client has logged in but single login mode is enabled - kick off first client (0x80000234).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_UNKNOWN_CLUSTER_NAME">ST_CONNECT_UNKNOWN_CLUSTER_NAME</a></strong></code>
+<div class="block">This error is thrown when trying to redirect the user to a cluster that
+ is not configured for the server. (0x80000238).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_UNREGISTERED">ST_CONNECT_UNREGISTERED</a></strong></code>
+<div class="block">The user is unregistered (0x80000213).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_USER_NOT_UNIQUE">ST_CONNECT_USER_NOT_UNIQUE</a></strong></code>
+<div class="block">User not unique error</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_CONNECT_VERSION_MISMATCH">ST_CONNECT_VERSION_MISMATCH</a></strong></code>
+<div class="block">Connection/disconnection errors (0x80000200).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_DECLINE_FILE_TRANSFER">ST_DECLINE_FILE_TRANSFER</a></strong></code>
+<div class="block">User declined a file transfer request.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ELEMENT_NOT_FOUND">ST_ELEMENT_NOT_FOUND</a></strong></code>
+<div class="block">The element is non-existent (0x80000005).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ENCRYPTION_BAD_ARG">ST_ENCRYPTION_BAD_ARG</a></strong></code>
+<div class="block">The encryption data passed are invalid or corrupted (0x80000020).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ENCRYPTION_FAILED">ST_ENCRYPTION_FAILED</a></strong></code>
+<div class="block">Encryption is not supported or failed unexpectedly (0x8000001D).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ENCRYPTION_NO_METHOD">ST_ENCRYPTION_NO_METHOD</a></strong></code>
+<div class="block">There is no common encryption method (0x80000021).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ENCRYPTION_NOT_INITIALIZED">ST_ENCRYPTION_NOT_INITIALIZED</a></strong></code>
+<div class="block">Encryption mechanism has not been initialized yet (0x8000001E).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ENCRYPTION_TOO_WEAK">ST_ENCRYPTION_TOO_WEAK</a></strong></code>
+<div class="block">The requested encryption level is unacceptably low (0x8000001F).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_ACCESSING_FILE">ST_ERROR_ACCESSING_FILE</a></strong></code>
+<div class="block">Error accessing file</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CAPABILITIES_NO_ATTRIBUTE">ST_ERROR_CAPABILITIES_NO_ATTRIBUTE</a></strong></code>
+<div class="block">Attribute not found</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CONF_ALREADY_IN_CONFERENCE">ST_ERROR_CONF_ALREADY_IN_CONFERENCE</a></strong></code>
+<div class="block">(0x80070000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CONF_CREATE_FAILED">ST_ERROR_CONF_CREATE_FAILED</a></strong></code>
+<div class="block">Conference error (0x80010000).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CONF_CREATE_FAILED_ALREADY_EXIST">ST_ERROR_CONF_CREATE_FAILED_ALREADY_EXIST</a></strong></code>
+<div class="block">(0x800A0000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CONF_ENCRYPTION_MISMATCH">ST_ERROR_CONF_ENCRYPTION_MISMATCH</a></strong></code>
+<div class="block">(0x80050000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CONF_IS_FULL">ST_ERROR_CONF_IS_FULL</a></strong></code>
+<div class="block">(0x80080000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CONF_NOT_EXIST">ST_ERROR_CONF_NOT_EXIST</a></strong></code>
+<div class="block">(0x80030000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CONF_PRIVACY_VIOLATION">ST_ERROR_CONF_PRIVACY_VIOLATION</a></strong></code>
+<div class="block">(0x80040000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CONF_REMOTE_SERVICE_DOWN">ST_ERROR_CONF_REMOTE_SERVICE_DOWN</a></strong></code>
+<div class="block">(0x80090000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_CONF_TYPE_MISMATCH">ST_ERROR_CONF_TYPE_MISMATCH</a></strong></code>
+<div class="block">(0x80060000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_DIR_GROUP_NOT_FOUND">ST_ERROR_DIR_GROUP_NOT_FOUND</a></strong></code>
+<div class="block">(0x80030000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_DIR_NAB_NOT_AVAILABLE">ST_ERROR_DIR_NAB_NOT_AVAILABLE</a></strong></code>
+<div class="block">(0x80020000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_DIR_NOTES_API_FAILED">ST_ERROR_DIR_NOTES_API_FAILED</a></strong></code>
+<div class="block">(0x80010000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_DIR_NOTES_API_PARTIAL_RESPONSE">ST_ERROR_DIR_NOTES_API_PARTIAL_RESPONSE</a></strong></code>
+<div class="block">(0x00010000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_DIR_POSITION_OUTSIDE">ST_ERROR_DIR_POSITION_OUTSIDE</a></strong></code>
+<div class="block">(0x80040000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_DIR_STR_NOT_FOUND">ST_ERROR_DIR_STR_NOT_FOUND</a></strong></code>
+<div class="block">(0x00020000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_DOC_AWARENESS_ALREADY_IN_DOC">ST_ERROR_DOC_AWARENESS_ALREADY_IN_DOC</a></strong></code>
+<div class="block">You are already in the specified place (0x80020000).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_DOC_AWARENESS_CREATE_FAILED">ST_ERROR_DOC_AWARENESS_CREATE_FAILED</a></strong></code>
+<div class="block">Failed to enter the specified place (0x80010000).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_DOC_AWARENESS_IS_FULL">ST_ERROR_DOC_AWARENESS_IS_FULL</a></strong></code>
+<div class="block">Un able to enter the specified place because it is full (0x80030000).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_GROUP_ALREADY_IN_LIST">ST_ERROR_GROUP_ALREADY_IN_LIST</a></strong></code>
+<div class="block">(0x80000500)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_GROUP_DOES_NOT_EXISTS">ST_ERROR_GROUP_DOES_NOT_EXISTS</a></strong></code>
+<div class="block">(0x80000502)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_ILEGAL_FOR_SHORTCUT">ST_ERROR_ILEGAL_FOR_SHORTCUT</a></strong></code>
+<div class="block">(0x80000504)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_LDAP_NOT_REACHABLE">ST_ERROR_LDAP_NOT_REACHABLE</a></strong></code>
+<div class="block">A connection to the LDAP server does not exist.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_LDAP_REQ_QUEUE_FULL">ST_ERROR_LDAP_REQ_QUEUE_FULL</a></strong></code>
+<div class="block">The LDAP request queue is full.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_LIST_DOES_NOT_EXISTS">ST_ERROR_LIST_DOES_NOT_EXISTS</a></strong></code>
+<div class="block">(0x80000503)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_ACTIVITY_ALREADY_EXIST">ST_ERROR_PLC_ACTIVITY_ALREADY_EXIST</a></strong></code>
+<div class="block">(0x81060000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_ACTIVITY_NOT_EXIST">ST_ERROR_PLC_ACTIVITY_NOT_EXIST</a></strong></code>
+<div class="block">(0x810D0000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_ALREADY_EXISTS">ST_ERROR_PLC_ALREADY_EXISTS</a></strong></code>
+<div class="block">(0x81080000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_ATTR_NOT_EXIST">ST_ERROR_PLC_ATTR_NOT_EXIST</a></strong></code>
+<div class="block">(0x81070000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_DELETED">ST_ERROR_PLC_DELETED</a></strong></code>
+<div class="block">(0x010A0000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_FULL">ST_ERROR_PLC_FULL</a></strong></code>
+<div class="block">(0x81020000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_INVALID_PASSWORD">ST_ERROR_PLC_INVALID_PASSWORD</a></strong></code>
+<div class="block">(0x81030000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_MEMBER_NOT_EXIST">ST_ERROR_PLC_MEMBER_NOT_EXIST</a></strong></code>
+<div class="block">(0x81050000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_NOT_AUTHORIZED">ST_ERROR_PLC_NOT_AUTHORIZED</a></strong></code>
+<div class="block">(0x81040000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_NOT_EXIST">ST_ERROR_PLC_NOT_EXIST</a></strong></code>
+<div class="block">(0x81090000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_SECTION_NOT_EXIST">ST_ERROR_PLC_SECTION_NOT_EXIST</a></strong></code>
+<div class="block">(0x810A0000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_STAGE_NOT_EXIST">ST_ERROR_PLC_STAGE_NOT_EXIST</a></strong></code>
+<div class="block">(0x810B0000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_TYPE_ERROR">ST_ERROR_PLC_TYPE_ERROR</a></strong></code>
+<div class="block">(0x810C0000) An error with the publish mode.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_PLC_USER_ALREADY_PARTICIPATE">ST_ERROR_PLC_USER_ALREADY_PARTICIPATE</a></strong></code>
+<div class="block">(0x81010000)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_POLICY_DIRECTORY_ERROR">ST_ERROR_POLICY_DIRECTORY_ERROR</a></strong></code>
+<div class="block">Directory error occurred</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_POLICY_INCORRECT_CLIENT_REQUEST">ST_ERROR_POLICY_INCORRECT_CLIENT_REQUEST</a></strong></code>
+<div class="block">Incorrect client request</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_POLICY_INTERNAL_ERROR">ST_ERROR_POLICY_INTERNAL_ERROR</a></strong></code>
+<div class="block">Internal error of the Sametime policy service occurred</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_POLICY_NOT_FOUND">ST_ERROR_POLICY_NOT_FOUND</a></strong></code>
+<div class="block">A policy of a given user can not be found</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_RESOLVE_NOT_UNIQUE">ST_ERROR_RESOLVE_NOT_UNIQUE</a></strong></code>
+<div class="block">The name was found but is not unique (request was for unique only)
+ (0x80020000).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_RESOLVE_PARTIAL_RESPONSE">ST_ERROR_RESOLVE_PARTIAL_RESPONSE</a></strong></code>
+<div class="block">The resolve process was not completed, but a partial response is
+ available (0x00010000).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_RESOLVE_TOO_MANY_NAMES">ST_ERROR_RESOLVE_TOO_MANY_NAMES</a></strong></code>
+<div class="block">This error is returned if the resolve request was for a unique match, and there were more than one match, 
+ or if the number of matches exceeded the server threshold (default = 1000)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_RESOLVE_UNRESOLVABLE">ST_ERROR_RESOLVE_UNRESOLVABLE</a></strong></code>
+<div class="block">The name is not resolvable due to its format, for example an Internet
+ mail address (0x80030000).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_USER_ALREADY_IN_GROUP">ST_ERROR_USER_ALREADY_IN_GROUP</a></strong></code>
+<div class="block">(0x80000501)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_VPRESOLVE_NO_MATCHES">ST_ERROR_VPRESOLVE_NO_MATCHES</a></strong></code>
+<div class="block">No match was found for the resolve request (1).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_VPRESOLVE_NOT_UNIQUE">ST_ERROR_VPRESOLVE_NOT_UNIQUE</a></strong></code>
+<div class="block">There was more than one match for the resolve request (2).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_VPRESOLVE_OK">ST_ERROR_VPRESOLVE_OK</a></strong></code>
+<div class="block">The resolve request succeeded (0).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_ERROR_VPRESOLVE_UNRESOLVABLE">ST_ERROR_VPRESOLVE_UNRESOLVABLE</a></strong></code>
+<div class="block">The resolve request failed (3).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_FAIL">ST_FAIL</a></strong></code>
+<div class="block">Operation failed (0x80000000).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_FILE_EXT_NOT_MATCH">ST_FILE_EXT_NOT_MATCH</a></strong></code>
+<div class="block">file extension id not in extension list</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_FILE_TOO_BIG">ST_FILE_TOO_BIG</a></strong></code>
+<div class="block">file too big - exceeds maximum limit</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_FILE_TRANSFER_NOT_ALLOWED">ST_FILE_TRANSFER_NOT_ALLOWED</a></strong></code>
+<div class="block">file transferring is not allowed</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_FORCE_LOGOUT_MULTI_SERVERS">ST_FORCE_LOGOUT_MULTI_SERVERS</a></strong></code>
+<div class="block">Disconnected due to login in 2 Sametime servers concurrently
+ (0x80000227).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_FORCE_LOGOUT_MULTI_SERVERS_OLD">ST_FORCE_LOGOUT_MULTI_SERVERS_OLD</a></strong></code>
+<div class="block">Maps to 0x80000227; retained for compatibility with Sametime 1.0
+ (0x80000228).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_FORCE_LOGOUT_NEWER_IP_WINNER">ST_FORCE_LOGOUT_NEWER_IP_WINNER</a></strong></code>
+<div class="block">Disconnected due to login from another computer (0x80000229).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_FORCE_LOGOUT_OLDER_IP_WINNER">ST_FORCE_LOGOUT_OLDER_IP_WINNER</a></strong></code>
+<div class="block">Unable to log in because you are already logged on from another computer
+ (0x8000022A).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_IM_CHANNEL_CLOSED_ON_SEND_ATTEMPT">ST_IM_CHANNEL_CLOSED_ON_SEND_ATTEMPT</a></strong></code>
+<div class="block">(0x80002006)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_IM_TYPE_ALREADY_REGISTERED">ST_IM_TYPE_ALREADY_REGISTERED</a></strong></code>
+<div class="block">(0x80002004)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_IM_TYPE_NOT_REGISTERED">ST_IM_TYPE_NOT_REGISTERED</a></strong></code>
+<div class="block">(0x80002005)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_IM_TYPE_RESERVED">ST_IM_TYPE_RESERVED</a></strong></code>
+<div class="block">(0x80002003)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_INTERNAL_ERROR">ST_INTERNAL_ERROR</a></strong></code>
+<div class="block">Unspecified internal error (0x80000009).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_INVALID_DATA">ST_INVALID_DATA</a></strong></code>
+<div class="block">The data are invalid or corrupted (0x80000007).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_INVALID_REQUEST">ST_INVALID_REQUEST</a></strong></code>
+<div class="block">Request is invalid due to invalid state or parameters (0x80000001).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_INVALID_USER">ST_INVALID_USER</a></strong></code>
+<div class="block">The user is invalid or not trusted (0x80000011).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_LOGGED_IN_DIFFERENT_USER">ST_LOGGED_IN_DIFFERENT_USER</a></strong></code>
+<div class="block">We can not login because we are already logged in with a different user
+ name (Java only) (0x80002002).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_MAX_IM_SESSION_EXCEEDED">ST_MAX_IM_SESSION_EXCEEDED</a></strong></code>
+<div class="block">Error sent by Gateway when the number of inomming sessions was exceeded</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_NETWORK_ERROR">ST_NETWORK_ERROR</a></strong></code>
+<div class="block">Low-level network error occured (0x80000019).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_NO_MASTER_CHANNEL">ST_NO_MASTER_CHANNEL</a></strong></code>
+<div class="block">No master channel exists (0x8000001A).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_NO_RESOURCES">ST_NO_RESOURCES</a></strong></code>
+<div class="block">Not enough resources to perform the operation (0x8000000A).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_NOT_CONNECTED">ST_NOT_CONNECTED</a></strong></code>
+<div class="block">Not logged in to community (0x80000002).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_NOT_IMPLEMENTED">ST_NOT_IMPLEMENTED</a></strong></code>
+<div class="block">The requested feature is not implemented (0x80000008).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_NOT_OWNER">ST_NOT_OWNER</a></strong></code>
+<div class="block">Not an owner of the requested resource (0x80000014).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_NOT_SUBSCRIBED">ST_NOT_SUBSCRIBED</a></strong></code>
+<div class="block">Not subsrcribed to object(s) or event(s) (0x8000001C).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_OK">ST_OK</a></strong></code>
+<div class="block">Operation succeeded (0x00000000).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_PARTY_LEFT">ST_PARTY_LEFT</a></strong></code>
+<div class="block">The remote or intermediate party left unexpectedly (0x80000012).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_PENDING">ST_PENDING</a></strong></code>
+<div class="block">Request accepted but will be served later (0x00000001).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_POST_TYPE_ALREADY_REGISTERED">ST_POST_TYPE_ALREADY_REGISTERED</a></strong></code>
+<div class="block">(0x80003004)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_POST_TYPE_NOT_REGISTERED">ST_POST_TYPE_NOT_REGISTERED</a></strong></code>
+<div class="block">(0x80003005)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_PROTOCOL_ERROR">ST_PROTOCOL_ERROR</a></strong></code>
+<div class="block">The requested protocol is not supported (0x8000000F).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_PROTOCOL_NONAVAIL">ST_PROTOCOL_NONAVAIL</a></strong></code>
+<div class="block">The requested protocol is not supported (0x8000000E).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_SCAN_ERROR">ST_SCAN_ERROR</a></strong></code>
+<div class="block">there is a scan error - file was not scanned</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_SELECTIVESTATUS_LIST_ALLREADY_EXISTS">ST_SELECTIVESTATUS_LIST_ALLREADY_EXISTS</a></strong></code>
+<div class="block">SelectiveStatus list already exists.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_SERVER_SHUT_DOWN">ST_SERVER_SHUT_DOWN</a></strong></code>
+<div class="block">Server/Mux has been shut down.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_SERVICE_NONAVAIL">ST_SERVICE_NONAVAIL</a></strong></code>
+<div class="block">The requested service is not supported (0x8000000D).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_SESSION_CLOSED_BY_CHAT_LOGGING">ST_SESSION_CLOSED_BY_CHAT_LOGGING</a></strong></code>
+<div class="block">This error is thrown when chat session is closed by chat logging. (0x80000237).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_SESSION_INIT_REJECTED_BY_CHAT_LOGGING">ST_SESSION_INIT_REJECTED_BY_CHAT_LOGGING</a></strong></code>
+<div class="block">This error is thrown when chat session initialization is rejected by chat logging. (0x80000236).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_TLS_CONFIGURATION_FAILURE">ST_TLS_CONFIGURATION_FAILURE</a></strong></code>
+<div class="block">TLS configuration failure.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_TLS_HANDSHAKE_FAILURE">ST_TLS_HANDSHAKE_FAILURE</a></strong></code>
+<div class="block">TLS handshake failure.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_TLS_MANDATORY">ST_TLS_MANDATORY</a></strong></code>
+<div class="block">Returned by a strict TLS server as response to non-TLS login.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_TLS_PROTOCOL_ERROR">ST_TLS_PROTOCOL_ERROR</a></strong></code>
+<div class="block">TLS encode/decode error, such as a malformed TLS record.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_TLS_RESERVED_2">ST_TLS_RESERVED_2</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_TLS_RESERVED_3">ST_TLS_RESERVED_3</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_TOKEN_EXPIRED">ST_TOKEN_EXPIRED</a></strong></code>
+<div class="block">Token has expired (0x80000016).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_TOKEN_INVALID">ST_TOKEN_INVALID</a></strong></code>
+<div class="block">Invalid token (0x80000015).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_TOKEN_IP_MISMATCH">ST_TOKEN_IP_MISMATCH</a></strong></code>
+<div class="block">Token IP mismatch (0x80000017).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_UNAUTHORIZED">ST_UNAUTHORIZED</a></strong></code>
+<div class="block">Unauthorized to perform an action or access a resource (0x80000003).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_USER_DO_NOT_DISTURB">ST_USER_DO_NOT_DISTURB</a></strong></code>
+<div class="block">The user is in do not disturb mode (0x80002001).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_USER_NOT_FOUND">ST_USER_NOT_FOUND</a></strong></code>
+<div class="block">The user is non-existent (0x80000006).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_USER_NOT_ONLINE">ST_USER_NOT_ONLINE</a></strong></code>
+<div class="block">The user is not online (0x80002000).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_USERINFO_CONNECT_ERROR">ST_USERINFO_CONNECT_ERROR</a></strong></code>
+<div class="block">Couldn't connect to userinfo servlet.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_USERINFO_DOCUMENT_FORMAT_ERROR">ST_USERINFO_DOCUMENT_FORMAT_ERROR</a></strong></code>
+<div class="block">User info - bad document received from server.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_USERINFO_PARSE_ERROR">ST_USERINFO_PARSE_ERROR</a></strong></code>
+<div class="block">User info - internal error, probably missing SAX driver.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_USERINFO_UNAVAILABLE">ST_USERINFO_UNAVAILABLE</a></strong></code>
+<div class="block">User info - request for unavailable fields.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_USERINFO_UNKNOWN_USER">ST_USERINFO_UNKNOWN_USER</a></strong></code>
+<div class="block">User info - request for an unknown user.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_VERSION_MISMATCH">ST_VERSION_MISMATCH</a></strong></code>
+<div class="block">The version is not supported (0x80000010).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_VIRUS_FOUND">ST_VIRUS_FOUND</a></strong></code>
+<div class="block">a virus was found</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#ST_WK_PORT_IN_USE">ST_WK_PORT_IN_USE</a></strong></code>
+<div class="block">WK port is in use (0x80000018).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#STATUS_OFFLINE_MSG_NOT_ALLOWED">STATUS_OFFLINE_MSG_NOT_ALLOWED</a></strong></code>
+<div class="block">OfflineMessages service is not allowed for a given recipient</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#STATUS_OFFLINE_MSG_PROTOCOL_ERROR">STATUS_OFFLINE_MSG_PROTOCOL_ERROR</a></strong></code>
+<div class="block">Protocol error occurs</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#STATUS_OFFLINE_MSG_RECIPIENT_LIMIT_EXCEEDED">STATUS_OFFLINE_MSG_RECIPIENT_LIMIT_EXCEEDED</a></strong></code>
+<div class="block">Offline message recipient's message limit is exceeded</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#STATUS_OFFLINE_MSG_SERVICE_UNAVAILABLE">STATUS_OFFLINE_MSG_SERVICE_UNAVAILABLE</a></strong></code>
+<div class="block">OfflineMessages service is not available</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#STORAGE_ATTRIB_NOT_EXIST">STORAGE_ATTRIB_NOT_EXIST</a></strong></code>
+<div class="block">A request to get some attributes failed because the attributes were never
+ set before and therefore do not exist (0x00000011).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.util.Hashtable</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#textErrorMessages">textErrorMessages</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#STError()">STError</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#getMessageString(int)">getMessageString</a></strong>(int&nbsp;code)</code>
+<div class="block">Returns a string representation of the given STError code, or "null" if
+ the specified STError code does not exist.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#VpkFailed(int)">VpkFailed</a></strong>(int&nbsp;code)</code>
+<div class="block">Whether the code failed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/constants/STError.html#VpkSucceeded(int)">VpkSucceeded</a></strong>(int&nbsp;code)</code>
+<div class="block">Whether the code corresponds to success.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="textErrorMessages">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>textErrorMessages</h4>
+<pre>public static&nbsp;java.util.Hashtable textErrorMessages</pre>
+</li>
+</ul>
+<a name="ST_OK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_OK</h4>
+<pre>public static final&nbsp;int ST_OK</pre>
+<div class="block">Operation succeeded (0x00000000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_OK">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_FAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_FAIL</h4>
+<pre>public static final&nbsp;int ST_FAIL</pre>
+<div class="block">Operation failed (0x80000000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_FAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_PENDING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_PENDING</h4>
+<pre>public static final&nbsp;int ST_PENDING</pre>
+<div class="block">Request accepted but will be served later (0x00000001).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_PENDING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_INVALID_REQUEST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_INVALID_REQUEST</h4>
+<pre>public static final&nbsp;int ST_INVALID_REQUEST</pre>
+<div class="block">Request is invalid due to invalid state or parameters (0x80000001).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_INVALID_REQUEST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_NOT_CONNECTED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_NOT_CONNECTED</h4>
+<pre>public static final&nbsp;int ST_NOT_CONNECTED</pre>
+<div class="block">Not logged in to community (0x80000002).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_NOT_CONNECTED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_UNAUTHORIZED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_UNAUTHORIZED</h4>
+<pre>public static final&nbsp;int ST_UNAUTHORIZED</pre>
+<div class="block">Unauthorized to perform an action or access a resource (0x80000003).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_UNAUTHORIZED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ABORT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ABORT</h4>
+<pre>public static final&nbsp;int ST_ABORT</pre>
+<div class="block">Operation has been aborted (0x80000004).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ABORT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ELEMENT_NOT_FOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ELEMENT_NOT_FOUND</h4>
+<pre>public static final&nbsp;int ST_ELEMENT_NOT_FOUND</pre>
+<div class="block">The element is non-existent (0x80000005).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ELEMENT_NOT_FOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_USER_NOT_FOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_USER_NOT_FOUND</h4>
+<pre>public static final&nbsp;int ST_USER_NOT_FOUND</pre>
+<div class="block">The user is non-existent (0x80000006).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_USER_NOT_FOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_INVALID_DATA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_INVALID_DATA</h4>
+<pre>public static final&nbsp;int ST_INVALID_DATA</pre>
+<div class="block">The data are invalid or corrupted (0x80000007).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_INVALID_DATA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_NOT_IMPLEMENTED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_NOT_IMPLEMENTED</h4>
+<pre>public static final&nbsp;int ST_NOT_IMPLEMENTED</pre>
+<div class="block">The requested feature is not implemented (0x80000008).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_NOT_IMPLEMENTED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_INTERNAL_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_INTERNAL_ERROR</h4>
+<pre>public static final&nbsp;int ST_INTERNAL_ERROR</pre>
+<div class="block">Unspecified internal error (0x80000009).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_INTERNAL_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_NO_RESOURCES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_NO_RESOURCES</h4>
+<pre>public static final&nbsp;int ST_NO_RESOURCES</pre>
+<div class="block">Not enough resources to perform the operation (0x8000000A).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_NO_RESOURCES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CHANNEL_NONAVAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CHANNEL_NONAVAIL</h4>
+<pre>public static final&nbsp;int ST_CHANNEL_NONAVAIL</pre>
+<div class="block">The requested channel is not supported (0x8000000B).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CHANNEL_NONAVAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CHANNEL_EXISTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CHANNEL_EXISTS</h4>
+<pre>public static final&nbsp;int ST_CHANNEL_EXISTS</pre>
+<div class="block">The requested channel already exists (0x8000000C).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CHANNEL_EXISTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_SERVICE_NONAVAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_SERVICE_NONAVAIL</h4>
+<pre>public static final&nbsp;int ST_SERVICE_NONAVAIL</pre>
+<div class="block">The requested service is not supported (0x8000000D).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_SERVICE_NONAVAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_PROTOCOL_NONAVAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_PROTOCOL_NONAVAIL</h4>
+<pre>public static final&nbsp;int ST_PROTOCOL_NONAVAIL</pre>
+<div class="block">The requested protocol is not supported (0x8000000E).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_PROTOCOL_NONAVAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_PROTOCOL_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_PROTOCOL_ERROR</h4>
+<pre>public static final&nbsp;int ST_PROTOCOL_ERROR</pre>
+<div class="block">The requested protocol is not supported (0x8000000F).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_PROTOCOL_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_VERSION_MISMATCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_VERSION_MISMATCH</h4>
+<pre>public static final&nbsp;int ST_VERSION_MISMATCH</pre>
+<div class="block">The version is not supported (0x80000010).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_VERSION_MISMATCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_INVALID_USER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_INVALID_USER</h4>
+<pre>public static final&nbsp;int ST_INVALID_USER</pre>
+<div class="block">The user is invalid or not trusted (0x80000011).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_INVALID_USER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_PARTY_LEFT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_PARTY_LEFT</h4>
+<pre>public static final&nbsp;int ST_PARTY_LEFT</pre>
+<div class="block">The remote or intermediate party left unexpectedly (0x80000012).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_PARTY_LEFT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ALREADY_INIT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ALREADY_INIT</h4>
+<pre>public static final&nbsp;int ST_ALREADY_INIT</pre>
+<div class="block">Initialization has already taken place (0x80000013).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ALREADY_INIT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_NOT_OWNER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_NOT_OWNER</h4>
+<pre>public static final&nbsp;int ST_NOT_OWNER</pre>
+<div class="block">Not an owner of the requested resource (0x80000014).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_NOT_OWNER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_TOKEN_INVALID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_TOKEN_INVALID</h4>
+<pre>public static final&nbsp;int ST_TOKEN_INVALID</pre>
+<div class="block">Invalid token (0x80000015).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_TOKEN_INVALID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_TOKEN_EXPIRED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_TOKEN_EXPIRED</h4>
+<pre>public static final&nbsp;int ST_TOKEN_EXPIRED</pre>
+<div class="block">Token has expired (0x80000016).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_TOKEN_EXPIRED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_TOKEN_IP_MISMATCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_TOKEN_IP_MISMATCH</h4>
+<pre>public static final&nbsp;int ST_TOKEN_IP_MISMATCH</pre>
+<div class="block">Token IP mismatch (0x80000017).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_TOKEN_IP_MISMATCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_WK_PORT_IN_USE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_WK_PORT_IN_USE</h4>
+<pre>public static final&nbsp;int ST_WK_PORT_IN_USE</pre>
+<div class="block">WK port is in use (0x80000018).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_WK_PORT_IN_USE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_NETWORK_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_NETWORK_ERROR</h4>
+<pre>public static final&nbsp;int ST_NETWORK_ERROR</pre>
+<div class="block">Low-level network error occured (0x80000019).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_NETWORK_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_NO_MASTER_CHANNEL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_NO_MASTER_CHANNEL</h4>
+<pre>public static final&nbsp;int ST_NO_MASTER_CHANNEL</pre>
+<div class="block">No master channel exists (0x8000001A).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_NO_MASTER_CHANNEL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ALREADY_SUBSCRIBED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ALREADY_SUBSCRIBED</h4>
+<pre>public static final&nbsp;int ST_ALREADY_SUBSCRIBED</pre>
+<div class="block">Already subscribed to object(s) or event(s) (0x8000001B).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ALREADY_SUBSCRIBED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_NOT_SUBSCRIBED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_NOT_SUBSCRIBED</h4>
+<pre>public static final&nbsp;int ST_NOT_SUBSCRIBED</pre>
+<div class="block">Not subsrcribed to object(s) or event(s) (0x8000001C).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_NOT_SUBSCRIBED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ENCRYPTION_FAILED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ENCRYPTION_FAILED</h4>
+<pre>public static final&nbsp;int ST_ENCRYPTION_FAILED</pre>
+<div class="block">Encryption is not supported or failed unexpectedly (0x8000001D).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ENCRYPTION_FAILED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ENCRYPTION_NOT_INITIALIZED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ENCRYPTION_NOT_INITIALIZED</h4>
+<pre>public static final&nbsp;int ST_ENCRYPTION_NOT_INITIALIZED</pre>
+<div class="block">Encryption mechanism has not been initialized yet (0x8000001E).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ENCRYPTION_NOT_INITIALIZED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ENCRYPTION_TOO_WEAK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ENCRYPTION_TOO_WEAK</h4>
+<pre>public static final&nbsp;int ST_ENCRYPTION_TOO_WEAK</pre>
+<div class="block">The requested encryption level is unacceptably low (0x8000001F).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ENCRYPTION_TOO_WEAK">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ENCRYPTION_BAD_ARG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ENCRYPTION_BAD_ARG</h4>
+<pre>public static final&nbsp;int ST_ENCRYPTION_BAD_ARG</pre>
+<div class="block">The encryption data passed are invalid or corrupted (0x80000020).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ENCRYPTION_BAD_ARG">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ENCRYPTION_NO_METHOD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ENCRYPTION_NO_METHOD</h4>
+<pre>public static final&nbsp;int ST_ENCRYPTION_NO_METHOD</pre>
+<div class="block">There is no common encryption method (0x80000021).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ENCRYPTION_NO_METHOD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CHANNEL_REDIRECTION_RECOMMEND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CHANNEL_REDIRECTION_RECOMMEND</h4>
+<pre>public static final&nbsp;int ST_CHANNEL_REDIRECTION_RECOMMEND</pre>
+<div class="block">The channel is destroyed after a recommendation is made to connect
+ elsewhere (0x80000022).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CHANNEL_REDIRECTION_RECOMMEND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CHANNEL_REDIRECT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CHANNEL_REDIRECT</h4>
+<pre>public static final&nbsp;int ST_CHANNEL_REDIRECT</pre>
+<div class="block">The channel has been redirected to another destination (0x00000023).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CHANNEL_REDIRECT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_VERSION_MISMATCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_VERSION_MISMATCH</h4>
+<pre>public static final&nbsp;int ST_CONNECT_VERSION_MISMATCH</pre>
+<div class="block">Connection/disconnection errors (0x80000200).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_VERSION_MISMATCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_NO_RESOURCES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_NO_RESOURCES</h4>
+<pre>public static final&nbsp;int ST_CONNECT_NO_RESOURCES</pre>
+<div class="block">There are no resources to connect (0x80000201).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_NO_RESOURCES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_NO_PERMISSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_NO_PERMISSION</h4>
+<pre>public static final&nbsp;int ST_CONNECT_NO_PERMISSION</pre>
+<div class="block">There is no permission to connect (0x80000202).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_NO_PERMISSION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_NO_FILES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_NO_FILES</h4>
+<pre>public static final&nbsp;int ST_CONNECT_NO_FILES</pre>
+<div class="block">Not enough resources for connection (socket id) (0x80000203).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_NO_FILES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_HARDWARE_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_HARDWARE_ERROR</h4>
+<pre>public static final&nbsp;int ST_CONNECT_HARDWARE_ERROR</pre>
+<div class="block">Hardware error occurred (0x80000204).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_HARDWARE_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_NET_DOWN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_NET_DOWN</h4>
+<pre>public static final&nbsp;int ST_CONNECT_NET_DOWN</pre>
+<div class="block">Network down (0x80000205).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_NET_DOWN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_HOST_DOWN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_HOST_DOWN</h4>
+<pre>public static final&nbsp;int ST_CONNECT_HOST_DOWN</pre>
+<div class="block">Host down (0x80000206).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_HOST_DOWN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_HOST_UNREACHABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_HOST_UNREACHABLE</h4>
+<pre>public static final&nbsp;int ST_CONNECT_HOST_UNREACHABLE</pre>
+<div class="block">Host unreachable (0x80000207).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_HOST_UNREACHABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_NET_PROTOCOL_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_NET_PROTOCOL_ERROR</h4>
+<pre>public static final&nbsp;int ST_CONNECT_NET_PROTOCOL_ERROR</pre>
+<div class="block">TCP/IP protocol error (0x80000208).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_NET_PROTOCOL_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_MSG_OVERFLOW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_MSG_OVERFLOW</h4>
+<pre>public static final&nbsp;int ST_CONNECT_MSG_OVERFLOW</pre>
+<div class="block">The message is too large (0x80000209).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_MSG_OVERFLOW">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_PROXY_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_PROXY_ERROR</h4>
+<pre>public static final&nbsp;int ST_CONNECT_PROXY_ERROR</pre>
+<div class="block">Proxy error (0x8000020A).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_PROXY_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_SERVER_IS_FULL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_SERVER_IS_FULL</h4>
+<pre>public static final&nbsp;int ST_CONNECT_SERVER_IS_FULL</pre>
+<div class="block">Server is full (0x8000020B).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_SERVER_IS_FULL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_SERVER_NOT_RESPONDING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_SERVER_NOT_RESPONDING</h4>
+<pre>public static final&nbsp;int ST_CONNECT_SERVER_NOT_RESPONDING</pre>
+<div class="block">Server is not responding (0x8000020C).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_SERVER_NOT_RESPONDING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_CANNOT_CONNECT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_CANNOT_CONNECT</h4>
+<pre>public static final&nbsp;int ST_CONNECT_CANNOT_CONNECT</pre>
+<div class="block">Cannot connect (0x8000020D).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_CANNOT_CONNECT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_THROWN_OUT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_THROWN_OUT</h4>
+<pre>public static final&nbsp;int ST_CONNECT_THROWN_OUT</pre>
+<div class="block">The user has been removed from the server (0x8000020E).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_THROWN_OUT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_PROTOCOL_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_PROTOCOL_ERROR</h4>
+<pre>public static final&nbsp;int ST_CONNECT_PROTOCOL_ERROR</pre>
+<div class="block">VP protocol error (0x8000020F).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_PROTOCOL_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_IN_KICK_MODE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_IN_KICK_MODE</h4>
+<pre>public static final&nbsp;int ST_CONNECT_IN_KICK_MODE</pre>
+<div class="block">Cannot connect because user has been restricted (0x80000210).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_IN_KICK_MODE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_BAD_LOGIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_BAD_LOGIN</h4>
+<pre>public static final&nbsp;int ST_CONNECT_BAD_LOGIN</pre>
+<div class="block">Incorrect login (0x80000211).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_BAD_LOGIN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_REQUIRE_ENCRYPTION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_REQUIRE_ENCRYPTION</h4>
+<pre>public static final&nbsp;int ST_CONNECT_REQUIRE_ENCRYPTION</pre>
+<div class="block">Encryption mismatch (0x80000212).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_REQUIRE_ENCRYPTION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_UNREGISTERED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_UNREGISTERED</h4>
+<pre>public static final&nbsp;int ST_CONNECT_UNREGISTERED</pre>
+<div class="block">The user is unregistered (0x80000213).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_UNREGISTERED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_CANNOT_VERIFY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_CANNOT_VERIFY</h4>
+<pre>public static final&nbsp;int ST_CONNECT_CANNOT_VERIFY</pre>
+<div class="block">Verification service down (0x80000214).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_CANNOT_VERIFY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_MISMATCH_USER_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_MISMATCH_USER_NAME</h4>
+<pre>public static final&nbsp;int ST_CONNECT_MISMATCH_USER_NAME</pre>
+<div class="block">Obsolete (0x80000215).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_MISMATCH_USER_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_IDLE_TOOMUCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_IDLE_TOOMUCH</h4>
+<pre>public static final&nbsp;int ST_CONNECT_IDLE_TOOMUCH</pre>
+<div class="block">User has been idle for too long (0x80000216).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_IDLE_TOOMUCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_GUEST_NAME_OCCUPIED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_GUEST_NAME_OCCUPIED</h4>
+<pre>public static final&nbsp;int ST_CONNECT_GUEST_NAME_OCCUPIED</pre>
+<div class="block">The guest name is currently being used (0x80000217).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_GUEST_NAME_OCCUPIED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_ALREADY_SIGN_ON">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_ALREADY_SIGN_ON</h4>
+<pre>public static final&nbsp;int ST_CONNECT_ALREADY_SIGN_ON</pre>
+<div class="block">The user is already signed on (0x80000218).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_ALREADY_SIGN_ON">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_SIGNED_ON_AGAIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_SIGNED_ON_AGAIN</h4>
+<pre>public static final&nbsp;int ST_CONNECT_SIGNED_ON_AGAIN</pre>
+<div class="block">The user has signed on again (0x80000219).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_SIGNED_ON_AGAIN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_GUEST_NAME_FORBIDDEN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_GUEST_NAME_FORBIDDEN</h4>
+<pre>public static final&nbsp;int ST_CONNECT_GUEST_NAME_FORBIDDEN</pre>
+<div class="block">The name cannot be used (0x8000021A).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_GUEST_NAME_FORBIDDEN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_REG_MODE_NOT_ALLOWED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_REG_MODE_NOT_ALLOWED</h4>
+<pre>public static final&nbsp;int ST_CONNECT_REG_MODE_NOT_ALLOWED</pre>
+<div class="block">The registration mode is not supported (0x8000021B).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_REG_MODE_NOT_ALLOWED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_NOT_PRIVILEGED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_NOT_PRIVILEGED</h4>
+<pre>public static final&nbsp;int ST_CONNECT_NOT_PRIVILEGED</pre>
+<div class="block">User does not have appropriate privilege level (0x8000021C).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_NOT_PRIVILEGED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_MUST_USE_EMAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_MUST_USE_EMAIL</h4>
+<pre>public static final&nbsp;int ST_CONNECT_MUST_USE_EMAIL</pre>
+<div class="block">Email address must be used (0x8000021D).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_MUST_USE_EMAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_DNS_TRANSIENT_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_DNS_TRANSIENT_ERROR</h4>
+<pre>public static final&nbsp;int ST_CONNECT_DNS_TRANSIENT_ERROR</pre>
+<div class="block">Error in DNS (0x8000021E).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_DNS_TRANSIENT_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_DNS_FATAL_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_DNS_FATAL_ERROR</h4>
+<pre>public static final&nbsp;int ST_CONNECT_DNS_FATAL_ERROR</pre>
+<div class="block">Fatal error in DNS (0x8000021F).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_DNS_FATAL_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_SERVER_NAME_NOT_FOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_SERVER_NAME_NOT_FOUND</h4>
+<pre>public static final&nbsp;int ST_CONNECT_SERVER_NAME_NOT_FOUND</pre>
+<div class="block">Server name not found (0x80000220).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_SERVER_NAME_NOT_FOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_BROKEN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_BROKEN</h4>
+<pre>public static final&nbsp;int ST_CONNECT_BROKEN</pre>
+<div class="block">The connection has been broken (0x80000221).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_BROKEN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_ABORTED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_ABORTED</h4>
+<pre>public static final&nbsp;int ST_CONNECT_ABORTED</pre>
+<div class="block">An established connection was aborted by the software in the host machine
+ (0x80000222).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_ABORTED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_REFUSED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_REFUSED</h4>
+<pre>public static final&nbsp;int ST_CONNECT_REFUSED</pre>
+<div class="block">The connection has been refused (0x80000223).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_REFUSED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_RESET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_RESET</h4>
+<pre>public static final&nbsp;int ST_CONNECT_RESET</pre>
+<div class="block">The connection has been reset (0x80000224).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_RESET">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_TIMEDOUT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_TIMEDOUT</h4>
+<pre>public static final&nbsp;int ST_CONNECT_TIMEDOUT</pre>
+<div class="block">The connection has timed out (0x80000225).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_TIMEDOUT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_CLOSED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_CLOSED</h4>
+<pre>public static final&nbsp;int ST_CONNECT_CLOSED</pre>
+<div class="block">The connection has been closed (0x80000226).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_CLOSED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_FORCE_LOGOUT_MULTI_SERVERS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_FORCE_LOGOUT_MULTI_SERVERS</h4>
+<pre>public static final&nbsp;int ST_FORCE_LOGOUT_MULTI_SERVERS</pre>
+<div class="block">Disconnected due to login in 2 Sametime servers concurrently
+ (0x80000227).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_FORCE_LOGOUT_MULTI_SERVERS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_FORCE_LOGOUT_MULTI_SERVERS_OLD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_FORCE_LOGOUT_MULTI_SERVERS_OLD</h4>
+<pre>public static final&nbsp;int ST_FORCE_LOGOUT_MULTI_SERVERS_OLD</pre>
+<div class="block">Maps to 0x80000227; retained for compatibility with Sametime 1.0
+ (0x80000228).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_FORCE_LOGOUT_MULTI_SERVERS_OLD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_FORCE_LOGOUT_NEWER_IP_WINNER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_FORCE_LOGOUT_NEWER_IP_WINNER</h4>
+<pre>public static final&nbsp;int ST_FORCE_LOGOUT_NEWER_IP_WINNER</pre>
+<div class="block">Disconnected due to login from another computer (0x80000229).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_FORCE_LOGOUT_NEWER_IP_WINNER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_FORCE_LOGOUT_OLDER_IP_WINNER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_FORCE_LOGOUT_OLDER_IP_WINNER</h4>
+<pre>public static final&nbsp;int ST_FORCE_LOGOUT_OLDER_IP_WINNER</pre>
+<div class="block">Unable to log in because you are already logged on from another computer
+ (0x8000022A).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_FORCE_LOGOUT_OLDER_IP_WINNER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_NO_HOME_SERVER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_NO_HOME_SERVER</h4>
+<pre>public static final&nbsp;int ST_CONNECT_NO_HOME_SERVER</pre>
+<div class="block">Unable to log in because the server is either unreachable or not
+ configured properly (0x8000022B).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_NO_HOME_SERVER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_HOME_SERVER_TOO_OLD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_HOME_SERVER_TOO_OLD</h4>
+<pre>public static final&nbsp;int ST_CONNECT_HOME_SERVER_TOO_OLD</pre>
+<div class="block">Unable to log in to home Sametime server through the requested server,
+ since your home server needs to be upgraded (0x8000022C).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_HOME_SERVER_TOO_OLD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_JAVA_APPLET_STOPPED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_JAVA_APPLET_STOPPED</h4>
+<pre>public static final&nbsp;int ST_CONNECT_JAVA_APPLET_STOPPED</pre>
+<div class="block">The applet was logged out with this reason (0x8000022D). Perform relogin
+ and you will return to the former state.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_JAVA_APPLET_STOPPED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_SERVER_SHUT_DOWN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_SERVER_SHUT_DOWN</h4>
+<pre>public static final&nbsp;int ST_SERVER_SHUT_DOWN</pre>
+<div class="block">Server/Mux has been shut down.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_SERVER_SHUT_DOWN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_TOO_MANY_CLIENT_LOGINS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_TOO_MANY_CLIENT_LOGINS</h4>
+<pre>public static final&nbsp;int ST_CONNECT_TOO_MANY_CLIENT_LOGINS</pre>
+<div class="block">A second client has logged in but single login mode is enabled - kick off first client (0x80000234).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_TOO_MANY_CLIENT_LOGINS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_REJECT_FORWARDED_LOGINS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_REJECT_FORWARDED_LOGINS</h4>
+<pre>public static final&nbsp;int ST_CONNECT_REJECT_FORWARDED_LOGINS</pre>
+<div class="block">This error is thrown when the user is trying to connect through remote server, but he is allowed only to connect to his home server. (0x80000235).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_REJECT_FORWARDED_LOGINS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_SESSION_INIT_REJECTED_BY_CHAT_LOGGING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_SESSION_INIT_REJECTED_BY_CHAT_LOGGING</h4>
+<pre>public static final&nbsp;int ST_SESSION_INIT_REJECTED_BY_CHAT_LOGGING</pre>
+<div class="block">This error is thrown when chat session initialization is rejected by chat logging. (0x80000236).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_SESSION_INIT_REJECTED_BY_CHAT_LOGGING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_SESSION_CLOSED_BY_CHAT_LOGGING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_SESSION_CLOSED_BY_CHAT_LOGGING</h4>
+<pre>public static final&nbsp;int ST_SESSION_CLOSED_BY_CHAT_LOGGING</pre>
+<div class="block">This error is thrown when chat session is closed by chat logging. (0x80000237).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_SESSION_CLOSED_BY_CHAT_LOGGING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_UNKNOWN_CLUSTER_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_UNKNOWN_CLUSTER_NAME</h4>
+<pre>public static final&nbsp;int ST_CONNECT_UNKNOWN_CLUSTER_NAME</pre>
+<div class="block">This error is thrown when trying to redirect the user to a cluster that
+ is not configured for the server. (0x80000238).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_UNKNOWN_CLUSTER_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_NO_CONNECTION_WITH_HOME_SERVER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_NO_CONNECTION_WITH_HOME_SERVER</h4>
+<pre>public static final&nbsp;int ST_CONNECT_NO_CONNECTION_WITH_HOME_SERVER</pre>
+<div class="block">This error is thrown when there is no connection to the home server of the user. (0x80000239).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_NO_CONNECTION_WITH_HOME_SERVER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNAGENT_UNABLE_TO_RUN_AGENT_EXE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNAGENT_UNABLE_TO_RUN_AGENT_EXE</h4>
+<pre>public static final&nbsp;int ST_CONNAGENT_UNABLE_TO_RUN_AGENT_EXE</pre>
+<div class="block">AgentLink was not able to create an instance of StConnagentXX.exe</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNAGENT_UNABLE_TO_RUN_AGENT_EXE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNAGENT_UNABLE_TO_CREATE_SYNC_OBJS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNAGENT_UNABLE_TO_CREATE_SYNC_OBJS</h4>
+<pre>public static final&nbsp;int ST_CONNAGENT_UNABLE_TO_CREATE_SYNC_OBJS</pre>
+<div class="block">AgentLink was not able to create synchronization objects</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNAGENT_UNABLE_TO_CREATE_SYNC_OBJS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNAGENT_TIMED_OUT_WAITING_AGENT_EXE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNAGENT_TIMED_OUT_WAITING_AGENT_EXE</h4>
+<pre>public static final&nbsp;int ST_CONNAGENT_TIMED_OUT_WAITING_AGENT_EXE</pre>
+<div class="block">AgentLink timed out while waiting for the StConagentXX.exe to be ready</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNAGENT_TIMED_OUT_WAITING_AGENT_EXE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNAGENT_UNABLE_TO_CREATE_MMF_OBJS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNAGENT_UNABLE_TO_CREATE_MMF_OBJS</h4>
+<pre>public static final&nbsp;int ST_CONNAGENT_UNABLE_TO_CREATE_MMF_OBJS</pre>
+<div class="block">AgentLink unable to create memory mapped file objects</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNAGENT_UNABLE_TO_CREATE_MMF_OBJS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_TLS_CONFIGURATION_FAILURE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_TLS_CONFIGURATION_FAILURE</h4>
+<pre>public static final&nbsp;int ST_TLS_CONFIGURATION_FAILURE</pre>
+<div class="block">TLS configuration failure. This error indicates a problem with TLS
+ configuration before the handshake begins. For example, wrong certificate
+ store password.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_TLS_CONFIGURATION_FAILURE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_TLS_HANDSHAKE_FAILURE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_TLS_HANDSHAKE_FAILURE</h4>
+<pre>public static final&nbsp;int ST_TLS_HANDSHAKE_FAILURE</pre>
+<div class="block">TLS handshake failure. For example, the peer certificate is not signed
+ by a trusted authority.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_TLS_HANDSHAKE_FAILURE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_TLS_PROTOCOL_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_TLS_PROTOCOL_ERROR</h4>
+<pre>public static final&nbsp;int ST_TLS_PROTOCOL_ERROR</pre>
+<div class="block">TLS encode/decode error, such as a malformed TLS record.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_TLS_PROTOCOL_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_TLS_MANDATORY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_TLS_MANDATORY</h4>
+<pre>public static final&nbsp;int ST_TLS_MANDATORY</pre>
+<div class="block">Returned by a strict TLS server as response to non-TLS login.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_TLS_MANDATORY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_TLS_RESERVED_2">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_TLS_RESERVED_2</h4>
+<pre>public static final&nbsp;int ST_TLS_RESERVED_2</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_TLS_RESERVED_2">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_TLS_RESERVED_3">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_TLS_RESERVED_3</h4>
+<pre>public static final&nbsp;int ST_TLS_RESERVED_3</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_TLS_RESERVED_3">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_USER_NOT_ONLINE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_USER_NOT_ONLINE</h4>
+<pre>public static final&nbsp;int ST_USER_NOT_ONLINE</pre>
+<div class="block">The user is not online (0x80002000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_USER_NOT_ONLINE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_USER_DO_NOT_DISTURB">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_USER_DO_NOT_DISTURB</h4>
+<pre>public static final&nbsp;int ST_USER_DO_NOT_DISTURB</pre>
+<div class="block">The user is in do not disturb mode (0x80002001).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_USER_DO_NOT_DISTURB">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_LOGGED_IN_DIFFERENT_USER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_LOGGED_IN_DIFFERENT_USER</h4>
+<pre>public static final&nbsp;int ST_LOGGED_IN_DIFFERENT_USER</pre>
+<div class="block">We can not login because we are already logged in with a different user
+ name (Java only) (0x80002002).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_LOGGED_IN_DIFFERENT_USER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CONF_CREATE_FAILED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CONF_CREATE_FAILED</h4>
+<pre>public static final&nbsp;int ST_ERROR_CONF_CREATE_FAILED</pre>
+<div class="block">Conference error (0x80010000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CONF_CREATE_FAILED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CONF_NOT_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CONF_NOT_EXIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_CONF_NOT_EXIST</pre>
+<div class="block">(0x80030000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CONF_NOT_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CONF_PRIVACY_VIOLATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CONF_PRIVACY_VIOLATION</h4>
+<pre>public static final&nbsp;int ST_ERROR_CONF_PRIVACY_VIOLATION</pre>
+<div class="block">(0x80040000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CONF_PRIVACY_VIOLATION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CONF_ENCRYPTION_MISMATCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CONF_ENCRYPTION_MISMATCH</h4>
+<pre>public static final&nbsp;int ST_ERROR_CONF_ENCRYPTION_MISMATCH</pre>
+<div class="block">(0x80050000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CONF_ENCRYPTION_MISMATCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CONF_TYPE_MISMATCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CONF_TYPE_MISMATCH</h4>
+<pre>public static final&nbsp;int ST_ERROR_CONF_TYPE_MISMATCH</pre>
+<div class="block">(0x80060000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CONF_TYPE_MISMATCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CONF_ALREADY_IN_CONFERENCE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CONF_ALREADY_IN_CONFERENCE</h4>
+<pre>public static final&nbsp;int ST_ERROR_CONF_ALREADY_IN_CONFERENCE</pre>
+<div class="block">(0x80070000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CONF_ALREADY_IN_CONFERENCE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CONF_IS_FULL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CONF_IS_FULL</h4>
+<pre>public static final&nbsp;int ST_ERROR_CONF_IS_FULL</pre>
+<div class="block">(0x80080000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CONF_IS_FULL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CONF_REMOTE_SERVICE_DOWN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CONF_REMOTE_SERVICE_DOWN</h4>
+<pre>public static final&nbsp;int ST_ERROR_CONF_REMOTE_SERVICE_DOWN</pre>
+<div class="block">(0x80090000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CONF_REMOTE_SERVICE_DOWN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CONF_CREATE_FAILED_ALREADY_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CONF_CREATE_FAILED_ALREADY_EXIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_CONF_CREATE_FAILED_ALREADY_EXIST</pre>
+<div class="block">(0x800A0000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CONF_CREATE_FAILED_ALREADY_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_USER_ALREADY_PARTICIPATE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_USER_ALREADY_PARTICIPATE</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_USER_ALREADY_PARTICIPATE</pre>
+<div class="block">(0x81010000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_USER_ALREADY_PARTICIPATE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_FULL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_FULL</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_FULL</pre>
+<div class="block">(0x81020000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_FULL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_INVALID_PASSWORD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_INVALID_PASSWORD</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_INVALID_PASSWORD</pre>
+<div class="block">(0x81030000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_INVALID_PASSWORD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_NOT_AUTHORIZED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_NOT_AUTHORIZED</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_NOT_AUTHORIZED</pre>
+<div class="block">(0x81040000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_NOT_AUTHORIZED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_MEMBER_NOT_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_MEMBER_NOT_EXIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_MEMBER_NOT_EXIST</pre>
+<div class="block">(0x81050000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_MEMBER_NOT_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_ACTIVITY_ALREADY_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_ACTIVITY_ALREADY_EXIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_ACTIVITY_ALREADY_EXIST</pre>
+<div class="block">(0x81060000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_ACTIVITY_ALREADY_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_ATTR_NOT_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_ATTR_NOT_EXIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_ATTR_NOT_EXIST</pre>
+<div class="block">(0x81070000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_ATTR_NOT_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_ALREADY_EXISTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_ALREADY_EXISTS</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_ALREADY_EXISTS</pre>
+<div class="block">(0x81080000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_ALREADY_EXISTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_NOT_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_NOT_EXIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_NOT_EXIST</pre>
+<div class="block">(0x81090000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_NOT_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_SECTION_NOT_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_SECTION_NOT_EXIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_SECTION_NOT_EXIST</pre>
+<div class="block">(0x810A0000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_SECTION_NOT_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_STAGE_NOT_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_STAGE_NOT_EXIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_STAGE_NOT_EXIST</pre>
+<div class="block">(0x810B0000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_STAGE_NOT_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_TYPE_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_TYPE_ERROR</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_TYPE_ERROR</pre>
+<div class="block">(0x810C0000) An error with the publish mode.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_TYPE_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_ACTIVITY_NOT_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_ACTIVITY_NOT_EXIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_ACTIVITY_NOT_EXIST</pre>
+<div class="block">(0x810D0000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_ACTIVITY_NOT_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_PLC_DELETED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_PLC_DELETED</h4>
+<pre>public static final&nbsp;int ST_ERROR_PLC_DELETED</pre>
+<div class="block">(0x010A0000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_PLC_DELETED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_IM_TYPE_RESERVED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_IM_TYPE_RESERVED</h4>
+<pre>public static final&nbsp;int ST_IM_TYPE_RESERVED</pre>
+<div class="block">(0x80002003)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_IM_TYPE_RESERVED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_IM_TYPE_ALREADY_REGISTERED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_IM_TYPE_ALREADY_REGISTERED</h4>
+<pre>public static final&nbsp;int ST_IM_TYPE_ALREADY_REGISTERED</pre>
+<div class="block">(0x80002004)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_IM_TYPE_ALREADY_REGISTERED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_IM_TYPE_NOT_REGISTERED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_IM_TYPE_NOT_REGISTERED</h4>
+<pre>public static final&nbsp;int ST_IM_TYPE_NOT_REGISTERED</pre>
+<div class="block">(0x80002005)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_IM_TYPE_NOT_REGISTERED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_IM_CHANNEL_CLOSED_ON_SEND_ATTEMPT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_IM_CHANNEL_CLOSED_ON_SEND_ATTEMPT</h4>
+<pre>public static final&nbsp;int ST_IM_CHANNEL_CLOSED_ON_SEND_ATTEMPT</pre>
+<div class="block">(0x80002006)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_IM_CHANNEL_CLOSED_ON_SEND_ATTEMPT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_POST_TYPE_ALREADY_REGISTERED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_POST_TYPE_ALREADY_REGISTERED</h4>
+<pre>public static final&nbsp;int ST_POST_TYPE_ALREADY_REGISTERED</pre>
+<div class="block">(0x80003004)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_POST_TYPE_ALREADY_REGISTERED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_POST_TYPE_NOT_REGISTERED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_POST_TYPE_NOT_REGISTERED</h4>
+<pre>public static final&nbsp;int ST_POST_TYPE_NOT_REGISTERED</pre>
+<div class="block">(0x80003005)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_POST_TYPE_NOT_REGISTERED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_DOC_AWARENESS_CREATE_FAILED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_DOC_AWARENESS_CREATE_FAILED</h4>
+<pre>public static final&nbsp;int ST_ERROR_DOC_AWARENESS_CREATE_FAILED</pre>
+<div class="block">Failed to enter the specified place (0x80010000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_DOC_AWARENESS_CREATE_FAILED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_DOC_AWARENESS_ALREADY_IN_DOC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_DOC_AWARENESS_ALREADY_IN_DOC</h4>
+<pre>public static final&nbsp;int ST_ERROR_DOC_AWARENESS_ALREADY_IN_DOC</pre>
+<div class="block">You are already in the specified place (0x80020000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_DOC_AWARENESS_ALREADY_IN_DOC">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_DOC_AWARENESS_IS_FULL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_DOC_AWARENESS_IS_FULL</h4>
+<pre>public static final&nbsp;int ST_ERROR_DOC_AWARENESS_IS_FULL</pre>
+<div class="block">Un able to enter the specified place because it is full (0x80030000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_DOC_AWARENESS_IS_FULL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_DIR_NOTES_API_PARTIAL_RESPONSE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_DIR_NOTES_API_PARTIAL_RESPONSE</h4>
+<pre>public static final&nbsp;int ST_ERROR_DIR_NOTES_API_PARTIAL_RESPONSE</pre>
+<div class="block">(0x00010000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_DIR_NOTES_API_PARTIAL_RESPONSE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_DIR_STR_NOT_FOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_DIR_STR_NOT_FOUND</h4>
+<pre>public static final&nbsp;int ST_ERROR_DIR_STR_NOT_FOUND</pre>
+<div class="block">(0x00020000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_DIR_STR_NOT_FOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_DIR_NOTES_API_FAILED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_DIR_NOTES_API_FAILED</h4>
+<pre>public static final&nbsp;int ST_ERROR_DIR_NOTES_API_FAILED</pre>
+<div class="block">(0x80010000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_DIR_NOTES_API_FAILED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_DIR_NAB_NOT_AVAILABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_DIR_NAB_NOT_AVAILABLE</h4>
+<pre>public static final&nbsp;int ST_ERROR_DIR_NAB_NOT_AVAILABLE</pre>
+<div class="block">(0x80020000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_DIR_NAB_NOT_AVAILABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_DIR_GROUP_NOT_FOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_DIR_GROUP_NOT_FOUND</h4>
+<pre>public static final&nbsp;int ST_ERROR_DIR_GROUP_NOT_FOUND</pre>
+<div class="block">(0x80030000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_DIR_GROUP_NOT_FOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_DIR_POSITION_OUTSIDE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_DIR_POSITION_OUTSIDE</h4>
+<pre>public static final&nbsp;int ST_ERROR_DIR_POSITION_OUTSIDE</pre>
+<div class="block">(0x80040000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_DIR_POSITION_OUTSIDE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_BL_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_BL_ERROR</h4>
+<pre>public static final&nbsp;int ST_BL_ERROR</pre>
+<div class="block">Reserved for buddy list (0x80010000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_BL_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_BL_ATTR_OWNER_ID_UNKNOWN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_BL_ATTR_OWNER_ID_UNKNOWN</h4>
+<pre>public static final&nbsp;int ST_BL_ATTR_OWNER_ID_UNKNOWN</pre>
+<div class="block">an owner of an attribute was not found in BuddyList.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_BL_ATTR_OWNER_ID_UNKNOWN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_VPRESOLVE_OK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_VPRESOLVE_OK</h4>
+<pre>public static final&nbsp;int ST_ERROR_VPRESOLVE_OK</pre>
+<div class="block">The resolve request succeeded (0).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_VPRESOLVE_OK">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_VPRESOLVE_NO_MATCHES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_VPRESOLVE_NO_MATCHES</h4>
+<pre>public static final&nbsp;int ST_ERROR_VPRESOLVE_NO_MATCHES</pre>
+<div class="block">No match was found for the resolve request (1).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_VPRESOLVE_NO_MATCHES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_VPRESOLVE_NOT_UNIQUE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_VPRESOLVE_NOT_UNIQUE</h4>
+<pre>public static final&nbsp;int ST_ERROR_VPRESOLVE_NOT_UNIQUE</pre>
+<div class="block">There was more than one match for the resolve request (2).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_VPRESOLVE_NOT_UNIQUE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_VPRESOLVE_UNRESOLVABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_VPRESOLVE_UNRESOLVABLE</h4>
+<pre>public static final&nbsp;int ST_ERROR_VPRESOLVE_UNRESOLVABLE</pre>
+<div class="block">The resolve request failed (3).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_VPRESOLVE_UNRESOLVABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_RESOLVE_PARTIAL_RESPONSE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_RESOLVE_PARTIAL_RESPONSE</h4>
+<pre>public static final&nbsp;int ST_ERROR_RESOLVE_PARTIAL_RESPONSE</pre>
+<div class="block">The resolve process was not completed, but a partial response is
+ available (0x00010000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_RESOLVE_PARTIAL_RESPONSE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_RESOLVE_NOT_UNIQUE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_RESOLVE_NOT_UNIQUE</h4>
+<pre>public static final&nbsp;int ST_ERROR_RESOLVE_NOT_UNIQUE</pre>
+<div class="block">The name was found but is not unique (request was for unique only)
+ (0x80020000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_RESOLVE_NOT_UNIQUE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_RESOLVE_UNRESOLVABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_RESOLVE_UNRESOLVABLE</h4>
+<pre>public static final&nbsp;int ST_ERROR_RESOLVE_UNRESOLVABLE</pre>
+<div class="block">The name is not resolvable due to its format, for example an Internet
+ mail address (0x80030000).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_RESOLVE_UNRESOLVABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_RESOLVE_TOO_MANY_NAMES">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_RESOLVE_TOO_MANY_NAMES</h4>
+<pre>public static final&nbsp;int ST_ERROR_RESOLVE_TOO_MANY_NAMES</pre>
+<div class="block">This error is returned if the resolve request was for a unique match, and there were more than one match, 
+ or if the number of matches exceeded the server threshold (default = 1000).
+ 
+ (0x80040000)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_RESOLVE_TOO_MANY_NAMES">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STORAGE_ATTRIB_NOT_EXIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STORAGE_ATTRIB_NOT_EXIST</h4>
+<pre>public static final&nbsp;int STORAGE_ATTRIB_NOT_EXIST</pre>
+<div class="block">A request to get some attributes failed because the attributes were never
+ set before and therefore do not exist (0x00000011).</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.STORAGE_ATTRIB_NOT_EXIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_LDAP_NOT_REACHABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_LDAP_NOT_REACHABLE</h4>
+<pre>public static final&nbsp;int ST_ERROR_LDAP_NOT_REACHABLE</pre>
+<div class="block">A connection to the LDAP server does not exist.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_LDAP_NOT_REACHABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_LDAP_REQ_QUEUE_FULL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_LDAP_REQ_QUEUE_FULL</h4>
+<pre>public static final&nbsp;int ST_ERROR_LDAP_REQ_QUEUE_FULL</pre>
+<div class="block">The LDAP request queue is full.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_LDAP_REQ_QUEUE_FULL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_GROUP_ALREADY_IN_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_GROUP_ALREADY_IN_LIST</h4>
+<pre>public static final&nbsp;int ST_ERROR_GROUP_ALREADY_IN_LIST</pre>
+<div class="block">(0x80000500)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_GROUP_ALREADY_IN_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_USER_ALREADY_IN_GROUP">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_USER_ALREADY_IN_GROUP</h4>
+<pre>public static final&nbsp;int ST_ERROR_USER_ALREADY_IN_GROUP</pre>
+<div class="block">(0x80000501)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_USER_ALREADY_IN_GROUP">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_GROUP_DOES_NOT_EXISTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_GROUP_DOES_NOT_EXISTS</h4>
+<pre>public static final&nbsp;int ST_ERROR_GROUP_DOES_NOT_EXISTS</pre>
+<div class="block">(0x80000502)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_GROUP_DOES_NOT_EXISTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_LIST_DOES_NOT_EXISTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_LIST_DOES_NOT_EXISTS</h4>
+<pre>public static final&nbsp;int ST_ERROR_LIST_DOES_NOT_EXISTS</pre>
+<div class="block">(0x80000503)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_LIST_DOES_NOT_EXISTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_ILEGAL_FOR_SHORTCUT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_ILEGAL_FOR_SHORTCUT</h4>
+<pre>public static final&nbsp;int ST_ERROR_ILEGAL_FOR_SHORTCUT</pre>
+<div class="block">(0x80000504)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_ILEGAL_FOR_SHORTCUT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MEETING_LISTENER_NOT_REGISTERED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MEETING_LISTENER_NOT_REGISTERED</h4>
+<pre>public static final&nbsp;int MEETING_LISTENER_NOT_REGISTERED</pre>
+<div class="block">(0x80000505)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.MEETING_LISTENER_NOT_REGISTERED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MISSING_TOKEN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MISSING_TOKEN</h4>
+<pre>public static final&nbsp;int MISSING_TOKEN</pre>
+<div class="block">(0x80000506)</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.MISSING_TOKEN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_DECLINE_FILE_TRANSFER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_DECLINE_FILE_TRANSFER</h4>
+<pre>public static final&nbsp;int ST_DECLINE_FILE_TRANSFER</pre>
+<div class="block">User declined a file transfer request.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_DECLINE_FILE_TRANSFER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_FILE_TOO_BIG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_FILE_TOO_BIG</h4>
+<pre>public static final&nbsp;int ST_FILE_TOO_BIG</pre>
+<div class="block">file too big - exceeds maximum limit</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_FILE_TOO_BIG">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_ACCESSING_FILE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_ACCESSING_FILE</h4>
+<pre>public static final&nbsp;int ST_ERROR_ACCESSING_FILE</pre>
+<div class="block">Error accessing file</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_ACCESSING_FILE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_FILE_EXT_NOT_MATCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_FILE_EXT_NOT_MATCH</h4>
+<pre>public static final&nbsp;int ST_FILE_EXT_NOT_MATCH</pre>
+<div class="block">file extension id not in extension list</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_FILE_EXT_NOT_MATCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_FILE_TRANSFER_NOT_ALLOWED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_FILE_TRANSFER_NOT_ALLOWED</h4>
+<pre>public static final&nbsp;int ST_FILE_TRANSFER_NOT_ALLOWED</pre>
+<div class="block">file transferring is not allowed</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_FILE_TRANSFER_NOT_ALLOWED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_SCAN_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_SCAN_ERROR</h4>
+<pre>public static final&nbsp;int ST_SCAN_ERROR</pre>
+<div class="block">there is a scan error - file was not scanned</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_SCAN_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_VIRUS_FOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_VIRUS_FOUND</h4>
+<pre>public static final&nbsp;int ST_VIRUS_FOUND</pre>
+<div class="block">a virus was found</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_VIRUS_FOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_POLICY_INTERNAL_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_POLICY_INTERNAL_ERROR</h4>
+<pre>public static final&nbsp;int ST_ERROR_POLICY_INTERNAL_ERROR</pre>
+<div class="block">Internal error of the Sametime policy service occurred</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_POLICY_INTERNAL_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_POLICY_NOT_FOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_POLICY_NOT_FOUND</h4>
+<pre>public static final&nbsp;int ST_ERROR_POLICY_NOT_FOUND</pre>
+<div class="block">A policy of a given user can not be found</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_POLICY_NOT_FOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_POLICY_INCORRECT_CLIENT_REQUEST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_POLICY_INCORRECT_CLIENT_REQUEST</h4>
+<pre>public static final&nbsp;int ST_ERROR_POLICY_INCORRECT_CLIENT_REQUEST</pre>
+<div class="block">Incorrect client request</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_POLICY_INCORRECT_CLIENT_REQUEST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_POLICY_DIRECTORY_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_POLICY_DIRECTORY_ERROR</h4>
+<pre>public static final&nbsp;int ST_ERROR_POLICY_DIRECTORY_ERROR</pre>
+<div class="block">Directory error occurred</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_POLICY_DIRECTORY_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_ERROR_CAPABILITIES_NO_ATTRIBUTE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_ERROR_CAPABILITIES_NO_ATTRIBUTE</h4>
+<pre>public static final&nbsp;int ST_ERROR_CAPABILITIES_NO_ATTRIBUTE</pre>
+<div class="block">Attribute not found</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_ERROR_CAPABILITIES_NO_ATTRIBUTE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_USERINFO_CONNECT_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_USERINFO_CONNECT_ERROR</h4>
+<pre>public static final&nbsp;int ST_USERINFO_CONNECT_ERROR</pre>
+<div class="block">Couldn't connect to userinfo servlet.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_USERINFO_CONNECT_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_USERINFO_DOCUMENT_FORMAT_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_USERINFO_DOCUMENT_FORMAT_ERROR</h4>
+<pre>public static final&nbsp;int ST_USERINFO_DOCUMENT_FORMAT_ERROR</pre>
+<div class="block">User info - bad document received from server.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_USERINFO_DOCUMENT_FORMAT_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_USERINFO_PARSE_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_USERINFO_PARSE_ERROR</h4>
+<pre>public static final&nbsp;int ST_USERINFO_PARSE_ERROR</pre>
+<div class="block">User info - internal error, probably missing SAX driver.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_USERINFO_PARSE_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_USERINFO_UNAVAILABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_USERINFO_UNAVAILABLE</h4>
+<pre>public static final&nbsp;int ST_USERINFO_UNAVAILABLE</pre>
+<div class="block">User info - request for unavailable fields.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_USERINFO_UNAVAILABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_USERINFO_UNKNOWN_USER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_USERINFO_UNKNOWN_USER</h4>
+<pre>public static final&nbsp;int ST_USERINFO_UNKNOWN_USER</pre>
+<div class="block">User info - request for an unknown user.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_USERINFO_UNKNOWN_USER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_MAX_IM_SESSION_EXCEEDED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_MAX_IM_SESSION_EXCEEDED</h4>
+<pre>public static final&nbsp;int ST_MAX_IM_SESSION_EXCEEDED</pre>
+<div class="block">Error sent by Gateway when the number of inomming sessions was exceeded</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_MAX_IM_SESSION_EXCEEDED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_SELECTIVESTATUS_LIST_ALLREADY_EXISTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_SELECTIVESTATUS_LIST_ALLREADY_EXISTS</h4>
+<pre>public static final&nbsp;int ST_SELECTIVESTATUS_LIST_ALLREADY_EXISTS</pre>
+<div class="block">SelectiveStatus list already exists.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_SELECTIVESTATUS_LIST_ALLREADY_EXISTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STATUS_OFFLINE_MSG_SERVICE_UNAVAILABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STATUS_OFFLINE_MSG_SERVICE_UNAVAILABLE</h4>
+<pre>public static final&nbsp;int STATUS_OFFLINE_MSG_SERVICE_UNAVAILABLE</pre>
+<div class="block">OfflineMessages service is not available</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.STATUS_OFFLINE_MSG_SERVICE_UNAVAILABLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STATUS_OFFLINE_MSG_RECIPIENT_LIMIT_EXCEEDED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STATUS_OFFLINE_MSG_RECIPIENT_LIMIT_EXCEEDED</h4>
+<pre>public static final&nbsp;int STATUS_OFFLINE_MSG_RECIPIENT_LIMIT_EXCEEDED</pre>
+<div class="block">Offline message recipient's message limit is exceeded</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.STATUS_OFFLINE_MSG_RECIPIENT_LIMIT_EXCEEDED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STATUS_OFFLINE_MSG_NOT_ALLOWED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STATUS_OFFLINE_MSG_NOT_ALLOWED</h4>
+<pre>public static final&nbsp;int STATUS_OFFLINE_MSG_NOT_ALLOWED</pre>
+<div class="block">OfflineMessages service is not allowed for a given recipient</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.STATUS_OFFLINE_MSG_NOT_ALLOWED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STATUS_OFFLINE_MSG_PROTOCOL_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STATUS_OFFLINE_MSG_PROTOCOL_ERROR</h4>
+<pre>public static final&nbsp;int STATUS_OFFLINE_MSG_PROTOCOL_ERROR</pre>
+<div class="block">Protocol error occurs</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.STATUS_OFFLINE_MSG_PROTOCOL_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_SSO_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_SSO_ERROR</h4>
+<pre>public static final&nbsp;int ST_CONNECT_SSO_ERROR</pre>
+<div class="block">SSO Error</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_SSO_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_USER_NOT_UNIQUE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_USER_NOT_UNIQUE</h4>
+<pre>public static final&nbsp;int ST_CONNECT_USER_NOT_UNIQUE</pre>
+<div class="block">User not unique error</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_USER_NOT_UNIQUE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_DIR_BAD_CONFIG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_CONNECT_DIR_BAD_CONFIG</h4>
+<pre>public static final&nbsp;int ST_CONNECT_DIR_BAD_CONFIG</pre>
+<div class="block">Directory bad config error</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_DIR_BAD_CONFIG">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_CONNECT_BAD_SEARCH_FILTER">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ST_CONNECT_BAD_SEARCH_FILTER</h4>
+<pre>public static final&nbsp;int ST_CONNECT_BAD_SEARCH_FILTER</pre>
+<div class="block">Bad search filter error</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../constant-values.html#com.lotus.sametime.core.constants.STError.ST_CONNECT_BAD_SEARCH_FILTER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="STError()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>STError</h4>
+<pre>public&nbsp;STError()</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="VpkSucceeded(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VpkSucceeded</h4>
+<pre>public static final&nbsp;boolean&nbsp;VpkSucceeded(int&nbsp;code)</pre>
+<div class="block">Whether the code corresponds to success.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>code</code> - The code object.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>True if the code corresponds to success, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="VpkFailed(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VpkFailed</h4>
+<pre>public static final&nbsp;boolean&nbsp;VpkFailed(int&nbsp;code)</pre>
+<div class="block">Whether the code failed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>code</code> - The code object.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>False if the code corresponds to success, true otherwise.</dd></dl>
+</li>
+</ul>
+<a name="getMessageString(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getMessageString</h4>
+<pre>public static final&nbsp;java.lang.String&nbsp;getMessageString(int&nbsp;code)</pre>
+<div class="block">Returns a string representation of the given STError code, or "null" if
+ the specified STError code does not exist. Note that the message string
+ returned is simply the name of the STError Field and is NOT an
+ internationalized error message string.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>code</code> - The STError code</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A String text message version of the STError code or null if it
+         does not exist.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/core/constants/PriorityLevel.html" title="class in com.lotus.sametime.core.constants"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/core/constants/SvcTypes.html" title="class in com.lotus.sametime.core.constants"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/core/constants/STError.html" target="_top">Frames</a></li>
+<li><a href="STError.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

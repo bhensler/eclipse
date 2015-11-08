@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+IncomingCallHandler (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="IncomingCallHandler (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IncomingCallHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony</FONT>
+<BR>
+Interface IncomingCallHandler</H2>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/AbstractIncomingCallHandler.html" title="class in com.ibm.collaboration.realtime.telephony">AbstractIncomingCallHandler</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>IncomingCallHandler</B></DL>
+</PRE>
+
+<P>
+IncomingCallHandler is used by external plug-ins to handle incoming calls
+ before Sametime Connect processes them. The incoming call handler can handle
+ the incoming call itself, tell Sametime Connect to automatically accept or
+ reject the call, or let Sametime Connect process the call in the normal way.
+ Use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#addIncomingCallHandler(com.ibm.collaboration.realtime.telephony.IncomingCallHandler)"><CODE>CallManager.addIncomingCallHandler(IncomingCallHandler)</CODE></A> to register an
+ incoming call handler.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html#ACTION_ACCEPT">ACTION_ACCEPT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action returned by handleIncomingCall to have Sametime Connect automatically
+ accept an incoming call, without displaying the incoming call notification.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html#ACTION_DEFAULT">ACTION_DEFAULT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action returned by handleIncomingCall to have Sametime Connect process the
+ incoming call as it normally does, typically by displaying an incoming call
+ notification.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html#ACTION_IGNORE">ACTION_IGNORE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action returned by handleIncomingCall to have Sametime Connect ignore the
+ incoming call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html#ACTION_REJECT">ACTION_REJECT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action returned by handleIncomingCall to have Sametime Connect automatically
+ reject an incoming call.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html#handleIncomingCall(com.ibm.collaboration.realtime.telephony.event.IncomingCallEvent)">handleIncomingCall</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">IncomingCallEvent</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an incoming call, returns one of the ACTION_xxx values
+ defined in this interface to instruct Sametime Connect how to handle the
+ call.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="ACTION_DEFAULT"><!-- --></A><H3>
+ACTION_DEFAULT</H3>
+<PRE>
+static final java.lang.String <B>ACTION_DEFAULT</B></PRE>
+<DL>
+<DD>Action returned by handleIncomingCall to have Sametime Connect process the
+ incoming call as it normally does, typically by displaying an incoming call
+ notification.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.IncomingCallHandler.ACTION_DEFAULT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ACTION_ACCEPT"><!-- --></A><H3>
+ACTION_ACCEPT</H3>
+<PRE>
+static final java.lang.String <B>ACTION_ACCEPT</B></PRE>
+<DL>
+<DD>Action returned by handleIncomingCall to have Sametime Connect automatically
+ accept an incoming call, without displaying the incoming call notification.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.IncomingCallHandler.ACTION_ACCEPT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ACTION_REJECT"><!-- --></A><H3>
+ACTION_REJECT</H3>
+<PRE>
+static final java.lang.String <B>ACTION_REJECT</B></PRE>
+<DL>
+<DD>Action returned by handleIncomingCall to have Sametime Connect automatically
+ reject an incoming call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.IncomingCallHandler.ACTION_REJECT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ACTION_IGNORE"><!-- --></A><H3>
+ACTION_IGNORE</H3>
+<PRE>
+static final java.lang.String <B>ACTION_IGNORE</B></PRE>
+<DL>
+<DD>Action returned by handleIncomingCall to have Sametime Connect ignore the
+ incoming call. Only return this value if your plug-in handles the incoming
+ call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.IncomingCallHandler.ACTION_IGNORE">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="handleIncomingCall(com.ibm.collaboration.realtime.telephony.event.IncomingCallEvent)"><!-- --></A><H3>
+handleIncomingCall</H3>
+<PRE>
+java.lang.String <B>handleIncomingCall</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">IncomingCallEvent</A>&nbsp;event)
+                                    throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Called to handle an incoming call, returns one of the ACTION_xxx values
+ defined in this interface to instruct Sametime Connect how to handle the
+ call.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - incoming call event created by service provider
+<DT><B>Returns:</B><DD>Action (ACTION_xxx) value to specify how the call should be handled.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if an error occurs while processing the call.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IncomingCallHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

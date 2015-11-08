@@ -1,0 +1,41 @@
+PODATKI O LICENCIRANJU
+
+Licence za programe, navedene spodaj, se izdajajo v skladu z naslednjimi doloèbami in pogoji, in veljajo poleg tistih iz Mednarodna licenèna pogodba za programe brez garancije.
+
+Ime programa: IBM Sametime Remote Meeting Client SDK
+Številka programa: 5724-J23
+
+Program za omejeno uporabo
+
+Ta program je ponujen samo za uporabo z imenovanim(i) programom(i), doloèenim(i) spodaj, ali z njegovimi(njihovimi) nasledniki. Imetnik licence ne sme uporabljati tega programa v povezavi z nobeno drugo programsko opremo.
+
+Imenovan(i) program(i):
+IBM Sametime Standard or IBM Sametime Advanced
+
+Orodje za razvoj
+
+Ta program je oblikovan kot pomoè pri razvijanju aplikacij in sistemov programske opreme. Imetnik licence je izkljuèno odgovoren za aplikacije in sisteme, ki jih razvije s pomoèjo tega programa, in prevzema vse tveganje in odgovornosti zanje.
+
+Enote, ki jih je mogoèe redistribuirati
+
+Èe vkljuèuje program komponente, ki jih je mogoèe redistribuirati, bodo doloèene v datoteki REDIST, ki spremlja program. Poleg licenènih pravic, ki so dodeljene v pogodbi, lahko imetnik licence distribuira enote, ki jih je mogoèe redistribuirati, v skladu z naslednjimi doloèbami:
+1) Redistribucija mora biti ponujena v obliki objektne kode in mora upoštevati vse smernice, navodila in specifikacije iz datoteke REDIST ali dokumentacije programa;
+2) Èe spremljajoèa dokumentacija programa imetniku licence izrecno dovoljuje spreminjanje enot, ki jih je mogoèe redistribuirati, morajo takšni popravki upoštevati vse smernice, navodila in specifikacije v tej dokumentaciji, in ti popravki (èe obstajajo) morajo biti obravnavani kot enote, ki jih je mogoèe redistribuirati;
+3) Imetnik licence lahko distribuira enote, ki jih je mogoèe redistribuirati, samo kot del svoje aplikacije, ki je bila razvita s pomoèjo programa ("aplikacija imetnika licence"), in samo za nudenje podpore strankam imetnika licence v povezavi z njihovo uporabo aplikacije imetnika licence. Aplikacija imetnika licence mora predstavljati pomembno dodatno vrednost, tako da enote, ki jih je mogoèe redistribuirati, ne predstavljajo glavnega motiva, zaradi katerega bi konèni uporabniki pridobili izdelek programske opreme imetnika licence;
+4) Èe vkljuèujejo enote, ki jih je mogoèe redistribuirati, izvajalno okolje Java, mora imetnik licence s svojo aplikacijo vkljuèiti tudi druge nejavanska enote, ki jih je mogoèe redistribuirati, razen èe je aplikacija oblikovana tako, da se izvaja samo na splošnih raèunalniških napravah (to so prenosniki, namizni raèunalniki in strežniki) in ne na roènih ali drugih prodornih napravah (to so naprave, ki vsebujejo mikroprocesor, vendar raèunalništvo ni njihov glavni namen);
+5) Imetnik licence ne sme odstraniti nobenih datotek z avtorskimi pravicami ali obvestili, vsebovanimi v enotah, ki jih je mogoèe redistribuirati;
+6) Imetnik licence mora zavarovati IBM, njegove dobavitelje ali distributerje pred kakršnimikoli zahtevki, vloženimi zaradi uporabe ali distribucije aplikacije imetnika licence;
+7) Imetnik licence ne sme uporabiti enakega imena poti kot izvirne datotek/moduli enot, ki jih je mogoèe redistribuirati;
+8) Imetnik licence ne sme uporabljati imen ali blagovnih znamk IBM-a, njegovih dobaviteljev ali distributerjev v povezavi s trženjem svoje aplikacije, ne da bi pred tem pridobil pisno soglasje IBM-a, tega dobavitelja ali distributerja;
+9) IBM, njegovi dobavitelji in distributerji nudijo enote, ki jih je mogoèe redistribuirati, in povezano dokumentacijo, brez obveze za nudenje podpore in "TAKŠNE, KAKŠRNI SO", BREZ GARANCIJ KAKRŠNEKOLI VRSTE, PA NAJ BODO IZRECNE ALI NAKAZANE, KAR VKLJUÈUJE TUDI GARANCIJO NASLOVA, NEKRŠENJA ALI NEOVIRANJA, IN NAKAZANE GARANCIJE IN POGOJE TRŽNOSTI IN UPORABNOSTI ZA DOLOÈEN NAMEN;
+10) Imetnik licence je odgovoren za vso tehnièno podporo za aplikacijo imetnika licence in za kakršnekoli popravke v enotah, ki jih je mogoèe redistribuirati; in
+11) Imetnik licence mora v licenèni pogodbi, ki jo sklene s konènim uporabnikom aplikacije, konènega uporabnika obvestiti, da enot, ki jih je mogoèe redistribuirati, ali njihovih popravkov, ni dovoljeno i) uporabljati za noben drug namen, razen za omogoèenje aplikacije imetnika licence, ii) kopirati (razen za namene varnostnega kopiranja), iii) nadalje distribuirati ali prenesti brez aplikacije imetnika licence ali iv) vzvratno sestaviti, vzvratno prevesti ali kako drugaèe prevesti, razen èe to izrecno dopušèa zakon in brez možnosti pogodbene odpovedi. Poleg tega mora biti licenèna pogodba imetnika licence vsaj v tolikšni meri šèititi IBM kot doloèbe te pogodbe.
+
+Izvorne komponente in vzorèno gradivo
+
+Program lahko vkljuèuje nekatere komponente v obliki izvorne kode ("izvorne komponente") in drugo gradivo, imenovano "vzorèno gradivo". Imetnik licence lahko kopira in spreminja izvorne komponente ter vzorèno gradivo za notranjo uporabo samo v primeru, da je takšna uporaba v okviru licenènih pravic, doloèenih v tej pogodbi, vendar imetnik licence ne sme spreminjati ali brisati kakršnihkoli informacij o avtorstvu ali obvestil v izvornih komponentah ali vzorènem gradivu. IBM ponuja izvorne komponente in vzorèno gradivo brez obveznosti za podporo in "TAKŠNO, KAKRŠNO JE", BREZ GARANCIJ KAKRŠNEKOLI VRSTE, PA NAJ BODO IZRECNE ALI NAKAZANE, KAR VKLJUÈUJE TUDI GARANCIJO ZA NASLOV, NEKRŠENJE ALI NEOVIRANJE IN ZAKONSKE GARANCIJE IN POGOJE ZA PRODAJNOST IN PRIMERNOST ZA DOLOÈEN NAMEN.
+
+Za izvorne komponente in vzorèno gradivo, navedeno v datoteki REDIST programa, lahko imetnik licence redistribuira spremenjene razlièice teh izvornih komponent ali vzorènega gradiva v skladu z doloèbami te licence in katerihkoli navodil iz datoteke REDIST.
+
+D/N:  L-KBIM-8G3SXW
+P/N:  L-KBIM-8G3SXW 

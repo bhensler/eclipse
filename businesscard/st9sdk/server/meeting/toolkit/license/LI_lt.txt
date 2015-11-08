@@ -1,0 +1,41 @@
+LICENCIJOS INFORMACIJA
+
+Toliau nurodytos Programos licencijuojamos pagal ðias ir Programø kurioms neteikiama garantija tarptautinë licencinë sutartis sàlygas.
+
+Programos pavadinimas: IBM Sametime Remote Meeting Client SDK
+Programos numeris: 5724-J23
+
+Ribotojo naudojimo Programa
+
+Ði Programa pateikiama tik naudoti su toliau nurodyta (-omis) Programa (-omis) ar jø vëlesnëmis versijomis. Licenciatui draudþiama naudoti ðià Programà kartu su bet kokia kita programine áranga.
+
+Nurodyta (-os) Programa (-os):
+IBM Sametime Standard or IBM Sametime Advanced
+
+Kûrimo árankis
+
+Ði Programa skirta padëti kurti programinës árangos taikomàsias programas ir sistemas. Licenciatas iðskirtinai atsako uþ taikomàsias programas ir sistemas, kurias sukûrë naudodamas ðià Programà, ir prisiima visà su tuo susijusià rizikà ir atsakomybæ.
+
+Perskirstymo paketai
+
+Jeigu á Programà átraukti Perskirstomieji komponentai, jie bus nurodyti REDIST faile, pateiktame kartu su Programa. Kartu su Sutarties suteiktomis licencijos teisëmis Licenciatas gali platinti Perskirstymo komponentus laikydamasis ðiø sàlygø:
+1) perskirstymas turi vykti tik objekto kodo forma ir turi atitikti visus Programos REDIST ar lydraðtyje pateiktus nurodymus, instrukcijas ir specifikacijas;
+2) jei Programos lydraðtyje aiðkiai nurodyta, kad Licenciatui leidþiama modifikuoti Perskirstymo paketus, tokios modifikacijos turi atitikti visus toje dokumentacijoje pateiktus nurodymus, instrukcijas ir specifikacijas, ir ðios modifikacijos, jei tokiø yra, turi bûti laikomos Perskirstymo paketais;
+3) Perskirstymo paketai gali bûti platinami tik kaip Licenciato taikomosios programos, kuri buvo sukurta naudojant Programà, („Licenciato taikomoji programa“) dalis ir tik Licenciato klientø naudojamai Licenciato taikomajai programai palaikyti. Licenciato taikomoji programa turi teikti svarbià pridëtinæ vertæ taip, kad Licenciato taikomosios programos produkto galutiniai vartotojai nebûtø motyvuoti ásigyti Perskirstymo paketus;
+4) jeigu á Perskirstymo paketus átraukta „Java“ vykdymo aplinka, Licenciatas taip pat privalo á Licenciato taikomàjà programà átraukti kitus ne „Java“ Perskirstymo paketus, nebent Taikomoji programa sukurta veikti tik bendruosiuose kompiuteriø árenginiuose (pavyzdþiui, skreitiniuose, staliniuose kompiuteriuose ir serveriuose), o ne kiðeniniuose ar kituose skvarbiuosiuose árenginiuose (t. y. árenginiuose, kurie turi mikroprocesoriø, taèiau kuriø kompiuterio funkcijos nëra pirminis naudojimo tikslas);
+5) Licenciatas negali paðalinti jokiø Perskirstymo paketuose esanèiø autoriaus teisiø arba pastabø failø;
+6) Licenciatas nelaikys IBM, jos tiekëjø arba platintojø atsakingais uþ jokias pretenzijas, susijusias su Licenciato taikomosios programos naudojimu ar platinimu;
+7) Licenciatas negali naudoti tokio paties kaip originaliø Perskirstymo paketø failø / moduliø kelio pavadinimo;
+8) Parduodamas Licenciato taikomàjà programà Licenciatas negali naudoti IBM, jos tiekëjø arba platintojø pavadinimø arba prekiø þenklø, neturëdamas IBM, to tiekëjo arba platintojo iðankstinio raðtiðko sutikimo;
+9) IBM, jos tiekëjai ir platintojai pateikia Perskirstymo paketus ir susijusià dokumentacijà be palaikymo ásipareigojimo ir TOKIÀ, KOKIA YRA, NESUTEIKDAMI JOKIOS APIBRËÞTOS AR NUMANOMOS GARANTIJOS, ÁSKAITANT PAVADINIMO, NEPAÞEIDÞIAMUMO AR NEÁSIKIÐIMO GARANTIJAS IR NUMANOMAS TINKAMUMO PREKYBAI IR TAM TIKRAM TIKSLUI GARANTIJAS IR SÀLYGAS;
+10) Licenciatas atsakingas uþ visà techninæ pagalbà, susijusià su Licenciato taikomàja programa, ir uþ bet kokias Perskirstymo paketø modifikacijas; ir
+11) Licenciato ir Licenciato taikomosios programos galutinio vartotojo licencijos sutartis turi áspëti galutiná vartotojà, kad Perskirstymo paketø arba jø modifikavimø negalima i) naudoti kitu tikslu, nei Licenciato taikomajai programai ágalinti, ii) kopijuoti (iðskyrus kuriant atsarginæ kopijà), iii) platinti ar perduoti naudoti be Licenciato taikomosios programos, arba iv) iðardyti, dekompiliuoti ar kitaip versti, iðskyrus, jei tai aiðkiai leidþia teisës aktai ir nepaþeidþiami sutartiniai ásipareigojimai. Be to, Licenciato licencinë sutartis turi bûti sauganti IBM bent tiek, kiek tai apibrëþia ðios Sutarties sàlygos.
+
+Ðaltinio komponentai ir pavyzdinë medþiaga
+
+Á Programà gali bûti átraukti keli komponentai iðeitinio kodo forma („Ðaltinio komponentai“) ir kita medþiaga, apibrëþta kaip Pavyzdinë medþiaga. Licenciatas gali kopijuoti ir modifikuoti Ðaltinio komponentus ir Pavyzdinæ medþiagà tik naudoti viduje, jei toks naudojimas nepaþeidþia ðios Sutarties licencijos teisiø ir jei Licenciatas nekeièia ar nenaikina jokios Ðaltinio komponentuose ir Pavyzdinëje medþiagoje esanèios autoriaus teisiø informacijos ar praneðimø. IBM pateikia Ðaltinio komponentus ir Pavyzdinæ medþiagà be palaikymo ásipareigojimo ir TOKIÀ, KOKIA YRA, NESUTEIKIANT JOKIØ AIÐKIAI NURODYTØ AR NENURODYTØ GARANTIJØ, ÁSKAITANT NUOSAVYBËS TEISËS, NEPAÞEIDÞIAMUMO AR NEÁSIKIÐIMO GARANTIJAS IR NENURODYTAS TINKAMUMO PREKIAUTI IR TAM TIKRAM TIKSLUI GARANTIJAS IR SÀLYGAS.
+
+Licenciatas gali platinti Programos REDIST faile iðvardytø modifikuotø Ðaltinio komponentø ir Pavyzdinës medþiagos versijas laikydamasis ðios licencijos sàlygø ir REDIST faile pateiktø instrukcijø.
+
+D/N:  L-KBIM-8G3SXW
+P/N:  L-KBIM-8G3SXW 

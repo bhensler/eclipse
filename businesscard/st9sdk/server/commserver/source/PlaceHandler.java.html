@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>PlaceHandler (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">PlaceHandler</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.placessa.*;
+<A NAME="13"><A><FONT ID="Import">import</FONT> java.io.*;
+<A NAME="14"><A><FONT ID="Import">import</FONT> java.awt.*;
+<A NAME="15"><A><FONT ID="Import">import</FONT> java.util.Vector;
+<A NAME="16"><A><FONT ID="Import">import</FONT> javax.swing.Timer;
+<A NAME="17"><A><FONT ID="Import">import</FONT> java.awt.event.*;
+<A NAME="18"><A>
+<A NAME="19"><A><FONT ID="FormalComment">/**
+<A NAME="20"><A> * Monitors a place.
+<A NAME="21"><A> */</FONT>
+<A NAME="22"><A><FONT ID="Class">class</FONT> PlaceHandler <FONT ID="Extends">extends</FONT> PlaceAdapter
+<A NAME="23"><A>{
+<A NAME="24"><A>    <FONT ID="SingleLineComment">//
+<A NAME="25"><A></FONT>    <FONT ID="SingleLineComment">// Activity types.
+<A NAME="26"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="27"><A></FONT>    <FONT ID="Public">public</FONT> <FONT ID="Final">final</FONT> <FONT ID="Static">static</FONT> <FONT ID="Int">int</FONT> CHAT_ACTIVITY         = <FONT ID="IntegerLiteral">0x9106</FONT>;
+<A NAME="28"><A>    <FONT ID="Public">public</FONT> <FONT ID="Final">final</FONT> <FONT ID="Static">static</FONT> <FONT ID="Int">int</FONT> AUDIO_ACTIVITY        = <FONT ID="IntegerLiteral">0x9103</FONT>;
+<A NAME="29"><A>    <FONT ID="Public">public</FONT> <FONT ID="Final">final</FONT> <FONT ID="Static">static</FONT> <FONT ID="Int">int</FONT> VIDEO_ACTIVITY        = <FONT ID="IntegerLiteral">0x9104</FONT>;
+<A NAME="30"><A>    <FONT ID="Public">public</FONT> <FONT ID="Final">final</FONT> <FONT ID="Static">static</FONT> <FONT ID="Int">int</FONT> SCREEN_SHARE_ACTIVITY = <FONT ID="IntegerLiteral">0x9102</FONT>;
+<A NAME="31"><A>    <FONT ID="Public">public</FONT> <FONT ID="Final">final</FONT> <FONT ID="Static">static</FONT> <FONT ID="Int">int</FONT> WHITEBOARD_ACTIVITY   = <FONT ID="IntegerLiteral">0x9101</FONT>;
+<A NAME="32"><A>    
+<A NAME="33"><A>    <FONT ID="FormalComment">/**
+<A NAME="34"><A>     * Our managed activity.
+<A NAME="35"><A>     */</FONT>
+<A NAME="36"><A>    <FONT ID="Private">private</FONT> MyActivity m_ourActivity;
+<A NAME="37"><A>    
+<A NAME="38"><A>    <FONT ID="FormalComment">/**
+<A NAME="39"><A>     * The output frame.
+<A NAME="40"><A>     */</FONT>
+<A NAME="41"><A>    <FONT ID="Private">private</FONT> <A HREF="LogFrame.java.html">LogFrame</A> m_frame;
+<A NAME="42"><A>    
+<A NAME="43"><A>    <FONT ID="FormalComment">/**
+<A NAME="44"><A>     * The place time.
+<A NAME="45"><A>     */</FONT>
+<A NAME="46"><A>    <FONT ID="Private">private</FONT> Time m_time;
+<A NAME="47"><A>    
+<A NAME="48"><A>    <FONT ID="FormalComment">/**
+<A NAME="49"><A>     * Does the place has chat activity.
+<A NAME="50"><A>     */</FONT>
+<A NAME="51"><A>    <FONT ID="Private">private</FONT> Boolean m_hasChat = <FONT ID="New">new</FONT> Boolean(<FONT ID="False">false</FONT>);
+<A NAME="52"><A>    
+<A NAME="53"><A>    <FONT ID="FormalComment">/**
+<A NAME="54"><A>     * Does the place has audio activity.
+<A NAME="55"><A>     */</FONT>
+<A NAME="56"><A>    <FONT ID="Private">private</FONT> Boolean m_hasAudio = <FONT ID="New">new</FONT> Boolean(<FONT ID="False">false</FONT>);
+<A NAME="57"><A>    
+<A NAME="58"><A>    <FONT ID="FormalComment">/**
+<A NAME="59"><A>     * Does the place has video activity.
+<A NAME="60"><A>     */</FONT>
+<A NAME="61"><A>    <FONT ID="Private">private</FONT> Boolean m_hasVideo = <FONT ID="New">new</FONT> Boolean(<FONT ID="False">false</FONT>);
+<A NAME="62"><A>    
+<A NAME="63"><A>    <FONT ID="FormalComment">/**
+<A NAME="64"><A>     * Does the place has screan share activity.
+<A NAME="65"><A>     */</FONT>
+<A NAME="66"><A>    <FONT ID="Private">private</FONT> Boolean m_hasShare = <FONT ID="New">new</FONT> Boolean(<FONT ID="False">false</FONT>);
+<A NAME="67"><A>    
+<A NAME="68"><A>    <FONT ID="FormalComment">/**
+<A NAME="69"><A>     * Does the place has white board activity.
+<A NAME="70"><A>     */</FONT>
+<A NAME="71"><A>    <FONT ID="Private">private</FONT> Boolean m_hasWb = <FONT ID="New">new</FONT> Boolean(<FONT ID="False">false</FONT>);
+<A NAME="72"><A>    
+<A NAME="73"><A>    
+<A NAME="74"><A>    <FONT ID="FormalComment">/**
+<A NAME="75"><A>     * Constructor.
+<A NAME="76"><A>     */</FONT>
+<A NAME="77"><A>    <FONT ID="Public">public</FONT> PlaceHandler(MyActivity activity, <A HREF="LogFrame.java.html">LogFrame</A> frame)
+<A NAME="78"><A>    {
+<A NAME="79"><A>        m_frame = frame;
+<A NAME="80"><A>        m_ourActivity = activity;
+<A NAME="81"><A>        m_ourActivity.getPlace().addPlaceListener(<FONT ID="This">this</FONT>);
+<A NAME="82"><A>        
+<A NAME="83"><A>        m_time = <FONT ID="New">new</FONT> Time(m_frame, <FONT ID="This">this</FONT>);
+<A NAME="84"><A>        m_frame.add(<FONT ID="This">this</FONT>);
+<A NAME="85"><A>    }
+<A NAME="86"><A>    
+<A NAME="87"><A>    
+<A NAME="88"><A>    <FONT ID="FormalComment">/**
+<A NAME="89"><A>     * The place was left. 
+<A NAME="90"><A>     */</FONT>
+<A NAME="91"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> placeLeft(PlaceEvent event)
+<A NAME="92"><A>    {
+<A NAME="93"><A>        System.out.println(<FONT ID="StringLiteral">"Place destroyed "</FONT> + event.getPlace().getName());
+<A NAME="94"><A>        m_time.stop();
+<A NAME="95"><A>    }
+<A NAME="96"><A>    
+<A NAME="97"><A>    <FONT ID="FormalComment">/**
+<A NAME="98"><A>     * An activity was added to the place.
+<A NAME="99"><A>     */</FONT>
+<A NAME="100"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> activityAdded(PlaceEvent event)
+<A NAME="101"><A>    {
+<A NAME="102"><A>        <FONT ID="Int">int</FONT> type = event.getActivityType();
+<A NAME="103"><A>        <FONT ID="Switch">switch</FONT> (type)
+<A NAME="104"><A>        {
+<A NAME="105"><A>            <FONT ID="Case">case</FONT> CHAT_ACTIVITY:
+<A NAME="106"><A>                 m_hasChat = <FONT ID="New">new</FONT> Boolean(<FONT ID="True">true</FONT>);
+<A NAME="107"><A>                 <FONT ID="Break">break</FONT>;
+<A NAME="108"><A>            <FONT ID="Case">case</FONT> AUDIO_ACTIVITY:
+<A NAME="109"><A>                 m_hasAudio = <FONT ID="New">new</FONT> Boolean(<FONT ID="True">true</FONT>);
+<A NAME="110"><A>                 <FONT ID="Break">break</FONT>;
+<A NAME="111"><A>            <FONT ID="Case">case</FONT> VIDEO_ACTIVITY:
+<A NAME="112"><A>                 m_hasVideo = <FONT ID="New">new</FONT> Boolean(<FONT ID="True">true</FONT>);
+<A NAME="113"><A>                 <FONT ID="Break">break</FONT>;
+<A NAME="114"><A>            <FONT ID="Case">case</FONT> SCREEN_SHARE_ACTIVITY:
+<A NAME="115"><A>                 m_hasShare = <FONT ID="New">new</FONT> Boolean(<FONT ID="True">true</FONT>);
+<A NAME="116"><A>                 <FONT ID="Break">break</FONT>;
+<A NAME="117"><A>            <FONT ID="Case">case</FONT> WHITEBOARD_ACTIVITY:
+<A NAME="118"><A>                 m_hasWb = <FONT ID="New">new</FONT> Boolean(<FONT ID="True">true</FONT>);
+<A NAME="119"><A>                 <FONT ID="Break">break</FONT>;
+<A NAME="120"><A>        }
+<A NAME="121"><A>        m_frame.refreshAll();
+<A NAME="122"><A>    }
+<A NAME="123"><A>    
+<A NAME="124"><A>    <FONT ID="SingleLineComment">//
+<A NAME="125"><A></FONT>    <FONT ID="SingleLineComment">// Accessors.
+<A NAME="126"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="127"><A></FONT>    
+<A NAME="128"><A>    <FONT ID="FormalComment">/**
+<A NAME="129"><A>     * Get the place name.
+<A NAME="130"><A>     */</FONT>
+<A NAME="131"><A>    <FONT ID="Public">public</FONT> String getName()
+<A NAME="132"><A>    {
+<A NAME="133"><A>        <FONT ID="Return">return</FONT> m_ourActivity.getPlace().getName();
+<A NAME="134"><A>    }
+<A NAME="135"><A>    
+<A NAME="136"><A>    <FONT ID="FormalComment">/**
+<A NAME="137"><A>     * Get the time object of the place.
+<A NAME="138"><A>     */</FONT>
+<A NAME="139"><A>    <FONT ID="Public">public</FONT> Time getTime()
+<A NAME="140"><A>    {
+<A NAME="141"><A>        <FONT ID="Return">return</FONT> m_time;
+<A NAME="142"><A>    }
+<A NAME="143"><A>    
+<A NAME="144"><A>    <FONT ID="FormalComment">/**
+<A NAME="145"><A>     * @return Whether the place has chat activity.
+<A NAME="146"><A>     */</FONT>
+<A NAME="147"><A>    <FONT ID="Public">public</FONT> Boolean hasChat()
+<A NAME="148"><A>    {
+<A NAME="149"><A>        <FONT ID="Return">return</FONT> m_hasChat;
+<A NAME="150"><A>    }
+<A NAME="151"><A>
+<A NAME="152"><A>    <FONT ID="FormalComment">/**
+<A NAME="153"><A>     * @return Whether the place has video activity.
+<A NAME="154"><A>     */</FONT>
+<A NAME="155"><A>    <FONT ID="Public">public</FONT> Boolean hasVideo()
+<A NAME="156"><A>    {
+<A NAME="157"><A>        <FONT ID="Return">return</FONT> m_hasVideo;
+<A NAME="158"><A>    }    
+<A NAME="159"><A>    
+<A NAME="160"><A>    <FONT ID="FormalComment">/**
+<A NAME="161"><A>     * @return Whether the place has audio activity.
+<A NAME="162"><A>     */</FONT>
+<A NAME="163"><A>    <FONT ID="Public">public</FONT> Boolean hasAudio()
+<A NAME="164"><A>    {
+<A NAME="165"><A>        <FONT ID="Return">return</FONT> m_hasAudio;
+<A NAME="166"><A>    }
+<A NAME="167"><A>    
+<A NAME="168"><A>    <FONT ID="FormalComment">/**
+<A NAME="169"><A>     * @return Whether the place has screan share activity.
+<A NAME="170"><A>     */</FONT>
+<A NAME="171"><A>    <FONT ID="Public">public</FONT> Boolean hasShare()
+<A NAME="172"><A>    {
+<A NAME="173"><A>        <FONT ID="Return">return</FONT> m_hasShare;
+<A NAME="174"><A>    }
+<A NAME="175"><A>    
+<A NAME="176"><A>    <FONT ID="FormalComment">/**
+<A NAME="177"><A>     * @return Whether the place has white board activity.
+<A NAME="178"><A>     */</FONT>
+<A NAME="179"><A>    <FONT ID="Public">public</FONT> Boolean hasWhiteboard()
+<A NAME="180"><A>    {
+<A NAME="181"><A>        <FONT ID="Return">return</FONT> m_hasWb;
+<A NAME="182"><A>    }
+<A NAME="183"><A>}
+<A NAME="184"><A>
+<A NAME="185"><A><FONT ID="FormalComment">/**
+<A NAME="186"><A> * A wrapper on top of a timer. Formats the time in seconds to HH:MM:SS.
+<A NAME="187"><A> */</FONT>    
+<A NAME="188"><A><FONT ID="Class">class</FONT> Time <FONT ID="Implements">implements</FONT> ActionListener
+<A NAME="189"><A>{
+<A NAME="190"><A>    <FONT ID="FormalComment">/**
+<A NAME="191"><A>     * The current time in seconds.
+<A NAME="192"><A>     */</FONT>
+<A NAME="193"><A>    <FONT ID="Long">long</FONT> m_timeInSeconds = <FONT ID="IntegerLiteral">0</FONT>;
+<A NAME="194"><A>    
+<A NAME="195"><A>    <FONT ID="FormalComment">/**
+<A NAME="196"><A>     * The timer.
+<A NAME="197"><A>     */</FONT>
+<A NAME="198"><A>    Timer m_timer;
+<A NAME="199"><A>    
+<A NAME="200"><A>    <FONT ID="FormalComment">/**
+<A NAME="201"><A>     * The output frame.
+<A NAME="202"><A>     */</FONT>
+<A NAME="203"><A>    <A HREF="LogFrame.java.html">LogFrame</A> m_frame;
+<A NAME="204"><A>    
+<A NAME="205"><A>    <FONT ID="FormalComment">/**
+<A NAME="206"><A>     * The place handler.
+<A NAME="207"><A>     */</FONT>
+<A NAME="208"><A>    <A HREF="PlaceHandler.java.html">PlaceHandler</A> m_place;
+<A NAME="209"><A>    
+<A NAME="210"><A>    <FONT ID="FormalComment">/**
+<A NAME="211"><A>     * Constructor.
+<A NAME="212"><A>     */</FONT>
+<A NAME="213"><A>    <FONT ID="Public">public</FONT> Time(<A HREF="LogFrame.java.html">LogFrame</A> frame, <A HREF="PlaceHandler.java.html">PlaceHandler</A> handler)
+<A NAME="214"><A>    {
+<A NAME="215"><A>        m_frame = frame;
+<A NAME="216"><A>        m_place = handler;
+<A NAME="217"><A>        m_timer = <FONT ID="New">new</FONT> Timer(<FONT ID="IntegerLiteral">1000</FONT>, <FONT ID="This">this</FONT>);
+<A NAME="218"><A>        m_timer.start();   
+<A NAME="219"><A>    }
+<A NAME="220"><A>    
+<A NAME="221"><A>    <FONT ID="FormalComment">/**
+<A NAME="222"><A>     * Stop the timer.
+<A NAME="223"><A>     */</FONT>
+<A NAME="224"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> stop()
+<A NAME="225"><A>    {
+<A NAME="226"><A>        m_timer.stop();
+<A NAME="227"><A>    }
+<A NAME="228"><A>    
+<A NAME="229"><A>    <FONT ID="FormalComment">/**
+<A NAME="230"><A>     * Timer clicked.
+<A NAME="231"><A>     */</FONT>
+<A NAME="232"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> actionPerformed(ActionEvent event)
+<A NAME="233"><A>    {
+<A NAME="234"><A>        m_timeInSeconds++;
+<A NAME="235"><A>        m_frame.refreshTime(m_place);
+<A NAME="236"><A>    }
+<A NAME="237"><A>    
+<A NAME="238"><A>    <FONT ID="FormalComment">/**
+<A NAME="239"><A>     * Format the time to HH:MM:SS.
+<A NAME="240"><A>     */</FONT>
+<A NAME="241"><A>    <FONT ID="Public">public</FONT> String toString()
+<A NAME="242"><A>    {
+<A NAME="243"><A>        <FONT ID="Long">long</FONT> seconds = m_timeInSeconds;
+<A NAME="244"><A>        <FONT ID="Long">long</FONT> minutes = seconds/<FONT ID="IntegerLiteral">60</FONT>;
+<A NAME="245"><A>        seconds = seconds%<FONT ID="IntegerLiteral">60</FONT>;
+<A NAME="246"><A>        <FONT ID="Long">long</FONT> hours = minutes/<FONT ID="IntegerLiteral">60</FONT>;
+<A NAME="247"><A>        minutes = minutes%<FONT ID="IntegerLiteral">60</FONT>;
+<A NAME="248"><A>        
+<A NAME="249"><A>        String hoursAsString = <FONT ID="StringLiteral">""</FONT> + hours;
+<A NAME="250"><A>        hoursAsString.trim();
+<A NAME="251"><A>        <FONT ID="If">if</FONT> (hoursAsString.length() == <FONT ID="IntegerLiteral">1</FONT>)
+<A NAME="252"><A>        {
+<A NAME="253"><A>            hoursAsString = <FONT ID="StringLiteral">"0"</FONT> + hoursAsString;
+<A NAME="254"><A>        }
+<A NAME="255"><A>        
+<A NAME="256"><A>        String minutesAsString = <FONT ID="StringLiteral">""</FONT> + minutes;
+<A NAME="257"><A>        minutesAsString.trim();
+<A NAME="258"><A>        <FONT ID="If">if</FONT> (minutesAsString.length() == <FONT ID="IntegerLiteral">1</FONT>)
+<A NAME="259"><A>        {
+<A NAME="260"><A>            minutesAsString = <FONT ID="StringLiteral">"0"</FONT> + minutesAsString;
+<A NAME="261"><A>        }
+<A NAME="262"><A>       
+<A NAME="263"><A>        String secondsAsString = <FONT ID="StringLiteral">""</FONT> + seconds;
+<A NAME="264"><A>        secondsAsString.trim();
+<A NAME="265"><A>        <FONT ID="If">if</FONT> (secondsAsString.length() == <FONT ID="IntegerLiteral">1</FONT>)
+<A NAME="266"><A>        {
+<A NAME="267"><A>            secondsAsString = <FONT ID="StringLiteral">"0"</FONT> + secondsAsString;
+<A NAME="268"><A>        }
+<A NAME="269"><A>        
+<A NAME="270"><A>        <FONT ID="Return">return</FONT> hoursAsString + <FONT ID="StringLiteral">":"</FONT> + minutesAsString + <FONT ID="StringLiteral">":"</FONT> + 
+<A NAME="271"><A>                 secondsAsString;
+<A NAME="272"><A>    }
+<A NAME="273"><A>}
+<A NAME="274"><A>
+<A NAME="275"><A>
+<A NAME="276"><A>
+<A NAME="277"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">PlaceHandler</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

@@ -1,0 +1,63 @@
+ECLIPSE
+** add UserInfo.jar RIGHT CLICK project > properties < libraries > add external UserInfo.jar
+** change compiler compatibility from 1.7 to 1.6
+	Preferences > Java > installed JRE -> search > should find all installed JDKs
+	Preferences > Java > Compiler: 'Compiler compliance level' > 1.6
+	Project > Build Path > installed JRE > 1.6
+	Project > Compiler > 1.6
+
+ERROR > JVMCFRE003 bad major version when running UserInfo servlet
+
+BROWSER
+**http://st9-mm.timetodemo.com/servlet/UserInfoServlet?operation=3&userId=emustermann
+<userinfo>
+<user id="emustermann">
+ <field name="Company" type="text/plain">Some company (emustermann)</field>
+ <field name="Department" type="text/plain">Some department(emustermann)</field>
+ <field name="Telephone" type="text/plain">555-5555(emustermann)</field>
+ <field name="Title" type="text/plain">Some title(emustermann)</field>
+ <field name="Company" type="text/plain">Some company (emustermann)</field>
+ <field name="MailAddress" type="" error="UNAVAILABLE"/>
+</user>
+</userinfo>
+
+
+NOTES.INI
+
+
+
+** UserInfoConfig.xml
+<UserInformation>
+
+<ReadStConfigUpdates value="false"/>
+
+<Resources>
+<Storage type="LDAP">
+<StorageDetails  HostName="ldap.timetodemo.com" Port="389"  UserName="" Password="" SslEnabled="false"  SslPort="636" BaseDN=""  Scope="2" SearchFilter="(&amp;(objectclass=organizationalPerson)(|(cn=%s)(givenname=%s)(sn=%s)(mail=%s)))"/>
+<!-- Add another StorageDetails tag to support another ldap server. The listing order implies the searching order -->
+
+<!-- Scope: 0=OBJECT_SCOPE 1=ONELEVEL_SCOPE 2=SUBTREE_SCOPE-->
+<SslProperties KeyStorePath=""  KeyStorePassword=""/>
+
+<Details>
+        <Detail Id="MailAddress" FieldName="mail" Type="text/plain"/>
+        <Detail Id="Company" FieldName="Company" Type="text/plain"/>
+        <Detail Id="Department" FieldName="Department" Type="text/plain"/>
+        <Detail Id="Title" FieldName="Title" Type="text/plain"/>
+        <Detail Id="Telephone" FieldName="Telephone" Type="text/plain"/>
+</Details>
+
+</Storage>
+</Resources>
+
+<ParamsSets>
+ <Set SetId="0" params="MailAddress,Name,Title,Location,Telephone,PhotoURL,ImagePath,Company,Department"/>
+ <Set SetId="1" params="MailAddress,Name,Title,Location,Telephone,PhotoURL,ImagePath,Company,Department"/>
+</ParamsSets>
+<BlackBoxConfiguration>
+ <BlackBox  type="LDAP" name="com.ibm.sametime.userinfo.userinfobb.UserInfoLdapBB"  MaxInstances="5" />
+ <BlackBox  type= "CUSTOM " name= "com.eview.bb.HardcodedBlackbox" MaxInstances= "4" />
+</BlackBoxConfiguration>
+
+</UserInformation>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Sametime Connect Web API: Static Contact List Sample</title>
+
+		<!-- Step #1: Import the ST Connect Web API Stylesheet -->
+		<link rel="stylesheet" href="http://localhost:59449/stwebapi/main.css" type="text/css" />
+
+		<!-- Step #2: Import the ST Connect Web API getStatus JavaScript include file -->
+		<script type="text/javascript" src="http://localhost:59449/stwebapi/getStatus.js"></script>
+	</head>
+	<body>
+		<h2 align="center">Static Contact List</h2>
+		<table id="partnerStatusTable" border="1" cellpadding="3">
+			<thead>
+				<tr>
+					<td colspan="3"><B>My Buddies</B></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<!-- Step #3...: Create links using the 'awareness' class.  Replace the <USER_ID> values with actual
+					user IDs for Sametime contacts.  Often this is the user's e-mail address
+
+					NOTE: You do not have to put any text where the "Resolving contact..." is, the ST livename will replace
+					that once each ID is resolved.
+
+					-->
+					<td colspan="3"><a class="awareness" userId="<USER_ID>">Resolving contact, please wait....</a></td>
+				</tr>
+				<tr>
+					<td colspan="3"><a class="awareness" userId="<USER_ID>">Resolving contact, please wait....</a></td>
+				</tr>
+				<tr>
+					<td colspan="3"><a class="awareness" userId="<USER_ID>">Resolving contact, please wait....</a></td>
+				</tr>
+				<tr>
+					<td colspan="3"><a class="awareness" userId="<USER_ID>">Resolving contact, please wait....</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

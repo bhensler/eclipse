@@ -1,0 +1,1092 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>StTlsSocket</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="StTlsSocket";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsReceiver.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocketFactory.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/core/util/connection/StTlsSocket.html" target="_top">Frames</a></li>
+<li><a href="StTlsSocket.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.core.util.connection</div>
+<h2 title="Class StTlsSocket" class="title">Class StTlsSocket</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>java.net.Socket</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.core.util.connection.StTlsSocket</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.io.Closeable, java.lang.AutoCloseable</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">StTlsSocket</span>
+extends java.net.Socket</pre>
+<div class="block">This is a TLS (Transport Layer Security) socket, much like the standard
+ <code>SSLSocket</code> class, only this class is implemented by
+ wrapping an <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html" title="class in com.lotus.sametime.core.util.connection"><code>StTlsEngine</code></a>.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#StTlsSocket(com.lotus.sametime.core.util.connection.StTlsConfig)">StTlsSocket</a></strong>(<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;config)</code>
+<div class="block">Constructs an unconnected client socket.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#StTlsSocket(com.lotus.sametime.core.util.connection.StTlsConfig, java.net.InetAddress, int, java.net.InetAddress, int)">StTlsSocket</a></strong>(<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;config,
+           java.net.InetAddress&nbsp;remoteAddress,
+           int&nbsp;remotePort,
+           java.net.InetAddress&nbsp;localAddress,
+           int&nbsp;localPort)</code>
+<div class="block">Constructor for a client socket that connects to the specified remote
+ address and port.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#StTlsSocket(com.lotus.sametime.core.util.connection.StTlsConfig, java.net.Socket, boolean)">StTlsSocket</a></strong>(<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;config,
+           java.net.Socket&nbsp;tcpSocket,
+           boolean&nbsp;autoClose)</code>
+<div class="block">Constructor for a TLS socket that wraps an existing TCP/IP socket.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#close()">close</a></strong>()</code>
+<div class="block">Closes the connection, including both TLS and TCP protocol layers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getConfig()">getConfig</a></strong>()</code>
+<div class="block">Gets the configuration in which this socket was initialized.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.net.InetAddress</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getInetAddress()">getInetAddress</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.io.InputStream</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getInputStream()">getInputStream</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getKeepAlive()">getKeepAlive</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.net.InetAddress</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getLocalAddress()">getLocalAddress</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getLocalPort()">getLocalPort</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.net.SocketAddress</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getLocalSocketAddress()">getLocalSocketAddress</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getOOBInline()">getOOBInline</a></strong>()</code>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.getOOBInline()</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.io.OutputStream</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getOutputStream()">getOutputStream</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getPort()">getPort</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getReceiveBufferSize()">getReceiveBufferSize</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.net.SocketAddress</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getRemoteSocketAddress()">getRemoteSocketAddress</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getReuseAddress()">getReuseAddress</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getSendBufferSize()">getSendBufferSize</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getSoLinger()">getSoLinger</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getSoTimeout()">getSoTimeout</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getTcpNoDelay()">getTcpNoDelay</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getTrafficClass()">getTrafficClass</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#getUseClientMode()">getUseClientMode</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#isBound()">isBound</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#isClosed()">isClosed</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#isConnected()">isConnected</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#isInputShutdown()">isInputShutdown</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#isOutputShutdown()">isOutputShutdown</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#sendUrgentData(int)">sendUrgentData</a></strong>(int&nbsp;data)</code>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.sendUrgentData(int)</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setKeepAlive(boolean)">setKeepAlive</a></strong>(boolean&nbsp;on)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setOOBInline(boolean)">setOOBInline</a></strong>(boolean&nbsp;on)</code>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.setOOBInline(boolean)</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setPerformancePreferences(int, int, int)">setPerformancePreferences</a></strong>(int&nbsp;connectionTime,
+                         int&nbsp;latency,
+                         int&nbsp;bandwidth)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setReceiveBufferSize(int)">setReceiveBufferSize</a></strong>(int&nbsp;size)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setReuseAddress(boolean)">setReuseAddress</a></strong>(boolean&nbsp;on)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setSendBufferSize(int)">setSendBufferSize</a></strong>(int&nbsp;size)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setSoLinger(boolean, int)">setSoLinger</a></strong>(boolean&nbsp;on,
+           int&nbsp;linger)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setSoTimeout(int)">setSoTimeout</a></strong>(int&nbsp;timeout)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setTcpNoDelay(boolean)">setTcpNoDelay</a></strong>(boolean&nbsp;on)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#setTrafficClass(int)">setTrafficClass</a></strong>(int&nbsp;tc)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#shutdownInput()">shutdownInput</a></strong>()</code>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.shutdownInput()</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#shutdownOutput()">shutdownOutput</a></strong>()</code>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.shutdownOutput()</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#startHandshake()">startHandshake</a></strong>()</code>
+<div class="block">Starts a TLS handshake on this socket.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocket.html#toString()">toString</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.net.Socket">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.net.Socket</h3>
+<code>bind, connect, connect, getChannel, setSocketImplFactory</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="StTlsSocket(com.lotus.sametime.core.util.connection.StTlsConfig, java.net.InetAddress, int, java.net.InetAddress, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>StTlsSocket</h4>
+<pre>public&nbsp;StTlsSocket(<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;config,
+           java.net.InetAddress&nbsp;remoteAddress,
+           int&nbsp;remotePort,
+           java.net.InetAddress&nbsp;localAddress,
+           int&nbsp;localPort)
+            throws java.io.IOException</pre>
+<div class="block">Constructor for a client socket that connects to the specified remote
+ address and port. This does not include TLS handshake. The socket is
+ also bound to the local address and port, if supplied.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>config</code> - Configuration settings.</dd><dd><code>remoteAddress</code> - The server address to connect to.</dd><dd><code>remotePort</code> - The server port number to connect to.</dd><dd><code>localAddress</code> - The local address to bind to. Pass <tt>null</tt> to
+  bind to any local address.</dd><dd><code>localPort</code> - The local port to bind to. Pass <tt>0</tt> to bind to
+  any local free port.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - If an I/O error occurs at the TCP/IP layer while
+  attempting to bind to the local address, or while attempting to
+  connect to the remote address.</dd></dl>
+</li>
+</ul>
+<a name="StTlsSocket(com.lotus.sametime.core.util.connection.StTlsConfig)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>StTlsSocket</h4>
+<pre>public&nbsp;StTlsSocket(<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;config)</pre>
+<div class="block">Constructs an unconnected client socket.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>config</code> - Configuration settings.</dd></dl>
+</li>
+</ul>
+<a name="StTlsSocket(com.lotus.sametime.core.util.connection.StTlsConfig, java.net.Socket, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>StTlsSocket</h4>
+<pre>public&nbsp;StTlsSocket(<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;config,
+           java.net.Socket&nbsp;tcpSocket,
+           boolean&nbsp;autoClose)</pre>
+<div class="block">Constructor for a TLS socket that wraps an existing TCP/IP socket.
+ When closing this TLS socket, the wrapped TCP/IP socket will get closed
+ automatically.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>config</code> - Configuration settings.</dd><dd><code>tcpSocket</code> - The underlying TCP/IP socket. If <tt>null</tt>, this
+  constructor creates an unconnected client socket.</dd><dd><code>autoClose</code> - Close <tt>tcpSocket</tt> when this socket gets closed.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="startHandshake()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startHandshake</h4>
+<pre>public&nbsp;boolean&nbsp;startHandshake()
+                       throws java.io.IOException</pre>
+<div class="block">Starts a TLS handshake on this socket.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if a handshake was started, <tt>false</tt> if a
+  handshake was already in progress.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - If an error occurs at either the TCP or TLS layer.</dd><dt><span class="strong">See Also:</span></dt><dd><code>SSLSocket.startHandshake()</code></dd></dl>
+</li>
+</ul>
+<a name="close()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>close</h4>
+<pre>public&nbsp;void&nbsp;close()
+           throws java.io.IOException</pre>
+<div class="block">Closes the connection, including both TLS and TCP protocol layers.
+ The socket cannot be closed as long as there are blocking read or write
+ calls in another thread.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>close</code>&nbsp;in interface&nbsp;<code>java.io.Closeable</code></dd>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>close</code>&nbsp;in interface&nbsp;<code>java.lang.AutoCloseable</code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>close</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.close()</code></dd></dl>
+</li>
+</ul>
+<a name="getInputStream()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInputStream</h4>
+<pre>public&nbsp;java.io.InputStream&nbsp;getInputStream()
+                                   throws java.io.IOException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getInputStream</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getInputStream()</code></dd></dl>
+</li>
+</ul>
+<a name="getOutputStream()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutputStream</h4>
+<pre>public&nbsp;java.io.OutputStream&nbsp;getOutputStream()
+                                     throws java.io.IOException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getOutputStream</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getOutputStream()</code></dd></dl>
+</li>
+</ul>
+<a name="getReceiveBufferSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getReceiveBufferSize</h4>
+<pre>public&nbsp;int&nbsp;getReceiveBufferSize()
+                         throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getReceiveBufferSize</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getReceiveBufferSize()</code></dd></dl>
+</li>
+</ul>
+<a name="getInetAddress()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInetAddress</h4>
+<pre>public&nbsp;java.net.InetAddress&nbsp;getInetAddress()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getInetAddress</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.getInetAddress()</code></dd></dl>
+</li>
+</ul>
+<a name="getLocalAddress()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocalAddress</h4>
+<pre>public&nbsp;java.net.InetAddress&nbsp;getLocalAddress()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getLocalAddress</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.getLocalAddress()</code></dd></dl>
+</li>
+</ul>
+<a name="getPort()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPort</h4>
+<pre>public&nbsp;int&nbsp;getPort()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getPort</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.getPort()</code></dd></dl>
+</li>
+</ul>
+<a name="getLocalPort()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocalPort</h4>
+<pre>public&nbsp;int&nbsp;getLocalPort()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getLocalPort</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.getLocalPort()</code></dd></dl>
+</li>
+</ul>
+<a name="getRemoteSocketAddress()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRemoteSocketAddress</h4>
+<pre>public&nbsp;java.net.SocketAddress&nbsp;getRemoteSocketAddress()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getRemoteSocketAddress</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.getRemoteSocketAddress()</code></dd></dl>
+</li>
+</ul>
+<a name="getLocalSocketAddress()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocalSocketAddress</h4>
+<pre>public&nbsp;java.net.SocketAddress&nbsp;getLocalSocketAddress()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getLocalSocketAddress</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.getLocalSocketAddress()</code></dd></dl>
+</li>
+</ul>
+<a name="setTcpNoDelay(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTcpNoDelay</h4>
+<pre>public&nbsp;void&nbsp;setTcpNoDelay(boolean&nbsp;on)
+                   throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setTcpNoDelay</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.setTcpNoDelay(boolean)</code></dd></dl>
+</li>
+</ul>
+<a name="getTcpNoDelay()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTcpNoDelay</h4>
+<pre>public&nbsp;boolean&nbsp;getTcpNoDelay()
+                      throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getTcpNoDelay</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getTcpNoDelay()</code></dd></dl>
+</li>
+</ul>
+<a name="setSoLinger(boolean, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSoLinger</h4>
+<pre>public&nbsp;void&nbsp;setSoLinger(boolean&nbsp;on,
+               int&nbsp;linger)
+                 throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setSoLinger</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.setSoLinger(boolean, int)</code></dd></dl>
+</li>
+</ul>
+<a name="getSoLinger()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSoLinger</h4>
+<pre>public&nbsp;int&nbsp;getSoLinger()
+                throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getSoLinger</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getSoLinger()</code></dd></dl>
+</li>
+</ul>
+<a name="sendUrgentData(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendUrgentData</h4>
+<pre>public&nbsp;void&nbsp;sendUrgentData(int&nbsp;data)
+                    throws java.io.IOException</pre>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.sendUrgentData(int)</code>.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>sendUrgentData</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.sendUrgentData(int)</code></dd></dl>
+</li>
+</ul>
+<a name="setOOBInline(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOOBInline</h4>
+<pre>public&nbsp;void&nbsp;setOOBInline(boolean&nbsp;on)
+                  throws java.net.SocketException</pre>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.setOOBInline(boolean)</code>.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setOOBInline</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.setOOBInline(boolean)</code></dd></dl>
+</li>
+</ul>
+<a name="getOOBInline()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOOBInline</h4>
+<pre>public&nbsp;boolean&nbsp;getOOBInline()
+                     throws java.net.SocketException</pre>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.getOOBInline()</code>.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getOOBInline</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getOOBInline()</code></dd></dl>
+</li>
+</ul>
+<a name="setSoTimeout(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSoTimeout</h4>
+<pre>public&nbsp;void&nbsp;setSoTimeout(int&nbsp;timeout)
+                  throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setSoTimeout</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.setSoTimeout(int)</code></dd></dl>
+</li>
+</ul>
+<a name="getSoTimeout()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSoTimeout</h4>
+<pre>public&nbsp;int&nbsp;getSoTimeout()
+                 throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getSoTimeout</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getSoTimeout()</code></dd></dl>
+</li>
+</ul>
+<a name="setSendBufferSize(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSendBufferSize</h4>
+<pre>public&nbsp;void&nbsp;setSendBufferSize(int&nbsp;size)
+                       throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setSendBufferSize</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.setSendBufferSize(int)</code></dd></dl>
+</li>
+</ul>
+<a name="getSendBufferSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSendBufferSize</h4>
+<pre>public&nbsp;int&nbsp;getSendBufferSize()
+                      throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getSendBufferSize</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getSendBufferSize()</code></dd></dl>
+</li>
+</ul>
+<a name="setReceiveBufferSize(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReceiveBufferSize</h4>
+<pre>public&nbsp;void&nbsp;setReceiveBufferSize(int&nbsp;size)
+                          throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setReceiveBufferSize</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.setReceiveBufferSize(int)</code></dd></dl>
+</li>
+</ul>
+<a name="setKeepAlive(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKeepAlive</h4>
+<pre>public&nbsp;void&nbsp;setKeepAlive(boolean&nbsp;on)
+                  throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setKeepAlive</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.setKeepAlive(boolean)</code></dd></dl>
+</li>
+</ul>
+<a name="getKeepAlive()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeepAlive</h4>
+<pre>public&nbsp;boolean&nbsp;getKeepAlive()
+                     throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getKeepAlive</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getKeepAlive()</code></dd></dl>
+</li>
+</ul>
+<a name="setTrafficClass(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTrafficClass</h4>
+<pre>public&nbsp;void&nbsp;setTrafficClass(int&nbsp;tc)
+                     throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setTrafficClass</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.setTrafficClass(int)</code></dd></dl>
+</li>
+</ul>
+<a name="getTrafficClass()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTrafficClass</h4>
+<pre>public&nbsp;int&nbsp;getTrafficClass()
+                    throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getTrafficClass</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getTrafficClass()</code></dd></dl>
+</li>
+</ul>
+<a name="setReuseAddress(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReuseAddress</h4>
+<pre>public&nbsp;void&nbsp;setReuseAddress(boolean&nbsp;on)
+                     throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setReuseAddress</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.setReuseAddress(boolean)</code></dd></dl>
+</li>
+</ul>
+<a name="getReuseAddress()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getReuseAddress</h4>
+<pre>public&nbsp;boolean&nbsp;getReuseAddress()
+                        throws java.net.SocketException</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getReuseAddress</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.net.SocketException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.getReuseAddress()</code></dd></dl>
+</li>
+</ul>
+<a name="shutdownInput()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shutdownInput</h4>
+<pre>public&nbsp;void&nbsp;shutdownInput()
+                   throws java.io.IOException</pre>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.shutdownInput()</code>.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>shutdownInput</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.shutdownInput()</code></dd></dl>
+</li>
+</ul>
+<a name="shutdownOutput()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shutdownOutput</h4>
+<pre>public&nbsp;void&nbsp;shutdownOutput()
+                    throws java.io.IOException</pre>
+<div class="block">Always throws a <tt>SocketException</tt>, same as in
+ <code>Socket.shutdownOutput()</code>.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>shutdownOutput</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd><dt><span class="strong">See Also:</span></dt><dd><code>Socket.shutdownOutput()</code></dd></dl>
+</li>
+</ul>
+<a name="isConnected()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isConnected</h4>
+<pre>public&nbsp;boolean&nbsp;isConnected()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>isConnected</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.isConnected()</code></dd></dl>
+</li>
+</ul>
+<a name="isBound()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isBound</h4>
+<pre>public&nbsp;boolean&nbsp;isBound()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>isBound</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.isBound()</code></dd></dl>
+</li>
+</ul>
+<a name="isClosed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isClosed</h4>
+<pre>public&nbsp;boolean&nbsp;isClosed()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>isClosed</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.isClosed()</code></dd></dl>
+</li>
+</ul>
+<a name="isInputShutdown()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isInputShutdown</h4>
+<pre>public&nbsp;boolean&nbsp;isInputShutdown()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>isInputShutdown</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.isInputShutdown()</code></dd></dl>
+</li>
+</ul>
+<a name="isOutputShutdown()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOutputShutdown</h4>
+<pre>public&nbsp;boolean&nbsp;isOutputShutdown()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>isOutputShutdown</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.isOutputShutdown()</code></dd></dl>
+</li>
+</ul>
+<a name="setPerformancePreferences(int, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPerformancePreferences</h4>
+<pre>public&nbsp;void&nbsp;setPerformancePreferences(int&nbsp;connectionTime,
+                             int&nbsp;latency,
+                             int&nbsp;bandwidth)</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setPerformancePreferences</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Socket.setPerformancePreferences(int, int, int)</code></dd></dl>
+</li>
+</ul>
+<a name="getUseClientMode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUseClientMode</h4>
+<pre>public&nbsp;boolean&nbsp;getUseClientMode()</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><code>SSLSocket.getUseClientMode()</code></dd></dl>
+</li>
+</ul>
+<a name="getConfig()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getConfig</h4>
+<pre>public&nbsp;<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;getConfig()</pre>
+<div class="block">Gets the configuration in which this socket was initialized.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The associated <tt>StTlsConfig</tt>.</dd></dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.net.Socket</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Object.toString()</code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsReceiver.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsSocketFactory.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/core/util/connection/StTlsSocket.html" target="_top">Frames</a></li>
+<li><a href="StTlsSocket.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>CommunityEventsService</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CommunityEventsService";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsComp.html" title="class in com.lotus.sametime.communityevents"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsServiceEvent.html" title="class in com.lotus.sametime.communityevents"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/communityevents/CommunityEventsService.html" target="_top">Frames</a></li>
+<li><a href="CommunityEventsService.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.communityevents</div>
+<h2 title="Interface CommunityEventsService" class="title">Interface CommunityEventsService</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Superinterfaces:</dt>
+<dd><a href="../../../../com/lotus/sametime/core/comparch/STCompApi.html" title="interface in com.lotus.sametime.core.comparch">STCompApi</a></dd>
+</dl>
+<dl>
+<dt>All Known Implementing Classes:</dt>
+<dd><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsComp.html" title="class in com.lotus.sametime.communityevents">CommunityEventsComp</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public interface <span class="strong">CommunityEventsService</span>
+extends <a href="../../../../com/lotus/sametime/core/comparch/STCompApi.html" title="interface in com.lotus.sametime.core.comparch">STCompApi</a></pre>
+<div class="block">Defines the community events service API.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#COMP_NAME">COMP_NAME</a></strong></code>
+<div class="block">The component name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#COMP_VERSION">COMP_VERSION</a></strong></code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;
+<div class="deprecatedContent">COMP_VERSION is no longer needed / used.</div>
+</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addCommunityEventsServiceListener(com.lotus.sametime.communityevents.CommunityEventsServiceListener)">addCommunityEventsServiceListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/CommunityEventsServiceListener.html" title="interface in com.lotus.sametime.communityevents">CommunityEventsServiceListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified community events service listener to receive 
+ service available/unavailable events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addPrivacyModeListener(com.lotus.sametime.communityevents.PrivacyModeListener)">addPrivacyModeListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/PrivacyModeListener.html" title="interface in com.lotus.sametime.communityevents">PrivacyModeListener</a>&nbsp;listener)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addSALoginListener(com.lotus.sametime.communityevents.SALoginListener)">addSALoginListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/SALoginListener.html" title="interface in com.lotus.sametime.communityevents">SALoginListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified server application logged in listener to 
+        receive server application logged in events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addSelectiveStatusListListener(com.lotus.sametime.communityevents.SelectiveStatusListListener)">addSelectiveStatusListListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/SelectiveStatusListListener.html" title="interface in com.lotus.sametime.communityevents">SelectiveStatusListListener</a>&nbsp;listener)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addServiceAvailableListener(com.lotus.sametime.communityevents.ServiceAvailableListener)">addServiceAvailableListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/ServiceAvailableListener.html" title="interface in com.lotus.sametime.communityevents">ServiceAvailableListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified services listener to receive services 
+        events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addUserLoginFailedListener(com.lotus.sametime.communityevents.UserLoginFailedListener)">addUserLoginFailedListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserLoginFailedListener.html" title="interface in com.lotus.sametime.communityevents">UserLoginFailedListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified user login failed listener to receive loginFailed
+        events from this component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addUserLoginListener(com.lotus.sametime.communityevents.UserLoginListener)">addUserLoginListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserLoginListener.html" title="interface in com.lotus.sametime.communityevents">UserLoginListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified community login listener to receive login/logout 
+        events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addUserOnlineListener(com.lotus.sametime.communityevents.UserOnlineListener)">addUserOnlineListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserOnlineListener.html" title="interface in com.lotus.sametime.communityevents">UserOnlineListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified users listener to receive users events 
+        from this component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addUserPrivacyListener(com.lotus.sametime.communityevents.UserPrivacyListener)">addUserPrivacyListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserPrivacyListener.html" title="interface in com.lotus.sametime.communityevents">UserPrivacyListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified user privacy listener to receive user privacy 
+        events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addUserStatusListener(com.lotus.sametime.communityevents.UserStatusListener)">addUserStatusListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserStatusListener.html" title="interface in com.lotus.sametime.communityevents">UserStatusListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified user status listener to receive user status 
+                events from this component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#addUserStorageListener(com.lotus.sametime.communityevents.UserStorageListener)">addUserStorageListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserStorageListener.html" title="interface in com.lotus.sametime.communityevents">UserStorageListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified user storage listener to receive user 
+        storages events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeCommunityEventsServiceListener(com.lotus.sametime.communityevents.CommunityEventsServiceListener)">removeCommunityEventsServiceListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/CommunityEventsServiceListener.html" title="interface in com.lotus.sametime.communityevents">CommunityEventsServiceListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified community events service listener so that 
+        it no longer receives service available/unavailable events from 
+        this component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeLoginFailedListener(com.lotus.sametime.communityevents.UserLoginFailedListener)">removeLoginFailedListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserLoginFailedListener.html" title="interface in com.lotus.sametime.communityevents">UserLoginFailedListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified user login failed listener so that it no longer
+        receives loginFailed events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removePrivacyModeListener(com.lotus.sametime.communityevents.PrivacyModeListener)">removePrivacyModeListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/PrivacyModeListener.html" title="interface in com.lotus.sametime.communityevents">PrivacyModeListener</a>&nbsp;listener)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeSALoginListener(com.lotus.sametime.communityevents.SALoginListener)">removeSALoginListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/SALoginListener.html" title="interface in com.lotus.sametime.communityevents">SALoginListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified server application logged in listener so 
+        that it no longer receives server application logged in events
+ from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeSelectiveStatusListListener(com.lotus.sametime.communityevents.SelectiveStatusListListener)">removeSelectiveStatusListListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/SelectiveStatusListListener.html" title="interface in com.lotus.sametime.communityevents">SelectiveStatusListListener</a>&nbsp;listener)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeServiceAvailableListener(com.lotus.sametime.communityevents.ServiceAvailableListener)">removeServiceAvailableListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/ServiceAvailableListener.html" title="interface in com.lotus.sametime.communityevents">ServiceAvailableListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified services listener so that it no 
+ longer receives services events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeUserLoginListener(com.lotus.sametime.communityevents.UserLoginListener)">removeUserLoginListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserLoginListener.html" title="interface in com.lotus.sametime.communityevents">UserLoginListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified community login listener so that it no longer 
+        receives login/logout events
+ from this component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeUserOnlineListener(com.lotus.sametime.communityevents.UserOnlineListener)">removeUserOnlineListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserOnlineListener.html" title="interface in com.lotus.sametime.communityevents">UserOnlineListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified users listener so that it no longer 
+        receives users events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeUserPrivacyListener(com.lotus.sametime.communityevents.UserPrivacyListener)">removeUserPrivacyListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserPrivacyListener.html" title="interface in com.lotus.sametime.communityevents">UserPrivacyListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified user privacy listener so that it no longer 
+        receives user privacy events from this component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeUserStatusListener(com.lotus.sametime.communityevents.UserStatusListener)">removeUserStatusListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserStatusListener.html" title="interface in com.lotus.sametime.communityevents">UserStatusListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified user status listener so that it no longer 
+        receives user status events from this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsService.html#removeUserStorageListener(com.lotus.sametime.communityevents.UserStorageListener)">removeUserStorageListener</a></strong>(<a href="../../../../com/lotus/sametime/communityevents/UserStorageListener.html" title="interface in com.lotus.sametime.communityevents">UserStorageListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified user storage listener so that it no 
+        longer receives user storage events from this component.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="COMP_VERSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>COMP_VERSION</h4>
+<pre>static final&nbsp;java.lang.String COMP_VERSION</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;COMP_VERSION is no longer needed / used.</div>
+<div class="block">The component build version.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#com.lotus.sametime.communityevents.CommunityEventsService.COMP_VERSION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="COMP_NAME">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>COMP_NAME</h4>
+<pre>static final&nbsp;java.lang.String COMP_NAME</pre>
+<div class="block">The component name.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#com.lotus.sametime.communityevents.CommunityEventsService.COMP_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="addCommunityEventsServiceListener(com.lotus.sametime.communityevents.CommunityEventsServiceListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addCommunityEventsServiceListener</h4>
+<pre>void&nbsp;addCommunityEventsServiceListener(<a href="../../../../com/lotus/sametime/communityevents/CommunityEventsServiceListener.html" title="interface in com.lotus.sametime.communityevents">CommunityEventsServiceListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified community events service listener to receive 
+ service available/unavailable events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeCommunityEventsServiceListener(com.lotus.sametime.communityevents.CommunityEventsServiceListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeCommunityEventsServiceListener</h4>
+<pre>void&nbsp;removeCommunityEventsServiceListener(<a href="../../../../com/lotus/sametime/communityevents/CommunityEventsServiceListener.html" title="interface in com.lotus.sametime.communityevents">CommunityEventsServiceListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified community events service listener so that 
+        it no longer receives service available/unavailable events from 
+        this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="addUserLoginListener(com.lotus.sametime.communityevents.UserLoginListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addUserLoginListener</h4>
+<pre>void&nbsp;addUserLoginListener(<a href="../../../../com/lotus/sametime/communityevents/UserLoginListener.html" title="interface in com.lotus.sametime.communityevents">UserLoginListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified community login listener to receive login/logout 
+        events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeUserLoginListener(com.lotus.sametime.communityevents.UserLoginListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeUserLoginListener</h4>
+<pre>void&nbsp;removeUserLoginListener(<a href="../../../../com/lotus/sametime/communityevents/UserLoginListener.html" title="interface in com.lotus.sametime.communityevents">UserLoginListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified community login listener so that it no longer 
+        receives login/logout events
+ from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="addUserLoginFailedListener(com.lotus.sametime.communityevents.UserLoginFailedListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addUserLoginFailedListener</h4>
+<pre>void&nbsp;addUserLoginFailedListener(<a href="../../../../com/lotus/sametime/communityevents/UserLoginFailedListener.html" title="interface in com.lotus.sametime.communityevents">UserLoginFailedListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified user login failed listener to receive loginFailed
+        events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeLoginFailedListener(com.lotus.sametime.communityevents.UserLoginFailedListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeLoginFailedListener</h4>
+<pre>void&nbsp;removeLoginFailedListener(<a href="../../../../com/lotus/sametime/communityevents/UserLoginFailedListener.html" title="interface in com.lotus.sametime.communityevents">UserLoginFailedListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified user login failed listener so that it no longer
+        receives loginFailed events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="addUserStatusListener(com.lotus.sametime.communityevents.UserStatusListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addUserStatusListener</h4>
+<pre>void&nbsp;addUserStatusListener(<a href="../../../../com/lotus/sametime/communityevents/UserStatusListener.html" title="interface in com.lotus.sametime.communityevents">UserStatusListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified user status listener to receive user status 
+                events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeUserStatusListener(com.lotus.sametime.communityevents.UserStatusListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeUserStatusListener</h4>
+<pre>void&nbsp;removeUserStatusListener(<a href="../../../../com/lotus/sametime/communityevents/UserStatusListener.html" title="interface in com.lotus.sametime.communityevents">UserStatusListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified user status listener so that it no longer 
+        receives user status events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="addUserPrivacyListener(com.lotus.sametime.communityevents.UserPrivacyListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addUserPrivacyListener</h4>
+<pre>void&nbsp;addUserPrivacyListener(<a href="../../../../com/lotus/sametime/communityevents/UserPrivacyListener.html" title="interface in com.lotus.sametime.communityevents">UserPrivacyListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified user privacy listener to receive user privacy 
+        events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeUserPrivacyListener(com.lotus.sametime.communityevents.UserPrivacyListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeUserPrivacyListener</h4>
+<pre>void&nbsp;removeUserPrivacyListener(<a href="../../../../com/lotus/sametime/communityevents/UserPrivacyListener.html" title="interface in com.lotus.sametime.communityevents">UserPrivacyListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified user privacy listener so that it no longer 
+        receives user privacy events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="addSelectiveStatusListListener(com.lotus.sametime.communityevents.SelectiveStatusListListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addSelectiveStatusListListener</h4>
+<pre>void&nbsp;addSelectiveStatusListListener(<a href="../../../../com/lotus/sametime/communityevents/SelectiveStatusListListener.html" title="interface in com.lotus.sametime.communityevents">SelectiveStatusListListener</a>&nbsp;listener)</pre>
+</li>
+</ul>
+<a name="removeSelectiveStatusListListener(com.lotus.sametime.communityevents.SelectiveStatusListListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeSelectiveStatusListListener</h4>
+<pre>void&nbsp;removeSelectiveStatusListListener(<a href="../../../../com/lotus/sametime/communityevents/SelectiveStatusListListener.html" title="interface in com.lotus.sametime.communityevents">SelectiveStatusListListener</a>&nbsp;listener)</pre>
+</li>
+</ul>
+<a name="addPrivacyModeListener(com.lotus.sametime.communityevents.PrivacyModeListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPrivacyModeListener</h4>
+<pre>void&nbsp;addPrivacyModeListener(<a href="../../../../com/lotus/sametime/communityevents/PrivacyModeListener.html" title="interface in com.lotus.sametime.communityevents">PrivacyModeListener</a>&nbsp;listener)</pre>
+</li>
+</ul>
+<a name="removePrivacyModeListener(com.lotus.sametime.communityevents.PrivacyModeListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removePrivacyModeListener</h4>
+<pre>void&nbsp;removePrivacyModeListener(<a href="../../../../com/lotus/sametime/communityevents/PrivacyModeListener.html" title="interface in com.lotus.sametime.communityevents">PrivacyModeListener</a>&nbsp;listener)</pre>
+</li>
+</ul>
+<a name="addUserOnlineListener(com.lotus.sametime.communityevents.UserOnlineListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addUserOnlineListener</h4>
+<pre>void&nbsp;addUserOnlineListener(<a href="../../../../com/lotus/sametime/communityevents/UserOnlineListener.html" title="interface in com.lotus.sametime.communityevents">UserOnlineListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified users listener to receive users events 
+        from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeUserOnlineListener(com.lotus.sametime.communityevents.UserOnlineListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeUserOnlineListener</h4>
+<pre>void&nbsp;removeUserOnlineListener(<a href="../../../../com/lotus/sametime/communityevents/UserOnlineListener.html" title="interface in com.lotus.sametime.communityevents">UserOnlineListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified users listener so that it no longer 
+        receives users events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="addUserStorageListener(com.lotus.sametime.communityevents.UserStorageListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addUserStorageListener</h4>
+<pre>void&nbsp;addUserStorageListener(<a href="../../../../com/lotus/sametime/communityevents/UserStorageListener.html" title="interface in com.lotus.sametime.communityevents">UserStorageListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified user storage listener to receive user 
+        storages events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeUserStorageListener(com.lotus.sametime.communityevents.UserStorageListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeUserStorageListener</h4>
+<pre>void&nbsp;removeUserStorageListener(<a href="../../../../com/lotus/sametime/communityevents/UserStorageListener.html" title="interface in com.lotus.sametime.communityevents">UserStorageListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified user storage listener so that it no 
+        longer receives user storage events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="addSALoginListener(com.lotus.sametime.communityevents.SALoginListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addSALoginListener</h4>
+<pre>void&nbsp;addSALoginListener(<a href="../../../../com/lotus/sametime/communityevents/SALoginListener.html" title="interface in com.lotus.sametime.communityevents">SALoginListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified server application logged in listener to 
+        receive server application logged in events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeSALoginListener(com.lotus.sametime.communityevents.SALoginListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeSALoginListener</h4>
+<pre>void&nbsp;removeSALoginListener(<a href="../../../../com/lotus/sametime/communityevents/SALoginListener.html" title="interface in com.lotus.sametime.communityevents">SALoginListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified server application logged in listener so 
+        that it no longer receives server application logged in events
+ from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="addServiceAvailableListener(com.lotus.sametime.communityevents.ServiceAvailableListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addServiceAvailableListener</h4>
+<pre>void&nbsp;addServiceAvailableListener(<a href="../../../../com/lotus/sametime/communityevents/ServiceAvailableListener.html" title="interface in com.lotus.sametime.communityevents">ServiceAvailableListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified services listener to receive services 
+        events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeServiceAvailableListener(com.lotus.sametime.communityevents.ServiceAvailableListener)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>removeServiceAvailableListener</h4>
+<pre>void&nbsp;removeServiceAvailableListener(<a href="../../../../com/lotus/sametime/communityevents/ServiceAvailableListener.html" title="interface in com.lotus.sametime.communityevents">ServiceAvailableListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified services listener so that it no 
+ longer receives services events from this component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsComp.html" title="class in com.lotus.sametime.communityevents"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/communityevents/CommunityEventsServiceEvent.html" title="class in com.lotus.sametime.communityevents"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/communityevents/CommunityEventsService.html" target="_top">Frames</a></li>
+<li><a href="CommunityEventsService.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

@@ -1,0 +1,7 @@
+IBM Sametime Remote Client Software Development Kit 8.5.2 Redistributable:
+
+The following list includes file(s) that are provided to You pursuant to the Redistributables section of the IBM International Program License Agreements License Information that applies to this Program:
+
+Sametime Remote Client SDK Redistributables:
+ meeting.client.core.jar
+

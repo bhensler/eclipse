@@ -1,0 +1,554 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ChatWindowAction (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ChatWindowAction (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatActionWindowDelegate.html" title="interface in com.ibm.collaboration.realtime.chat.actions"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ChatWindowAction.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.chat.actions</FONT>
+<BR>
+Class ChatWindowAction</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by ">org.eclipse.core.commands.common.EventManager
+      <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by ">org.eclipse.jface.action.AbstractAction
+          <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by ">org.eclipse.jface.action.Action
+              <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.chat.actions.ChatWindowAction</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/chatwindow/addon/ChatWindowExtension.html" title="interface in com.ibm.collaboration.realtime.chatwindow.addon">ChatWindowExtension</A>, org.eclipse.jface.action.IAction</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>ChatWindowAction</B><DT>extends org.eclipse.jface.action.Action<DT>implements <A HREF="../../../../../../com/ibm/collaboration/realtime/chatwindow/addon/ChatWindowExtension.html" title="interface in com.ibm.collaboration.realtime.chatwindow.addon">ChatWindowExtension</A></DL>
+</PRE>
+
+<P>
+<p>An <code>org.eclipse.jface.action.Action</code> that provides functionality to the chat window.</p>
+ <p>It is recommended that if you want to override any Action methods such as 
+ isEnabled() to determine enablement, you use this class instead of just 
+ using the <code>ChatActionDelegate</code> interfaces.</p>
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_org.eclipse.jface.action.IAction"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface org.eclipse.jface.action.IAction</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>AS_CHECK_BOX, AS_DROP_DOWN_MENU, AS_PUSH_BUTTON, AS_RADIO_BUTTON, AS_UNSPECIFIED, CHECKED, DESCRIPTION, ENABLED, HANDLED, IMAGE, RESULT, TEXT, TOOL_TIP_TEXT</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#ChatWindowAction()">ChatWindowAction</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default constructor.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#dispose()">dispose</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the toolbar containing this action is disposed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatActionDelegate.html" title="interface in com.ibm.collaboration.realtime.chat.actions">ChatActionDelegate</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#getActionDelegate()">getActionDelegate</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the chat action delegate for this action.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/chatwindow/ChatWindowHandler.html" title="interface in com.ibm.collaboration.realtime.chatwindow">ChatWindowHandler</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#getChatWindowHandler()">getChatWindowHandler</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the chat window handler if one was set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;org.eclipse.jface.resource.ImageDescriptor</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#getDisabledImageDescriptor()">getDisabledImageDescriptor</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the image descriptor for this action's disabled image.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;org.eclipse.jface.resource.ImageDescriptor</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#getImageDescriptor()">getImageDescriptor</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the image descriptor for this action's image.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;org.eclipse.jface.action.MenuManager</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#getMenuManager()">getMenuManager</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the org.eclipse.jface.action.MenuManager for this action.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#getToolbarPath()">getToolbarPath</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the tool bar path for this action.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;org.eclipse.swt.graphics.Rectangle</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#getToolItemBounds()">getToolItemBounds</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a Rectangle that defines the bounds of the ToolItem using this action.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#isVisible()">isVisible</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this action is visible.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html#run()">run</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the action is run, can be overridden.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_org.eclipse.jface.action.Action"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class org.eclipse.jface.action.Action</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>convertAccelerator, convertAccelerator, findKeyCode, findKeyString, findModifier, findModifierString, getAccelerator, getActionDefinitionId, getDescription, getHelpListener, getHoverImageDescriptor, getId, getMenuCreator, getStyle, getText, getToolTipText, isChecked, isEnabled, isHandled, notifyResult, removeAcceleratorText, removeMnemonics, runWithEvent, setAccelerator, setActionDefinitionId, setChecked, setDescription, setDisabledImageDescriptor, setEnabled, setHelpListener, setHoverImageDescriptor, setId, setImageDescriptor, setMenuCreator, setText, setToolTipText</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_org.eclipse.jface.action.AbstractAction"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class org.eclipse.jface.action.AbstractAction</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>addPropertyChangeListener, removePropertyChangeListener</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.chatwindow.addon.ChatWindowExtension"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.chatwindow.addon.<A HREF="../../../../../../com/ibm/collaboration/realtime/chatwindow/addon/ChatWindowExtension.html" title="interface in com.ibm.collaboration.realtime.chatwindow.addon">ChatWindowExtension</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/chatwindow/addon/ChatWindowExtension.html#setChatWindowHandler(com.ibm.collaboration.realtime.chatwindow.ChatWindowHandler)">setChatWindowHandler</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_org.eclipse.jface.action.IAction"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface org.eclipse.jface.action.IAction</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>addPropertyChangeListener, removePropertyChangeListener</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="ChatWindowAction()"><!-- --></A><H3>
+ChatWindowAction</H3>
+<PRE>
+public <B>ChatWindowAction</B>()</PRE>
+<DL>
+<DD>The default constructor.
+<P>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getChatWindowHandler()"><!-- --></A><H3>
+getChatWindowHandler</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/collaboration/realtime/chatwindow/ChatWindowHandler.html" title="interface in com.ibm.collaboration.realtime.chatwindow">ChatWindowHandler</A> <B>getChatWindowHandler</B>()</PRE>
+<DL>
+<DD>Returns the chat window handler if one was set.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/chatwindow/addon/ChatWindowExtension.html#getChatWindowHandler()">getChatWindowHandler</A></CODE> in interface <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/chatwindow/addon/ChatWindowExtension.html" title="interface in com.ibm.collaboration.realtime.chatwindow.addon">ChatWindowExtension</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Chat window handler or null.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getImageDescriptor()"><!-- --></A><H3>
+getImageDescriptor</H3>
+<PRE>
+public org.eclipse.jface.resource.ImageDescriptor <B>getImageDescriptor</B>()</PRE>
+<DL>
+<DD>Returns the image descriptor for this action's image.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>getImageDescriptor</CODE> in interface <CODE>org.eclipse.jface.action.IAction</CODE><DT><B>Overrides:</B><DD><CODE>getImageDescriptor</CODE> in class <CODE>org.eclipse.jface.action.Action</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Action image descriptor.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDisabledImageDescriptor()"><!-- --></A><H3>
+getDisabledImageDescriptor</H3>
+<PRE>
+public org.eclipse.jface.resource.ImageDescriptor <B>getDisabledImageDescriptor</B>()</PRE>
+<DL>
+<DD>Returns the image descriptor for this action's disabled image.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>getDisabledImageDescriptor</CODE> in interface <CODE>org.eclipse.jface.action.IAction</CODE><DT><B>Overrides:</B><DD><CODE>getDisabledImageDescriptor</CODE> in class <CODE>org.eclipse.jface.action.Action</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Action disabled image descriptor.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMenuManager()"><!-- --></A><H3>
+getMenuManager</H3>
+<PRE>
+public org.eclipse.jface.action.MenuManager <B>getMenuManager</B>()</PRE>
+<DL>
+<DD>Returns the org.eclipse.jface.action.MenuManager for this action.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Menu manager.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getActionDelegate()"><!-- --></A><H3>
+getActionDelegate</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatActionDelegate.html" title="interface in com.ibm.collaboration.realtime.chat.actions">ChatActionDelegate</A> <B>getActionDelegate</B>()</PRE>
+<DL>
+<DD>Returns the chat action delegate for this action.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Chat action delegate.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="run()"><!-- --></A><H3>
+run</H3>
+<PRE>
+public void <B>run</B>()</PRE>
+<DL>
+<DD>Called when the action is run, can be overridden.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>run</CODE> in interface <CODE>org.eclipse.jface.action.IAction</CODE><DT><B>Overrides:</B><DD><CODE>run</CODE> in class <CODE>org.eclipse.jface.action.Action</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getToolbarPath()"><!-- --></A><H3>
+getToolbarPath</H3>
+<PRE>
+public java.lang.String <B>getToolbarPath</B>()</PRE>
+<DL>
+<DD>Returns the tool bar path for this action.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Tool bar path.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="dispose()"><!-- --></A><H3>
+dispose</H3>
+<PRE>
+public void <B>dispose</B>()</PRE>
+<DL>
+<DD>Called when the toolbar containing this action is disposed.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVisible()"><!-- --></A><H3>
+isVisible</H3>
+<PRE>
+public boolean <B>isVisible</B>()</PRE>
+<DL>
+<DD>Determines if this action is visible. Override this if you want to override
+ visibility of the action based on something you control, such as user policy.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this action should be visible, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getToolItemBounds()"><!-- --></A><H3>
+getToolItemBounds</H3>
+<PRE>
+public org.eclipse.swt.graphics.Rectangle <B>getToolItemBounds</B>()</PRE>
+<DL>
+<DD>Returns a Rectangle that defines the bounds of the ToolItem using this action.
+ If the ToolItem hasn't been created as UI, returns null.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Rectangle defining ToolItem bounds, null if not available.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/chat/actions/ChatActionWindowDelegate.html" title="interface in com.ibm.collaboration.realtime.chat.actions"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/chat/actions/ChatWindowAction.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ChatWindowAction.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

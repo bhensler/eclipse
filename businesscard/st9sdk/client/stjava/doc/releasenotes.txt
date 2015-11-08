@@ -1,0 +1,153 @@
+Licensed Materials - Property of IBM
+
+(c) Copyright IBM Corporation 2002, 2013
+All rights reserved.
+
+US Government Users Restricted Rights - Use, duplication or 
+disclosure restricted by GS ADP Schedule Contract with IBM Corp.
+
+Product: IBM Sametime Java Toolkit 
+Release: 9.0
+
+
+====================================================================
+Contents
+====================================================================
+I.      Overview      
+II.     Toolkit Contents
+III.    Requirements
+IV.     New and Changed Features
+V.      Known Issues
+VI.     Additional Information
+
+
+====================================================================
+I. Overview
+====================================================================
+
+What is the IBM Sametime Java Toolkit?
+
+The Sametime Java Toolkit is a collection of building blocks or
+components that developers use to build applications which leverage the 
+functionality and services provided by IBM Sametime. These toolkit
+components can be used in any standard development environment that 
+supports JDK 1.4.2 or above.
+
+
+====================================================================
+II. Toolkit Contents
+====================================================================
+
+- The Sametime Java API
+
+- Sample applications, described in more detail in the
+  accompanying documentation
+
+- Documentation: Tutorial, Developers Guide, and Javadoc Reference
+
+
+=================================================================
+III. Requirements
+=================================================================
+
+The Sametime Java Toolkit can be used in any JDK 1.4.2 or Java 5.0
+development environment.
+
+Applications created with this toolkit run in the following 
+environments:
+
+    * Operating Systems:
+        - MS Windows XP Pro SP2 or later
+        - MS Windows Vista Business 32-bit
+        - MS Windows Vista Enterprise
+        - Linux RHEL 5.2
+        - Linux SLED 10 SP2
+        - Linux Ubuntu 8.0.4
+        - Mac OSX 10.5 (Intel-based processors only.)
+
+    * Browsers:
+        - Firefox 2.0 on Windows XP Pro, RHEL 5.2, and SLED 10 SP2
+        - Firefox 3.0 on Windows XP Pro, Windows Vista, RHEL 5.2
+        - IE 6.0 on Windows XP Pro
+        - IE 7.0 on Windows XP Pro, Windows Vista
+        - IE 8.0 on Windows XP Pro, Windows Vista
+        - Safari 3.2 and 4.0.x on Mac OSX 10.5.x
+        - Firefox 3.0 on Mac OSX 10.5.x
+
+=================================================================
+IV. New and Changed Features
+=================================================================
+
+- IPv6 Support: The Java Toolkit now supports connecting to an IPv6-
+	capable Sametime server.  The Sametime server introduced support
+	for IPv6 as well in Sametime 8.0.2.  You can use the Java Toolkit
+	to connect to an IPv6 capable Sametime server from an IPv4 or an
+	IPv6 client with any additional configuration on the client side.
+	Please see the Information Center / release notes for more
+	information on how to configure your Sametime server for IPv6.
+
+
+====================================================================
+V. Known Issues
+====================================================================
+
+* Identifier Requests
+
+	Previous releases of the Java Toolkit documentation referenced the 
+  	following e-mail address that any third-party developers who wanted
+  	to allocate an identifier range for their Sametime-enabled
+  	applications could e-mail:
+
+    		stid@il.ibm.com
+
+  	This address has been inactive for some time now.  A new address has
+  	been created that should be used:
+  
+    		Sametime_ID_Request@lotus.com.
+
+  	The Java and Community Server Toolkit documentation has been corrected.
+
+* Dual-Stack (IPv4 & IPv6)
+
+	The Java and Community Server Toolkits can have difficulty connecting
+	to Sametime when the Sametime Server is on a dual-stack machine (both
+	IPv4 & IPv6 addresses), yet the Sametime Server (MUX) itself is not configured
+	to accept connections on both address types.  This is particularly an
+	issue when a dual-stack is in use, but the server is only accepting
+	connections on IPv6.  Java by default prefers IPv4 addresses, so Sametime
+	will attempt to connect over the IPv4 address.  To address this issue,
+	either configure the Sametime Server (MUX) to accept connections on both
+	types, or tell Java to prefer IPv6 addresses.  You can do this by setting
+	the following Java System property to true:
+	
+		java.net.preferIPv6Addresses=true
+	
+	More information can be found here:
+	
+	http://java.sun.com/j2se/1.5.0/docs/guide/net/ipv6_guide/index.html#ipv6-related
+
+
+====================================================================
+VI. Additional Information 
+====================================================================
+
+- Applications developed with previous versions of the Sametime Java 
+  Toolkit must be recompiled in order to work with this version.
+
+- BuddyList: Maximum Subscription Limit
+
+	The Sametime Server now allows the admin to define the max number
+	of subscriptions per each client. The threshold will be defined in
+	sametime.ini under [Config] section by:
+	
+		MAX_NUMBER_OF_SUBSCRIBES_PER_CLIENT
+	
+	The default value for the threshold is -1, which means unlimited (as
+	it was previously).
+	
+	Applications developed with the Java Toolkit application should be
+	aware of the limit on numbers of subscriptions, because otherwise,
+	the server may ignore new subscriptions when the limit is exceeded.
+	The threshold is kept as a server attribute 9036 which can be queried
+	by clients.
+	

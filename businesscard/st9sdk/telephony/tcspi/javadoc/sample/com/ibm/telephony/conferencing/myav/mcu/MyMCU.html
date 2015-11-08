@@ -1,0 +1,771 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MyMCU (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration Sample API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MyMCU (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration Sample API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUCommandSocketServer.html" title="class in com.ibm.telephony.conferencing.myav.mcu"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/telephony/conferencing/myav/mcu/MyMCU.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MyMCU.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.telephony.conferencing.myav.mcu</FONT>
+<BR>
+Class MyMCU</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.telephony.conferencing.myav.mcu.MyMCU</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html" title="interface in com.ibm.telephony.conferencing.myav">MyAVConstants</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>MyMCU</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html" title="interface in com.ibm.telephony.conferencing.myav">MyAVConstants</A></DL>
+</PRE>
+
+<P>
+Simple "fake MCU" that coordinates the handling of requests from 
+ and notifications to <code>MyAVConferenceService</code>.
+ This communication between the conference service and MCU 
+ passes by way of the <code>MyMCUCommandSocketServer</code>
+ running on the MCU server (siplet) and the <code>MyMCUCommandSocketClient</code> 
+ running on the Sametime Media Server.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.telephony.conferencing.myav.MyAVConstants"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.telephony.conferencing.myav.<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html" title="interface in com.ibm.telephony.conferencing.myav">MyAVConstants</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#DIAL_FAILURE">DIAL_FAILURE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#GENERAL_EXCEPTION_FAILURE">GENERAL_EXCEPTION_FAILURE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#INVALID_ENDPOINT">INVALID_ENDPOINT</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_ASSOCIATE">MYAV_CMD_ASSOCIATE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_CREATE_CONFERENCE">MYAV_CMD_CREATE_CONFERENCE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DELETE_CONFERENCE">MYAV_CMD_DELETE_CONFERENCE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DIAL">MYAV_CMD_DIAL</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DIAL_EXTENDED">MYAV_CMD_DIAL_EXTENDED</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DISCONNECT_USER">MYAV_CMD_DISCONNECT_USER</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_MEDIA_CONTROL">MYAV_CMD_MEDIA_CONTROL</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_REGISTER_USER">MYAV_CMD_REGISTER_USER</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_REGISTER_USER_SIP">MYAV_CMD_REGISTER_USER_SIP</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_SET_CONFERENCE_PROPERTY">MYAV_CMD_SET_CONFERENCE_PROPERTY</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_SET_USER_PROPERTY">MYAV_CMD_SET_USER_PROPERTY</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_START_CONFERENCE_CONTROL">MYAV_CMD_START_CONFERENCE_CONTROL</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_STOP_CONFERENCE_CONTROL">MYAV_CMD_STOP_CONFERENCE_CONTROL</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_TIMEOUT_ERROR">MYAV_CMD_TIMEOUT_ERROR</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_UNREGISTER_USER">MYAV_CMD_UNREGISTER_USER</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_ACK">MYAV_NOTIFICATION_USER_ACK</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_BYE">MYAV_NOTIFICATION_USER_BYE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_INVITE">MYAV_NOTIFICATION_USER_INVITE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_SET_PROPERTY">MYAV_NOTIFICATION_USER_SET_PROPERTY</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYMCU_CONFERENCE_AGENT_ID_PREFIX">MYMCU_CONFERENCE_AGENT_ID_PREFIX</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYMCU_SERVLET_CONTEXT">MYMCU_SERVLET_CONTEXT</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SERVICE_UNAVAILABLE">SERVICE_UNAVAILABLE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_APP_SESSION_EXPIRES_MINUTES">SIP_APP_SESSION_EXPIRES_MINUTES</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_REGISTER_DELAY_MS">SIP_REGISTER_DELAY_MS</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_REGISTER_EXPIRES_SECONDS">SIP_REGISTER_EXPIRES_SECONDS</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_REGISTER_INTERVAL_MS">SIP_REGISTER_INTERVAL_MS</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#TIMEOUT_FAILURE">TIMEOUT_FAILURE</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#UNKNOWN_USER_NAME">UNKNOWN_USER_NAME</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_CONNECTED">USER_CONNECTED</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_CONNECTION_PROPERTY">USER_CONNECTION_PROPERTY</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_DISCONNECTED">USER_DISCONNECTED</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_DISPLAY_NAME">USER_DISPLAY_NAME</A>, <A HREF="../../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_TALKING_PROPERTY">USER_TALKING_PROPERTY</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#MyMCU(javax.servlet.sip.SipFactory)">MyMCU</A></B>(javax.servlet.sip.SipFactory&nbsp;sipFactory)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.Collection&lt;<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html" title="class in com.ibm.telephony.conferencing.myav.mcu">MyMCUConference</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#getConferences()">getConferences</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuAssociate(java.lang.String, java.lang.String, java.lang.String, java.util.Map)">mcuAssociate</A></B>(java.lang.String&nbsp;namedUser,
+             java.lang.String&nbsp;connectedUser,
+             java.lang.String&nbsp;conferenceId,
+             java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Equivalent MCU-specific methods for processing TCSPI service requests.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuCreateConference(java.lang.String, java.lang.String, java.util.Map)">mcuCreateConference</A></B>(java.lang.String&nbsp;user,
+                    java.lang.String&nbsp;conferenceDocumentText,
+                    java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuDeleteConference(java.lang.String, java.util.Map)">mcuDeleteConference</A></B>(java.lang.String&nbsp;conferenceId,
+                    java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuDial(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)">mcuDial</A></B>(java.lang.String&nbsp;user,
+        java.lang.String&nbsp;endPoint,
+        java.lang.String&nbsp;dialMode,
+        java.lang.String&nbsp;conferenceId,
+        java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuDialExtended(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)">mcuDialExtended</A></B>(java.lang.String&nbsp;user,
+                java.lang.String&nbsp;endPoint,
+                java.lang.String&nbsp;dialMode,
+                java.lang.String&nbsp;conferenceId,
+                java.lang.String&nbsp;mediaFlag,
+                java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuDisconnectUser(java.lang.String, java.lang.String, java.util.Map)">mcuDisconnectUser</A></B>(java.lang.String&nbsp;user,
+                  java.lang.String&nbsp;conferenceId,
+                  java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuMediaControl(java.lang.String, java.lang.String, java.lang.String, int, java.util.Map)">mcuMediaControl</A></B>(java.lang.String&nbsp;user,
+                java.lang.String&nbsp;conferenceId,
+                java.lang.String&nbsp;controlFlag,
+                int&nbsp;i,
+                java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuProcessDefaultCommand(java.lang.String, java.util.Map, java.util.Map)">mcuProcessDefaultCommand</A></B>(java.lang.String&nbsp;commandId,
+                         java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;parameters,
+                         java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuRegisterUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)">mcuRegisterUser</A></B>(java.lang.String&nbsp;userName,
+                java.lang.String&nbsp;userRole,
+                java.lang.String&nbsp;userPin,
+                java.lang.String&nbsp;conferenceId,
+                java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuRegisterUserSip(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)">mcuRegisterUserSip</A></B>(java.lang.String&nbsp;userName,
+                   java.lang.String&nbsp;userRole,
+                   java.lang.String&nbsp;userPin,
+                   java.lang.String&nbsp;sipUri,
+                   java.lang.String&nbsp;conferenceId,
+                   java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuSetConferenceProperty(java.lang.String, java.lang.String, java.lang.String, java.util.Map)">mcuSetConferenceProperty</A></B>(java.lang.String&nbsp;conferenceId,
+                         java.lang.String&nbsp;propertyName,
+                         java.lang.String&nbsp;propertyValue,
+                         java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuSetUserProperty(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)">mcuSetUserProperty</A></B>(java.lang.String&nbsp;userName,
+                   java.lang.String&nbsp;propertyName,
+                   java.lang.String&nbsp;propertyValue,
+                   java.lang.String&nbsp;conferenceId,
+                   java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuStartConferenceControl(java.lang.String, java.lang.String, java.lang.String, java.util.Map)">mcuStartConferenceControl</A></B>(java.lang.String&nbsp;conferenceId,
+                          java.lang.String&nbsp;loginId,
+                          java.lang.String&nbsp;conferenceDocumentText,
+                          java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuStopConferenceControl(java.lang.String, java.util.Map)">mcuStopConferenceControl</A></B>(java.lang.String&nbsp;conferenceId,
+                         java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuTimeoutError(java.util.Map)">mcuTimeoutError</A></B>(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#mcuUnregisterUser(java.lang.String, java.lang.String, java.util.Map)">mcuUnregisterUser</A></B>(java.lang.String&nbsp;user,
+                  java.lang.String&nbsp;conferenceId,
+                  java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#sessionExpired(javax.servlet.sip.SipApplicationSession)">sessionExpired</A></B>(javax.servlet.sip.SipApplicationSession&nbsp;sipAppSession)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCU.html#start()">start</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MyMCU(javax.servlet.sip.SipFactory)"><!-- --></A><H3>
+MyMCU</H3>
+<PRE>
+public <B>MyMCU</B>(javax.servlet.sip.SipFactory&nbsp;sipFactory)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getConferences()"><!-- --></A><H3>
+getConferences</H3>
+<PRE>
+public java.util.Collection&lt;<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUConference.html" title="class in com.ibm.telephony.conferencing.myav.mcu">MyMCUConference</A>&gt; <B>getConferences</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="start()"><!-- --></A><H3>
+start</H3>
+<PRE>
+public void <B>start</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuAssociate(java.lang.String, java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuAssociate</H3>
+<PRE>
+public boolean <B>mcuAssociate</B>(java.lang.String&nbsp;namedUser,
+                            java.lang.String&nbsp;connectedUser,
+                            java.lang.String&nbsp;conferenceId,
+                            java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD>Equivalent MCU-specific methods for processing TCSPI service requests.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuUnregisterUser(java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuUnregisterUser</H3>
+<PRE>
+public boolean <B>mcuUnregisterUser</B>(java.lang.String&nbsp;user,
+                                 java.lang.String&nbsp;conferenceId,
+                                 java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuTimeoutError(java.util.Map)"><!-- --></A><H3>
+mcuTimeoutError</H3>
+<PRE>
+public boolean <B>mcuTimeoutError</B>(java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuStopConferenceControl(java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuStopConferenceControl</H3>
+<PRE>
+public boolean <B>mcuStopConferenceControl</B>(java.lang.String&nbsp;conferenceId,
+                                        java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuStartConferenceControl(java.lang.String, java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuStartConferenceControl</H3>
+<PRE>
+public boolean <B>mcuStartConferenceControl</B>(java.lang.String&nbsp;conferenceId,
+                                         java.lang.String&nbsp;loginId,
+                                         java.lang.String&nbsp;conferenceDocumentText,
+                                         java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuProcessDefaultCommand(java.lang.String, java.util.Map, java.util.Map)"><!-- --></A><H3>
+mcuProcessDefaultCommand</H3>
+<PRE>
+public boolean <B>mcuProcessDefaultCommand</B>(java.lang.String&nbsp;commandId,
+                                        java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;parameters,
+                                        java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuSetUserProperty(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuSetUserProperty</H3>
+<PRE>
+public boolean <B>mcuSetUserProperty</B>(java.lang.String&nbsp;userName,
+                                  java.lang.String&nbsp;propertyName,
+                                  java.lang.String&nbsp;propertyValue,
+                                  java.lang.String&nbsp;conferenceId,
+                                  java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuSetConferenceProperty(java.lang.String, java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuSetConferenceProperty</H3>
+<PRE>
+public boolean <B>mcuSetConferenceProperty</B>(java.lang.String&nbsp;conferenceId,
+                                        java.lang.String&nbsp;propertyName,
+                                        java.lang.String&nbsp;propertyValue,
+                                        java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuRegisterUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuRegisterUser</H3>
+<PRE>
+public boolean <B>mcuRegisterUser</B>(java.lang.String&nbsp;userName,
+                               java.lang.String&nbsp;userRole,
+                               java.lang.String&nbsp;userPin,
+                               java.lang.String&nbsp;conferenceId,
+                               java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuRegisterUserSip(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuRegisterUserSip</H3>
+<PRE>
+public boolean <B>mcuRegisterUserSip</B>(java.lang.String&nbsp;userName,
+                                  java.lang.String&nbsp;userRole,
+                                  java.lang.String&nbsp;userPin,
+                                  java.lang.String&nbsp;sipUri,
+                                  java.lang.String&nbsp;conferenceId,
+                                  java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuMediaControl(java.lang.String, java.lang.String, java.lang.String, int, java.util.Map)"><!-- --></A><H3>
+mcuMediaControl</H3>
+<PRE>
+public boolean <B>mcuMediaControl</B>(java.lang.String&nbsp;user,
+                               java.lang.String&nbsp;conferenceId,
+                               java.lang.String&nbsp;controlFlag,
+                               int&nbsp;i,
+                               java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuDisconnectUser(java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuDisconnectUser</H3>
+<PRE>
+public boolean <B>mcuDisconnectUser</B>(java.lang.String&nbsp;user,
+                                 java.lang.String&nbsp;conferenceId,
+                                 java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuDial(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuDial</H3>
+<PRE>
+public boolean <B>mcuDial</B>(java.lang.String&nbsp;user,
+                       java.lang.String&nbsp;endPoint,
+                       java.lang.String&nbsp;dialMode,
+                       java.lang.String&nbsp;conferenceId,
+                       java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuDialExtended(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuDialExtended</H3>
+<PRE>
+public boolean <B>mcuDialExtended</B>(java.lang.String&nbsp;user,
+                               java.lang.String&nbsp;endPoint,
+                               java.lang.String&nbsp;dialMode,
+                               java.lang.String&nbsp;conferenceId,
+                               java.lang.String&nbsp;mediaFlag,
+                               java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuDeleteConference(java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuDeleteConference</H3>
+<PRE>
+public boolean <B>mcuDeleteConference</B>(java.lang.String&nbsp;conferenceId,
+                                   java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuCreateConference(java.lang.String, java.lang.String, java.util.Map)"><!-- --></A><H3>
+mcuCreateConference</H3>
+<PRE>
+public boolean <B>mcuCreateConference</B>(java.lang.String&nbsp;user,
+                                   java.lang.String&nbsp;conferenceDocumentText,
+                                   java.util.Map&lt;java.lang.String,java.lang.String&gt;&nbsp;results)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sessionExpired(javax.servlet.sip.SipApplicationSession)"><!-- --></A><H3>
+sessionExpired</H3>
+<PRE>
+public void <B>sessionExpired</B>(javax.servlet.sip.SipApplicationSession&nbsp;sipAppSession)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/telephony/conferencing/myav/mcu/MyMCUCommandSocketServer.html" title="class in com.ibm.telephony.conferencing.myav.mcu"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/telephony/conferencing/myav/mcu/MyMCU.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MyMCU.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

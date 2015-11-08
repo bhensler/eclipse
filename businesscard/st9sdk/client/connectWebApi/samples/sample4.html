@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Sametime Connect Web API: Contact Action Sample</title>
+
+		<!-- Step #1: Import the ST Connect Web API Stylesheet -->
+		<link rel="stylesheet" href="http://localhost:59449/stwebapi/main.css" type="text/css" />
+
+		<!-- Step #2: Import the ST Connect Web API getStatus JavaScript include file -->
+		<script type="text/javascript" src="http://localhost:59449/stwebapi/getStatus.js"></script>
+	</head>
+
+	<script language="javascript">
+
+		// Step #3: Define functions to resolve livenames and dynamically add them to the contact table
+
+		// Hashtable to store contacts
+		var myBuddies = {};
+
+		// This function will take a userId, resolve it to create a livename, and add it to the contacts table
+		function addLivenameToMyBuddiesTable(userId) {
+
+			// Check if userId is already in the buddylist:
+			if (myBuddies[userId] == null) {
+
+				// Create any element to use as the container
+				var livenameElement = document.createElement("div");
+
+				// Set the userId attribute
+				livenameElement.setAttribute("userId", userId);
+
+				// set the class attribute
+				livenameElement.setAttribute("class", "awareness");
+
+				// Create a sametime.livename (first arg is userId, second arg is the element you just created)
+				var livename = new sametime.livename(userId, livenameElement);
+
+				// Call start() to start watching awareness
+				livename.start();
+
+				// Store livename in a local hashtable
+				myBuddies[userId] = livename;
+
+				// Find the last row in the table
+				var table = document.getElementById('myBuddiesTable');
+				var lastRow = table.rows.length;
+
+				// Add row to end of table
+				var rowCount = lastRow;
+				var row = table.insertRow(lastRow);
+
+				// Create a cell to hold the livename
+				var livenameCell = row.insertCell(0);
+				livenameCell.appendChild(livenameElement);
+
+				// Create a cell to hold the location information
+				var locationCell = row.insertCell(1);
+				var locationElement = document.createElement("div");
+				locationElement.name = "locationCell" + userId;
+				locationElement.id = "locationCell" + userId;
+				locationElement.innerHTML = "&nbsp;";
+				locationCell.appendChild(locationElement);
+
+				// Now make the call to retrieve the location information
+				livename.runActionWithCallback("getstatus", "updateLocationInfo");
+
+				// Create a cell to hold the call action
+				var callCell = row.insertCell(2);
+				callCell.align = "center";
+				var callElement = document.createElement("input");
+				callElement.type = "button";
+				callElement.value = "Call";
+				callElement.name = "callCell" + userId;
+				callElement.id = "callCell" + userId;
+
+				// Set the action to be 'call':
+				callElement.onclick = function() { myBuddies[userId].runAction('call'); }
+
+				callCell.appendChild(callElement);
+
+				// Create a cell to hold the Instant Meeting action
+				var instantMeetingCell = row.insertCell(3);
+				instantMeetingCell.align = "center";
+
+				// Create a button for the Instant Meeting action
+				var instantMeetingElement = document.createElement("input");
+				instantMeetingElement.type = "button";
+				instantMeetingElement.value = "Start Instant Meeting";
+				instantMeetingElement.name = "instantMeetingCell" + userId;
+				instantMeetingElement.id = "instantMeetingCell" + userId;
+
+				// Set the action to be 'startmeeting':
+				instantMeetingElement.onclick = function() { myBuddies[userId].runAction('startmeeting'); }
+
+				instantMeetingCell.appendChild(instantMeetingElement);
+
+				// Create a cell to hold the InstantShare action
+				var instantShareCell = row.insertCell(4);
+				instantShareCell.align = "center";
+
+				// Create a button for the Instant Share action
+				var instantShareElement = document.createElement("input");
+				instantShareElement.type = "button";
+				instantShareElement.value = "Start InstantShare";
+				instantShareElement.name = "instantShareCell" + userId;
+				instantShareElement.id = "instantShareCell" + userId;
+
+				// Set the action to be 'instantshare':
+				instantShareElement.onclick = function() { myBuddies[userId].runAction('instantshare'); }
+
+				instantShareCell.appendChild(instantShareElement);
+			}
+		}
+
+		// This function will update the information cell of the selected contact with some of the data received from the getstatus call
+		var updateLocationInfo = function(partner) {
+			if (partner != null) {
+				var infoHtml = "&nbsp;";
+				if ((partner.locationInfo.userDefinedLocationName != null) && (partner.locationInfo.userDefinedLocationName != "") ) {
+					infoHtml = partner.locationInfo.userDefinedLocationName + "<br>";
+					if (partner.locationInfo.phoneNumber != "") {
+						infoHtml = infoHtml + "&nbsp;&nbsp;&nbsp;&nbsp;" + "Phone = " + partner.locationInfo.phoneNumber + "<br>";
+					}
+					if (partner.locationInfo.cityName != "") {
+						infoHtml = infoHtml + "&nbsp;&nbsp;&nbsp;&nbsp;" +
+						"Address = " + partner.locationInfo.cityName + ", " + partner.locationInfo.stateName + ", " + partner.locationInfo.postalCode + ", " + partner.locationInfo.countryName;
+					}
+				}
+				document.getElementById("locationCell" + partner.contactId).innerHTML = infoHtml;
+			}
+		}
+	</script>
+
+	<body>
+		<h2 align="center">Contact Action Sample</h2>
+		<!-- Step #5: Define the add contact form and hook it to the methods defined above -->
+		<table id="addPartnerTable" border="1" cellpadding="3">
+			<thead>
+				<tr>
+					<td align="center"><B>Add Contact</B></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<form name="addContactForm">
+							Enter user ID: <input type="text" name="buddyListUserId" id="buddyListUserId" value=""/>  <input type="button" value="Add to BuddyList" onClick="addLivenameToMyBuddiesTable(document.getElementById('buddyListUserId').value);"/>
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br><br><br><br>
+		<!-- Step #6: Create the buddylist table -->
+		<table id="myBuddiesTable" border="1" cellpadding="3">
+			<thead>
+				<tr>
+					<td colspan="5" align="center"><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Buddies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</B><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">Buddy</td>
+					<td align="center">Location</td>
+					<td align="center">Call Action</td>
+					<td align="center">Instant Meeting Action</td>
+					<td align="center">InstantShare Action</td>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</body>
+</html>

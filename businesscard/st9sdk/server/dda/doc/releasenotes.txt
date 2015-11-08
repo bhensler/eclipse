@@ -1,0 +1,93 @@
+Licensed Materials - Property of IBM
+
+(c) Copyright IBM Corporation 2002, 2013
+All rights reserved.
+
+US Government Users Restricted Rights - Use, duplication or 
+disclosure restricted by GS ADP Schedule Contract with IBM Corp.
+
+Product: IBM Lotus Sametime Directory and Database Access Toolkit 
+Release: 9.0
+
+
+====================================================================
+Contents
+====================================================================
+I.      Overview      
+II.     Toolkit Contents
+III.    Requirements
+IV.     Additional Information
+
+
+
+====================================================================
+I. Overview
+====================================================================
+
+What is the IBM Lotus Sametime Directory and Database Access Toolkit?
+
+The Sametime Directory and Database Access Toolkit provides:
+
+- The ability to log chat transcripts in a database for later retrieval. 
+- The ability to customize the generation and validation of the 
+  authentication token.
+- The ability to scan a transferred file for viruses via the filetransfer spi.
+- The ability to retrieve user data from different storage types.
+
+====================================================================
+II. Toolkit Contents
+====================================================================
+
+The Sametime Directory and Database Access Toolkit includes the following:
+
+- The Sametime Directory and Database Access API
+- Documentation: Developer's Guide and JavaDoc
+- Sample implementations
+- Templates you can use to get started quickly
+
+          
+====================================================================
+III. Requirements
+====================================================================
+
+The chat logging spi, token authentication spi and antivirus scanning spi 
+are implemented as a DLL for the Windows operating system supported by the server and as a 
+service program for IBM iSeries. This documentation is intended primarily for 
+Windows developers; the Chat Logging SPI template and 
+the Token Authentication SPI template are currently implemented only 
+for the Windows operating system with the VisualStudio 2010 Development 
+environment. However, AIX, Linux developers can use the same source 
+files in adapting the samples for use in these environments.
+
+The user information spi is a java component and can be used in any 
+JDK 1.7 Java development environment. User information spi code should be compiled with JDK 1.6 to allow 
+running as a servlet on Domino server, since Domino runs with 1.6 JRE.
+
+The toolkit is targeted for use with Sametime 9.0 server.
+
+====================================================================
+IV. Additional Information
+====================================================================
+
+Compiling the Toolkit Samples and templates for chat logging SPI and token authentication SPI
+-------------------------------------------------------------------------------
+
+* Windows platform
+The samples provided with the toolkit include complete source code.
+
+
+Compiling the Toolkit Sample for chat logging SPI
+-------------------------------------------------------------------------------
+
+* Linux platform
+* AIX platform
+The sample provided with the toolkit include complete source code and 
+header files. See the developer's guide for compilation instructions 
+and compiler directives and options.
+
+Compatibility
+-------------
+
+Existing Chat Logging API implementations for Sametime 9.0 
+can work with Sametime 8.5.2 IFR1 release. The authentication SPIs
+are compatible with Sametime 8.5.0 release.

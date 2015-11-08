@@ -1,0 +1,596 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+OrgNodeProvider (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Orgtree API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="OrgNodeProvider (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Orgtree API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html" title="interface in com.ibm.collaboration.realtime.orgtree"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="OrgNodeProvider.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.orgtree</FONT>
+<BR>
+Interface OrgNodeProvider</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/Validatable.html" title="interface in com.ibm.collaboration.realtime.orgtree">Validatable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>OrgNodeProvider</B><DT>extends <A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/Validatable.html" title="interface in com.ibm.collaboration.realtime.orgtree">Validatable</A></DL>
+</PRE>
+
+<P>
+The OrgNodeProvider is used by the OrgTreeProvider to create OrgNode objects from directory search results and can be thought of as 
+ a factory for OrgNode objects.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR 1</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#exclude(java.lang.String, java.lang.String, java.lang.String[])">exclude</A></B>(java.lang.String&nbsp;requestorContactId,
+        java.lang.String&nbsp;dn,
+        java.lang.String[]&nbsp;excludedDNs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether or not to exclude a given item from the organization tree.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getContactId(javax.naming.directory.Attributes)">getContactId</A></B>(javax.naming.directory.Attributes&nbsp;attribs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the contact ID of the entry given the directory attributes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getDisplayName(int, javax.naming.directory.Attributes, java.lang.String)">getDisplayName</A></B>(int&nbsp;orgNodeType,
+               javax.naming.directory.Attributes&nbsp;attribs,
+               java.lang.String&nbsp;dn)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the display name to use for an OrgNode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getOrgNode(javax.naming.directory.SearchResult, java.util.List)">getOrgNode</A></B>(javax.naming.directory.SearchResult&nbsp;result,
+           java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an OrgNode from the given SearchResult.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.Comparator&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getOrgNodeComparator()">getOrgNodeComparator</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the Comparator to be used to sort a list of OrgNodes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getOrgNodeGroup(javax.naming.directory.SearchResult, java.util.List)">getOrgNodeGroup</A></B>(javax.naming.directory.SearchResult&nbsp;result,
+                java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a group type OrgNode from the given SearchResult.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getOrgNodePerson(javax.naming.directory.SearchResult, java.util.List)">getOrgNodePerson</A></B>(javax.naming.directory.SearchResult&nbsp;result,
+                 java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a person type OrgNode from the given SearchResult.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getOrgNodePerson(java.lang.String, javax.naming.directory.Attributes, java.util.List)">getOrgNodePerson</A></B>(java.lang.String&nbsp;dn,
+                 javax.naming.directory.Attributes&nbsp;attribs,
+                 java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an OrgNode from the given DN and set of directory attributes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getOrgNodes(java.lang.String, javax.naming.NamingEnumeration, java.util.List)">getOrgNodes</A></B>(java.lang.String&nbsp;requestorContactId,
+            javax.naming.NamingEnumeration&lt;javax.naming.directory.SearchResult&gt;&nbsp;results,
+            java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a list of OrgNodes given an enumeration of directory search results.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getOrgNodes(java.lang.String, javax.naming.NamingEnumeration, java.lang.String[], java.util.List)">getOrgNodes</A></B>(java.lang.String&nbsp;requestorContactId,
+            javax.naming.NamingEnumeration&lt;javax.naming.directory.SearchResult&gt;&nbsp;results,
+            java.lang.String[]&nbsp;excludedDNs,
+            java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a list of OrgNodes given an enumeration of directory search results.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#getParentDistinguishedName(javax.naming.directory.Attributes)">getParentDistinguishedName</A></B>(javax.naming.directory.Attributes&nbsp;attribs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the distinguished name (DN) of the entry's parent from  the entry's attributes
+ This is called by the AttributeBasedOrgTreeProvider</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#isGroup(javax.naming.directory.SearchResult)">isGroup</A></B>(javax.naming.directory.SearchResult&nbsp;result)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether or not the given entry is a group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#isParent(javax.naming.directory.Attributes)">isParent</A></B>(javax.naming.directory.Attributes&nbsp;attribs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether or not the given attributes indicate that a directory entry is a parent to other entries</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html#isPerson(javax.naming.directory.SearchResult)">isPerson</A></B>(javax.naming.directory.SearchResult&nbsp;result)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether or not the given entry is a person.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.orgtree.Validatable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.orgtree.<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/Validatable.html" title="interface in com.ibm.collaboration.realtime.orgtree">Validatable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/Validatable.html#validate()">validate</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getOrgNodes(java.lang.String, javax.naming.NamingEnumeration, java.util.List)"><!-- --></A><H3>
+getOrgNodes</H3>
+<PRE>
+java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&gt; <B>getOrgNodes</B>(java.lang.String&nbsp;requestorContactId,
+                                    javax.naming.NamingEnumeration&lt;javax.naming.directory.SearchResult&gt;&nbsp;results,
+                                    java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</PRE>
+<DL>
+<DD>Returns a list of OrgNodes given an enumeration of directory search results.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>requestorContactId</CODE> - The Sametime contactID of the requestor<DD><CODE>results</CODE> - The directory search results<DD><CODE>errors</CODE> - An optional list container for errors in cases where the OrgNode cannot be created from the SearchResult.
+                                        The list of errors is used when validating the directory; a non null list should be populated with errors.
+<DT><B>Returns:</B><DD>A list of OrgNodes that correspond to the given directory search results</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOrgNodes(java.lang.String, javax.naming.NamingEnumeration, java.lang.String[], java.util.List)"><!-- --></A><H3>
+getOrgNodes</H3>
+<PRE>
+java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&gt; <B>getOrgNodes</B>(java.lang.String&nbsp;requestorContactId,
+                                    javax.naming.NamingEnumeration&lt;javax.naming.directory.SearchResult&gt;&nbsp;results,
+                                    java.lang.String[]&nbsp;excludedDNs,
+                                    java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</PRE>
+<DL>
+<DD>Returns a list of OrgNodes given an enumeration of directory search results.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>requestorContactId</CODE> - The Sametime contactID of the requestor<DD><CODE>results</CODE> - The directory search results<DD><CODE>excludedDNs</CODE> - An optional list of DNs to exclude from the search results.  
+                                                The list is provided by the OrgTreeProvider.  For example the AttributeBasedOrgTreeProvider uses
+                                                this to exclude the parent from getChildren results.<DD><CODE>errors</CODE> - An optional list container for errors in cases where the OrgNode cannot be created from the SearchResult.
+                                        The list of errors is used when validating the directory; a non null list should be populated with errors.
+<DT><B>Returns:</B><DD>A list of OrgNodes that correspond to the given directory search results</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="exclude(java.lang.String, java.lang.String, java.lang.String[])"><!-- --></A><H3>
+exclude</H3>
+<PRE>
+boolean <B>exclude</B>(java.lang.String&nbsp;requestorContactId,
+                java.lang.String&nbsp;dn,
+                java.lang.String[]&nbsp;excludedDNs)</PRE>
+<DL>
+<DD>Whether or not to exclude a given item from the organization tree.  
+ This method is invoked by the OrgTreeProvider when processing results from the directory or from the cache.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>requestorContactId</CODE> - The contact ID of the requestor<DD><CODE>dn</CODE> - The distinguished name to be evaluated.<DD><CODE>excludedDNs</CODE> - An explicit list of DNs to exclude that might be passed in by the OrgTreeProvider.  May be null.
+<DT><B>Returns:</B><DD>true if the given item should be excluded, false if not.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOrgNodeComparator()"><!-- --></A><H3>
+getOrgNodeComparator</H3>
+<PRE>
+java.util.Comparator&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&gt; <B>getOrgNodeComparator</B>()</PRE>
+<DL>
+<DD>Returns the Comparator to be used to sort a list of OrgNodes. The default OrgNode comparator sorts by 
+ type (so that groups are before persons) and alphabetically by name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The comparator to sort a list of OrgNodes</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isPerson(javax.naming.directory.SearchResult)"><!-- --></A><H3>
+isPerson</H3>
+<PRE>
+boolean <B>isPerson</B>(javax.naming.directory.SearchResult&nbsp;result)</PRE>
+<DL>
+<DD>Whether or not the given entry is a person.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>result</CODE> - The directory search result
+<DT><B>Returns:</B><DD>true if the entry is a person, false if not.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isGroup(javax.naming.directory.SearchResult)"><!-- --></A><H3>
+isGroup</H3>
+<PRE>
+boolean <B>isGroup</B>(javax.naming.directory.SearchResult&nbsp;result)</PRE>
+<DL>
+<DD>Whether or not the given entry is a group.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>result</CODE> - The directory search result
+<DT><B>Returns:</B><DD>true if the entry is a group, false if not</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOrgNode(javax.naming.directory.SearchResult, java.util.List)"><!-- --></A><H3>
+getOrgNode</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A> <B>getOrgNode</B>(javax.naming.directory.SearchResult&nbsp;result,
+                   java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</PRE>
+<DL>
+<DD>Returns an OrgNode from the given SearchResult.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>result</CODE> - The directory search result to use<DD><CODE>errors</CODE> - An optional list of errors used in reporting problems creating the OrgNode from the directory SearchResult.
+                                        The list of errors is used when validating the directory; a non null list should be populated with errors.
+<DT><B>Returns:</B><DD>The OrgNode derived from the SearchResult</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOrgNodePerson(javax.naming.directory.SearchResult, java.util.List)"><!-- --></A><H3>
+getOrgNodePerson</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A> <B>getOrgNodePerson</B>(javax.naming.directory.SearchResult&nbsp;result,
+                         java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</PRE>
+<DL>
+<DD>Returns a person type OrgNode from the given SearchResult.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>result</CODE> - The directory search result to use<DD><CODE>errors</CODE> - An optional list of errors used in reporting problems creating the OrgNode from the directory SearchResult.
+                                        The list of errors is used when validating the directory; a non null list should be populated with errors.
+<DT><B>Returns:</B><DD>The OrgNode derived from the SearchResult</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOrgNodeGroup(javax.naming.directory.SearchResult, java.util.List)"><!-- --></A><H3>
+getOrgNodeGroup</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A> <B>getOrgNodeGroup</B>(javax.naming.directory.SearchResult&nbsp;result,
+                        java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</PRE>
+<DL>
+<DD>Returns a group type OrgNode from the given SearchResult.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>result</CODE> - The directory search result to use<DD><CODE>errors</CODE> - An optional list of errors used in reporting problems creating the OrgNode from the directory SearchResult
+                                        The list of errors is used when validating the directory; a non null list should be populated with errors.
+<DT><B>Returns:</B><DD>The OrgNode derived from the SearchResult</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOrgNodePerson(java.lang.String, javax.naming.directory.Attributes, java.util.List)"><!-- --></A><H3>
+getOrgNodePerson</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A> <B>getOrgNodePerson</B>(java.lang.String&nbsp;dn,
+                         javax.naming.directory.Attributes&nbsp;attribs,
+                         java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/SearchResultError.html" title="class in com.ibm.collaboration.realtime.orgtree">SearchResultError</A>&gt;&nbsp;errors)</PRE>
+<DL>
+<DD>Returns an OrgNode from the given DN and set of directory attributes.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>dn</CODE> - The DN of the directory entry<DD><CODE>attribs</CODE> - The attributes of the directory entry<DD><CODE>errors</CODE> - An optional list of errors used in reporting problems creating the OrgNode from the given directory attributes.
+                                        The list of errors is used when validating the directory; a non null list should be populated with errors.
+<DT><B>Returns:</B><DD>The OrgNode derived from the directory attributes</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getContactId(javax.naming.directory.Attributes)"><!-- --></A><H3>
+getContactId</H3>
+<PRE>
+java.lang.String <B>getContactId</B>(javax.naming.directory.Attributes&nbsp;attribs)</PRE>
+<DL>
+<DD>Returns the contact ID of the entry given the directory attributes.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>attribs</CODE> - The directory attributes
+<DT><B>Returns:</B><DD>The contact ID of the given entry</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParentDistinguishedName(javax.naming.directory.Attributes)"><!-- --></A><H3>
+getParentDistinguishedName</H3>
+<PRE>
+java.lang.String <B>getParentDistinguishedName</B>(javax.naming.directory.Attributes&nbsp;attribs)</PRE>
+<DL>
+<DD>Returns the distinguished name (DN) of the entry's parent from  the entry's attributes
+ This is called by the AttributeBasedOrgTreeProvider
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>attribs</CODE> - The attributes of the entry
+<DT><B>Returns:</B><DD>The distinguished name of the given entry's parent</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isParent(javax.naming.directory.Attributes)"><!-- --></A><H3>
+isParent</H3>
+<PRE>
+boolean <B>isParent</B>(javax.naming.directory.Attributes&nbsp;attribs)</PRE>
+<DL>
+<DD>Whether or not the given attributes indicate that a directory entry is a parent to other entries
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>attribs</CODE> - the attributes to process
+<DT><B>Returns:</B><DD>true if the entry is parent, false if not a parent.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDisplayName(int, javax.naming.directory.Attributes, java.lang.String)"><!-- --></A><H3>
+getDisplayName</H3>
+<PRE>
+java.lang.String <B>getDisplayName</B>(int&nbsp;orgNodeType,
+                                javax.naming.directory.Attributes&nbsp;attribs,
+                                java.lang.String&nbsp;dn)</PRE>
+<DL>
+<DD>Returns the display name to use for an OrgNode
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>orgNodeType</CODE> - The type of OrgNode<DD><CODE>attribs</CODE> - The OrgNode's attributes<DD><CODE>dn</CODE> - The distinguished name of the OrgNode
+<DT><B>Returns:</B><DD>The display name to use for the OrgNode</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html" title="interface in com.ibm.collaboration.realtime.orgtree"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="OrgNodeProvider.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

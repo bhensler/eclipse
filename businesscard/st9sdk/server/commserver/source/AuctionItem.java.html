@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>AuctionItem (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">AuctionItem</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A>
+<A NAME="13"><A>
+<A NAME="14"><A><FONT ID="FormalComment">/**
+<A NAME="15"><A> * An Auction Item to be sold.&lt;p&gt;
+<A NAME="16"><A> * It consists of a title, an URL pointing to the image, and the price.
+<A NAME="17"><A> *
+<A NAME="18"><A> * @author: Volker Juergensen
+<A NAME="19"><A> */</FONT>
+<A NAME="20"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> AuctionItem
+<A NAME="21"><A>{
+<A NAME="22"><A>
+<A NAME="23"><A>    <FONT ID="FormalComment">/**
+<A NAME="24"><A>     * Auction Item title
+<A NAME="25"><A>     */</FONT>
+<A NAME="26"><A>    <FONT ID="Private">private</FONT> String m_sTitle = <FONT ID="StringLiteral">""</FONT>;
+<A NAME="27"><A>
+<A NAME="28"><A>    <FONT ID="FormalComment">/**
+<A NAME="29"><A>     * Auction Item picture URL
+<A NAME="30"><A>     */</FONT>
+<A NAME="31"><A>    <FONT ID="Private">private</FONT> String m_sPictureUrl = <FONT ID="StringLiteral">""</FONT>;
+<A NAME="32"><A>
+<A NAME="33"><A>    <FONT ID="FormalComment">/**
+<A NAME="34"><A>     * Auction Item minimal price
+<A NAME="35"><A>     */</FONT>
+<A NAME="36"><A>    <FONT ID="Private">private</FONT> <FONT ID="Int">int</FONT> m_iPrice = <FONT ID="IntegerLiteral">0</FONT>;
+<A NAME="37"><A>
+<A NAME="38"><A>    <FONT ID="FormalComment">/**
+<A NAME="39"><A>     * AuctionItem constructor with all fields.
+<A NAME="40"><A>     *
+<A NAME="41"><A>     * @param title String Item title
+<A NAME="42"><A>     * @param pictureURL String Item picture URL
+<A NAME="43"><A>     * @param price int Minimum price
+<A NAME="44"><A>     */</FONT>
+<A NAME="45"><A>    <FONT ID="Public">public</FONT> AuctionItem(String title, String pictureURL, <FONT ID="Int">int</FONT> price)
+<A NAME="46"><A>    {
+<A NAME="47"><A>        <FONT ID="Super">super</FONT>();
+<A NAME="48"><A>        setTitle(title);
+<A NAME="49"><A>        setPictureUrl(pictureURL);
+<A NAME="50"><A>        setPrice(price);
+<A NAME="51"><A>    }
+<A NAME="52"><A>    
+<A NAME="53"><A>    <FONT ID="FormalComment">/**
+<A NAME="54"><A>     * get picture URL
+<A NAME="55"><A>     *
+<A NAME="56"><A>     * @return java.lang.String
+<A NAME="57"><A>     */</FONT>
+<A NAME="58"><A>    <FONT ID="Public">public</FONT> String getPictureUrl()
+<A NAME="59"><A>    {
+<A NAME="60"><A>        <FONT ID="Return">return</FONT> m_sPictureUrl;
+<A NAME="61"><A>    }
+<A NAME="62"><A>    <FONT ID="FormalComment">/**
+<A NAME="63"><A>     * Get minimum Price
+<A NAME="64"><A>     *
+<A NAME="65"><A>     * @return int
+<A NAME="66"><A>     */</FONT>
+<A NAME="67"><A>    <FONT ID="Public">public</FONT> <FONT ID="Int">int</FONT> getPrice()
+<A NAME="68"><A>    {
+<A NAME="69"><A>        <FONT ID="Return">return</FONT> m_iPrice;
+<A NAME="70"><A>    }
+<A NAME="71"><A>    <FONT ID="FormalComment">/**
+<A NAME="72"><A>     * Get title
+<A NAME="73"><A>     *
+<A NAME="74"><A>     * @return java.lang.String
+<A NAME="75"><A>     */</FONT>
+<A NAME="76"><A>    <FONT ID="Public">public</FONT> String getTitle()
+<A NAME="77"><A>    {
+<A NAME="78"><A>        <FONT ID="Return">return</FONT> m_sTitle;
+<A NAME="79"><A>    }
+<A NAME="80"><A>    <FONT ID="FormalComment">/**
+<A NAME="81"><A>     * Set picture URL
+<A NAME="82"><A>     *
+<A NAME="83"><A>     * @param newPictureUrl String
+<A NAME="84"><A>     */</FONT>
+<A NAME="85"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setPictureUrl(String newPictureUrl)
+<A NAME="86"><A>    {
+<A NAME="87"><A>        m_sPictureUrl = newPictureUrl;
+<A NAME="88"><A>    }
+<A NAME="89"><A>    <FONT ID="FormalComment">/**
+<A NAME="90"><A>     * Set minimum price
+<A NAME="91"><A>     *
+<A NAME="92"><A>     * @param newPrice int
+<A NAME="93"><A>     */</FONT>
+<A NAME="94"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setPrice(<FONT ID="Int">int</FONT> newPrice)
+<A NAME="95"><A>    {
+<A NAME="96"><A>        m_iPrice = newPrice;
+<A NAME="97"><A>    }
+<A NAME="98"><A>    <FONT ID="FormalComment">/**
+<A NAME="99"><A>     * Set title
+<A NAME="100"><A>     *
+<A NAME="101"><A>     * @param newTitle String
+<A NAME="102"><A>     */</FONT>
+<A NAME="103"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setTitle(String newTitle)
+<A NAME="104"><A>    {
+<A NAME="105"><A>        m_sTitle = newTitle;
+<A NAME="106"><A>    }
+<A NAME="107"><A>}
+<A NAME="108"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">AuctionItem</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

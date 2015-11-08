@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>HackersCatcher (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">HackersCatcher</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.*;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.*;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.communityevents.*;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.connection.*;
+<A NAME="17"><A>
+<A NAME="18"><A><FONT ID="Import">import</FONT> java.net.InetAddress;
+<A NAME="19"><A>
+<A NAME="20"><A><FONT ID="FormalComment">/**
+<A NAME="21"><A> * A sample of the community events service. Implements a hackers tracking mechanism.
+<A NAME="22"><A> */</FONT>
+<A NAME="23"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> HackersCatcher <FONT ID="Implements">implements</FONT> LoginListener,
+<A NAME="24"><A>            UserLoginFailedListener,
+<A NAME="25"><A>            CommunityEventsServiceListener
+<A NAME="26"><A>{
+<A NAME="27"><A>    <FONT ID="FormalComment">/**
+<A NAME="28"><A>     * The session object.
+<A NAME="29"><A>     */</FONT>
+<A NAME="30"><A>    <FONT ID="Private">private</FONT> STSession m_session;
+<A NAME="31"><A>
+<A NAME="32"><A>     <FONT ID="FormalComment">/**
+<A NAME="33"><A>     * The server application service.
+<A NAME="34"><A>     */</FONT>
+<A NAME="35"><A>    <FONT ID="Private">private</FONT> ServerAppService m_saService;
+<A NAME="36"><A>
+<A NAME="37"><A>    <FONT ID="FormalComment">/**
+<A NAME="38"><A>     * The Community events component
+<A NAME="39"><A>     */</FONT>
+<A NAME="40"><A>    CommunityEventsService m_ceService;
+<A NAME="41"><A>    
+<A NAME="42"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> run(String serverName)
+<A NAME="43"><A>    {
+<A NAME="44"><A>        <FONT ID="SingleLineComment">// init the sametime session and load the services
+<A NAME="45"><A></FONT>        <FONT ID="SingleLineComment">// First, we create a new session, that belongs uniquely to us.
+<A NAME="46"><A></FONT>        <FONT ID="Try">try</FONT>
+<A NAME="47"><A>        {
+<A NAME="48"><A>            m_session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">""</FONT> + <FONT ID="This">this</FONT> );
+<A NAME="49"><A>            String [] compNames  = { ServerAppService.COMP_NAME, 
+<A NAME="50"><A>                                CommunityEventsService.COMP_NAME };
+<A NAME="51"><A>            
+<A NAME="52"><A>            m_session.loadComponents( compNames );
+<A NAME="53"><A>            
+<A NAME="54"><A>            m_saService = (ServerAppService)
+<A NAME="55"><A>                m_session.getCompApi(ServerAppService.COMP_NAME);
+<A NAME="56"><A>            m_ceService = (CommunityEventsService)
+<A NAME="57"><A>                m_session.getCompApi(CommunityEventsService.COMP_NAME);
+<A NAME="58"><A>        }
+<A NAME="59"><A>        <FONT ID="Catch">catch</FONT> (DuplicateObjectException e)
+<A NAME="60"><A>        {
+<A NAME="61"><A>            System.out.println(<FONT ID="StringLiteral">"STSession or Components created twice."</FONT>);
+<A NAME="62"><A>        }
+<A NAME="63"><A>        
+<A NAME="64"><A>        <FONT ID="SingleLineComment">// start the session
+<A NAME="65"><A></FONT>        m_session.start();  
+<A NAME="66"><A>         
+<A NAME="67"><A>        <FONT ID="SingleLineComment">// Login to sametime
+<A NAME="68"><A></FONT>        m_saService.addLoginListener( <FONT ID="This">this</FONT>);        
+<A NAME="69"><A>        <FONT ID="Short">short</FONT> loginType = STUserInstance.LT_SERVER_APP;
+<A NAME="70"><A>        
+<A NAME="71"><A>        <FONT ID="SingleLineComment">// The default connection is configured to connect through the Sametime 
+<A NAME="72"><A></FONT>        <FONT ID="SingleLineComment">// mux. We want to connect directly to the server, so we have to set 
+<A NAME="73"><A></FONT>        <FONT ID="SingleLineComment">// the port explicitly.        
+<A NAME="74"><A></FONT>        Connection[] connections = {<FONT ID="New">new</FONT> SocketConnection(<FONT ID="IntegerLiteral">1516</FONT>, <FONT ID="IntegerLiteral">17000</FONT>),};
+<A NAME="75"><A>        m_saService.setConnectivity(connections);
+<A NAME="76"><A>        m_saService.loginAsServerApp( serverName, loginType, <FONT ID="StringLiteral">"Hacker Catcher"</FONT>, <FONT ID="Null">null</FONT>);   
+<A NAME="77"><A>    }
+<A NAME="78"><A>    
+<A NAME="79"><A>    <FONT ID="FormalComment">/**
+<A NAME="80"><A>     * Logged in to Sametime.
+<A NAME="81"><A>     */</FONT>
+<A NAME="82"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event)  
+<A NAME="83"><A>    {
+<A NAME="84"><A>        m_ceService.addCommunityEventsServiceListener(<FONT ID="This">this</FONT>);
+<A NAME="85"><A>    }
+<A NAME="86"><A>    
+<A NAME="87"><A>    <FONT ID="FormalComment">/**
+<A NAME="88"><A>     * Logged out from Sametime.
+<A NAME="89"><A>     */</FONT>
+<A NAME="90"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event) 
+<A NAME="91"><A>    {       
+<A NAME="92"><A>        m_ceService.removeCommunityEventsServiceListener(<FONT ID="This">this</FONT>); 
+<A NAME="93"><A>    }
+<A NAME="94"><A>    
+<A NAME="95"><A>    <FONT ID="FormalComment">/**
+<A NAME="96"><A>     * The community events service is available. 
+<A NAME="97"><A>     */</FONT>
+<A NAME="98"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> serviceAvailable(CommunityEventsServiceEvent event)
+<A NAME="99"><A>    {
+<A NAME="100"><A>        System.out.println(<FONT ID="StringLiteral">"************** Start recording *************"</FONT>);
+<A NAME="101"><A>                    
+<A NAME="102"><A>        m_ceService.addUserLoginFailedListener(<FONT ID="This">this</FONT>);
+<A NAME="103"><A>    }
+<A NAME="104"><A>    
+<A NAME="105"><A>    <FONT ID="FormalComment">/**
+<A NAME="106"><A>     * The community events service is unavailable.
+<A NAME="107"><A>     */</FONT>
+<A NAME="108"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> serviceUnavailable(CommunityEventsServiceEvent event)
+<A NAME="109"><A>    {
+<A NAME="110"><A>        System.out.println(<FONT ID="StringLiteral">"************** finish recording *************"</FONT>);
+<A NAME="111"><A>        
+<A NAME="112"><A>        m_ceService.removeLoginFailedListener(<FONT ID="This">this</FONT>);
+<A NAME="113"><A>    }
+<A NAME="114"><A>
+<A NAME="115"><A>    <FONT ID="FormalComment">/**
+<A NAME="116"><A>     * A user has failed to login to Sametime.
+<A NAME="117"><A>     */</FONT>
+<A NAME="118"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> userLoginFailed(UserLoginFailedEvent event)
+<A NAME="119"><A>    {
+<A NAME="120"><A>        String s = <FONT ID="New">new</FONT> String(<FONT ID="StringLiteral">"login failed:"</FONT>);
+<A NAME="121"><A>        s += <FONT ID="StringLiteral">" Name="</FONT> + event.getLoginName();
+<A NAME="122"><A>        s += <FONT ID="StringLiteral">", ip="</FONT> + event.getLoginIp();
+<A NAME="123"><A>        s += <FONT ID="StringLiteral">", type="</FONT> + Integer.toHexString(event.getLoginType());
+<A NAME="124"><A>        s += <FONT ID="StringLiteral">", reason="</FONT> + Integer.toHexString(event.getReason());
+<A NAME="125"><A>        
+<A NAME="126"><A>        System.out.println(s);
+<A NAME="127"><A>    }
+<A NAME="128"><A>    
+<A NAME="129"><A>    <FONT ID="FormalComment">/**
+<A NAME="130"><A>     * Entry point of the application
+<A NAME="131"><A>     */</FONT>
+<A NAME="132"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args)
+<A NAME="133"><A>    {
+<A NAME="134"><A>        <FONT ID="If">if</FONT> ( args.length != <FONT ID="IntegerLiteral">1</FONT> )
+<A NAME="135"><A>        {
+<A NAME="136"><A>            System.out.println(<FONT ID="StringLiteral">"Usage: HackersCatcher serverName"</FONT>);
+<A NAME="137"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="138"><A>        }
+<A NAME="139"><A>
+<A NAME="140"><A>        <FONT ID="New">new</FONT> <A HREF="HackersCatcher.java.html">HackersCatcher</A>().run(args[<FONT ID="IntegerLiteral">0</FONT>]);
+<A NAME="141"><A>    }
+<A NAME="142"><A>}
+<A NAME="143"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">HackersCatcher</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

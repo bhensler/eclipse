@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>AuctionFrame (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">AuctionFrame</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A>
+<A NAME="13"><A>
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.constants.*;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.*;
+<A NAME="17"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.*;
+<A NAME="18"><A><FONT ID="Import">import</FONT> com.lotus.sametime.placessa.*;
+<A NAME="19"><A>
+<A NAME="20"><A><FONT ID="Import">import</FONT> java.applet.*;
+<A NAME="21"><A><FONT ID="Import">import</FONT> java.awt.*;
+<A NAME="22"><A><FONT ID="Import">import</FONT> java.awt.event.*;
+<A NAME="23"><A><FONT ID="Import">import</FONT> java.util.Hashtable;
+<A NAME="24"><A>
+<A NAME="25"><A><FONT ID="FormalComment">/**
+<A NAME="26"><A> * The frame to manage the auction.
+<A NAME="27"><A> */</FONT>
+<A NAME="28"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> AuctionFrame <FONT ID="Extends">extends</FONT> Frame <FONT ID="Implements">implements</FONT> ActionListener, ItemListener
+<A NAME="29"><A>{
+<A NAME="30"><A>    <FONT ID="SingleLineComment">//
+<A NAME="31"><A></FONT>    <FONT ID="SingleLineComment">// Members.
+<A NAME="32"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="33"><A></FONT>    
+<A NAME="34"><A>    <FONT ID="FormalComment">/**
+<A NAME="35"><A>     * The auction house server application.
+<A NAME="36"><A>     */</FONT>
+<A NAME="37"><A>    <FONT ID="Private">private</FONT> <A HREF="AuctionHouse.java.html">AuctionHouse</A> m_auctionHouse;
+<A NAME="38"><A>    
+<A NAME="39"><A>    <FONT ID="FormalComment">/**
+<A NAME="40"><A>     * The current room.
+<A NAME="41"><A>     */</FONT>
+<A NAME="42"><A>    <FONT ID="Private">private</FONT> <A HREF="AuctionRoom.java.html">AuctionRoom</A> m_currentRoom;
+<A NAME="43"><A>    
+<A NAME="44"><A>    <FONT ID="FormalComment">/**
+<A NAME="45"><A>     * The listener to the currently watched room's auditorium.
+<A NAME="46"><A>     */</FONT>
+<A NAME="47"><A>    <FONT ID="Private">private</FONT> SectionHandler m_sectionHandler;
+<A NAME="48"><A>    
+<A NAME="49"><A>    <FONT ID="FormalComment">/**
+<A NAME="50"><A>     * The table of available rooms.
+<A NAME="51"><A>     */</FONT>
+<A NAME="52"><A>    <FONT ID="Private">private</FONT> Hashtable m_rooms = <FONT ID="New">new</FONT> Hashtable();
+<A NAME="53"><A>    
+<A NAME="54"><A>    <FONT ID="FormalComment">/**
+<A NAME="55"><A>     * The list of anonymous users.
+<A NAME="56"><A>     */</FONT>
+<A NAME="57"><A>    <FONT ID="Private">private</FONT> List m_anonymousAwarenessList;
+<A NAME="58"><A>    
+<A NAME="59"><A>    <FONT ID="FormalComment">/**
+<A NAME="60"><A>     * The list of the people in the auditorium.
+<A NAME="61"><A>     */</FONT>
+<A NAME="62"><A>    <FONT ID="Private">private</FONT> List m_auditoriumAwarenessList;
+<A NAME="63"><A>
+<A NAME="64"><A>    <FONT ID="FormalComment">/**
+<A NAME="65"><A>     * The send button.
+<A NAME="66"><A>     */</FONT>
+<A NAME="67"><A>    <FONT ID="Private">private</FONT> Button m_btnSend;
+<A NAME="68"><A>    
+<A NAME="69"><A>    <FONT ID="FormalComment">/**
+<A NAME="70"><A>     * The send text field.
+<A NAME="71"><A>     */</FONT>
+<A NAME="72"><A>    <FONT ID="Private">private</FONT> TextField m_tfSend;
+<A NAME="73"><A>    
+<A NAME="74"><A>    <FONT ID="FormalComment">/**
+<A NAME="75"><A>     * The chat transcript.
+<A NAME="76"><A>     */</FONT>
+<A NAME="77"><A>    <FONT ID="Protected">protected</FONT> TextArea m_taTranscript;
+<A NAME="78"><A>    
+<A NAME="79"><A>    <FONT ID="FormalComment">/**
+<A NAME="80"><A>     * The choice of available rooms.
+<A NAME="81"><A>     */</FONT>
+<A NAME="82"><A>    <FONT ID="Private">private</FONT> Choice m_chRooms;
+<A NAME="83"><A>    
+<A NAME="84"><A>    <FONT ID="FormalComment">/**
+<A NAME="85"><A>     * The bid manager panel.
+<A NAME="86"><A>     */</FONT>
+<A NAME="87"><A>    <FONT ID="Private">private</FONT> <A HREF="AuctionManagerPanel.java.html">AuctionManagerPanel</A> m_auctionManager;
+<A NAME="88"><A>
+<A NAME="89"><A>    <FONT ID="FormalComment">/**
+<A NAME="90"><A>     * Construct a new auction frame.
+<A NAME="91"><A>     */</FONT>
+<A NAME="92"><A>    <FONT ID="Public">public</FONT> AuctionFrame(<A HREF="AuctionHouse.java.html">AuctionHouse</A> auctionHouse)
+<A NAME="93"><A>    {
+<A NAME="94"><A>        <FONT ID="Super">super</FONT>(<FONT ID="StringLiteral">"Auction House"</FONT>);
+<A NAME="95"><A>        m_auctionHouse = auctionHouse;
+<A NAME="96"><A>
+<A NAME="97"><A>        m_sectionHandler = <FONT ID="New">new</FONT> SectionHandler();
+<A NAME="98"><A>        initUI();
+<A NAME="99"><A>    }
+<A NAME="100"><A>    
+<A NAME="101"><A>    <FONT ID="FormalComment">/**
+<A NAME="102"><A>     * Add a new room to the list of available auction rooms.
+<A NAME="103"><A>     */</FONT>
+<A NAME="104"><A>    <FONT ID="Void">void</FONT> addRoom(<A HREF="AuctionRoom.java.html">AuctionRoom</A> room)
+<A NAME="105"><A>    {
+<A NAME="106"><A>        m_rooms.put(room.getRoomName(), room);
+<A NAME="107"><A>        m_chRooms.add(room.getRoomName());
+<A NAME="108"><A>        
+<A NAME="109"><A>        <FONT ID="SingleLineComment">// First room.
+<A NAME="110"><A></FONT>        <FONT ID="If">if</FONT> (m_currentRoom == <FONT ID="Null">null</FONT>)
+<A NAME="111"><A>        {
+<A NAME="112"><A>            m_currentRoom = room;
+<A NAME="113"><A>            m_currentRoom.getAuditorium().addSectionListener(m_sectionHandler);
+<A NAME="114"><A>            m_currentRoom.getAnonymousSection().addSectionListener(m_sectionHandler);
+<A NAME="115"><A>            enableGuiItems(<FONT ID="True">true</FONT>);
+<A NAME="116"><A>            
+<A NAME="117"><A>            m_currentRoom.setWatched(<FONT ID="True">true</FONT>);
+<A NAME="118"><A>        }
+<A NAME="119"><A>    }
+<A NAME="120"><A>    
+<A NAME="121"><A>    <FONT ID="FormalComment">/**
+<A NAME="122"><A>     * Add a new room to the list of available auction rooms.
+<A NAME="123"><A>     */</FONT>
+<A NAME="124"><A>    <FONT ID="Void">void</FONT> removeRoom(String roomName)
+<A NAME="125"><A>    {
+<A NAME="126"><A>        m_rooms.remove(roomName);
+<A NAME="127"><A>        m_chRooms.remove(roomName);
+<A NAME="128"><A>    }
+<A NAME="129"><A>    
+<A NAME="130"><A>    <FONT ID="SingleLineComment">//
+<A NAME="131"><A></FONT>    <FONT ID="SingleLineComment">// Helper functions.
+<A NAME="132"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="133"><A></FONT>    
+<A NAME="134"><A>    <FONT ID="FormalComment">/**
+<A NAME="135"><A>     * Set up the ui components.
+<A NAME="136"><A>     */</FONT>
+<A NAME="137"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> initUI()
+<A NAME="138"><A>    {
+<A NAME="139"><A>        setLayout(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="140"><A>        setBackground(Color.orange);
+<A NAME="141"><A>
+<A NAME="142"><A>        Font bold = <FONT ID="New">new</FONT> Font(<FONT ID="StringLiteral">"Dialog"</FONT>, Font.BOLD, <FONT ID="IntegerLiteral">12</FONT>);
+<A NAME="143"><A>
+<A NAME="144"><A>        <FONT ID="SingleLineComment">// Send messages area
+<A NAME="145"><A></FONT>        Panel sendPanel = <FONT ID="New">new</FONT> Panel(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="146"><A>        sendPanel.add(<FONT ID="StringLiteral">"East"</FONT>, m_btnSend = <FONT ID="New">new</FONT> Button(<FONT ID="StringLiteral">"Send"</FONT>));
+<A NAME="147"><A>        sendPanel.add(<FONT ID="StringLiteral">"Center"</FONT>, m_tfSend = <FONT ID="New">new</FONT> TextField());
+<A NAME="148"><A>
+<A NAME="149"><A>        <FONT ID="SingleLineComment">// Transcript area
+<A NAME="150"><A></FONT>        Panel transPanel = <FONT ID="New">new</FONT> Panel(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="151"><A>        transPanel.add(<FONT ID="StringLiteral">"South"</FONT>, sendPanel);
+<A NAME="152"><A>        transPanel.add(<FONT ID="StringLiteral">"Center"</FONT>, m_taTranscript = <FONT ID="New">new</FONT> TextArea(<FONT ID="IntegerLiteral">5</FONT>, <FONT ID="IntegerLiteral">40</FONT>));
+<A NAME="153"><A>
+<A NAME="154"><A>        m_taTranscript.setFont(<FONT ID="New">new</FONT> Font(<FONT ID="StringLiteral">"Courier New"</FONT>, Font.PLAIN, <FONT ID="IntegerLiteral">12</FONT>));
+<A NAME="155"><A>        m_taTranscript.setForeground(Color.blue);
+<A NAME="156"><A>        m_taTranscript.setBackground(Color.white);
+<A NAME="157"><A>        m_taTranscript.setEnabled(<FONT ID="True">true</FONT>);
+<A NAME="158"><A>        m_taTranscript.setEditable(<FONT ID="False">false</FONT>);
+<A NAME="159"><A>
+<A NAME="160"><A>        <FONT ID="SingleLineComment">// AuctionManagerPanel
+<A NAME="161"><A></FONT>        m_auctionManager = <FONT ID="New">new</FONT> <A HREF="AuctionManagerPanel.java.html">AuctionManagerPanel</A>(<FONT ID="This">this</FONT>);
+<A NAME="162"><A>        Panel auctionPanel = <FONT ID="New">new</FONT> Panel(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="163"><A>        auctionPanel.add(<FONT ID="StringLiteral">"North"</FONT>, m_chRooms = <FONT ID="New">new</FONT> Choice());
+<A NAME="164"><A>        auctionPanel.add(<FONT ID="StringLiteral">"Center"</FONT>, m_auctionManager);
+<A NAME="165"><A>        m_chRooms.addItemListener(<FONT ID="This">this</FONT>);
+<A NAME="166"><A>            
+<A NAME="167"><A>        Label header = <FONT ID="New">new</FONT> Label();
+<A NAME="168"><A>        header.setFont(bold);
+<A NAME="169"><A>        header.setText(<FONT ID="StringLiteral">"Transcript"</FONT>);
+<A NAME="170"><A>        transPanel.add(<FONT ID="StringLiteral">"North"</FONT>, header);
+<A NAME="171"><A>
+<A NAME="172"><A>        <FONT ID="SingleLineComment">// Place Awareness List
+<A NAME="173"><A></FONT>        Panel listPanel = <FONT ID="New">new</FONT> Panel(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="174"><A>
+<A NAME="175"><A>        m_anonymousAwarenessList = <FONT ID="New">new</FONT> List();
+<A NAME="176"><A>        m_auditoriumAwarenessList = <FONT ID="New">new</FONT> List();
+<A NAME="177"><A>
+<A NAME="178"><A>        Panel anonp = <FONT ID="New">new</FONT> Panel(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="179"><A>        anonp.add(<FONT ID="StringLiteral">"North"</FONT>, <FONT ID="New">new</FONT> Label(<FONT ID="StringLiteral">"Anonymous"</FONT>));
+<A NAME="180"><A>        anonp.add(<FONT ID="StringLiteral">"Center"</FONT>, m_anonymousAwarenessList);
+<A NAME="181"><A>        anonp.setFont(bold);
+<A NAME="182"><A>
+<A NAME="183"><A>        Panel audp = <FONT ID="New">new</FONT> Panel(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="184"><A>        audp.add(<FONT ID="StringLiteral">"North"</FONT>, <FONT ID="New">new</FONT> Label(<FONT ID="StringLiteral">"Auditorium"</FONT>));
+<A NAME="185"><A>        audp.add(<FONT ID="StringLiteral">"Center"</FONT>, m_auditoriumAwarenessList);
+<A NAME="186"><A>        audp.setFont(bold);
+<A NAME="187"><A>        
+<A NAME="188"><A>        listPanel.add(<FONT ID="StringLiteral">"West"</FONT>, anonp);
+<A NAME="189"><A>        listPanel.add(<FONT ID="StringLiteral">"East"</FONT>, audp);
+<A NAME="190"><A>
+<A NAME="191"><A>        <FONT ID="SingleLineComment">// Listeners
+<A NAME="192"><A></FONT>        m_btnSend.addActionListener(<FONT ID="This">this</FONT>);
+<A NAME="193"><A>        m_tfSend.addActionListener(<FONT ID="This">this</FONT>);
+<A NAME="194"><A>
+<A NAME="195"><A>        <FONT ID="SingleLineComment">// My own layout
+<A NAME="196"><A></FONT>        setLayout(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="197"><A>        add(<FONT ID="StringLiteral">"East"</FONT>, listPanel);
+<A NAME="198"><A>        add(<FONT ID="StringLiteral">"South"</FONT>, transPanel);
+<A NAME="199"><A>        add(<FONT ID="StringLiteral">"West"</FONT>, auctionPanel);
+<A NAME="200"><A>
+<A NAME="201"><A>        <FONT ID="SingleLineComment">// Enable the gui items only after we enter to the place.
+<A NAME="202"><A></FONT>        enableGuiItems(<FONT ID="False">false</FONT>);
+<A NAME="203"><A>
+<A NAME="204"><A>        addWindowListener(<FONT ID="New">new</FONT> WindowAdapter(){
+<A NAME="205"><A>            <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> windowClosing(WindowEvent event)
+<A NAME="206"><A>            {
+<A NAME="207"><A>                m_auctionHouse.exit();
+<A NAME="208"><A>                dispose();
+<A NAME="209"><A>            }
+<A NAME="210"><A>        });
+<A NAME="211"><A>    }
+<A NAME="212"><A>    
+<A NAME="213"><A>    <FONT ID="FormalComment">/**
+<A NAME="214"><A>     * Set the frame state.
+<A NAME="215"><A>     */</FONT>
+<A NAME="216"><A>    <FONT ID="Void">void</FONT> enableGuiItems(<FONT ID="Boolean">boolean</FONT> enable)
+<A NAME="217"><A>    {
+<A NAME="218"><A>        m_btnSend.setEnabled(enable);
+<A NAME="219"><A>        m_tfSend.setEnabled(enable);
+<A NAME="220"><A>        m_anonymousAwarenessList.setEnabled(enable);
+<A NAME="221"><A>        m_auditoriumAwarenessList.setEnabled(enable);
+<A NAME="222"><A>        m_tfSend.requestFocus();
+<A NAME="223"><A>        
+<A NAME="224"><A>        m_auctionManager.enableGuiItems(enable);
+<A NAME="225"><A>    }
+<A NAME="226"><A>    
+<A NAME="227"><A>    <FONT ID="FormalComment">/**
+<A NAME="228"><A>     * A text message was received.
+<A NAME="229"><A>     */</FONT>
+<A NAME="230"><A>    <FONT ID="Void">void</FONT> write(String text)
+<A NAME="231"><A>    {
+<A NAME="232"><A>        m_taTranscript.append(text + <FONT ID="StringLiteral">"\n"</FONT>);
+<A NAME="233"><A>        m_tfSend.requestFocus();
+<A NAME="234"><A>    }
+<A NAME="235"><A>    
+<A NAME="236"><A>    <FONT ID="FormalComment">/**
+<A NAME="237"><A>     * Current bid was changed. update the UI.
+<A NAME="238"><A>     */</FONT>
+<A NAME="239"><A>    <A HREF="AuctionStatusPanel.java.html">AuctionStatusPanel</A> getStatusPanel()
+<A NAME="240"><A>    {
+<A NAME="241"><A>        <FONT ID="Return">return</FONT> m_auctionManager.m_auctionStatus;
+<A NAME="242"><A>    }
+<A NAME="243"><A>    <FONT ID="FormalComment">/**
+<A NAME="244"><A>     * Current bid was changed. update the UI.
+<A NAME="245"><A>     */</FONT>
+<A NAME="246"><A>    <A HREF="AuctionManagerPanel.java.html">AuctionManagerPanel</A> getAuctionPanel()
+<A NAME="247"><A>    {
+<A NAME="248"><A>        <FONT ID="Return">return</FONT> m_auctionManager;
+<A NAME="249"><A>    }
+<A NAME="250"><A>    <FONT ID="FormalComment">/**
+<A NAME="251"><A>     * Set the status of the current room.
+<A NAME="252"><A>     */</FONT>
+<A NAME="253"><A>    <FONT ID="Void">void</FONT> setAuctionStatus(<FONT ID="Int">int</FONT> status)
+<A NAME="254"><A>    {
+<A NAME="255"><A>        m_currentRoom.setAuctionStatus(status);
+<A NAME="256"><A>    }
+<A NAME="257"><A>    
+<A NAME="258"><A>    <FONT ID="Void">void</FONT> setCurrentBid(<FONT ID="Int">int</FONT> bid)
+<A NAME="259"><A>    {
+<A NAME="260"><A>        m_currentRoom.setCurrentBid(bid);
+<A NAME="261"><A>    }
+<A NAME="262"><A>    
+<A NAME="263"><A>    <FONT ID="Public">public</FONT> <A HREF="AuctionRoom.java.html">AuctionRoom</A> getCurrentRoom()
+<A NAME="264"><A>    {
+<A NAME="265"><A>        <FONT ID="Return">return</FONT> m_currentRoom;
+<A NAME="266"><A>    }
+<A NAME="267"><A>    
+<A NAME="268"><A>    <FONT ID="Public">public</FONT> <A HREF="AuctionItem.java.html">AuctionItem</A> getCurrentItem()
+<A NAME="269"><A>    {
+<A NAME="270"><A>        <FONT ID="Return">return</FONT> m_currentRoom.getCurrentItem();
+<A NAME="271"><A>    }
+<A NAME="272"><A>    
+<A NAME="273"><A>    <FONT ID="SingleLineComment">//
+<A NAME="274"><A></FONT>    <FONT ID="SingleLineComment">// Listeners.
+<A NAME="275"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="276"><A></FONT>    
+<A NAME="277"><A>    <FONT ID="FormalComment">/**
+<A NAME="278"><A>     * Button clicks.
+<A NAME="279"><A>     */</FONT>
+<A NAME="280"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> actionPerformed(ActionEvent event)
+<A NAME="281"><A>    {
+<A NAME="282"><A>        <FONT ID="If">if</FONT> ((event.getSource() == m_btnSend) || 
+<A NAME="283"><A>            (event.getSource() == m_tfSend))
+<A NAME="284"><A>        {
+<A NAME="285"><A>            <FONT ID="SingleLineComment">// Send the text to the place.
+<A NAME="286"><A></FONT>            m_currentRoom.getPlace().sendText(m_tfSend.getText());
+<A NAME="287"><A>            m_tfSend.setText(<FONT ID="StringLiteral">""</FONT>);
+<A NAME="288"><A>        }
+<A NAME="289"><A>    }
+<A NAME="290"><A>    
+<A NAME="291"><A>    <FONT ID="FormalComment">/**
+<A NAME="292"><A>     * Choice value has changed.
+<A NAME="293"><A>     */</FONT>
+<A NAME="294"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> itemStateChanged(ItemEvent event)
+<A NAME="295"><A>    {
+<A NAME="296"><A>        String roomName = m_chRooms.getSelectedItem();
+<A NAME="297"><A>        <FONT ID="If">if</FONT> (roomName.equals(m_currentRoom.getRoomName()))
+<A NAME="298"><A>        {
+<A NAME="299"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="300"><A>        }
+<A NAME="301"><A>            
+<A NAME="302"><A>        <FONT ID="SingleLineComment">// Switch to the new room.
+<A NAME="303"><A></FONT>        switchRoom(roomName);
+<A NAME="304"><A>    }
+<A NAME="305"><A>    
+<A NAME="306"><A>    <FONT ID="Void">void</FONT> switchRoom(String roomName)
+<A NAME="307"><A>    {
+<A NAME="308"><A>        <FONT ID="If">if</FONT> (m_currentRoom != <FONT ID="Null">null</FONT>)
+<A NAME="309"><A>        {
+<A NAME="310"><A>            m_currentRoom.getAuditorium().removeSectionListener(m_sectionHandler);
+<A NAME="311"><A>            m_currentRoom.getAnonymousSection().removeSectionListener(m_sectionHandler);
+<A NAME="312"><A>            m_currentRoom.setWatched(<FONT ID="False">false</FONT>);
+<A NAME="313"><A>        }
+<A NAME="314"><A>        
+<A NAME="315"><A>        m_currentRoom = (<A HREF="AuctionRoom.java.html">AuctionRoom</A>)m_rooms.get(roomName);
+<A NAME="316"><A>        m_currentRoom.setWatched(<FONT ID="True">true</FONT>);
+<A NAME="317"><A>        
+<A NAME="318"><A>        m_auctionManager.statusChanged(m_currentRoom.getAuctionStatus());
+<A NAME="319"><A>        m_auctionManager.m_auctionStatus.itemChanged(m_currentRoom.getCurrentItem());
+<A NAME="320"><A>        m_auctionManager.m_auctionStatus.bidChanged(m_currentRoom.getCurrentBid());
+<A NAME="321"><A>        m_anonymousAwarenessList.removeAll();
+<A NAME="322"><A>        m_auditoriumAwarenessList.removeAll();
+<A NAME="323"><A>        
+<A NAME="324"><A>        m_currentRoom.getAuditorium().addSectionListener(m_sectionHandler);
+<A NAME="325"><A>        m_currentRoom.getAnonymousSection().addSectionListener(m_sectionHandler);
+<A NAME="326"><A>    }
+<A NAME="327"><A>    
+<A NAME="328"><A>    <FONT ID="FormalComment">/**
+<A NAME="329"><A>     * Section Listener.
+<A NAME="330"><A>     */</FONT>
+<A NAME="331"><A>    <FONT ID="Class">class</FONT> SectionHandler <FONT ID="Extends">extends</FONT> SectionAdapter    
+<A NAME="332"><A>    {        
+<A NAME="333"><A>        <FONT ID="FormalComment">/**
+<A NAME="334"><A>         * Users have entered the section.
+<A NAME="335"><A>         * 
+<A NAME="336"><A>         * @param event The event object.
+<A NAME="337"><A>         * @see SectionEvent#getEnteredUsers
+<A NAME="338"><A>         */</FONT>
+<A NAME="339"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> usersEntered(SectionEvent event)
+<A NAME="340"><A>        {
+<A NAME="341"><A>            <FONT ID="SingleLineComment">// Find the appropriate list.
+<A NAME="342"><A></FONT>            Section section = event.getSection();
+<A NAME="343"><A>            List list = m_anonymousAwarenessList;
+<A NAME="344"><A>            <FONT ID="If">if</FONT> (section.equals(m_currentRoom.getAuditorium()))
+<A NAME="345"><A>            {
+<A NAME="346"><A>                list = m_auditoriumAwarenessList;
+<A NAME="347"><A>            }
+<A NAME="348"><A>            
+<A NAME="349"><A>            UserInPlace[] users = event.getEnteredUsers();
+<A NAME="350"><A>            <FONT ID="For">for</FONT> (<FONT ID="Int">int</FONT> i = <FONT ID="IntegerLiteral">0</FONT>; i &lt; users.length; i++)
+<A NAME="351"><A>            {
+<A NAME="352"><A>                list.add(users[i].getDisplayName());
+<A NAME="353"><A>            }
+<A NAME="354"><A>        }
+<A NAME="355"><A>    
+<A NAME="356"><A>        <FONT ID="FormalComment">/**
+<A NAME="357"><A>         * A user has left the place.
+<A NAME="358"><A>         * 
+<A NAME="359"><A>         * @param event The event object.
+<A NAME="360"><A>         * @see SectionEvent#getDepartedUser
+<A NAME="361"><A>         */</FONT>
+<A NAME="362"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> userLeft(SectionEvent event)
+<A NAME="363"><A>        {
+<A NAME="364"><A>            Section section = event.getSection();
+<A NAME="365"><A>            List list = m_anonymousAwarenessList;
+<A NAME="366"><A>            <FONT ID="If">if</FONT> (section.equals(m_currentRoom.getAuditorium()))
+<A NAME="367"><A>            {
+<A NAME="368"><A>                list = m_auditoriumAwarenessList;
+<A NAME="369"><A>            }
+<A NAME="370"><A>            
+<A NAME="371"><A>            list.remove(event.getDepartedUser().getDisplayName());
+<A NAME="372"><A>        }
+<A NAME="373"><A>    }
+<A NAME="374"><A>}
+<A NAME="375"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">AuctionFrame</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

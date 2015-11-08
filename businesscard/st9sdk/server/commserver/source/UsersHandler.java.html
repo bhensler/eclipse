@@ -1,0 +1,313 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>UsersHandler (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">UsersHandler</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> java.net.InetAddress;
+<A NAME="13"><A><FONT ID="Import">import</FONT> java.net.UnknownHostException;
+<A NAME="14"><A>
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.*;
+<A NAME="17"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.*;
+<A NAME="18"><A><FONT ID="Import">import</FONT> com.lotus.sametime.token.*;
+<A NAME="19"><A><FONT ID="Import">import</FONT> com.lotus.sametime.im.*;
+<A NAME="20"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.constants.*;
+<A NAME="21"><A>
+<A NAME="22"><A><FONT ID="FormalComment">/**
+<A NAME="23"><A> * Handles a single IM request to an offline user. Whenever the offline user
+<A NAME="24"><A> * logs on, we do a light login as the sender, send an IM in his name and
+<A NAME="25"><A> * immediately logout to allow the reply to be received by the real sender.
+<A NAME="26"><A> *
+<A NAME="27"><A> * @author Assaf Azaria, July 2001.
+<A NAME="28"><A> */</FONT>
+<A NAME="29"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> UsersHandler <FONT ID="Implements">implements</FONT> LoginListener, TokenServiceListener2
+<A NAME="30"><A>{
+<A NAME="31"><A>    <FONT ID="FormalComment">/**
+<A NAME="32"><A>     * The user session.
+<A NAME="33"><A>     */</FONT>
+<A NAME="34"><A>    <FONT ID="Private">private</FONT> STSession m_session;
+<A NAME="35"><A>
+<A NAME="36"><A>    <FONT ID="FormalComment">/**
+<A NAME="37"><A>     * The light login service.
+<A NAME="38"><A>     */</FONT>
+<A NAME="39"><A>    <FONT ID="Private">private</FONT> LightLoginService m_loginService;
+<A NAME="40"><A>
+<A NAME="41"><A>    <FONT ID="FormalComment">/**
+<A NAME="42"><A>     * The token service.
+<A NAME="43"><A>     */</FONT>
+<A NAME="44"><A>    <FONT ID="Private">private</FONT> SATokenService m_tokenService;
+<A NAME="45"><A>
+<A NAME="46"><A>    <FONT ID="FormalComment">/**
+<A NAME="47"><A>     * The im service.
+<A NAME="48"><A>     */</FONT>
+<A NAME="49"><A>    InstantMessagingService m_imService;
+<A NAME="50"><A>
+<A NAME="51"><A>    <FONT ID="FormalComment">/**
+<A NAME="52"><A>     * The message sender.
+<A NAME="53"><A>     */</FONT>
+<A NAME="54"><A>    <FONT ID="Private">private</FONT> STUser m_sender;
+<A NAME="55"><A>
+<A NAME="56"><A>    <FONT ID="FormalComment">/**
+<A NAME="57"><A>     * The message offline receiver.
+<A NAME="58"><A>     */</FONT>
+<A NAME="59"><A>    <FONT ID="Private">private</FONT> STUser m_receiver;
+<A NAME="60"><A>
+<A NAME="61"><A>    <FONT ID="FormalComment">/**
+<A NAME="62"><A>     * The message.
+<A NAME="63"><A>     */</FONT>
+<A NAME="64"><A>    <FONT ID="Private">private</FONT> String m_message;
+<A NAME="65"><A>
+<A NAME="66"><A>    <FONT ID="FormalComment">/**
+<A NAME="67"><A>     * The name of the server we are working with.
+<A NAME="68"><A>     */</FONT>
+<A NAME="69"><A>    String m_serverName;
+<A NAME="70"><A>
+<A NAME="71"><A>    <FONT ID="FormalComment">/**
+<A NAME="72"><A>     * The server app login.
+<A NAME="73"><A>     */</FONT>
+<A NAME="74"><A>    ServerAppService m_mainLogin;
+<A NAME="75"><A>
+<A NAME="76"><A>    <FONT ID="FormalComment">/**
+<A NAME="77"><A>     * Construct a new user request handler.
+<A NAME="78"><A>     *
+<A NAME="79"><A>     * @param saSession  The session of the server application.
+<A NAME="80"><A>     * @param serverName The name of the server to login to.
+<A NAME="81"><A>     * @param sender     The sender of the message.
+<A NAME="82"><A>     * @param receiver   The receiver of the message.
+<A NAME="83"><A>     * @param message    The actual message.
+<A NAME="84"><A>     */</FONT>
+<A NAME="85"><A>    <FONT ID="Public">public</FONT> UsersHandler(STSession saSession, String serverName, STUser sender,
+<A NAME="86"><A>                        STUser receiver, String message)
+<A NAME="87"><A>    {
+<A NAME="88"><A>        m_sender   = sender;
+<A NAME="89"><A>        m_receiver = receiver;
+<A NAME="90"><A>        m_message  = message;
+<A NAME="91"><A>        m_serverName = serverName;
+<A NAME="92"><A>
+<A NAME="93"><A>
+<A NAME="94"><A>        <FONT ID="SingleLineComment">// We need the sender's token for login.
+<A NAME="95"><A></FONT>        m_tokenService
+<A NAME="96"><A>            = (SATokenService)saSession.getCompApi(SATokenService.COMP_NAME);
+<A NAME="97"><A>        m_tokenService.addTokenServiceListener(<FONT ID="This">this</FONT>);
+<A NAME="98"><A>
+<A NAME="99"><A>        m_mainLogin
+<A NAME="100"><A>            = (ServerAppService)saSession.getCompApi(ServerAppService.COMP_NAME);
+<A NAME="101"><A>    }
+<A NAME="102"><A>
+<A NAME="103"><A>
+<A NAME="104"><A>    <FONT ID="FormalComment">/**
+<A NAME="105"><A>     * The receiver has gone online. Get the sender token, login and
+<A NAME="106"><A>     * send the waiting message.
+<A NAME="107"><A>     */</FONT>
+<A NAME="108"><A>    <FONT ID="Void">void</FONT> receiverOnline()
+<A NAME="109"><A>    {
+<A NAME="110"><A>        <FONT ID="SingleLineComment">// First, create a session for the user.
+<A NAME="111"><A></FONT>        <FONT ID="Try">try</FONT>
+<A NAME="112"><A>        {
+<A NAME="113"><A>            m_session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">"OfflineMessageUser"</FONT> + <FONT ID="This">this</FONT>);
+<A NAME="114"><A>            <FONT ID="New">new</FONT> STBase(m_session);
+<A NAME="115"><A>            <FONT ID="New">new</FONT> ImComp(m_session);
+<A NAME="116"><A>            m_session.start();
+<A NAME="117"><A>        }
+<A NAME="118"><A>        <FONT ID="Catch">catch</FONT>(DuplicateObjectException e)
+<A NAME="119"><A>        {
+<A NAME="120"><A>            e.printStackTrace();
+<A NAME="121"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="122"><A>        }
+<A NAME="123"><A>
+<A NAME="124"><A>        m_loginService
+<A NAME="125"><A>            = (LightLoginService)m_session.getCompApi(LightLoginService.COMP_NAME);
+<A NAME="126"><A>
+<A NAME="127"><A>        m_imService
+<A NAME="128"><A>            = (InstantMessagingService)m_session.getCompApi(InstantMessagingService.COMP_NAME);
+<A NAME="129"><A>
+<A NAME="130"><A>        <FONT ID="SingleLineComment">// Now, try to get his token.
+<A NAME="131"><A></FONT>        m_tokenService.generateTokens(m_sender);
+<A NAME="132"><A>    }
+<A NAME="133"><A>
+<A NAME="134"><A>    <FONT ID="SingleLineComment">//
+<A NAME="135"><A></FONT>    <FONT ID="SingleLineComment">// Token Service Listener.
+<A NAME="136"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="137"><A></FONT>
+<A NAME="138"><A>    <FONT ID="FormalComment">/**
+<A NAME="139"><A>     * ome or more login tokens were generated successfully.
+<A NAME="140"><A>     *
+<A NAME="141"><A>     * @param            event The event object.
+<A NAME="142"><A>     * @see              TokenEvent#getToken
+<A NAME="143"><A>     */</FONT>
+<A NAME="144"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> tokensGenerated(TokenEvent event)
+<A NAME="145"><A>    {
+<A NAME="146"><A>        <FONT ID="SingleLineComment">// Now, we login as the sender.
+<A NAME="147"><A></FONT>        m_loginService.setLoginType(STUserInstance.LT_LIGHT_CLIENT_USER);
+<A NAME="148"><A>        m_loginService.addLoginListener(<FONT ID="This">this</FONT>);
+<A NAME="149"><A>
+<A NAME="150"><A>        <FONT ID="SingleLineComment">// A light client has to provide its ip explicitly, giving null as ip
+<A NAME="151"><A></FONT>        <FONT ID="SingleLineComment">// prevents the server from disconnecting the real sender.
+<A NAME="152"><A></FONT>        Token[] tokens = event.getTokens();
+<A NAME="153"><A>        <FONT ID="Try">try</FONT> {
+<A NAME="154"><A>            <FONT ID="SingleLineComment">// we login using the first token
+<A NAME="155"><A></FONT>            m_loginService.loginByTokens(tokens[<FONT ID="IntegerLiteral">0</FONT>].getLoginName(),
+<A NAME="156"><A>                                        tokens, m_mainLogin,
+<A NAME="157"><A>                                        InetAddress.getByAddress(<FONT ID="New">new</FONT> <FONT ID="Byte">byte</FONT>[]{<FONT ID="IntegerLiteral">0</FONT>, <FONT ID="IntegerLiteral">0</FONT>, <FONT ID="IntegerLiteral">0</FONT>, <FONT ID="IntegerLiteral">0</FONT>}));      
+<A NAME="158"><A>            
+<A NAME="159"><A>        } <FONT ID="Catch">catch</FONT> (UnknownHostException e) {
+<A NAME="160"><A>            e.printStackTrace();
+<A NAME="161"><A>        }
+<A NAME="162"><A>    }
+<A NAME="163"><A>
+<A NAME="164"><A>    <FONT ID="FormalComment">/**
+<A NAME="165"><A>     * A generate tokens  request failed.
+<A NAME="166"><A>     *
+<A NAME="167"><A>     * @param            event The event object.
+<A NAME="168"><A>     * @see              TokenEvent#getReason
+<A NAME="169"><A>     */</FONT>
+<A NAME="170"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> generateTokensFailed(TokenEvent event)
+<A NAME="171"><A>    {
+<A NAME="172"><A>        System.out.println(<FONT ID="StringLiteral">"SA: Generate tokens failed "</FONT> + event.getReason());
+<A NAME="173"><A>        cleanUp();
+<A NAME="174"><A>    }
+<A NAME="175"><A>
+<A NAME="176"><A>    <FONT ID="FormalComment">/**
+<A NAME="177"><A>     * Token Service is available.
+<A NAME="178"><A>     */</FONT>
+<A NAME="179"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> serviceAvailable(TokenEvent event)
+<A NAME="180"><A>    {
+<A NAME="181"><A>        System.out.println(<FONT ID="StringLiteral">"SA: TokenService available"</FONT>);
+<A NAME="182"><A>    }
+<A NAME="183"><A>
+<A NAME="184"><A>     <FONT ID="SingleLineComment">//
+<A NAME="185"><A></FONT>     <FONT ID="SingleLineComment">// Login Listener.
+<A NAME="186"><A></FONT>     <FONT ID="SingleLineComment">//
+<A NAME="187"><A></FONT>     <FONT ID="FormalComment">/**
+<A NAME="188"><A>     * Indicates that we were successfully logged in to the Sametime community.
+<A NAME="189"><A>     *
+<A NAME="190"><A>     * @param event The event object.
+<A NAME="191"><A>     * @see LoginEvent#getCommunity
+<A NAME="192"><A>     */</FONT>
+<A NAME="193"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event)
+<A NAME="194"><A>    {
+<A NAME="195"><A>        System.out.println(<FONT ID="StringLiteral">"SA: Handler LoggedIn"</FONT>);
+<A NAME="196"><A>
+<A NAME="197"><A>        <FONT ID="SingleLineComment">// Finally we can send the message.
+<A NAME="198"><A></FONT>        Im im = m_imService.createIm(m_receiver, EncLevel.ENC_LEVEL_ALL, <FONT ID="IntegerLiteral">1</FONT>);
+<A NAME="199"><A>        im.addImListener(<FONT ID="New">new</FONT> ImHandler());
+<A NAME="200"><A>        
+<A NAME="201"><A>        <FONT ID="SingleLineComment">// Wait a while to let the receiver initialize. 
+<A NAME="202"><A></FONT>        <FONT ID="Try">try</FONT> {
+<A NAME="203"><A>            Thread.currentThread().sleep(<FONT ID="IntegerLiteral">5000</FONT>);
+<A NAME="204"><A>        }<FONT ID="Catch">catch</FONT> (InterruptedException e){
+<A NAME="205"><A>        };
+<A NAME="206"><A>        im.open();
+<A NAME="207"><A>    }
+<A NAME="208"><A>
+<A NAME="209"><A>    <FONT ID="FormalComment">/**
+<A NAME="210"><A>     * Indicates that we were successfully logged out of the Sametime community,
+<A NAME="211"><A>     * or a login request was refused.
+<A NAME="212"><A>     *
+<A NAME="213"><A>     * @param event The event object.
+<A NAME="214"><A>     * @see LoginEvent#getReason
+<A NAME="215"><A>     * @see LoginEvent#getCommunity
+<A NAME="216"><A>     */</FONT>
+<A NAME="217"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event)
+<A NAME="218"><A>    {
+<A NAME="219"><A>        <FONT ID="Int">int</FONT> reason = event.getReason();
+<A NAME="220"><A>        System.out.println(<FONT ID="StringLiteral">"SA:Handler LoggedOut"</FONT> + reason);
+<A NAME="221"><A>
+<A NAME="222"><A>        <FONT ID="If">if</FONT> (STError.VpkFailed(reason))
+<A NAME="223"><A>        {
+<A NAME="224"><A>            cleanUp();
+<A NAME="225"><A>        }
+<A NAME="226"><A>    }
+<A NAME="227"><A>
+<A NAME="228"><A>    <FONT ID="FormalComment">/**
+<A NAME="229"><A>     * Im events handler.
+<A NAME="230"><A>     */</FONT>
+<A NAME="231"><A>    <FONT ID="Class">class</FONT> ImHandler <FONT ID="Extends">extends</FONT> ImAdapter
+<A NAME="232"><A>    {
+<A NAME="233"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> imOpened(ImEvent event)
+<A NAME="234"><A>        {
+<A NAME="235"><A>           <FONT ID="SingleLineComment">// Send the message and leave asap.
+<A NAME="236"><A></FONT>            <FONT ID="Try">try</FONT>{
+<A NAME="237"><A>                Thread.currentThread().sleep(<FONT ID="IntegerLiteral">2000</FONT>);
+<A NAME="238"><A>            }<FONT ID="Catch">catch</FONT>(InterruptedException e) {}
+<A NAME="239"><A>            
+<A NAME="240"><A>            event.getIm().sendText(<FONT ID="True">true</FONT>, m_message);
+<A NAME="241"><A>            
+<A NAME="242"><A>            <FONT ID="SingleLineComment">// wait for a while to let the client wake up.
+<A NAME="243"><A></FONT>            <FONT ID="Try">try</FONT>{
+<A NAME="244"><A>                Thread.currentThread().sleep(<FONT ID="IntegerLiteral">5000</FONT>);
+<A NAME="245"><A>            }<FONT ID="Catch">catch</FONT>(InterruptedException e) {}
+<A NAME="246"><A>            m_loginService.logout();
+<A NAME="247"><A>            cleanUp();
+<A NAME="248"><A>        }
+<A NAME="249"><A>
+<A NAME="250"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> openImFailed(ImEvent event)
+<A NAME="251"><A>        {
+<A NAME="252"><A>            System.out.println(<FONT ID="StringLiteral">"SA HANDLER: Couldn't open IM "</FONT> +
+<A NAME="253"><A>                                event.getReason());
+<A NAME="254"><A>            cleanUp();
+<A NAME="255"><A>        }
+<A NAME="256"><A>    }
+<A NAME="257"><A>
+<A NAME="258"><A>    <FONT ID="FormalComment">/**
+<A NAME="259"><A>     * Finished processing, clean up.
+<A NAME="260"><A>     */</FONT>
+<A NAME="261"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> cleanUp()
+<A NAME="262"><A>    {
+<A NAME="263"><A>        m_session.stop();
+<A NAME="264"><A>        m_session.unloadSession();
+<A NAME="265"><A>    }
+<A NAME="266"><A>
+<A NAME="267"><A>
+<A NAME="268"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> generateTokenFailed(TokenEvent event) {
+<A NAME="269"><A>        <FONT ID="SingleLineComment">// TODO Auto-generated method stub
+<A NAME="270"><A></FONT>        
+<A NAME="271"><A>    }
+<A NAME="272"><A>
+<A NAME="273"><A>
+<A NAME="274"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> tokenGenerated(TokenEvent event) {
+<A NAME="275"><A>        <FONT ID="SingleLineComment">// TODO Auto-generated method stub
+<A NAME="276"><A></FONT>        
+<A NAME="277"><A>    }
+<A NAME="278"><A>}
+<A NAME="279"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">UsersHandler</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

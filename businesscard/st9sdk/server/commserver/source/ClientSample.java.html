@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>ClientSample (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">ClientSample</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="Import">import</FONT> com.lotus.sametime.awareness.AttributeEvent;
+<A NAME="2"><A><FONT ID="Import">import</FONT> com.lotus.sametime.awareness.AttributeListener;
+<A NAME="3"><A><FONT ID="Import">import</FONT> com.lotus.sametime.awareness.AwarenessService;
+<A NAME="4"><A><FONT ID="Import">import</FONT> com.lotus.sametime.awareness.WatchList;
+<A NAME="5"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.CommunityService;
+<A NAME="6"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.LoginEvent;
+<A NAME="7"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.LoginListener;
+<A NAME="8"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.DuplicateObjectException;
+<A NAME="9"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.STSession;
+<A NAME="10"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.STAttribute;
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="FormalComment">/**
+<A NAME="13"><A> * A simple client application that watches the user's attributes and enables 
+<A NAME="14"><A> * to monitor user's attributes. Together with the User Attributes SA it 
+<A NAME="15"><A> * demonstrates how user attributes can be manipulated by a server application. 
+<A NAME="16"><A> * 
+<A NAME="17"><A> * @author Amir Perlman, Jan 23, 2007
+<A NAME="18"><A> *
+<A NAME="19"><A> */</FONT>
+<A NAME="20"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> ClientSample <FONT ID="Implements">implements</FONT> LoginListener, AttributeListener {
+<A NAME="21"><A>
+<A NAME="22"><A>    <FONT ID="FormalComment">/**
+<A NAME="23"><A>     * Sametime Session . 
+<A NAME="24"><A>     */</FONT>
+<A NAME="25"><A>    <FONT ID="Private">private</FONT> STSession _session;
+<A NAME="26"><A>    
+<A NAME="27"><A>    <FONT ID="FormalComment">/**
+<A NAME="28"><A>     * Construct a new client instance 
+<A NAME="29"><A>     * @param host
+<A NAME="30"><A>     * @param loginName
+<A NAME="31"><A>     * @param password
+<A NAME="32"><A>     */</FONT>
+<A NAME="33"><A>    <FONT ID="Public">public</FONT> ClientSample(String host, String loginName, String password) {
+<A NAME="34"><A>        <FONT ID="Try">try</FONT> {
+<A NAME="35"><A>            <FONT ID="SingleLineComment">//Load components. 
+<A NAME="36"><A></FONT>            _session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">"ClientSample"</FONT> + <FONT ID="This">this</FONT>);
+<A NAME="37"><A>            _session.loadSemanticComponents();
+<A NAME="38"><A>            _session.start();
+<A NAME="39"><A>            
+<A NAME="40"><A>            
+<A NAME="41"><A>            CommunityService commSvc = (CommunityService) 
+<A NAME="42"><A>                                       _session.getCompApi(CommunityService.COMP_NAME);
+<A NAME="43"><A>            commSvc.addLoginListener(<FONT ID="This">this</FONT>);
+<A NAME="44"><A>            commSvc.loginByPassword(host, loginName, password);
+<A NAME="45"><A>        } 
+<A NAME="46"><A>        <FONT ID="Catch">catch</FONT> (DuplicateObjectException e) {
+<A NAME="47"><A>            e.printStackTrace();
+<A NAME="48"><A>        }
+<A NAME="49"><A>    }
+<A NAME="50"><A>
+<A NAME="51"><A>    <FONT ID="FormalComment">/**
+<A NAME="52"><A>     * Client logged in. 
+<A NAME="53"><A>     */</FONT>
+<A NAME="54"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event) {
+<A NAME="55"><A>        System.out.println(<FONT ID="StringLiteral">"Client logged In"</FONT>);
+<A NAME="56"><A>        
+<A NAME="57"><A>        
+<A NAME="58"><A>        AwarenessService svc = (AwarenessService) 
+<A NAME="59"><A>                                _session.getCompApi(AwarenessService.COMP_NAME);
+<A NAME="60"><A>        
+<A NAME="61"><A>        <FONT ID="SingleLineComment">//Setup the filter to include the attribute we want to watch
+<A NAME="62"><A></FONT>        <FONT ID="Int">int</FONT>[] attrFilter = { <FONT ID="IntegerLiteral">778877</FONT> }; 
+<A NAME="63"><A>        svc.addToAttrFilter(attrFilter);
+<A NAME="64"><A>        
+<A NAME="65"><A>        <FONT ID="SingleLineComment">//Create a watch list and add our self to the watch list. 
+<A NAME="66"><A></FONT>        WatchList watchList = svc.createWatchList();
+<A NAME="67"><A>        watchList.addAttrListener(<FONT ID="This">this</FONT>);
+<A NAME="68"><A>        
+<A NAME="69"><A>        watchList.addItem(event.getLogin().getMyUserInstance());
+<A NAME="70"><A>        
+<A NAME="71"><A>        
+<A NAME="72"><A>    }
+<A NAME="73"><A>
+<A NAME="74"><A>    <FONT ID="FormalComment">/**
+<A NAME="75"><A>     * Client logged out. 
+<A NAME="76"><A>     */</FONT>
+<A NAME="77"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event) {
+<A NAME="78"><A>        System.out.println(<FONT ID="StringLiteral">"Client logged out"</FONT>);
+<A NAME="79"><A>    }
+<A NAME="80"><A>
+<A NAME="81"><A>    
+<A NAME="82"><A>    <FONT ID="FormalComment">/**
+<A NAME="83"><A>     * @see AttributeListener#attrChanged(AttributeEvent) 
+<A NAME="84"><A>     */</FONT>
+<A NAME="85"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> attrChanged(AttributeEvent event) {
+<A NAME="86"><A>        
+<A NAME="87"><A>        <FONT ID="SingleLineComment">//This simple app expect only one attribute change although 
+<A NAME="88"><A></FONT>        <FONT ID="SingleLineComment">//the event may deliver more then one change at a time. 
+<A NAME="89"><A></FONT>        STAttribute attr = event.getAttributeList()[<FONT ID="IntegerLiteral">0</FONT>]; 
+<A NAME="90"><A>        System.out.println(<FONT ID="StringLiteral">"Attribute changed: "</FONT> + attr.getKey() + 
+<A NAME="91"><A>                           <FONT ID="StringLiteral">" Value: "</FONT> + attr.getString());
+<A NAME="92"><A>    }
+<A NAME="93"><A>    
+<A NAME="94"><A>    
+<A NAME="95"><A>    <FONT ID="FormalComment">/**
+<A NAME="96"><A>     * Startup a client that will a specific attribute that will
+<A NAME="97"><A>     * be manipulated by the server application. 
+<A NAME="98"><A>     * @param args
+<A NAME="99"><A>     */</FONT>
+<A NAME="100"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args) {
+<A NAME="101"><A>        <FONT ID="If">if</FONT>(args.length &lt; <FONT ID="IntegerLiteral">3</FONT>) {
+<A NAME="102"><A>            System.err.println(<FONT ID="StringLiteral">"Error, command line parameters must include "</FONT> +
+<A NAME="103"><A>                               <FONT ID="StringLiteral">"a server name, user's name and password."</FONT>);
+<A NAME="104"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="105"><A>        }
+<A NAME="106"><A>        
+<A NAME="107"><A>        <FONT ID="New">new</FONT> <A HREF="ClientSample.java.html">ClientSample</A>(args[<FONT ID="IntegerLiteral">0</FONT>], args[<FONT ID="IntegerLiteral">1</FONT>], args[<FONT ID="IntegerLiteral">2</FONT>]);
+<A NAME="108"><A>    }
+<A NAME="109"><A>    
+<A NAME="110"><A>    <FONT ID="SingleLineComment">//
+<A NAME="111"><A></FONT>    <FONT ID="SingleLineComment">//Unimplemented methods - not used by this sample app
+<A NAME="112"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="113"><A></FONT>    
+<A NAME="114"><A>    <FONT ID="FormalComment">/**
+<A NAME="115"><A>     * @see AttributeListener#attrChanged(AttributeEvent) 
+<A NAME="116"><A>     */</FONT>
+<A NAME="117"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> attrContentQueried(AttributeEvent event) {
+<A NAME="118"><A>    }
+<A NAME="119"><A>
+<A NAME="120"><A>    <FONT ID="FormalComment">/**
+<A NAME="121"><A>     * @see AttributeListener#attrRemoved(AttributeEvent) 
+<A NAME="122"><A>     */</FONT>
+<A NAME="123"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> attrRemoved(AttributeEvent event) {
+<A NAME="124"><A>    }
+<A NAME="125"><A>    
+<A NAME="126"><A>    <FONT ID="FormalComment">/**
+<A NAME="127"><A>     * @see AttributeListener#queryAttrContentFailed(AttributeEvent) 
+<A NAME="128"><A>     */</FONT>
+<A NAME="129"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> queryAttrContentFailed(AttributeEvent event) {
+<A NAME="130"><A>    }
+<A NAME="131"><A>    
+<A NAME="132"><A>}
+<A NAME="133"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">ClientSample</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

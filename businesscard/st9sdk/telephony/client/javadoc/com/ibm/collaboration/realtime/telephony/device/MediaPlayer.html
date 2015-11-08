@@ -1,0 +1,1008 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MediaPlayer (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MediaPlayer (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/HeadsetNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MediaPlayer.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.device</FONT>
+<BR>
+Interface MediaPlayer</H2>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractMediaPlayer.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractMediaPlayer</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>MediaPlayer</B></DL>
+</PRE>
+
+<P>
+MediaPlayer is used to play audio or video files in a voice or video call.
+ Implementations of this interface may support only audio, only video, or
+ both. A media player can be associated with a specific call or standalone,
+ if supported by the service provider.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (replaces com.ibm.collaboration.realtime.telephony.AudioFilePlayer)</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#CAPABILITY_AUDIO_FILE">CAPABILITY_AUDIO_FILE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Audio file playback is supported.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#CAPABILITY_DURATION">CAPABILITY_DURATION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File playback duration can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#CAPABILITY_GET_POSITION">CAPABILITY_GET_POSITION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The current position of playback relative to the beginning of the file can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#CAPABILITY_PAUSE">CAPABILITY_PAUSE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File playback can be paused and resumed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#CAPABILITY_SCALE_VOLUME">CAPABILITY_SCALE_VOLUME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File playback audio volume can be scaled relative to speaker volume.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#CAPABILITY_SET_START_POSITION">CAPABILITY_SET_START_POSITION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playback can begin from a specified position relative to the beginning of the file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#CAPABILITY_VIDEO_FILE">CAPABILITY_VIDEO_FILE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video file playback is supported.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;org.eclipse.swt.widgets.Canvas</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getCanvas()">getCanvas</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the SWT canvas used to display video when playing a video
+ file, as set using {<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setCanvas(org.eclipse.swt.widgets.Canvas)"><CODE>setCanvas(Canvas)</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getDuration()">getDuration</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the playback duration of the current file being played (or paused),
+ in millisenconds.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getDuration(java.lang.String)">getDuration</A></B>(java.lang.String&nbsp;filename)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the playback duration of the specified audio or video file, in
+ milliseconds.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getFileName()">getFileName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the name of the current audio or video file being played (or paused),
+ null if none.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getPosition()">getPosition</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the playback position in the current file being played (or paused),
+ in milliseconds relative to the beginning of the file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getSupportedAudioFileTypes()">getSupportedAudioFileTypes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a list of strings for supported audio file types, if any.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getSupportedFileTypes()">getSupportedFileTypes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a list of strings for all supported audio and/or video file
+ types.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getSupportedVideoFileTypes()">getSupportedVideoFileTypes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a list of strings for supported video file types, if any.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;double</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getVolumeScaling()">getVolumeScaling</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the audio volume scaling used for file playback.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A></B>(java.lang.String&nbsp;capability)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the service provider supports the specified capability.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#isPaused()">isPaused</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if an audio or video file is currently paused.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#isPlaying()">isPlaying</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if an audio or video file is currently playing.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#pause()">pause</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pauses the currently-playing audio or video file, if any.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#play(java.io.InputStream)">play</A></B>(java.io.InputStream&nbsp;stream)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plays WAV audio from the specified input stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#play(java.io.InputStream, long)">play</A></B>(java.io.InputStream&nbsp;stream,
+     long&nbsp;startInMillis)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plays WAV audio from the specified input stream from the specified
+ start position.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#play(java.io.InputStream, long, long)">play</A></B>(java.io.InputStream&nbsp;stream,
+     long&nbsp;startInMillis,
+     long&nbsp;stopInMillis)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plays WAV audio from the specified input stream from the specified
+ start position to the specified stop position.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#play(java.lang.String)">play</A></B>(java.lang.String&nbsp;filename)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plays the specified audio or video file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#play(java.lang.String, long)">play</A></B>(java.lang.String&nbsp;filename,
+     long&nbsp;startPos)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plays the specified audio or video file from the specified
+ starting position, in milliseconds relative to the beginning
+ of the file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#resume()">resume</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resumes playing the currently-paused audio or video file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setCanvas(org.eclipse.swt.widgets.Canvas)">setCanvas</A></B>(org.eclipse.swt.widgets.Canvas&nbsp;canvas)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the SWT canvas used to display video when playing a video
+ file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setVolumeScaling(double)">setVolumeScaling</A></B>(double&nbsp;scaling)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the audio volume scaling used for file playback.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#stop()">stop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stops playing the currently playing or paused audio or video file,
+ if any.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CAPABILITY_AUDIO_FILE"><!-- --></A><H3>
+CAPABILITY_AUDIO_FILE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_AUDIO_FILE</B></PRE>
+<DL>
+<DD>Audio file playback is supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (replaces com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_VOIP_PLAY_FILE)</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.MediaPlayer.CAPABILITY_AUDIO_FILE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_DURATION"><!-- --></A><H3>
+CAPABILITY_DURATION</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_DURATION</B></PRE>
+<DL>
+<DD>File playback duration can be determined.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (replaces com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_VOIP_PLAY_FILE_DURATION)</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.MediaPlayer.CAPABILITY_DURATION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_GET_POSITION"><!-- --></A><H3>
+CAPABILITY_GET_POSITION</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_GET_POSITION</B></PRE>
+<DL>
+<DD>The current position of playback relative to the beginning of the file can be determined.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.MediaPlayer.CAPABILITY_GET_POSITION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_PAUSE"><!-- --></A><H3>
+CAPABILITY_PAUSE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_PAUSE</B></PRE>
+<DL>
+<DD>File playback can be paused and resumed.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (replaces com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_VOIP_PLAY_FILE_PAUSE)</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.MediaPlayer.CAPABILITY_PAUSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SCALE_VOLUME"><!-- --></A><H3>
+CAPABILITY_SCALE_VOLUME</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SCALE_VOLUME</B></PRE>
+<DL>
+<DD>File playback audio volume can be scaled relative to speaker volume.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.MediaPlayer.CAPABILITY_SCALE_VOLUME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_START_POSITION"><!-- --></A><H3>
+CAPABILITY_SET_START_POSITION</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_START_POSITION</B></PRE>
+<DL>
+<DD>Playback can begin from a specified position relative to the beginning of the file.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.MediaPlayer.CAPABILITY_SET_START_POSITION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_VIDEO_FILE"><!-- --></A><H3>
+CAPABILITY_VIDEO_FILE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_VIDEO_FILE</B></PRE>
+<DL>
+<DD>Video file playback is supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.MediaPlayer.CAPABILITY_VIDEO_FILE">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getCanvas()"><!-- --></A><H3>
+getCanvas</H3>
+<PRE>
+org.eclipse.swt.widgets.Canvas <B>getCanvas</B>()</PRE>
+<DL>
+<DD>Returns the SWT canvas used to display video when playing a video
+ file, as set using {<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setCanvas(org.eclipse.swt.widgets.Canvas)"><CODE>setCanvas(Canvas)</CODE></A>.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>SWT canvas for video file playback, null if none specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDuration()"><!-- --></A><H3>
+getDuration</H3>
+<PRE>
+long <B>getDuration</B>()
+                 throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns the playback duration of the current file being played (or paused),
+ in millisenconds. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getDuration(java.lang.String)"><CODE>getDuration(String)</CODE></A> to determine the
+ duration of a file other than the current one.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>File playback duration in milliseconds, 0 if no file is playing/paused or duration cannot be determined.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDuration(java.lang.String)"><!-- --></A><H3>
+getDuration</H3>
+<PRE>
+long <B>getDuration</B>(java.lang.String&nbsp;filename)
+                 throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns the playback duration of the specified audio or video file, in
+ milliseconds. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getDuration()"><CODE>getDuration()</CODE></A> to determine the duration of
+ the currently playing (or paused) file.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>filename</CODE> - pathname of audio or video file
+<DT><B>Returns:</B><DD>File playback duration in milliseconds, 0 if duration cannot be determined.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the filename is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFileName()"><!-- --></A><H3>
+getFileName</H3>
+<PRE>
+java.lang.String <B>getFileName</B>()</PRE>
+<DL>
+<DD>Returns the name of the current audio or video file being played (or paused),
+ null if none.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Current file pathname, null if none specified.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPosition()"><!-- --></A><H3>
+getPosition</H3>
+<PRE>
+long <B>getPosition</B>()
+                 throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns the playback position in the current file being played (or paused),
+ in milliseconds relative to the beginning of the file.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>File playback positionn in milliseconds, 0 if no file is playing.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedAudioFileTypes()"><!-- --></A><H3>
+getSupportedAudioFileTypes</H3>
+<PRE>
+java.util.List <B>getSupportedAudioFileTypes</B>()
+                                          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns a list of strings for supported audio file types, if any.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getSupportedFileTypes()"><CODE>getSupportedFileTypes()</CODE></A> to determine all file types
+ supported by this media player.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of supported audio file type strings, null if audio files not supported.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedFileTypes()"><!-- --></A><H3>
+getSupportedFileTypes</H3>
+<PRE>
+java.util.List <B>getSupportedFileTypes</B>()
+                                     throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns a list of strings for all supported audio and/or video file
+ types. To get only audio or video file types, use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getSupportedAudioFileTypes()"><CODE>getSupportedAudioFileTypes()</CODE></A>
+ or <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getSupportedVideoFileTypes()"><CODE>getSupportedVideoFileTypes()</CODE></A> instead.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of supported file type strings.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedVideoFileTypes()"><!-- --></A><H3>
+getSupportedVideoFileTypes</H3>
+<PRE>
+java.util.List <B>getSupportedVideoFileTypes</B>()
+                                          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns a list of strings for supported video file types, if any.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getSupportedFileTypes()"><CODE>getSupportedFileTypes()</CODE></A> to determine all file types
+ supported by this media player.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of supported video file type strings, null if video files not supported.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVolumeScaling()"><!-- --></A><H3>
+getVolumeScaling</H3>
+<PRE>
+double <B>getVolumeScaling</B>()
+                        throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns the audio volume scaling used for file playback. See
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setVolumeScaling(double)"><CODE>setVolumeScaling(double)</CODE></A> for more information.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Volume scaling, 1.0 (the default) if no scaling is in effect.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isCapabilitySupported(java.lang.String)"><!-- --></A><H3>
+isCapabilitySupported</H3>
+<PRE>
+boolean <B>isCapabilitySupported</B>(java.lang.String&nbsp;capability)</PRE>
+<DL>
+<DD>Determines if the service provider supports the specified capability.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>capability</CODE> - capability to test, one of the CAPABILITY_xxx values
+<DT><B>Returns:</B><DD>true if specified capability is supported, false otherwise.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the capability is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isPaused()"><!-- --></A><H3>
+isPaused</H3>
+<PRE>
+boolean <B>isPaused</B>()</PRE>
+<DL>
+<DD>Determines if an audio or video file is currently paused.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if a file is currently paused, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isPlaying()"><!-- --></A><H3>
+isPlaying</H3>
+<PRE>
+boolean <B>isPlaying</B>()</PRE>
+<DL>
+<DD>Determines if an audio or video file is currently playing.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if a file is currently playing, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pause()"><!-- --></A><H3>
+pause</H3>
+<PRE>
+void <B>pause</B>()
+           throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Pauses the currently-playing audio or video file, if any.
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidOperationException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidOperationException</A></CODE> - if no file is playing
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="play(java.io.InputStream)"><!-- --></A><H3>
+play</H3>
+<PRE>
+void <B>play</B>(java.io.InputStream&nbsp;stream)
+          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Plays WAV audio from the specified input stream. If another audio
+ or video file or stream is already playing or paused, this
+ automatically stops that file or stream. If this MediaPlayer is
+ associated with a call, the stream is played for everyone on the
+ call. Playback uses the volume scaling specified with
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setVolumeScaling(double)"><CODE>setVolumeScaling(double)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>stream</CODE> - input stream for WAV file
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="play(java.io.InputStream, long)"><!-- --></A><H3>
+play</H3>
+<PRE>
+void <B>play</B>(java.io.InputStream&nbsp;stream,
+          long&nbsp;startInMillis)
+          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Plays WAV audio from the specified input stream from the specified
+ start position. If another audio or video file or stream is
+ already playing or paused, this automatically stops that file or
+ stream. If this MediaPlayer is associated with a call, the stream is
+ played for everyone on the call from the beginning of the input
+ stream. Playback uses the volume scaling specified with <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setVolumeScaling(double)"><CODE>setVolumeScaling(double)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>stream</CODE> - input stream for WAV file<DD><CODE>startInMillis</CODE> - start position for playback (in milliseconds).
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="play(java.io.InputStream, long, long)"><!-- --></A><H3>
+play</H3>
+<PRE>
+void <B>play</B>(java.io.InputStream&nbsp;stream,
+          long&nbsp;startInMillis,
+          long&nbsp;stopInMillis)
+          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Plays WAV audio from the specified input stream from the specified
+ start position to the specified stop position. If another audio or
+ video file or stream is already playing or paused, this
+ automatically stops that file or stream. If this MediaPlayer is
+ associated with a call, the stream is played in its entirety for
+ everyone on the call from the beginning of the stream. Playback
+ uses the volume scaling specified with <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setVolumeScaling(double)"><CODE>setVolumeScaling(double)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>stream</CODE> - input stream for WAV file<DD><CODE>startInMillis</CODE> - start position for playback (in milliseconds).<DD><CODE>stopInMillis</CODE> - stop position for playback (in milliseconds).
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="play(java.lang.String)"><!-- --></A><H3>
+play</H3>
+<PRE>
+void <B>play</B>(java.lang.String&nbsp;filename)
+          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Plays the specified audio or video file. The file extension
+ is used to determine the file type. If another file or stream is
+ already playing or paused, this automatically stops that file or stream.
+ If this MediaPlayer is associated with a call, the file is played
+ for everyone on the call. If playing a video file, a canvas must
+ first be specified using <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setCanvas(org.eclipse.swt.widgets.Canvas)"><CODE>setCanvas(Canvas)</CODE></A>, unless the
+ file is to be played in a canvas from the video call. Use
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#getSupportedFileTypes()"><CODE>getSupportedFileTypes()</CODE></A> to determine which file types
+ are supported. Playback starts at the beginning of the file,
+ using the volume scaling specified with <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#setVolumeScaling(double)"><CODE>setVolumeScaling(double)</CODE></A>.
+ To play a file starting from somewhere other than the beginning,
+ use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#play(java.lang.String, long)"><CODE>play(String, long)</CODE></A> instead. To play WAV audio from
+ an input stream, use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#play(java.io.InputStream)"><CODE>play(InputStream)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>filename</CODE> - pathname of file to play
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the filename is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidOperationException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidOperationException</A></CODE> - if a canvas is required but has not been specified
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the specified file type is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="play(java.lang.String, long)"><!-- --></A><H3>
+play</H3>
+<PRE>
+void <B>play</B>(java.lang.String&nbsp;filename,
+          long&nbsp;startPos)
+          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Plays the specified audio or video file from the specified
+ starting position, in milliseconds relative to the beginning
+ of the file. See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html#play(java.lang.String)"><CODE>play(String)</CODE></A> for more information.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>filename</CODE> - pathname of file to play<DD><CODE>startPos</CODE> - starting position, in milliseconds
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if either parameter is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidOperationException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidOperationException</A></CODE> - if a canvas is required but has not been specified
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the specified file type or the use of a starting position is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="resume()"><!-- --></A><H3>
+resume</H3>
+<PRE>
+void <B>resume</B>()
+            throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Resumes playing the currently-paused audio or video file.
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidOperationException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidOperationException</A></CODE> - if no file is paused
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCanvas(org.eclipse.swt.widgets.Canvas)"><!-- --></A><H3>
+setCanvas</H3>
+<PRE>
+void <B>setCanvas</B>(org.eclipse.swt.widgets.Canvas&nbsp;canvas)
+               throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Sets the SWT canvas used to display video when playing a video
+ file.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>canvas</CODE> - SWT canvas for video
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the canvas is null or invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if video files are not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setVolumeScaling(double)"><!-- --></A><H3>
+setVolumeScaling</H3>
+<PRE>
+void <B>setVolumeScaling</B>(double&nbsp;scaling)
+                      throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Sets the audio volume scaling used for file playback. Scaling is used
+ to reduce the playback volume relative to the system speaker volume, to
+ control audio output that might otherwise be too loud. The scaling value
+ is from 0-1.0, where 1.0 (the default) is no scaling. If a file is
+ currently playing, the change takes effect immediately, otherwise it takes
+ effect when playback begins or resumes.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>scaling</CODE> - volume scaling, 0 - 1.0 (the default)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the scaling value is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stop()"><!-- --></A><H3>
+stop</H3>
+<PRE>
+void <B>stop</B>()
+          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Stops playing the currently playing or paused audio or video file,
+ if any. Does nothing if no audio file is playing or paused.
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if an error occurs</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/HeadsetNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MediaPlayer.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

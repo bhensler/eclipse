@@ -1,0 +1,441 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>CachedResolveExample (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">CachedResolveExample</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A>
+<A NAME="2"><A><FONT ID="Import">import</FONT> java.util.ArrayList;
+<A NAME="3"><A>
+<A NAME="4"><A><FONT ID="Import">import</FONT> com.lotus.sametime.cachedresolvemanager.CachedResolveComp;
+<A NAME="5"><A><FONT ID="Import">import</FONT> com.lotus.sametime.cachedresolvemanager.api.CachedResolveErrorEvent;
+<A NAME="6"><A><FONT ID="Import">import</FONT> com.lotus.sametime.cachedresolvemanager.api.CachedResolveListener;
+<A NAME="7"><A><FONT ID="Import">import</FONT> com.lotus.sametime.cachedresolvemanager.api.CachedResolveService;
+<A NAME="8"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.LoginEvent;
+<A NAME="9"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.LoginListener;
+<A NAME="10"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.ServerAppService;
+<A NAME="11"><A><FONT ID="Import">import</FONT> com.lotus.sametime.communityevents.CommunityEventsService;
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.DuplicateObjectException;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.STEvent;
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.STSession;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.STId;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.STUserInstance;
+<A NAME="17"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.connection.Connection;
+<A NAME="18"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.connection.SocketConnection;
+<A NAME="19"><A><FONT ID="Import">import</FONT> com.lotus.sametime.lookup.LookupService;
+<A NAME="20"><A>
+<A NAME="21"><A>    <FONT ID="FormalComment">/**
+<A NAME="22"><A>     * Sample application which uses the CachedResolve Component.
+<A NAME="23"><A>     * 
+<A NAME="24"><A>     *  The sample application demonstrates how to initiate the CachedResolve component,
+<A NAME="25"><A>     *  provide the required Sametime server STSession objects and issue resolve requests.
+<A NAME="26"><A>     *  
+<A NAME="27"><A>     *  The CachedResolveExample implements the CachedResolveListener in order to get the
+<A NAME="28"><A>     *  CachedResolve component events.
+<A NAME="29"><A>     *  
+<A NAME="30"><A>     *  The CachedResolveExample implements the LoginListener in order to handle the Sametime
+<A NAME="31"><A>     *  server STSession object creation.
+<A NAME="32"><A>     * 
+<A NAME="33"><A>     * Note: The CachedResolve Component uses its own configuration file.
+<A NAME="34"><A>     * For additional information please refer to the file st.cached.resolve.properties
+<A NAME="35"><A>     * 
+<A NAME="36"><A>     * 
+<A NAME="37"><A>     * The example specific implementation:
+<A NAME="38"><A>     * -----------------------------------
+<A NAME="39"><A>     * Initiate the CachedResolve component
+<A NAME="40"><A>     * Provide the required Sametime session
+<A NAME="41"><A>     * Send several resolve requests
+<A NAME="42"><A>     * Count the resolve answers (successful and failed)
+<A NAME="43"><A>     * When all the resolve answers received: flush the cache memory
+<A NAME="44"><A>     *                   to the CachedResolve persistent file.
+<A NAME="45"><A>     * 
+<A NAME="46"><A>     * 
+<A NAME="47"><A>     * @author Tally Tsabary and Inna Manzon, January 2010
+<A NAME="48"><A>     *
+<A NAME="49"><A>     */</FONT>
+<A NAME="50"><A>
+<A NAME="51"><A>    <FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> CachedResolveExample  <FONT ID="Implements">implements</FONT> CachedResolveListener, LoginListener{
+<A NAME="52"><A>        
+<A NAME="53"><A>        <FONT ID="FormalComment">/**
+<A NAME="54"><A>         * Sametime server name
+<A NAME="55"><A>         */</FONT>
+<A NAME="56"><A>        <FONT ID="Public">public</FONT> String _serverName = <FONT ID="StringLiteral">"*****"</FONT>;
+<A NAME="57"><A>        <FONT ID="FormalComment">/**
+<A NAME="58"><A>         * Sametime server URL
+<A NAME="59"><A>         */</FONT>
+<A NAME="60"><A>        <FONT ID="Public">public</FONT> String _serverURL = <FONT ID="StringLiteral">"*****"</FONT>;
+<A NAME="61"><A>        <FONT ID="FormalComment">/**
+<A NAME="62"><A>         * Sametime server port
+<A NAME="63"><A>         */</FONT>
+<A NAME="64"><A>        <FONT ID="Public">public</FONT> <FONT ID="Int">int</FONT> _port = <FONT ID="IntegerLiteral">1516</FONT>;
+<A NAME="65"><A>        <FONT ID="FormalComment">/**
+<A NAME="66"><A>         * Sametime server active session 
+<A NAME="67"><A>         */</FONT>
+<A NAME="68"><A>        <FONT ID="Public">public</FONT> STSession _stSession = <FONT ID="Null">null</FONT>;
+<A NAME="69"><A>        
+<A NAME="70"><A>        <FONT ID="FormalComment">/**
+<A NAME="71"><A>         * Resolve counter - count the resolve requests that was sent.
+<A NAME="72"><A>         */</FONT>
+<A NAME="73"><A>        <FONT ID="Private">private</FONT> <FONT ID="Int">int</FONT> _resCnt;
+<A NAME="74"><A>        
+<A NAME="75"><A>        <FONT ID="MultiLineComment">/*
+<A NAME="76"><A>         * The CachedResolve component object.
+<A NAME="77"><A>         */</FONT>
+<A NAME="78"><A>        <FONT ID="Private">private</FONT> CachedResolveService _service = <FONT ID="Null">null</FONT>;
+<A NAME="79"><A>     
+<A NAME="80"><A>        <FONT ID="FormalComment">/**
+<A NAME="81"><A>         * The program name - this is required for printing purposes.
+<A NAME="82"><A>         */</FONT>
+<A NAME="83"><A>        <FONT ID="Private">private</FONT> String _className = <A HREF="CachedResolveExample.java.html">CachedResolveExample</A>.<FONT ID="Class">class</FONT>.getName();
+<A NAME="84"><A>        
+<A NAME="85"><A>        
+<A NAME="86"><A>        <FONT ID="FormalComment">/**
+<A NAME="87"><A>         * The CachedResolveExample constructor.
+<A NAME="88"><A>         * 
+<A NAME="89"><A>         */</FONT>
+<A NAME="90"><A>        <FONT ID="Public">public</FONT> CachedResolveExample() {
+<A NAME="91"><A>         }
+<A NAME="92"><A>        
+<A NAME="93"><A>        
+<A NAME="94"><A>        <FONT ID="FormalComment">/**
+<A NAME="95"><A>         * The example initiation:
+<A NAME="96"><A>         * 
+<A NAME="97"><A>         * 1. Instantiate the CachedResolve component.
+<A NAME="98"><A>         * 2. Register the example program as listener in order to get the 
+<A NAME="99"><A>         *    component's notifications.
+<A NAME="100"><A>         * 3. Initiate the CachedResolve component.
+<A NAME="101"><A>         * 4. Provide the Sametime server connection details
+<A NAME="102"><A>         *    
+<A NAME="103"><A>         *
+<A NAME="104"><A>         */</FONT>
+<A NAME="105"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> init()
+<A NAME="106"><A>        {
+<A NAME="107"><A>            System.out.println(_className+<FONT ID="StringLiteral">": init started"</FONT>);
+<A NAME="108"><A>            
+<A NAME="109"><A>            <FONT ID="SingleLineComment">//Instantiate the CachedResolve component.
+<A NAME="110"><A></FONT>            _service =   CachedResolveComp.getInstance();
+<A NAME="111"><A>            <FONT ID="SingleLineComment">//Register the example program as listener
+<A NAME="112"><A></FONT>            _service.addListener(<FONT ID="This">this</FONT>); 
+<A NAME="113"><A>            <FONT ID="SingleLineComment">//Initiate the CachedResolve component.
+<A NAME="114"><A></FONT>            _service.initiate();
+<A NAME="115"><A>            
+<A NAME="116"><A>            <FONT ID="SingleLineComment">//Create the Sametime server connection details
+<A NAME="117"><A></FONT>            <FONT ID="SingleLineComment">//When the STSession will be available the loggedIn()
+<A NAME="118"><A></FONT>            <FONT ID="SingleLineComment">//method will be called by the LoginListener
+<A NAME="119"><A></FONT>            createSTSession();
+<A NAME="120"><A>       }
+<A NAME="121"><A>        
+<A NAME="122"><A>        <FONT ID="FormalComment">/**
+<A NAME="123"><A>         * Create Sametime session STSession object.
+<A NAME="124"><A>         * The CachedResolve uses the STSession for real resolve requests.
+<A NAME="125"><A>         * 
+<A NAME="126"><A>         */</FONT>
+<A NAME="127"><A>        <FONT ID="Void">void</FONT> createSTSession() {
+<A NAME="128"><A>            
+<A NAME="129"><A>            System.out.println(_className+<FONT ID="StringLiteral">": createSTSession started"</FONT>);
+<A NAME="130"><A>            
+<A NAME="131"><A>            <FONT ID="SingleLineComment">//Init ST components &amp; session.
+<A NAME="132"><A></FONT>            ServerAppService saService = initSTComponents();
+<A NAME="133"><A>            
+<A NAME="134"><A>            <FONT ID="SingleLineComment">//Login to ST server.
+<A NAME="135"><A></FONT>            loginToServer(saService);
+<A NAME="136"><A>        }
+<A NAME="137"><A>        
+<A NAME="138"><A>        <FONT ID="FormalComment">/**
+<A NAME="139"><A>         * Initiate the Sametime server components, 
+<A NAME="140"><A>         * creates a ST session, loads components and starts the session.
+<A NAME="141"><A>         * 
+<A NAME="142"><A>         *  @see STSession
+<A NAME="143"><A>         */</FONT>
+<A NAME="144"><A>        <FONT ID="Private">private</FONT> ServerAppService initSTComponents() {
+<A NAME="145"><A>            
+<A NAME="146"><A>            System.out.println(_className+<FONT ID="StringLiteral">": initSTComponents started"</FONT>);
+<A NAME="147"><A>            
+<A NAME="148"><A>            <FONT ID="SingleLineComment">//Create the Sametime session.
+<A NAME="149"><A></FONT>            <FONT ID="Try">try</FONT> {
+<A NAME="150"><A>                _stSession = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">"CRLoader"</FONT> + toString());
+<A NAME="151"><A>            }
+<A NAME="152"><A>            <FONT ID="Catch">catch</FONT> (DuplicateObjectException e) {
+<A NAME="153"><A>                System.out.println(_className+<FONT ID="StringLiteral">": initSTComponents STSession initiation: "</FONT>+e.getMessage());
+<A NAME="154"><A>            }
+<A NAME="155"><A>            
+<A NAME="156"><A>            <FONT ID="SingleLineComment">//Set the Sametime components.
+<A NAME="157"><A></FONT>            String [] compNames = {ServerAppService.COMP_NAME,
+<A NAME="158"><A>                    LookupService.COMP_NAME,
+<A NAME="159"><A>                    CommunityEventsService.COMP_NAME,
+<A NAME="160"><A>                };
+<A NAME="161"><A>            
+<A NAME="162"><A>            <FONT ID="SingleLineComment">//Load the Sametime components.
+<A NAME="163"><A></FONT>            _stSession.loadComponents(compNames);
+<A NAME="164"><A>            
+<A NAME="165"><A>            <FONT ID="SingleLineComment">//Get the server application service instance.
+<A NAME="166"><A></FONT>            ServerAppService saService = (ServerAppService) _stSession.getCompApi(ServerAppService.COMP_NAME);
+<A NAME="167"><A>            
+<A NAME="168"><A>            <FONT ID="SingleLineComment">//Register as listener in order to be notifiyed when the STSession
+<A NAME="169"><A></FONT>            <FONT ID="SingleLineComment">//created and connected to the Sametime server.
+<A NAME="170"><A></FONT>            saService.addLoginListener(<FONT ID="This">this</FONT>);
+<A NAME="171"><A>        
+<A NAME="172"><A>            <FONT ID="SingleLineComment">//Start the Sametime session.
+<A NAME="173"><A></FONT>            _stSession.start(); 
+<A NAME="174"><A>            <FONT ID="Return">return</FONT> saService;
+<A NAME="175"><A>            
+<A NAME="176"><A>      }
+<A NAME="177"><A>        
+<A NAME="178"><A>        <FONT ID="FormalComment">/**
+<A NAME="179"><A>         * Login to the Sametime server 
+<A NAME="180"><A>         */</FONT>
+<A NAME="181"><A>        <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> loginToServer(ServerAppService saService) {
+<A NAME="182"><A>            System.out.println(_className+<FONT ID="StringLiteral">": loginToServer started"</FONT>);
+<A NAME="183"><A>            System.out.println(_className+<FONT ID="StringLiteral">": loginToServer about to connect: "</FONT>+_serverURL+<FONT ID="StringLiteral">" port: "</FONT>+_port);
+<A NAME="184"><A>            
+<A NAME="185"><A>            <FONT ID="Int">int</FONT> socketConnectTimeout = <FONT ID="IntegerLiteral">17000</FONT>;
+<A NAME="186"><A>            <FONT ID="Short">short</FONT> loginType = STUserInstance.LT_SERVER_APP;
+<A NAME="187"><A>            <FONT ID="Int">int</FONT>[] services = {};
+<A NAME="188"><A>                
+<A NAME="189"><A>            Connection[] connections = { <FONT ID="New">new</FONT> SocketConnection(_port, socketConnectTimeout)};
+<A NAME="190"><A>            saService.setConnectivity(connections);
+<A NAME="191"><A>            saService.loginAsServerApp(_serverURL, loginType, <FONT ID="StringLiteral">"CachedResolveExample"</FONT>, services);
+<A NAME="192"><A>            
+<A NAME="193"><A>        }
+<A NAME="194"><A>
+<A NAME="195"><A>
+<A NAME="196"><A>        
+<A NAME="197"><A>        <FONT ID="MultiLineComment">/*
+<A NAME="198"><A>         * ***********************************************
+<A NAME="199"><A>         * The CachedResolveListener interface implementation.
+<A NAME="200"><A>         * This interface is used in order to get notifications 
+<A NAME="201"><A>         * from the CachedResolve component.
+<A NAME="202"><A>         * ***********************************************
+<A NAME="203"><A>         */</FONT>
+<A NAME="204"><A>     
+<A NAME="205"><A>        <FONT ID="FormalComment">/**
+<A NAME="206"><A>         * CachedResolve component notification:
+<A NAME="207"><A>         * The CachedResolve component is ready to perform resolve requests.
+<A NAME="208"><A>         * That notification arrive when there is at least one available STSession.  
+<A NAME="209"><A>         */</FONT>
+<A NAME="210"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> resolverAvailable() {
+<A NAME="211"><A>            System.out.println(_className+<FONT ID="StringLiteral">": resolverAvailable: resolve requests can be answered"</FONT>); 
+<A NAME="212"><A>            performResolveRequests();
+<A NAME="213"><A>        }
+<A NAME="214"><A>        
+<A NAME="215"><A>        
+<A NAME="216"><A>
+<A NAME="217"><A>
+<A NAME="218"><A>        <FONT ID="FormalComment">/**
+<A NAME="219"><A>         * CachedResolve component notification:
+<A NAME="220"><A>         * The CachedResolve component does not have any available STSession.
+<A NAME="221"><A>         * Any following resolve request will be rejected, until the following resolverAvailable()
+<A NAME="222"><A>         * notification.
+<A NAME="223"><A>         */</FONT>
+<A NAME="224"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> resolverNotAvailable() {
+<A NAME="225"><A>            System.out.println(_className+<FONT ID="StringLiteral">": resolverNotAvailable: resolve requests will be rejected until further notice"</FONT>); 
+<A NAME="226"><A>        }
+<A NAME="227"><A>        
+<A NAME="228"><A>        
+<A NAME="229"><A>        
+<A NAME="230"><A>        <FONT ID="FormalComment">/**
+<A NAME="231"><A>         * CachedResolve component notification:
+<A NAME="232"><A>         * The resolve request was answered successfully. 
+<A NAME="233"><A>         * @param externalUserIdentification - the requested user
+<A NAME="234"><A>         * @param stId - the resolved STId
+<A NAME="235"><A>         */</FONT>  
+<A NAME="236"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> nameResolved(String externalUserIdentification, STId stId, STEvent origEvent) {
+<A NAME="237"><A>            System.out.println(_className+<FONT ID="StringLiteral">": nameResolved: external user: "</FONT>+
+<A NAME="238"><A>                    externalUserIdentification+<FONT ID="StringLiteral">" was resolved as: "</FONT>+stId); 
+<A NAME="239"><A>            
+<A NAME="240"><A>            <FONT ID="SingleLineComment">//The example specific implementation counts the number of resolve answers.
+<A NAME="241"><A></FONT>            <FONT ID="SingleLineComment">//When all the resolve answers arrive it flush the cache memory
+<A NAME="242"><A></FONT>            <FONT ID="SingleLineComment">//to the CachedResolve persistent file.
+<A NAME="243"><A></FONT>            <FONT ID="SingleLineComment">//In this section the successful resolve answers are counted.
+<A NAME="244"><A></FONT>            <FONT ID="Synchronized">synchronized</FONT>(_service) {
+<A NAME="245"><A>                _resCnt--;
+<A NAME="246"><A>                <FONT ID="If">if</FONT> (_resCnt == <FONT ID="IntegerLiteral">0</FONT>) {
+<A NAME="247"><A>                    _service.flushMemoryToFile();
+<A NAME="248"><A>                }
+<A NAME="249"><A>            }
+<A NAME="250"><A>        }
+<A NAME="251"><A>
+<A NAME="252"><A>    
+<A NAME="253"><A>        
+<A NAME="254"><A>         <FONT ID="FormalComment">/**
+<A NAME="255"><A>         * The CachedResolve component encountered an error.
+<A NAME="256"><A>         * @param event - the reported CachedResolve component event.
+<A NAME="257"><A>         */</FONT>
+<A NAME="258"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> errorEvent(CachedResolveErrorEvent event) {
+<A NAME="259"><A>            System.out.println(_className+<FONT ID="StringLiteral">": errorEvent: error: "</FONT>+
+<A NAME="260"><A>                    event.getExternalUserId()+ <FONT ID="StringLiteral">" desc= "</FONT>+ event.getDescription());
+<A NAME="261"><A>            
+<A NAME="262"><A>            
+<A NAME="263"><A>            <FONT ID="SingleLineComment">//The example specific implementation counts the number of resolve answers.
+<A NAME="264"><A></FONT>            <FONT ID="SingleLineComment">//When all the resolve answers arrive it flush the cache memory
+<A NAME="265"><A></FONT>            <FONT ID="SingleLineComment">//to the CachedResolve persistent file.
+<A NAME="266"><A></FONT>            <FONT ID="SingleLineComment">//In this section the failing resolve answers are counted.
+<A NAME="267"><A></FONT>            
+<A NAME="268"><A>            <FONT ID="If">if</FONT> (event.getId() == CachedResolveErrorEvent.INTERNAL_ERROR_RESOLVING_USER || 
+<A NAME="269"><A>                    event.getId() == CachedResolveErrorEvent.ERROR_USER_RESOLVING_IN_PROCESS ||
+<A NAME="270"><A>                    event.getId() == CachedResolveErrorEvent.ERROR_RESOLVING_NONE_UNIQUE_USER) {
+<A NAME="271"><A>                    <FONT ID="Synchronized">synchronized</FONT>(_service) {
+<A NAME="272"><A>                        _resCnt--;
+<A NAME="273"><A>                        <FONT ID="If">if</FONT> (_resCnt == <FONT ID="IntegerLiteral">0</FONT>) {
+<A NAME="274"><A>                            _service.flushMemoryToFile();
+<A NAME="275"><A>                        }
+<A NAME="276"><A>                    }
+<A NAME="277"><A>                }
+<A NAME="278"><A>        }
+<A NAME="279"><A>    
+<A NAME="280"><A>        
+<A NAME="281"><A>        
+<A NAME="282"><A>        <FONT ID="FormalComment">/**
+<A NAME="283"><A>         * CachedResolve component notification:
+<A NAME="284"><A>         * The Cache persistent file was updated successfully  
+<A NAME="285"><A>         */</FONT>
+<A NAME="286"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> flushMemoryToFileCompleted() {
+<A NAME="287"><A>            System.out.println(_className+<FONT ID="StringLiteral">": flushMemoryToFileCompleted: The Cache persistent file was updated successfully "</FONT>);
+<A NAME="288"><A>            endOfExample();
+<A NAME="289"><A>        }
+<A NAME="290"><A>
+<A NAME="291"><A>        <FONT ID="FormalComment">/**
+<A NAME="292"><A>         * CachedResolve component notification:
+<A NAME="293"><A>         * The Cache persistent file was loaded successfully  
+<A NAME="294"><A>         */</FONT>
+<A NAME="295"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loadFileToMemoryCompleted() {
+<A NAME="296"><A>            System.out.println(_className+<FONT ID="StringLiteral">": loadFileToMemoryCompleted: The Cache persistent file was loaded successfully "</FONT>);
+<A NAME="297"><A>        }
+<A NAME="298"><A>        
+<A NAME="299"><A>        
+<A NAME="300"><A>        
+<A NAME="301"><A>
+<A NAME="302"><A>
+<A NAME="303"><A>        <FONT ID="FormalComment">/**
+<A NAME="304"><A>         * ***********************************************
+<A NAME="305"><A>         * The CachedResolveService interface usage.
+<A NAME="306"><A>         * The CachedResolve component provides the CachedResolveService API.
+<A NAME="307"><A>         * 
+<A NAME="308"><A>         * The major service is the resolveUser(externalUserId)
+<A NAME="309"><A>         * The notification about the resolve request will be one of the following:
+<A NAME="310"><A>         * 1. nameResolved(String externalUserIdentification, STId stId) 
+<A NAME="311"><A>         *    will be activated upon successful resolve.
+<A NAME="312"><A>         * 2. errorEvent(CachedResolveErrorEvent event)   
+<A NAME="313"><A>         *    will be activated upon failed resolve. 
+<A NAME="314"><A>         * 
+<A NAME="315"><A>         * ***********************************************
+<A NAME="316"><A>         */</FONT>
+<A NAME="317"><A>        <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> performResolveRequests() {
+<A NAME="318"><A>            System.out.println(_className+<FONT ID="StringLiteral">": performResolveRequests started"</FONT>);
+<A NAME="319"><A>            
+<A NAME="320"><A>            ArrayList users = buildUsersList();
+<A NAME="321"><A>            _resCnt = users.size();
+<A NAME="322"><A>            
+<A NAME="323"><A>            <FONT ID="For">for</FONT> (<FONT ID="Int">int</FONT> i=<FONT ID="IntegerLiteral">0</FONT>; i&lt; _resCnt; i++){
+<A NAME="324"><A>                System.out.println(_className+<FONT ID="StringLiteral">": performResolveRequests. Resolve request for: "</FONT>+users.get(i));
+<A NAME="325"><A>                _service.resolveUser((String) users.get(i));
+<A NAME="326"><A>                
+<A NAME="327"><A>            }
+<A NAME="328"><A>        
+<A NAME="329"><A>        }
+<A NAME="330"><A>
+<A NAME="331"><A>        <FONT ID="FormalComment">/**
+<A NAME="332"><A>         * ***********************************************
+<A NAME="333"><A>         * Build the list of user names that the example 
+<A NAME="334"><A>         * will resolve.
+<A NAME="335"><A>         * ***********************************************
+<A NAME="336"><A>         */</FONT>
+<A NAME="337"><A>        <FONT ID="Private">private</FONT> ArrayList buildUsersList() {
+<A NAME="338"><A>            ArrayList users = <FONT ID="New">new</FONT> ArrayList();
+<A NAME="339"><A>            
+<A NAME="340"><A>            <FONT ID="SingleLineComment">//This is the place to add the list of your example users
+<A NAME="341"><A></FONT>            <FONT ID="SingleLineComment">//to resolve.
+<A NAME="342"><A></FONT>            
+<A NAME="343"><A>            users.add(<FONT ID="StringLiteral">"****@*****.com"</FONT>);
+<A NAME="344"><A>            
+<A NAME="345"><A>            
+<A NAME="346"><A>            <FONT ID="Return">return</FONT> users;
+<A NAME="347"><A>        }
+<A NAME="348"><A>        
+<A NAME="349"><A>        
+<A NAME="350"><A>        <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> endOfExample() {
+<A NAME="351"><A>            System.out.println(_className+<FONT ID="StringLiteral">": endOfExample: The CachedResolve example ended. - exiting"</FONT>);
+<A NAME="352"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="353"><A>        }
+<A NAME="354"><A>
+<A NAME="355"><A>        
+<A NAME="356"><A>        <FONT ID="MultiLineComment">/*
+<A NAME="357"><A>         * ***********************************************
+<A NAME="358"><A>         * The LoginListener interface implementation.
+<A NAME="359"><A>         * This interface is used in order to get notifications 
+<A NAME="360"><A>         * about Sametime server login and logout event.
+<A NAME="361"><A>         * ***********************************************
+<A NAME="362"><A>         */</FONT>
+<A NAME="363"><A>        
+<A NAME="364"><A>    
+<A NAME="365"><A>
+<A NAME="366"><A>        <FONT ID="MultiLineComment">/*
+<A NAME="367"><A>         * The CachedResolveExample application successfully logged-in to
+<A NAME="368"><A>         * the provided Sametime server.
+<A NAME="369"><A>         */</FONT>
+<A NAME="370"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event) {
+<A NAME="371"><A>            System.out.println(_className+<FONT ID="StringLiteral">": loggedIn started"</FONT>);
+<A NAME="372"><A>            System.out.println(_className+<FONT ID="StringLiteral">": loggedIn to: "</FONT>+event.getHost());
+<A NAME="373"><A>            
+<A NAME="374"><A>            <FONT ID="SingleLineComment">// Set the logged-in STSession at the CachedResolve component,
+<A NAME="375"><A></FONT>            <FONT ID="SingleLineComment">//  for performing real resolve requests.
+<A NAME="376"><A></FONT>            _service.addServerSession(_stSession, _serverName);
+<A NAME="377"><A>        }
+<A NAME="378"><A>
+<A NAME="379"><A>        <FONT ID="MultiLineComment">/*
+<A NAME="380"><A>         * The CachedResolveExample application logged-out from 
+<A NAME="381"><A>         * the provided Sametime server.
+<A NAME="382"><A>         */</FONT>
+<A NAME="383"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event) {
+<A NAME="384"><A>            System.out.println(_className+<FONT ID="StringLiteral">": loggedOut started"</FONT>);
+<A NAME="385"><A>            System.out.println(_className+<FONT ID="StringLiteral">": loggedOut from: "</FONT>+event.getHost());
+<A NAME="386"><A>            <FONT ID="SingleLineComment">//  Remove the logged-out STSession from the CachedResolve component.
+<A NAME="387"><A></FONT>            _service.removeServerSession(_stSession, _serverName);
+<A NAME="388"><A>        }
+<A NAME="389"><A>        
+<A NAME="390"><A>        <FONT ID="FormalComment">/**
+<A NAME="391"><A>         * Example initiation
+<A NAME="392"><A>         * @param args
+<A NAME="393"><A>         */</FONT>
+<A NAME="394"><A>        <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main (String[] args){
+<A NAME="395"><A>            
+<A NAME="396"><A>            System.out.println(<FONT ID="StringLiteral">"CachedResolveExample: main"</FONT>);
+<A NAME="397"><A>            
+<A NAME="398"><A>            <FONT ID="SingleLineComment">//Create the example program object and activate it.
+<A NAME="399"><A></FONT>            <A HREF="CachedResolveExample.java.html">CachedResolveExample</A> _crExample =  <FONT ID="New">new</FONT> <A HREF="CachedResolveExample.java.html">CachedResolveExample</A>();
+<A NAME="400"><A>            _crExample.init();
+<A NAME="401"><A>       }
+<A NAME="402"><A>
+<A NAME="403"><A>
+<A NAME="404"><A>    
+<A NAME="405"><A>
+<A NAME="406"><A>}
+<A NAME="407"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">CachedResolveExample</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

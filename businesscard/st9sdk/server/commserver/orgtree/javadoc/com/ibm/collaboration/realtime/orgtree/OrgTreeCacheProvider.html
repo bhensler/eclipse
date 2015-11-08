@@ -1,0 +1,457 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+OrgTreeCacheProvider (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Orgtree API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="OrgTreeCacheProvider (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Orgtree API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html" title="interface in com.ibm.collaboration.realtime.orgtree"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeException.html" title="class in com.ibm.collaboration.realtime.orgtree"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="OrgTreeCacheProvider.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.orgtree</FONT>
+<BR>
+Interface OrgTreeCacheProvider</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeProvider.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgTreeProvider</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeWalker.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgTreeWalker</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>OrgTreeCacheProvider</B><DT>extends <A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeProvider.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgTreeProvider</A></DL>
+</PRE>
+
+<P>
+Interface which provides the caching functionality used by the organization tree SA and also
+ by the client.  In otherwords, the orgTreeCacheProvider can be used to manage the cache for the 
+ SA and the client.
+ 
+ This interface is for internal use only.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR 1</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html#CACHE_TIME">CACHE_TIME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html#EXPANDED">EXPANDED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html#cacheChildren(java.lang.String, java.util.List, boolean)">cacheChildren</A></B>(java.lang.String&nbsp;parentId,
+              java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&gt;&nbsp;childNodes,
+              boolean&nbsp;saveCache)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cache the children of the OrgNode represented by the given parent org node ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html#cachePathToContact(com.ibm.collaboration.realtime.orgtree.OrgNode, boolean)">cachePathToContact</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&nbsp;targetNode,
+                   boolean&nbsp;saveCache)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cache the path to the given OrgNode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html#cacheRootNode(com.ibm.collaboration.realtime.orgtree.OrgNode, boolean)">cacheRootNode</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&nbsp;rootNodeContainer,
+              boolean&nbsp;saveCache)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cache the given root OrgNode container</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html#getRootNode(java.lang.String, boolean)">getRootNode</A></B>(java.lang.String&nbsp;requestorContactId,
+            boolean&nbsp;useShallowCopy)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the cached root node.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html#removeChildrenFromCache(java.lang.String)">removeChildrenFromCache</A></B>(java.lang.String&nbsp;orgNodeId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the given OrgNode's children recursively from the cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html#resetCache()">resetCache</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Causes the OrgTreeCacheProvider to reset the persistent cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html#saveCache()">saveCache</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Causes the OrgTreeCacheProvider to save the in memory cache to persistent storage.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.orgtree.OrgTreeProvider"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.orgtree.<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeProvider.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgTreeProvider</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeProvider.html#getChildren(java.lang.String, java.lang.String)">getChildren</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeProvider.html#getPathToContact(java.lang.String, java.lang.String)">getPathToContact</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeProvider.html#getRootNode(java.lang.String)">getRootNode</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.orgtree.OrgTreeWalker"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.orgtree.<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeWalker.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgTreeWalker</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeWalker.html#walkOrgTree(java.lang.String, java.lang.String, com.ibm.collaboration.realtime.orgtree.OrgTreeWalkerHandler, java.util.List)">walkOrgTree</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CACHE_TIME"><!-- --></A><H3>
+CACHE_TIME</H3>
+<PRE>
+static final java.lang.String <B>CACHE_TIME</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.orgtree.OrgTreeCacheProvider.CACHE_TIME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EXPANDED"><!-- --></A><H3>
+EXPANDED</H3>
+<PRE>
+static final java.lang.String <B>EXPANDED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.orgtree.OrgTreeCacheProvider.EXPANDED">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getRootNode(java.lang.String, boolean)"><!-- --></A><H3>
+getRootNode</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A> <B>getRootNode</B>(java.lang.String&nbsp;requestorContactId,
+                    boolean&nbsp;useShallowCopy)
+                    throws javax.naming.NamingException</PRE>
+<DL>
+<DD>Return the cached root node.  The organization tree SA uses a shallow copy so as not to pass the fully cached tree
+ over the wire to remote callers.  The client on the other hand uses full copies in order to restore the fully cached
+ tree in the organization view UI.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>requestorContactId</CODE> - the contact ID of the person making this request.<DD><CODE>useShallowCopy</CODE> - Whether or not to return OrgNodes that have no children (a shallow copy of the OrgNode).
+<DT><B>Returns:</B><DD>the cached root node.
+<DT><B>Throws:</B>
+<DD><CODE>javax.naming.NamingException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="cacheRootNode(com.ibm.collaboration.realtime.orgtree.OrgNode, boolean)"><!-- --></A><H3>
+cacheRootNode</H3>
+<PRE>
+void <B>cacheRootNode</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&nbsp;rootNodeContainer,
+                   boolean&nbsp;saveCache)</PRE>
+<DL>
+<DD>Cache the given root OrgNode container
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>rootNodeContainer</CODE> - <DD><CODE>saveCache</CODE> - Whether or not to save the cache.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="cacheChildren(java.lang.String, java.util.List, boolean)"><!-- --></A><H3>
+cacheChildren</H3>
+<PRE>
+void <B>cacheChildren</B>(java.lang.String&nbsp;parentId,
+                   java.util.List&lt;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&gt;&nbsp;childNodes,
+                   boolean&nbsp;saveCache)</PRE>
+<DL>
+<DD>Cache the children of the OrgNode represented by the given parent org node ID.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parentId</CODE> - The ID of the parent OrgNode.<DD><CODE>childNodes</CODE> - the child OrgNode objects to persist.<DD><CODE>saveCache</CODE> - Whether or not to save the cache.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="cachePathToContact(com.ibm.collaboration.realtime.orgtree.OrgNode, boolean)"><!-- --></A><H3>
+cachePathToContact</H3>
+<PRE>
+void <B>cachePathToContact</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNode.html" title="interface in com.ibm.collaboration.realtime.orgtree">OrgNode</A>&nbsp;targetNode,
+                        boolean&nbsp;saveCache)</PRE>
+<DL>
+<DD>Cache the path to the given OrgNode.  The OrgNode includes the ancestry of parent OrgNodes that make up the path.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>targetNode</CODE> - The targetNode to cache.<DD><CODE>saveCache</CODE> - Whether or not to save the cache.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="saveCache()"><!-- --></A><H3>
+saveCache</H3>
+<PRE>
+void <B>saveCache</B>()</PRE>
+<DL>
+<DD>Causes the OrgTreeCacheProvider to save the in memory cache to persistent storage.
+ Not typically necessary unless OrgNode object attributes are updated outside of the OrgTreeCacheProvider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="resetCache()"><!-- --></A><H3>
+resetCache</H3>
+<PRE>
+void <B>resetCache</B>()</PRE>
+<DL>
+<DD>Causes the OrgTreeCacheProvider to reset the persistent cache.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeChildrenFromCache(java.lang.String)"><!-- --></A><H3>
+removeChildrenFromCache</H3>
+<PRE>
+void <B>removeChildrenFromCache</B>(java.lang.String&nbsp;orgNodeId)</PRE>
+<DL>
+<DD>Removes the given OrgNode's children recursively from the cache.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>orgNodeId</CODE> - The ID of the OrgNode whose children are to be removed.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgNodeProvider.html" title="interface in com.ibm.collaboration.realtime.orgtree"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/orgtree/OrgTreeException.html" title="class in com.ibm.collaboration.realtime.orgtree"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/orgtree/OrgTreeCacheProvider.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="OrgTreeCacheProvider.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

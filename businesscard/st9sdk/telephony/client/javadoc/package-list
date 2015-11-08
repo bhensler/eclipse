@@ -1,0 +1,14 @@
+com.ibm.collaboration.realtime.contacts.storage
+com.ibm.collaboration.realtime.telephony
+com.ibm.collaboration.realtime.telephony.device
+com.ibm.collaboration.realtime.telephony.endpoint
+com.ibm.collaboration.realtime.telephony.event
+com.ibm.collaboration.realtime.telephony.exception
+com.ibm.collaboration.realtime.telephony.media
+com.ibm.collaboration.realtime.telephony.number
+com.ibm.collaboration.realtime.telephony.service
+com.ibm.collaboration.realtime.telephony.service.device
+com.ibm.collaboration.realtime.telephony.sut.phonebook.external
+com.ibm.collaboration.realtime.telephony.sut.phonebook.external.util
+com.ibm.collaboration.realtime.telephony.ui.extension
+com.ibm.collaboration.realtime.telephony.ui.menu.extension

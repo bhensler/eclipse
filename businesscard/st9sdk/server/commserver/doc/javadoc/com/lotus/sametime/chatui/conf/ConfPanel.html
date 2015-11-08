@@ -1,0 +1,1268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>ConfPanel</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ConfPanel";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/chatui/conf/PlacesModelImpl.html" title="class in com.lotus.sametime.chatui.conf"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/chatui/conf/ConfPanel.html" target="_top">Frames</a></li>
+<li><a href="ConfPanel.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_java.awt.Panel">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_java.awt.Component">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.chatui.conf</div>
+<h2 title="Class ConfPanel" class="title">Class ConfPanel</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Component</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Container</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Panel</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.chatui.conf.ConfPanel</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatAreaListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatSendFieldListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a>, java.awt.event.FocusListener, java.awt.image.ImageObserver, java.awt.MenuContainer, java.io.Serializable, java.util.EventListener, javax.accessibility.Accessible</dd>
+</dl>
+<hr>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;
+<div class="deprecatedContent">due to the availability of additional non-AWT GUI frameworks.
+             This component is no longer supported.</div>
+</div>
+<br>
+<pre>public class <span class="strong">ConfPanel</span>
+extends java.awt.Panel
+implements <a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatSendFieldListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatAreaListener</a>, java.awt.event.FocusListener, <a href="../../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a></pre>
+<div class="block">Class representing the conference panel.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../serialized-form.html#com.lotus.sametime.chatui.conf.ConfPanel">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Panel">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Panel</h3>
+<code>java.awt.Panel.AccessibleAWTPanel</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Container">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Container</h3>
+<code>java.awt.Container.AccessibleAWTContainer</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Component">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Component</h3>
+<code>java.awt.Component.AccessibleAWTComponent, java.awt.Component.BaselineResizeBehavior, java.awt.Component.BltBufferStrategy, java.awt.Component.FlipBufferStrategy</code></li>
+</ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_java.awt.Component">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;java.awt.Component</h3>
+<code>BOTTOM_ALIGNMENT, CENTER_ALIGNMENT, LEFT_ALIGNMENT, RIGHT_ALIGNMENT, TOP_ALIGNMENT</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_java.awt.image.ImageObserver">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;java.awt.image.ImageObserver</h3>
+<code>ABORT, ALLBITS, ERROR, FRAMEBITS, HEIGHT, PROPERTIES, SOMEBITS, WIDTH</code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#ConfPanel(com.lotus.sametime.chatui.conf.ConfModel)">ConfPanel</a></strong>(<a href="../../../../../com/lotus/sametime/chatui/conf/ConfModel.html" title="interface in com.lotus.sametime.chatui.conf">ConfModel</a>&nbsp;model)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates a new conference panel, associated with the given model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#ConfPanel(com.lotus.sametime.core.comparch.STSession, java.lang.String, com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.core.types.STUser[], java.lang.String)">ConfPanel</a></strong>(<a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session,
+         java.lang.String&nbsp;name,
+         <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+         <a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;people,
+         java.lang.String&nbsp;invitation)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates a new conference panel, along with the model and the conference.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#addChatAreaListener(com.lotus.sametime.guiutils.chat.ChatAreaListener)">addChatAreaListener</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatAreaListener</a>&nbsp;listener)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Adds the specified edit listener to the chat transcript.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#addChatEditListener(com.lotus.sametime.chatui.ChatEditListener)">addChatEditListener</a></strong>(<a href="../../../../../com/lotus/sametime/chatui/ChatEditListener.html" title="interface in com.lotus.sametime.chatui">ChatEditListener</a>&nbsp;listener)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Adds the specified edit listener to conf panel.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#chatAreaContentChanged(com.lotus.sametime.guiutils.chat.ChatAreaEvent)">chatAreaContentChanged</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatAreaEvent</a>&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Chat area content has changed</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#chatAreaStatusChanged(com.lotus.sametime.guiutils.chat.ChatAreaEvent)">chatAreaStatusChanged</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatAreaEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Selection has changed in chat area.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#chatURLClicked(com.lotus.sametime.guiutils.chat.ChatAreaEvent)">chatURLClicked</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatAreaEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Chat URL has been clicked.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#clearAll()">clearAll</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Clears all the contents of the focused text component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#contentChanged(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">contentChanged</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The textfield content changed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#copy()">copy</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Copies from focused text component(chat area or send field) into the
+ clipboard.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#cut()">cut</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Cuts the current selection into clipboard.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#enableSendMessage(boolean)">enableSendMessage</a></strong>(boolean&nbsp;enabled)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies the listener whether it should enable/disable sending of new
+ messages</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#encryptionModeChanged(boolean)">encryptionModeChanged</a></strong>(boolean&nbsp;isEncrypted)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that an encrption mode has changed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#focusGained(java.awt.event.FocusEvent)">focusGained</a></strong>(java.awt.event.FocusEvent&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Either send field or chat area gained focus.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#focusLost(java.awt.event.FocusEvent)">focusLost</a></strong>(java.awt.event.FocusEvent&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Either send field or chat area lost focus</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Vector</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#getChatEditListeners()">getChatEditListeners</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets chat edit listeners.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendField.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendField</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#getChatSendField()">getChatSendField</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#getColumnHeader(com.lotus.sametime.guiutils.tree.ColumnAttributes)">getColumnHeader</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets the column header.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#getContent(com.lotus.sametime.guiutils.tree.ColumnAttributes, java.util.Hashtable)">getContent</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column,
+          java.util.Hashtable&nbsp;values)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets the content.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#getEmptyContent(com.lotus.sametime.guiutils.tree.ColumnAttributes)">getEmptyContent</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets empty content.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#getSelectedUsers()">getSelectedUsers</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Returns a list of users currently selected in the people list.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#invitationDeclined(com.lotus.sametime.core.types.STUser, int)">invitationDeclined</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;inviteeInfo,
+                  int&nbsp;reason)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An invitee declined a conference invitation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#messageReceived(com.lotus.sametime.chatui.ChatMessage)">messageReceived</a></strong>(<a href="../../../../../com/lotus/sametime/chatui/ChatMessage.html" title="class in com.lotus.sametime.chatui">ChatMessage</a>&nbsp;message)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">A message was received.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#paste()">paste</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Pastes the contents of the clipboard to the focused text component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#removeAllChatEditListeners()">removeAllChatEditListeners</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes all the chat edit listeners so that it no longer receives Conf
+ events.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#removeChatAreaListener(com.lotus.sametime.guiutils.chat.ChatAreaListener)">removeChatAreaListener</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatAreaListener</a>&nbsp;listener)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the specified edit listener to the chat transcript.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#removeChatEditListener(com.lotus.sametime.chatui.ChatEditListener)">removeChatEditListener</a></strong>(<a href="../../../../../com/lotus/sametime/chatui/ChatEditListener.html" title="interface in com.lotus.sametime.chatui">ChatEditListener</a>&nbsp;listener)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the specified edit listener so that it no longer receives Conf
+ events.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#requestFocus()">requestFocus</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Overrides requestFocus to set the focus on the text field part of the
+ panel.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#responseCleared(com.lotus.sametime.core.types.STUser)">responseCleared</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;userInfo)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that the chat partner cleared his response field.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#responseStarted(com.lotus.sametime.core.types.STUser)">responseStarted</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;userInfo)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that the chat partner started writing a response.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#selectionChanged(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">selectionChanged</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Selection has changed in send field.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#sendAllText()">sendAllText</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Sends all text typed by the user until now.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#sendFailed(int)">sendFailed</a></strong>(int&nbsp;reason)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notfication of a failed send message event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#setTextModifier(com.lotus.sametime.chatui.TextModifier)">setTextModifier</a></strong>(<a href="../../../../../com/lotus/sametime/chatui/TextModifier.html" title="interface in com.lotus.sametime.chatui">TextModifier</a>&nbsp;textModifier)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#setVisible(boolean)">setVisible</a></strong>(boolean&nbsp;visible)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies the listener that it should be displayed or hidden.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#startedResponse(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">startedResponse</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The user has started writing his repsonse.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#stoppedResponse(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">stoppedResponse</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The user has stopped writing his response.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#switchToMeeting(com.lotus.sametime.chatui.MeetingInfo)">switchToMeeting</a></strong>(<a href="../../../../../com/lotus/sametime/chatui/MeetingInfo.html" title="class in com.lotus.sametime.chatui">MeetingInfo</a>&nbsp;info)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Switches a chat panel that is conference mode to a meeting.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#textSubmitted(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">textSubmitted</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Text was submitted from the text field.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#toFront()">toFront</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Brings this window to the front.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#toolsEnabled(com.lotus.sametime.chatui.ServerAttributes)">toolsEnabled</a></strong>(<a href="../../../../../com/lotus/sametime/chatui/ServerAttributes.html" title="class in com.lotus.sametime.chatui">ServerAttributes</a>&nbsp;sa)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The event on meeting tools enablement often comes a tad later than we
+ want it to.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#updateEditStatus()">updateEditStatus</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Fire event about edit status has changed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#userEntered(com.lotus.sametime.core.types.STUser)">userEntered</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;user)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that a user has entered the conference.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/conf/ConfPanel.html#userLeft(com.lotus.sametime.core.types.STUser)">userLeft</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;user)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that a user has left the conference.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Panel">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Panel</h3>
+<code>addNotify, getAccessibleContext</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Container">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Container</h3>
+<code>add, add, add, add, add, addContainerListener, addImpl, addPropertyChangeListener, addPropertyChangeListener, applyComponentOrientation, areFocusTraversalKeysSet, countComponents, deliverEvent, doLayout, findComponentAt, findComponentAt, getAlignmentX, getAlignmentY, getComponent, getComponentAt, getComponentAt, getComponentCount, getComponents, getComponentZOrder, getContainerListeners, getFocusTraversalKeys, getFocusTraversalPolicy, getInsets, getLayout, getListeners, getMaximumSize, getMinimumSize, getMousePosition, getPreferredSize, insets, invalidate, isAncestorOf, isFocusCycleRoot, isFocusCycleRoot, isFocusTraversalPolicyProvider, isFocusTraversalPolicySet, isValidateRoot, layout, list, list, locate, minimumSize, paint, paintComponents, paramString, preferredSize, print, printComponents, processContainerEvent, processEvent, remove, remove, removeAll, removeContainerListener, removeNotify, setComponentZOrder, setFocusCycleRoot, setFocusTraversalKeys, setFocusTraversalPolicy, setFocusTraversalPolicyProvider, setFont, setLayout, transferFocusDownCycle, update, validate, validateTree</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Component">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Component</h3>
+<code>action, add, addComponentListener, addFocusListener, addHierarchyBoundsListener, addHierarchyListener, addInputMethodListener, addKeyListener, addMouseListener, addMouseMotionListener, addMouseWheelListener, bounds, checkImage, checkImage, coalesceEvents, contains, contains, createImage, createImage, createVolatileImage, createVolatileImage, disable, disableEvents, dispatchEvent, enable, enable, enableEvents, enableInputMethods, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, getBackground, getBaseline, getBaselineResizeBehavior, getBounds, getBounds, getColorModel, getComponentListeners, getComponentOrientation, getCursor, getDropTarget, getFocusCycleRootAncestor, getFocusListeners, getFocusTraversalKeysEnabled, getFont, getFontMetrics, getForeground, getGraphics, getGraphicsConfiguration, getHeight, getHierarchyBoundsListeners, getHierarchyListeners, getIgnoreRepaint, getInputContext, getInputMethodListeners, getInputMethodRequests, getKeyListeners, getLocale, getLocation, getLocation, getLocationOnScreen, getMouseListeners, getMouseMotionListeners, getMousePosition, getMouseWheelListeners, getName, getParent, getPeer, getPropertyChangeListeners, getPropertyChangeListeners, getSize, getSize, getToolkit, getTreeLock, getWidth, getX, getY, gotFocus, handleEvent, hasFocus, hide, imageUpdate, inside, isBackgroundSet, isCursorSet, isDisplayable, isDoubleBuffered, isEnabled, isFocusable, isFocusOwner, isFocusTraversable, isFontSet, isForegroundSet, isLightweight, isMaximumSizeSet, isMinimumSizeSet, isOpaque, isPreferredSizeSet, isShowing, isValid, isVisible, keyDown, keyUp, list, list, list, location, lostFocus, mouseDown, mouseDrag, mouseEnter, mouseExit, mouseMove, mouseUp, move, nextFocus, paintAll, postEvent, prepareImage, prepareImage, printAll, processComponentEvent, processFocusEvent, processHierarchyBoundsEvent, processHierarchyEvent, processInputMethodEvent, processKeyEvent, processMouseEvent, processMouseMotionEvent, processMouseWheelEvent, remove, removeComponentListener, removeFocusListener, removeHierarchyBoundsListener, removeHierarchyListener, removeInputMethodListener, removeKeyListener, removeMouseListener, removeMouseMotionListener, removeMouseWheelListener, removePropertyChangeListener, removePropertyChangeListener, repaint, repaint, repaint, repaint, requestFocus, requestFocusInWindow, requestFocusInWindow, reshape, resize, resize, revalidate, setBackground, setBounds, setBounds, setComponentOrientation, setCursor, setDropTarget, setEnabled, setFocusable, setFocusTraversalKeysEnabled, setForeground, setIgnoreRepaint, setLocale, setLocation, setLocation, setMaximumSize, setMinimumSize, setName, setPreferredSize, setSize, setSize, show, show, size, toString, transferFocus, transferFocusBackward, transferFocusUpCycle</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="ConfPanel(com.lotus.sametime.chatui.conf.ConfModel)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ConfPanel</h4>
+<pre>public&nbsp;ConfPanel(<a href="../../../../../com/lotus/sametime/chatui/conf/ConfModel.html" title="interface in com.lotus.sametime.chatui.conf">ConfModel</a>&nbsp;model)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates a new conference panel, associated with the given model.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>model</code> - The model assigned to this view</dd></dl>
+</li>
+</ul>
+<a name="ConfPanel(com.lotus.sametime.core.comparch.STSession, java.lang.String, com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.core.types.STUser[], java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ConfPanel</h4>
+<pre>public&nbsp;ConfPanel(<a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session,
+         java.lang.String&nbsp;name,
+         <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+         <a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;people,
+         java.lang.String&nbsp;invitation)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates a new conference panel, along with the model and the conference.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>session</code> - The session.</dd><dd><code>name</code> - The conference name.</dd><dd><code>encLevel</code> - The encryption level.</dd><dd><code>people</code> - The people to invite.</dd><dd><code>invitation</code> - The invitation text to send.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="requestFocus()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>requestFocus</h4>
+<pre>public&nbsp;void&nbsp;requestFocus()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Overrides requestFocus to set the focus on the text field part of the
+ panel.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>requestFocus</code>&nbsp;in class&nbsp;<code>java.awt.Component</code></dd>
+</dl>
+</li>
+</ul>
+<a name="getSelectedUsers()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSelectedUsers</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;getSelectedUsers()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Returns a list of users currently selected in the people list.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The list of people selected in the people list.</dd></dl>
+</li>
+</ul>
+<a name="contentChanged(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>contentChanged</h4>
+<pre>public&nbsp;void&nbsp;contentChanged(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The textfield content changed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html#contentChanged(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">contentChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatSendFieldListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendField.html" title="class in com.lotus.sametime.guiutils.chat"><code>ChatSendField</code></a></dd></dl>
+</li>
+</ul>
+<a name="startedResponse(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startedResponse</h4>
+<pre>public&nbsp;void&nbsp;startedResponse(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The user has started writing his repsonse.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html#startedResponse(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">startedResponse</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatSendFieldListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendField.html" title="class in com.lotus.sametime.guiutils.chat"><code>ChatSendField</code></a></dd></dl>
+</li>
+</ul>
+<a name="stoppedResponse(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stoppedResponse</h4>
+<pre>public&nbsp;void&nbsp;stoppedResponse(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The user has stopped writing his response.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html#stoppedResponse(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">stoppedResponse</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatSendFieldListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendField.html" title="class in com.lotus.sametime.guiutils.chat"><code>ChatSendField</code></a></dd></dl>
+</li>
+</ul>
+<a name="textSubmitted(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>textSubmitted</h4>
+<pre>public&nbsp;void&nbsp;textSubmitted(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Text was submitted from the text field.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html#textSubmitted(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">textSubmitted</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatSendFieldListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendField.html" title="class in com.lotus.sametime.guiutils.chat"><code>ChatSendField</code></a></dd></dl>
+</li>
+</ul>
+<a name="selectionChanged(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>selectionChanged</h4>
+<pre>public&nbsp;void&nbsp;selectionChanged(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendFieldEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Selection has changed in send field.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html#selectionChanged(com.lotus.sametime.guiutils.chat.ChatSendFieldEvent)">selectionChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendFieldListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatSendFieldListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendField.html" title="class in com.lotus.sametime.guiutils.chat"><code>ChatSendField</code></a></dd></dl>
+</li>
+</ul>
+<a name="setVisible(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setVisible</h4>
+<pre>public&nbsp;void&nbsp;setVisible(boolean&nbsp;visible)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies the listener that it should be displayed or hidden.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#setVisible(boolean)">setVisible</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>setVisible</code>&nbsp;in class&nbsp;<code>java.awt.Component</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>visible</code> - </dd></dl>
+</li>
+</ul>
+<a name="setTextModifier(com.lotus.sametime.chatui.TextModifier)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTextModifier</h4>
+<pre>public&nbsp;void&nbsp;setTextModifier(<a href="../../../../../com/lotus/sametime/chatui/TextModifier.html" title="interface in com.lotus.sametime.chatui">TextModifier</a>&nbsp;textModifier)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="toFront()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toFront</h4>
+<pre>public&nbsp;void&nbsp;toFront()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Brings this window to the front. Places this window at the top of the
+ stacking order and shows it in front of any other windows.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#toFront()">toFront</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="enableSendMessage(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>enableSendMessage</h4>
+<pre>public&nbsp;void&nbsp;enableSendMessage(boolean&nbsp;enabled)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies the listener whether it should enable/disable sending of new
+ messages</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#enableSendMessage(boolean)">enableSendMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>enabled</code> - enables the sending of new messages.</dd></dl>
+</li>
+</ul>
+<a name="toolsEnabled(com.lotus.sametime.chatui.ServerAttributes)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toolsEnabled</h4>
+<pre>public&nbsp;void&nbsp;toolsEnabled(<a href="../../../../../com/lotus/sametime/chatui/ServerAttributes.html" title="class in com.lotus.sametime.chatui">ServerAttributes</a>&nbsp;sa)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The event on meeting tools enablement often comes a tad later than we
+ want it to. This should be reflected in the menus, so.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#toolsEnabled(com.lotus.sametime.chatui.ServerAttributes)">toolsEnabled</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>sa</code> - The list of enabled tools on our server.</dd></dl>
+</li>
+</ul>
+<a name="messageReceived(com.lotus.sametime.chatui.ChatMessage)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>messageReceived</h4>
+<pre>public&nbsp;void&nbsp;messageReceived(<a href="../../../../../com/lotus/sametime/chatui/ChatMessage.html" title="class in com.lotus.sametime.chatui">ChatMessage</a>&nbsp;message)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">A message was received.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#messageReceived(com.lotus.sametime.chatui.ChatMessage)">messageReceived</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - The message that was received.</dd></dl>
+</li>
+</ul>
+<a name="responseStarted(com.lotus.sametime.core.types.STUser)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>responseStarted</h4>
+<pre>public&nbsp;void&nbsp;responseStarted(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;userInfo)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that the chat partner started writing a response.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#responseStarted(com.lotus.sametime.core.types.STUser)">responseStarted</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>userInfo</code> - The details about the user that started the response.</dd></dl>
+</li>
+</ul>
+<a name="responseCleared(com.lotus.sametime.core.types.STUser)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>responseCleared</h4>
+<pre>public&nbsp;void&nbsp;responseCleared(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;userInfo)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that the chat partner cleared his response field.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#responseCleared(com.lotus.sametime.core.types.STUser)">responseCleared</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>userInfo</code> - The details about the user that cleared the response.</dd></dl>
+</li>
+</ul>
+<a name="sendFailed(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendFailed</h4>
+<pre>public&nbsp;void&nbsp;sendFailed(int&nbsp;reason)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notfication of a failed send message event.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#sendFailed(int)">sendFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>reason</code> - The reason for the failure.</dd><dt><span class="strong">See Also:</span></dt><dd><code>com.lotus.sametime.constants.STError</code></dd></dl>
+</li>
+</ul>
+<a name="userEntered(com.lotus.sametime.core.types.STUser)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>userEntered</h4>
+<pre>public&nbsp;void&nbsp;userEntered(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;user)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that a user has entered the conference.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#userEntered(com.lotus.sametime.core.types.STUser)">userEntered</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>user</code> - The user info of the user that entered.</dd></dl>
+</li>
+</ul>
+<a name="userLeft(com.lotus.sametime.core.types.STUser)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>userLeft</h4>
+<pre>public&nbsp;void&nbsp;userLeft(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;user)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that a user has left the conference.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#userLeft(com.lotus.sametime.core.types.STUser)">userLeft</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>user</code> - The user info of the user that left.</dd></dl>
+</li>
+</ul>
+<a name="encryptionModeChanged(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encryptionModeChanged</h4>
+<pre>public&nbsp;void&nbsp;encryptionModeChanged(boolean&nbsp;isEncrypted)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Notifies that an encrption mode has changed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#encryptionModeChanged(boolean)">encryptionModeChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>isEncrypted</code> - true if the chat is encrypted; false otherwise</dd></dl>
+</li>
+</ul>
+<a name="sendAllText()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendAllText</h4>
+<pre>public&nbsp;void&nbsp;sendAllText()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Sends all text typed by the user until now.</div>
+</li>
+</ul>
+<a name="invitationDeclined(com.lotus.sametime.core.types.STUser, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invitationDeclined</h4>
+<pre>public&nbsp;void&nbsp;invitationDeclined(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;inviteeInfo,
+                      int&nbsp;reason)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An invitee declined a conference invitation.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#invitationDeclined(com.lotus.sametime.core.types.STUser, int)">invitationDeclined</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>inviteeInfo</code> - The invitee.</dd><dd><code>reason</code> - The reason for the denial.</dd></dl>
+</li>
+</ul>
+<a name="cut()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cut</h4>
+<pre>public&nbsp;void&nbsp;cut()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Cuts the current selection into clipboard. Selection is taken from
+ focused text component. In our case, cut is applied only from send field.</div>
+</li>
+</ul>
+<a name="copy()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copy</h4>
+<pre>public&nbsp;void&nbsp;copy()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Copies from focused text component(chat area or send field) into the
+ clipboard.</div>
+</li>
+</ul>
+<a name="paste()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>paste</h4>
+<pre>public&nbsp;void&nbsp;paste()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Pastes the contents of the clipboard to the focused text component. In
+ our case, Paste is applicable only for the send field.</div>
+</li>
+</ul>
+<a name="clearAll()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clearAll</h4>
+<pre>public&nbsp;void&nbsp;clearAll()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Clears all the contents of the focused text component.</div>
+</li>
+</ul>
+<a name="addChatEditListener(com.lotus.sametime.chatui.ChatEditListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addChatEditListener</h4>
+<pre>public&nbsp;void&nbsp;addChatEditListener(<a href="../../../../../com/lotus/sametime/chatui/ChatEditListener.html" title="interface in com.lotus.sametime.chatui">ChatEditListener</a>&nbsp;listener)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Adds the specified edit listener to conf panel.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeChatEditListener(com.lotus.sametime.chatui.ChatEditListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeChatEditListener</h4>
+<pre>public&nbsp;void&nbsp;removeChatEditListener(<a href="../../../../../com/lotus/sametime/chatui/ChatEditListener.html" title="interface in com.lotus.sametime.chatui">ChatEditListener</a>&nbsp;listener)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the specified edit listener so that it no longer receives Conf
+ events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="getChatEditListeners()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getChatEditListeners</h4>
+<pre>public&nbsp;java.util.Vector&nbsp;getChatEditListeners()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets chat edit listeners.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Vector of ChatEditListeners.</dd></dl>
+</li>
+</ul>
+<a name="removeAllChatEditListeners()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeAllChatEditListeners</h4>
+<pre>public&nbsp;void&nbsp;removeAllChatEditListeners()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes all the chat edit listeners so that it no longer receives Conf
+ events.</div>
+</li>
+</ul>
+<a name="addChatAreaListener(com.lotus.sametime.guiutils.chat.ChatAreaListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addChatAreaListener</h4>
+<pre>public&nbsp;void&nbsp;addChatAreaListener(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatAreaListener</a>&nbsp;listener)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Adds the specified edit listener to the chat transcript.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeChatAreaListener(com.lotus.sametime.guiutils.chat.ChatAreaListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeChatAreaListener</h4>
+<pre>public&nbsp;void&nbsp;removeChatAreaListener(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatAreaListener</a>&nbsp;listener)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the specified edit listener to the chat transcript.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - </dd></dl>
+</li>
+</ul>
+<a name="focusGained(java.awt.event.FocusEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>focusGained</h4>
+<pre>public&nbsp;void&nbsp;focusGained(java.awt.event.FocusEvent&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Either send field or chat area gained focus.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>focusGained</code>&nbsp;in interface&nbsp;<code>java.awt.event.FocusListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="focusLost(java.awt.event.FocusEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>focusLost</h4>
+<pre>public&nbsp;void&nbsp;focusLost(java.awt.event.FocusEvent&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Either send field or chat area lost focus</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>focusLost</code>&nbsp;in interface&nbsp;<code>java.awt.event.FocusListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="chatAreaStatusChanged(com.lotus.sametime.guiutils.chat.ChatAreaEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>chatAreaStatusChanged</h4>
+<pre>public&nbsp;void&nbsp;chatAreaStatusChanged(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatAreaEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Selection has changed in chat area.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html#chatAreaStatusChanged(com.lotus.sametime.guiutils.chat.ChatAreaEvent)">chatAreaStatusChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatAreaListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="chatURLClicked(com.lotus.sametime.guiutils.chat.ChatAreaEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>chatURLClicked</h4>
+<pre>public&nbsp;void&nbsp;chatURLClicked(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatAreaEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Chat URL has been clicked.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html#chatURLClicked(com.lotus.sametime.guiutils.chat.ChatAreaEvent)">chatURLClicked</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatAreaListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="chatAreaContentChanged(com.lotus.sametime.guiutils.chat.ChatAreaEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>chatAreaContentChanged</h4>
+<pre>public&nbsp;void&nbsp;chatAreaContentChanged(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaEvent.html" title="class in com.lotus.sametime.guiutils.chat">ChatAreaEvent</a>&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Chat area content has changed</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html#chatAreaContentChanged(com.lotus.sametime.guiutils.chat.ChatAreaEvent)">chatAreaContentChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatAreaListener.html" title="interface in com.lotus.sametime.guiutils.chat">ChatAreaListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="updateEditStatus()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateEditStatus</h4>
+<pre>protected&nbsp;void&nbsp;updateEditStatus()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Fire event about edit status has changed.</div>
+</li>
+</ul>
+<a name="getColumnHeader(com.lotus.sametime.guiutils.tree.ColumnAttributes)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getColumnHeader</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a>&nbsp;getColumnHeader(<a href="../../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets the column header.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html#getColumnHeader(com.lotus.sametime.guiutils.tree.ColumnAttributes)">getColumnHeader</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>column</code> - Column.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The header for who is talking column in the people list.</dd></dl>
+</li>
+</ul>
+<a name="getContent(com.lotus.sametime.guiutils.tree.ColumnAttributes, java.util.Hashtable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContent</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a>&nbsp;getContent(<a href="../../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column,
+                  java.util.Hashtable&nbsp;values)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets the content.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html#getContent(com.lotus.sametime.guiutils.tree.ColumnAttributes, java.util.Hashtable)">getContent</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>column</code> - The column.</dd><dd><code>values</code> - The values.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The content to be displayed at the who is talking column in the
+         people list.</dd></dl>
+</li>
+</ul>
+<a name="getEmptyContent(com.lotus.sametime.guiutils.tree.ColumnAttributes)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEmptyContent</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/guiutils/tree/CellData.html" title="class in com.lotus.sametime.guiutils.tree">CellData</a>&nbsp;getEmptyContent(<a href="../../../../../com/lotus/sametime/guiutils/tree/ColumnAttributes.html" title="class in com.lotus.sametime.guiutils.tree">ColumnAttributes</a>&nbsp;column)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets empty content.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html#getEmptyContent(com.lotus.sametime.guiutils.tree.ColumnAttributes)">getEmptyContent</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/tree/ContentProvider.html" title="interface in com.lotus.sametime.guiutils.tree">ContentProvider</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>column</code> - Column.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Column data.</dd></dl>
+</li>
+</ul>
+<a name="switchToMeeting(com.lotus.sametime.chatui.MeetingInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>switchToMeeting</h4>
+<pre>public&nbsp;void&nbsp;switchToMeeting(<a href="../../../../../com/lotus/sametime/chatui/MeetingInfo.html" title="class in com.lotus.sametime.chatui">MeetingInfo</a>&nbsp;info)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#switchToMeeting(com.lotus.sametime.chatui.MeetingInfo)">ConfModelListener</a></code></span></div>
+<div class="block">Switches a chat panel that is conference mode to a meeting. The actual
+ call to launch the meeting is handled by ChatUI component through the
+ invitation manager. The meeting details are for information purposes
+ only.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html#switchToMeeting(com.lotus.sametime.chatui.MeetingInfo)">switchToMeeting</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf">ConfModelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>info</code> - Meeting details.</dd></dl>
+</li>
+</ul>
+<a name="getChatSendField()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getChatSendField</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendField.html" title="class in com.lotus.sametime.guiutils.chat">ChatSendField</a>&nbsp;getChatSendField()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/chatui/conf/ConfModelListener.html" title="interface in com.lotus.sametime.chatui.conf"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/chatui/conf/PlacesModelImpl.html" title="class in com.lotus.sametime.chatui.conf"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/chatui/conf/ConfPanel.html" target="_top">Frames</a></li>
+<li><a href="ConfPanel.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_java.awt.Panel">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_java.awt.Component">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

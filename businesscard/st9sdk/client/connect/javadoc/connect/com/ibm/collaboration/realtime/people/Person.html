@@ -1,0 +1,946 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Person (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Person (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html" title="interface in com.ibm.collaboration.realtime.people"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/PersonGroupTransfer.html" title="class in com.ibm.collaboration.realtime.people"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/people/Person.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Person.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.people</FONT>
+<BR>
+Interface Person</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html" title="interface in com.ibm.rcp.realtime.livenames">LiveName</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>Person</B><DT>extends <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html" title="interface in com.ibm.rcp.realtime.livenames">LiveName</A></DL>
+</PRE>
+
+<P>
+Person represents a person in a contact list.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_AUDIO_VIDEO">CAPABILITY_AUDIO_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_CAMERA">CAPABILITY_CAMERA</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_FILE_TRANSFER">CAPABILITY_FILE_TRANSFER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_MICROPHONE">CAPABILITY_MICROPHONE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_P2P_FILE_TRANSFER">CAPABILITY_P2P_FILE_TRANSFER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_PRODUCT_VERSION">CAPABILITY_PRODUCT_VERSION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines which product build the person is running, for users running
+ Sametime 8.0 or later.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_PRODUCT_VERSION_UNKNOWN">CAPABILITY_PRODUCT_VERSION_UNKNOWN</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_SPEAKER">CAPABILITY_SPEAKER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_TELEPHONY">CAPABILITY_TELEPHONY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#CAPABILITY_VOIP">CAPABILITY_VOIP</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#PROP_COMMUNITY_ID">PROP_COMMUNITY_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#PROP_CONTACT_ID">PROP_CONTACT_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#PROP_DIRECTORY_INFO">PROP_DIRECTORY_INFO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#PROP_DISPLAY_NAME">PROP_DISPLAY_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#PROP_EVICTED_FROM_WATCHLIST">PROP_EVICTED_FROM_WATCHLIST</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#PROP_STATUS">PROP_STATUS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#PROP_STATUS_TEXT">PROP_STATUS_TEXT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#STATUS_INVALID">STATUS_INVALID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#STATUS_OVER_LIMIT">STATUS_OVER_LIMIT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.rcp.realtime.livenames.LiveName"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.rcp.realtime.livenames.<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html" title="interface in com.ibm.rcp.realtime.livenames">LiveName</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_AVAILABLE">STATUS_AVAILABLE</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_AVAILABLE_MOBILE">STATUS_AVAILABLE_MOBILE</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_AWAY">STATUS_AWAY</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_AWAY_MOBILE">STATUS_AWAY_MOBILE</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_DND">STATUS_DND</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_DND_MOBILE">STATUS_DND_MOBILE</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_IN_MEETING">STATUS_IN_MEETING</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_IN_MEETING_MOBILE">STATUS_IN_MEETING_MOBILE</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_NOT_USING">STATUS_NOT_USING</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_OFFLINE">STATUS_OFFLINE</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_ONLINE">STATUS_ONLINE</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_ONLINE_MOBILE">STATUS_ONLINE_MOBILE</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#STATUS_UNKNOWN">STATUS_UNKNOWN</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#addPropertyChangeListener(java.beans.PropertyChangeListener)">addPropertyChangeListener</A></B>(java.beans.PropertyChangeListener&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a property change listener for this person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.Map</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#getCapabilities(java.lang.String)">getCapabilities</A></B>(java.lang.String&nbsp;loginId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a Map of capabilities associated with the specified
+ person's instant messaging client login instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/contacts/search/DirectoryInfo.html" title="interface in com.ibm.collaboration.realtime.contacts.search">DirectoryInfo</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#getDirectoryInfo()">getDirectoryInfo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns directory information for this person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#getGatewayCommunity()">getGatewayCommunity</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the RTC gateway community name to which this person belongs.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#getHoverText()">getHoverText</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the mouse hover text displayed for this person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#getLastChatTime()">getLastChatTime</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the last time a chat occured with this person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/LocationInfo.html" title="interface in com.ibm.collaboration.realtime">LocationInfo</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#getLocationInfo()">getLocationInfo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns location information for this person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#isCapabilitySupported(java.lang.String, java.lang.String)">isCapabilitySupported</A></B>(java.lang.String&nbsp;loginId,
+                      java.lang.String&nbsp;capability)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the specified capability is supported by the specified
+ person's instant messaging client login instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#isExternal()">isExternal</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this person is an external user connected via a gateway.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#refreshStatus()">refreshStatus</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh the status of the person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#removePropertyChangeListener(java.beans.PropertyChangeListener)">removePropertyChangeListener</A></B>(java.beans.PropertyChangeListener&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a property change listener for this person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#setDirectoryInfo(com.ibm.collaboration.realtime.contacts.search.DirectoryInfo)">setDirectoryInfo</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/contacts/search/DirectoryInfo.html" title="interface in com.ibm.collaboration.realtime.contacts.search">DirectoryInfo</A>&nbsp;directoryInfo)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the person's directory info.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#setDisplayName(java.lang.String)">setDisplayName</A></B>(java.lang.String&nbsp;displayName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the person's display name.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.rcp.realtime.livenames.LiveName"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.rcp.realtime.livenames.<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html" title="interface in com.ibm.rcp.realtime.livenames">LiveName</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#getCommunityId()">getCommunityId</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#getContactId()">getContactId</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#getDisplayName()">getDisplayName</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#getId()">getId</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#getName()">getName</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#getStatus()">getStatus</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#getStatusImage()">getStatusImage</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#getStatusMessage()">getStatusMessage</A>, <A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html#getStatusText()">getStatusText</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CAPABILITY_AUDIO_VIDEO"><!-- --></A><H3>
+CAPABILITY_AUDIO_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_AUDIO_VIDEO</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_AUDIO_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_CAMERA"><!-- --></A><H3>
+CAPABILITY_CAMERA</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_CAMERA</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_CAMERA">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_FILE_TRANSFER"><!-- --></A><H3>
+CAPABILITY_FILE_TRANSFER</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_FILE_TRANSFER</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_FILE_TRANSFER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MICROPHONE"><!-- --></A><H3>
+CAPABILITY_MICROPHONE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MICROPHONE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_MICROPHONE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_P2P_FILE_TRANSFER"><!-- --></A><H3>
+CAPABILITY_P2P_FILE_TRANSFER</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_P2P_FILE_TRANSFER</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_P2P_FILE_TRANSFER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SPEAKER"><!-- --></A><H3>
+CAPABILITY_SPEAKER</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SPEAKER</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_SPEAKER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_TELEPHONY"><!-- --></A><H3>
+CAPABILITY_TELEPHONY</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_TELEPHONY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_TELEPHONY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_VOIP"><!-- --></A><H3>
+CAPABILITY_VOIP</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_VOIP</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_VOIP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_PRODUCT_VERSION"><!-- --></A><H3>
+CAPABILITY_PRODUCT_VERSION</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_PRODUCT_VERSION</B></PRE>
+<DL>
+<DD>Determines which product build the person is running, for users running
+ Sametime 8.0 or later. The format of the value is "release,build", where
+ the release and build are the strings returned by the getRelease()
+ and getBuild() methods of <A HREF="../../../../../com/ibm/collaboration/realtime/util/ProductVersion.html" title="class in com.ibm.collaboration.realtime.util"><CODE>ProductVersion</CODE></A>.
+ If the build is unknown, only the release is included (without the separator).
+ If the release is unknown, the value will be CAPABILITY_PRODUCT_VERSION_UNKNOWN,
+ in which case it's safe to assume the person is running Sametime 8.0 or a later
+ release.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_PRODUCT_VERSION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_PRODUCT_VERSION_UNKNOWN"><!-- --></A><H3>
+CAPABILITY_PRODUCT_VERSION_UNKNOWN</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_PRODUCT_VERSION_UNKNOWN</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.CAPABILITY_PRODUCT_VERSION_UNKNOWN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROP_CONTACT_ID"><!-- --></A><H3>
+PROP_CONTACT_ID</H3>
+<PRE>
+static final java.lang.String <B>PROP_CONTACT_ID</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.PROP_CONTACT_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROP_COMMUNITY_ID"><!-- --></A><H3>
+PROP_COMMUNITY_ID</H3>
+<PRE>
+static final java.lang.String <B>PROP_COMMUNITY_ID</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.PROP_COMMUNITY_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROP_DIRECTORY_INFO"><!-- --></A><H3>
+PROP_DIRECTORY_INFO</H3>
+<PRE>
+static final java.lang.String <B>PROP_DIRECTORY_INFO</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.PROP_DIRECTORY_INFO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROP_DISPLAY_NAME"><!-- --></A><H3>
+PROP_DISPLAY_NAME</H3>
+<PRE>
+static final java.lang.String <B>PROP_DISPLAY_NAME</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.PROP_DISPLAY_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROP_STATUS"><!-- --></A><H3>
+PROP_STATUS</H3>
+<PRE>
+static final java.lang.String <B>PROP_STATUS</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.PROP_STATUS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROP_STATUS_TEXT"><!-- --></A><H3>
+PROP_STATUS_TEXT</H3>
+<PRE>
+static final java.lang.String <B>PROP_STATUS_TEXT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.PROP_STATUS_TEXT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROP_EVICTED_FROM_WATCHLIST"><!-- --></A><H3>
+PROP_EVICTED_FROM_WATCHLIST</H3>
+<PRE>
+static final java.lang.String <B>PROP_EVICTED_FROM_WATCHLIST</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.PROP_EVICTED_FROM_WATCHLIST">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_INVALID"><!-- --></A><H3>
+STATUS_INVALID</H3>
+<PRE>
+static final int <B>STATUS_INVALID</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.STATUS_INVALID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_OVER_LIMIT"><!-- --></A><H3>
+STATUS_OVER_LIMIT</H3>
+<PRE>
+static final int <B>STATUS_OVER_LIMIT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.people.Person.STATUS_OVER_LIMIT">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="addPropertyChangeListener(java.beans.PropertyChangeListener)"><!-- --></A><H3>
+addPropertyChangeListener</H3>
+<PRE>
+void <B>addPropertyChangeListener</B>(java.beans.PropertyChangeListener&nbsp;listener)</PRE>
+<DL>
+<DD>Adds a property change listener for this person.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - property change listener to add</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCapabilities(java.lang.String)"><!-- --></A><H3>
+getCapabilities</H3>
+<PRE>
+java.util.Map <B>getCapabilities</B>(java.lang.String&nbsp;loginId)</PRE>
+<DL>
+<DD>Returns a Map of capabilities associated with the specified
+ person's instant messaging client login instance. Each capability
+ is represented by a key/value pair, where the key is one of the
+ CAPABILITY_xxx constants defined in this interface, and the value
+ is a string, typically "true" (capability supported) or "false"
+ (capability not supported). Any capability that has a value other
+ than "false" is assumed to be supported. Any capability that is
+ not present in the Map is assumed to be unsupported. To
+ simply determine if a specific capability is supported, use
+ <A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html#isCapabilitySupported(java.lang.String, java.lang.String)"><CODE>isCapabilitySupported(String, String)</CODE></A> instead; see that
+ method for additional information about the login instance.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>loginId</CODE> - login instance ID
+<DT><B>Returns:</B><DD>Map of capabilities for the specified login instance ID, null if not available.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDirectoryInfo()"><!-- --></A><H3>
+getDirectoryInfo</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/contacts/search/DirectoryInfo.html" title="interface in com.ibm.collaboration.realtime.contacts.search">DirectoryInfo</A> <B>getDirectoryInfo</B>()</PRE>
+<DL>
+<DD>Returns directory information for this person.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>DirectoryInfo for person's directory information.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getHoverText()"><!-- --></A><H3>
+getHoverText</H3>
+<PRE>
+java.lang.String <B>getHoverText</B>()</PRE>
+<DL>
+<DD>Returns the mouse hover text displayed for this person.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Mouse hover text.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLastChatTime()"><!-- --></A><H3>
+getLastChatTime</H3>
+<PRE>
+long <B>getLastChatTime</B>()</PRE>
+<DL>
+<DD>Returns the last time a chat occured with this person.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Last chat time.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLocationInfo()"><!-- --></A><H3>
+getLocationInfo</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/LocationInfo.html" title="interface in com.ibm.collaboration.realtime">LocationInfo</A> <B>getLocationInfo</B>()</PRE>
+<DL>
+<DD>Returns location information for this person.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>LocationInfo representing person's location.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isCapabilitySupported(java.lang.String, java.lang.String)"><!-- --></A><H3>
+isCapabilitySupported</H3>
+<PRE>
+boolean <B>isCapabilitySupported</B>(java.lang.String&nbsp;loginId,
+                              java.lang.String&nbsp;capability)</PRE>
+<DL>
+<DD>Determines if the specified capability is supported by the specified
+ person's instant messaging client login instance. See the CAPABILITY_xxx
+ constants defined in this interface for valid capability key names.
+ Note that a person can be logged in with different IM clients at the same
+ time, and each login may have a different set of capabilities. You can
+ obtain a chat partner's login instance ID using the
+ <A HREF="../../../../../com/ibm/collaboration/realtime/chatwindow/ChatWindowPartner.html#getPersonLoginId()"><CODE>ChatWindowPartner.getPersonLoginId()</CODE></A>
+ method; to get a ChatWindowPartner object, use one of the methods
+ in <A HREF="../../../../../com/ibm/collaboration/realtime/chatwindow/ChatWindowHandler.html" title="interface in com.ibm.collaboration.realtime.chatwindow"><CODE>ChatWindowHandler</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>loginId</CODE> - login instance ID<DD><CODE>capability</CODE> - capability key name, one of the CAPABILITY_xxx constants defined in this interface
+<DT><B>Returns:</B><DD>true if the capability is supported, false if not supported</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isExternal()"><!-- --></A><H3>
+isExternal</H3>
+<PRE>
+boolean <B>isExternal</B>()</PRE>
+<DL>
+<DD>Determines if this person is an external user connected via a gateway.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this person is an external user, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="refreshStatus()"><!-- --></A><H3>
+refreshStatus</H3>
+<PRE>
+void <B>refreshStatus</B>()</PRE>
+<DL>
+<DD>Refresh the status of the person. Causes the person status property event
+ change to be re-broadcast. Can be used by livename extended status providers
+ to refresh status icons after changing a person's extended status. See
+ <CODE>ExtendedStatusProvider</CODE> for more
+ information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removePropertyChangeListener(java.beans.PropertyChangeListener)"><!-- --></A><H3>
+removePropertyChangeListener</H3>
+<PRE>
+void <B>removePropertyChangeListener</B>(java.beans.PropertyChangeListener&nbsp;listener)</PRE>
+<DL>
+<DD>Removes a property change listener for this person.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - property change listener to remove</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDisplayName(java.lang.String)"><!-- --></A><H3>
+setDisplayName</H3>
+<PRE>
+void <B>setDisplayName</B>(java.lang.String&nbsp;displayName)</PRE>
+<DL>
+<DD>Sets the person's display name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>displayName</CODE> - display name<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDirectoryInfo(com.ibm.collaboration.realtime.contacts.search.DirectoryInfo)"><!-- --></A><H3>
+setDirectoryInfo</H3>
+<PRE>
+void <B>setDirectoryInfo</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/contacts/search/DirectoryInfo.html" title="interface in com.ibm.collaboration.realtime.contacts.search">DirectoryInfo</A>&nbsp;directoryInfo)</PRE>
+<DL>
+<DD>Sets the person's directory info.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>directoryInfo</CODE> - directory information<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getGatewayCommunity()"><!-- --></A><H3>
+getGatewayCommunity</H3>
+<PRE>
+java.lang.String <B>getGatewayCommunity</B>()</PRE>
+<DL>
+<DD>Returns the RTC gateway community name to which this person belongs.
+ The gateway community is only relevant if this person is an external user,
+ and may be null if the person belongs to an external sametime community.
+ It may be non-null if the person belongs o public IM community such as AOL,
+ google, or yahoo.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Returns the RTC gateway community name to which this person belongs.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html" title="interface in com.ibm.collaboration.realtime.people"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/PersonGroupTransfer.html" title="class in com.ibm.collaboration.realtime.people"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/people/Person.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Person.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

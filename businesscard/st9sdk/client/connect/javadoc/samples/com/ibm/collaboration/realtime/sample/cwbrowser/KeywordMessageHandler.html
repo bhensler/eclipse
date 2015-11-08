@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+KeywordMessageHandler (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect Samples Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="KeywordMessageHandler (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect Samples Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/sample/cwbrowser/IKeywordExtension.html" title="interface in com.ibm.collaboration.realtime.sample.cwbrowser"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/sample/cwbrowser/KeywordMessageHandlerAdapter.html" title="class in com.ibm.collaboration.realtime.sample.cwbrowser"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/sample/cwbrowser/KeywordMessageHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="KeywordMessageHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_com.ibm.collaboration.realtime.messages.DefaultMessageHandler">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.sample.cwbrowser</FONT>
+<BR>
+Class KeywordMessageHandler</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by ">com.ibm.collaboration.realtime.messages.DefaultMessageHandler
+      <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.sample.cwbrowser.KeywordMessageHandler</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD>com.ibm.collaboration.realtime.messages.MessageHandler</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>KeywordMessageHandler</B><DT>extends com.ibm.collaboration.realtime.messages.DefaultMessageHandler</DL>
+</PRE>
+
+<P>
+Message handler that processes incoming 1-1 and nway chat messages.
+
+ See com.ibm.collaboration.realtime.messages.MessageHandlerListener extension
+ point.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.messages.DefaultMessageHandler"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class com.ibm.collaboration.realtime.messages.DefaultMessageHandler</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>MESSAGE_EVENT_CODE_FIELD_NAME</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/sample/cwbrowser/KeywordMessageHandler.html#KeywordMessageHandler()">KeywordMessageHandler</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialization.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/sample/cwbrowser/KeywordMessageHandler.html#handleDefaultMessage(com.ibm.collaboration.realtime.messages.Message)">handleDefaultMessage</A></B>(com.ibm.collaboration.realtime.messages.Message&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Handles the message defaults.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/sample/cwbrowser/KeywordMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextReceivedMessage)">handleMessage</A></B>(com.ibm.collaboration.realtime.messages.im.ImTextReceivedMessage&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overrides handleMessage method for 1-1 chat received messages.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/sample/cwbrowser/KeywordMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextSendMessage)">handleMessage</A></B>(com.ibm.collaboration.realtime.messages.im.ImTextSendMessage&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Include ImTextSendMessage for debug purposes only; otherwise would need chat partner
+ (i.e., messages sent to self can be used for testing).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/sample/cwbrowser/KeywordMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextReceivedMessage)">handleMessage</A></B>(com.ibm.collaboration.realtime.messages.im.ManyToManyTextReceivedMessage&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overrides handleMessage method for n-way chat received messages.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.messages.DefaultMessageHandler"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.ibm.collaboration.realtime.messages.DefaultMessageHandler</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>getHandledMessageEventCodes, getMessageEventCode, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage, handleMessage</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="KeywordMessageHandler()"><!-- --></A><H3>
+KeywordMessageHandler</H3>
+<PRE>
+public <B>KeywordMessageHandler</B>()</PRE>
+<DL>
+<DD>Initialization.
+<P>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextReceivedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(com.ibm.collaboration.realtime.messages.im.ImTextReceivedMessage&nbsp;message)</PRE>
+<DL>
+<DD>Overrides handleMessage method for 1-1 chat received messages.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>handleMessage</CODE> in interface <CODE>com.ibm.collaboration.realtime.messages.MessageHandler</CODE><DT><B>Overrides:</B><DD><CODE>handleMessage</CODE> in class <CODE>com.ibm.collaboration.realtime.messages.DefaultMessageHandler</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextReceivedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(com.ibm.collaboration.realtime.messages.im.ManyToManyTextReceivedMessage&nbsp;message)</PRE>
+<DL>
+<DD>Overrides handleMessage method for n-way chat received messages.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>handleMessage</CODE> in interface <CODE>com.ibm.collaboration.realtime.messages.MessageHandler</CODE><DT><B>Overrides:</B><DD><CODE>handleMessage</CODE> in class <CODE>com.ibm.collaboration.realtime.messages.DefaultMessageHandler</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextSendMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(com.ibm.collaboration.realtime.messages.im.ImTextSendMessage&nbsp;message)</PRE>
+<DL>
+<DD>Include ImTextSendMessage for debug purposes only; otherwise would need chat partner
+ (i.e., messages sent to self can be used for testing).
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>handleMessage</CODE> in interface <CODE>com.ibm.collaboration.realtime.messages.MessageHandler</CODE><DT><B>Overrides:</B><DD><CODE>handleMessage</CODE> in class <CODE>com.ibm.collaboration.realtime.messages.DefaultMessageHandler</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleDefaultMessage(com.ibm.collaboration.realtime.messages.Message)"><!-- --></A><H3>
+handleDefaultMessage</H3>
+<PRE>
+public void <B>handleDefaultMessage</B>(com.ibm.collaboration.realtime.messages.Message&nbsp;message)</PRE>
+<DL>
+<DD>Handles the message defaults.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>handleDefaultMessage</CODE> in interface <CODE>com.ibm.collaboration.realtime.messages.MessageHandler</CODE><DT><B>Specified by:</B><DD><CODE>handleDefaultMessage</CODE> in class <CODE>com.ibm.collaboration.realtime.messages.DefaultMessageHandler</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/sample/cwbrowser/IKeywordExtension.html" title="interface in com.ibm.collaboration.realtime.sample.cwbrowser"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/sample/cwbrowser/KeywordMessageHandlerAdapter.html" title="class in com.ibm.collaboration.realtime.sample.cwbrowser"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/sample/cwbrowser/KeywordMessageHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="KeywordMessageHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_com.ibm.collaboration.realtime.messages.DefaultMessageHandler">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

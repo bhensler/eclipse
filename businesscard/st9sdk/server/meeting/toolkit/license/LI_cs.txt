@@ -1,0 +1,41 @@
+LICENÈNÍ INFORMACE
+
+Níže uvedené Programy jsou licencovány na základì uvedených podmínek, které platí navíc k podmínkám Mezinárodní licenèní smlouva pro programy bez záruky.
+
+Název Programu: IBM Sametime Remote Meeting Client SDK
+Èíslo Programu: 5724-J23
+
+Program s omezením užívání (Limited Use Program)
+
+Tento Program je dodáván k užívání pouze s Jmenovanými programy uvedenými níže. Držiteli licence není povoleno užívat tento Program ve spojení s jakýmkoliv jiným softwarem.
+
+Jmenovaný program (Jmenované programy):
+IBM Sametime Standard or IBM Sametime Advanced
+
+Development Tool
+
+Úèelem tohoto Programu je podpora vývoje softwarových aplikací a systémù. Držitel licence nese výhradní odpovìdnost za aplikace a systémy, které Držitel licence vyvine s využitím tohoto Programu; Držitel licence pøebírá veškerá rizika a odpovìdnost za takové aplikace a systémy.
+
+Redistribuovatelné položky
+
+Jestliže Program obsahuje komponenty, které jsou Redistribuovatelnými položkami, budou identifikovány v souboru REDIST, který je pøipojen k Programu. Kromì licenèních práv udìlených v této Smlouvì smí Držitel licence distribuovat Redistribuovatelné položky v souladu s níže uvedenými podmínkami:
+1) Redistribuce musí být provádìna pouze ve formì objektového kódu a musí splòovat všechny pokyny, instrukce a specifikace obsažené v souborech REDIST pøipojených k Programu nebo v dokumentaci;
+2) V pøípadì, že dokumentace pøiložená k Programu výslovnì povoluje Držiteli licence upravovat Redistribuovatelné položky, musí tyto úpravy dodržovat všechny pokyny, instrukce a specifikace obsažené v této dokumentaci a tyto pøípadné modifikace musí být považovány za Redistribuovatelné položky;
+3) Redistribuovatelné položky mohou být distribuovány pouze v rámci aplikace Držitele licence, která byla vyvinuta prostøednictvím Programu ("Aplikace Držitele licence"), a to pouze k podpoøe zákazníkù Držitele licence v souvislosti s jejich užíváním Aplikace Držitele licence. Aplikace Držitele licence musí tvoøit významnou pøidanou hodnotu, aby Redistribuovatelné položky nepøedstavovaly pro koncové uživatele softwarových produktù Držitele licence hlavní motivaci k nákupu;
+4) Jestliže Redistribuovatelné položky zahrnují rozhraní Java Runtime Environment, musí Držiteli licence do své Aplikace také zahrnout jiné než Redistribuovatelné Java položky, ledaže je tato Aplikace urèena ke spouštìní pouze na klasických výpoèetních zaøízeních (napøíklad pøenosné poèítaèe, stolní poèítaèe a servery), nikoliv na pøenosných nebo jiných pervazivních zaøízeních (napøíklad zaøízení obsahující mikroprocesory, jejichž jejich primárním úèelem není výpoèetní zpracování);
+5) Držitel licence nesmí odstraòovat žádné soubory obsahující copyrightové výhrady nebo soubory Notices obsažené v Redistribuovatelných položkách;
+6) Držitel licence musí IBM, její dodavatele nebo distributory zbavit odpovìdnosti v souvislosti se všemi nároky vzniklými na základì užívání nebo distribuce Aplikace Držitele licence;
+7) Držitel licence nesmí používat stejnou cestu, jakou mají pùvodní Redistribuovatelné soubory/moduly;
+8) Držitel licence nesmí užívat názvy nebo ochranné známky IBM nebo jejích dodavatelù èi distributorù ve spojení s marketingem Aplikace Držitele licence, pokud k tomu pøedem nezíská písemný souhlas IBM nebo pøíslušného dodavatele èi distributora;
+9) IBM, její dodavatelé a distributoøi poskytují tyto Redistribuovatelné položky a související dokumentaci bez závazku podpory a "JAK JSOU", BEZ ZÁRUKY JAKÉHOKOLIV DRUHU, VYJÁDØENÉ VÝSLOVNÌ ÈI VYPLÝVAJÍCÍ Z OKOLNOSTÍ, VÈETNÌ ZÁRUKY VLASTNICKÉHO NÁROKU, NEPORUŠENÍ PRÁV TØETÍCH STRAN A VYPLÝVAJÍCÍCH ZÁRUK A PODMÍNEK PRODEJNOSTI A VHODNOSTI PRO DANÝ ÚÈEL;
+10) Držitel licence odpovídá za veškerou technickou asistenci pro své Aplikace a jakékoliv zmìny Redistribuovatelných položek; a
+11) Licenèní smlouva, kterou uzavøel Držitel licence s koncovým uživatelem Aplikace Držitele licence, musí informovat koncového uživatele o tom, že Redistribuovatelné položky nebo jejich modifikace nesmí být a) užívány k jiným úèelùm než k aktivaci Aplikace Držitele licence, ii) kopírovány (s výjimkou zálohování), iii) dále distribuovány nebo pøevádìny bez Aplikace Držitele licence nebo iv) zpìtnì pøekládány, zpìtnì kompilovány nebo jiným zpùsobem pøekládány, pokud zákon výslovnì nepovoluje výjimky, a bez možnosti smluvního zøeknutí se. Kromì toho musí licenèní smlouva Držitele licence poskytovat IBM pøinejmenším stejnou ochranu jako podmínky této Smlouvy.
+
+Komponenty ve vzorovém kódu a Vzorové materiály
+
+Program mùže obsahovat nìkteré komponenty ve formì zdrojového kódu ("Komponenty ve zdrojovém kódu") a jiné materiály oznaèované jako Vzorové materiály. Držitel licence smí kopírovat a mìnit Komponenty ve zdrojovém kódu a Vzorové materiály pouze pro interní užívání a pouze pod podmínkou, že toto užívání bude v souladu s omezeními licenèních oprávnìní stanovenými touto Smlouvou. Držitel licence však nesmí mìnit ani odstraòovat žádné informace nebo výhrady týkající se autorských práv obsažené v Komponentách ve zdrojovém kódu nebo ve Vzorových materiálech. IBM poskytuje tyto Komponenty ve zdrojovém kódu a Vzorové materiály bez závazku podpory a "JAK JSOU", BEZ ZÁRUKY JAKÉHOKOLIV DRUHU, VYJÁDØENÉ VÝSLOVNÌ ÈI VYPLÝVAJÍCÍ Z OKOLNOSTÍ, VÈETNÌ ZÁRUKY VLASTNICTVÍ, NEPORUŠENÍ PRÁV TØETÍCH STRAN A ZÁRUK A PODMÍNEK PRODEJNOSTI A VHODNOSTI PRO DANÝ ÚÈEL.
+
+U Komponent ve zdrojovém kódu a Vzorových materiálù uvedených v souboru REDIST, který je souèástí Programu, mùže Držitel licence redistribuovat upravené verze tìchto Komponent ve zdrojovém kódu nebo Vzorových materiálù v souladu s podmínkami této licence a s pokyny uvedenými v souboru REDIST.
+
+D/N:  L-KBIM-8G3SXW
+P/N:  L-KBIM-8G3SXW 

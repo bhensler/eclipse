@@ -1,0 +1,1217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>InviteDialog</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="InviteDialog";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/chatui/invitation/InvitationManager.html" title="class in com.lotus.sametime.chatui.invitation"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialogListener.html" title="interface in com.lotus.sametime.chatui.invitation"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/chatui/invitation/InviteDialog.html" target="_top">Frames</a></li>
+<li><a href="InviteDialog.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_java.awt.Dialog">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_java.awt.Dialog">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.chatui.invitation</div>
+<h2 title="Class InviteDialog" class="title">Class InviteDialog</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Component</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Container</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Window</li>
+<li>
+<ul class="inheritance">
+<li>java.awt.Dialog</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.chatui.invitation.InviteDialog</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html" title="interface in com.lotus.sametime.awarenessui">AwarenessViewListener</a>, <a href="../../../../../com/lotus/sametime/commui/ResolveViewListener.html" title="interface in com.lotus.sametime.commui">ResolveViewListener</a>, <a href="../../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/misc/UbqDialogListener.html" title="interface in com.lotus.sametime.guiutils.misc">UbqDialogListener</a>, java.awt.event.ActionListener, java.awt.event.ItemListener, java.awt.event.TextListener, java.awt.event.WindowListener, java.awt.image.ImageObserver, java.awt.MenuContainer, java.io.Serializable, java.util.EventListener, javax.accessibility.Accessible</dd>
+</dl>
+<hr>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;
+<div class="deprecatedContent">due to the availability of additional non-AWT GUI frameworks.
+             This component is no longer supported.</div>
+</div>
+<br>
+<pre>public class <span class="strong">InviteDialog</span>
+extends java.awt.Dialog
+implements java.awt.event.WindowListener, java.awt.event.ActionListener, java.awt.event.TextListener, <a href="../../../../../com/lotus/sametime/commui/ResolveViewListener.html" title="interface in com.lotus.sametime.commui">ResolveViewListener</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html" title="interface in com.lotus.sametime.awarenessui">AwarenessViewListener</a>, <a href="../../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/misc/UbqDialogListener.html" title="interface in com.lotus.sametime.guiutils.misc">UbqDialogListener</a>, java.awt.event.ItemListener</pre>
+<div class="block">The Invite Dialog.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../serialized-form.html#com.lotus.sametime.chatui.invitation.InviteDialog">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested_class_summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Dialog">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Dialog</h3>
+<code>java.awt.Dialog.AccessibleAWTDialog, java.awt.Dialog.ModalExclusionType, java.awt.Dialog.ModalityType</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Window">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Window</h3>
+<code>java.awt.Window.AccessibleAWTWindow, java.awt.Window.Type</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Container">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Container</h3>
+<code>java.awt.Container.AccessibleAWTContainer</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="nested_classes_inherited_from_class_java.awt.Component">
+<!--   -->
+</a>
+<h3>Nested classes/interfaces inherited from class&nbsp;java.awt.Component</h3>
+<code>java.awt.Component.AccessibleAWTComponent, java.awt.Component.BaselineResizeBehavior, java.awt.Component.BltBufferStrategy, java.awt.Component.FlipBufferStrategy</code></li>
+</ul>
+</li>
+</ul>
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_java.awt.Dialog">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;java.awt.Dialog</h3>
+<code>DEFAULT_MODALITY_TYPE</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_java.awt.Component">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;java.awt.Component</h3>
+<code>BOTTOM_ALIGNMENT, CENTER_ALIGNMENT, LEFT_ALIGNMENT, RIGHT_ALIGNMENT, TOP_ALIGNMENT</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_java.awt.image.ImageObserver">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;java.awt.image.ImageObserver</h3>
+<code>ABORT, ALLBITS, ERROR, FRAMEBITS, HEIGHT, PROPERTIES, SOMEBITS, WIDTH</code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#InviteDialog(java.awt.Frame, com.lotus.sametime.core.comparch.STSession)">InviteDialog</a></strong>(java.awt.Frame&nbsp;parent,
+            <a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#InviteDialog(java.awt.Frame, com.lotus.sametime.core.comparch.STSession, java.lang.String, java.lang.String, com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.core.types.STUser[], java.util.Vector, boolean)">InviteDialog</a></strong>(java.awt.Frame&nbsp;parent,
+            <a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session,
+            java.lang.String&nbsp;meetingName,
+            java.lang.String&nbsp;inviteText,
+            <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+            <a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;users,
+            java.util.Vector&nbsp;activities,
+            boolean&nbsp;allowChange)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#actionPerformed(java.awt.event.ActionEvent)">actionPerformed</a></strong>(java.awt.event.ActionEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">A button was pressed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#addUserFailed(com.lotus.sametime.awarenessui.AwarenessViewEvent)">addUserFailed</a></strong>(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An attempt to add a user was failed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#cancelDialog()">cancelDialog</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Handle canceling the invite operation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected java.awt.Panel</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#createButtonsPanel()">createButtonsPanel</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the buttons panel.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected java.awt.Panel</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#createInviteesPanel()">createInviteesPanel</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the panel with the list of people.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected java.awt.Panel</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#createMeetingInfoPanel()">createMeetingInfoPanel</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the panel with the meeting info (topic, message).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected java.awt.Panel</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#createSecurityPanel(boolean)">createSecurityPanel</a></strong>(boolean&nbsp;secured)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the panel with the security check box.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected java.awt.Panel</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#createToolsPanel()">createToolsPanel</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the panel with the list of tools.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../com/lotus/sametime/awareness/STWatchedUser.html" title="class in com.lotus.sametime.awareness">STWatchedUser</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#getActiveInvitees(com.lotus.sametime.awareness.STWatchedUser[])">getActiveInvitees</a></strong>(<a href="../../../../../com/lotus/sametime/awareness/STWatchedUser.html" title="class in com.lotus.sametime.awareness">STWatchedUser</a>[]&nbsp;watchedUsers)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Go through a list of invitee attributes, and create a list of active
+ (i.e. not DND, not offline) users,</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.awt.Insets</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#getInsets()">getInsets</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Override insets for a sexier look.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.awt.Dimension</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#getPreferredSize()">getPreferredSize</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">On some machines the frame is opened with size 0 (probably because of
+ timing related issues).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#init(java.awt.Frame, java.lang.String, java.lang.String, com.lotus.sametime.core.constants.EncLevel, java.util.Vector)">init</a></strong>(java.awt.Frame&nbsp;parent,
+    java.lang.String&nbsp;topic,
+    java.lang.String&nbsp;message,
+    <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+    java.util.Vector&nbsp;activities)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Initialize the dialog.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#isEncrypted(com.lotus.sametime.core.constants.EncLevel)">isEncrypted</a></strong>(<a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Check if this meeting is encrypted.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#isWatsonServer()">isWatsonServer</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Check the version of the server wer'e connected to.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#itemStateChanged(java.awt.event.ItemEvent)">itemStateChanged</a></strong>(java.awt.event.ItemEvent&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#loggedIn(com.lotus.sametime.community.LoginEvent)">loggedIn</a></strong>(<a href="../../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An event recieved when we get logged in.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#loggedOut(com.lotus.sametime.community.LoginEvent)">loggedOut</a></strong>(<a href="../../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An event recieved when we get logged out.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#requestFocus()">requestFocus</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#resolved(com.lotus.sametime.commui.ResolveViewEvent)">resolved</a></strong>(<a href="../../../../../com/lotus/sametime/commui/ResolveViewEvent.html" title="class in com.lotus.sametime.commui">ResolveViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An event indicating the a user was resolved successfully.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#resolveFailed(com.lotus.sametime.commui.ResolveViewEvent)">resolveFailed</a></strong>(<a href="../../../../../com/lotus/sametime/commui/ResolveViewEvent.html" title="class in com.lotus.sametime.commui">ResolveViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The resolve request failed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#selectionChanged(com.lotus.sametime.awarenessui.AwarenessViewEvent)">selectionChanged</a></strong>(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Selection was changed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#sendInvitation()">sendInvitation</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Close the dialog, and notify the listener that it should send
+ invitations.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#serviceAvailable(com.lotus.sametime.awarenessui.AwarenessViewEvent)">serviceAvailable</a></strong>(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The 'Who is online' service is avaliable.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#serviceUnavailable(com.lotus.sametime.awarenessui.AwarenessViewEvent)">serviceUnavailable</a></strong>(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The 'Who is online' service isn't avaliable.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#setListener(com.lotus.sametime.chatui.invitation.InviteDialogListener)">setListener</a></strong>(<a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialogListener.html" title="interface in com.lotus.sametime.chatui.invitation">InviteDialogListener</a>&nbsp;listener)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Set the listener to this dialog, overriding previous listeners.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#showAddDialog()">showAddDialog</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Show the add dialog to allow the user to add people.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#statusChanged(com.lotus.sametime.awarenessui.AwarenessViewEvent)">statusChanged</a></strong>(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">users status was changed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#textValueChanged(java.awt.event.TextEvent)">textValueChanged</a></strong>(java.awt.event.TextEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The value of one of the text fields has changed, and we have to make sure
+ it does not get too long.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#ubqDialogClosed(com.lotus.sametime.guiutils.misc.UbqDialog, int, boolean)">ubqDialogClosed</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/misc/UbqDialog.html" title="class in com.lotus.sametime.guiutils.misc">UbqDialog</a>&nbsp;dialog,
+               int&nbsp;buttonIndex,
+               boolean&nbsp;checkBoxState)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The resolve failed dialog was closed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#usersAdded(com.lotus.sametime.awarenessui.AwarenessViewEvent)">usersAdded</a></strong>(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Users were added to the list.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#usersRemoved(com.lotus.sametime.awarenessui.AwarenessViewEvent)">usersRemoved</a></strong>(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Users were removed from the list.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#windowActivated(java.awt.event.WindowEvent)">windowActivated</a></strong>(java.awt.event.WindowEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is activated.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#windowClosed(java.awt.event.WindowEvent)">windowClosed</a></strong>(java.awt.event.WindowEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window has been closed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#windowClosing(java.awt.event.WindowEvent)">windowClosing</a></strong>(java.awt.event.WindowEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is in the process of being closed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#windowDeactivated(java.awt.event.WindowEvent)">windowDeactivated</a></strong>(java.awt.event.WindowEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is de-activated.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#windowDeiconified(java.awt.event.WindowEvent)">windowDeiconified</a></strong>(java.awt.event.WindowEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is de-iconified.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#windowIconified(java.awt.event.WindowEvent)">windowIconified</a></strong>(java.awt.event.WindowEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is iconified.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialog.html#windowOpened(java.awt.event.WindowEvent)">windowOpened</a></strong>(java.awt.event.WindowEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window has been opened.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Dialog">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Dialog</h3>
+<code>addNotify, getAccessibleContext, getModalityType, getTitle, hide, isModal, isResizable, isUndecorated, paramString, setBackground, setModal, setModalityType, setOpacity, setResizable, setShape, setTitle, setUndecorated, setVisible, show, toBack</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Window">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Window</h3>
+<code>addPropertyChangeListener, addPropertyChangeListener, addWindowFocusListener, addWindowListener, addWindowStateListener, applyResourceBundle, applyResourceBundle, createBufferStrategy, createBufferStrategy, dispose, getBackground, getBufferStrategy, getFocusableWindowState, getFocusCycleRootAncestor, getFocusOwner, getFocusTraversalKeys, getIconImages, getInputContext, getListeners, getLocale, getModalExclusionType, getMostRecentFocusOwner, getOpacity, getOwnedWindows, getOwner, getOwnerlessWindows, getShape, getToolkit, getType, getWarningString, getWindowFocusListeners, getWindowListeners, getWindows, getWindowStateListeners, isActive, isAlwaysOnTop, isAlwaysOnTopSupported, isAutoRequestFocus, isFocusableWindow, isFocusCycleRoot, isFocused, isLocationByPlatform, isOpaque, isShowing, isValidateRoot, pack, paint, postEvent, processEvent, processWindowEvent, processWindowFocusEvent, processWindowStateEvent, removeNotify, removeWindowFocusListener, removeWindowListener, removeWindowStateListener, reshape, setAlwaysOnTop, setAutoRequestFocus, setBounds, setBounds, setCursor, setFocusableWindowState, setFocusCycleRoot, setIconImage, setIconImages, setLocation, setLocation, setLocationByPlatform, setLocationRelativeTo, setMinimumSize, setModalExclusionType, setSize, setSize, setType, toFront</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Container">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Container</h3>
+<code>add, add, add, add, add, addContainerListener, addImpl, applyComponentOrientation, areFocusTraversalKeysSet, countComponents, deliverEvent, doLayout, findComponentAt, findComponentAt, getAlignmentX, getAlignmentY, getComponent, getComponentAt, getComponentAt, getComponentCount, getComponents, getComponentZOrder, getContainerListeners, getFocusTraversalPolicy, getLayout, getMaximumSize, getMinimumSize, getMousePosition, insets, invalidate, isAncestorOf, isFocusCycleRoot, isFocusTraversalPolicyProvider, isFocusTraversalPolicySet, layout, list, list, locate, minimumSize, paintComponents, preferredSize, print, printComponents, processContainerEvent, remove, remove, removeAll, removeContainerListener, setComponentZOrder, setFocusTraversalKeys, setFocusTraversalPolicy, setFocusTraversalPolicyProvider, setFont, setLayout, transferFocusDownCycle, update, validate, validateTree</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.awt.Component">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.awt.Component</h3>
+<code>action, add, addComponentListener, addFocusListener, addHierarchyBoundsListener, addHierarchyListener, addInputMethodListener, addKeyListener, addMouseListener, addMouseMotionListener, addMouseWheelListener, bounds, checkImage, checkImage, coalesceEvents, contains, contains, createImage, createImage, createVolatileImage, createVolatileImage, disable, disableEvents, dispatchEvent, enable, enable, enableEvents, enableInputMethods, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, firePropertyChange, getBaseline, getBaselineResizeBehavior, getBounds, getBounds, getColorModel, getComponentListeners, getComponentOrientation, getCursor, getDropTarget, getFocusListeners, getFocusTraversalKeysEnabled, getFont, getFontMetrics, getForeground, getGraphics, getGraphicsConfiguration, getHeight, getHierarchyBoundsListeners, getHierarchyListeners, getIgnoreRepaint, getInputMethodListeners, getInputMethodRequests, getKeyListeners, getLocation, getLocation, getLocationOnScreen, getMouseListeners, getMouseMotionListeners, getMousePosition, getMouseWheelListeners, getName, getParent, getPeer, getPropertyChangeListeners, getPropertyChangeListeners, getSize, getSize, getTreeLock, getWidth, getX, getY, gotFocus, handleEvent, hasFocus, imageUpdate, inside, isBackgroundSet, isCursorSet, isDisplayable, isDoubleBuffered, isEnabled, isFocusable, isFocusOwner, isFocusTraversable, isFontSet, isForegroundSet, isLightweight, isMaximumSizeSet, isMinimumSizeSet, isPreferredSizeSet, isValid, isVisible, keyDown, keyUp, list, list, list, location, lostFocus, mouseDown, mouseDrag, mouseEnter, mouseExit, mouseMove, mouseUp, move, nextFocus, paintAll, prepareImage, prepareImage, printAll, processComponentEvent, processFocusEvent, processHierarchyBoundsEvent, processHierarchyEvent, processInputMethodEvent, processKeyEvent, processMouseEvent, processMouseMotionEvent, processMouseWheelEvent, remove, removeComponentListener, removeFocusListener, removeHierarchyBoundsListener, removeHierarchyListener, removeInputMethodListener, removeKeyListener, removeMouseListener, removeMouseMotionListener, removeMouseWheelListener, removePropertyChangeListener, removePropertyChangeListener, repaint, repaint, repaint, repaint, requestFocus, requestFocusInWindow, requestFocusInWindow, resize, resize, revalidate, setComponentOrientation, setDropTarget, setEnabled, setFocusable, setFocusTraversalKeysEnabled, setForeground, setIgnoreRepaint, setLocale, setMaximumSize, setName, setPreferredSize, show, size, toString, transferFocus, transferFocusBackward, transferFocusUpCycle</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="InviteDialog(java.awt.Frame, com.lotus.sametime.core.comparch.STSession)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>InviteDialog</h4>
+<pre>public&nbsp;InviteDialog(java.awt.Frame&nbsp;parent,
+            <a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>parent</code> - The parent frame.</dd><dd><code>session</code> - The STSession to associate with.</dd></dl>
+</li>
+</ul>
+<a name="InviteDialog(java.awt.Frame, com.lotus.sametime.core.comparch.STSession, java.lang.String, java.lang.String, com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.core.types.STUser[], java.util.Vector, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>InviteDialog</h4>
+<pre>public&nbsp;InviteDialog(java.awt.Frame&nbsp;parent,
+            <a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session,
+            java.lang.String&nbsp;meetingName,
+            java.lang.String&nbsp;inviteText,
+            <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+            <a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;users,
+            java.util.Vector&nbsp;activities,
+            boolean&nbsp;allowChange)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>parent</code> - The parent frame.</dd><dd><code>session</code> - The STSession to associate with.</dd><dd><code>meetingName</code> - The default meeting name.</dd><dd><code>inviteText</code> - The default invitation message.</dd><dd><code>encLevel</code> - The encryption level of the meeting.</dd><dd><code>users</code> - Initial invitees list.</dd><dd><code>activities</code> - The meeting activities, defined in MeetingTypes class.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="setListener(com.lotus.sametime.chatui.invitation.InviteDialogListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setListener</h4>
+<pre>public&nbsp;void&nbsp;setListener(<a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialogListener.html" title="interface in com.lotus.sametime.chatui.invitation">InviteDialogListener</a>&nbsp;listener)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Set the listener to this dialog, overriding previous listeners.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to this dialog.</dd></dl>
+</li>
+</ul>
+<a name="getInsets()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInsets</h4>
+<pre>public&nbsp;java.awt.Insets&nbsp;getInsets()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Override insets for a sexier look.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getInsets</code>&nbsp;in class&nbsp;<code>java.awt.Container</code></dd>
+</dl>
+</li>
+</ul>
+<a name="actionPerformed(java.awt.event.ActionEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>actionPerformed</h4>
+<pre>public&nbsp;void&nbsp;actionPerformed(java.awt.event.ActionEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">A button was pressed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>actionPerformed</code>&nbsp;in interface&nbsp;<code>java.awt.event.ActionListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="windowClosing(java.awt.event.WindowEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>windowClosing</h4>
+<pre>public&nbsp;void&nbsp;windowClosing(java.awt.event.WindowEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is in the process of being closed. The close
+ operation can be overridden at this point.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>windowClosing</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="windowClosed(java.awt.event.WindowEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>windowClosed</h4>
+<pre>public&nbsp;void&nbsp;windowClosed(java.awt.event.WindowEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window has been closed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>windowClosed</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="windowOpened(java.awt.event.WindowEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>windowOpened</h4>
+<pre>public&nbsp;void&nbsp;windowOpened(java.awt.event.WindowEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window has been opened.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>windowOpened</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="windowIconified(java.awt.event.WindowEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>windowIconified</h4>
+<pre>public&nbsp;void&nbsp;windowIconified(java.awt.event.WindowEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is iconified.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>windowIconified</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="windowDeiconified(java.awt.event.WindowEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>windowDeiconified</h4>
+<pre>public&nbsp;void&nbsp;windowDeiconified(java.awt.event.WindowEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is de-iconified.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>windowDeiconified</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="windowActivated(java.awt.event.WindowEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>windowActivated</h4>
+<pre>public&nbsp;void&nbsp;windowActivated(java.awt.event.WindowEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is activated.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>windowActivated</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="windowDeactivated(java.awt.event.WindowEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>windowDeactivated</h4>
+<pre>public&nbsp;void&nbsp;windowDeactivated(java.awt.event.WindowEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a window is de-activated.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>windowDeactivated</code>&nbsp;in interface&nbsp;<code>java.awt.event.WindowListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="textValueChanged(java.awt.event.TextEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>textValueChanged</h4>
+<pre>public&nbsp;void&nbsp;textValueChanged(java.awt.event.TextEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The value of one of the text fields has changed, and we have to make sure
+ it does not get too long.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>textValueChanged</code>&nbsp;in interface&nbsp;<code>java.awt.event.TextListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="resolved(com.lotus.sametime.commui.ResolveViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolved</h4>
+<pre>public&nbsp;void&nbsp;resolved(<a href="../../../../../com/lotus/sametime/commui/ResolveViewEvent.html" title="class in com.lotus.sametime.commui">ResolveViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An event indicating the a user was resolved successfully.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/commui/ResolveViewListener.html#resolved(com.lotus.sametime.commui.ResolveViewEvent)">resolved</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/commui/ResolveViewListener.html" title="interface in com.lotus.sametime.commui">ResolveViewListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/commui/ResolveViewEvent.html#getUser()"><code>ResolveViewEvent.getUser()</code></a></dd></dl>
+</li>
+</ul>
+<a name="resolveFailed(com.lotus.sametime.commui.ResolveViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolveFailed</h4>
+<pre>public&nbsp;void&nbsp;resolveFailed(<a href="../../../../../com/lotus/sametime/commui/ResolveViewEvent.html" title="class in com.lotus.sametime.commui">ResolveViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The resolve request failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/commui/ResolveViewListener.html#resolveFailed(com.lotus.sametime.commui.ResolveViewEvent)">resolveFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/commui/ResolveViewListener.html" title="interface in com.lotus.sametime.commui">ResolveViewListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The requested name to resolve.</dd><dd><code>reason</code> - The reason for the failure.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/commui/ResolveViewEvent.html#getReason()"><code>ResolveViewEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="statusChanged(com.lotus.sametime.awarenessui.AwarenessViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>statusChanged</h4>
+<pre>public&nbsp;void&nbsp;statusChanged(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">users status was changed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html#statusChanged(com.lotus.sametime.awarenessui.AwarenessViewEvent)">statusChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html" title="interface in com.lotus.sametime.awarenessui">AwarenessViewListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>users</code> - The changed users information.</dd></dl>
+</li>
+</ul>
+<a name="usersRemoved(com.lotus.sametime.awarenessui.AwarenessViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>usersRemoved</h4>
+<pre>public&nbsp;void&nbsp;usersRemoved(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Users were removed from the list.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html#usersRemoved(com.lotus.sametime.awarenessui.AwarenessViewEvent)">usersRemoved</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html" title="interface in com.lotus.sametime.awarenessui">AwarenessViewListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>users</code> - The users information.</dd></dl>
+</li>
+</ul>
+<a name="usersAdded(com.lotus.sametime.awarenessui.AwarenessViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>usersAdded</h4>
+<pre>public&nbsp;void&nbsp;usersAdded(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Users were added to the list.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html#usersAdded(com.lotus.sametime.awarenessui.AwarenessViewEvent)">usersAdded</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html" title="interface in com.lotus.sametime.awarenessui">AwarenessViewListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>users</code> - The users information.</dd></dl>
+</li>
+</ul>
+<a name="addUserFailed(com.lotus.sametime.awarenessui.AwarenessViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addUserFailed</h4>
+<pre>public&nbsp;void&nbsp;addUserFailed(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An attempt to add a user was failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html#addUserFailed(com.lotus.sametime.awarenessui.AwarenessViewEvent)">addUserFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html" title="interface in com.lotus.sametime.awarenessui">AwarenessViewListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>user</code> - The user information.</dd><dd><code>reason</code> - The reason for the failure.</dd></dl>
+</li>
+</ul>
+<a name="selectionChanged(com.lotus.sametime.awarenessui.AwarenessViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>selectionChanged</h4>
+<pre>public&nbsp;void&nbsp;selectionChanged(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Selection was changed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html#selectionChanged(com.lotus.sametime.awarenessui.AwarenessViewEvent)">selectionChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html" title="interface in com.lotus.sametime.awarenessui">AwarenessViewListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>count</code> - The number of selected users.</dd><dd><code>stCount</code> - The number of selected online sametime users.</dd><dd><code>aimCount</code> - The number of selected online aim users.</dd><dd><code>personalGroupCount</code> - The number of selected personal groups.</dd><dd><code>publicGroupCount</code> - The number of selected public group.</dd><dd><code>enableNickname</code> - Should the 'edit nickname' operation be enabled.</dd></dl>
+</li>
+</ul>
+<a name="serviceAvailable(com.lotus.sametime.awarenessui.AwarenessViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serviceAvailable</h4>
+<pre>public&nbsp;void&nbsp;serviceAvailable(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The 'Who is online' service is avaliable.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html#serviceAvailable(com.lotus.sametime.awarenessui.AwarenessViewEvent)">serviceAvailable</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html" title="interface in com.lotus.sametime.awarenessui">AwarenessViewListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="serviceUnavailable(com.lotus.sametime.awarenessui.AwarenessViewEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serviceUnavailable</h4>
+<pre>public&nbsp;void&nbsp;serviceUnavailable(<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The 'Who is online' service isn't avaliable.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html#serviceUnavailable(com.lotus.sametime.awarenessui.AwarenessViewEvent)">serviceUnavailable</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewListener.html" title="interface in com.lotus.sametime.awarenessui">AwarenessViewListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="loggedIn(com.lotus.sametime.community.LoginEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loggedIn</h4>
+<pre>public&nbsp;void&nbsp;loggedIn(<a href="../../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An event recieved when we get logged in.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/community/LoginListener.html#loggedIn(com.lotus.sametime.community.LoginEvent)">loggedIn</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/community/LoginEvent.html#getCommunity()"><code>LoginEvent.getCommunity()</code></a></dd></dl>
+</li>
+</ul>
+<a name="loggedOut(com.lotus.sametime.community.LoginEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loggedOut</h4>
+<pre>public&nbsp;void&nbsp;loggedOut(<a href="../../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An event recieved when we get logged out.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/community/LoginListener.html#loggedOut(com.lotus.sametime.community.LoginEvent)">loggedOut</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/community/LoginEvent.html#getReason()"><code>LoginEvent.getReason()</code></a>, 
+<a href="../../../../../com/lotus/sametime/community/LoginEvent.html#getCommunity()"><code>LoginEvent.getCommunity()</code></a></dd></dl>
+</li>
+</ul>
+<a name="ubqDialogClosed(com.lotus.sametime.guiutils.misc.UbqDialog, int, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ubqDialogClosed</h4>
+<pre>public&nbsp;void&nbsp;ubqDialogClosed(<a href="../../../../../com/lotus/sametime/guiutils/misc/UbqDialog.html" title="class in com.lotus.sametime.guiutils.misc">UbqDialog</a>&nbsp;dialog,
+                   int&nbsp;buttonIndex,
+                   boolean&nbsp;checkBoxState)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The resolve failed dialog was closed. See that the focus is transfered
+ back to the add dialog.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/guiutils/misc/UbqDialogListener.html#ubqDialogClosed(com.lotus.sametime.guiutils.misc.UbqDialog, int, boolean)">ubqDialogClosed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/guiutils/misc/UbqDialogListener.html" title="interface in com.lotus.sametime.guiutils.misc">UbqDialogListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>dialog</code> - The dialog that was closed.</dd><dd><code>buttonIndex</code> - index of pressed button or -1 if window was closed by
+        the user</dd><dd><code>checkBoxState</code> - state of CheckBox when window was closed</dd></dl>
+</li>
+</ul>
+<a name="init(java.awt.Frame, java.lang.String, java.lang.String, com.lotus.sametime.core.constants.EncLevel, java.util.Vector)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>protected&nbsp;void&nbsp;init(java.awt.Frame&nbsp;parent,
+        java.lang.String&nbsp;topic,
+        java.lang.String&nbsp;message,
+        <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+        java.util.Vector&nbsp;activities)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Initialize the dialog.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>parent</code> - The parent frame.</dd><dd><code>topic</code> - The default name for the conference.</dd><dd><code>message</code> - The default invitation.</dd><dd><code>encLevel</code> - The encryption level of the meeting.</dd><dd><code>activities</code> - The meeting activities.</dd></dl>
+</li>
+</ul>
+<a name="requestFocus()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>requestFocus</h4>
+<pre>public&nbsp;void&nbsp;requestFocus()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>requestFocus</code>&nbsp;in class&nbsp;<code>java.awt.Component</code></dd>
+</dl>
+</li>
+</ul>
+<a name="getPreferredSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPreferredSize</h4>
+<pre>public&nbsp;java.awt.Dimension&nbsp;getPreferredSize()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">On some machines the frame is opened with size 0 (probably because of
+ timing related issues).</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>getPreferredSize</code>&nbsp;in class&nbsp;<code>java.awt.Container</code></dd>
+</dl>
+</li>
+</ul>
+<a name="createMeetingInfoPanel()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createMeetingInfoPanel</h4>
+<pre>protected&nbsp;java.awt.Panel&nbsp;createMeetingInfoPanel()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the panel with the meeting info (topic, message).</div>
+</li>
+</ul>
+<a name="createButtonsPanel()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createButtonsPanel</h4>
+<pre>protected&nbsp;java.awt.Panel&nbsp;createButtonsPanel()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the buttons panel.</div>
+</li>
+</ul>
+<a name="createInviteesPanel()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createInviteesPanel</h4>
+<pre>protected&nbsp;java.awt.Panel&nbsp;createInviteesPanel()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the panel with the list of people.</div>
+</li>
+</ul>
+<a name="createToolsPanel()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createToolsPanel</h4>
+<pre>protected&nbsp;java.awt.Panel&nbsp;createToolsPanel()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the panel with the list of tools.</div>
+</li>
+</ul>
+<a name="createSecurityPanel(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createSecurityPanel</h4>
+<pre>protected&nbsp;java.awt.Panel&nbsp;createSecurityPanel(boolean&nbsp;secured)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Create and return the panel with the security check box.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>secured</code> - The initial state of the security cb.</dd></dl>
+</li>
+</ul>
+<a name="cancelDialog()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cancelDialog</h4>
+<pre>protected&nbsp;void&nbsp;cancelDialog()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Handle canceling the invite operation.</div>
+</li>
+</ul>
+<a name="showAddDialog()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>showAddDialog</h4>
+<pre>protected&nbsp;void&nbsp;showAddDialog()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Show the add dialog to allow the user to add people.</div>
+</li>
+</ul>
+<a name="sendInvitation()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendInvitation</h4>
+<pre>protected&nbsp;void&nbsp;sendInvitation()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Close the dialog, and notify the listener that it should send
+ invitations.</div>
+</li>
+</ul>
+<a name="getActiveInvitees(com.lotus.sametime.awareness.STWatchedUser[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getActiveInvitees</h4>
+<pre>protected&nbsp;<a href="../../../../../com/lotus/sametime/awareness/STWatchedUser.html" title="class in com.lotus.sametime.awareness">STWatchedUser</a>[]&nbsp;getActiveInvitees(<a href="../../../../../com/lotus/sametime/awareness/STWatchedUser.html" title="class in com.lotus.sametime.awareness">STWatchedUser</a>[]&nbsp;watchedUsers)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Go through a list of invitee attributes, and create a list of active
+ (i.e. not DND, not offline) users,</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A list of active users.</dd></dl>
+</li>
+</ul>
+<a name="isEncrypted(com.lotus.sametime.core.constants.EncLevel)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isEncrypted</h4>
+<pre>protected&nbsp;boolean&nbsp;isEncrypted(<a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Check if this meeting is encrypted.</div>
+</li>
+</ul>
+<a name="isWatsonServer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isWatsonServer</h4>
+<pre>protected&nbsp;boolean&nbsp;isWatsonServer()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Check the version of the server wer'e connected to.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>session</code> - The session object the connection is associated with.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>True if the server is a watson server.</dd></dl>
+</li>
+</ul>
+<a name="itemStateChanged(java.awt.event.ItemEvent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>itemStateChanged</h4>
+<pre>public&nbsp;void&nbsp;itemStateChanged(java.awt.event.ItemEvent&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>itemStateChanged</code>&nbsp;in interface&nbsp;<code>java.awt.event.ItemListener</code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/chatui/invitation/InvitationManager.html" title="class in com.lotus.sametime.chatui.invitation"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/chatui/invitation/InviteDialogListener.html" title="interface in com.lotus.sametime.chatui.invitation"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/chatui/invitation/InviteDialog.html" target="_top">Frames</a></li>
+<li><a href="InviteDialog.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_java.awt.Dialog">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_java.awt.Dialog">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+CapabilityManager (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CapabilityManager (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/CapabilityManager.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CapabilityManager.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony</FONT>
+<BR>
+Interface CapabilityManager</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>CapabilityManager</B><DT>extends <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A></DL>
+</PRE>
+
+<P>
+CapabilityManager manages capabilities associated with a specific call.
+ This extends the existing <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#isCapabilitySupported(java.lang.String)"><CODE>Capability.isCapabilitySupported(String)</CODE></A>
+ mechanism by allowing UI code to listen for capability changes and
+ update accordingly, and by allowing service providers to indicate when
+ a capability has changed. See also <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><CODE>CapabilityEvent</CODE></A>.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.Capability"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ACCEPT_INCOMING_CALL">CAPABILITY_ACCEPT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT">CAPABILITY_ADD_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY">CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ALTERNATE_CALL">CAPABILITY_ALTERNATE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ANSWER_CALL">CAPABILITY_ANSWER_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO">CAPABILITY_AUDIO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO_DEVICE_CONTROL">CAPABILITY_AUDIO_DEVICE_CONTROL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CAN_CONSULT">CAPABILITY_CAN_CONSULT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO">CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONFERENCE_CALL">CAPABILITY_CONFERENCE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONNECT_INCOMING_CALL">CAPABILITY_CONNECT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DETECT_VOICE_ACTIVITY">CAPABILITY_DETECT_VOICE_ACTIVITY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DISCONNECT_CALL">CAPABILITY_DISCONNECT_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_DIGITS">CAPABILITY_DTMF_DIGITS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_EVENT">CAPABILITY_DTMF_EVENT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT">CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_EXECUTE_COMMAND">CAPABILITY_EXECUTE_COMMAND</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_CALL_PROPERTY">CAPABILITY_GET_CALL_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_ENDPOINTS">CAPABILITY_GET_ENDPOINTS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_PROPERTY">CAPABILITY_GET_PARTICIPANT_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_VOLUME">CAPABILITY_GET_PARTICIPANT_VOLUME</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INCOMING_CALL_TIMEOUT">CAPABILITY_INCOMING_CALL_TIMEOUT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL">CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LEAVE_CALL">CAPABILITY_LEAVE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LOCK_CALL">CAPABILITY_LOCK_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MERGE_CALLS">CAPABILITY_MERGE_CALLS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_CALL">CAPABILITY_MUTE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT">CAPABILITY_MUTE_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_AUDIO">CAPABILITY_MUTE_PARTICIPANT_AUDIO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_VIDEO">CAPABILITY_MUTE_PARTICIPANT_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PAUSE_CALL">CAPABILITY_PAUSE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PHONE_DEVICE_CONTROL">CAPABILITY_PHONE_DEVICE_CONTROL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_AUDIO_FILE">CAPABILITY_PLAY_AUDIO_FILE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_VIDEO_FILE">CAPABILITY_PLAY_VIDEO_FILE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO">CAPABILITY_RECORD_AUDIO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO_ONLY">CAPABILITY_RECORD_AUDIO_ONLY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_LOCAL">CAPABILITY_RECORD_COMPRESS_LOCAL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_SERVER">CAPABILITY_RECORD_COMPRESS_SERVER</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL">CAPABILITY_RECORD_LOCAL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL_STREAM">CAPABILITY_RECORD_LOCAL_STREAM</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER">CAPABILITY_RECORD_SERVER</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED">CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED">CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_VIDEO">CAPABILITY_RECORD_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REDIRECT_INCOMING_CALL">CAPABILITY_REDIRECT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REJECT_INCOMING_CALL">CAPABILITY_REJECT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REMOVE_PARTICIPANT">CAPABILITY_REMOVE_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PARTICIPANT_UNMUTE">CAPABILITY_REQUEST_PARTICIPANT_UNMUTE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PROVIDER_PROPERTIES">CAPABILITY_REQUEST_PROVIDER_PROPERTIES</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SAVE_ENDPOINTS">CAPABILITY_SAVE_ENDPOINTS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_AUDIO_PORT">CAPABILITY_SET_AUDIO_PORT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_CALL_PROPERTY">CAPABILITY_SET_CALL_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_MODERATOR">CAPABILITY_SET_MODERATOR</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_PROPERTY">CAPABILITY_SET_PARTICIPANT_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_VOLUME">CAPABILITY_SET_PARTICIPANT_VOLUME</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PREFERRED_ENDPOINT">CAPABILITY_SET_PREFERRED_ENDPOINT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_VIDEO_PORT">CAPABILITY_SET_VIDEO_PORT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SILENCE_PARTICIPANT">CAPABILITY_SILENCE_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SIP_URI">CAPABILITY_SIP_URI</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TELEPHONY">CAPABILITY_TELEPHONY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_CALL">CAPABILITY_TRANSFER_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_TO_DEVICE">CAPABILITY_TRANSFER_TO_DEVICE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO">CAPABILITY_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO_DEVICE_CONTROL">CAPABILITY_VIDEO_DEVICE_CONTROL</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html#addPropertyChangeListener(java.beans.PropertyChangeListener)">addPropertyChangeListener</A></B>(java.beans.PropertyChangeListener&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a property change listener for all capabilities in the call
+ associated with this capability manager.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html#addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">addPropertyChangeListener</A></B>(java.lang.String&nbsp;capability,
+                          java.beans.PropertyChangeListener&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a property change listener for the specified capability in the call
+ associated with this capability manager.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html#broadcastSupportedCapabilities()">broadcastSupportedCapabilities</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Causes a <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><CODE>CapabilityEvent</CODE></A> to be fired for each capability
+ that is currently supported in the call associated with this capability
+ manager.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html#getCallId()">getCallId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID of the call associated with this capability manager.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.Set&lt;java.lang.String&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html#getSupportedCapabilities()">getSupportedCapabilities</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a set of all capabilities currently supported in the call associated
+ with this capability manager.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A></B>(java.lang.String&nbsp;capability)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the specified capability is currently supported in the call
+ associated with this capability manager.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html#removePropertyChangeListener(java.beans.PropertyChangeListener)">removePropertyChangeListener</A></B>(java.beans.PropertyChangeListener&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a property change listener that was added using one of the
+ addPropertyChangeListener methods.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.CallListener"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html#processCallEvent(com.ibm.collaboration.realtime.telephony.event.CallEvent)">processCallEvent</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="addPropertyChangeListener(java.beans.PropertyChangeListener)"><!-- --></A><H3>
+addPropertyChangeListener</H3>
+<PRE>
+void <B>addPropertyChangeListener</B>(java.beans.PropertyChangeListener&nbsp;listener)</PRE>
+<DL>
+<DD>Adds a property change listener for all capabilities in the call
+ associated with this capability manager. The listener will receive
+ a PropertyChangedEvent with the following values:
+ 
+ <p> property name: capability name as defined in the <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>Capability</CODE></A> interface </p>
+ <p> new value: Boolean, true if capability is supported, false if not supported </p>
+ <p> old value: null </p>
+ <p>
+ Note that receiving a property change does not guarantee that the capability
+ value has actually changed. Note also that capability changes can be tracked
+ using <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><CODE>CapabilityEvent</CODE></A>.
+ </p>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - property change listener to add</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)"><!-- --></A><H3>
+addPropertyChangeListener</H3>
+<PRE>
+void <B>addPropertyChangeListener</B>(java.lang.String&nbsp;capability,
+                               java.beans.PropertyChangeListener&nbsp;listener)</PRE>
+<DL>
+<DD>Adds a property change listener for the specified capability in the call
+ associated with this capability manager. The capability is one of the
+ constants defined in the <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>Capability</CODE></A> interface. See
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html#addPropertyChangeListener(java.beans.PropertyChangeListener)"><CODE>addPropertyChangeListener(PropertyChangeListener)</CODE></A> for more
+ information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>capability</CODE> - capability from Capability interface, cannot be null<DD><CODE>listener</CODE> - property change listener to add</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="broadcastSupportedCapabilities()"><!-- --></A><H3>
+broadcastSupportedCapabilities</H3>
+<PRE>
+void <B>broadcastSupportedCapabilities</B>()
+                                    throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Causes a <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><CODE>CapabilityEvent</CODE></A> to be fired for each capability
+ that is currently supported in the call associated with this capability
+ manager. This in turn will notify property change listeners that were
+ registered using one of the addPropertyChangeListener methods.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InactiveCallException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InactiveCallException</A></CODE> - if the call is not active
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCallId()"><!-- --></A><H3>
+getCallId</H3>
+<PRE>
+java.lang.String <B>getCallId</B>()</PRE>
+<DL>
+<DD>Returns the ID of the call associated with this capability manager.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Associated call ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedCapabilities()"><!-- --></A><H3>
+getSupportedCapabilities</H3>
+<PRE>
+java.util.Set&lt;java.lang.String&gt; <B>getSupportedCapabilities</B>()
+                                                         throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns a set of all capabilities currently supported in the call associated
+ with this capability manager. Each entry in the set is one of the constants
+ defined in the <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>Capability</CODE></A> interface.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Set of supported capabilities.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InactiveCallException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InactiveCallException</A></CODE> - if the call is not active
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isCapabilitySupported(java.lang.String)"><!-- --></A><H3>
+isCapabilitySupported</H3>
+<PRE>
+boolean <B>isCapabilitySupported</B>(java.lang.String&nbsp;capability)</PRE>
+<DL>
+<DD>Determines if the specified capability is currently supported in the call
+ associated with this capability manager. The capability is one of the constants
+ defined in the <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>Capability</CODE></A> interface. This is equivalent to using
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#isCapabilitySupported(java.lang.String)"><CODE>Call.isCapabilitySupported(String)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>capability</CODE> - capability to check
+<DT><B>Returns:</B><DD>true if capability is supported, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removePropertyChangeListener(java.beans.PropertyChangeListener)"><!-- --></A><H3>
+removePropertyChangeListener</H3>
+<PRE>
+void <B>removePropertyChangeListener</B>(java.beans.PropertyChangeListener&nbsp;listener)</PRE>
+<DL>
+<DD>Removes a property change listener that was added using one of the
+ addPropertyChangeListener methods.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - property change listener to remove</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/CapabilityManager.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CapabilityManager.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

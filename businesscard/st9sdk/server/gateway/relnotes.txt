@@ -1,0 +1,49 @@
+/*
+ * Licensed Materials - Property of IBM
+ *
+ * L-MCOS-96LQPJ
+ *
+ * (C) Copyright IBM Corp. 2006, 2013. All rights reserved.
+ *
+ * US Government Users Restricted Rights- Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+ 
+
+**************************************************************************************
+
+            IBM Lotus Sametime Gateway 9.0 Toolkit Release Notes
+
+**************************************************************************************
+
+These release notes provide information that was not included in the IBM
+Lotus Sametime Gateway 9.0 Software Toolkit documentation.
+ 
+For more complete information about new features, additions and known 
+issues that are in this release as well as changes from the previous 
+release, refer to the IBM Lotus Sametime Gateway Integration Guide, STGW_Integration_guide.pdf, in the 
+gateway\doc folder. For general notes about the Gateway toolkit, see the 
+readme.txt file in the same folder that contains this relnotes.txt file.
+
+
+
+
+
+================================================
+Known Issues and Documentation Additions/Changes
+================================================
+
+--------------------------------
+PluginRegistrationInterface  API
+--------------------------------
+
+* The PluginPresenceHandler fetch() and onFetch() methods are used to retrieve the current presence status 
+of the user on the buddylist.   The initiator must subscribe to the user first in order to be notified of 
+the user's presence status.  The second parameter to fetch()/onFetch(), isNewSession, indicates whether a 
+new subscription session is created for the duration of the fetch operation.  The value is always false, 
+as the fetch operation utilizes the subscription session active at the time of operation in order to retrieve 
+the user status.
+
+
+For the most up to date information please refer to the RTC Gateway Integration Guide and the Javadoc.
+

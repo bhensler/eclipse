@@ -1,0 +1,930 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ImMessage (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ImMessage (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImDisconnectedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/messages/im/ImMessage.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ImMessage.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.messages.im</FONT>
+<BR>
+Class ImMessage</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html" title="class in com.ibm.collaboration.realtime.messages">com.ibm.collaboration.realtime.messages.Message</A>
+      <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.messages.im.ImMessage</B>
+</PRE>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImConnectedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImConnectedMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImConnectionStatusLocationChangeMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImConnectionStatusLocationChangeMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImDisconnectedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImDisconnectedMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConnectionClosedMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionOpenMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConnectionOpenMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionOpenSuccessMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConnectionOpenSuccessMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConversionManyToManyMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConversionManyToManyMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextReceivedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextReceivedMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextSendFailedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextSendFailedMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextSendMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextSendMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextTypingMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextTypingMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextTypingRequestMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextTypingRequestMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImWindowOpenedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImWindowOpenedMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyCreateMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyCreateMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyCreateSuccessMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyCreateSuccessMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteAcceptMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteAcceptMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteDeclineMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteDeclineMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteOthersMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteOthersMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyLeaveMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyLeaveMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyTextConnectionClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyTextConnectionClosedMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyTextReceivedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyTextReceivedMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyTextSendMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyTextSendMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyUserEnterExitMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyUserEnterExitMessage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/PartnerStatusUpdateMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">PartnerStatusUpdateMessage</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>ImMessage</B><DT>extends <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html" title="class in com.ibm.collaboration.realtime.messages">Message</A></DL>
+</PRE>
+
+<P>
+Abstract base class for message event classes related to instant messaging.
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getCommunityId()">getCommunityId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID of the community in which this chat is taking place.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getConversationId()">getConversationId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the conversation ID that identifies this chat.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getInviteList()">getInviteList</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the chat invitation list.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getInviteTopic()">getInviteTopic</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the chat invitation topic.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getLocalAlias()">getLocalAlias</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the alias for the local (current) user.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getLocalContactId()">getLocalContactId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the contact ID for the local (current) user.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getPartnerAlias()">getPartnerAlias</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the chat partner's alias.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getPartnerContactId()">getPartnerContactId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the chat partner's contact ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getPartnerDisplayName()">getPartnerDisplayName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the chat partner's display name, either the partner's
+ alias, or contact ID if no alias has been specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getPartnerUniqueId()">getPartnerUniqueId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the chat partner's unique ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getPlaceId()">getPlaceId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the chat place ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#getText()">getText</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the message text.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#isConversationEncrypted()">isConversationEncrypted</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this chat is encrypted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#isEnabled()">isEnabled</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Detrmines if the setting represented by this message is
+ enabled or disabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#isIncomingMessage()">isIncomingMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this message event is for an incoming message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#isSystemMessage()">isSystemMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Detrmines if this message event is for a system message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setCommunityId(java.lang.String)">setCommunityId</A></B>(java.lang.String&nbsp;communityId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the ID of the community in which this chat is taking place.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setConversationId(java.lang.String)">setConversationId</A></B>(java.lang.String&nbsp;conversationId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the conversation ID that identifies this chat.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setInviteList(java.lang.String[])">setInviteList</A></B>(java.lang.String[]&nbsp;invitees)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the chat invitation list.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setInviteTopic(java.lang.String)">setInviteTopic</A></B>(java.lang.String&nbsp;topic)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the chat invitation topic.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setIsConversationEncrypted(boolean)">setIsConversationEncrypted</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies whether this chat is encrypted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setIsEnabled(boolean)">setIsEnabled</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies whether the setting represented by this message is
+ enabled or disabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setIsIncomingMessage(boolean)">setIsIncomingMessage</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies if this message event is for an incoming message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setIsSystemMessage(boolean)">setIsSystemMessage</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies whether this message event is for a system message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setLocalAlias(java.lang.String)">setLocalAlias</A></B>(java.lang.String&nbsp;alias)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the alias for the local (current) user.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setLocalContactId(java.lang.String)">setLocalContactId</A></B>(java.lang.String&nbsp;contactId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the contact ID for the local (current) user.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setPartnerAlias(java.lang.String)">setPartnerAlias</A></B>(java.lang.String&nbsp;alias)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the chat partner's alias.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setPartnerContactId(java.lang.String)">setPartnerContactId</A></B>(java.lang.String&nbsp;contactId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the chat partner's contact ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setPartnerUniqueId(java.lang.String)">setPartnerUniqueId</A></B>(java.lang.String&nbsp;uniqueId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the chat partner's unique ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setPlaceId(java.lang.String)">setPlaceId</A></B>(java.lang.String&nbsp;placeId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the chat place ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImMessage.html#setText(java.lang.String)">setText</A></B>(java.lang.String&nbsp;text)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the message text.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.messages.Message"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.ibm.collaboration.realtime.messages.<A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html" title="class in com.ibm.collaboration.realtime.messages">Message</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#getDestinationId()">getDestinationId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#getImage()">getImage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#getPropertiesMap()">getPropertiesMap</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#getProperty(java.lang.String)">getProperty</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#getSourceId()">getSourceId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#post()">post</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#setDestinationId(java.lang.String)">setDestinationId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#setImage(org.eclipse.swt.graphics.Image)">setImage</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#setProperty(java.lang.String, java.lang.Object)">setProperty</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/messages/Message.html#setSourceId(java.lang.String)">setSourceId</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getCommunityId()"><!-- --></A><H3>
+getCommunityId</H3>
+<PRE>
+public java.lang.String <B>getCommunityId</B>()</PRE>
+<DL>
+<DD>Returns the ID of the community in which this chat is taking place.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Community ID for this chat, null if not available.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCommunityId(java.lang.String)"><!-- --></A><H3>
+setCommunityId</H3>
+<PRE>
+public void <B>setCommunityId</B>(java.lang.String&nbsp;communityId)</PRE>
+<DL>
+<DD>Sets the ID of the community in which this chat is taking place.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>communityId</CODE> - community ID for this chat<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConversationId()"><!-- --></A><H3>
+getConversationId</H3>
+<PRE>
+public java.lang.String <B>getConversationId</B>()</PRE>
+<DL>
+<DD>Returns the conversation ID that identifies this chat.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Conversation ID, null if none specified.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setConversationId(java.lang.String)"><!-- --></A><H3>
+setConversationId</H3>
+<PRE>
+public void <B>setConversationId</B>(java.lang.String&nbsp;conversationId)</PRE>
+<DL>
+<DD>Sets the conversation ID that identifies this chat.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>conversationId</CODE> - conversation ID or null<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInviteList()"><!-- --></A><H3>
+getInviteList</H3>
+<PRE>
+public java.lang.String[] <B>getInviteList</B>()</PRE>
+<DL>
+<DD>Returns the chat invitation list.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Chat invitation list, null if none specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInviteList(java.lang.String[])"><!-- --></A><H3>
+setInviteList</H3>
+<PRE>
+public void <B>setInviteList</B>(java.lang.String[]&nbsp;invitees)</PRE>
+<DL>
+<DD>Sets the chat invitation list.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>invitees</CODE> - chat invitation list<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInviteTopic()"><!-- --></A><H3>
+getInviteTopic</H3>
+<PRE>
+public java.lang.String <B>getInviteTopic</B>()</PRE>
+<DL>
+<DD>Returns the chat invitation topic.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Chat invitation topic, null if none specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInviteTopic(java.lang.String)"><!-- --></A><H3>
+setInviteTopic</H3>
+<PRE>
+public void <B>setInviteTopic</B>(java.lang.String&nbsp;topic)</PRE>
+<DL>
+<DD>Sets the chat invitation topic.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>topic</CODE> - chat invitation topic or null<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isConversationEncrypted()"><!-- --></A><H3>
+isConversationEncrypted</H3>
+<PRE>
+public boolean <B>isConversationEncrypted</B>()</PRE>
+<DL>
+<DD>Determines if this chat is encrypted.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if chat is encrypted, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsConversationEncrypted(boolean)"><!-- --></A><H3>
+setIsConversationEncrypted</H3>
+<PRE>
+public void <B>setIsConversationEncrypted</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD>Specifies whether this chat is encrypted.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true if chat is encrypted, false otherwise<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isEnabled()"><!-- --></A><H3>
+isEnabled</H3>
+<PRE>
+public boolean <B>isEnabled</B>()</PRE>
+<DL>
+<DD>Detrmines if the setting represented by this message is
+ enabled or disabled.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if enabled, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsEnabled(boolean)"><!-- --></A><H3>
+setIsEnabled</H3>
+<PRE>
+public void <B>setIsEnabled</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD>Specifies whether the setting represented by this message is
+ enabled or disabled.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true if setting is enabled, false otherwise<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isIncomingMessage()"><!-- --></A><H3>
+isIncomingMessage</H3>
+<PRE>
+public boolean <B>isIncomingMessage</B>()</PRE>
+<DL>
+<DD>Determines if this message event is for an incoming message.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this event if for an incoming message, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsIncomingMessage(boolean)"><!-- --></A><H3>
+setIsIncomingMessage</H3>
+<PRE>
+public void <B>setIsIncomingMessage</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD>Specifies if this message event is for an incoming message.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true if this event is for incoming message, false otherwise<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLocalAlias()"><!-- --></A><H3>
+getLocalAlias</H3>
+<PRE>
+public java.lang.String <B>getLocalAlias</B>()</PRE>
+<DL>
+<DD>Returns the alias for the local (current) user.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Local alias, null if none specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setLocalAlias(java.lang.String)"><!-- --></A><H3>
+setLocalAlias</H3>
+<PRE>
+public void <B>setLocalAlias</B>(java.lang.String&nbsp;alias)</PRE>
+<DL>
+<DD>Sets the alias for the local (current) user.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>alias</CODE> - alias for local user<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLocalContactId()"><!-- --></A><H3>
+getLocalContactId</H3>
+<PRE>
+public java.lang.String <B>getLocalContactId</B>()</PRE>
+<DL>
+<DD>Returns the contact ID for the local (current) user.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Local ID, null if not available.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setLocalContactId(java.lang.String)"><!-- --></A><H3>
+setLocalContactId</H3>
+<PRE>
+public void <B>setLocalContactId</B>(java.lang.String&nbsp;contactId)</PRE>
+<DL>
+<DD>Sets the contact ID for the local (current) user.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>contactId</CODE> - contact ID for local user<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPartnerAlias()"><!-- --></A><H3>
+getPartnerAlias</H3>
+<PRE>
+public java.lang.String <B>getPartnerAlias</B>()</PRE>
+<DL>
+<DD>Returns the chat partner's alias.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Chat partner's alias, null if none specified.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPartnerAlias(java.lang.String)"><!-- --></A><H3>
+setPartnerAlias</H3>
+<PRE>
+public void <B>setPartnerAlias</B>(java.lang.String&nbsp;alias)</PRE>
+<DL>
+<DD>Sets the chat partner's alias.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>alias</CODE> - chat partner's alias or null<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPartnerDisplayName()"><!-- --></A><H3>
+getPartnerDisplayName</H3>
+<PRE>
+public java.lang.String <B>getPartnerDisplayName</B>()</PRE>
+<DL>
+<DD>Returns the chat partner's display name, either the partner's
+ alias, or contact ID if no alias has been specified.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Chat partner's display name, null if none specified.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPartnerContactId()"><!-- --></A><H3>
+getPartnerContactId</H3>
+<PRE>
+public java.lang.String <B>getPartnerContactId</B>()</PRE>
+<DL>
+<DD>Returns the chat partner's contact ID.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Chat partner's contact ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPartnerContactId(java.lang.String)"><!-- --></A><H3>
+setPartnerContactId</H3>
+<PRE>
+public void <B>setPartnerContactId</B>(java.lang.String&nbsp;contactId)</PRE>
+<DL>
+<DD>Sets the chat partner's contact ID.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>contactId</CODE> - partner's contact ID<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPartnerUniqueId()"><!-- --></A><H3>
+getPartnerUniqueId</H3>
+<PRE>
+public java.lang.String <B>getPartnerUniqueId</B>()</PRE>
+<DL>
+<DD>Returns the chat partner's unique ID.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Chat partner's unique ID, null if not available.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPartnerUniqueId(java.lang.String)"><!-- --></A><H3>
+setPartnerUniqueId</H3>
+<PRE>
+public void <B>setPartnerUniqueId</B>(java.lang.String&nbsp;uniqueId)</PRE>
+<DL>
+<DD>Sets the chat partner's unique ID.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>uniqueId</CODE> - partner's unique ID<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPlaceId()"><!-- --></A><H3>
+getPlaceId</H3>
+<PRE>
+public java.lang.String <B>getPlaceId</B>()</PRE>
+<DL>
+<DD>Returns the chat place ID.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Chat place ID, null if none specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPlaceId(java.lang.String)"><!-- --></A><H3>
+setPlaceId</H3>
+<PRE>
+public void <B>setPlaceId</B>(java.lang.String&nbsp;placeId)</PRE>
+<DL>
+<DD>Sets the chat place ID.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>placeId</CODE> - chat place ID or null<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSystemMessage()"><!-- --></A><H3>
+isSystemMessage</H3>
+<PRE>
+public boolean <B>isSystemMessage</B>()</PRE>
+<DL>
+<DD>Detrmines if this message event is for a system message.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this event is for a system message, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsSystemMessage(boolean)"><!-- --></A><H3>
+setIsSystemMessage</H3>
+<PRE>
+public void <B>setIsSystemMessage</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD>Specifies whether this message event is for a system message.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - if this event is for a system message, false otherwise<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getText()"><!-- --></A><H3>
+getText</H3>
+<PRE>
+public java.lang.String <B>getText</B>()</PRE>
+<DL>
+<DD>Returns the message text.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Message text.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setText(java.lang.String)"><!-- --></A><H3>
+setText</H3>
+<PRE>
+public void <B>setText</B>(java.lang.String&nbsp;text)</PRE>
+<DL>
+<DD>Sets the message text.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>text</CODE> - message text or null<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImDisconnectedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/messages/im/ImMessage.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ImMessage.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

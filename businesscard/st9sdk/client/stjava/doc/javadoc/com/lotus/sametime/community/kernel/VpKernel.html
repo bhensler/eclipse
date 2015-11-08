@@ -1,0 +1,2042 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>VpKernel</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="VpKernel";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/community/kernel/VpkDiffieAuthInfo.html" title="class in com.lotus.sametime.community.kernel"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/community/kernel/VpkRC240AuthInfo.html" title="class in com.lotus.sametime.community.kernel"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/community/kernel/VpKernel.html" target="_top">Frames</a></li>
+<li><a href="VpKernel.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.community.kernel</div>
+<h2 title="Class VpKernel" class="title">Class VpKernel</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.community.kernel.VpKernel</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/CnlMsgListener.html" title="interface in com.lotus.sametime.community.kernel.connhandler">CnlMsgListener</a>, <a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html" title="interface in com.lotus.sametime.community.kernel.connhandler">MasterCnlListener</a></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../../com/lotus/sametime/community/STBaseImpl.html" title="class in com.lotus.sametime.community">STBaseImpl</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">VpKernel</span>
+extends java.lang.Object
+implements <a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html" title="interface in com.lotus.sametime.community.kernel.connhandler">MasterCnlListener</a>, <a href="../../../../../com/lotus/sametime/community/kernel/connhandler/CnlMsgListener.html" title="interface in com.lotus.sametime.community.kernel.connhandler">CnlMsgListener</a></pre>
+<div class="block">This class implements the kernel API.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#m_session">m_session</a></strong></code>
+<div class="block">The STSession object associated with this component.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#VpKernel()">VpKernel</a></strong>()</code>
+<div class="block">Create a new kernel object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#acceptChannel(int, int, int, int, com.lotus.sametime.core.constants.EncLevel, byte[], com.lotus.sametime.core.types.STUserInstance, byte, com.lotus.sametime.core.types.STUserInstance)">acceptChannel</a></strong>(int&nbsp;channelId,
+             int&nbsp;serviceType,
+             int&nbsp;prType,
+             int&nbsp;prVersion,
+             <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;requestedLvl,
+             byte[]&nbsp;data,
+             <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;creator,
+             byte&nbsp;priority,
+             <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;acceptor)</code>
+<div class="block">Requests to accept a suspended communication channel.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#adminMsg(java.lang.String)">adminMsg</a></strong>(java.lang.String&nbsp;msg)</code>
+<div class="block">(Try to) Send an admin message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#createChannel(int, com.lotus.sametime.core.types.STId, int, int, int, com.lotus.sametime.core.constants.EncLevel, byte[], int, byte, com.lotus.sametime.core.types.STUserInstance)">createChannel</a></strong>(int&nbsp;channelId,
+             <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId,
+             int&nbsp;serviceType,
+             int&nbsp;prType,
+             int&nbsp;prVersion,
+             <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+             byte[]&nbsp;data,
+             int&nbsp;options,
+             byte&nbsp;priority,
+             <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;creator)</code>
+<div class="block">Requests to create a communication channel with a remote party.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#denySend(int, com.lotus.sametime.core.types.STId, int)">denySend</a></strong>(int&nbsp;reqId,
+        <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId,
+        int&nbsp;reason)</code>
+<div class="block">Requests to send a denial to an earlier received "one time" message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#destroyChannel(int, int, byte[])">destroyChannel</a></strong>(int&nbsp;chId,
+              int&nbsp;reason,
+              byte[]&nbsp;data)</code>
+<div class="block">Requests to destroy a communication channel.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getAutoRelogin()">getAutoRelogin</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getCommunityId()">getCommunityId</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/core/types/STServer.html" title="class in com.lotus.sametime.core.types">STServer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getConnectingServer()">getConnectingServer</a></strong>()</code>
+<div class="block">Get the server to which we are physically connected.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getConnectionHandler()">getConnectionHandler</a></strong>()</code>
+<div class="block">Return the connection handler used by this object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/core/util/connection/ConnectionInfo.html" title="class in com.lotus.sametime.core.util.connection">ConnectionInfo</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getConnectionInfo()">getConnectionInfo</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getHost()">getHost</a></strong>()</code>
+<div class="block">Get the host we are (or were last) connected to</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.net.InetAddress</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getIp()">getIp</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getKernelName()">getKernelName</a></strong>()</code>
+<div class="block">Return a string representation of this object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.net.InetAddress</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getLocalAddress()">getLocalAddress</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getLoginInfo()">getLoginInfo</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>short</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getLoginType()">getLoginType</a></strong>()</code>
+<div class="block">Get the login type for the next login.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/core/types/STPrivacyList.html" title="class in com.lotus.sametime.core.types">STPrivacyList</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getPrivacyList()">getPrivacyList</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>short</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getPrivacyMode()">getPrivacyMode</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.net.InetAddress</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getServerPovIp()">getServerPovIp</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getServerVersion()">getServerVersion</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#getStatus()">getStatus</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#isGroupPrivacySupported()">isGroupPrivacySupported</a></strong>()</code>
+<div class="block">Return true if the server we're logged in to supports group privacy.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#isLoggedIn()">isLoggedIn</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#login(java.lang.String, java.lang.String, com.lotus.sametime.community.kernel.VpkAuthInfo, java.lang.String, boolean)">login</a></strong>(java.lang.String&nbsp;host,
+     java.lang.String&nbsp;loginName,
+     <a href="../../../../../com/lotus/sametime/community/kernel/VpkAuthInfo.html" title="class in com.lotus.sametime.community.kernel">VpkAuthInfo</a>&nbsp;authInfo,
+     java.lang.String&nbsp;community,
+     boolean&nbsp;useLoginStatus)</code>
+<div class="block">Requests to login to a Virtual Places community.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#loginAsAnon(java.lang.String, java.lang.String, java.lang.String)">loginAsAnon</a></strong>(java.lang.String&nbsp;host,
+           java.lang.String&nbsp;loginName,
+           java.lang.String&nbsp;community)</code>
+<div class="block">Requests to login anonymously to a Virtual Places community.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#loginAsAnonByToken(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">loginAsAnonByToken</a></strong>(java.lang.String&nbsp;host,
+                  java.lang.String&nbsp;loginName,
+                  java.lang.String&nbsp;token,
+                  java.lang.String&nbsp;community)</code>
+<div class="block">Requests to login anonymous user to a Virtual Places community.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#loginAsServerApp(java.lang.String, short, java.lang.String, int[])">loginAsServerApp</a></strong>(java.lang.String&nbsp;host,
+                short&nbsp;loginType,
+                java.lang.String&nbsp;appName,
+                int[]&nbsp;serviceTypes)</code>
+<div class="block">Login to the server as a server application.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#loginByPassword(java.lang.String, java.lang.String, char[], java.lang.String)">loginByPassword</a></strong>(java.lang.String&nbsp;host,
+               java.lang.String&nbsp;loginName,
+               char[]&nbsp;password,
+               java.lang.String&nbsp;community)</code>
+<div class="block">Requests to login to a Virtual Places community.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#loginByPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">loginByPassword</a></strong>(java.lang.String&nbsp;host,
+               java.lang.String&nbsp;loginName,
+               java.lang.String&nbsp;password,
+               java.lang.String&nbsp;community)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;
+<div class="deprecatedContent">Replaced with {@link #loginByPassword(String, String, char[], String) for Sametime 8.5.</div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#loginByToken(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">loginByToken</a></strong>(java.lang.String&nbsp;host,
+            java.lang.String&nbsp;loginName,
+            java.lang.String&nbsp;token,
+            java.lang.String&nbsp;community)</code>
+<div class="block">Requests to login to a Virtual Places community.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#loginByTokens(java.lang.String, java.lang.String, com.lotus.sametime.token.Token[], java.lang.String)">loginByTokens</a></strong>(java.lang.String&nbsp;host,
+             java.lang.String&nbsp;loginName,
+             <a href="../../../../../com/lotus/sametime/token/Token.html" title="class in com.lotus.sametime.token">Token</a>[]&nbsp;tokens,
+             java.lang.String&nbsp;community)</code>
+<div class="block">Requests to login to a Virtual Places community.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#loginWithoutCredentials(java.lang.String, java.lang.String, java.lang.String)">loginWithoutCredentials</a></strong>(java.lang.String&nbsp;host,
+                       java.lang.String&nbsp;loginName,
+                       java.lang.String&nbsp;community)</code>
+<div class="block">Requests to perform a  login without credentials to a community.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#logout()">logout</a></strong>()</code>
+<div class="block">Requests to disconnect from the current Virtual Places community.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#logout(int)">logout</a></strong>(int&nbsp;reason)</code>
+<div class="block">Requests to disconnect from the current Virtual Places community.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#multiSendOnChannel(int[], short, byte[], boolean)">multiSendOnChannel</a></strong>(int[]&nbsp;chIds,
+                  short&nbsp;msgType,
+                  byte[]&nbsp;data,
+                  boolean&nbsp;encrypt)</code>
+<div class="block">Requests to send a message to multiple recipients.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onAcceptChannel(int, int, int, int, com.lotus.sametime.core.constants.EncLevel, byte[], byte[], com.lotus.sametime.core.types.STUserInstance, byte, com.lotus.sametime.core.types.STId)">onAcceptChannel</a></strong>(int&nbsp;chId,
+               int&nbsp;serviceType,
+               int&nbsp;prType,
+               int&nbsp;prVersion,
+               <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+               byte[]&nbsp;data,
+               byte[]&nbsp;retData,
+               <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;creator,
+               byte&nbsp;priority,
+               <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId)</code>
+<div class="block">Notifies about a remote party's request to create a channel and allows
+ to accept it or not.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onAckVisibilityAccepted(com.lotus.sametime.core.types.STUser[])">onAckVisibilityAccepted</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;requestors)</code>
+<div class="block">Notifies that we got an ack for visibility accepted msg
+ Note: this method is called only for the target</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onAdminMsg(java.lang.String)">onAdminMsg</a></strong>(java.lang.String&nbsp;msgText)</code>
+<div class="block">An admin message was received.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onCommunitiesQueried(java.lang.String[])">onCommunitiesQueried</a></strong>(java.lang.String[]&nbsp;communities)</code>
+<div class="block">A response to query communities was received.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onConnected(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">onConnected</a></strong>(<a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;src)</code>
+<div class="block">We got connected.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onConnectFailed(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler, int)">onConnectFailed</a></strong>(<a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;src,
+               int&nbsp;reason)</code>
+<div class="block">A connect request has failed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onConnectionClosed(int, com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">onConnectionClosed</a></strong>(int&nbsp;reason,
+                  <a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;src)</code>
+<div class="block">The connection was closed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onCreateChannel(int, int, int, int, com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.core.constants.EncLevel, byte[], com.lotus.sametime.core.types.STUserInstance, byte)">onCreateChannel</a></strong>(int&nbsp;chId,
+               int&nbsp;serviceType,
+               int&nbsp;prType,
+               int&nbsp;prVersion,
+               <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+               <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;minEncLevel,
+               byte[]&nbsp;data,
+               <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;remoteInfo,
+               byte&nbsp;priority)</code>
+<div class="block">Notifies that a new channel has been created by either local or
+ remote party.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onDestroyChannel(int, int, byte[])">onDestroyChannel</a></strong>(int&nbsp;chId,
+                int&nbsp;reason,
+                byte[]&nbsp;data)</code>
+<div class="block">Notifies that a channel has been destroyed by either an explicit 
+ request of one of the parties or as a result of a connection failure.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onLogin()">onLogin</a></strong>()</code>
+<div class="block">Notifies that the client has logged in the community.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onLogout(int)">onLogout</a></strong>(int&nbsp;reason)</code>
+<div class="block">Notifies that the client has been logged off the current community 
+ or that an earlier login request failed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onMultiCast(com.lotus.sametime.core.types.STUser, short, byte[])">onMultiCast</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;sender,
+           short&nbsp;type,
+           byte[]&nbsp;data)</code>
+<div class="block">An multicast message was received.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onMultiSendOnChannel(int[], short, byte[])">onMultiSendOnChannel</a></strong>(int[]&nbsp;chList,
+                    short&nbsp;msgType,
+                    byte[]&nbsp;data)</code>
+<div class="block">Notifies that a data message has been sent on multiple channels.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onProtocolErrorOccured(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">onProtocolErrorOccured</a></strong>(<a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;src)</code>
+<div class="block">Something's wrong in parsing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onReceive(com.lotus.sametime.community.kernel.vpkmsg.VpkMsgIn)">onReceive</a></strong>(<a href="../../../../../com/lotus/sametime/community/kernel/vpkmsg/VpkMsgIn.html" title="class in com.lotus.sametime.community.kernel.vpkmsg">VpkMsgIn</a>&nbsp;msg)</code>
+<div class="block">We got a message from the connection.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onSendOnChannel(int, short, byte[], boolean)">onSendOnChannel</a></strong>(int&nbsp;chId,
+               short&nbsp;msgType,
+               byte[]&nbsp;data,
+               boolean&nbsp;encrypted)</code>
+<div class="block">Notifies that a data message has been sent along a communication
+ channel.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onSendTo(int, com.lotus.sametime.core.types.STId, int, int, int, short, byte[])">onSendTo</a></strong>(int&nbsp;reqId,
+        <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;fromId,
+        int&nbsp;serviceType,
+        int&nbsp;prType,
+        int&nbsp;prVersion,
+        short&nbsp;msgType,
+        byte[]&nbsp;data)</code>
+<div class="block">Notifies that a "one time" data message has been sent to the client.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onSendToDenied(int, com.lotus.sametime.core.types.STId, int)">onSendToDenied</a></strong>(int&nbsp;reqId,
+              <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;fromId,
+              int&nbsp;reason)</code>
+<div class="block">Notifies that an earlier "one time" data message has been rejected
+ either by the server or remote party.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onServiceSensed(int)">onServiceSensed</a></strong>(int&nbsp;serviceType)</code>
+<div class="block">Notifies that a service went up.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onSetPrivacyDenied(int)">onSetPrivacyDenied</a></strong>(int&nbsp;reason)</code>
+<div class="block">Notifies that the set privacy mode/list request was denied.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onSetPrivacyList(com.lotus.sametime.core.types.STPrivacyList)">onSetPrivacyList</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STPrivacyList.html" title="class in com.lotus.sametime.core.types">STPrivacyList</a>&nbsp;list)</code>
+<div class="block">Notifies that the user privacy list has changed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onSetPrivacyMode(short)">onSetPrivacyMode</a></strong>(short&nbsp;privacyMode)</code>
+<div class="block">Notifies that the user privacy mode has changed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onSetStatus(com.lotus.sametime.core.types.STUserStatus)">onSetStatus</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a>&nbsp;status)</code>
+<div class="block">Notifies that the user status has changed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onSetUserName(java.lang.String)">onSetUserName</a></strong>(java.lang.String&nbsp;name)</code>
+<div class="block">Notifies that the user name has changed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onSetUserNameDenied(int)">onSetUserNameDenied</a></strong>(int&nbsp;reason)</code>
+<div class="block">Notifies that the setUserName request was denied.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onVisibilityCancelled(com.lotus.sametime.core.types.STUser[])">onVisibilityCancelled</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;requestors)</code>
+<div class="block">Notifies that we got a visibility cancelled msg
+ Note: this method is called only for the target</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#onVisibilityRequested(com.lotus.sametime.core.types.STUser[])">onVisibilityRequested</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;requestors)</code>
+<div class="block">Notifies that we got a visibility request msg
+ Note: this method is called only for the target</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#queryCommunities()">queryCommunities</a></strong>()</code>
+<div class="block">A request from the server to send us an enumeration of the communities.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#reconnect()">reconnect</a></strong>()</code>
+<div class="block">Requests to reconnect to server using the same parameter from the
+ previous login attempt.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#redirectChannel(int, com.lotus.sametime.core.types.STId, com.lotus.sametime.core.constants.EncLevel, byte[], boolean)">redirectChannel</a></strong>(int&nbsp;channelId,
+               <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId,
+               <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;requestedLvl,
+               byte[]&nbsp;data,
+               boolean&nbsp;redirectContinue)</code>
+<div class="block">Requests to redirect a communication channel.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#sendMultiCastMsg(com.lotus.sametime.core.types.STObject[], short, byte[])">sendMultiCastMsg</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STObject.html" title="interface in com.lotus.sametime.core.types">STObject</a>[]&nbsp;recipients,
+                short&nbsp;type,
+                byte[]&nbsp;data)</code>
+<div class="block">(Try to) Send mutlicast message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#sendOnChannel(int, short, byte[], boolean)">sendOnChannel</a></strong>(int&nbsp;chId,
+             short&nbsp;msgType,
+             byte[]&nbsp;data,
+             boolean&nbsp;encrypt)</code>
+<div class="block">Requests to send a message along a channel.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#sendTo(int, com.lotus.sametime.core.types.STId, int, int, int, short, byte[])">sendTo</a></strong>(int&nbsp;reqId,
+      <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId,
+      int&nbsp;serviceType,
+      int&nbsp;prType,
+      int&nbsp;prVersion,
+      short&nbsp;msgType,
+      byte[]&nbsp;data)</code>
+<div class="block">Requests to send a "one time" message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#senseService(int)">senseService</a></strong>(int&nbsp;serviceType)</code>
+<div class="block">Requests to be notified when the service is up.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#serviceDown(int[])">serviceDown</a></strong>(int[]&nbsp;services)</code>
+<div class="block">Un-Register from a service(s).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#serviceUp(int[])">serviceUp</a></strong>(int[]&nbsp;services)</code>
+<div class="block">Register for a service(s).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setAutoRelogin(boolean)">setAutoRelogin</a></strong>(boolean&nbsp;state)</code>
+<div class="block">Set auto-relogin mode on/off.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setConnectionHandler(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">setConnectionHandler</a></strong>(<a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;handler)</code>
+<div class="block">Sets the connection handler tp be used by this object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setConnectivity(com.lotus.sametime.core.util.connection.Connection[])">setConnectivity</a></strong>(<a href="../../../../../com/lotus/sametime/core/util/connection/Connection.html" title="class in com.lotus.sametime.core.util.connection">Connection</a>[]&nbsp;connectionsToTry)</code>
+<div class="block">Set the connection types to try on the next login.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setIp(java.net.InetAddress)">setIp</a></strong>(java.net.InetAddress&nbsp;ip)</code>
+<div class="block">Set the IP address that will be used for the next login.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setKeepAliveRate(long)">setKeepAliveRate</a></strong>(long&nbsp;rate)</code>
+<div class="block">Set the rate for sending keepalive messages to the server.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setLocation(java.lang.String)">setLocation</a></strong>(java.lang.String&nbsp;location)</code>
+<div class="block">Set the location that will be used for the next login.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setLoginAppName(java.lang.String)">setLoginAppName</a></strong>(java.lang.String&nbsp;applicationName)</code>
+<div class="block">Set the application name that performs the next login</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setLoginProperty(short)">setLoginProperty</a></strong>(short&nbsp;loginProperty)</code>
+<div class="block">Sets a value to the loginProperty used in this session.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setLoginStatus(boolean, com.lotus.sametime.core.types.STUserStatus)">setLoginStatus</a></strong>(boolean&nbsp;forceChangeStatus,
+              <a href="../../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a>&nbsp;userStatus)</code>
+<div class="block">When forceChangeStatus is true, on next login, following this request,
+ user's status (active, away etc.) will be forced to userStatus.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setLoginType(short)">setLoginType</a></strong>(short&nbsp;loginType)</code>
+<div class="block">Set the login type for the next login.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setPrivacyList(com.lotus.sametime.core.types.STPrivacyList)">setPrivacyList</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STPrivacyList.html" title="class in com.lotus.sametime.core.types">STPrivacyList</a>&nbsp;list)</code>
+<div class="block">Requests to set the privacy list.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setPrivacyMode(short)">setPrivacyMode</a></strong>(short&nbsp;privacyMode)</code>
+<div class="block">Requests to set the privacy mode.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setUserName(java.lang.String)">setUserName</a></strong>(java.lang.String&nbsp;name)</code>
+<div class="block">Requests to set the user name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/community/kernel/VpKernel.html#setUserStatus(com.lotus.sametime.core.types.STUserStatus)">setUserStatus</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a>&nbsp;status)</code>
+<div class="block">Requests to set the user status.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="m_session">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>m_session</h4>
+<pre>protected&nbsp;<a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a> m_session</pre>
+<div class="block">The STSession object associated with this component.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="VpKernel()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>VpKernel</h4>
+<pre>protected&nbsp;VpKernel()</pre>
+<div class="block">Create a new kernel object.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="isLoggedIn()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isLoggedIn</h4>
+<pre>public&nbsp;boolean&nbsp;isLoggedIn()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if connected to a Virtual Places community, 
+         false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="getLoginInfo()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLoginInfo</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;getLoginInfo()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the element id of this client.</dd></dl>
+</li>
+</ul>
+<a name="getPrivacyMode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPrivacyMode</h4>
+<pre>public&nbsp;short&nbsp;getPrivacyMode()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the element id of this client.</dd></dl>
+</li>
+</ul>
+<a name="getIp()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIp</h4>
+<pre>public&nbsp;java.net.InetAddress&nbsp;getIp()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the computed ip address of this client.</dd></dl>
+</li>
+</ul>
+<a name="getServerPovIp()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getServerPovIp</h4>
+<pre>public&nbsp;java.net.InetAddress&nbsp;getServerPovIp()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>IP address of the Java client, as seen from the mux 
+ point-of-view.</dd></dl>
+</li>
+</ul>
+<a name="getConnectionInfo()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getConnectionInfo</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/core/util/connection/ConnectionInfo.html" title="class in com.lotus.sametime.core.util.connection">ConnectionInfo</a>&nbsp;getConnectionInfo()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The active connection information, or null if none.</dd></dl>
+</li>
+</ul>
+<a name="setIp(java.net.InetAddress)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIp</h4>
+<pre>public&nbsp;void&nbsp;setIp(java.net.InetAddress&nbsp;ip)</pre>
+<div class="block">Set the IP address that will be used for the next login. This can be used
+ by mux logins to report the client IP.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>ip</code> - The IP address. If null, the local machine IP will be used for
+ the login.</dd></dl>
+</li>
+</ul>
+<a name="setLoginProperty(short)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLoginProperty</h4>
+<pre>public&nbsp;void&nbsp;setLoginProperty(short&nbsp;loginProperty)</pre>
+<div class="block">Sets a value to the loginProperty used in this session.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>loginProperty</code> - </dd></dl>
+</li>
+</ul>
+<a name="setLocation(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLocation</h4>
+<pre>public&nbsp;void&nbsp;setLocation(java.lang.String&nbsp;location)</pre>
+<div class="block">Set the location that will be used for the next login. This can be used
+ by mux logins to report the client.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>location</code> - The location of the client. Any value - as long that other
+ clients will use the same way to calculate. If null, the local host name
+ ill be used for the login. Use an empty string ("") to indicate an unknown 
+ value and not use the default host name.</dd></dl>
+</li>
+</ul>
+<a name="getStatus()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStatus</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a>&nbsp;getStatus()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The client status.</dd></dl>
+</li>
+</ul>
+<a name="getPrivacyList()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPrivacyList</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/core/types/STPrivacyList.html" title="class in com.lotus.sametime.core.types">STPrivacyList</a>&nbsp;getPrivacyList()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The current privacy list.</dd></dl>
+</li>
+</ul>
+<a name="getServerVersion()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getServerVersion</h4>
+<pre>public&nbsp;int&nbsp;getServerVersion()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The server version. The high word of the result contains
+ the server major version number, and the low word contains the minor
+ version number. If we are not logged in, this routine returns 0.</dd></dl>
+</li>
+</ul>
+<a name="isGroupPrivacySupported()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isGroupPrivacySupported</h4>
+<pre>public&nbsp;boolean&nbsp;isGroupPrivacySupported()</pre>
+<div class="block">Return true if the server we're logged in to supports group privacy. 
+ Group privacy is supported by ST servers with version 7.5 or higher.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the server supports group privacy.</dd></dl>
+</li>
+</ul>
+<a name="setAutoRelogin(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAutoRelogin</h4>
+<pre>public&nbsp;void&nbsp;setAutoRelogin(boolean&nbsp;state)</pre>
+<div class="block">Set auto-relogin mode on/off. When auto-relogin is on, and we try to
+ login to a server other then our home server, we immidiately disconnect
+ and re-login to the new server. When off, we ask the server to redirect
+ us.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>state</code> - true if auto-relogin is on.</dd></dl>
+</li>
+</ul>
+<a name="getAutoRelogin()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAutoRelogin</h4>
+<pre>public&nbsp;boolean&nbsp;getAutoRelogin()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>True if auto auto-relogin mode is currently on.</dd></dl>
+</li>
+</ul>
+<a name="setLoginType(short)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLoginType</h4>
+<pre>public&nbsp;void&nbsp;setLoginType(short&nbsp;loginType)</pre>
+<div class="block">Set the login type for the next login.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>loginType</code> - The new login type.</dd></dl>
+</li>
+</ul>
+<a name="setLoginStatus(boolean, com.lotus.sametime.core.types.STUserStatus)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLoginStatus</h4>
+<pre>public&nbsp;void&nbsp;setLoginStatus(boolean&nbsp;forceChangeStatus,
+                  <a href="../../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a>&nbsp;userStatus)</pre>
+<div class="block">When forceChangeStatus is true, on next login, following this request,
+ user's status (active, away etc.) will be forced to userStatus. When
+ forceChangeStatus is false, userStatus will be applied only if no other
+ login instances of this user are already exist. If user is already logged
+ in for client requesting setLoginStatus(), current login is not effected.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>forceChangeStatus</code> - Ask server to force the user status
+                                         specified in userStatus.</dd><dd><code>userStatus</code> - Set this status on login as specified</dd></dl>
+</li>
+</ul>
+<a name="setLoginAppName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLoginAppName</h4>
+<pre>public&nbsp;void&nbsp;setLoginAppName(java.lang.String&nbsp;applicationName)</pre>
+<div class="block">Set the application name that performs the next login</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>applicationName</code> - </dd></dl>
+</li>
+</ul>
+<a name="getLoginType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLoginType</h4>
+<pre>public&nbsp;short&nbsp;getLoginType()</pre>
+<div class="block">Get the login type for the next login.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The login type.</dd></dl>
+</li>
+</ul>
+<a name="getHost()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHost</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getHost()</pre>
+<div class="block">Get the host we are (or were last) connected to</div>
+</li>
+</ul>
+<a name="getConnectingServer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getConnectingServer</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/core/types/STServer.html" title="class in com.lotus.sametime.core.types">STServer</a>&nbsp;getConnectingServer()</pre>
+<div class="block">Get the server to which we are physically connected. If we are being
+ redirected, then this is not the same as the community server.
+ This method will only work correctly on the Watson FCS server or later.
+ For older servers, it will return null.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The server to which we are connected, or null if it couldn't be
+ obtained.</dd></dl>
+</li>
+</ul>
+<a name="getConnectionHandler()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getConnectionHandler</h4>
+<pre>public&nbsp;<a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;getConnectionHandler()</pre>
+<div class="block">Return the connection handler used by this object. This object can then
+ be used to do a lightweight login on the same connection.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the connection handler, if we are currently connected.
+ null otherwise.</dd></dl>
+</li>
+</ul>
+<a name="setConnectionHandler(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setConnectionHandler</h4>
+<pre>protected&nbsp;void&nbsp;setConnectionHandler(<a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;handler)</pre>
+<div class="block">Sets the connection handler tp be used by this object.
+ The connection handler must already be initialized. After this is done,
+ the login methods can be used for doing lightweight login on the same
+ connection.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>handler</code> - the connection handler. Should already be connected.</dd></dl>
+</li>
+</ul>
+<a name="getKernelName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKernelName</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getKernelName()</pre>
+<div class="block">Return a string representation of this object.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A string representation of this object.</dd></dl>
+</li>
+</ul>
+<a name="getLocalAddress()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLocalAddress</h4>
+<pre>public&nbsp;java.net.InetAddress&nbsp;getLocalAddress()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The local address, or null if we couldn't guess it.</dd></dl>
+</li>
+</ul>
+<a name="loginByPassword(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loginByPassword</h4>
+<pre>public&nbsp;boolean&nbsp;loginByPassword(java.lang.String&nbsp;host,
+                      java.lang.String&nbsp;loginName,
+                      java.lang.String&nbsp;password,
+                      java.lang.String&nbsp;community)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;Replaced with {@link #loginByPassword(String, String, char[], String) for Sametime 8.5.</div>
+<div class="block">Requests to login to a Virtual Places community.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - DNS name of server/mux to connect to.</dd><dd><code>loginName</code> - user login name.</dd><dd><code>password</code> - user password.</dd><dd><code>community</code> - The community to connect to (null or an empty string
+ can be used if there's only one community on the server).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="loginByPassword(java.lang.String, java.lang.String, char[], java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loginByPassword</h4>
+<pre>public&nbsp;boolean&nbsp;loginByPassword(java.lang.String&nbsp;host,
+                      java.lang.String&nbsp;loginName,
+                      char[]&nbsp;password,
+                      java.lang.String&nbsp;community)</pre>
+<div class="block">Requests to login to a Virtual Places community.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - DNS name of server/mux to connect to.</dd><dd><code>loginName</code> - user login name.</dd><dd><code>password</code> - user password as chars.</dd><dd><code>community</code> - The community to connect to (null or an empty string
+ can be used if there's only one community on the server).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd><dt><span class="strong">Since:</span></dt>
+  <dd>Sametime 8.5</dd></dl>
+</li>
+</ul>
+<a name="loginWithoutCredentials(java.lang.String, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loginWithoutCredentials</h4>
+<pre>public&nbsp;boolean&nbsp;loginWithoutCredentials(java.lang.String&nbsp;host,
+                              java.lang.String&nbsp;loginName,
+                              java.lang.String&nbsp;community)</pre>
+<div class="block">Requests to perform a  login without credentials to a community.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - DNS name of server/mux to connect to.</dd><dd><code>loginName</code> - The requested user login name. The server can choose
+ which name we get, based on our request. After login, use getLoginInfo()
+ to get information about the login, including the name the server gave
+ us.</dd><dd><code>community</code> - The community to connect to (null or an empty string
+ can be used if there's only one community on the server).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="loginByToken(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loginByToken</h4>
+<pre>public&nbsp;boolean&nbsp;loginByToken(java.lang.String&nbsp;host,
+                   java.lang.String&nbsp;loginName,
+                   java.lang.String&nbsp;token,
+                   java.lang.String&nbsp;community)</pre>
+<div class="block">Requests to login to a Virtual Places community.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - DNS name of server/mux to connect to.</dd><dd><code>loginName</code> - user login name.</dd><dd><code>token</code> - Lotus Notes token.</dd><dd><code>community</code> - The community to connect to (null or an empty string can be
+            used if there's only one community on the server).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="loginByTokens(java.lang.String, java.lang.String, com.lotus.sametime.token.Token[], java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loginByTokens</h4>
+<pre>public&nbsp;boolean&nbsp;loginByTokens(java.lang.String&nbsp;host,
+                    java.lang.String&nbsp;loginName,
+                    <a href="../../../../../com/lotus/sametime/token/Token.html" title="class in com.lotus.sametime.token">Token</a>[]&nbsp;tokens,
+                    java.lang.String&nbsp;community)</pre>
+<div class="block">Requests to login to a Virtual Places community.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - DNS name of server/mux to connect to.</dd><dd><code>loginName</code> - user login name.</dd><dd><code>tokens</code> - Array of tokens.</dd><dd><code>community</code> - The community to connect to (null or an empty string can be
+            used if there's only one community on the server).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd><dt><span class="strong">Since:</span></dt>
+  <dd>Sametime 8.5</dd></dl>
+</li>
+</ul>
+<a name="loginAsAnon(java.lang.String, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loginAsAnon</h4>
+<pre>public&nbsp;boolean&nbsp;loginAsAnon(java.lang.String&nbsp;host,
+                  java.lang.String&nbsp;loginName,
+                  java.lang.String&nbsp;community)</pre>
+<div class="block">Requests to login anonymously to a Virtual Places community.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - DNS name of server/mux to connect to.</dd><dd><code>loginName</code> - The requested user login name. The server can choose
+ which name we get, based on our request. After login, use getLoginInfo()
+ to get information about the login, including the name the server gave
+ us.</dd><dd><code>community</code> - The community to connect to (null or an empty string
+ can be used if there's only one community on the server).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="loginAsAnonByToken(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loginAsAnonByToken</h4>
+<pre>public&nbsp;boolean&nbsp;loginAsAnonByToken(java.lang.String&nbsp;host,
+                         java.lang.String&nbsp;loginName,
+                         java.lang.String&nbsp;token,
+                         java.lang.String&nbsp;community)</pre>
+<div class="block">Requests to login anonymous user to a Virtual Places community. The user is authenticated by token.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - DNS name of server/mux to connect to.</dd><dd><code>loginName</code> - user login name.</dd><dd><code>token</code> - token.</dd><dd><code>community</code> - The community to connect to (null or an empty string can be
+            used if there's only one community on the server).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="loginAsServerApp(java.lang.String, short, java.lang.String, int[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loginAsServerApp</h4>
+<pre>public&nbsp;boolean&nbsp;loginAsServerApp(java.lang.String&nbsp;host,
+                       short&nbsp;loginType,
+                       java.lang.String&nbsp;appName,
+                       int[]&nbsp;serviceTypes)</pre>
+<div class="block">Login to the server as a server application.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - DNS name of the server to connect to.</dd><dd><code>loginType</code> - The login type.</dd><dd><code>appName</code> - The application name.</dd><dd><code>serviceTypes</code> - The list of service types to sign up with.</dd></dl>
+</li>
+</ul>
+<a name="login(java.lang.String, java.lang.String, com.lotus.sametime.community.kernel.VpkAuthInfo, java.lang.String, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>login</h4>
+<pre>public final&nbsp;boolean&nbsp;login(java.lang.String&nbsp;host,
+            java.lang.String&nbsp;loginName,
+            <a href="../../../../../com/lotus/sametime/community/kernel/VpkAuthInfo.html" title="class in com.lotus.sametime.community.kernel">VpkAuthInfo</a>&nbsp;authInfo,
+            java.lang.String&nbsp;community,
+            boolean&nbsp;useLoginStatus)</pre>
+<div class="block">Requests to login to a Virtual Places community.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>host</code> - DNS name of server/mux to connect to.</dd><dd><code>loginName</code> - user login name.</dd><dd><code>authInfo</code> - authentication info.</dd><dd><code>community</code> - The community to connect to (null or an empty string
+ can be used if there's only one community on the server).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="reconnect()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reconnect</h4>
+<pre>public final&nbsp;boolean&nbsp;reconnect()</pre>
+<div class="block">Requests to reconnect to server using the same parameter from the
+ previous login attempt.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="logout()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logout</h4>
+<pre>public&nbsp;boolean&nbsp;logout()</pre>
+<div class="block">Requests to disconnect from the current Virtual Places community.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the request completed successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="logout(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logout</h4>
+<pre>public final&nbsp;boolean&nbsp;logout(int&nbsp;reason)</pre>
+<div class="block">Requests to disconnect from the current Virtual Places community.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reason</code> - The reason to give for disconnection.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request completed successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="setPrivacyMode(short)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPrivacyMode</h4>
+<pre>public final&nbsp;boolean&nbsp;setPrivacyMode(short&nbsp;privacyMode)</pre>
+<div class="block">Requests to set the privacy mode.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the request completed successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="setPrivacyList(com.lotus.sametime.core.types.STPrivacyList)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPrivacyList</h4>
+<pre>public final&nbsp;boolean&nbsp;setPrivacyList(<a href="../../../../../com/lotus/sametime/core/types/STPrivacyList.html" title="class in com.lotus.sametime.core.types">STPrivacyList</a>&nbsp;list)</pre>
+<div class="block">Requests to set the privacy list.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the request completed successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="setUserStatus(com.lotus.sametime.core.types.STUserStatus)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setUserStatus</h4>
+<pre>public final&nbsp;boolean&nbsp;setUserStatus(<a href="../../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a>&nbsp;status)</pre>
+<div class="block">Requests to set the user status.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the request completed successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="setUserName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setUserName</h4>
+<pre>public final&nbsp;boolean&nbsp;setUserName(java.lang.String&nbsp;name)</pre>
+<div class="block">Requests to set the user name. This request is only legal if the user
+ logged in as anonymous.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The requested user name.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request completed successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="senseService(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>senseService</h4>
+<pre>public final&nbsp;boolean&nbsp;senseService(int&nbsp;serviceType)</pre>
+<div class="block">Requests to be notified when the service is up.</div>
+</li>
+</ul>
+<a name="createChannel(int, com.lotus.sametime.core.types.STId, int, int, int, com.lotus.sametime.core.constants.EncLevel, byte[], int, byte, com.lotus.sametime.core.types.STUserInstance)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createChannel</h4>
+<pre>public final&nbsp;boolean&nbsp;createChannel(int&nbsp;channelId,
+                    <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId,
+                    int&nbsp;serviceType,
+                    int&nbsp;prType,
+                    int&nbsp;prVersion,
+                    <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+                    byte[]&nbsp;data,
+                    int&nbsp;options,
+                    byte&nbsp;priority,
+                    <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;creator)</pre>
+<div class="block">Requests to create a communication channel with a remote party.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>channelId</code> - specifies the new channel id: must be unique positive
+        number.</dd><dd><code>toId</code> - specifies with whom to create a channel.</dd><dd><code>serviceType</code> - specifies the service type to which create the channel.</dd><dd><code>prType</code> - specifies the protocol type to be used in the channel.</dd><dd><code>prVersion</code> - specifies the protocol version.</dd><dd><code>encLevel</code> - specifies the encryption level.</dd><dd><code>data</code> - specifies the data passed to remote party along with the
+        channel creation request.</dd><dd><code>options</code> - specifies the channel creation options (i.e. delayed
+        mode, etc). Currently (version 30.15) should be 0.</dd><dd><code>priority</code> - The channel's requested priority level.</dd><dd><code>creator</code> - The channel creator.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="acceptChannel(int, int, int, int, com.lotus.sametime.core.constants.EncLevel, byte[], com.lotus.sametime.core.types.STUserInstance, byte, com.lotus.sametime.core.types.STUserInstance)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>acceptChannel</h4>
+<pre>public final&nbsp;boolean&nbsp;acceptChannel(int&nbsp;channelId,
+                    int&nbsp;serviceType,
+                    int&nbsp;prType,
+                    int&nbsp;prVersion,
+                    <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;requestedLvl,
+                    byte[]&nbsp;data,
+                    <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;creator,
+                    byte&nbsp;priority,
+                    <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;acceptor)</pre>
+<div class="block">Requests to accept a suspended communication channel.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>channelId</code> - specifies the channel id received earlier
+        in onAcceptChannel(..) event.</dd><dd><code>serviceType</code> - specifies the service type of the channel.</dd><dd><code>prType</code> - specifies the protocol type of the channel.</dd><dd><code>prVersion</code> - specifies the protocol version.</dd><dd><code>requestedLvl</code> - specifies the encryption level.</dd><dd><code>data</code> - specifies the data passed to remote party.</dd><dd><code>creator</code> - specifies the info about the initiator of the channel
+        (should be same as one passed in OnAcceptChannel())</dd><dd><code>priority</code> - Specified the hannel's priority level.</dd><dd><code>acceptor</code> - The ID of the acceptor of the channel (only relevant
+ for server apps).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="redirectChannel(int, com.lotus.sametime.core.types.STId, com.lotus.sametime.core.constants.EncLevel, byte[], boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>redirectChannel</h4>
+<pre>public final&nbsp;boolean&nbsp;redirectChannel(int&nbsp;channelId,
+                      <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId,
+                      <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;requestedLvl,
+                      byte[]&nbsp;data,
+                      boolean&nbsp;redirectContinue)</pre>
+<div class="block">Requests to redirect a communication channel.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>channelId</code> - specifies the channel id received earlier
+        in onAcceptChannel(..) event.</dd><dd><code>toId</code> - The ID of the entity to which this channel should be redirected</dd><dd><code>requestedLvl</code> - specifies the encryption level.</dd><dd><code>data</code> - specifies the data passed to remote party.</dd><dd><code>redirectContinue</code> - A flag to indicate a redirect continue</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="destroyChannel(int, int, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>destroyChannel</h4>
+<pre>public final&nbsp;boolean&nbsp;destroyChannel(int&nbsp;chId,
+                     int&nbsp;reason,
+                     byte[]&nbsp;data)</pre>
+<div class="block">Requests to destroy a communication channel.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>chId</code> - the id of the channel to destroy, if equals 0 then 
+        the request is equivalent to logout.</dd><dd><code>reason</code> - why the channel is destroyed (forwarded to remote party).</dd><dd><code>data</code> - extended reason information, or null if none.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request completed successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="sendOnChannel(int, short, byte[], boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendOnChannel</h4>
+<pre>public final&nbsp;boolean&nbsp;sendOnChannel(int&nbsp;chId,
+                    short&nbsp;msgType,
+                    byte[]&nbsp;data,
+                    boolean&nbsp;encrypt)</pre>
+<div class="block">Requests to send a message along a channel.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>chId</code> - specifies the existing channel id (should be non-zero)</dd><dd><code>msgType</code> - specifies the type of the message.</dd><dd><code>data</code> - specifies the data of the message.</dd><dd><code>encrypt</code> - it true, specifies that we should encrypt the data.
+        (This value is ignored if the channel has no enc. data).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request completed successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="multiSendOnChannel(int[], short, byte[], boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>multiSendOnChannel</h4>
+<pre>public final&nbsp;boolean&nbsp;multiSendOnChannel(int[]&nbsp;chIds,
+                         short&nbsp;msgType,
+                         byte[]&nbsp;data,
+                         boolean&nbsp;encrypt)</pre>
+<div class="block">Requests to send a message to multiple recipients.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>chIds</code> - The list of channels to send to.</dd><dd><code>msgType</code> - specifies the type of the message.</dd><dd><code>data</code> - specifies the data of the message.</dd><dd><code>encrypt</code> - it true, specifies that we should encrypt the data.
+        (This value is ignored if the channel has no enc. data).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the request completed successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="sendTo(int, com.lotus.sametime.core.types.STId, int, int, int, short, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendTo</h4>
+<pre>public final&nbsp;boolean&nbsp;sendTo(int&nbsp;reqId,
+             <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId,
+             int&nbsp;serviceType,
+             int&nbsp;prType,
+             int&nbsp;prVersion,
+             short&nbsp;msgType,
+             byte[]&nbsp;data)</pre>
+<div class="block">Requests to send a "one time" message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reqId</code> - specifies the request id of the message. 
+        It's the responsibility of the caller to provide
+        unique request ids.</dd><dd><code>toId</code> - specifies the message destination.</dd><dd><code>serviceType</code> - specifies the service type to which direct the message.</dd><dd><code>prType</code> - specifies the protocol type of the message.</dd><dd><code>prVersion</code> - specifies the protocol version.</dd><dd><code>msgType</code> - specifies the type of the message.</dd><dd><code>data</code> - specifies the data of the message.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>non-zero request id if request initiated successfully, zero 
+         otherwise.</dd></dl>
+</li>
+</ul>
+<a name="denySend(int, com.lotus.sametime.core.types.STId, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>denySend</h4>
+<pre>public final&nbsp;boolean&nbsp;denySend(int&nbsp;reqId,
+               <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId,
+               int&nbsp;reason)</pre>
+<div class="block">Requests to send a denial to an earlier received "one time" message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reqId</code> - specifies the request id of the earlier message.</dd><dd><code>toId</code> - specifies the originator of the earlier message.</dd><dd><code>reason</code> - specifies why the earlier message is denied.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="queryCommunities()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>queryCommunities</h4>
+<pre>public&nbsp;boolean&nbsp;queryCommunities()</pre>
+<div class="block">A request from the server to send us an enumeration of the communities.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="adminMsg(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>adminMsg</h4>
+<pre>public&nbsp;boolean&nbsp;adminMsg(java.lang.String&nbsp;msg)</pre>
+<div class="block">(Try to) Send an admin message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msg</code> - the message to send.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if request initiated successfully, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="sendMultiCastMsg(com.lotus.sametime.core.types.STObject[], short, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendMultiCastMsg</h4>
+<pre>public&nbsp;boolean&nbsp;sendMultiCastMsg(<a href="../../../../../com/lotus/sametime/core/types/STObject.html" title="interface in com.lotus.sametime.core.types">STObject</a>[]&nbsp;recipients,
+                       short&nbsp;type,
+                       byte[]&nbsp;data)</pre>
+<div class="block">(Try to) Send mutlicast message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recipients</code> - The list of targeted objects.</dd><dd><code>type</code> - The multicast message type</dd>
+<dt><span class="strong">Returns:</span></dt><dd>data The message's content</dd></dl>
+</li>
+</ul>
+<a name="setConnectivity(com.lotus.sametime.core.util.connection.Connection[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setConnectivity</h4>
+<pre>public&nbsp;boolean&nbsp;setConnectivity(<a href="../../../../../com/lotus/sametime/core/util/connection/Connection.html" title="class in com.lotus.sametime.core.util.connection">Connection</a>[]&nbsp;connectionsToTry)</pre>
+<div class="block">Set the connection types to try on the next login.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>connectionsToTry</code> - a vector of connections to try. The connections
+ are tried in order, until one of them succeeds. If this value is null,
+ the default set of connections (magically known by STBase) will be tried.</dd></dl>
+</li>
+</ul>
+<a name="setKeepAliveRate(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKeepAliveRate</h4>
+<pre>public&nbsp;void&nbsp;setKeepAliveRate(long&nbsp;rate)</pre>
+<div class="block">Set the rate for sending keepalive messages to the server.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>rate</code> - The keepalive rate, in ms, or 0 for no keep alive.</dd></dl>
+</li>
+</ul>
+<a name="serviceUp(int[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serviceUp</h4>
+<pre>public&nbsp;void&nbsp;serviceUp(int[]&nbsp;services)</pre>
+<div class="block">Register for a service(s).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>services</code> - The list of services to register to.</dd></dl>
+</li>
+</ul>
+<a name="serviceDown(int[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serviceDown</h4>
+<pre>public&nbsp;void&nbsp;serviceDown(int[]&nbsp;services)</pre>
+<div class="block">Un-Register from a service(s).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>services</code> - The list of services to register to.</dd></dl>
+</li>
+</ul>
+<a name="onLogin()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onLogin</h4>
+<pre>protected&nbsp;void&nbsp;onLogin()</pre>
+<div class="block">Notifies that the client has logged in the community.</div>
+</li>
+</ul>
+<a name="onLogout(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onLogout</h4>
+<pre>protected&nbsp;void&nbsp;onLogout(int&nbsp;reason)</pre>
+<div class="block">Notifies that the client has been logged off the current community 
+ or that an earlier login request failed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reason</code> - specifies the reason of the failure</dd></dl>
+</li>
+</ul>
+<a name="onSetPrivacyMode(short)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSetPrivacyMode</h4>
+<pre>protected&nbsp;void&nbsp;onSetPrivacyMode(short&nbsp;privacyMode)</pre>
+<div class="block">Notifies that the user privacy mode has changed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>privacyMode</code> - specifies the new user privacy mode.</dd></dl>
+</li>
+</ul>
+<a name="onSetPrivacyList(com.lotus.sametime.core.types.STPrivacyList)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSetPrivacyList</h4>
+<pre>protected&nbsp;void&nbsp;onSetPrivacyList(<a href="../../../../../com/lotus/sametime/core/types/STPrivacyList.html" title="class in com.lotus.sametime.core.types">STPrivacyList</a>&nbsp;list)</pre>
+<div class="block">Notifies that the user privacy list has changed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>list</code> - specifies the new privacy list.</dd></dl>
+</li>
+</ul>
+<a name="onVisibilityRequested(com.lotus.sametime.core.types.STUser[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onVisibilityRequested</h4>
+<pre>protected&nbsp;void&nbsp;onVisibilityRequested(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;requestors)</pre>
+<div class="block">Notifies that we got a visibility request msg
+ Note: this method is called only for the target</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>targets</code> - The list of requestors we got the ack on</dd></dl>
+</li>
+</ul>
+<a name="onVisibilityCancelled(com.lotus.sametime.core.types.STUser[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onVisibilityCancelled</h4>
+<pre>protected&nbsp;void&nbsp;onVisibilityCancelled(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;requestors)</pre>
+<div class="block">Notifies that we got a visibility cancelled msg
+ Note: this method is called only for the target</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>targets</code> - The list of requestors we got the ack on</dd></dl>
+</li>
+</ul>
+<a name="onAckVisibilityAccepted(com.lotus.sametime.core.types.STUser[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onAckVisibilityAccepted</h4>
+<pre>protected&nbsp;void&nbsp;onAckVisibilityAccepted(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;requestors)</pre>
+<div class="block">Notifies that we got an ack for visibility accepted msg
+ Note: this method is called only for the target</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>targets</code> - The list of requestors we got the ack on</dd></dl>
+</li>
+</ul>
+<a name="onSetPrivacyDenied(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSetPrivacyDenied</h4>
+<pre>protected&nbsp;void&nbsp;onSetPrivacyDenied(int&nbsp;reason)</pre>
+<div class="block">Notifies that the set privacy mode/list request was denied.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reason</code> - The reason for denial.</dd></dl>
+</li>
+</ul>
+<a name="onSetStatus(com.lotus.sametime.core.types.STUserStatus)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSetStatus</h4>
+<pre>protected&nbsp;void&nbsp;onSetStatus(<a href="../../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a>&nbsp;status)</pre>
+<div class="block">Notifies that the user status has changed.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>status</code> - specifies the new user status.</dd></dl>
+</li>
+</ul>
+<a name="onCreateChannel(int, int, int, int, com.lotus.sametime.core.constants.EncLevel, com.lotus.sametime.core.constants.EncLevel, byte[], com.lotus.sametime.core.types.STUserInstance, byte)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onCreateChannel</h4>
+<pre>protected&nbsp;void&nbsp;onCreateChannel(int&nbsp;chId,
+                   int&nbsp;serviceType,
+                   int&nbsp;prType,
+                   int&nbsp;prVersion,
+                   <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+                   <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;minEncLevel,
+                   byte[]&nbsp;data,
+                   <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;remoteInfo,
+                   byte&nbsp;priority)</pre>
+<div class="block">Notifies that a new channel has been created by either local or
+ remote party.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>serviceType</code> - specifies the service type to which create the channel.</dd><dd><code>prType</code> - specifies the protocol type to be used in the channel.</dd><dd><code>prVersion</code> - specifies the protocol version.</dd><dd><code>encLevel</code> - The actual encryption level that is used.</dd><dd><code>minEncLevel</code> - The minimum encryption level that was decided on.</dd><dd><code>data</code> - specifies the channel creation data as passed by remote
+        party. (RMK: now it's the local data)</dd><dd><code>remoteInfo</code> - specifies the info about the remote party.</dd><dd><code>priority</code> - The channel's priority.</dd></dl>
+</li>
+</ul>
+<a name="onAcceptChannel(int, int, int, int, com.lotus.sametime.core.constants.EncLevel, byte[], byte[], com.lotus.sametime.core.types.STUserInstance, byte, com.lotus.sametime.core.types.STId)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onAcceptChannel</h4>
+<pre>protected&nbsp;int&nbsp;onAcceptChannel(int&nbsp;chId,
+                  int&nbsp;serviceType,
+                  int&nbsp;prType,
+                  int&nbsp;prVersion,
+                  <a href="../../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;encLevel,
+                  byte[]&nbsp;data,
+                  byte[]&nbsp;retData,
+                  <a href="../../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;creator,
+                  byte&nbsp;priority,
+                  <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;toId)</pre>
+<div class="block">Notifies about a remote party's request to create a channel and allows
+ to accept it or not.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>chId</code> - specifies the channel id.</dd><dd><code>serviceType</code> - specifies the service type to which create the channel.</dd><dd><code>prType</code> - specifies the protocol type to be used in the channel.</dd><dd><code>prVersion</code> - specifies the protocol version.</dd><dd><code>data</code> - (read-only) specifies the channel creation data as passed by
+        remote party. (RMK: now it's the local data)</dd><dd><code>retData</code> - (write) will be passed to the channel creator (if needed,
+        should be allocated by the user) - This is not implemented at the
+        moment.</dd><dd><code>creator</code> - specifies the info about the initiator of the channel.</dd><dd><code>priority</code> - The channel's requested priority level.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>ST_OK the channel is accepted, both parties getting the 
+         notification
+         onCreateChannel. Otherwise, the channel is rejected, the 
+         requesting
+         party getting notification onDestroyChannel.</dd></dl>
+</li>
+</ul>
+<a name="onDestroyChannel(int, int, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onDestroyChannel</h4>
+<pre>protected&nbsp;void&nbsp;onDestroyChannel(int&nbsp;chId,
+                    int&nbsp;reason,
+                    byte[]&nbsp;data)</pre>
+<div class="block">Notifies that a channel has been destroyed by either an explicit 
+ request of one of the parties or as a result of a connection failure.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reason</code> - specifies the reason (error code) of channle destruction.</dd></dl>
+</li>
+</ul>
+<a name="onSendOnChannel(int, short, byte[], boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSendOnChannel</h4>
+<pre>protected&nbsp;void&nbsp;onSendOnChannel(int&nbsp;chId,
+                   short&nbsp;msgType,
+                   byte[]&nbsp;data,
+                   boolean&nbsp;encrypted)</pre>
+<div class="block">Notifies that a data message has been sent along a communication
+ channel.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>chId</code> - specifies the channel id.</dd><dd><code>msgType</code> - specifies the message type.</dd><dd><code>data</code> - specifies the message data.</dd><dd><code>encrypted</code> - true if the message arrived encrypted.</dd></dl>
+</li>
+</ul>
+<a name="onMultiSendOnChannel(int[], short, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onMultiSendOnChannel</h4>
+<pre>protected&nbsp;void&nbsp;onMultiSendOnChannel(int[]&nbsp;chList,
+                        short&nbsp;msgType,
+                        byte[]&nbsp;data)</pre>
+<div class="block">Notifies that a data message has been sent on multiple channels.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>chList</code> - specifies the channels.</dd><dd><code>msgType</code> - specifies the message type.</dd><dd><code>data</code> - specifies the message data.</dd></dl>
+</li>
+</ul>
+<a name="onSendTo(int, com.lotus.sametime.core.types.STId, int, int, int, short, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSendTo</h4>
+<pre>protected&nbsp;void&nbsp;onSendTo(int&nbsp;reqId,
+            <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;fromId,
+            int&nbsp;serviceType,
+            int&nbsp;prType,
+            int&nbsp;prVersion,
+            short&nbsp;msgType,
+            byte[]&nbsp;data)</pre>
+<div class="block">Notifies that a "one time" data message has been sent to the client.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reqId</code> - specifies the request id of the message.</dd><dd><code>fromId</code> - specifies the message originator.</dd><dd><code>serviceType</code> - specifies the service type to direct the message to.</dd><dd><code>prType</code> - specifies the protocol type of the message.</dd><dd><code>prVersion</code> - specifies the protocol version.</dd><dd><code>msgType</code> - specifies the type of the message.</dd><dd><code>data</code> - specifies the data of the message.</dd><dd><code>options</code> - specifies the message options (encryption, etc).</dd></dl>
+</li>
+</ul>
+<a name="onSendToDenied(int, com.lotus.sametime.core.types.STId, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSendToDenied</h4>
+<pre>protected&nbsp;void&nbsp;onSendToDenied(int&nbsp;reqId,
+                  <a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;fromId,
+                  int&nbsp;reason)</pre>
+<div class="block">Notifies that an earlier "one time" data message has been rejected
+ either by the server or remote party.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reqId</code> - specifies the request id of the message.</dd><dd><code>fromId</code> - specifies the original target of the message.</dd><dd><code>reason</code> - specifies the reason why the original message was denied.</dd></dl>
+</li>
+</ul>
+<a name="onServiceSensed(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onServiceSensed</h4>
+<pre>protected&nbsp;void&nbsp;onServiceSensed(int&nbsp;serviceType)</pre>
+<div class="block">Notifies that a service went up.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>serviceType</code> - specifies the service that is now available.</dd></dl>
+</li>
+</ul>
+<a name="onAdminMsg(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onAdminMsg</h4>
+<pre>protected&nbsp;void&nbsp;onAdminMsg(java.lang.String&nbsp;msgText)</pre>
+<div class="block">An admin message was received.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>msgText</code> - The message text.</dd></dl>
+</li>
+</ul>
+<a name="onMultiCast(com.lotus.sametime.core.types.STUser, short, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onMultiCast</h4>
+<pre>protected&nbsp;void&nbsp;onMultiCast(<a href="../../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;sender,
+               short&nbsp;type,
+               byte[]&nbsp;data)</pre>
+<div class="block">An multicast message was received.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>data</code> - The message's content.</dd><dd><code>sender</code> - The source of the message.</dd><dd><code>type</code> - The message's type.</dd></dl>
+</li>
+</ul>
+<a name="onCommunitiesQueried(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onCommunitiesQueried</h4>
+<pre>protected&nbsp;void&nbsp;onCommunitiesQueried(java.lang.String[]&nbsp;communities)</pre>
+<div class="block">A response to query communities was received.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>communities</code> - The list of communities.</dd></dl>
+</li>
+</ul>
+<a name="onSetUserName(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSetUserName</h4>
+<pre>protected&nbsp;void&nbsp;onSetUserName(java.lang.String&nbsp;name)</pre>
+<div class="block">Notifies that the user name has changed. This event occured in response
+ to a call to 'setUserName'.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - specifies the new user name.</dd></dl>
+</li>
+</ul>
+<a name="onSetUserNameDenied(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSetUserNameDenied</h4>
+<pre>protected&nbsp;void&nbsp;onSetUserNameDenied(int&nbsp;reason)</pre>
+<div class="block">Notifies that the setUserName request was denied. This event occured in
+ response to a call to 'setUserName'.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - specifies the new user name.</dd></dl>
+</li>
+</ul>
+<a name="onConnected(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onConnected</h4>
+<pre>public&nbsp;void&nbsp;onConnected(<a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;src)</pre>
+<div class="block">We got connected.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html#onConnected(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">onConnected</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html" title="interface in com.lotus.sametime.community.kernel.connhandler">MasterCnlListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>src</code> - The connection handler that originated the message.</dd></dl>
+</li>
+</ul>
+<a name="onConnectFailed(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onConnectFailed</h4>
+<pre>public&nbsp;void&nbsp;onConnectFailed(<a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;src,
+                   int&nbsp;reason)</pre>
+<div class="block">A connect request has failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html#onConnectFailed(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler, int)">onConnectFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html" title="interface in com.lotus.sametime.community.kernel.connhandler">MasterCnlListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>src</code> - The connection handler that originated the message.</dd><dd><code>reason</code> - The error code <a href="../../../../../com/lotus/sametime/core/constants/STError.html" title="class in com.lotus.sametime.core.constants"><code>STError</code></a>.</dd></dl>
+</li>
+</ul>
+<a name="onProtocolErrorOccured(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onProtocolErrorOccured</h4>
+<pre>public&nbsp;void&nbsp;onProtocolErrorOccured(<a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;src)</pre>
+<div class="block">Something's wrong in parsing. Clean up as gracefully as you can, 
+ and exit.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html#onProtocolErrorOccured(com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">onProtocolErrorOccured</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html" title="interface in com.lotus.sametime.community.kernel.connhandler">MasterCnlListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>src</code> - The connection handler that originated the message.</dd></dl>
+</li>
+</ul>
+<a name="onConnectionClosed(int, com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onConnectionClosed</h4>
+<pre>public&nbsp;void&nbsp;onConnectionClosed(int&nbsp;reason,
+                      <a href="../../../../../com/lotus/sametime/community/kernel/connhandler/ConnectionHandler.html" title="class in com.lotus.sametime.community.kernel.connhandler">ConnectionHandler</a>&nbsp;src)</pre>
+<div class="block">The connection was closed. Reset everything & send notification.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html#onConnectionClosed(int, com.lotus.sametime.community.kernel.connhandler.ConnectionHandler)">onConnectionClosed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/MasterCnlListener.html" title="interface in com.lotus.sametime.community.kernel.connhandler">MasterCnlListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>reason</code> - Specifies the reason of the failure</dd><dd><code>src</code> - The connection handler that originated the message.</dd></dl>
+</li>
+</ul>
+<a name="onReceive(com.lotus.sametime.community.kernel.vpkmsg.VpkMsgIn)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onReceive</h4>
+<pre>public&nbsp;void&nbsp;onReceive(<a href="../../../../../com/lotus/sametime/community/kernel/vpkmsg/VpkMsgIn.html" title="class in com.lotus.sametime.community.kernel.vpkmsg">VpkMsgIn</a>&nbsp;msg)
+               throws java.io.IOException</pre>
+<div class="block">We got a message from the connection.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/CnlMsgListener.html#onReceive(com.lotus.sametime.community.kernel.vpkmsg.VpkMsgIn)">onReceive</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/community/kernel/connhandler/CnlMsgListener.html" title="interface in com.lotus.sametime.community.kernel.connhandler">CnlMsgListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - The message that was received.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - if the message could not be parsed.</dd></dl>
+</li>
+</ul>
+<a name="getCommunityId()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getCommunityId</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getCommunityId()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>a string that holds the community name which was received from the server
+ null if no string was received from the server</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/community/kernel/VpkDiffieAuthInfo.html" title="class in com.lotus.sametime.community.kernel"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/community/kernel/VpkRC240AuthInfo.html" title="class in com.lotus.sametime.community.kernel"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/community/kernel/VpKernel.html" target="_top">Frames</a></li>
+<li><a href="VpKernel.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

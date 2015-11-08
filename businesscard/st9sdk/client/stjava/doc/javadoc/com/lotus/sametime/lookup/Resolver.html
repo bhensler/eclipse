@@ -1,0 +1,464 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>Resolver</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Resolver";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/lookup/ResolveListener.html" title="interface in com.lotus.sametime.lookup"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/lookup/Resolver.html" target="_top">Frames</a></li>
+<li><a href="Resolver.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.lookup</div>
+<h2 title="Class Resolver" class="title">Class Resolver</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.lookup.Resolver</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">Resolver</span>
+extends java.lang.Object</pre>
+<div class="block">A name resolver. Use this class to resolve user or group names to STuser
+ or STgroup objects as registered in the directory of the Sametime server.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#Resolver(com.lotus.sametime.lookup.LookupComp, boolean, boolean, boolean, boolean)">Resolver</a></strong>(<a href="../../../../com/lotus/sametime/lookup/LookupComp.html" title="class in com.lotus.sametime.lookup">LookupComp</a>&nbsp;lookup,
+        boolean&nbsp;onlyUnique,
+        boolean&nbsp;exhaustiveLookup,
+        boolean&nbsp;resolveUsers,
+        boolean&nbsp;resolveGroups)</code>
+<div class="block">Create a new resolver object which is associated with the given lookup
+ component.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#addResolveListener(com.lotus.sametime.lookup.ResolveListener)">addResolveListener</a></strong>(<a href="../../../../com/lotus/sametime/lookup/ResolveListener.html" title="interface in com.lotus.sametime.lookup">ResolveListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified resolve listener to receive resolve events.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#isExhaustiveLookup()">isExhaustiveLookup</a></strong>()</code>
+<div class="block">Whether the resolver performs exhaustive lookup through all directories.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#isOnlyUnique()">isOnlyUnique</a></strong>()</code>
+<div class="block">Test whether the resolver requires unique matches to succeed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#isResolveGroups()">isResolveGroups</a></strong>()</code>
+<div class="block">Whether the resolver looks for matching groups.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#isResolveUsers()">isResolveUsers</a></strong>()</code>
+<div class="block">Whether the resolver looks for matching users.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#removeResolveListener(com.lotus.sametime.lookup.ResolveListener)">removeResolveListener</a></strong>(<a href="../../../../com/lotus/sametime/lookup/ResolveListener.html" title="interface in com.lotus.sametime.lookup">ResolveListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified resolve listener so that it no longer receives
+ resolve events.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#resolve(java.lang.String)">resolve</a></strong>(java.lang.String&nbsp;name)</code>
+<div class="block">Requests to resolve a single name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#resolve(java.lang.String[])">resolve</a></strong>(java.lang.String[]&nbsp;names)</code>
+<div class="block">Requests to resolve a list of names.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#resolveConflict(java.lang.String, com.lotus.sametime.core.types.STObject[])">resolveConflict</a></strong>(java.lang.String&nbsp;name,
+               <a href="../../../../com/lotus/sametime/core/types/STObject.html" title="interface in com.lotus.sametime.core.types">STObject</a>[]&nbsp;resolvedList)</code>
+<div class="block">A name was resolved, and multiple matches were found.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#resolved(java.lang.String, com.lotus.sametime.core.types.STObject)">resolved</a></strong>(java.lang.String&nbsp;name,
+        <a href="../../../../com/lotus/sametime/core/types/STObject.html" title="interface in com.lotus.sametime.core.types">STObject</a>&nbsp;resolved)</code>
+<div class="block">A resolve response.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/Resolver.html#resolveFailed(java.lang.String[], int)">resolveFailed</a></strong>(java.lang.String[]&nbsp;names,
+             int&nbsp;reason)</code>
+<div class="block">A resolve request was denied.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Resolver(com.lotus.sametime.lookup.LookupComp, boolean, boolean, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Resolver</h4>
+<pre>protected&nbsp;Resolver(<a href="../../../../com/lotus/sametime/lookup/LookupComp.html" title="class in com.lotus.sametime.lookup">LookupComp</a>&nbsp;lookup,
+        boolean&nbsp;onlyUnique,
+        boolean&nbsp;exhaustiveLookup,
+        boolean&nbsp;resolveUsers,
+        boolean&nbsp;resolveGroups)</pre>
+<div class="block">Create a new resolver object which is associated with the given lookup
+ component.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>lookup</code> - The Lookup component this resolver is associated
+                   with.</dd><dd><code>onlyUnique</code> - True if we want exact matches only.</dd><dd><code>exhaustiveLookup</code> - True if we want to look through all the
+                   NAB-s.</dd><dd><code>resolveUsers</code> - True if we want answers for matched users.</dd><dd><code>resolveGroups</code> - True if we want answers for groups.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="addResolveListener(com.lotus.sametime.lookup.ResolveListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addResolveListener</h4>
+<pre>public&nbsp;void&nbsp;addResolveListener(<a href="../../../../com/lotus/sametime/lookup/ResolveListener.html" title="interface in com.lotus.sametime.lookup">ResolveListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified resolve listener to receive resolve events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - Listener object to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeResolveListener(com.lotus.sametime.lookup.ResolveListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeResolveListener</h4>
+<pre>public&nbsp;void&nbsp;removeResolveListener(<a href="../../../../com/lotus/sametime/lookup/ResolveListener.html" title="interface in com.lotus.sametime.lookup">ResolveListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified resolve listener so that it no longer receives
+ resolve events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - Listener object to be removed.</dd></dl>
+</li>
+</ul>
+<a name="resolve(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolve</h4>
+<pre>public&nbsp;void&nbsp;resolve(java.lang.String[]&nbsp;names)</pre>
+<div class="block">Requests to resolve a list of names. A resolver object can be used for
+ more than one resolve request.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>names</code> - The names to be resolved.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/lookup/ResolveListener.html#resolveConflict(com.lotus.sametime.lookup.ResolveEvent)"><code>ResolveListener.resolveConflict(com.lotus.sametime.lookup.ResolveEvent)</code></a>, 
+<a href="../../../../com/lotus/sametime/lookup/ResolveListener.html#resolved(com.lotus.sametime.lookup.ResolveEvent)"><code>ResolveListener.resolved(com.lotus.sametime.lookup.ResolveEvent)</code></a>, 
+<a href="../../../../com/lotus/sametime/lookup/ResolveListener.html#resolveFailed(com.lotus.sametime.lookup.ResolveEvent)"><code>ResolveListener.resolveFailed(com.lotus.sametime.lookup.ResolveEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="resolve(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolve</h4>
+<pre>public&nbsp;void&nbsp;resolve(java.lang.String&nbsp;name)</pre>
+<div class="block">Requests to resolve a single name.
+ A resolver object can be used for more than one resolve request.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The name of the user to be resolved.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/lookup/ResolveListener.html#resolveConflict(com.lotus.sametime.lookup.ResolveEvent)"><code>ResolveListener.resolveConflict(com.lotus.sametime.lookup.ResolveEvent)</code></a>, 
+<a href="../../../../com/lotus/sametime/lookup/ResolveListener.html#resolved(com.lotus.sametime.lookup.ResolveEvent)"><code>ResolveListener.resolved(com.lotus.sametime.lookup.ResolveEvent)</code></a>, 
+<a href="../../../../com/lotus/sametime/lookup/ResolveListener.html#resolveFailed(com.lotus.sametime.lookup.ResolveEvent)"><code>ResolveListener.resolveFailed(com.lotus.sametime.lookup.ResolveEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="isOnlyUnique()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOnlyUnique</h4>
+<pre>public&nbsp;boolean&nbsp;isOnlyUnique()</pre>
+<div class="block">Test whether the resolver requires unique matches to succeed.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>True if unique matches are required, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="isExhaustiveLookup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isExhaustiveLookup</h4>
+<pre>public&nbsp;boolean&nbsp;isExhaustiveLookup()</pre>
+<div class="block">Whether the resolver performs exhaustive lookup through all directories.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>True if exhaustive, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="isResolveUsers()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isResolveUsers</h4>
+<pre>public&nbsp;boolean&nbsp;isResolveUsers()</pre>
+<div class="block">Whether the resolver looks for matching users.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>True if users are matched, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="isResolveGroups()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isResolveGroups</h4>
+<pre>public&nbsp;boolean&nbsp;isResolveGroups()</pre>
+<div class="block">Whether the resolver looks for matching groups.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>True if groups are matched, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="resolved(java.lang.String, com.lotus.sametime.core.types.STObject)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolved</h4>
+<pre>protected&nbsp;void&nbsp;resolved(java.lang.String&nbsp;name,
+            <a href="../../../../com/lotus/sametime/core/types/STObject.html" title="interface in com.lotus.sametime.core.types">STObject</a>&nbsp;resolved)</pre>
+<div class="block">A resolve response.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The name that was resolved.</dd><dd><code>resolved</code> - The resolved object.</dd></dl>
+</li>
+</ul>
+<a name="resolveConflict(java.lang.String, com.lotus.sametime.core.types.STObject[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolveConflict</h4>
+<pre>protected&nbsp;void&nbsp;resolveConflict(java.lang.String&nbsp;name,
+                   <a href="../../../../com/lotus/sametime/core/types/STObject.html" title="interface in com.lotus.sametime.core.types">STObject</a>[]&nbsp;resolvedList)</pre>
+<div class="block">A name was resolved, and multiple matches were found.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - The name that was resolved.</dd><dd><code>resolvedList</code> - The list of possible matches.</dd></dl>
+</li>
+</ul>
+<a name="resolveFailed(java.lang.String[], int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>resolveFailed</h4>
+<pre>protected&nbsp;void&nbsp;resolveFailed(java.lang.String[]&nbsp;names,
+                 int&nbsp;reason)</pre>
+<div class="block">A resolve request was denied.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>names</code> - The names that failed.</dd><dd><code>reason</code> - The reason the request was denied.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/lookup/ResolveListener.html" title="interface in com.lotus.sametime.lookup"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/lookup/Resolver.html" target="_top">Frames</a></li>
+<li><a href="Resolver.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

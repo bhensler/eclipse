@@ -1,0 +1,1482 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+CommunityConfig (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CommunityConfig (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html" title="class in com.ibm.collaboration.realtime.im.community.config"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../../index.html?com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CommunityConfig.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.im.community.config</FONT>
+<BR>
+Class CommunityConfig</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.im.community.config.CommunityConfig</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD>com.ibm.collaboration.realtime.core.IValidatable, java.lang.Cloneable</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>CommunityConfig</B><DT>extends java.lang.Object<DT>implements java.lang.Cloneable, com.ibm.collaboration.realtime.core.IValidatable</DL>
+</PRE>
+
+<P>
+Base community config implementation.
+   
+ This class should be extended as necessary by providers to accomodate
+ configuration requirements.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getAuthServerUrl()">getAuthServerUrl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the community's authenication server URL (as a String)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getAuthType()">getAuthType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the community's authentication type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getBeforeCalMtgMessage()">getBeforeCalMtgMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getBeforeCalMtgStatus()">getBeforeCalMtgStatus</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getBeforeNotesLockStatus()">getBeforeNotesLockStatus</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html" title="class in com.ibm.collaboration.realtime.im.community.config">ConnectionContext</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getConnectionContext()">getConnectionContext</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the connection context object used with this community.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;char[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getFakeKey()">getFakeKey</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getHost()">getHost</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the community's host name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getId()">getId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the community's ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getIsInCalendarMeeting()">getIsInCalendarMeeting</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getKeepAliveInterval()">getKeepAliveInterval</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the keep alive interval (in seconds).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getLoginToken()">getLoginToken</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the login token used by the community.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getLoginTokenType()">getLoginTokenType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the type of the current login token or null if unknown.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getName()">getName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the community name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getPort()">getPort</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns port to use when connecting to the community.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getPrivateLoginToken()">getPrivateLoginToken</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this is internal use only by core client, 
+ other components should not use this method to get a token.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getProviderId()">getProviderId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the provider ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getServerDefinedCommunityId()">getServerDefinedCommunityId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getUserId()">getUserId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the user id to use when connecting to the community.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getUsername()">getUsername</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the user name (display name) of the person connecting to the community.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#hasAccount()">hasAccount</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#isDirty()">isDirty</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns whether or not any *persistable* field in this CommunityConfig is dirty so 
+ that we do not needlessly save the community configuration.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#isNameReadOnly()">isNameReadOnly</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#loginAtStartup()">loginAtStartup</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an indicator of whether the community is configured to automatically login at startup time.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#loginByToken()">loginByToken</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an indicator of whether the community is configured to login by token.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#savePassword()">savePassword</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an indicator of whether the password used to connect is being saved.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#sendKeepAliveSignal()">sendKeepAliveSignal</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an indicator of whether keep alive signals are being sent.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setAuthServerUrl(java.lang.String)">setAuthServerUrl</A></B>(java.lang.String&nbsp;authServerUrl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the community authentication server URL.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setAuthType(java.lang.String)">setAuthType</A></B>(java.lang.String&nbsp;authType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the community's authentication type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setBeforeCalMtgMessage(java.lang.String)">setBeforeCalMtgMessage</A></B>(java.lang.String&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setBeforeCalMtgStatus(java.lang.String)">setBeforeCalMtgStatus</A></B>(java.lang.String&nbsp;status)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setBeforeNotesLockStatus(int)">setBeforeNotesLockStatus</A></B>(int&nbsp;status)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setConnectionContext(com.ibm.collaboration.realtime.im.community.config.ConnectionContext)">setConnectionContext</A></B>(<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html" title="class in com.ibm.collaboration.realtime.im.community.config">ConnectionContext</A>&nbsp;connCtx)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the connection context object to use with this community.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setHasAccount(boolean)">setHasAccount</A></B>(boolean&nbsp;b)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setHost(java.lang.String)">setHost</A></B>(java.lang.String&nbsp;host)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the community's host name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setIsDirty(boolean)">setIsDirty</A></B>(boolean&nbsp;isDirty)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setIsInCalendarMeeting(boolean)">setIsInCalendarMeeting</A></B>(boolean&nbsp;inCalendarMeeting)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setKeepAliveInterval(int)">setKeepAliveInterval</A></B>(int&nbsp;keepAliveInterval)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the keep alive interval (in seconds).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setKey(char[])">setKey</A></B>(char[]&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setLoginAtStartup(boolean)">setLoginAtStartup</A></B>(boolean&nbsp;loginAtStartup)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether the community should automatically login at startup time.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setLoginByToken(boolean)">setLoginByToken</A></B>(boolean&nbsp;loginByToken)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether the community should login by token.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setLoginToken(java.lang.String)">setLoginToken</A></B>(java.lang.String&nbsp;loginToken)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the login token for the community to use.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setLoginTokenType(java.lang.String)">setLoginTokenType</A></B>(java.lang.String&nbsp;loginTokenType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the type of the corresponding login token</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setName(java.lang.String)">setName</A></B>(java.lang.String&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the community name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setNameIsReadOnly(boolean)">setNameIsReadOnly</A></B>(boolean&nbsp;isNameReadOnly)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setPort(int)">setPort</A></B>(int&nbsp;port)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the port to use when connecting to the community.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setPrivateLoginToken(java.lang.String)">setPrivateLoginToken</A></B>(java.lang.String&nbsp;privateLoginToken)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setProviderId(java.lang.String)">setProviderId</A></B>(java.lang.String&nbsp;providerId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the provider ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setSavePassword(boolean)">setSavePassword</A></B>(boolean&nbsp;savePassword)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether the password used to connect should be saved.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setSendKeepAliveSignal(boolean)">setSendKeepAliveSignal</A></B>(boolean&nbsp;sendKeepAliveSignal)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether keep alive signals should be sent.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setServerDefinedCommunityId(java.lang.String)">setServerDefinedCommunityId</A></B>(java.lang.String&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setUserId(java.lang.String)">setUserId</A></B>(java.lang.String&nbsp;userId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the user ID to use when connecting to the community.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#setUsername(java.lang.String)">setUsername</A></B>(java.lang.String&nbsp;username)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the user name (display name) of the person connecting to the community.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.core.IValidatable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.core.IValidatable</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>validate</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="isDirty()"><!-- --></A><H3>
+isDirty</H3>
+<PRE>
+public boolean <B>isDirty</B>()</PRE>
+<DL>
+<DD>Returns whether or not any *persistable* field in this CommunityConfig is dirty so 
+ that we do not needlessly save the community configuration.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if any persistable field has changed, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsDirty(boolean)"><!-- --></A><H3>
+setIsDirty</H3>
+<PRE>
+public void <B>setIsDirty</B>(boolean&nbsp;isDirty)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getId()"><!-- --></A><H3>
+getId</H3>
+<PRE>
+public java.lang.String <B>getId</B>()</PRE>
+<DL>
+<DD>Returns the community's ID.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Community ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getName()"><!-- --></A><H3>
+getName</H3>
+<PRE>
+public java.lang.String <B>getName</B>()</PRE>
+<DL>
+<DD>Return the community name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Community name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setName(java.lang.String)"><!-- --></A><H3>
+setName</H3>
+<PRE>
+public void <B>setName</B>(java.lang.String&nbsp;name)</PRE>
+<DL>
+<DD>Set the community name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - Community name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setServerDefinedCommunityId(java.lang.String)"><!-- --></A><H3>
+setServerDefinedCommunityId</H3>
+<PRE>
+public void <B>setServerDefinedCommunityId</B>(java.lang.String&nbsp;id)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getServerDefinedCommunityId()"><!-- --></A><H3>
+getServerDefinedCommunityId</H3>
+<PRE>
+public java.lang.String <B>getServerDefinedCommunityId</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setNameIsReadOnly(boolean)"><!-- --></A><H3>
+setNameIsReadOnly</H3>
+<PRE>
+public void <B>setNameIsReadOnly</B>(boolean&nbsp;isNameReadOnly)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isNameReadOnly()"><!-- --></A><H3>
+isNameReadOnly</H3>
+<PRE>
+public boolean <B>isNameReadOnly</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="loginAtStartup()"><!-- --></A><H3>
+loginAtStartup</H3>
+<PRE>
+public boolean <B>loginAtStartup</B>()</PRE>
+<DL>
+<DD>Returns an indicator of whether the community is configured to automatically login at startup time.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if the community is configured to automatically login at startup time, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setLoginAtStartup(boolean)"><!-- --></A><H3>
+setLoginAtStartup</H3>
+<PRE>
+public void <B>setLoginAtStartup</B>(boolean&nbsp;loginAtStartup)</PRE>
+<DL>
+<DD>Set whether the community should automatically login at startup time.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>loginAtStartup</CODE> - <code>true</code> if the community should automatically login at startup time, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getHost()"><!-- --></A><H3>
+getHost</H3>
+<PRE>
+public java.lang.String <B>getHost</B>()</PRE>
+<DL>
+<DD>Returns the community's host name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Host name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHost(java.lang.String)"><!-- --></A><H3>
+setHost</H3>
+<PRE>
+public void <B>setHost</B>(java.lang.String&nbsp;host)</PRE>
+<DL>
+<DD>Set the community's host name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>host</CODE> - Host name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFakeKey()"><!-- --></A><H3>
+getFakeKey</H3>
+<PRE>
+public char[] <B>getFakeKey</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setKey(char[])"><!-- --></A><H3>
+setKey</H3>
+<PRE>
+public void <B>setKey</B>(char[]&nbsp;key)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProviderId()"><!-- --></A><H3>
+getProviderId</H3>
+<PRE>
+public java.lang.String <B>getProviderId</B>()</PRE>
+<DL>
+<DD>Returns the provider ID.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Provider ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProviderId(java.lang.String)"><!-- --></A><H3>
+setProviderId</H3>
+<PRE>
+public void <B>setProviderId</B>(java.lang.String&nbsp;providerId)</PRE>
+<DL>
+<DD>Set the provider ID.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>providerId</CODE> - Provider ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="savePassword()"><!-- --></A><H3>
+savePassword</H3>
+<PRE>
+public boolean <B>savePassword</B>()</PRE>
+<DL>
+<DD>Returns an indicator of whether the password used to connect is being saved.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if the password is being saved, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSavePassword(boolean)"><!-- --></A><H3>
+setSavePassword</H3>
+<PRE>
+public void <B>setSavePassword</B>(boolean&nbsp;savePassword)</PRE>
+<DL>
+<DD>Set whether the password used to connect should be saved.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>savePassword</CODE> - <code>true</code> if the password should be saved, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUsername()"><!-- --></A><H3>
+getUsername</H3>
+<PRE>
+public java.lang.String <B>getUsername</B>()</PRE>
+<DL>
+<DD>Returns the user name (display name) of the person connecting to the community.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>User name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUsername(java.lang.String)"><!-- --></A><H3>
+setUsername</H3>
+<PRE>
+public void <B>setUsername</B>(java.lang.String&nbsp;username)</PRE>
+<DL>
+<DD>Set the user name (display name) of the person connecting to the community.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>username</CODE> - User name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUserId()"><!-- --></A><H3>
+getUserId</H3>
+<PRE>
+public java.lang.String <B>getUserId</B>()</PRE>
+<DL>
+<DD>Returns the user id to use when connecting to the community.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>User ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUserId(java.lang.String)"><!-- --></A><H3>
+setUserId</H3>
+<PRE>
+public void <B>setUserId</B>(java.lang.String&nbsp;userId)</PRE>
+<DL>
+<DD>Set the user ID to use when connecting to the community.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>userId</CODE> - User ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPort()"><!-- --></A><H3>
+getPort</H3>
+<PRE>
+public int <B>getPort</B>()</PRE>
+<DL>
+<DD>Returns port to use when connecting to the community.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Port.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPort(int)"><!-- --></A><H3>
+setPort</H3>
+<PRE>
+public void <B>setPort</B>(int&nbsp;port)</PRE>
+<DL>
+<DD>Set the port to use when connecting to the community.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>port</CODE> - Port.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendKeepAliveSignal()"><!-- --></A><H3>
+sendKeepAliveSignal</H3>
+<PRE>
+public boolean <B>sendKeepAliveSignal</B>()</PRE>
+<DL>
+<DD>Returns an indicator of whether keep alive signals are being sent.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if keep alive signals are being sent, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSendKeepAliveSignal(boolean)"><!-- --></A><H3>
+setSendKeepAliveSignal</H3>
+<PRE>
+public void <B>setSendKeepAliveSignal</B>(boolean&nbsp;sendKeepAliveSignal)</PRE>
+<DL>
+<DD>Set whether keep alive signals should be sent.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sendKeepAliveSignal</CODE> - <code>true</code> if keep alive signals should be sent, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeepAliveInterval()"><!-- --></A><H3>
+getKeepAliveInterval</H3>
+<PRE>
+public int <B>getKeepAliveInterval</B>()</PRE>
+<DL>
+<DD>Returns the keep alive interval (in seconds).
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Keep alive interval.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setKeepAliveInterval(int)"><!-- --></A><H3>
+setKeepAliveInterval</H3>
+<PRE>
+public void <B>setKeepAliveInterval</B>(int&nbsp;keepAliveInterval)</PRE>
+<DL>
+<DD>Set the keep alive interval (in seconds).
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>keepAliveInterval</CODE> - Keep alive interval (in seconds).</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConnectionContext()"><!-- --></A><H3>
+getConnectionContext</H3>
+<PRE>
+public <A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html" title="class in com.ibm.collaboration.realtime.im.community.config">ConnectionContext</A> <B>getConnectionContext</B>()</PRE>
+<DL>
+<DD>Returns the connection context object used with this community.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Connection context.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setConnectionContext(com.ibm.collaboration.realtime.im.community.config.ConnectionContext)"><!-- --></A><H3>
+setConnectionContext</H3>
+<PRE>
+public void <B>setConnectionContext</B>(<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html" title="class in com.ibm.collaboration.realtime.im.community.config">ConnectionContext</A>&nbsp;connCtx)</PRE>
+<DL>
+<DD>Set the connection context object to use with this community.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>connCtx</CODE> - Connection context.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="loginByToken()"><!-- --></A><H3>
+loginByToken</H3>
+<PRE>
+public boolean <B>loginByToken</B>()</PRE>
+<DL>
+<DD>Returns an indicator of whether the community is configured to login by token.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if the community is configured to login by token, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setLoginByToken(boolean)"><!-- --></A><H3>
+setLoginByToken</H3>
+<PRE>
+public void <B>setLoginByToken</B>(boolean&nbsp;loginByToken)</PRE>
+<DL>
+<DD>Set whether the community should login by token.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>loginByToken</CODE> - <code>true</code> if the community should login by token, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLoginToken()"><!-- --></A><H3>
+getLoginToken</H3>
+<PRE>
+public java.lang.String <B>getLoginToken</B>()</PRE>
+<DL>
+<DD>Returns the login token used by the community.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Login token.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setLoginToken(java.lang.String)"><!-- --></A><H3>
+setLoginToken</H3>
+<PRE>
+public void <B>setLoginToken</B>(java.lang.String&nbsp;loginToken)</PRE>
+<DL>
+<DD>Set the login token for the community to use.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>loginToken</CODE> - Login token.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPrivateLoginToken()"><!-- --></A><H3>
+getPrivateLoginToken</H3>
+<PRE>
+public java.lang.String <B>getPrivateLoginToken</B>()</PRE>
+<DL>
+<DD>this is internal use only by core client, 
+ other components should not use this method to get a token.
+ please use <A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getLoginToken()"><CODE>getLoginToken</CODE></A>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPrivateLoginToken(java.lang.String)"><!-- --></A><H3>
+setPrivateLoginToken</H3>
+<PRE>
+public void <B>setPrivateLoginToken</B>(java.lang.String&nbsp;privateLoginToken)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLoginTokenType()"><!-- --></A><H3>
+getLoginTokenType</H3>
+<PRE>
+public java.lang.String <B>getLoginTokenType</B>()</PRE>
+<DL>
+<DD>Returns the type of the current login token or null if unknown.
+ The type may not be known if for example the (Sametime) server is configured for
+ secret tokens or is older and does not send the token type attribute.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Login token type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setLoginTokenType(java.lang.String)"><!-- --></A><H3>
+setLoginTokenType</H3>
+<PRE>
+public void <B>setLoginTokenType</B>(java.lang.String&nbsp;loginTokenType)</PRE>
+<DL>
+<DD>Set the type of the corresponding login token
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>loginToken</CODE> - Login token.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAuthServerUrl()"><!-- --></A><H3>
+getAuthServerUrl</H3>
+<PRE>
+public java.lang.String <B>getAuthServerUrl</B>()</PRE>
+<DL>
+<DD>Returns the community's authenication server URL (as a String)
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Authentication Server URL String if specified, null otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setAuthServerUrl(java.lang.String)"><!-- --></A><H3>
+setAuthServerUrl</H3>
+<PRE>
+public void <B>setAuthServerUrl</B>(java.lang.String&nbsp;authServerUrl)</PRE>
+<DL>
+<DD>Set the community authentication server URL.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>authServerUrl</CODE> - Authentication server URL.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAuthType()"><!-- --></A><H3>
+getAuthType</H3>
+<PRE>
+public java.lang.String <B>getAuthType</B>()</PRE>
+<DL>
+<DD>Returns the community's authentication type.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Authentication type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setAuthType(java.lang.String)"><!-- --></A><H3>
+setAuthType</H3>
+<PRE>
+public void <B>setAuthType</B>(java.lang.String&nbsp;authType)</PRE>
+<DL>
+<DD>Set the community's authentication type.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>authType</CODE> - Authentication type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="hasAccount()"><!-- --></A><H3>
+hasAccount</H3>
+<PRE>
+public boolean <B>hasAccount</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHasAccount(boolean)"><!-- --></A><H3>
+setHasAccount</H3>
+<PRE>
+public void <B>setHasAccount</B>(boolean&nbsp;b)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsInCalendarMeeting(boolean)"><!-- --></A><H3>
+setIsInCalendarMeeting</H3>
+<PRE>
+public void <B>setIsInCalendarMeeting</B>(boolean&nbsp;inCalendarMeeting)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getIsInCalendarMeeting()"><!-- --></A><H3>
+getIsInCalendarMeeting</H3>
+<PRE>
+public boolean <B>getIsInCalendarMeeting</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setBeforeCalMtgStatus(java.lang.String)"><!-- --></A><H3>
+setBeforeCalMtgStatus</H3>
+<PRE>
+public void <B>setBeforeCalMtgStatus</B>(java.lang.String&nbsp;status)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBeforeCalMtgStatus()"><!-- --></A><H3>
+getBeforeCalMtgStatus</H3>
+<PRE>
+public java.lang.String <B>getBeforeCalMtgStatus</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setBeforeCalMtgMessage(java.lang.String)"><!-- --></A><H3>
+setBeforeCalMtgMessage</H3>
+<PRE>
+public void <B>setBeforeCalMtgMessage</B>(java.lang.String&nbsp;msg)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBeforeCalMtgMessage()"><!-- --></A><H3>
+getBeforeCalMtgMessage</H3>
+<PRE>
+public java.lang.String <B>getBeforeCalMtgMessage</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setBeforeNotesLockStatus(int)"><!-- --></A><H3>
+setBeforeNotesLockStatus</H3>
+<PRE>
+public void <B>setBeforeNotesLockStatus</B>(int&nbsp;status)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBeforeNotesLockStatus()"><!-- --></A><H3>
+getBeforeNotesLockStatus</H3>
+<PRE>
+public int <B>getBeforeNotesLockStatus</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html" title="class in com.ibm.collaboration.realtime.im.community.config"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../../index.html?com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CommunityConfig.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

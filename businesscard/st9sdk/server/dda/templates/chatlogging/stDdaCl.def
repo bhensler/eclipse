@@ -1,0 +1,37 @@
+
+
+LIBRARY "StChatLog.dll"
+
+EXPORTS
+
+	stDdaClInit
+
+	stDdaClTerminate
+
+	stDdaClTimerEvent
+
+	stDdaClJoiningSession
+
+	stDdaClLeavingSession
+
+	stDdaClSessionMsg
+	
+	stDdaClSessionDataMsg
+
+	stDdaClSessionStarted
+
+	stDdaClSessionStartedByOrgName
+
+	stDdaClSessionEnded
+	
+	stDdaClSessionPolicycheckFunc
+	
+	stDdaClJoiningSessionWithSrvMsg
+	
+	stDdaClLeavingSessionWithSrvMsg
+	
+	stDdaClSessionMsgWithSrvMsg
+	
+	stDdaClSessionDataMsgWithSrvMsg
+	
+	stDdaClCleanSrvMsgs

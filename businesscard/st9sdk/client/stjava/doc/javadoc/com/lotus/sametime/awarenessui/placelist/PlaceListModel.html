@@ -1,0 +1,984 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>PlaceListModel</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PlaceListModel";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceAwarenessList.html" title="class in com.lotus.sametime.awarenessui.placelist"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/awarenessui/placelist/PlaceListModel.html" target="_top">Frames</a></li>
+<li><a href="PlaceListModel.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_com.lotus.sametime.awarenessui.AwarenessModel">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.awarenessui.placelist</div>
+<h2 title="Class PlaceListModel" class="title">Class PlaceListModel</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html" title="class in com.lotus.sametime.guiutils.tree">com.lotus.sametime.guiutils.tree.TreeModel</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html" title="class in com.lotus.sametime.awarenessui">com.lotus.sametime.awarenessui.AwarenessModel</a></li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.awarenessui.placelist.PlaceListModel</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../com/lotus/sametime/awareness/AttributeListener.html" title="interface in com.lotus.sametime.awareness">AttributeListener</a>, <a href="../../../../../com/lotus/sametime/awareness/AwarenessServiceListener.html" title="interface in com.lotus.sametime.awareness">AwarenessServiceListener</a>, <a href="../../../../../com/lotus/sametime/awareness/StatusListener.html" title="interface in com.lotus.sametime.awareness">StatusListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModelMethods.html" title="interface in com.lotus.sametime.guiutils.tree">TreeModelMethods</a>, <a href="../../../../../com/lotus/sametime/names/NamesServiceListener.html" title="interface in com.lotus.sametime.names">NamesServiceListener</a>, <a href="../../../../../com/lotus/sametime/places/MySectionListener.html" title="interface in com.lotus.sametime.places">MySectionListener</a>, <a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a>, <a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html" title="interface in com.lotus.sametime.places">PlaceMemberListener</a>, <a href="../../../../../com/lotus/sametime/places/PlacesServiceListener.html" title="interface in com.lotus.sametime.places">PlacesServiceListener</a>, <a href="../../../../../com/lotus/sametime/places/SectionListener.html" title="interface in com.lotus.sametime.places">SectionListener</a>, <a href="../../../../../com/lotus/sametime/places/UserInPlaceListener.html" title="interface in com.lotus.sametime.places">UserInPlaceListener</a></dd>
+</dl>
+<hr>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;
+<div class="deprecatedContent">due to the availability of additional non-AWT GUI frameworks.
+             This component is no longer supported.</div>
+</div>
+<br>
+<pre>public class <span class="strong">PlaceListModel</span>
+extends <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html" title="class in com.lotus.sametime.awarenessui">AwarenessModel</a>
+implements <a href="../../../../../com/lotus/sametime/places/PlacesServiceListener.html" title="interface in com.lotus.sametime.places">PlacesServiceListener</a>, <a href="../../../../../com/lotus/sametime/places/SectionListener.html" title="interface in com.lotus.sametime.places">SectionListener</a>, <a href="../../../../../com/lotus/sametime/places/UserInPlaceListener.html" title="interface in com.lotus.sametime.places">UserInPlaceListener</a>, <a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a>, <a href="../../../../../com/lotus/sametime/places/MySectionListener.html" title="interface in com.lotus.sametime.places">MySectionListener</a></pre>
+<div class="block">The participant list model.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_com.lotus.sametime.awarenessui.AwarenessModel">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;com.lotus.sametime.awarenessui.<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html" title="class in com.lotus.sametime.awarenessui">AwarenessModel</a></h3>
+<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_attrResort">m_attrResort</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_awarenessService">m_awarenessService</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_groupImage">m_groupImage</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_leftAttributes">m_leftAttributes</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_namesService">m_namesService</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_res">m_res</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_rightAttributes">m_rightAttributes</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_session">m_session</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_shortcutImage">m_shortcutImage</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_showOnineOnly">m_showOnineOnly</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#m_watchList">m_watchList</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_com.lotus.sametime.guiutils.tree.TreeModel">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;com.lotus.sametime.guiutils.tree.<a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html" title="class in com.lotus.sametime.guiutils.tree">TreeModel</a></h3>
+<code><a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#INSERT_SUCCEEDED">INSERT_SUCCEEDED</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#INSERT_UNVISIBLE">INSERT_UNVISIBLE</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#m_listeners">m_listeners</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#m_root">m_root</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#NODE_DOESNT_EXIST">NODE_DOESNT_EXIST</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#NODE_EXISTS">NODE_EXISTS</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#REMOVE_SUCCEEDED">REMOVE_SUCCEEDED</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#PlaceListModel(com.lotus.sametime.core.comparch.STSession)">PlaceListModel</a></strong>(<a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Costructor</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#activityAdded(com.lotus.sametime.places.PlaceEvent)">activityAdded</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">A new activity was added to the place.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#activityRemoved(com.lotus.sametime.places.PlaceEvent)">activityRemoved</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An activity was removed from the place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#addActivityFailed(com.lotus.sametime.places.PlaceEvent)">addActivityFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An attempt to add an activity failed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#addAllowedUsersFailed(com.lotus.sametime.places.PlaceEvent)">addAllowedUsersFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The 'Add allowed users' operation failed (probably because of an
+ unauthorized attempt).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#addAllowedUsersFailed(com.lotus.sametime.places.SectionEvent)">addAllowedUsersFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/SectionEvent.html" title="class in com.lotus.sametime.places">SectionEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The 'Add allowed users' operation failed (probably because of an
+ unauthorized attempt).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#attributeChanged(com.lotus.sametime.places.PlaceMemberEvent)">attributeChanged</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Attribute changed on one of the users in the list.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#attributeRemoved(com.lotus.sametime.places.PlaceMemberEvent)">attributeRemoved</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Attribute delete on the users in the list.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#bindToPlace(com.lotus.sametime.places.Place)">bindToPlace</a></strong>(<a href="../../../../../com/lotus/sametime/places/Place.html" title="class in com.lotus.sametime.places">Place</a>&nbsp;place)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Binds the list to the specified Place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#bindToSection(com.lotus.sametime.places.Section)">bindToSection</a></strong>(<a href="../../../../../com/lotus/sametime/places/Section.html" title="class in com.lotus.sametime.places">Section</a>&nbsp;section)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Binds the list to the specified section.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#changeAttributeFailed(com.lotus.sametime.places.PlaceMemberEvent)">changeAttributeFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An attempt to change an attribute value failed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#changeSectionFailed(com.lotus.sametime.places.MyselfEvent)">changeSectionFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/MyselfEvent.html" title="class in com.lotus.sametime.places">MyselfEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">A request to change to another section failed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#entered(com.lotus.sametime.places.PlaceEvent)">entered</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">This login enterd the place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#enterFailed(com.lotus.sametime.places.PlaceEvent)">enterFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The request to enter a place failed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#handleStatusChanged(com.lotus.sametime.awareness.STWatchedUser[])">handleStatusChanged</a></strong>(<a href="../../../../../com/lotus/sametime/awareness/STWatchedUser.html" title="class in com.lotus.sametime.awareness">STWatchedUser</a>[]&nbsp;users)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Overide the base class behavior and handle user status change.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#invite15UserFailed(com.lotus.sametime.places.PlaceEvent)">invite15UserFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An invitation to a 1.5 client failed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#left(com.lotus.sametime.places.PlaceEvent)">left</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">This login left the place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#queryAttrContentFailed(com.lotus.sametime.places.PlaceMemberEvent)">queryAttrContentFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">A query for an attribute's contents failed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#removeAllowedUsersFailed(com.lotus.sametime.places.PlaceEvent)">removeAllowedUsersFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The 'Remove allowed users' operation failed (probably because of an
+ unauthorized attempt).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#removeAllowedUsersFailed(com.lotus.sametime.places.SectionEvent)">removeAllowedUsersFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/SectionEvent.html" title="class in com.lotus.sametime.places">SectionEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The 'Remove allowed users' operation failed (probably because of an
+ unauthorized attempt).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#removeAttributeFailed(com.lotus.sametime.places.PlaceMemberEvent)">removeAttributeFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An attempt to remove an attribute failed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#reset()">reset</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Resets the list.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#sectionAdded(com.lotus.sametime.places.PlaceEvent)">sectionAdded</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">A new section was added to the place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#sectionChanged(com.lotus.sametime.places.MyselfEvent)">sectionChanged</a></strong>(<a href="../../../../../com/lotus/sametime/places/MyselfEvent.html" title="class in com.lotus.sametime.places">MyselfEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">This login changed to a different section.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#sectionRemoved(com.lotus.sametime.places.PlaceEvent)">sectionRemoved</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">A section was removed from the place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#sendFailed(com.lotus.sametime.places.PlaceMemberEvent)">sendFailed</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;event)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">An attempt to send a message failed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#serviceAvailable(com.lotus.sametime.places.PlacesServiceEvent)">serviceAvailable</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlacesServiceEvent.html" title="class in com.lotus.sametime.places">PlacesServiceEvent</a>&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Places service up.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#serviceUnavailable(com.lotus.sametime.places.PlacesServiceEvent)">serviceUnavailable</a></strong>(<a href="../../../../../com/lotus/sametime/places/PlacesServiceEvent.html" title="class in com.lotus.sametime.places">PlacesServiceEvent</a>&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">places Service up.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#userLeft(com.lotus.sametime.places.SectionEvent)">userLeft</a></strong>(<a href="../../../../../com/lotus/sametime/places/SectionEvent.html" title="class in com.lotus.sametime.places">SectionEvent</a>&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">User left place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceListModel.html#usersEntered(com.lotus.sametime.places.SectionEvent)">usersEntered</a></strong>(<a href="../../../../../com/lotus/sametime/places/SectionEvent.html" title="class in com.lotus.sametime.places">SectionEvent</a>&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">User entered to place.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_com.lotus.sametime.awarenessui.AwarenessModel">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.lotus.sametime.awarenessui.<a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html" title="class in com.lotus.sametime.awarenessui">AwarenessModel</a></h3>
+<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#addAwarenessModelListener(com.lotus.sametime.awarenessui.AwarenessModelListener)">addAwarenessModelListener</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#addColumn(com.lotus.sametime.guiutils.tree.ColumnAttributes)">addColumn</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#addUser(com.lotus.sametime.core.types.STUser)">addUser</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#addUsers(com.lotus.sametime.core.types.STUser[])">addUsers</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#attrChanged(com.lotus.sametime.awareness.AttributeEvent)">attrChanged</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#attrContentQueried(com.lotus.sametime.awareness.AttributeEvent)">attrContentQueried</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#attrRemoved(com.lotus.sametime.awareness.AttributeEvent)">attrRemoved</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#createNewNode(com.lotus.sametime.awareness.STWatchedUser)">createNewNode</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#dispose()">dispose</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getChilds(com.lotus.sametime.awarenessui.AwarenessNode)">getChilds</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getIcon(com.lotus.sametime.core.types.STUserStatus)">getIcon</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getIcon(com.lotus.sametime.awareness.STWatchedUser)">getIcon</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getItems()">getItems</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getLeftAttributes()">getLeftAttributes</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getResortAttribs()">getResortAttribs</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getRightAttributes()">getRightAttributes</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getSession()">getSession</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getUsersFromNodes(java.util.Vector)">getUsersFromNodes</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#getUsersFromNodes(java.util.Vector, boolean, com.lotus.sametime.core.types.STBoolean)">getUsersFromNodes</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#groupCleared(com.lotus.sametime.awareness.StatusEvent)">groupCleared</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#isAttribWatched(int)">isAttribWatched</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#isGroup(com.lotus.sametime.guiutils.tree.ModelNode)">isGroup</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#isShowOnlineOnly()">isShowOnlineOnly</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#loadImages(com.lotus.sametime.resourceloader.ResourceLoaderService)">loadImages</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#nameChanged(com.lotus.sametime.names.NamesEvent)">nameChanged</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#nameDelimiterChanged(com.lotus.sametime.names.NamesEvent)">nameDelimiterChanged</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#nodesToSTuser(java.util.Vector)">nodesToSTuser</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#notifyNodesChanged(java.util.Vector)">notifyNodesChanged</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#notifyNodesNotVisible(java.util.Vector)">notifyNodesNotVisible</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#notifyNodesVisible(java.util.Vector)">notifyNodesVisible</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#queryAttrContentFailed(com.lotus.sametime.awareness.AttributeEvent)">queryAttrContentFailed</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#removeAwarenessModelListener(com.lotus.sametime.awarenessui.AwarenessModelListener)">removeAwarenessModelListener</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#removeUser(com.lotus.sametime.core.types.STUser)">removeUser</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#removeUsers(com.lotus.sametime.core.types.STUser[])">removeUsers</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#resortIfNeeded(int)">resortIfNeeded</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#sendEvent(com.lotus.sametime.awarenessui.AwarenessViewEvent)">sendEvent</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#serviceAvailable(com.lotus.sametime.awareness.AwarenessServiceEvent)">serviceAvailable</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#serviceUnavailable(com.lotus.sametime.awareness.AwarenessServiceEvent)">serviceUnavailable</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#setResortAttribs(int[])">setResortAttribs</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#setSortMode(boolean)">setSortMode</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#showOnlineOnly(boolean)">showOnlineOnly</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#updateNode(com.lotus.sametime.awarenessui.AwarenessNode)">updateNode</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#userStatusChanged(com.lotus.sametime.awareness.StatusEvent)">userStatusChanged</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_com.lotus.sametime.guiutils.tree.TreeModel">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.lotus.sametime.guiutils.tree.<a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html" title="class in com.lotus.sametime.guiutils.tree">TreeModel</a></h3>
+<code><a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#addTreeModelListener(com.lotus.sametime.guiutils.tree.TreeModelListener)">addTreeModelListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#getChild(com.lotus.sametime.guiutils.tree.TreeNode, int)">getChild</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#getChildCount(com.lotus.sametime.guiutils.tree.TreeNode)">getChildCount</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#getFilter()">getFilter</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#getNext(com.lotus.sametime.guiutils.tree.TreeNode)">getNext</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#getNode(java.lang.Object)">getNode</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#getNode(java.lang.Object, com.lotus.sametime.guiutils.tree.ModelNode)">getNode</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#getRoot()">getRoot</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#getSortMode()">getSortMode</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#insertEmptyNode(com.lotus.sametime.guiutils.tree.TreeNode, com.lotus.sametime.guiutils.tree.EmptyNode)">insertEmptyNode</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#insertNode(com.lotus.sametime.guiutils.tree.ModelNode)">insertNode</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#insertNode(com.lotus.sametime.guiutils.tree.ModelNode, com.lotus.sametime.guiutils.tree.ModelNode)">insertNode</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#insertNodes(java.util.Vector)">insertNodes</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#isLeaf(com.lotus.sametime.guiutils.tree.TreeNode)">isLeaf</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#isSortOn(com.lotus.sametime.guiutils.tree.TreeNode)">isSortOn</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#keysEqual(java.lang.Object, java.lang.Object)">keysEqual</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#notifyTreeInitialized()">notifyTreeInitialized</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#reFilter(com.lotus.sametime.guiutils.tree.ModelNode)">reFilter</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#removeNodes(com.lotus.sametime.guiutils.tree.ModelNode[])">removeNodes</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#removeTreeModelListener(com.lotus.sametime.guiutils.tree.TreeModelListener)">removeTreeModelListener</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#resetTree()">resetTree</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#reSort()">reSort</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#reSort(com.lotus.sametime.guiutils.tree.ModelNode)">reSort</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#searchNode(com.lotus.sametime.guiutils.tree.ModelNode, java.lang.Object)">searchNode</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#sendEvent(com.lotus.sametime.guiutils.tree.TreeEvent)">sendEvent</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#setFilter(com.lotus.sametime.guiutils.tree.Filter)">setFilter</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#setSorter(com.lotus.sametime.guiutils.tree.Sorter)">setSorter</a>, <a href="../../../../../com/lotus/sametime/guiutils/tree/TreeModel.html#sortOnOff(boolean)">sortOnOff</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PlaceListModel(com.lotus.sametime.core.comparch.STSession)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PlaceListModel</h4>
+<pre>public&nbsp;PlaceListModel(<a href="../../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Costructor</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="bindToSection(com.lotus.sametime.places.Section)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bindToSection</h4>
+<pre>public&nbsp;void&nbsp;bindToSection(<a href="../../../../../com/lotus/sametime/places/Section.html" title="class in com.lotus.sametime.places">Section</a>&nbsp;section)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Binds the list to the specified section.</div>
+</li>
+</ul>
+<a name="bindToPlace(com.lotus.sametime.places.Place)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bindToPlace</h4>
+<pre>public&nbsp;void&nbsp;bindToPlace(<a href="../../../../../com/lotus/sametime/places/Place.html" title="class in com.lotus.sametime.places">Place</a>&nbsp;place)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Binds the list to the specified Place. Watches the section that this
+ login is in.</div>
+</li>
+</ul>
+<a name="left(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>left</h4>
+<pre>public&nbsp;void&nbsp;left(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">This login left the place. Could be only if we are binded to a place and
+ not a section</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#left(com.lotus.sametime.places.PlaceEvent)">left</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getReason()"><code>PlaceEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="entered(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>entered</h4>
+<pre>public&nbsp;void&nbsp;entered(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">This login enterd the place. Could be only if we are binded to a place
+ and not a section</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#entered(com.lotus.sametime.places.PlaceEvent)">entered</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a></dd></dl>
+</li>
+</ul>
+<a name="sectionChanged(com.lotus.sametime.places.MyselfEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sectionChanged</h4>
+<pre>public&nbsp;void&nbsp;sectionChanged(<a href="../../../../../com/lotus/sametime/places/MyselfEvent.html" title="class in com.lotus.sametime.places">MyselfEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">This login changed to a different section. Could be only if we are binded
+ to a place and not a section</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/MySectionListener.html#sectionChanged(com.lotus.sametime.places.MyselfEvent)">sectionChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/MySectionListener.html" title="interface in com.lotus.sametime.places">MySectionListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/MyselfEvent.html#getSection()"><code>MyselfEvent.getSection()</code></a></dd></dl>
+</li>
+</ul>
+<a name="usersEntered(com.lotus.sametime.places.SectionEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>usersEntered</h4>
+<pre>public&nbsp;void&nbsp;usersEntered(<a href="../../../../../com/lotus/sametime/places/SectionEvent.html" title="class in com.lotus.sametime.places">SectionEvent</a>&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">User entered to place.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/SectionListener.html#usersEntered(com.lotus.sametime.places.SectionEvent)">usersEntered</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/SectionListener.html" title="interface in com.lotus.sametime.places">SectionListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/SectionEvent.html#getUsers()"><code>SectionEvent.getUsers()</code></a></dd></dl>
+</li>
+</ul>
+<a name="userLeft(com.lotus.sametime.places.SectionEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>userLeft</h4>
+<pre>public&nbsp;void&nbsp;userLeft(<a href="../../../../../com/lotus/sametime/places/SectionEvent.html" title="class in com.lotus.sametime.places">SectionEvent</a>&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">User left place. Remove it from the list.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/SectionListener.html#userLeft(com.lotus.sametime.places.SectionEvent)">userLeft</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/SectionListener.html" title="interface in com.lotus.sametime.places">SectionListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/SectionEvent.html#getUser()"><code>SectionEvent.getUser()</code></a></dd></dl>
+</li>
+</ul>
+<a name="serviceUnavailable(com.lotus.sametime.places.PlacesServiceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serviceUnavailable</h4>
+<pre>public&nbsp;void&nbsp;serviceUnavailable(<a href="../../../../../com/lotus/sametime/places/PlacesServiceEvent.html" title="class in com.lotus.sametime.places">PlacesServiceEvent</a>&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">places Service up.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlacesServiceListener.html#serviceUnavailable(com.lotus.sametime.places.PlacesServiceEvent)">serviceUnavailable</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlacesServiceListener.html" title="interface in com.lotus.sametime.places">PlacesServiceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="attributeChanged(com.lotus.sametime.places.PlaceMemberEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>attributeChanged</h4>
+<pre>public&nbsp;void&nbsp;attributeChanged(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Attribute changed on one of the users in the list.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#attributeChanged(com.lotus.sametime.places.PlaceMemberEvent)">attributeChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html" title="interface in com.lotus.sametime.places">PlaceMemberListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getAttribute()"><code>PlaceMemberEvent.getAttribute()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getAttributeKey()"><code>PlaceMemberEvent.getAttributeKey()</code></a></dd></dl>
+</li>
+</ul>
+<a name="attributeRemoved(com.lotus.sametime.places.PlaceMemberEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>attributeRemoved</h4>
+<pre>public&nbsp;void&nbsp;attributeRemoved(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Attribute delete on the users in the list.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#attributeRemoved(com.lotus.sametime.places.PlaceMemberEvent)">attributeRemoved</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html" title="interface in com.lotus.sametime.places">PlaceMemberListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getAttributeKey()"><code>PlaceMemberEvent.getAttributeKey()</code></a></dd></dl>
+</li>
+</ul>
+<a name="serviceAvailable(com.lotus.sametime.places.PlacesServiceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serviceAvailable</h4>
+<pre>public&nbsp;void&nbsp;serviceAvailable(<a href="../../../../../com/lotus/sametime/places/PlacesServiceEvent.html" title="class in com.lotus.sametime.places">PlacesServiceEvent</a>&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Places service up.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlacesServiceListener.html#serviceAvailable(com.lotus.sametime.places.PlacesServiceEvent)">serviceAvailable</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlacesServiceListener.html" title="interface in com.lotus.sametime.places">PlacesServiceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="handleStatusChanged(com.lotus.sametime.awareness.STWatchedUser[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleStatusChanged</h4>
+<pre>protected&nbsp;void&nbsp;handleStatusChanged(<a href="../../../../../com/lotus/sametime/awareness/STWatchedUser.html" title="class in com.lotus.sametime.awareness">STWatchedUser</a>[]&nbsp;users)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Overide the base class behavior and handle user status change.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#handleStatusChanged(com.lotus.sametime.awareness.STWatchedUser[])">handleStatusChanged</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html" title="class in com.lotus.sametime.awarenessui">AwarenessModel</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="reset()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reset</h4>
+<pre>public&nbsp;void&nbsp;reset()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Resets the list.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html#reset()">reset</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/lotus/sametime/awarenessui/AwarenessModel.html" title="class in com.lotus.sametime.awarenessui">AwarenessModel</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="removeAttributeFailed(com.lotus.sametime.places.PlaceMemberEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeAttributeFailed</h4>
+<pre>public&nbsp;void&nbsp;removeAttributeFailed(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#removeAttributeFailed(com.lotus.sametime.places.PlaceMemberEvent)">PlaceMemberListener</a></code></span></div>
+<div class="block">An attempt to remove an attribute failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#removeAttributeFailed(com.lotus.sametime.places.PlaceMemberEvent)">removeAttributeFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html" title="interface in com.lotus.sametime.places">PlaceMemberListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getReason()"><code>PlaceMemberEvent.getReason()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getAttributeKey()"><code>PlaceMemberEvent.getAttributeKey()</code></a></dd></dl>
+</li>
+</ul>
+<a name="queryAttrContentFailed(com.lotus.sametime.places.PlaceMemberEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>queryAttrContentFailed</h4>
+<pre>public&nbsp;void&nbsp;queryAttrContentFailed(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#queryAttrContentFailed(com.lotus.sametime.places.PlaceMemberEvent)">PlaceMemberListener</a></code></span></div>
+<div class="block">A query for an attribute's contents failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#queryAttrContentFailed(com.lotus.sametime.places.PlaceMemberEvent)">queryAttrContentFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html" title="interface in com.lotus.sametime.places">PlaceMemberListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getReason()"><code>PlaceMemberEvent.getReason()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getAttributeKey()"><code>PlaceMemberEvent.getAttributeKey()</code></a></dd></dl>
+</li>
+</ul>
+<a name="sendFailed(com.lotus.sametime.places.PlaceMemberEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendFailed</h4>
+<pre>public&nbsp;void&nbsp;sendFailed(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#sendFailed(com.lotus.sametime.places.PlaceMemberEvent)">PlaceMemberListener</a></code></span></div>
+<div class="block">An attempt to send a message failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#sendFailed(com.lotus.sametime.places.PlaceMemberEvent)">sendFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html" title="interface in com.lotus.sametime.places">PlaceMemberListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getReason()"><code>PlaceMemberEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="changeAttributeFailed(com.lotus.sametime.places.PlaceMemberEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>changeAttributeFailed</h4>
+<pre>public&nbsp;void&nbsp;changeAttributeFailed(<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#changeAttributeFailed(com.lotus.sametime.places.PlaceMemberEvent)">PlaceMemberListener</a></code></span></div>
+<div class="block">An attempt to change an attribute value failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html#changeAttributeFailed(com.lotus.sametime.places.PlaceMemberEvent)">changeAttributeFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceMemberListener.html" title="interface in com.lotus.sametime.places">PlaceMemberListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getReason()"><code>PlaceMemberEvent.getReason()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html#getAttributeKey()"><code>PlaceMemberEvent.getAttributeKey()</code></a></dd></dl>
+</li>
+</ul>
+<a name="addAllowedUsersFailed(com.lotus.sametime.places.SectionEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addAllowedUsersFailed</h4>
+<pre>public&nbsp;void&nbsp;addAllowedUsersFailed(<a href="../../../../../com/lotus/sametime/places/SectionEvent.html" title="class in com.lotus.sametime.places">SectionEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/SectionListener.html#addAllowedUsersFailed(com.lotus.sametime.places.SectionEvent)">SectionListener</a></code></span></div>
+<div class="block">The 'Add allowed users' operation failed (probably because of an
+ unauthorized attempt).</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/SectionListener.html#addAllowedUsersFailed(com.lotus.sametime.places.SectionEvent)">addAllowedUsersFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/SectionListener.html" title="interface in com.lotus.sametime.places">SectionListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/SectionEvent.html#getReason()"><code>SectionEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="removeAllowedUsersFailed(com.lotus.sametime.places.SectionEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeAllowedUsersFailed</h4>
+<pre>public&nbsp;void&nbsp;removeAllowedUsersFailed(<a href="../../../../../com/lotus/sametime/places/SectionEvent.html" title="class in com.lotus.sametime.places">SectionEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/SectionListener.html#removeAllowedUsersFailed(com.lotus.sametime.places.SectionEvent)">SectionListener</a></code></span></div>
+<div class="block">The 'Remove allowed users' operation failed (probably because of an
+ unauthorized attempt).</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/SectionListener.html#removeAllowedUsersFailed(com.lotus.sametime.places.SectionEvent)">removeAllowedUsersFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/SectionListener.html" title="interface in com.lotus.sametime.places">SectionListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/SectionEvent.html#getReason()"><code>SectionEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="enterFailed(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>enterFailed</h4>
+<pre>public&nbsp;void&nbsp;enterFailed(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#enterFailed(com.lotus.sametime.places.PlaceEvent)">PlaceListener</a></code></span></div>
+<div class="block">The request to enter a place failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#enterFailed(com.lotus.sametime.places.PlaceEvent)">enterFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getReason()"><code>PlaceEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="activityAdded(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>activityAdded</h4>
+<pre>public&nbsp;void&nbsp;activityAdded(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#activityAdded(com.lotus.sametime.places.PlaceEvent)">PlaceListener</a></code></span></div>
+<div class="block">A new activity was added to the place.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#activityAdded(com.lotus.sametime.places.PlaceEvent)">activityAdded</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#addedByMe()"><code>PlaceEvent.addedByMe()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getActivity()"><code>PlaceEvent.getActivity()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getActivityType()"><code>PlaceEvent.getActivityType()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#hasWrapper()"><code>PlaceEvent.hasWrapper()</code></a></dd></dl>
+</li>
+</ul>
+<a name="activityRemoved(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>activityRemoved</h4>
+<pre>public&nbsp;void&nbsp;activityRemoved(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#activityRemoved(com.lotus.sametime.places.PlaceEvent)">PlaceListener</a></code></span></div>
+<div class="block">An activity was removed from the place.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#activityRemoved(com.lotus.sametime.places.PlaceEvent)">activityRemoved</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#addedByMe()"><code>PlaceEvent.addedByMe()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getActivity()"><code>PlaceEvent.getActivity()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getActivityType()"><code>PlaceEvent.getActivityType()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#hasWrapper()"><code>PlaceEvent.hasWrapper()</code></a></dd></dl>
+</li>
+</ul>
+<a name="addActivityFailed(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addActivityFailed</h4>
+<pre>public&nbsp;void&nbsp;addActivityFailed(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#addActivityFailed(com.lotus.sametime.places.PlaceEvent)">PlaceListener</a></code></span></div>
+<div class="block">An attempt to add an activity failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#addActivityFailed(com.lotus.sametime.places.PlaceEvent)">addActivityFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getActivityType()"><code>PlaceEvent.getActivityType()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getReason()"><code>PlaceEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="sectionAdded(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sectionAdded</h4>
+<pre>public&nbsp;void&nbsp;sectionAdded(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#sectionAdded(com.lotus.sametime.places.PlaceEvent)">PlaceListener</a></code></span></div>
+<div class="block">A new section was added to the place.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#sectionAdded(com.lotus.sametime.places.PlaceEvent)">sectionAdded</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getSection()"><code>PlaceEvent.getSection()</code></a></dd></dl>
+</li>
+</ul>
+<a name="sectionRemoved(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sectionRemoved</h4>
+<pre>public&nbsp;void&nbsp;sectionRemoved(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#sectionRemoved(com.lotus.sametime.places.PlaceEvent)">PlaceListener</a></code></span></div>
+<div class="block">A section was removed from the place.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#sectionRemoved(com.lotus.sametime.places.PlaceEvent)">sectionRemoved</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getSection()"><code>PlaceEvent.getSection()</code></a></dd></dl>
+</li>
+</ul>
+<a name="addAllowedUsersFailed(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addAllowedUsersFailed</h4>
+<pre>public&nbsp;void&nbsp;addAllowedUsersFailed(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#addAllowedUsersFailed(com.lotus.sametime.places.PlaceEvent)">PlaceListener</a></code></span></div>
+<div class="block">The 'Add allowed users' operation failed (probably because of an
+ unauthorized attempt).</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#addAllowedUsersFailed(com.lotus.sametime.places.PlaceEvent)">addAllowedUsersFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getReason()"><code>PlaceEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="removeAllowedUsersFailed(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeAllowedUsersFailed</h4>
+<pre>public&nbsp;void&nbsp;removeAllowedUsersFailed(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#removeAllowedUsersFailed(com.lotus.sametime.places.PlaceEvent)">PlaceListener</a></code></span></div>
+<div class="block">The 'Remove allowed users' operation failed (probably because of an
+ unauthorized attempt).</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#removeAllowedUsersFailed(com.lotus.sametime.places.PlaceEvent)">removeAllowedUsersFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getReason()"><code>PlaceEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="invite15UserFailed(com.lotus.sametime.places.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>invite15UserFailed</h4>
+<pre>public&nbsp;void&nbsp;invite15UserFailed(<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#invite15UserFailed(com.lotus.sametime.places.PlaceEvent)">PlaceListener</a></code></span></div>
+<div class="block">An invitation to a 1.5 client failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html#invite15UserFailed(com.lotus.sametime.places.PlaceEvent)">invite15UserFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/PlaceListener.html" title="interface in com.lotus.sametime.places">PlaceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getPlace()"><code>PlaceEvent.getPlace()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getUser()"><code>PlaceEvent.getUser()</code></a>, 
+<a href="../../../../../com/lotus/sametime/places/PlaceEvent.html#getReason()"><code>PlaceEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+<a name="changeSectionFailed(com.lotus.sametime.places.MyselfEvent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>changeSectionFailed</h4>
+<pre>public&nbsp;void&nbsp;changeSectionFailed(<a href="../../../../../com/lotus/sametime/places/MyselfEvent.html" title="class in com.lotus.sametime.places">MyselfEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/places/MySectionListener.html#changeSectionFailed(com.lotus.sametime.places.MyselfEvent)">MySectionListener</a></code></span></div>
+<div class="block">A request to change to another section failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/places/MySectionListener.html#changeSectionFailed(com.lotus.sametime.places.MyselfEvent)">changeSectionFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/places/MySectionListener.html" title="interface in com.lotus.sametime.places">MySectionListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/places/MyselfEvent.html#getReason()"><code>MyselfEvent.getReason()</code></a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/awarenessui/placelist/PlaceAwarenessList.html" title="class in com.lotus.sametime.awarenessui.placelist"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/awarenessui/placelist/PlaceListModel.html" target="_top">Frames</a></li>
+<li><a href="PlaceListModel.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_com.lotus.sametime.awarenessui.AwarenessModel">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

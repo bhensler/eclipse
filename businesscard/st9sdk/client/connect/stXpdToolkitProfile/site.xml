@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<site>
+   <feature url="features/com.ibm.collaboration.realtime.toolkit.configuration.feature_8.5.0.200903161744.jar" id="com.ibm.collaboration.realtime.toolkit.configuration.feature" version="8.5.0.200903161744"/>
+</site>

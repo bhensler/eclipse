@@ -1,0 +1,1450 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+DeviceEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="DeviceEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceFactory.html" title="class in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DeviceEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.device</FONT>
+<BR>
+Interface DeviceEvent</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD>java.io.Serializable, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>DeviceEvent</B><DT>extends <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></DL>
+</PRE>
+
+<P>
+DeviceEvent represents a device-related telephony event, processed by
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceListener.html#processDeviceEvent(com.ibm.collaboration.realtime.telephony.device.DeviceEvent)"><CODE>DeviceListener.processDeviceEvent(DeviceEvent)</CODE></A>. When necessary,
+ use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getDeviceName()"><CODE>getDeviceName()</CODE></A> to identify which device the event is
+ associated with. Note that the EVENT_xxx constants defined in this
+ interface specify all the event types that are part of the API, but
+ service providers can define additional event types if desired.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_ALERT_SOUNDS_DISABLED">EVENT_ALERT_SOUNDS_DISABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_ALERT_SOUNDS_ENABLED">EVENT_ALERT_SOUNDS_ENABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_AUDIO_PORT_CHANGED">EVENT_AUDIO_PORT_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_BEGIN_AUDIO_TEST">EVENT_BEGIN_AUDIO_TEST</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_BEGIN_LOCAL_VIDEO_PREVIEW">EVENT_BEGIN_LOCAL_VIDEO_PREVIEW</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_BEGIN_RINGING">EVENT_BEGIN_RINGING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_BEGIN_SHOW_PROPERTIES">EVENT_BEGIN_SHOW_PROPERTIES</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_BEGIN_VIDEO_TEST">EVENT_BEGIN_VIDEO_TEST</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_CALL_FORWARDING_CHANGED">EVENT_CALL_FORWARDING_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_CAMERA_CONNECTED">EVENT_CAMERA_CONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_CAMERA_DEVICE_CHANGED">EVENT_CAMERA_DEVICE_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_CAMERA_DISCONNECTED">EVENT_CAMERA_DISCONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_DEVICE_CONNECTED">EVENT_DEVICE_CONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a device is connected, for example, a USB device.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_DEVICE_DISCONNECTED">EVENT_DEVICE_DISCONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the device is disconnected, for example, a USB device.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_DEVICE_ERROR">EVENT_DEVICE_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated to signal a device error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_DISPLAY_DEVICE_CHANGED">EVENT_DISPLAY_DEVICE_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_DO_NOT_DISTURB_DISABLED">EVENT_DO_NOT_DISTURB_DISABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_DO_NOT_DISTURB_ENABLED">EVENT_DO_NOT_DISTURB_ENABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_END_AUDIO_TEST">EVENT_END_AUDIO_TEST</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_END_LOCAL_VIDEO_PREVIEW">EVENT_END_LOCAL_VIDEO_PREVIEW</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_END_RINGING">EVENT_END_RINGING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_END_SHOW_PROPERTIES">EVENT_END_SHOW_PROPERTIES</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_END_VIDEO_TEST">EVENT_END_VIDEO_TEST</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_FEATURE_CHANGED">EVENT_FEATURE_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a feature on the device is changed, used for device-specific
+ features that are not represented by other event types.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_FEATURE_DISABLED">EVENT_FEATURE_DISABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a feature on the device is disabled, used for device-specific
+ features that are not represented by other event types.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_FEATURE_ENABLED">EVENT_FEATURE_ENABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a feature on the device is enabled, used for device-specific
+ features that are not represented by other event types.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_HEADSET_HOLD_PRESSED">EVENT_HEADSET_HOLD_PRESSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the hold button on a headset is pressed to pause or resume a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_HEADSET_MUTE_PRESSED">EVENT_HEADSET_MUTE_PRESSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the mute button on a headset is pressed to mute or unmute the microphone.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_HEADSET_TALK_PRESSED">EVENT_HEADSET_TALK_PRESSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the talk button on a headset is pressed to answer or end a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_HEADSET_VOLUME_DOWN_PRESSED">EVENT_HEADSET_VOLUME_DOWN_PRESSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the decrease volume button on a headset is pressed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_HEADSET_VOLUME_UP_PRESSED">EVENT_HEADSET_VOLUME_UP_PRESSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the increase volume button on a headset is pressed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_MESSAGE_WAITING_DISABLED">EVENT_MESSAGE_WAITING_DISABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_MESSAGE_WAITING_ENABLED">EVENT_MESSAGE_WAITING_ENABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_MICROPHONE_BOOST_DISABLED">EVENT_MICROPHONE_BOOST_DISABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_MICROPHONE_BOOST_ENABLED">EVENT_MICROPHONE_BOOST_ENABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_MICROPHONE_DEVICE_CHANGED">EVENT_MICROPHONE_DEVICE_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_MICROPHONE_MUTED">EVENT_MICROPHONE_MUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the device's microphone is muted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_MICROPHONE_UNMUTED">EVENT_MICROPHONE_UNMUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the device's microphone is unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_MICROPHONE_VOLUME_CHANGED">EVENT_MICROPHONE_VOLUME_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the microphone volume is changed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_PHONE_DEVICE_CHANGED">EVENT_PHONE_DEVICE_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_RING_DEVICE_CHANGED">EVENT_RING_DEVICE_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_SPEAKER_DEVICE_CHANGED">EVENT_SPEAKER_DEVICE_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_SPEAKER_MUTED">EVENT_SPEAKER_MUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the device's speaker is muted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_SPEAKER_UNMUTED">EVENT_SPEAKER_UNMUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the device's speaker is unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_SPEAKER_VOLUME_CHANGED">EVENT_SPEAKER_VOLUME_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the device's speaker volume is changed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_VIDEO_BIT_RATE_CHANGED">EVENT_VIDEO_BIT_RATE_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_VIDEO_CODEC_CHANGED">EVENT_VIDEO_CODEC_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_VIDEO_FRAME_RATE_CHANGED">EVENT_VIDEO_FRAME_RATE_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_VIDEO_PORT_CHANGED">EVENT_VIDEO_PORT_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_VIDEO_RESOLUTION_CHANGED">EVENT_VIDEO_RESOLUTION_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_VOICE_DETECTION_DISABLED">EVENT_VOICE_DETECTION_DISABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#EVENT_VOICE_DETECTION_ENABLED">EVENT_VOICE_DETECTION_ENABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.TelephonyEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_PROVIDER">EVENT_PROVIDER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_SERVICE_ERROR">EVENT_SERVICE_ERROR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_UNKNOWN">EVENT_UNKNOWN</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getDeviceName()">getDeviceName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the name of the device associated with this event,
+ if known.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getFeatureId()">getFeatureId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the device feature ID for an EVENT_FEATURE_xxx event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#setDeviceName(java.lang.String)">setDeviceName</A></B>(java.lang.String&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the name of the device associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#setFeatureId(java.lang.String)">setFeatureId</A></B>(java.lang.String&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the device feature ID for an EVENT_FEATURE_xxx event.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.TelephonyEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getDetails()">getDetails</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getEventType()">getEventType</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getProviderData()">getProviderData</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setDetails(java.lang.String)">setDetails</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setEventType(java.lang.String)">setEventType</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setProviderData(java.lang.Object)">setProviderData</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="EVENT_ALERT_SOUNDS_DISABLED"><!-- --></A><H3>
+EVENT_ALERT_SOUNDS_DISABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_ALERT_SOUNDS_DISABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when voice chat alert sounds are disabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_ALERT_SOUNDS_DISABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_ALERT_SOUNDS_ENABLED"><!-- --></A><H3>
+EVENT_ALERT_SOUNDS_ENABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_ALERT_SOUNDS_ENABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when voice chat alert sounds are enabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_ALERT_SOUNDS_ENABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_AUDIO_PORT_CHANGED"><!-- --></A><H3>
+EVENT_AUDIO_PORT_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_AUDIO_PORT_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the audio I/O port is changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_AUDIO_PORT_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_BEGIN_AUDIO_TEST"><!-- --></A><H3>
+EVENT_BEGIN_AUDIO_TEST</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_BEGIN_AUDIO_TEST</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when an audio test begins.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_BEGIN_AUDIO_TEST">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_BEGIN_LOCAL_VIDEO_PREVIEW"><!-- --></A><H3>
+EVENT_BEGIN_LOCAL_VIDEO_PREVIEW</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_BEGIN_LOCAL_VIDEO_PREVIEW</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when a local video preview begins, for example, when the user
+ selects the preview option in the Sametime Connect video preferences.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_BEGIN_LOCAL_VIDEO_PREVIEW">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_BEGIN_RINGING"><!-- --></A><H3>
+EVENT_BEGIN_RINGING</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_BEGIN_RINGING</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the phone device begins ringing.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_BEGIN_RINGING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_BEGIN_SHOW_PROPERTIES"><!-- --></A><H3>
+EVENT_BEGIN_SHOW_PROPERTIES</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_BEGIN_SHOW_PROPERTIES</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the service provider displays properties for the device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_BEGIN_SHOW_PROPERTIES">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_BEGIN_VIDEO_TEST"><!-- --></A><H3>
+EVENT_BEGIN_VIDEO_TEST</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_BEGIN_VIDEO_TEST</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when a video test begins.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_BEGIN_VIDEO_TEST">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_FORWARDING_CHANGED"><!-- --></A><H3>
+EVENT_CALL_FORWARDING_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_CALL_FORWARDING_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the phone device call forwarding settings are changed.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#getCallForwardingOptions()"><CODE>PhoneDeviceController.getCallForwardingOptions()</CODE></A> to determine
+ the new call forwarding settings, if necessary.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_CALL_FORWARDING_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CAMERA_CONNECTED"><!-- --></A><H3>
+EVENT_CAMERA_CONNECTED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_CAMERA_CONNECTED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when a camera device is connected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_CAMERA_CONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CAMERA_DEVICE_CHANGED"><!-- --></A><H3>
+EVENT_CAMERA_DEVICE_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_CAMERA_DEVICE_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the video camera device is changed.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getDeviceName()"><CODE>getDeviceName()</CODE></A> to determine the new camera device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_CAMERA_DEVICE_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CAMERA_DISCONNECTED"><!-- --></A><H3>
+EVENT_CAMERA_DISCONNECTED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_CAMERA_DISCONNECTED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when a camera device is disconnected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_CAMERA_DISCONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_DEVICE_CONNECTED"><!-- --></A><H3>
+EVENT_DEVICE_CONNECTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_DEVICE_CONNECTED</B></PRE>
+<DL>
+<DD>Generated when a device is connected, for example, a USB device.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getDeviceName()"><CODE>getDeviceName()</CODE></A> to identify which device was connected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_DEVICE_CONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_DEVICE_DISCONNECTED"><!-- --></A><H3>
+EVENT_DEVICE_DISCONNECTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_DEVICE_DISCONNECTED</B></PRE>
+<DL>
+<DD>Generated when the device is disconnected, for example, a USB device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_DEVICE_DISCONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_DISPLAY_DEVICE_CHANGED"><!-- --></A><H3>
+EVENT_DISPLAY_DEVICE_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_DISPLAY_DEVICE_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the video display device is changed.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getDeviceName()"><CODE>getDeviceName()</CODE></A> to determine the new display device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_DISPLAY_DEVICE_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_DO_NOT_DISTURB_DISABLED"><!-- --></A><H3>
+EVENT_DO_NOT_DISTURB_DISABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_DO_NOT_DISTURB_DISABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the device's do-not-disturb mode is disabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_DO_NOT_DISTURB_DISABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_DO_NOT_DISTURB_ENABLED"><!-- --></A><H3>
+EVENT_DO_NOT_DISTURB_ENABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_DO_NOT_DISTURB_ENABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the device's do-not-disturb mode is enabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_DO_NOT_DISTURB_ENABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_END_AUDIO_TEST"><!-- --></A><H3>
+EVENT_END_AUDIO_TEST</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_END_AUDIO_TEST</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when an audio test ends.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_END_AUDIO_TEST">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_END_LOCAL_VIDEO_PREVIEW"><!-- --></A><H3>
+EVENT_END_LOCAL_VIDEO_PREVIEW</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_END_LOCAL_VIDEO_PREVIEW</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when a local video preview ends.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_END_LOCAL_VIDEO_PREVIEW">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_END_RINGING"><!-- --></A><H3>
+EVENT_END_RINGING</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_END_RINGING</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the phone device stops ringing.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_END_RINGING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_END_SHOW_PROPERTIES"><!-- --></A><H3>
+EVENT_END_SHOW_PROPERTIES</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_END_SHOW_PROPERTIES</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the service provider stops displaying properties for the device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_END_SHOW_PROPERTIES">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_END_VIDEO_TEST"><!-- --></A><H3>
+EVENT_END_VIDEO_TEST</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_END_VIDEO_TEST</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when a video test ends.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_END_VIDEO_TEST">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_FEATURE_CHANGED"><!-- --></A><H3>
+EVENT_FEATURE_CHANGED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_FEATURE_CHANGED</B></PRE>
+<DL>
+<DD>Generated when a feature on the device is changed, used for device-specific
+ features that are not represented by other event types. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getFeatureId()"><CODE>getFeatureId()</CODE></A>
+ to determine which feature changed. For simple device-specific features that
+ are either enabled or disabled and have no additional data, use
+ EVENT_FEATURE_ENABLED and EVENT_FEATURE_DISABLED instead.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_FEATURE_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_FEATURE_DISABLED"><!-- --></A><H3>
+EVENT_FEATURE_DISABLED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_FEATURE_DISABLED</B></PRE>
+<DL>
+<DD>Generated when a feature on the device is disabled, used for device-specific
+ features that are not represented by other event types. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getFeatureId()"><CODE>getFeatureId()</CODE></A>
+ to determine which feature was disabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_FEATURE_DISABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_FEATURE_ENABLED"><!-- --></A><H3>
+EVENT_FEATURE_ENABLED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_FEATURE_ENABLED</B></PRE>
+<DL>
+<DD>Generated when a feature on the device is enabled, used for device-specific
+ features that are not represented by other event types. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getFeatureId()"><CODE>getFeatureId()</CODE></A>
+ to determine which feature was enabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_FEATURE_ENABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_HEADSET_HOLD_PRESSED"><!-- --></A><H3>
+EVENT_HEADSET_HOLD_PRESSED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_HEADSET_HOLD_PRESSED</B></PRE>
+<DL>
+<DD>Generated when the hold button on a headset is pressed to pause or resume a call.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_HEADSET_HOLD_PRESSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_HEADSET_MUTE_PRESSED"><!-- --></A><H3>
+EVENT_HEADSET_MUTE_PRESSED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_HEADSET_MUTE_PRESSED</B></PRE>
+<DL>
+<DD>Generated when the mute button on a headset is pressed to mute or unmute the microphone.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_HEADSET_MUTE_PRESSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_HEADSET_TALK_PRESSED"><!-- --></A><H3>
+EVENT_HEADSET_TALK_PRESSED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_HEADSET_TALK_PRESSED</B></PRE>
+<DL>
+<DD>Generated when the talk button on a headset is pressed to answer or end a call.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_HEADSET_TALK_PRESSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_HEADSET_VOLUME_DOWN_PRESSED"><!-- --></A><H3>
+EVENT_HEADSET_VOLUME_DOWN_PRESSED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_HEADSET_VOLUME_DOWN_PRESSED</B></PRE>
+<DL>
+<DD>Generated when the decrease volume button on a headset is pressed.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_HEADSET_VOLUME_DOWN_PRESSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_HEADSET_VOLUME_UP_PRESSED"><!-- --></A><H3>
+EVENT_HEADSET_VOLUME_UP_PRESSED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_HEADSET_VOLUME_UP_PRESSED</B></PRE>
+<DL>
+<DD>Generated when the increase volume button on a headset is pressed.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_HEADSET_VOLUME_UP_PRESSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_MESSAGE_WAITING_DISABLED"><!-- --></A><H3>
+EVENT_MESSAGE_WAITING_DISABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_MESSAGE_WAITING_DISABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the phone device message waiting indicator is disabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_MESSAGE_WAITING_DISABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_MESSAGE_WAITING_ENABLED"><!-- --></A><H3>
+EVENT_MESSAGE_WAITING_ENABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_MESSAGE_WAITING_ENABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the phone device message waiting indicator is enabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_MESSAGE_WAITING_ENABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_MICROPHONE_BOOST_DISABLED"><!-- --></A><H3>
+EVENT_MICROPHONE_BOOST_DISABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_MICROPHONE_BOOST_DISABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when microphone boost is disabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_MICROPHONE_BOOST_DISABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_MICROPHONE_BOOST_ENABLED"><!-- --></A><H3>
+EVENT_MICROPHONE_BOOST_ENABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_MICROPHONE_BOOST_ENABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when microphone boost is enabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_MICROPHONE_BOOST_ENABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_MICROPHONE_DEVICE_CHANGED"><!-- --></A><H3>
+EVENT_MICROPHONE_DEVICE_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_MICROPHONE_DEVICE_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the microphone device is changed.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getDeviceName()"><CODE>getDeviceName()</CODE></A> to determine the new microphone device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_MICROPHONE_DEVICE_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_MICROPHONE_MUTED"><!-- --></A><H3>
+EVENT_MICROPHONE_MUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_MICROPHONE_MUTED</B></PRE>
+<DL>
+<DD>Generated when the device's microphone is muted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_MICROPHONE_MUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_MICROPHONE_UNMUTED"><!-- --></A><H3>
+EVENT_MICROPHONE_UNMUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_MICROPHONE_UNMUTED</B></PRE>
+<DL>
+<DD>Generated when the device's microphone is unmuted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_MICROPHONE_UNMUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_MICROPHONE_VOLUME_CHANGED"><!-- --></A><H3>
+EVENT_MICROPHONE_VOLUME_CHANGED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_MICROPHONE_VOLUME_CHANGED</B></PRE>
+<DL>
+<DD>Generated when the microphone volume is changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_MICROPHONE_VOLUME_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PHONE_DEVICE_CHANGED"><!-- --></A><H3>
+EVENT_PHONE_DEVICE_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_PHONE_DEVICE_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the telephony device is changed.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getDeviceName()"><CODE>getDeviceName()</CODE></A> to determine the new phone device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_PHONE_DEVICE_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_RING_DEVICE_CHANGED"><!-- --></A><H3>
+EVENT_RING_DEVICE_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_RING_DEVICE_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the audio ring device is changed.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getDeviceName()"><CODE>getDeviceName()</CODE></A> to determine the new ring device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_RING_DEVICE_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_SPEAKER_DEVICE_CHANGED"><!-- --></A><H3>
+EVENT_SPEAKER_DEVICE_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_SPEAKER_DEVICE_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the audio speaker device is changed.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#getDeviceName()"><CODE>getDeviceName()</CODE></A> to determine the new speaker device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_SPEAKER_DEVICE_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_SPEAKER_MUTED"><!-- --></A><H3>
+EVENT_SPEAKER_MUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_SPEAKER_MUTED</B></PRE>
+<DL>
+<DD>Generated when the device's speaker is muted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_SPEAKER_MUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_SPEAKER_UNMUTED"><!-- --></A><H3>
+EVENT_SPEAKER_UNMUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_SPEAKER_UNMUTED</B></PRE>
+<DL>
+<DD>Generated when the device's speaker is unmuted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_SPEAKER_UNMUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_SPEAKER_VOLUME_CHANGED"><!-- --></A><H3>
+EVENT_SPEAKER_VOLUME_CHANGED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_SPEAKER_VOLUME_CHANGED</B></PRE>
+<DL>
+<DD>Generated when the device's speaker volume is changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_SPEAKER_VOLUME_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_VIDEO_BIT_RATE_CHANGED"><!-- --></A><H3>
+EVENT_VIDEO_BIT_RATE_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_VIDEO_BIT_RATE_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the video bit rate is changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_VIDEO_BIT_RATE_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_VIDEO_CODEC_CHANGED"><!-- --></A><H3>
+EVENT_VIDEO_CODEC_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_VIDEO_CODEC_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the video codec is changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_VIDEO_CODEC_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_VIDEO_FRAME_RATE_CHANGED"><!-- --></A><H3>
+EVENT_VIDEO_FRAME_RATE_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_VIDEO_FRAME_RATE_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the video frame rate is changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_VIDEO_FRAME_RATE_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_VIDEO_PORT_CHANGED"><!-- --></A><H3>
+EVENT_VIDEO_PORT_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_VIDEO_PORT_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the video I/O port is changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_VIDEO_PORT_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_VIDEO_RESOLUTION_CHANGED"><!-- --></A><H3>
+EVENT_VIDEO_RESOLUTION_CHANGED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_VIDEO_RESOLUTION_CHANGED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when the video resolution is changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_VIDEO_RESOLUTION_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_VOICE_DETECTION_DISABLED"><!-- --></A><H3>
+EVENT_VOICE_DETECTION_DISABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_VOICE_DETECTION_DISABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when voice activity detection is disabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_VOICE_DETECTION_DISABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_VOICE_DETECTION_ENABLED"><!-- --></A><H3>
+EVENT_VOICE_DETECTION_ENABLED</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>EVENT_VOICE_DETECTION_ENABLED</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Generated when voice activity detection is enabled.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_VOICE_DETECTION_ENABLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_DEVICE_ERROR"><!-- --></A><H3>
+EVENT_DEVICE_ERROR</H3>
+<PRE>
+static final java.lang.String <B>EVENT_DEVICE_ERROR</B></PRE>
+<DL>
+<DD>Generated to signal a device error. The details field may contain 
+ information about the error.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceEvent.EVENT_DEVICE_ERROR">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getDeviceName()"><!-- --></A><H3>
+getDeviceName</H3>
+<PRE>
+java.lang.String <B>getDeviceName</B>()</PRE>
+<DL>
+<DD>Returns the name of the device associated with this event,
+ if known. See {<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html#setDeviceName(java.lang.String)"><CODE>setDeviceName(String)</CODE></A> for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Device name, null if none specified.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFeatureId()"><!-- --></A><H3>
+getFeatureId</H3>
+<PRE>
+java.lang.String <B>getFeatureId</B>()</PRE>
+<DL>
+<DD>Returns the device feature ID for an EVENT_FEATURE_xxx event.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Device feature ID, null if none specified.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDeviceName(java.lang.String)"><!-- --></A><H3>
+setDeviceName</H3>
+<PRE>
+void <B>setDeviceName</B>(java.lang.String&nbsp;name)</PRE>
+<DL>
+<DD>Sets the name of the device associated with this event. Required
+ for events where the device name is needed and cannot otherwise
+ be determined, for example, EVENT_DEVICE_CONNECTED. This method
+ is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - device name or null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFeatureId(java.lang.String)"><!-- --></A><H3>
+setFeatureId</H3>
+<PRE>
+void <B>setFeatureId</B>(java.lang.String&nbsp;id)</PRE>
+<DL>
+<DD>Sets the device feature ID for an EVENT_FEATURE_xxx event.
+ This method is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - device feature ID or null</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceFactory.html" title="class in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DeviceEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

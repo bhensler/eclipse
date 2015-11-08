@@ -1,0 +1,106 @@
+Licensed Materials - Property of IBM
+
+(c) Copyright IBM Corporation 2002, 2013
+All rights reserved.
+
+US Government Users Restricted Rights - Use, duplication or 
+disclosure restricted by GS ADP Schedule Contract with IBM Corp.
+
+Product: IBM Lotus Sametime Community Server Toolkit 
+Release: 9.0
+
+
+====================================================================
+Contents
+====================================================================
+I.      Overview      
+II.     Toolkit Contents
+III.    Requirements
+IV.     New Features
+V.      Known Issues
+
+
+=====================================================================
+I. Overview
+=====================================================================
+
+What is the IBM Lotus Sametime Community Server Toolkit?
+
+The Sametime Community Server Toolkit provides the ability to write 
+powerful server applications that interact with the community server 
+and its users. The toolkit also provides several components that 
+expose different services exclusively for server applications.
+
+
+======================================================================
+II. Toolkit Contents
+======================================================================
+
+1. The Sametime Community Server Java API
+
+2. Documentation: Developer's Guide, Javadoc Reference, Tutorial,
+   the "Server Architecture" white paper, and the "Server Toolkit FAQ"
+   document
+
+3. Sample applications, described in detail in the accompanying
+   documentation
+
+          
+=====================================================================
+III. Requirements
+=====================================================================
+
+The Sametime Community Server Toolkit can be used in any JDK 1.7 Java
+development environment. The code should be compiled with JDK 1.6 to
+allow running on Domino server, since Domino runs with 1.6 JRE.
+
+The toolkit is targeted for use with Sametime servers on Windows, AIX, IBM i, Linux OS
+
+Although applications developed with this toolkit will work when run 
+on a Sametime 2.x or later server, toolkit services that require 
+features new to this release will not function. In particular, the 
+code examples in the toolkit should be run on the latest version of 
+the Sametime server. 
+
+The Sametime Community Server Toolkit is intended to work with
+Sametime Server 9.0. Most of the services work with versions 2.x and 
+later of the community server.
+
+
+=====================================================================
+IV. New Features
+=====================================================================
+
+- Telephony Presence Adapter: Provides an easy-to-use infrastructure for 
+	interfacing between Sametime and third-party telephony applications.
+
+- IPv6 Support: The Community Server Toolkit now supports connecting to
+	an IPv6-capable Sametime server.  The Sametime server introduced
+	support for IPv6 as well in Sametime 8.0.2.  You can use the Toolkit
+	to connect to an IPv6 capable Sametime server from an IPv4 or an
+	IPv6 client with any additional configuration on the client side.
+	Please see the Information Center / release notes for more
+	information on how to configure your Sametime server for IPv6.
+
+=====================================================================
+V. Known Issues
+=====================================================================
+
+* Dual-Stack (IPv4 & IPv6)
+
+	The Java and Community Server Toolkits can have difficulty connecting
+	to Sametime when the Sametime Server is on a dual-stack machine (both
+	IPv4 & IPv6 addresses), yet the Sametime Server (MUX) itself is not configured
+	to accept connections on both address types.  This is particularly an
+	issue when a dual-stack is in use, but the server is only accepting
+	connections on IPv6.  Java by default prefers IPv4 addresses, so Sametime
+	will attempt to connect over the IPv4 address.  To address this issue,
+	either configure the Sametime Server (MUX) to accept connections on both
+	types, or tell Java to prefer IPv6 addresses.  You can do this by setting
+	the following Java System property to true:
+	
+		java.net.preferIPv6Addresses=true
+	
+	More information can be found here:
+	
+	http://java.sun.com/j2se/1.5.0/docs/guide/net/ipv6_guide/index.html#ipv6-related

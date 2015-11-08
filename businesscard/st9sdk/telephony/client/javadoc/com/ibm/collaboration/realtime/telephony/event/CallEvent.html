@@ -1,0 +1,2069 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+CallEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CallEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html" title="class in com.ibm.collaboration.realtime.telephony.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/event/CallEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CallEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.event</FONT>
+<BR>
+Interface CallEvent</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD>java.io.Serializable, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallPropertiesEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallStartedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallStartedEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CapabilityEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">IncomingCallEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ParticipantAddedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ParticipantAddedEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/PropertyChangeEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">PropertyChangeEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesChangedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ProviderPropertiesChangedEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ProviderPropertiesEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceErrorEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceErrorEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ServiceEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">ServiceEvent</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>CallEvent</B><DT>extends <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></DL>
+</PRE>
+
+<P>
+CallEvent represents a call-related telephony event, processed by
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html#processCallEvent(com.ibm.collaboration.realtime.telephony.event.CallEvent)"><CODE>CallListener.processCallEvent(CallEvent)</CODE></A>.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_BEGIN_RECORDING">EVENT_CALL_BEGIN_RECORDING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when recording of the call begins.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_BEGIN_VIDEO">EVENT_CALL_BEGIN_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the video portion of a video call begins.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_DENY_VIDEO">EVENT_CALL_DENY_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the video portion of a video call is denied.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_DISCONNECTED">EVENT_CALL_DISCONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call is disconnected using <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Call.html#disconnectCall()"><CODE>Call.disconnectCall()</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_END_RECORDING">EVENT_CALL_END_RECORDING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when recording of the call ends.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_END_VIDEO">EVENT_CALL_END_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the video portion of a video call ends.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_ENDING">EVENT_CALL_ENDING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the user is about to end or leave a call, before
+ the service provider's endCall or leaveCall method is called.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_HISTORY_UPDATE">EVENT_CALL_HISTORY_UPDATE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated by the service provider to indicate that the client-side
+ call history needs to be updated.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_LOCKED">EVENT_CALL_LOCKED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call is locked.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_MUTED">EVENT_CALL_MUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call is muted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_PAUSED">EVENT_CALL_PAUSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call is paused (put on hold).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_PROPERTIES">EVENT_CALL_PROPERTIES</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call's properties are initially set or changed during a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_PROPERTY_CHANGE">EVENT_CALL_PROPERTY_CHANGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Never used, deprecated for Sametime 8.5.1; use EVENT_CALL_PROPERTIES instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_READY">EVENT_CALL_READY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call is ready for connections.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_REQUEST_VIDEO">EVENT_CALL_REQUEST_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call participant has requested to add video to an existing voice chat.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_RESUMED">EVENT_CALL_RESUMED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a paused call is resumed</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_STARTED">EVENT_CALL_STARTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a new call has been started, after the service
+ provider's startCall method is called.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_STARTING">EVENT_CALL_STARTING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a new call is about to start, before the service
+ provider's startCall method is called.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_TERMINATED">EVENT_CALL_TERMINATED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call is terminated.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_TRANSFERRED">EVENT_CALL_TRANSFERRED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call is transferred.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_UNLOCKED">EVENT_CALL_UNLOCKED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call is unlocked.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_UNMUTED">EVENT_CALL_UNMUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a call is unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CAPABILITY">EVENT_CAPABILITY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a capability has changed, currently used only for call capabilities.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL">EVENT_INCOMING_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when an incoming call is detected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL_ACCEPTED">EVENT_INCOMING_CALL_ACCEPTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when an incoming call is accepted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL_INVALID">EVENT_INCOMING_CALL_INVALID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when an incoming call is no longer valid, either because it timed out
+ or was cancelled by the initiator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL_REDIRECTED">EVENT_INCOMING_CALL_REDIRECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when an incoming call is redirected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_ADDED">EVENT_PARTICIPANT_ADDED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is added to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_ASSOCIATED_ID">EVENT_PARTICIPANT_ASSOCIATED_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a sametime participant is associated with an external participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_BEGIN_TALKING">EVENT_PARTICIPANT_BEGIN_TALKING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant begins talking.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_BUSY">EVENT_PARTICIPANT_BUSY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant's line is busy.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_CONNECTED">EVENT_PARTICIPANT_CONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is connected to a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_CONNECTING">EVENT_PARTICIPANT_CONNECTING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is being connected to a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_DISCONNECTED">EVENT_PARTICIPANT_DISCONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is disconnected from a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_DISPLAYED">EVENT_PARTICIPANT_DISPLAYED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant's video is displayed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_END_TALKING">EVENT_PARTICIPANT_END_TALKING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant ends talking.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_HIDDEN">EVENT_PARTICIPANT_HIDDEN</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant's video is no longer displayed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_ACCEPTED">EVENT_PARTICIPANT_INVITE_ACCEPTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant accepted an invitation to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_CANCELLED">EVENT_PARTICIPANT_INVITE_CANCELLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant's invitation to a call was cancelled by the inviter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_DECLINED">EVENT_PARTICIPANT_INVITE_DECLINED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant declined an invitation to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_ERROR">EVENT_PARTICIPANT_INVITE_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant could not be invited to a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_NO_RESPONSE">EVENT_PARTICIPANT_INVITE_NO_RESPONSE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant did not respond to the invitation to a call
+ after a certain period of time.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITED">EVENT_PARTICIPANT_INVITED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is invited to a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MODERATOR_ADDED">EVENT_PARTICIPANT_MODERATOR_ADDED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when an existing participant is added to the moderator role.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MODERATOR_REMOVED">EVENT_PARTICIPANT_MODERATOR_REMOVED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when an existing participant is removed from the moderator role.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTE_LOCKED">EVENT_PARTICIPANT_MUTE_LOCKED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a sametime participant is joins the lecture style meeting.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTE_UNLOCKED">EVENT_PARTICIPANT_MUTE_UNLOCKED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a sametime participant is joins the lecture style meeting.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTED">EVENT_PARTICIPANT_MUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is muted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTED_BY_MODERATOR">EVENT_PARTICIPANT_MUTED_BY_MODERATOR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is muted by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_NO_ANSWER">EVENT_PARTICIPANT_NO_ANSWER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Genetated when a participant does not answer the phone.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_PAUSED">EVENT_PARTICIPANT_PAUSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant call is paused.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_PROPERTY_CHANGE">EVENT_PARTICIPANT_PROPERTY_CHANGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant property is added or changed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_REMOVED">EVENT_PARTICIPANT_REMOVED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is removed from a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_RESUMED">EVENT_PARTICIPANT_RESUMED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a paused participant call is resumed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_RINGING">EVENT_PARTICIPANT_RINGING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant's phone is ringing.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_SERVICE_ERROR">EVENT_PARTICIPANT_SERVICE_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated to signal an unspecified error from the service provider,
+ specific to a participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_SILENCED">EVENT_PARTICIPANT_SILENCED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is silenced, meaning the participant's audio is muted
+ such that he/she cannot unmute himself/herself.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED">EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant requests to be unmute cancelled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTE_REQUESTED">EVENT_PARTICIPANT_UNMUTE_REQUESTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant requests to be unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTED">EVENT_PARTICIPANT_UNMUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR">EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is unmuted by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNSILENCED">EVENT_PARTICIPANT_UNSILENCED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant is unsilenced.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_MUTED">EVENT_PARTICIPANT_VIDEO_MUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant's video is muted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR">EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant's video is muted by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_UNMUTED">EVENT_PARTICIPANT_VIDEO_UNMUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant's video is unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR">EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a participant's video is unmuted by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_DATA_CHANGE">EVENT_PROVIDER_DATA_CHANGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the service provider sets or changes provider data associated
+ with a call or participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_ENDPOINT_CHANGE">EVENT_PROVIDER_ENDPOINT_CHANGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the service provider has updated telephony endpoints available,
+ which causes the UI to call <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getEndpoints()"><CODE>CallManager.getEndpoints()</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_PROPERTIES">EVENT_PROVIDER_PROPERTIES</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a service provider publishes configuration properties and
+ capabilities, used with <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><CODE>ProviderPropertiesEvent</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_PROPERTY_CHANGE">EVENT_PROVIDER_PROPERTY_CHANGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the service provider changes configuration properties or
+ capabilities, used with <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesChangedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><CODE>ProviderPropertiesChangedEvent</CODE></A>.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.TelephonyEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_PROVIDER">EVENT_PROVIDER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_SERVICE_ERROR">EVENT_SERVICE_ERROR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_UNKNOWN">EVENT_UNKNOWN</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getAddressUri()">getAddressUri</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the address URI for the participant, if any, associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getCallId()">getCallId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID of the call associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getParticipantId()">getParticipantId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID of the participant, if any, associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getReason()">getReason</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the reason why the call was terminated, one of the REASON_xxx
+ constants defined in <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/CallStatus.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>CallStatus</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#isAudioOnly()">isAudioOnly</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#isVideoOnly()">isVideoOnly</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setAddressUri(java.lang.String)">setAddressUri</A></B>(java.lang.String&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the address URI for the participant, if any, associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setCallId(java.lang.String)">setCallId</A></B>(java.lang.String&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the ID of the call associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setIsAudioOnly(boolean)">setIsAudioOnly</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setIsVideoOnly(boolean)">setIsVideoOnly</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setParticipantId(java.lang.String)">setParticipantId</A></B>(java.lang.String&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the ID of the call participant associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setReason(java.lang.String)">setReason</A></B>(java.lang.String&nbsp;reason)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the reason why the participant was disconnected, one of the REASON_xxx
+ values defined in <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>ParticipantStatus</CODE></A>.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.TelephonyEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getDetails()">getDetails</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getEventType()">getEventType</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getProviderData()">getProviderData</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setDetails(java.lang.String)">setDetails</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setEventType(java.lang.String)">setEventType</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setProviderData(java.lang.Object)">setProviderData</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="EVENT_CALL_BEGIN_RECORDING"><!-- --></A><H3>
+EVENT_CALL_BEGIN_RECORDING</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_BEGIN_RECORDING</B></PRE>
+<DL>
+<DD>Generated when recording of the call begins. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getParticipantId()"><CODE>getParticipantId()</CODE></A>
+ to determine which participant initiated the recording.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_BEGIN_RECORDING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_BEGIN_VIDEO"><!-- --></A><H3>
+EVENT_CALL_BEGIN_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_BEGIN_VIDEO</B></PRE>
+<DL>
+<DD>Generated when the video portion of a video call begins.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_BEGIN_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_DISCONNECTED"><!-- --></A><H3>
+EVENT_CALL_DISCONNECTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_DISCONNECTED</B></PRE>
+<DL>
+<DD>Generated when a call is disconnected using <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Call.html#disconnectCall()"><CODE>Call.disconnectCall()</CODE></A>.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_DISCONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_END_RECORDING"><!-- --></A><H3>
+EVENT_CALL_END_RECORDING</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_END_RECORDING</B></PRE>
+<DL>
+<DD>Generated when recording of the call ends.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_END_RECORDING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_END_VIDEO"><!-- --></A><H3>
+EVENT_CALL_END_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_END_VIDEO</B></PRE>
+<DL>
+<DD>Generated when the video portion of a video call ends.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_END_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_DENY_VIDEO"><!-- --></A><H3>
+EVENT_CALL_DENY_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_DENY_VIDEO</B></PRE>
+<DL>
+<DD>Generated when the video portion of a video call is denied.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_DENY_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_ENDING"><!-- --></A><H3>
+EVENT_CALL_ENDING</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_ENDING</B></PRE>
+<DL>
+<DD>Generated when the user is about to end or leave a call, before
+ the service provider's endCall or leaveCall method is called.
+ This event is generated by Sametime Connect, so service providers
+ should not generate the event.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_ENDING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_HISTORY_UPDATE"><!-- --></A><H3>
+EVENT_CALL_HISTORY_UPDATE</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_HISTORY_UPDATE</B></PRE>
+<DL>
+<DD>Generated by the service provider to indicate that the client-side
+ call history needs to be updated.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_HISTORY_UPDATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_LOCKED"><!-- --></A><H3>
+EVENT_CALL_LOCKED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_LOCKED</B></PRE>
+<DL>
+<DD>Generated when a call is locked.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_LOCKED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_MUTED"><!-- --></A><H3>
+EVENT_CALL_MUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_MUTED</B></PRE>
+<DL>
+<DD>Generated when a call is muted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_MUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_PAUSED"><!-- --></A><H3>
+EVENT_CALL_PAUSED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_PAUSED</B></PRE>
+<DL>
+<DD>Generated when a call is paused (put on hold).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_PAUSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_PROPERTIES"><!-- --></A><H3>
+EVENT_CALL_PROPERTIES</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_PROPERTIES</B></PRE>
+<DL>
+<DD>Generated when a call's properties are initially set or changed during a call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_PROPERTIES">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_PROPERTY_CHANGE"><!-- --></A><H3>
+EVENT_CALL_PROPERTY_CHANGE</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_PROPERTY_CHANGE</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Never used, deprecated for Sametime 8.5.1; use EVENT_CALL_PROPERTIES instead.</I><DD>Generated when a call property is added or changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_PROPERTY_CHANGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_READY"><!-- --></A><H3>
+EVENT_CALL_READY</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_READY</B></PRE>
+<DL>
+<DD>Generated when a call is ready for connections.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_READY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_REQUEST_VIDEO"><!-- --></A><H3>
+EVENT_CALL_REQUEST_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_REQUEST_VIDEO</B></PRE>
+<DL>
+<DD>Generated when a call participant has requested to add video to an existing voice chat.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_REQUEST_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_RESUMED"><!-- --></A><H3>
+EVENT_CALL_RESUMED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_RESUMED</B></PRE>
+<DL>
+<DD>Generated when a paused call is resumed
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_RESUMED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_STARTING"><!-- --></A><H3>
+EVENT_CALL_STARTING</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_STARTING</B></PRE>
+<DL>
+<DD>Generated when a new call is about to start, before the service
+ provider's startCall method is called. This event is generated
+ by Sametime Connect, so service providers should not generate
+ the event. Note that this event is only generated for outgoing
+ calls, not incoming calls - to be notified of incoming calls,
+ use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>IncomingCallHandler</CODE></A>. Note also that the call ID
+ is not yet available when this event is generated.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_STARTING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_STARTED"><!-- --></A><H3>
+EVENT_CALL_STARTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_STARTED</B></PRE>
+<DL>
+<DD>Generated when a new call has been started, after the service
+ provider's startCall method is called. This event is generated
+ by Sametime Connect, so service providers should not generate
+ the event. Note that this event is only generated for outgoing
+ calls, not incoming calls - to be notified of incoming calls,
+ use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>IncomingCallHandler</CODE></A>.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_STARTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_TERMINATED"><!-- --></A><H3>
+EVENT_CALL_TERMINATED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_TERMINATED</B></PRE>
+<DL>
+<DD>Generated when a call is terminated.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_TERMINATED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_TRANSFERRED"><!-- --></A><H3>
+EVENT_CALL_TRANSFERRED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_TRANSFERRED</B></PRE>
+<DL>
+<DD>Generated when a call is transferred.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_TRANSFERRED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_UNLOCKED"><!-- --></A><H3>
+EVENT_CALL_UNLOCKED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_UNLOCKED</B></PRE>
+<DL>
+<DD>Generated when a call is unlocked.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_UNLOCKED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CALL_UNMUTED"><!-- --></A><H3>
+EVENT_CALL_UNMUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CALL_UNMUTED</B></PRE>
+<DL>
+<DD>Generated when a call is unmuted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CALL_UNMUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_CAPABILITY"><!-- --></A><H3>
+EVENT_CAPABILITY</H3>
+<PRE>
+static final java.lang.String <B>EVENT_CAPABILITY</B></PRE>
+<DL>
+<DD>Generated when a capability has changed, currently used only for call capabilities.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_CAPABILITY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_INCOMING_CALL"><!-- --></A><H3>
+EVENT_INCOMING_CALL</H3>
+<PRE>
+static final java.lang.String <B>EVENT_INCOMING_CALL</B></PRE>
+<DL>
+<DD>Generated when an incoming call is detected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_INCOMING_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_INCOMING_CALL_INVALID"><!-- --></A><H3>
+EVENT_INCOMING_CALL_INVALID</H3>
+<PRE>
+static final java.lang.String <B>EVENT_INCOMING_CALL_INVALID</B></PRE>
+<DL>
+<DD>Generated when an incoming call is no longer valid, either because it timed out
+ or was cancelled by the initiator.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_INCOMING_CALL_INVALID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_INCOMING_CALL_REDIRECTED"><!-- --></A><H3>
+EVENT_INCOMING_CALL_REDIRECTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_INCOMING_CALL_REDIRECTED</B></PRE>
+<DL>
+<DD>Generated when an incoming call is redirected.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_INCOMING_CALL_REDIRECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_INCOMING_CALL_ACCEPTED"><!-- --></A><H3>
+EVENT_INCOMING_CALL_ACCEPTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_INCOMING_CALL_ACCEPTED</B></PRE>
+<DL>
+<DD>Generated when an incoming call is accepted.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_INCOMING_CALL_ACCEPTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_ADDED"><!-- --></A><H3>
+EVENT_PARTICIPANT_ADDED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_ADDED</B></PRE>
+<DL>
+<DD>Generated when a participant is added to the call. This doesn't necessarily
+ mean the participant has been connected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_ADDED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_BUSY"><!-- --></A><H3>
+EVENT_PARTICIPANT_BUSY</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_BUSY</B></PRE>
+<DL>
+<DD>Generated when a participant's line is busy.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_BUSY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_BEGIN_TALKING"><!-- --></A><H3>
+EVENT_PARTICIPANT_BEGIN_TALKING</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_BEGIN_TALKING</B></PRE>
+<DL>
+<DD>Generated when a participant begins talking.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_BEGIN_TALKING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_CONNECTED"><!-- --></A><H3>
+EVENT_PARTICIPANT_CONNECTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_CONNECTED</B></PRE>
+<DL>
+<DD>Generated when a participant is connected to a call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_CONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_CONNECTING"><!-- --></A><H3>
+EVENT_PARTICIPANT_CONNECTING</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_CONNECTING</B></PRE>
+<DL>
+<DD>Generated when a participant is being connected to a call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_CONNECTING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_DISCONNECTED"><!-- --></A><H3>
+EVENT_PARTICIPANT_DISCONNECTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_DISCONNECTED</B></PRE>
+<DL>
+<DD>Generated when a participant is disconnected from a call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_DISCONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_DISPLAYED"><!-- --></A><H3>
+EVENT_PARTICIPANT_DISPLAYED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_DISPLAYED</B></PRE>
+<DL>
+<DD>Generated when a participant's video is displayed. Note that participants
+ in a video call might not be displayed at all times.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_DISPLAYED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_END_TALKING"><!-- --></A><H3>
+EVENT_PARTICIPANT_END_TALKING</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_END_TALKING</B></PRE>
+<DL>
+<DD>Generated when a participant ends talking.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_END_TALKING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_HIDDEN"><!-- --></A><H3>
+EVENT_PARTICIPANT_HIDDEN</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_HIDDEN</B></PRE>
+<DL>
+<DD>Generated when a participant's video is no longer displayed. Note that
+ this does not necessarily mean the participant has been disconnected
+ from the video portion of the call.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_HIDDEN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_INVITE_ACCEPTED"><!-- --></A><H3>
+EVENT_PARTICIPANT_INVITE_ACCEPTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_INVITE_ACCEPTED</B></PRE>
+<DL>
+<DD>Generated when a participant accepted an invitation to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_INVITE_ACCEPTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_INVITE_CANCELLED"><!-- --></A><H3>
+EVENT_PARTICIPANT_INVITE_CANCELLED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_INVITE_CANCELLED</B></PRE>
+<DL>
+<DD>Generated when a participant's invitation to a call was cancelled by the inviter.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_INVITE_CANCELLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_INVITE_DECLINED"><!-- --></A><H3>
+EVENT_PARTICIPANT_INVITE_DECLINED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_INVITE_DECLINED</B></PRE>
+<DL>
+<DD>Generated when a participant declined an invitation to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_INVITE_DECLINED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_INVITE_ERROR"><!-- --></A><H3>
+EVENT_PARTICIPANT_INVITE_ERROR</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_INVITE_ERROR</B></PRE>
+<DL>
+<DD>Generated when a participant could not be invited to a call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_INVITE_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_INVITE_NO_RESPONSE"><!-- --></A><H3>
+EVENT_PARTICIPANT_INVITE_NO_RESPONSE</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_INVITE_NO_RESPONSE</B></PRE>
+<DL>
+<DD>Generated when a participant did not respond to the invitation to a call
+ after a certain period of time.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_INVITE_NO_RESPONSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_INVITED"><!-- --></A><H3>
+EVENT_PARTICIPANT_INVITED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_INVITED</B></PRE>
+<DL>
+<DD>Generated when a participant is invited to a call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_INVITED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_MODERATOR_ADDED"><!-- --></A><H3>
+EVENT_PARTICIPANT_MODERATOR_ADDED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_MODERATOR_ADDED</B></PRE>
+<DL>
+<DD>Generated when an existing participant is added to the moderator role. The participant
+ must have already been added to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_MODERATOR_ADDED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_MODERATOR_REMOVED"><!-- --></A><H3>
+EVENT_PARTICIPANT_MODERATOR_REMOVED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_MODERATOR_REMOVED</B></PRE>
+<DL>
+<DD>Generated when an existing participant is removed from the moderator role. The
+ participant must have already been added to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_MODERATOR_REMOVED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_MUTED"><!-- --></A><H3>
+EVENT_PARTICIPANT_MUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_MUTED</B></PRE>
+<DL>
+<DD>Generated when a participant is muted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_MUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_MUTED_BY_MODERATOR"><!-- --></A><H3>
+EVENT_PARTICIPANT_MUTED_BY_MODERATOR</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_MUTED_BY_MODERATOR</B></PRE>
+<DL>
+<DD>Generated when a participant is muted by the moderator.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_MUTED_BY_MODERATOR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_NO_ANSWER"><!-- --></A><H3>
+EVENT_PARTICIPANT_NO_ANSWER</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_NO_ANSWER</B></PRE>
+<DL>
+<DD>Genetated when a participant does not answer the phone.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_NO_ANSWER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_PAUSED"><!-- --></A><H3>
+EVENT_PARTICIPANT_PAUSED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_PAUSED</B></PRE>
+<DL>
+<DD>Generated when a participant call is paused.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_PAUSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_PROPERTY_CHANGE"><!-- --></A><H3>
+EVENT_PARTICIPANT_PROPERTY_CHANGE</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_PROPERTY_CHANGE</B></PRE>
+<DL>
+<DD>Generated when a participant property is added or changed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_PROPERTY_CHANGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_REMOVED"><!-- --></A><H3>
+EVENT_PARTICIPANT_REMOVED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_REMOVED</B></PRE>
+<DL>
+<DD>Generated when a participant is removed from a call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_REMOVED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_RESUMED"><!-- --></A><H3>
+EVENT_PARTICIPANT_RESUMED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_RESUMED</B></PRE>
+<DL>
+<DD>Generated when a paused participant call is resumed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_RESUMED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_RINGING"><!-- --></A><H3>
+EVENT_PARTICIPANT_RINGING</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_RINGING</B></PRE>
+<DL>
+<DD>Generated when a participant's phone is ringing.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_RINGING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_SERVICE_ERROR"><!-- --></A><H3>
+EVENT_PARTICIPANT_SERVICE_ERROR</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_SERVICE_ERROR</B></PRE>
+<DL>
+<DD>Generated to signal an unspecified error from the service provider,
+ specific to a participant. The details field may contain information
+ about the error.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_SERVICE_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_UNMUTED"><!-- --></A><H3>
+EVENT_PARTICIPANT_UNMUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_UNMUTED</B></PRE>
+<DL>
+<DD>Generated when a participant is unmuted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_UNMUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR"><!-- --></A><H3>
+EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR</B></PRE>
+<DL>
+<DD>Generated when a participant is unmuted by the moderator.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_VIDEO_MUTED"><!-- --></A><H3>
+EVENT_PARTICIPANT_VIDEO_MUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_VIDEO_MUTED</B></PRE>
+<DL>
+<DD>Generated when a participant's video is muted.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_VIDEO_MUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR"><!-- --></A><H3>
+EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR</B></PRE>
+<DL>
+<DD>Generated when a participant's video is muted by the moderator.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_VIDEO_UNMUTED"><!-- --></A><H3>
+EVENT_PARTICIPANT_VIDEO_UNMUTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_VIDEO_UNMUTED</B></PRE>
+<DL>
+<DD>Generated when a participant's video is unmuted.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_VIDEO_UNMUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR"><!-- --></A><H3>
+EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR</B></PRE>
+<DL>
+<DD>Generated when a participant's video is unmuted by the moderator.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PROVIDER_DATA_CHANGE"><!-- --></A><H3>
+EVENT_PROVIDER_DATA_CHANGE</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PROVIDER_DATA_CHANGE</B></PRE>
+<DL>
+<DD>Generated when the service provider sets or changes provider data associated
+ with a call or participant.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PROVIDER_DATA_CHANGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PROVIDER_ENDPOINT_CHANGE"><!-- --></A><H3>
+EVENT_PROVIDER_ENDPOINT_CHANGE</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PROVIDER_ENDPOINT_CHANGE</B></PRE>
+<DL>
+<DD>Generated when the service provider has updated telephony endpoints available,
+ which causes the UI to call <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getEndpoints()"><CODE>CallManager.getEndpoints()</CODE></A>.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PROVIDER_ENDPOINT_CHANGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PROVIDER_PROPERTIES"><!-- --></A><H3>
+EVENT_PROVIDER_PROPERTIES</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PROVIDER_PROPERTIES</B></PRE>
+<DL>
+<DD>Generated when a service provider publishes configuration properties and
+ capabilities, used with <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><CODE>ProviderPropertiesEvent</CODE></A>.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PROVIDER_PROPERTIES">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PROVIDER_PROPERTY_CHANGE"><!-- --></A><H3>
+EVENT_PROVIDER_PROPERTY_CHANGE</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PROVIDER_PROPERTY_CHANGE</B></PRE>
+<DL>
+<DD>Generated when the service provider changes configuration properties or
+ capabilities, used with <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ProviderPropertiesChangedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><CODE>ProviderPropertiesChangedEvent</CODE></A>.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PROVIDER_PROPERTY_CHANGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_SILENCED"><!-- --></A><H3>
+EVENT_PARTICIPANT_SILENCED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_SILENCED</B></PRE>
+<DL>
+<DD>Generated when a participant is silenced, meaning the participant's audio is muted
+ such that he/she cannot unmute himself/herself.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_SILENCED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_UNSILENCED"><!-- --></A><H3>
+EVENT_PARTICIPANT_UNSILENCED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_UNSILENCED</B></PRE>
+<DL>
+<DD>Generated when a participant is unsilenced.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_UNSILENCED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_UNMUTE_REQUESTED"><!-- --></A><H3>
+EVENT_PARTICIPANT_UNMUTE_REQUESTED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_UNMUTE_REQUESTED</B></PRE>
+<DL>
+<DD>Generated when a participant requests to be unmuted.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.3</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_UNMUTE_REQUESTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_ASSOCIATED_ID"><!-- --></A><H3>
+EVENT_PARTICIPANT_ASSOCIATED_ID</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_ASSOCIATED_ID</B></PRE>
+<DL>
+<DD>Generated when a sametime participant is associated with an external participant.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.3</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_ASSOCIATED_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_MUTE_LOCKED"><!-- --></A><H3>
+EVENT_PARTICIPANT_MUTE_LOCKED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_MUTE_LOCKED</B></PRE>
+<DL>
+<DD>Generated when a sametime participant is joins the lecture style meeting.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 9.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_MUTE_LOCKED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_MUTE_UNLOCKED"><!-- --></A><H3>
+EVENT_PARTICIPANT_MUTE_UNLOCKED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_MUTE_UNLOCKED</B></PRE>
+<DL>
+<DD>Generated when a sametime participant is joins the lecture style meeting.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 9.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_MUTE_UNLOCKED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED"><!-- --></A><H3>
+EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED</H3>
+<PRE>
+static final java.lang.String <B>EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED</B></PRE>
+<DL>
+<DD>Generated when a participant requests to be unmute cancelled.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 9.0.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.event.CallEvent.EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getAddressUri()"><!-- --></A><H3>
+getAddressUri</H3>
+<PRE>
+java.lang.String <B>getAddressUri</B>()</PRE>
+<DL>
+<DD>Returns the address URI for the participant, if any, associated with this event.
+ See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setAddressUri(java.lang.String)"><CODE>setAddressUri(String)</CODE></A> for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Participant address URI string, null if not available or not applicable.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0 (moved here from ParticipantAddedEvent)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCallId()"><!-- --></A><H3>
+getCallId</H3>
+<PRE>
+java.lang.String <B>getCallId</B>()</PRE>
+<DL>
+<DD>Returns the ID of the call associated with this event.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>call ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParticipantId()"><!-- --></A><H3>
+getParticipantId</H3>
+<PRE>
+java.lang.String <B>getParticipantId</B>()</PRE>
+<DL>
+<DD>Returns the ID of the participant, if any, associated with this event.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Participant ID, null if this event is not specific to a participant.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getReason()"><!-- --></A><H3>
+getReason</H3>
+<PRE>
+java.lang.String <B>getReason</B>()</PRE>
+<DL>
+<DD>Returns the reason why the call was terminated, one of the REASON_xxx
+ constants defined in <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/CallStatus.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>CallStatus</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Status reason, null if not available.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (moved here from ParticipantDisconnectedEvemt)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isAudioOnly()"><!-- --></A><H3>
+isAudioOnly</H3>
+<PRE>
+boolean <B>isAudioOnly</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVideoOnly()"><!-- --></A><H3>
+isVideoOnly</H3>
+<PRE>
+boolean <B>isVideoOnly</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setAddressUri(java.lang.String)"><!-- --></A><H3>
+setAddressUri</H3>
+<PRE>
+void <B>setAddressUri</B>(java.lang.String&nbsp;address)</PRE>
+<DL>
+<DD>Sets the address URI for the participant, if any, associated with this event.
+ See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Address.html#setAddressUri(java.lang.String)"><CODE>Address.setAddressUri(String)</CODE></A>
+ for more information. This method is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - participant address URI or null<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0 (moved here from ParticipantAddedEvent, added there for Sametime 7.5.1), Sametime 7.5.1 (moved to ParticipantAddedEvent from com.ibm.collaboration.realtime.telephony.service.event.ParticipantAddedEventInternal)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCallId(java.lang.String)"><!-- --></A><H3>
+setCallId</H3>
+<PRE>
+void <B>setCallId</B>(java.lang.String&nbsp;id)</PRE>
+<DL>
+<DD>Sets the ID of the call associated with this event. This method is
+ for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - call ID
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the ID is invalid<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (moved here from com.ibm.collaboration.realtime.telephony.service.event.CallEventInternal)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsAudioOnly(boolean)"><!-- --></A><H3>
+setIsAudioOnly</H3>
+<PRE>
+void <B>setIsAudioOnly</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsVideoOnly(boolean)"><!-- --></A><H3>
+setIsVideoOnly</H3>
+<PRE>
+void <B>setIsVideoOnly</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setParticipantId(java.lang.String)"><!-- --></A><H3>
+setParticipantId</H3>
+<PRE>
+void <B>setParticipantId</B>(java.lang.String&nbsp;id)</PRE>
+<DL>
+<DD>Sets the ID of the call participant associated with this event.
+ This method is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - participant ID
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the ID is invalid<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (moved here from com.ibm.collaboration.realtime.telephony.service.event.CallEventInternal)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setReason(java.lang.String)"><!-- --></A><H3>
+setReason</H3>
+<PRE>
+void <B>setReason</B>(java.lang.String&nbsp;reason)</PRE>
+<DL>
+<DD>Sets the reason why the participant was disconnected, one of the REASON_xxx
+ values defined in <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>ParticipantStatus</CODE></A>. This method is for service provider
+ use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>reason</CODE> - reason code or null<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (moved here from com.ibm.collaboration.realtime.telephony.service.event.ParticipantDisconnectedEventInternal)</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEventFactory.html" title="class in com.ibm.collaboration.realtime.telephony.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/event/CallEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CallEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

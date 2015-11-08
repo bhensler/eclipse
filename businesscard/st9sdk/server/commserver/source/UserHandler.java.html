@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>UserHandler (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">UserHandler</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.Channel;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.ChannelEvent;
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.ChannelListener;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.NdrInputStream;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.NdrOutputStream;
+<A NAME="17"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="18"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.constants.STError;
+<A NAME="19"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.constants.EncLevel;
+<A NAME="20"><A>
+<A NAME="21"><A>
+<A NAME="22"><A><FONT ID="Import">import</FONT> java.util.Vector;
+<A NAME="23"><A><FONT ID="Import">import</FONT> java.util.Enumeration;
+<A NAME="24"><A><FONT ID="Import">import</FONT> java.io.IOException;
+<A NAME="25"><A>
+<A NAME="26"><A>
+<A NAME="27"><A><FONT ID="FormalComment">/**
+<A NAME="28"><A> *  UserHandler: Handle requests for one user
+<A NAME="29"><A> */</FONT>
+<A NAME="30"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> UserHandler <FONT ID="Implements">implements</FONT> ChannelListener, <A HREF="MatchListener.java.html">MatchListener</A>
+<A NAME="31"><A>{
+<A NAME="32"><A>    <FONT ID="FormalComment">/**
+<A NAME="33"><A>     * The owner updater
+<A NAME="34"><A>     */</FONT>
+<A NAME="35"><A>    <FONT ID="Private">private</FONT> <A HREF="SportsUpdater.java.html">SportsUpdater</A> m_updater;
+<A NAME="36"><A>    
+<A NAME="37"><A>    <FONT ID="FormalComment">/**
+<A NAME="38"><A>     * Our channel to the user
+<A NAME="39"><A>     */</FONT>
+<A NAME="40"><A>    <FONT ID="Private">private</FONT> Channel m_cnl;
+<A NAME="41"><A>    
+<A NAME="42"><A>    <FONT ID="FormalComment">/**
+<A NAME="43"><A>     * List of subscribed matches
+<A NAME="44"><A>     */</FONT>
+<A NAME="45"><A>    <FONT ID="Private">private</FONT> Vector m_matches = <FONT ID="New">new</FONT> Vector();
+<A NAME="46"><A>    
+<A NAME="47"><A>    <FONT ID="FormalComment">/**
+<A NAME="48"><A>     * CTor
+<A NAME="49"><A>     */</FONT>
+<A NAME="50"><A>    <FONT ID="Public">public</FONT> UserHandler(<A HREF="SportsUpdater.java.html">SportsUpdater</A> updater, ChannelEvent event)
+<A NAME="51"><A>    {
+<A NAME="52"><A>        <FONT ID="SingleLineComment">// Save ref to parent
+<A NAME="53"><A></FONT>        m_updater = updater;
+<A NAME="54"><A>        
+<A NAME="55"><A>         <FONT ID="SingleLineComment">// Get the channel
+<A NAME="56"><A></FONT>        m_cnl = event.getChannel();
+<A NAME="57"><A>        
+<A NAME="58"><A>        <FONT ID="SingleLineComment">// Add ourselve sa listener and accepth the channel
+<A NAME="59"><A></FONT>        m_cnl.addChannelListener(<FONT ID="This">this</FONT>);
+<A NAME="60"><A>        m_cnl.accept(EncLevel.ENC_LEVEL_DONT_CARE, <FONT ID="Null">null</FONT> );
+<A NAME="61"><A>    }
+<A NAME="62"><A>    
+<A NAME="63"><A>    <FONT ID="SingleLineComment">//
+<A NAME="64"><A></FONT>    <FONT ID="SingleLineComment">// ChannelListener
+<A NAME="65"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="66"><A></FONT>    <FONT ID="FormalComment">/**
+<A NAME="67"><A>     * The channel was opened.
+<A NAME="68"><A>     *
+<A NAME="69"><A>     * @param event The event object.
+<A NAME="70"><A>     */</FONT>
+<A NAME="71"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelOpened(ChannelEvent event)
+<A NAME="72"><A>    {
+<A NAME="73"><A>        <FONT ID="SingleLineComment">// The user opens a channel to us, send a matches snapshot
+<A NAME="74"><A></FONT>        
+<A NAME="75"><A>        <FONT ID="SingleLineComment">// Get a copy of all the matches from the upgrader
+<A NAME="76"><A></FONT>        Vector matches = m_updater.getMatches();
+<A NAME="77"><A>        
+<A NAME="78"><A>        <FONT ID="SingleLineComment">// Dump the matches
+<A NAME="79"><A></FONT>        NdrOutputStream ndr = <FONT ID="New">new</FONT> NdrOutputStream();
+<A NAME="80"><A>        <FONT ID="Try">try</FONT>
+<A NAME="81"><A>        {
+<A NAME="82"><A>            <FONT ID="SingleLineComment">// Dump number of matches
+<A NAME="83"><A></FONT>            <FONT ID="Int">int</FONT> i = matches.size();
+<A NAME="84"><A>            ndr.writeInt(i);
+<A NAME="85"><A>    
+<A NAME="86"><A>            <FONT ID="SingleLineComment">// Dump all matches
+<A NAME="87"><A></FONT>            <A HREF="Match.java.html">Match</A> m;
+<A NAME="88"><A>            Enumeration enumeration = matches.elements();       
+<A NAME="89"><A>            <FONT ID="While">while</FONT>(enumeration.hasMoreElements())
+<A NAME="90"><A>            {
+<A NAME="91"><A>                m = (<A HREF="Match.java.html">Match</A>) enumeration.nextElement();
+<A NAME="92"><A>                m.dump(ndr);
+<A NAME="93"><A>            }
+<A NAME="94"><A>        }
+<A NAME="95"><A>        <FONT ID="Catch">catch</FONT>(IOException e)
+<A NAME="96"><A>        {
+<A NAME="97"><A>            e.printStackTrace();
+<A NAME="98"><A>            System.out.println(<FONT ID="StringLiteral">"Error in Channel opened, could not dump matches"</FONT>);
+<A NAME="99"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="100"><A>        }       
+<A NAME="101"><A>        
+<A NAME="102"><A>        <FONT ID="SingleLineComment">// Send the message
+<A NAME="103"><A></FONT>        m_cnl.sendMsg(SportsUpdater.MSG_AVAILABLE_MATCHES, 
+<A NAME="104"><A>                                            ndr.toByteArray(), <FONT ID="False">false</FONT>);
+<A NAME="105"><A>    }
+<A NAME="106"><A>
+<A NAME="107"><A>    <FONT ID="FormalComment">/**
+<A NAME="108"><A>     * Open request has failed.
+<A NAME="109"><A>     *
+<A NAME="110"><A>     * @param event The event object.
+<A NAME="111"><A>     */</FONT>
+<A NAME="112"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelOpenFailed(ChannelEvent event)
+<A NAME="113"><A>    {
+<A NAME="114"><A>        System.out.println(<FONT ID="StringLiteral">"channelOpenFailed"</FONT>);
+<A NAME="115"><A>        m_updater.removeUserHandler(<FONT ID="This">this</FONT>);
+<A NAME="116"><A>    }
+<A NAME="117"><A>
+<A NAME="118"><A>    <FONT ID="FormalComment">/**
+<A NAME="119"><A>     * The channel was closed.
+<A NAME="120"><A>     *
+<A NAME="121"><A>     * @param event The event object.
+<A NAME="122"><A>     */</FONT>
+<A NAME="123"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelClosed(ChannelEvent event)
+<A NAME="124"><A>    {
+<A NAME="125"><A>        <FONT ID="SingleLineComment">// Unsubscribe from all matches
+<A NAME="126"><A></FONT>        <A HREF="Match.java.html">Match</A> m;
+<A NAME="127"><A>        Vector temp = m_matches;
+<A NAME="128"><A>        Enumeration enumeration = temp.elements();      
+<A NAME="129"><A>        <FONT ID="While">while</FONT>(enumeration.hasMoreElements())
+<A NAME="130"><A>        {
+<A NAME="131"><A>            m = (<A HREF="Match.java.html">Match</A>) enumeration.nextElement();
+<A NAME="132"><A>            m.removeMatchListener(<FONT ID="This">this</FONT>);
+<A NAME="133"><A>        }
+<A NAME="134"><A>
+<A NAME="135"><A>        <FONT ID="SingleLineComment">// Remove ourselves from the updater records
+<A NAME="136"><A></FONT>        m_updater.removeUserHandler(<FONT ID="This">this</FONT>);
+<A NAME="137"><A>    }
+<A NAME="138"><A>
+<A NAME="139"><A>    <FONT ID="FormalComment">/**
+<A NAME="140"><A>     * A message was received on the channel.
+<A NAME="141"><A>     *
+<A NAME="142"><A>     * @param event The event object.
+<A NAME="143"><A>     */</FONT>
+<A NAME="144"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelMsgReceived(ChannelEvent event)
+<A NAME="145"><A>    {
+<A NAME="146"><A>        <FONT ID="Int">int</FONT> msgType = event.getMessageType();
+<A NAME="147"><A>        <FONT ID="Switch">switch</FONT> ( msgType )
+<A NAME="148"><A>        {
+<A NAME="149"><A>            <FONT ID="Case">case</FONT> SportsUpdater.MSG_SUBSCRIBE_2_MATCH:
+<A NAME="150"><A>                handleSubscribe(event, <FONT ID="True">true</FONT>);
+<A NAME="151"><A>                <FONT ID="Break">break</FONT>;
+<A NAME="152"><A>            <FONT ID="Case">case</FONT> SportsUpdater.MSG_UNSUBSCRIBE_FROM_MATCH:
+<A NAME="153"><A>                handleSubscribe(event, <FONT ID="False">false</FONT>);
+<A NAME="154"><A>                <FONT ID="Break">break</FONT>;
+<A NAME="155"><A>            <FONT ID="Case">case</FONT> SportsUpdater.MSG_AVAILABLE_MATCHES:
+<A NAME="156"><A>            <FONT ID="Case">case</FONT> SportsUpdater.MSG_UPDATE_MATCH:
+<A NAME="157"><A>            <FONT ID="Default">default</FONT>:
+<A NAME="158"><A>                System.out.println(<FONT ID="StringLiteral">"Error in UserHandler::channelMsgReceived error in mdg type"</FONT>);
+<A NAME="159"><A>                <FONT ID="Break">break</FONT>;
+<A NAME="160"><A>        };
+<A NAME="161"><A>    }
+<A NAME="162"><A>    
+<A NAME="163"><A>    <FONT ID="FormalComment">/**
+<A NAME="164"><A>     * Handle subscribe/unsubscribe requests
+<A NAME="165"><A>     */</FONT>
+<A NAME="166"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> handleSubscribe(ChannelEvent event, <FONT ID="Boolean">boolean</FONT> subscribe)
+<A NAME="167"><A>    {
+<A NAME="168"><A>        String matchID;
+<A NAME="169"><A>        
+<A NAME="170"><A>        <FONT ID="Try">try</FONT>
+<A NAME="171"><A>        {
+<A NAME="172"><A>            <FONT ID="SingleLineComment">// This message only contains the match ID
+<A NAME="173"><A></FONT>            NdrInputStream ndr = <FONT ID="New">new</FONT> NdrInputStream(event.getData());
+<A NAME="174"><A>            matchID = ndr.readUTF();
+<A NAME="175"><A>        }
+<A NAME="176"><A>        <FONT ID="Catch">catch</FONT> (IOException e)
+<A NAME="177"><A>        {
+<A NAME="178"><A>            e.printStackTrace();
+<A NAME="179"><A>            event.getChannel().close(STError.ST_INVALID_DATA, <FONT ID="Null">null</FONT>);
+<A NAME="180"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="181"><A>        }       
+<A NAME="182"><A>        
+<A NAME="183"><A>        <FONT ID="SingleLineComment">// Subscribe/unsubscribe to this match
+<A NAME="184"><A></FONT>        subscribeToMatch(matchID, subscribe);
+<A NAME="185"><A>        
+<A NAME="186"><A>    }
+<A NAME="187"><A>    
+<A NAME="188"><A>    <FONT ID="FormalComment">/**
+<A NAME="189"><A>     * Subscribe/unsubscribe to a match
+<A NAME="190"><A>     */</FONT>
+<A NAME="191"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> subscribeToMatch(String matchID, <FONT ID="Boolean">boolean</FONT> subscribe)
+<A NAME="192"><A>    {
+<A NAME="193"><A>        <FONT ID="SingleLineComment">// Get a copy of all the matches from the updater
+<A NAME="194"><A></FONT>        Vector matches = m_updater.getMatches();
+<A NAME="195"><A>        Enumeration enumeration = matches.elements();       
+<A NAME="196"><A>
+<A NAME="197"><A>        <FONT ID="SingleLineComment">// Walk through all matches
+<A NAME="198"><A></FONT>        <A HREF="Match.java.html">Match</A> m;
+<A NAME="199"><A>        <FONT ID="While">while</FONT>(enumeration.hasMoreElements())
+<A NAME="200"><A>        {
+<A NAME="201"><A>            <FONT ID="SingleLineComment">// Get next match
+<A NAME="202"><A></FONT>             m = (<A HREF="Match.java.html">Match</A>) enumeration.nextElement();
+<A NAME="203"><A>             
+<A NAME="204"><A>             <FONT ID="SingleLineComment">// Our match?
+<A NAME="205"><A></FONT>             <FONT ID="If">if</FONT> ( m.getID().equals( matchID ) )
+<A NAME="206"><A>             {
+<A NAME="207"><A>                 <FONT ID="If">if</FONT> ( subscribe )
+<A NAME="208"><A>                 {
+<A NAME="209"><A>                     <FONT ID="SingleLineComment">// subscribe to the match and add it to our records
+<A NAME="210"><A></FONT>                     m.addMatchListener(<FONT ID="This">this</FONT>);
+<A NAME="211"><A>                     m_matches.addElement(m);
+<A NAME="212"><A>                 }
+<A NAME="213"><A>                 <FONT ID="Else">else</FONT>
+<A NAME="214"><A>                 {
+<A NAME="215"><A>                     <FONT ID="SingleLineComment">// Unsubscribe and remove the match from our records
+<A NAME="216"><A></FONT>                     m.removeMatchListener(<FONT ID="This">this</FONT>);
+<A NAME="217"><A>                     m_matches.removeElement(<FONT ID="This">this</FONT>);
+<A NAME="218"><A>                 }
+<A NAME="219"><A>             }
+<A NAME="220"><A>        }
+<A NAME="221"><A>    }
+<A NAME="222"><A>    
+<A NAME="223"><A>    <FONT ID="FormalComment">/** 
+<A NAME="224"><A>     * The match details has been changed
+<A NAME="225"><A>     * 
+<A NAME="226"><A>     * @param match The new match details
+<A NAME="227"><A>     */</FONT>
+<A NAME="228"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> matchUpdated(<A HREF="Match.java.html">Match</A> match)
+<A NAME="229"><A>    {
+<A NAME="230"><A>        <FONT ID="SingleLineComment">// Dump the match to a NDR
+<A NAME="231"><A></FONT>        NdrOutputStream ndr = <FONT ID="New">new</FONT> NdrOutputStream();
+<A NAME="232"><A>        <FONT ID="Try">try</FONT>
+<A NAME="233"><A>        {
+<A NAME="234"><A>            match.dump(ndr);
+<A NAME="235"><A>        }
+<A NAME="236"><A>        <FONT ID="Catch">catch</FONT>(IOException e)
+<A NAME="237"><A>        {
+<A NAME="238"><A>            e.printStackTrace();
+<A NAME="239"><A>            System.out.println(<FONT ID="StringLiteral">"Error dumping Match"</FONT>);
+<A NAME="240"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="241"><A>        }
+<A NAME="242"><A>        
+<A NAME="243"><A>        <FONT ID="SingleLineComment">// Send the message
+<A NAME="244"><A></FONT>        <FONT ID="If">if</FONT> ( m_cnl.isOpen() )
+<A NAME="245"><A>        {
+<A NAME="246"><A>            m_cnl.sendMsg(SportsUpdater.MSG_UPDATE_MATCH, 
+<A NAME="247"><A>                                            ndr.toByteArray(), <FONT ID="False">false</FONT>);
+<A NAME="248"><A>        }
+<A NAME="249"><A>    }
+<A NAME="250"><A>
+<A NAME="251"><A>}   
+<A NAME="252"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">UserHandler</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

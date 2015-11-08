@@ -1,0 +1,925 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>StTlsEngine</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="StTlsEngine";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConnection.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsReceiver.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/core/util/connection/StTlsEngine.html" target="_top">Frames</a></li>
+<li><a href="StTlsEngine.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.core.util.connection</div>
+<h2 title="Class StTlsEngine" class="title">Class StTlsEngine</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.core.util.connection.StTlsEngine</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">StTlsEngine</span>
+extends java.lang.Object</pre>
+<div class="block">Wraps the standard <code>SSLEngine</code> class, but exposes a reduced set of
+ methods for the user to read and write TLS data. Just like
+ <tt>SSLEngine</tt>, this class does not deal with transport - it is the
+ responsibility of the user to send and receive network data over a TCP/IP
+ connection.
+ <P>
+ The engine maintains 4 <tt>ByteBuffer</tt>s as part of its state:
+ <pre>
+               +----------+---------+
+               | Outbound | Inbound |
+ +-------------+----------+---------+
+ | Application | out-app  | in-app  |
+ +-------------+----------+---------+
+ | Network     | out-net  | in-net  |
+ +-------------+----------+---------+
+ </pre>
+ The <tt>outbound</tt> buffers are used when sending data to the peer, while
+ the <tt>inbound</tt> buffers are used when receiving data from the peer.
+ The <tt>application</tt> buffers contain application-layer clear-text data,
+ while the <tt>network</tt> buffers contain low-level TLS protocol data that
+ is normally delivered over TCP/IP.
+ <P>
+ Since some of these buffers are accessible to the application (as explained
+ further below) it is necessary to define a contract between the engine and
+ the application: A buffer is in the possession of the engine while any of
+ the engine's methods is executed, and it is in the possession of the
+ application at any other time. When a buffer is in the application's
+ possession, it is in <I>read</I> mode, meaning the application can call any
+ of its relative <tt>get</tt> methods. When a buffer is in the engine's
+ possession, it is in <I>write</I> mode, meaning the engine can call any of
+ its relative <tt>put</tt> methods. The engine is responsible to switch the
+ buffer's mode from <I>read</I> to <I>write</I> when entering an engine
+ method, and to switch back to <I>read</I> mode when exiting the method.
+ <P>
+ The user calls the <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#decode(java.nio.ByteBuffer)"><code>decode(ByteBuffer)</code></a> method after receiving data
+ from the network, and the <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#encode(java.nio.ByteBuffer)"><code>encode(ByteBuffer)</code></a> method before sending
+ data to the network. The same method is called whether or not the handshake
+ has already completed. The user obtains data that needs to be delivered to
+ the peer, over TCP/IP, using <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getOutNetBuffer()"><code>getOutNetBuffer()</code></a>, and decrypted
+ application data using <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getInAppBuffer()"><code>getInAppBuffer()</code></a>. For example:
+ <code>
+ void send(ByteBuffer outAppBuffer) {
+   tlsEngine.encode(outAppBuffer);
+   ByteBuffer outNetBuffer = tlsEngine.getOutNetBuffer();
+ }
+ void receive(ByteBuffer inNetBuffer) {
+   tlsEngine.decode(inNetBuffer);
+   ByteBuffer inAppBuffer = tlsEngine.getInAppBuffer();
+ }
+ </code>
+ <P>
+ It is the responsibility of the user to synchronize calls to the methods of
+ this class, if accessing the same engine instance from multiple threads.
+ <P>
+ This class is the Java equivalent of <tt>StTlsEngine.cpp</tt> in the C++
+ "ubq" library.
+ <P>
+ Session reuse: A client can re-use a session, in case its connection to the
+ server gets closed. The client re-connects to the server, and calls the
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#reuse()"><code>reuse()</code></a> method before handshaking again. If the session is cached
+ at both ends, and has not expired yet, the new handshake is likely to re-use
+ the session instead of creating a new one.
+ <P>
+ Session re-negotiation: A client or server can request to re-negotiate a new
+ session over the same engine (and typically over the same TCP/IP connection)
+ using the <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#renegotiate()"><code>renegotiate()</code></a> method.
+ <P>
+ Termination: A client or server can request to close the TLS layer, by
+ invoking the <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#close()"><code>close()</code></a> method. A client can re-use the engine (and
+ potentially, the underlying session) over a new TCP/IP connection by
+ following <tt>close()</tt> with <tt>reuse()</tt>.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#StTlsEngine(com.lotus.sametime.core.util.connection.StTlsConfig, boolean)">StTlsEngine</a></strong>(<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;config,
+           boolean&nbsp;client)</code>
+<div class="block">Constructor.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#close()">close</a></strong>()</code>
+<div class="block">Generates a "close_notify" alert, to be sent to the peer, indicating
+ this engine has nothing more to say.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#decode(java.nio.ByteBuffer)">decode</a></strong>(java.nio.ByteBuffer&nbsp;inNetBuffer)</code>
+<div class="block">TLS processing of incoming data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#encode(java.nio.ByteBuffer)">encode</a></strong>(java.nio.ByteBuffer&nbsp;outAppBuffer)</code>
+<div class="block">TLS processing of outgoing data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getCipherSuite()">getCipherSuite</a></strong>()</code>
+<div class="block">Gets the chosen cipher suite.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getConfig()">getConfig</a></strong>()</code>
+<div class="block">Gets the configuration in which this engine was initialized.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getEngineID()">getEngineID</a></strong>()</code>
+<div class="block">Returns the unique identifier of this engine instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.nio.ByteBuffer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getInAppBuffer()">getInAppBuffer</a></strong>()</code>
+<div class="block">Use this method after calling <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#decode(java.nio.ByteBuffer)"><code>decode(ByteBuffer)</code></a> to obtain the
+ decoded application data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.nio.ByteBuffer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getOutNetBuffer()">getOutNetBuffer</a></strong>()</code>
+<div class="block">Use this method after calling <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#encode(java.nio.ByteBuffer)"><code>encode(ByteBuffer)</code></a> to obtain the
+ encoded network data that needs to be delivered to the peer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getPeerIdentity()">getPeerIdentity</a></strong>()</code>
+<div class="block">Extracts the subject DN from the peer certificate.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getProtocolVersion()">getProtocolVersion</a></strong>()</code>
+<div class="block">Called after successful handshake, to get the protocol version.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getProtocolVersionHex()">getProtocolVersionHex</a></strong>()</code>
+<div class="block">Called after successful handshake, to get the protocol version.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getProtocolVersionString()">getProtocolVersionString</a></strong>()</code>
+<div class="block">Called after successful handshake, to get the protocol version.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getSessionId()">getSessionId</a></strong>()</code>
+<div class="block">Gets the session ID.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#handshakeCompleted()">handshakeCompleted</a></strong>()</code>
+<div class="block">Checks if the initial handshake was successfully completed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#handshakeInProgress()">handshakeInProgress</a></strong>()</code>
+<div class="block">Checks if a handshake is in progress, either as part of the initial
+ handshake, or a re-handshake.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#handshakeStarted()">handshakeStarted</a></strong>()</code>
+<div class="block">Checks if the handshake was started in this session.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#isClient()">isClient</a></strong>()</code>
+<div class="block">Answers whether this engine was initiated as a client or server.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#isClosed()">isClosed</a></strong>()</code>
+<div class="block">Checks if the TLS session has been gracefully closed by the peer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#isSessionReused()">isSessionReused</a></strong>()</code>
+<div class="block">This function is called on a "handshook" engine, to check if the last
+ successful handshake created a new session or rejoined an existing one.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#peerClosed()">peerClosed</a></strong>()</code>
+<div class="block">Checks if a "close_notify" alert was received.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#renegotiate()">renegotiate</a></strong>()</code>
+<div class="block">This method is called on a "handshook" engine, in order to re-negotiate
+ a new session with the peer, typically over the same TCP/IP connection.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#renegotiateAllowed()">renegotiateAllowed</a></strong>()</code>
+<div class="block">Checks if the current engine state allows re-negotiating.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#reuse()">reuse</a></strong>()</code>
+<div class="block">Client side only: This method is called on a "handshook" engine, in order
+ to start a new handshake that attempts to reuse the previous session.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#setTrustedHost(java.lang.String)">setTrustedHost</a></strong>(java.lang.String&nbsp;trustedHost)</code>
+<div class="block">Called before starting the handshake to specify the expected host name
+ in the peer certificate.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#toString()">toString</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#verifyHost(java.lang.String)">verifyHost</a></strong>(java.lang.String&nbsp;hostName)</code>
+<div class="block">Compares the given host name with the peer certificate host name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#verifyHosts(java.lang.String[])">verifyHosts</a></strong>(java.lang.String[]&nbsp;hostNames)</code>
+<div class="block">Compares each given host name with the peer certificate host name.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="StTlsEngine(com.lotus.sametime.core.util.connection.StTlsConfig, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>StTlsEngine</h4>
+<pre>public&nbsp;StTlsEngine(<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;config,
+           boolean&nbsp;client)</pre>
+<div class="block">Constructor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>config</code> - Source of configuration properties.</dd><dd><code>client</code> - <tt>true</tt> for client mode, <tt>false</tt> for server
+  mode.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="encode(java.nio.ByteBuffer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encode</h4>
+<pre>public&nbsp;boolean&nbsp;encode(java.nio.ByteBuffer&nbsp;outAppBuffer)</pre>
+<div class="block">TLS processing of outgoing data. The user calls this method before
+ sending data to the peer. This method encrypts the data, producing a
+ cipher-text given the clear-text. This method can also be used to
+ generate the TLS handshake, with or without application data to send.
+ A failure indicates that further operations on the engine are likely to
+ fail too. A successful call writes the outbound network data to a buffer
+ that is accessible by <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getOutNetBuffer()"><code>getOutNetBuffer()</code></a>, and it writes the
+ inbound application data (in the rare case that such data was produced
+ by this call) to a buffer that is accessible by
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getInAppBuffer()"><code>getInAppBuffer()</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>outAppBuffer</code> - Source application buffer, typically containing
+  clear-text data that needs to be encrypted and delivered securely to
+  the peer. This method consumes the entire buffer, leaving it with 0
+  <tt>remaining</tt> bytes when the call returns. A <tt>null</tt>
+  reference is allowed, when initiating the TLS session as a client, in
+  order to produce handshake data only.</dd>
+<dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> on success, <tt>false</tt> on failure. A failure
+  generates a log message at <tt>FINE</tt> logging level.</dd></dl>
+</li>
+</ul>
+<a name="decode(java.nio.ByteBuffer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>decode</h4>
+<pre>public&nbsp;boolean&nbsp;decode(java.nio.ByteBuffer&nbsp;inNetBuffer)</pre>
+<div class="block">TLS processing of incoming data. The user should call this method
+ whenever receiving data from the underlying TCP connection, knowing that
+ data is TLS-encoded. This method can be called before, during and after
+ the handshake phase. A failure indicates that further operations on the
+ engine are likely to fail too. A successful call writes the inbound
+ application data (if such data was produced by the call) to a buffer
+ that is accessible by <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getInAppBuffer()"><code>getInAppBuffer()</code></a>, and it writes the
+ outbound network data (if such data was produced by the call) to a
+ buffer that is accessible by <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#getOutNetBuffer()"><code>getOutNetBuffer()</code></a>. If the peer has
+ only sent a "close_notify" alert, this method will not produce any data
+ (see <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#peerClosed()"><code>peerClosed()</code></a> for more info on that).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>inNetBuffer</code> - Source TCP packet, that has arrived from the network,
+  and contains either a cipher-text, or handshake data. This method
+  consumes as many bytes as possible from this buffer, possibly decoding
+  multiple TLS records. Upon success, there are 0 <tt>remaining</tt>
+  bytes in this buffer after the call returns, indicating to the user
+  that it can discard this buffer.</dd>
+<dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> on success, <tt>false</tt> on failure. A failure
+  generates a log message at <tt>FINE</tt> logging level.</dd></dl>
+</li>
+</ul>
+<a name="getOutNetBuffer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutNetBuffer</h4>
+<pre>public&nbsp;java.nio.ByteBuffer&nbsp;getOutNetBuffer()</pre>
+<div class="block">Use this method after calling <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#encode(java.nio.ByteBuffer)"><code>encode(ByteBuffer)</code></a> to obtain the
+ encoded network data that needs to be delivered to the peer. Note the
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#decode(java.nio.ByteBuffer)"><code>decode(ByteBuffer)</code></a> method may produce encoded network data as
+ well, such as during handshake.
+ <P>
+ A multi-threaded application must not access the returned buffer
+ concurrently while executing other methods of this class.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Outgoing network data that was not yet consumed. This buffer is
+  ready for reading (do not <code>Buffer.flip()</code> it). Multiple calls
+  may return a different buffer instance, if <tt>encode()</tt> or
+  <tt>decode()</tt> were called in between. Always use the last reference
+  returned.
+  <P>
+  This buffer is backed by an array. That is,
+  <code>ByteBuffer.hasArray()</code> returns <tt>true</tt>.</dd></dl>
+</li>
+</ul>
+<a name="getInAppBuffer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInAppBuffer</h4>
+<pre>public&nbsp;java.nio.ByteBuffer&nbsp;getInAppBuffer()</pre>
+<div class="block">Use this method after calling <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#decode(java.nio.ByteBuffer)"><code>decode(ByteBuffer)</code></a> to obtain the
+ decoded application data. Note the <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#encode(java.nio.ByteBuffer)"><code>encode(ByteBuffer)</code></a> method
+ may produce decoded application data as well, under more rare (but
+ possible) scenarios.
+ <P>
+ A multi-threaded application must not access the returned buffer
+ concurrently while executing other methods of this class.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Incoming application data that was not yet consumed. This buffer
+  is ready for reading (do not <code>Buffer.flip()</code> it). Multiple
+  calls may return a different buffer instance, if <tt>decode()</tt> or
+  <tt>encode()</tt> were called in between. Always use the last reference
+  returned.
+  <P>
+  This buffer is backed by an array. That is,
+  <code>ByteBuffer.hasArray()</code> returns <tt>true</tt>.</dd></dl>
+</li>
+</ul>
+<a name="getPeerIdentity()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPeerIdentity</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getPeerIdentity()</pre>
+<div class="block">Extracts the subject DN from the peer certificate. Only valid after
+ successful handshake.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The subject DN from the peer certificate, or <tt>null</tt> if
+  the peer's identity cannot be verified.</dd></dl>
+</li>
+</ul>
+<a name="verifyHost(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyHost</h4>
+<pre>public&nbsp;boolean&nbsp;verifyHost(java.lang.String&nbsp;hostName)</pre>
+<div class="block">Compares the given host name with the peer certificate host name. Only
+ valid after successful handshake. Typically called at the client side.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>hostName</code> - The trusted host name.</dd>
+<dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> on match, <tt>false</tt> otherwise.</dd><dt><span class="strong">See Also:</span></dt><dd><code>2818-3.1.</code></dd></dl>
+</li>
+</ul>
+<a name="verifyHosts(java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyHosts</h4>
+<pre>public&nbsp;boolean&nbsp;verifyHosts(java.lang.String[]&nbsp;hostNames)</pre>
+<div class="block">Compares each given host name with the peer certificate host name. Only
+ valid after successful handshake. One match is enough for this
+ verification to pass.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>hostNames</code> - A list of the expected host names.</dd>
+<dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> on match, <tt>false</tt> otherwise.</dd><dt><span class="strong">See Also:</span></dt><dd><code>2818-3.1.</code></dd></dl>
+</li>
+</ul>
+<a name="setTrustedHost(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTrustedHost</h4>
+<pre>public&nbsp;void&nbsp;setTrustedHost(java.lang.String&nbsp;trustedHost)</pre>
+<div class="block">Called before starting the handshake to specify the expected host name
+ in the peer certificate. Typically called at the client side. The engine
+ will verify the peer, after handshaking, by comparing the host name(s)
+ in the peer certificate against this string.
+ This comparison comes in addition to verifying the trusted hosts
+ returned by <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html#getTrustedHosts()"><code>StTlsConfig.getTrustedHosts()</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>trustedHost</code> - The host name in the peer certificate to expect when
+  verifying the peer. <tt>null</tt> skips this matching.</dd><dt><span class="strong">See Also:</span></dt><dd><code>2818-3.1.</code></dd></dl>
+</li>
+</ul>
+<a name="getProtocolVersionString()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getProtocolVersionString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getProtocolVersionString()</pre>
+<div class="block">Called after successful handshake, to get the protocol version.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The protocol version, as a string.</dd></dl>
+</li>
+</ul>
+<a name="getProtocolVersion()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getProtocolVersion</h4>
+<pre>public&nbsp;int&nbsp;getProtocolVersion()</pre>
+<div class="block">Called after successful handshake, to get the protocol version.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The protocol version number.</dd></dl>
+</li>
+</ul>
+<a name="getProtocolVersionHex()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getProtocolVersionHex</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getProtocolVersionHex()</pre>
+<div class="block">Called after successful handshake, to get the protocol version.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The protocol version number as a hex string.</dd></dl>
+</li>
+</ul>
+<a name="getCipherSuite()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCipherSuite</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getCipherSuite()</pre>
+<div class="block">Gets the chosen cipher suite. Only valid after successful handshake.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The chosen cipher suite of the active session.</dd></dl>
+</li>
+</ul>
+<a name="isClient()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isClient</h4>
+<pre>public&nbsp;boolean&nbsp;isClient()</pre>
+<div class="block">Answers whether this engine was initiated as a client or server.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if client, <tt>false</tt> if server.</dd></dl>
+</li>
+</ul>
+<a name="isClosed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isClosed</h4>
+<pre>public&nbsp;boolean&nbsp;isClosed()</pre>
+<div class="block">Checks if the TLS session has been gracefully closed by the peer.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if gracefully closed, <tt>false</tt> otherwise.</dd></dl>
+</li>
+</ul>
+<a name="handshakeStarted()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handshakeStarted</h4>
+<pre>public&nbsp;boolean&nbsp;handshakeStarted()</pre>
+<div class="block">Checks if the handshake was started in this session.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if handshake started, <tt>false</tt> otherwise.</dd></dl>
+</li>
+</ul>
+<a name="handshakeCompleted()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handshakeCompleted</h4>
+<pre>public&nbsp;boolean&nbsp;handshakeCompleted()</pre>
+<div class="block">Checks if the initial handshake was successfully completed.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if handshake completed, <tt>false</tt> if the
+  initial handshake has not completed yet, or if the session was
+  closed.</dd></dl>
+</li>
+</ul>
+<a name="handshakeInProgress()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handshakeInProgress</h4>
+<pre>public&nbsp;boolean&nbsp;handshakeInProgress()</pre>
+<div class="block">Checks if a handshake is in progress, either as part of the initial
+ handshake, or a re-handshake.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if handshaking, <tt>false</tt> if handshake
+  completed, or not started yet, or if the engine is closing.</dd></dl>
+</li>
+</ul>
+<a name="reuse()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reuse</h4>
+<pre>public&nbsp;boolean&nbsp;reuse()</pre>
+<div class="block">Client side only: This method is called on a "handshook" engine, in order
+ to start a new handshake that attempts to reuse the previous session. It
+ is useful if the underlying connection to the server was closed, and the
+ client wishes to re-use the session over a newly created TCP connection.
+ After the new handshake completes, the application can call
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#isSessionReused()"><code>isSessionReused()</code></a> to determine if the session was actually
+ reused, or if a new session was created. This method does not produce
+ handshake data. To start the new handshake, the application calls
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#encode(java.nio.ByteBuffer)"><code>encode(ByteBuffer)</code></a> after this method returns.
+ <P>
+ The states in which this method is allowed are either
+ <tt><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#handshakeCompleted()"><code>handshakeCompleted()</code></a> == true</tt> or
+ <tt><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#handshakeStarted()"><code>handshakeStarted()</code></a> == false</tt>. Both are useful for an
+ "abbreviated" handshake. The former is useful in case the connection
+ was broken, and the client wishes to create a new connection while
+ eliminating the overhead of a new session. The latter is useful if the
+ two sides have gracefully closed the TLS layer (as described in
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#close()"><code>close()</code></a>) and then the client wishes to resume TLS.
+ <P>
+ Upon return, the handshake status will be the same as a newly
+ constructed engine.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> on success, <tt>false</tt> on failure. Success
+  implies the engine is ready to begin a new handshake. A failure
+  produces a log message at <tt>FINE</tt> logging level.</dd></dl>
+</li>
+</ul>
+<a name="isSessionReused()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isSessionReused</h4>
+<pre>public&nbsp;boolean&nbsp;isSessionReused()</pre>
+<div class="block">This function is called on a "handshook" engine, to check if the last
+ successful handshake created a new session or rejoined an existing one.
+ Result is undefined if called before handshake completes.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if the last successful handshake rejoined an
+  existing session, <tt>false</tt> if created a new session.</dd></dl>
+</li>
+</ul>
+<a name="getSessionId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSessionId</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getSessionId()</pre>
+<div class="block">Gets the session ID.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The session ID as a string of hex octets. Returns an empty
+  string if the session ID is not known, such as when using a session
+  ticket.</dd></dl>
+</li>
+</ul>
+<a name="renegotiate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>renegotiate</h4>
+<pre>public&nbsp;boolean&nbsp;renegotiate()</pre>
+<div class="block">This method is called on a "handshook" engine, in order to re-negotiate
+ a new session with the peer, typically over the same TCP/IP connection.
+ The message produced by this method is ready for delivery in the
+ outbound network buffer.
+ <P>
+ Session re-negotiation is called either explicitly by the user, or
+ implicitly on an "aged" session, according to the configuration setting
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html#getMaxSessionAge()"><code>StTlsConfig.getMaxSessionAge()</code></a>, when the user attempts to
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#encode(java.nio.ByteBuffer)"><code>encode(ByteBuffer)</code></a> or <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#decode(java.nio.ByteBuffer)"><code>decode(ByteBuffer)</code></a>.
+ <P>
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#handshakeCompleted()"><code>handshakeCompleted()</code></a> is not affected by this call, and remains
+ <tt>true</tt>. However, <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#handshakeInProgress()"><code>handshakeInProgress()</code></a> will be
+ <tt>true</tt> until the re-handshake completes.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> on success, <tt>false</tt> on failure. Success
+  implies the engine is ready to begin a new handshake. A failure
+  produces a log message at <tt>FINE</tt> logging level.</dd></dl>
+</li>
+</ul>
+<a name="renegotiateAllowed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>renegotiateAllowed</h4>
+<pre>public&nbsp;boolean&nbsp;renegotiateAllowed()</pre>
+<div class="block">Checks if the current engine state allows re-negotiating.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if allowed, <tt>false</tt> if not.</dd></dl>
+</li>
+</ul>
+<a name="close()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>close</h4>
+<pre>public&nbsp;boolean&nbsp;close()</pre>
+<div class="block">Generates a "close_notify" alert, to be sent to the peer, indicating
+ this engine has nothing more to say. Note the peer might continue to
+ send data after receiving this message, for a short time, before it
+ sends its own "close_notify".
+ <P>
+ This call, on its own, does not change the engine state. The application
+ can choose to wait for the peer's "close_notify", by calling
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#decode(java.nio.ByteBuffer)"><code>decode(ByteBuffer)</code></a> until <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#peerClosed()"><code>peerClosed()</code></a> returns
+ <tt>true</tt>. The engine state will revert to initial (that is,
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#handshakeStarted()"><code>handshakeStarted()</code></a> will return <tt>false</tt>) only after
+ a "close_notify" was received.
+ <P>
+ The "close_notify" message, produced by this method, is ready for
+ delivery in the outbound network buffer. Any further attempt to
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#encode(java.nio.ByteBuffer)"><code>encode(ByteBuffer)</code></a> will fail.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if a "close_notify" was generated by this call,
+  <tt>false</tt> otherwise.</dd></dl>
+</li>
+</ul>
+<a name="peerClosed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>peerClosed</h4>
+<pre>public&nbsp;boolean&nbsp;peerClosed()</pre>
+<div class="block">Checks if a "close_notify" alert was received. If the peer sent a
+ "close_notify", then this engine is not expecting any more inbound
+ network data. The application should (if it hasn't done so already)
+ send a "close_notify" in the other direction, as described in
+ <a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsEngine.html#close()"><code>close()</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd><tt>true</tt> if a "close_notify" was received, <tt>false</tt>
+  if not.</dd></dl>
+</li>
+</ul>
+<a name="getConfig()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getConfig</h4>
+<pre>public&nbsp;<a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConfig.html" title="class in com.lotus.sametime.core.util.connection">StTlsConfig</a>&nbsp;getConfig()</pre>
+<div class="block">Gets the configuration in which this engine was initialized.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The associated <tt>StTlsConfig</tt>.</dd></dl>
+</li>
+</ul>
+<a name="getEngineID()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEngineID</h4>
+<pre>public&nbsp;int&nbsp;getEngineID()</pre>
+<div class="block">Returns the unique identifier of this engine instance.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The unique identifier of this engine instance.</dd></dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Object.toString()</code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsConnection.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/StTlsReceiver.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/core/util/connection/StTlsEngine.html" target="_top">Frames</a></li>
+<li><a href="StTlsEngine.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sip-app PUBLIC "-//Java Community Process//DTD SIP Application 1.0//EN" "http://www.jcp.org/dtd/sip-app_1_0.dtd">
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<sip-app id="SipApp_ID">
+	<display-name>MyMCU</display-name>
+	<listener>
+		<listener-class>com.ibm.telephony.conferencing.myav.mcu.MyMCUServlet</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>MyMCUServlet</servlet-name>
+		<display-name>MyMCUServlet</display-name>
+		<description></description>
+		<servlet-class>com.ibm.telephony.conferencing.myav.mcu.MyMCUServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyMCUServlet</servlet-name>
+		<pattern>
+			<contains>
+				<var>request.to.uri.user</var>
+				<value>mymcu_conference</value>
+			</contains>
+		</pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>10</session-timeout>
+	</session-config>	
+</sip-app>

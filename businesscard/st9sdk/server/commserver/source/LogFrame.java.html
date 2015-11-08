@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>LogFrame (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">LogFrame</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.placessa.*;
+<A NAME="13"><A>
+<A NAME="14"><A><FONT ID="Import">import</FONT> java.awt.*;
+<A NAME="15"><A><FONT ID="Import">import</FONT> java.awt.event.*;
+<A NAME="16"><A><FONT ID="Import">import</FONT> java.util.*;
+<A NAME="17"><A><FONT ID="Import">import</FONT> javax.swing.*;
+<A NAME="18"><A><FONT ID="Import">import</FONT> javax.swing.event.*;
+<A NAME="19"><A><FONT ID="Import">import</FONT> javax.swing.table.*;
+<A NAME="20"><A>
+<A NAME="21"><A><FONT ID="FormalComment">/**
+<A NAME="22"><A> * The frame on which we print out the logging info.
+<A NAME="23"><A> */</FONT>
+<A NAME="24"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> LogFrame <FONT ID="Extends">extends</FONT> JFrame
+<A NAME="25"><A>{
+<A NAME="26"><A>    <FONT ID="FormalComment">/**
+<A NAME="27"><A>     * The table.
+<A NAME="28"><A>     */</FONT>
+<A NAME="29"><A>    <FONT ID="Private">private</FONT> JTable m_table;
+<A NAME="30"><A>
+<A NAME="31"><A>    <FONT ID="FormalComment">/**
+<A NAME="32"><A>     * The table model.
+<A NAME="33"><A>     */</FONT>
+<A NAME="34"><A>    <FONT ID="Private">private</FONT> MyTableModel m_tableModel;
+<A NAME="35"><A>
+<A NAME="36"><A>    <FONT ID="FormalComment">/**
+<A NAME="37"><A>     * Constructor.
+<A NAME="38"><A>     */</FONT>
+<A NAME="39"><A>    <FONT ID="Public">public</FONT> LogFrame()
+<A NAME="40"><A>    {
+<A NAME="41"><A>        <FONT ID="Super">super</FONT>(<FONT ID="StringLiteral">"Places Logger"</FONT>);
+<A NAME="42"><A>
+<A NAME="43"><A>        m_tableModel = <FONT ID="New">new</FONT> MyTableModel();
+<A NAME="44"><A>        m_table = <FONT ID="New">new</FONT> JTable(m_tableModel);
+<A NAME="45"><A>
+<A NAME="46"><A>        JScrollPane scrollPane = <FONT ID="New">new</FONT> JScrollPane(m_table);
+<A NAME="47"><A>        m_table.setPreferredScrollableViewportSize(<FONT ID="New">new</FONT> Dimension(<FONT ID="IntegerLiteral">650</FONT>, <FONT ID="IntegerLiteral">70</FONT>));
+<A NAME="48"><A>
+<A NAME="49"><A>        m_table.setRowSelectionAllowed(<FONT ID="False">false</FONT>);
+<A NAME="50"><A>        m_table.setCellSelectionEnabled(<FONT ID="False">false</FONT>);
+<A NAME="51"><A>        m_table.setRowHeight(<FONT ID="IntegerLiteral">30</FONT>);
+<A NAME="52"><A>
+<A NAME="53"><A>
+<A NAME="54"><A>        setColumns();
+<A NAME="55"><A>
+<A NAME="56"><A>        <FONT ID="SingleLineComment">//Add the scroll pane to this window.
+<A NAME="57"><A></FONT>        getContentPane().add(scrollPane, BorderLayout.CENTER);
+<A NAME="58"><A>
+<A NAME="59"><A>        addWindowListener(<FONT ID="New">new</FONT> WindowAdapter()
+<A NAME="60"><A>            {
+<A NAME="61"><A>                <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> windowClosing(WindowEvent event)
+<A NAME="62"><A>                {
+<A NAME="63"><A>                    setVisible(<FONT ID="False">false</FONT>);
+<A NAME="64"><A>                    System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="65"><A>                }
+<A NAME="66"><A>
+<A NAME="67"><A>            });
+<A NAME="68"><A>    }
+<A NAME="69"><A>
+<A NAME="70"><A>    <FONT ID="FormalComment">/**
+<A NAME="71"><A>     * A new place has been created. Add a line to the table.
+<A NAME="72"><A>     *
+<A NAME="73"><A>     * @param handler The place handler object.
+<A NAME="74"><A>     */</FONT>
+<A NAME="75"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> add(<A HREF="PlaceHandler.java.html">PlaceHandler</A> handler)
+<A NAME="76"><A>    {
+<A NAME="77"><A>        m_tableModel.addRow(handler);
+<A NAME="78"><A>    }
+<A NAME="79"><A>
+<A NAME="80"><A>    <FONT ID="FormalComment">/**
+<A NAME="81"><A>     * Time is updated, refresh the correct cell.
+<A NAME="82"><A>     */</FONT>
+<A NAME="83"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> refreshTime(<A HREF="PlaceHandler.java.html">PlaceHandler</A> handler)
+<A NAME="84"><A>    {
+<A NAME="85"><A>        m_tableModel.refreshTime(handler);
+<A NAME="86"><A>    }
+<A NAME="87"><A>
+<A NAME="88"><A>    <FONT ID="FormalComment">/**
+<A NAME="89"><A>     * Table data has changed, refresh it.
+<A NAME="90"><A>     */</FONT>
+<A NAME="91"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> refreshAll()
+<A NAME="92"><A>    {
+<A NAME="93"><A>        m_tableModel.refresh();
+<A NAME="94"><A>    }
+<A NAME="95"><A>
+<A NAME="96"><A>    <FONT ID="FormalComment">/**
+<A NAME="97"><A>     * Set the columns width.
+<A NAME="98"><A>     */</FONT>
+<A NAME="99"><A>    <FONT ID="Void">void</FONT> setColumns()
+<A NAME="100"><A>    {
+<A NAME="101"><A>        TableColumn column = <FONT ID="Null">null</FONT>;
+<A NAME="102"><A>        <FONT ID="For">for</FONT> (<FONT ID="Int">int</FONT> i = <FONT ID="IntegerLiteral">0</FONT>; i &lt; m_tableModel.getColumnCount(); i++)
+<A NAME="103"><A>        {
+<A NAME="104"><A>            column = m_table.getColumnModel().getColumn(i);
+<A NAME="105"><A>            <FONT ID="If">if</FONT> (i == <FONT ID="IntegerLiteral">0</FONT>)
+<A NAME="106"><A>            {
+<A NAME="107"><A>                <FONT ID="SingleLineComment">// The first column should be wider.
+<A NAME="108"><A></FONT>                column.setPreferredWidth(<FONT ID="IntegerLiteral">100</FONT>);
+<A NAME="109"><A>            }
+<A NAME="110"><A>            <FONT ID="Else">else</FONT>
+<A NAME="111"><A>            {
+<A NAME="112"><A>                column.setPreferredWidth(<FONT ID="IntegerLiteral">35</FONT>);
+<A NAME="113"><A>            }
+<A NAME="114"><A>        }
+<A NAME="115"><A>    }
+<A NAME="116"><A>}
+<A NAME="117"><A>
+<A NAME="118"><A><FONT ID="FormalComment">/**
+<A NAME="119"><A> * A custom model for our table.
+<A NAME="120"><A> */</FONT>
+<A NAME="121"><A><FONT ID="Class">class</FONT> MyTableModel <FONT ID="Extends">extends</FONT> AbstractTableModel
+<A NAME="122"><A>{
+<A NAME="123"><A>    <FONT ID="SingleLineComment">//
+<A NAME="124"><A></FONT>    <FONT ID="SingleLineComment">// Members.
+<A NAME="125"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="126"><A></FONT>
+<A NAME="127"><A>    <FONT ID="FormalComment">/**
+<A NAME="128"><A>     * The number of rows.
+<A NAME="129"><A>     */</FONT>
+<A NAME="130"><A>    <FONT ID="Protected">protected</FONT> <FONT ID="Int">int</FONT> numRows = <FONT ID="IntegerLiteral">0</FONT>;
+<A NAME="131"><A>
+<A NAME="132"><A>    <FONT ID="FormalComment">/**
+<A NAME="133"><A>     * The initial number of rows. (So the table won't be gray).
+<A NAME="134"><A>     */</FONT>
+<A NAME="135"><A>    <FONT ID="Final">final</FONT> <FONT ID="Static">static</FONT> <FONT ID="Int">int</FONT> INITIAL_ROWS = <FONT ID="IntegerLiteral">3</FONT>;
+<A NAME="136"><A>
+<A NAME="137"><A>     <FONT ID="FormalComment">/**
+<A NAME="138"><A>      * Column names.
+<A NAME="139"><A>      */</FONT>
+<A NAME="140"><A>    <FONT ID="Static">static</FONT> <FONT ID="Protected">protected</FONT> String[] cNames = {<FONT ID="StringLiteral">"Place Name"</FONT>, <FONT ID="StringLiteral">"Time"</FONT>,
+<A NAME="141"><A>                                        <FONT ID="StringLiteral">"Chat"</FONT>, <FONT ID="StringLiteral">"Audio"</FONT>, <FONT ID="StringLiteral">"Video"</FONT>, <FONT ID="StringLiteral">"Share"</FONT>,
+<A NAME="142"><A>                                        <FONT ID="StringLiteral">"Whiteboard"</FONT>};
+<A NAME="143"><A>    <FONT ID="FormalComment">/**
+<A NAME="144"><A>     * The table data.
+<A NAME="145"><A>     */</FONT>
+<A NAME="146"><A>    <FONT ID="Protected">protected</FONT> Vector m_data = <FONT ID="New">new</FONT> Vector();
+<A NAME="147"><A>
+<A NAME="148"><A>    <FONT ID="SingleLineComment">//
+<A NAME="149"><A></FONT>    <FONT ID="SingleLineComment">// Table model implementations.
+<A NAME="150"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="151"><A></FONT>
+<A NAME="152"><A>    <FONT ID="FormalComment">/**
+<A NAME="153"><A>     * @return The column name.
+<A NAME="154"><A>     */</FONT>
+<A NAME="155"><A>    <FONT ID="Public">public</FONT> String getColumnName(<FONT ID="Int">int</FONT> column)
+<A NAME="156"><A>    {
+<A NAME="157"><A>        <FONT ID="Return">return</FONT> cNames[column];
+<A NAME="158"><A>    }
+<A NAME="159"><A>
+<A NAME="160"><A>    <FONT ID="FormalComment">/**
+<A NAME="161"><A>     * @return the number of columns.
+<A NAME="162"><A>     */</FONT>
+<A NAME="163"><A>    <FONT ID="Public">public</FONT> <FONT ID="Int">int</FONT> getColumnCount()
+<A NAME="164"><A>    {
+<A NAME="165"><A>        <FONT ID="Return">return</FONT> cNames.length;
+<A NAME="166"><A>    }
+<A NAME="167"><A>
+<A NAME="168"><A>    <FONT ID="FormalComment">/**
+<A NAME="169"><A>     * @return The number of rows.
+<A NAME="170"><A>     */</FONT>
+<A NAME="171"><A>    <FONT ID="Public">public</FONT> <FONT ID="Int">int</FONT> getRowCount()
+<A NAME="172"><A>    {
+<A NAME="173"><A>        <FONT ID="Return">return</FONT> numRows;
+<A NAME="174"><A>    }
+<A NAME="175"><A>
+<A NAME="176"><A>    <FONT ID="FormalComment">/**
+<A NAME="177"><A>     * @return The contents of the given cell.
+<A NAME="178"><A>     */</FONT>
+<A NAME="179"><A>    <FONT ID="Public">public</FONT> Object getValueAt(<FONT ID="Int">int</FONT> row, <FONT ID="Int">int</FONT> column)
+<A NAME="180"><A>    {
+<A NAME="181"><A>        <FONT ID="If">if</FONT> (m_data.size() &lt;= row)
+<A NAME="182"><A>        {
+<A NAME="183"><A>            <FONT ID="Return">return</FONT> <FONT ID="StringLiteral">""</FONT>;
+<A NAME="184"><A>        }
+<A NAME="185"><A>
+<A NAME="186"><A>        <A HREF="PlaceHandler.java.html">PlaceHandler</A> p = (<A HREF="PlaceHandler.java.html">PlaceHandler</A>)m_data.elementAt(row);
+<A NAME="187"><A>        <FONT ID="Switch">switch</FONT> (column)
+<A NAME="188"><A>        {
+<A NAME="189"><A>            <FONT ID="Case">case</FONT> <FONT ID="IntegerLiteral">0</FONT>:
+<A NAME="190"><A>                <FONT ID="Return">return</FONT> p.getName();
+<A NAME="191"><A>            <FONT ID="Case">case</FONT> <FONT ID="IntegerLiteral">1</FONT>:
+<A NAME="192"><A>                <FONT ID="Return">return</FONT> p.getTime();
+<A NAME="193"><A>            <FONT ID="Case">case</FONT> <FONT ID="IntegerLiteral">2</FONT>:
+<A NAME="194"><A>                <FONT ID="Return">return</FONT> p.hasChat();
+<A NAME="195"><A>            <FONT ID="Case">case</FONT> <FONT ID="IntegerLiteral">3</FONT>:
+<A NAME="196"><A>                <FONT ID="Return">return</FONT> p.hasAudio();
+<A NAME="197"><A>            <FONT ID="Case">case</FONT> <FONT ID="IntegerLiteral">4</FONT>:
+<A NAME="198"><A>                <FONT ID="Return">return</FONT> p.hasVideo();
+<A NAME="199"><A>            <FONT ID="Case">case</FONT> <FONT ID="IntegerLiteral">5</FONT>:
+<A NAME="200"><A>                <FONT ID="Return">return</FONT> p.hasShare();
+<A NAME="201"><A>            <FONT ID="Case">case</FONT> <FONT ID="IntegerLiteral">6</FONT>:
+<A NAME="202"><A>                <FONT ID="Return">return</FONT> p.hasWhiteboard();
+<A NAME="203"><A>            <FONT ID="Default">default</FONT>:
+<A NAME="204"><A>                <FONT ID="Return">return</FONT> <FONT ID="StringLiteral">""</FONT>;
+<A NAME="205"><A>        }
+<A NAME="206"><A>    }
+<A NAME="207"><A>
+<A NAME="208"><A>    <FONT ID="FormalComment">/**
+<A NAME="209"><A>     * @return The class type of a column.
+<A NAME="210"><A>     */</FONT>
+<A NAME="211"><A>    <FONT ID="Public">public</FONT> Class getColumnClass(<FONT ID="Int">int</FONT> c)
+<A NAME="212"><A>    {
+<A NAME="213"><A>        <FONT ID="Return">return</FONT> getValueAt(<FONT ID="IntegerLiteral">0</FONT>,c).getClass();
+<A NAME="214"><A>    }
+<A NAME="215"><A>
+<A NAME="216"><A>    <FONT ID="SingleLineComment">//
+<A NAME="217"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="218"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="219"><A></FONT>
+<A NAME="220"><A>    <FONT ID="FormalComment">/**
+<A NAME="221"><A>     * Refresh the time cell for the given place.
+<A NAME="222"><A>     * We don't want to refresh the whole table every timer click.
+<A NAME="223"><A>     */</FONT>
+<A NAME="224"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> refreshTime(<A HREF="PlaceHandler.java.html">PlaceHandler</A> handler)
+<A NAME="225"><A>    {
+<A NAME="226"><A>        <FONT ID="Int">int</FONT> row = m_data.indexOf(handler);
+<A NAME="227"><A>        fireTableCellUpdated(row, <FONT ID="IntegerLiteral">1</FONT>);
+<A NAME="228"><A>    }
+<A NAME="229"><A>
+<A NAME="230"><A>    <FONT ID="FormalComment">/**
+<A NAME="231"><A>     * Refresh the whole table.
+<A NAME="232"><A>     */</FONT>
+<A NAME="233"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> refresh()
+<A NAME="234"><A>    {
+<A NAME="235"><A>        fireTableDataChanged();
+<A NAME="236"><A>    }
+<A NAME="237"><A>
+<A NAME="238"><A>    <FONT ID="FormalComment">/**
+<A NAME="239"><A>     * Add another row to the table.
+<A NAME="240"><A>     */</FONT>
+<A NAME="241"><A>    <FONT ID="Public">public</FONT> <FONT ID="Synchronized">synchronized</FONT> <FONT ID="Void">void</FONT> addRow(<A HREF="PlaceHandler.java.html">PlaceHandler</A> place)
+<A NAME="242"><A>    {
+<A NAME="243"><A>        numRows++;
+<A NAME="244"><A>        m_data.addElement(place);
+<A NAME="245"><A>
+<A NAME="246"><A>        <FONT ID="SingleLineComment">//Notify listeners that the data changed.
+<A NAME="247"><A></FONT>        fireTableRowsInserted(numRows-<FONT ID="IntegerLiteral">1</FONT>, numRows-<FONT ID="IntegerLiteral">1</FONT>);
+<A NAME="248"><A>    }
+<A NAME="249"><A>}
+<A NAME="250"><A>
+<A NAME="251"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">LogFrame</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

@@ -1,0 +1,5 @@
+com.ibm.ssl.clientAuthentication.59669=false
+com.ibm.ssl.trustStorePassword.59669=password
+com.ibm.ssl.keyStorePassword.59669=password
+com.ibm.ssl.trustStore.59669=/testtruststore.jks
+com.ibm.ssl.keyStore.59669=/testkeystore.jks

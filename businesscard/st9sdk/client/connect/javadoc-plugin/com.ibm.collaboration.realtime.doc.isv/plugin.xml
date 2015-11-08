@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension point="org.eclipse.pde.core.javadoc">
+       <javadoc path="javadoc/samples">
+           <plugin id="com.ibm.collaboration.realtime.sample.acronymexpander"/>
+           <plugin id="com.ibm.collaboration.realtime.sample.branding"/>
+           <plugin id="com.ibm.collaboration.realtime.sample.buddynote"/>
+           <plugin id="com.ibm.collaboration.realtime.sample.eventlogger"/>
+           <plugin id="com.ibm.collaboration.realtime.sample.quickresponse"/>
+           <plugin id="com.ibm.collaboration.realtime.sample.recentbuddies"/>
+           <plugin id="com.ibm.collaboration.realtime.sample.snippets"/>
+           <plugin id="com.ibm.collaboration.realtime.sample.status.ext"/>
+       </javadoc>
+   </extension>
+
+   <extension point="org.eclipse.pde.core.javadoc">
+       <javadoc path="javadoc/connect">
+           <plugin id="com.ibm.collaboration.realtime.chatwindow"/>
+           <plugin id="com.ibm.collaboration.realtime.community"/>
+           <plugin id="com.ibm.collaboration.realtime.core"/>
+           <plugin id="com.ibm.collaboration.realtime.directory"/>
+           <plugin id="com.ibm.collaboration.realtime.imhub"/>
+           <plugin id="com.ibm.collaboration.realtime.magiccarpet"/>
+           <plugin id="com.ibm.collaboration.realtime.messages"/>
+           <plugin id="com.ibm.collaboration.realtime.people"/>
+           <plugin id="com.ibm.collaboration.realtime.status.ext"/>
+           <plugin id="com.ibm.collaboration.realtime.ui"/>
+           <plugin id="com.ibm.rcp.realtime.livenames"/>
+		</javadoc>
+   </extension>
+
+   <extension point="org.eclipse.pde.core.javadoc">
+       <javadoc path="javadoc/telephony">
+           <plugin id="com.ibm.collaboration.realtime.telephony.core"/>
+           <plugin id="com.ibm.collaboration.realtime.telephony.ui"/>
+       </javadoc>
+   </extension>
+</plugin>

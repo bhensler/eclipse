@@ -1,0 +1,519 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>FileMemorySyncMgr</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="FileMemorySyncMgr";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncListener.html" title="interface in com.lotus.sametime.cachedresolvemanager.resolve"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/MemoryCache.html" title="class in com.lotus.sametime.cachedresolvemanager.resolve"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html" target="_top">Frames</a></li>
+<li><a href="FileMemorySyncMgr.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.cachedresolvemanager.resolve</div>
+<h2 title="Class FileMemorySyncMgr" class="title">Class FileMemorySyncMgr</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.cachedresolvemanager.resolve.FileMemorySyncMgr</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../com/lotus/sametime/core/util/TimerListener.html" title="interface in com.lotus.sametime.core.util">TimerListener</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">FileMemorySyncMgr</span>
+extends java.lang.Object
+implements <a href="../../../../../com/lotus/sametime/core/util/TimerListener.html" title="interface in com.lotus.sametime.core.util">TimerListener</a></pre>
+<div class="block">This component performs periodical cleaning the memory cache and synchronization 
+ the memory cache with the resolve data stored in the persistent file.
+ It has two main activities: Load the persistent file to memory and flush the memory back to the file.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#deleteOldCacheFiles(java.io.File, com.lotus.sametime.cachedresolvemanager.resolve.util.CacheFilesFilter)">deleteOldCacheFiles</a></strong>(java.io.File&nbsp;folder,
+                   <a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/util/CacheFilesFilter.html" title="class in com.lotus.sametime.cachedresolvemanager.resolve.util">CacheFilesFilter</a>&nbsp;filter)</code>
+<div class="block">Looks for the existing cache files and deletes the old files
+ in case there are more files than are defined (by _filesCount parameter)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.io.File</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#findRecentCacheFile(java.io.File, com.lotus.sametime.cachedresolvemanager.resolve.util.CacheFilesFilter)">findRecentCacheFile</a></strong>(java.io.File&nbsp;folder,
+                   <a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/util/CacheFilesFilter.html" title="class in com.lotus.sametime.cachedresolvemanager.resolve.util">CacheFilesFilter</a>&nbsp;filter)</code>
+<div class="block">Looks for the recent cache file</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#flushMemoryToFile()">flushMemoryToFile</a></strong>()</code>
+<div class="block">Writes the memory cache content to the persistent file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html" title="class in com.lotus.sametime.cachedresolvemanager.resolve">FileMemorySyncMgr</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#getInstance()">getInstance</a></strong>()</code>
+<div class="block">Returns the single class instance.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#initiate()">initiate</a></strong>()</code>
+<div class="block">Initializes the class instance and loads the resolve cache
+ from the persistent file</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#loadFileToMemory()">loadFileToMemory</a></strong>()</code>
+<div class="block">Loads the persistent file content into the memory cache</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.util.HashMap</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#readFromFile(java.io.File)">readFromFile</a></strong>(java.io.File&nbsp;cacheFile)</code>
+<div class="block">Reads the cache file and loads the content into the memory cache</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#removeUsersFromCache(java.util.List)">removeUsersFromCache</a></strong>(java.util.List&nbsp;stIds)</code>
+<div class="block">Removes a number of user entries from the memory cache</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#setCacheFolderPath(java.lang.String)">setCacheFolderPath</a></strong>(java.lang.String&nbsp;folderPath)</code>
+<div class="block">Sets a cache file folder path value</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#setCacheSyncStartTime(java.lang.String)">setCacheSyncStartTime</a></strong>(java.lang.String&nbsp;startTime)</code>
+<div class="block">Sets the sync process period and calculates a sync process 
+ timer start time.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#setFilesCount(int)">setFilesCount</a></strong>(int&nbsp;filesCnt)</code>
+<div class="block">Sets a number of stored persistent files</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#setListener(com.lotus.sametime.cachedresolvemanager.resolve.FileMemorySyncListener)">setListener</a></strong>(<a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncListener.html" title="interface in com.lotus.sametime.cachedresolvemanager.resolve">FileMemorySyncListener</a>&nbsp;listener)</code>
+<div class="block">Sets a new listener to the FileMemorySyncListener events</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#setSyncPeriod(int)">setSyncPeriod</a></strong>(int&nbsp;syncPeriod)</code>
+<div class="block">Sets a time period for activating the synchronization process</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#startTimer()">startTimer</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#timerTick()">timerTick</a></strong>()</code>
+<div class="block">A notification from the timer that the time has come.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html#verifyCacheVersion(java.lang.String)">verifyCacheVersion</a></strong>(java.lang.String&nbsp;currentCRVersion)</code>
+<div class="block">Compares the CachedResolve component version to the version
+  loaded from the current file.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getInstance()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInstance</h4>
+<pre>public static&nbsp;<a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html" title="class in com.lotus.sametime.cachedresolvemanager.resolve">FileMemorySyncMgr</a>&nbsp;getInstance()</pre>
+<div class="block">Returns the single class instance.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the single class instance.</dd></dl>
+</li>
+</ul>
+<a name="startTimer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startTimer</h4>
+<pre>public&nbsp;void&nbsp;startTimer()</pre>
+</li>
+</ul>
+<a name="timerTick()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>timerTick</h4>
+<pre>public&nbsp;boolean&nbsp;timerTick()</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/core/util/TimerListener.html#timerTick()">TimerListener</a></code></span></div>
+<div class="block">A notification from the timer that the time has come. Note that this is
+ called from the timer thread, so make sure you are thread safe.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/core/util/TimerListener.html#timerTick()">timerTick</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/core/util/TimerListener.html" title="interface in com.lotus.sametime.core.util">TimerListener</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if we want the timer to go on ticking, false if we want
+ it to stop.</dd></dl>
+</li>
+</ul>
+<a name="verifyCacheVersion(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyCacheVersion</h4>
+<pre>public&nbsp;boolean&nbsp;verifyCacheVersion(java.lang.String&nbsp;currentCRVersion)</pre>
+<div class="block">Compares the CachedResolve component version to the version
+  loaded from the current file.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the loaded from the file version is one of the supported versions.</dd></dl>
+</li>
+</ul>
+<a name="setFilesCount(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFilesCount</h4>
+<pre>public&nbsp;void&nbsp;setFilesCount(int&nbsp;filesCnt)</pre>
+<div class="block">Sets a number of stored persistent files</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>number</code> - of files for storage</dd></dl>
+</li>
+</ul>
+<a name="setSyncPeriod(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSyncPeriod</h4>
+<pre>public&nbsp;void&nbsp;setSyncPeriod(int&nbsp;syncPeriod)</pre>
+<div class="block">Sets a time period for activating the synchronization process</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>syncPeriod</code> - time interval for synchronization process starting</dd></dl>
+</li>
+</ul>
+<a name="setCacheFolderPath(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCacheFolderPath</h4>
+<pre>public&nbsp;void&nbsp;setCacheFolderPath(java.lang.String&nbsp;folderPath)</pre>
+<div class="block">Sets a cache file folder path value</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>folderPath</code> - value for setting</dd></dl>
+</li>
+</ul>
+<a name="setListener(com.lotus.sametime.cachedresolvemanager.resolve.FileMemorySyncListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setListener</h4>
+<pre>public&nbsp;void&nbsp;setListener(<a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncListener.html" title="interface in com.lotus.sametime.cachedresolvemanager.resolve">FileMemorySyncListener</a>&nbsp;listener)</pre>
+<div class="block">Sets a new listener to the FileMemorySyncListener events</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - FileMemorySyncListener</dd></dl>
+</li>
+</ul>
+<a name="initiate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initiate</h4>
+<pre>public&nbsp;void&nbsp;initiate()</pre>
+<div class="block">Initializes the class instance and loads the resolve cache
+ from the persistent file</div>
+</li>
+</ul>
+<a name="flushMemoryToFile()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>flushMemoryToFile</h4>
+<pre>public&nbsp;void&nbsp;flushMemoryToFile()</pre>
+<div class="block">Writes the memory cache content to the persistent file.
+ Performs the operations:
+ 1. Looks for the cached file folder; creates it if doesn't exist.
+ 2. If the folder contains more than _filesCount files, deletes the oldest ones.
+ 3. Creates a new version of the persistent file whose name contains 
+ the current time stamp. 
+ 4. Flush the cache content into the newly created file.</div>
+</li>
+</ul>
+<a name="deleteOldCacheFiles(java.io.File, com.lotus.sametime.cachedresolvemanager.resolve.util.CacheFilesFilter)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteOldCacheFiles</h4>
+<pre>public&nbsp;void&nbsp;deleteOldCacheFiles(java.io.File&nbsp;folder,
+                       <a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/util/CacheFilesFilter.html" title="class in com.lotus.sametime.cachedresolvemanager.resolve.util">CacheFilesFilter</a>&nbsp;filter)</pre>
+<div class="block">Looks for the existing cache files and deletes the old files
+ in case there are more files than are defined (by _filesCount parameter)</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>folder</code> - File object referred to the cache files folder</dd><dd><code>filter</code> - filter that used for the cache files search by name</dd></dl>
+</li>
+</ul>
+<a name="findRecentCacheFile(java.io.File, com.lotus.sametime.cachedresolvemanager.resolve.util.CacheFilesFilter)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findRecentCacheFile</h4>
+<pre>public&nbsp;java.io.File&nbsp;findRecentCacheFile(java.io.File&nbsp;folder,
+                               <a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/util/CacheFilesFilter.html" title="class in com.lotus.sametime.cachedresolvemanager.resolve.util">CacheFilesFilter</a>&nbsp;filter)
+                                 throws <a href="../../../../../com/lotus/sametime/cachedresolvemanager/exceptions/FailedToLoadCacheException.html" title="class in com.lotus.sametime.cachedresolvemanager.exceptions">FailedToLoadCacheException</a></pre>
+<div class="block">Looks for the recent cache file</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>folder</code> - File object referred to the cache files folder</dd><dd><code>filter</code> - filter that used for the cache files search by name</dd>
+<dt><span class="strong">Returns:</span></dt><dd>File object of the recent cache file</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/cachedresolvemanager/exceptions/FailedToLoadCacheException.html" title="class in com.lotus.sametime.cachedresolvemanager.exceptions">FailedToLoadCacheException</a></code></dd></dl>
+</li>
+</ul>
+<a name="loadFileToMemory()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loadFileToMemory</h4>
+<pre>public&nbsp;void&nbsp;loadFileToMemory()</pre>
+<div class="block">Loads the persistent file content into the memory cache</div>
+</li>
+</ul>
+<a name="readFromFile(java.io.File)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readFromFile</h4>
+<pre>public&nbsp;java.util.HashMap&nbsp;readFromFile(java.io.File&nbsp;cacheFile)
+                               throws java.io.IOException,
+                                      <a href="../../../../../com/lotus/sametime/cachedresolvemanager/exceptions/FailedToLoadCacheException.html" title="class in com.lotus.sametime.cachedresolvemanager.exceptions">FailedToLoadCacheException</a></pre>
+<div class="block">Reads the cache file and loads the content into the memory cache</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cacheFile</code> - File object for data flushing</dd>
+<dt><span class="strong">Returns:</span></dt><dd>HAshMap object containing data loaded from the file</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd>
+<dd><code><a href="../../../../../com/lotus/sametime/cachedresolvemanager/exceptions/FailedToLoadCacheException.html" title="class in com.lotus.sametime.cachedresolvemanager.exceptions">FailedToLoadCacheException</a></code></dd></dl>
+</li>
+</ul>
+<a name="setCacheSyncStartTime(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCacheSyncStartTime</h4>
+<pre>public&nbsp;void&nbsp;setCacheSyncStartTime(java.lang.String&nbsp;startTime)</pre>
+<div class="block">Sets the sync process period and calculates a sync process 
+ timer start time. 
+ If the sync timer is configured to be started with delay, 
+ creates a helper timer task to start the sync timer at the correct time</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>startTime</code> - sync timer start time formatted as "hh:mm:ss"</dd></dl>
+</li>
+</ul>
+<a name="removeUsersFromCache(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>removeUsersFromCache</h4>
+<pre>public&nbsp;void&nbsp;removeUsersFromCache(java.util.List&nbsp;stIds)</pre>
+<div class="block">Removes a number of user entries from the memory cache</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>stIds</code> - list of users STIds to be removed. 
+ If the list is empty, the method cleans the cache up</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncListener.html" title="interface in com.lotus.sametime.cachedresolvemanager.resolve"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/cachedresolvemanager/resolve/MemoryCache.html" title="class in com.lotus.sametime.cachedresolvemanager.resolve"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/cachedresolvemanager/resolve/FileMemorySyncMgr.html" target="_top">Frames</a></li>
+<li><a href="FileMemorySyncMgr.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

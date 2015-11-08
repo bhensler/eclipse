@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+AbstractVideoChatServiceProvider (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AbstractVideoChatServiceProvider (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractClickToCallServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractVoiceChatServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/service/AbstractVideoChatServiceProvider.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractVideoChatServiceProvider.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.service.AbstractCallServiceProvider">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;METHOD</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.service</FONT>
+<BR>
+Class AbstractVideoChatServiceProvider</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service">com.ibm.collaboration.realtime.telephony.service.AbstractCallServiceProvider</A>
+      <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractVoiceChatServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service">com.ibm.collaboration.realtime.telephony.service.AbstractVoiceChatServiceProvider</A>
+          <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.telephony.service.AbstractVideoChatServiceProvider</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">CallServiceProvider</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/VideoChatServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">VideoChatServiceProvider</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/VoiceChatServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">VoiceChatServiceProvider</A></DD>
+</DL>
+<HR>
+<B>Deprecated.</B>&nbsp;<I>All methods moved to <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service"><CODE>AbstractCallServiceProvider</CODE></A> for Sametime 8.5.</I>
+<P>
+<DL>
+<DT><PRE>public abstract class <B>AbstractVideoChatServiceProvider</B><DT>extends <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractVoiceChatServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service">AbstractVoiceChatServiceProvider</A><DT>implements <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/VideoChatServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">VideoChatServiceProvider</A></DL>
+</PRE>
+
+<P>
+AbstractVideoChatServiceProvider provides an abstract implementation
+ of the <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/VideoChatServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service"><CODE>VideoChatServiceProvider</CODE></A> interface. See
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service"><CODE>AbstractCallServiceProvider</CODE></A> for more information.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.service.VideoChatServiceProvider"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.service.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/VideoChatServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">VideoChatServiceProvider</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/VideoChatServiceProvider.html#SERVICE_TYPE">SERVICE_TYPE</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.Capability"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ACCEPT_INCOMING_CALL">CAPABILITY_ACCEPT_INCOMING_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT">CAPABILITY_ADD_PARTICIPANT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY">CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ALTERNATE_CALL">CAPABILITY_ALTERNATE_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ANSWER_CALL">CAPABILITY_ANSWER_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO">CAPABILITY_AUDIO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO_DEVICE_CONTROL">CAPABILITY_AUDIO_DEVICE_CONTROL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CAN_CONSULT">CAPABILITY_CAN_CONSULT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO">CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONFERENCE_CALL">CAPABILITY_CONFERENCE_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONNECT_INCOMING_CALL">CAPABILITY_CONNECT_INCOMING_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DETECT_VOICE_ACTIVITY">CAPABILITY_DETECT_VOICE_ACTIVITY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DISCONNECT_CALL">CAPABILITY_DISCONNECT_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_DIGITS">CAPABILITY_DTMF_DIGITS</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_EVENT">CAPABILITY_DTMF_EVENT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT">CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_EXECUTE_COMMAND">CAPABILITY_EXECUTE_COMMAND</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_CALL_PROPERTY">CAPABILITY_GET_CALL_PROPERTY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_ENDPOINTS">CAPABILITY_GET_ENDPOINTS</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_PROPERTY">CAPABILITY_GET_PARTICIPANT_PROPERTY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_VOLUME">CAPABILITY_GET_PARTICIPANT_VOLUME</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INCOMING_CALL_TIMEOUT">CAPABILITY_INCOMING_CALL_TIMEOUT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL">CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LEAVE_CALL">CAPABILITY_LEAVE_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LOCK_CALL">CAPABILITY_LOCK_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MERGE_CALLS">CAPABILITY_MERGE_CALLS</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_CALL">CAPABILITY_MUTE_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT">CAPABILITY_MUTE_PARTICIPANT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_AUDIO">CAPABILITY_MUTE_PARTICIPANT_AUDIO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_VIDEO">CAPABILITY_MUTE_PARTICIPANT_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PAUSE_CALL">CAPABILITY_PAUSE_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PHONE_DEVICE_CONTROL">CAPABILITY_PHONE_DEVICE_CONTROL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_AUDIO_FILE">CAPABILITY_PLAY_AUDIO_FILE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_VIDEO_FILE">CAPABILITY_PLAY_VIDEO_FILE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO">CAPABILITY_RECORD_AUDIO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO_ONLY">CAPABILITY_RECORD_AUDIO_ONLY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_LOCAL">CAPABILITY_RECORD_COMPRESS_LOCAL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_SERVER">CAPABILITY_RECORD_COMPRESS_SERVER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL">CAPABILITY_RECORD_LOCAL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL_STREAM">CAPABILITY_RECORD_LOCAL_STREAM</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER">CAPABILITY_RECORD_SERVER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED">CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED">CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_VIDEO">CAPABILITY_RECORD_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REDIRECT_INCOMING_CALL">CAPABILITY_REDIRECT_INCOMING_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REJECT_INCOMING_CALL">CAPABILITY_REJECT_INCOMING_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REMOVE_PARTICIPANT">CAPABILITY_REMOVE_PARTICIPANT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PARTICIPANT_UNMUTE">CAPABILITY_REQUEST_PARTICIPANT_UNMUTE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PROVIDER_PROPERTIES">CAPABILITY_REQUEST_PROVIDER_PROPERTIES</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SAVE_ENDPOINTS">CAPABILITY_SAVE_ENDPOINTS</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_AUDIO_PORT">CAPABILITY_SET_AUDIO_PORT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_CALL_PROPERTY">CAPABILITY_SET_CALL_PROPERTY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_MODERATOR">CAPABILITY_SET_MODERATOR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_PROPERTY">CAPABILITY_SET_PARTICIPANT_PROPERTY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_VOLUME">CAPABILITY_SET_PARTICIPANT_VOLUME</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PREFERRED_ENDPOINT">CAPABILITY_SET_PREFERRED_ENDPOINT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_VIDEO_PORT">CAPABILITY_SET_VIDEO_PORT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SILENCE_PARTICIPANT">CAPABILITY_SILENCE_PARTICIPANT</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SIP_URI">CAPABILITY_SIP_URI</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TELEPHONY">CAPABILITY_TELEPHONY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_CALL">CAPABILITY_TRANSFER_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_TO_DEVICE">CAPABILITY_TRANSFER_TO_DEVICE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO">CAPABILITY_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO_DEVICE_CONTROL">CAPABILITY_VIDEO_DEVICE_CONTROL</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractVideoChatServiceProvider.html#AbstractVideoChatServiceProvider()">AbstractVideoChatServiceProvider</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.service.AbstractCallServiceProvider"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.ibm.collaboration.realtime.telephony.service.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service">AbstractCallServiceProvider</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#acceptIncomingCall(java.lang.String)">acceptIncomingCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#addParticipants(com.ibm.collaboration.realtime.telephony.service.CallId, java.util.List)">addParticipants</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#alternateCall(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.service.CallId)">alternateCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#connectCall(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.CallOptions)">connectCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#connectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallOptions)">connectIncomingCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#disconnectCall(com.ibm.collaboration.realtime.telephony.service.CallId)">disconnectCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#executeCommand(java.lang.String, java.lang.Object, com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">executeCommand</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getAudioPlayer(com.ibm.collaboration.realtime.telephony.service.CallId)">getAudioPlayer</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getAudioRecordingFileTypes()">getAudioRecordingFileTypes</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getCallId(java.lang.String)">getCallId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getEndpoints()">getEndpoints</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getIncomingCallTimeoutSeconds()">getIncomingCallTimeoutSeconds</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getMaximumVideoUsers()">getMaximumVideoUsers</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getParticipantVolume(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">getParticipantVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getPhoneDeviceController()">getPhoneDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getVideoChatDeviceController()">getVideoChatDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getVideoPlayer(com.ibm.collaboration.realtime.telephony.service.CallId)">getVideoPlayer</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getVideoRecordingFileTypes()">getVideoRecordingFileTypes</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#getVoiceChatDeviceController()">getVoiceChatDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#isCapabilitySupported(java.lang.String, com.ibm.collaboration.realtime.telephony.service.CallId)">isCapabilitySupported</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#leaveCall(com.ibm.collaboration.realtime.telephony.service.CallId)">leaveCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#lockCall(com.ibm.collaboration.realtime.telephony.service.CallId)">lockCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#mergeCalls(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.service.CallId)">mergeCalls</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#muteCall(com.ibm.collaboration.realtime.telephony.service.CallId)">muteCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#muteParticipant(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">muteParticipant</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#muteParticipantAudio(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">muteParticipantAudio</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#muteParticipantVideo(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">muteParticipantVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#pauseCall(com.ibm.collaboration.realtime.telephony.service.CallId)">pauseCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#redirectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.Address)">redirectIncomingCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#rejectIncomingCall(java.lang.String)">rejectIncomingCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#removeModerator(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">removeModerator</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#removeParticipant(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">removeParticipant</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#removeParticipants(com.ibm.collaboration.realtime.telephony.service.CallId, java.util.List)">removeParticipants</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#requestParticipantUnmute(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String, boolean)">requestParticipantUnmute</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#requestProviderProperties(java.lang.String)">requestProviderProperties</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#resumeCall(com.ibm.collaboration.realtime.telephony.service.CallId)">resumeCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#saveEndpoints(java.util.List)">saveEndpoints</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#sendDtmfDigits(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">sendDtmfDigits</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#sendDtmfEvent(com.ibm.collaboration.realtime.telephony.service.CallId, int)">sendDtmfEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#setAudioPort(java.lang.String)">setAudioPort</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#setCallProperty(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String, java.lang.String)">setCallProperty</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#setIncomingCallTimeoutSeconds(int)">setIncomingCallTimeoutSeconds</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#setParticipantProperty(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String, java.lang.String, java.lang.String)">setParticipantProperty</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#setParticipantsProperty(com.ibm.collaboration.realtime.telephony.service.CallId, java.util.List, java.lang.String, java.lang.String)">setParticipantsProperty</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#setParticipantVolume(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String, double)">setParticipantVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#setPreferredEndpoint(com.ibm.collaboration.realtime.telephony.EndpointDescriptor, com.ibm.collaboration.realtime.telephony.EndpointDescriptor, boolean)">setPreferredEndpoint</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#setVideoPort(java.lang.String)">setVideoPort</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#silenceParticipant(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">silenceParticipant</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#startLocalVideo(com.ibm.collaboration.realtime.telephony.service.CallId, org.eclipse.swt.widgets.Canvas)">startLocalVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#startRecording(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.CallRecordingOptions)">startRecording</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#startRemoteVideo(com.ibm.collaboration.realtime.telephony.service.CallId, org.eclipse.swt.widgets.Canvas)">startRemoteVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#startVideo(com.ibm.collaboration.realtime.telephony.service.CallId, org.eclipse.swt.widgets.Canvas, org.eclipse.swt.widgets.Canvas)">startVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#stopLocalVideo(com.ibm.collaboration.realtime.telephony.service.CallId)">stopLocalVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#stopRecording(com.ibm.collaboration.realtime.telephony.service.CallId)">stopRecording</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#stopRemoteVideo(com.ibm.collaboration.realtime.telephony.service.CallId)">stopRemoteVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#stopVideo(com.ibm.collaboration.realtime.telephony.service.CallId)">stopVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#transferCall(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.Address)">transferCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#unlockCall(com.ibm.collaboration.realtime.telephony.service.CallId)">unlockCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#unmuteCall(com.ibm.collaboration.realtime.telephony.service.CallId)">unmuteCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#unmuteParticipant(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">unmuteParticipant</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#unmuteParticipantAudio(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">unmuteParticipantAudio</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html#unmuteParticipantVideo(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">unmuteParticipantVideo</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.service.CallServiceProvider"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.service.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">CallServiceProvider</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#acceptIncomingCall(java.lang.String)">acceptIncomingCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#addListener(com.ibm.collaboration.realtime.telephony.CallListener)">addListener</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#addModerator(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">addModerator</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#addParticipants(com.ibm.collaboration.realtime.telephony.service.CallId, java.util.List)">addParticipants</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#alternateCall(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.service.CallId)">alternateCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#connectCall(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.CallOptions)">connectCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#connectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallOptions)">connectIncomingCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#destroy()">destroy</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#disconnectCall(com.ibm.collaboration.realtime.telephony.service.CallId)">disconnectCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#endCall(com.ibm.collaboration.realtime.telephony.service.CallId)">endCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#executeCommand(java.lang.String, java.lang.Object, com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">executeCommand</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getAudioPlayer(com.ibm.collaboration.realtime.telephony.service.CallId)">getAudioPlayer</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getAudioRecordingFileTypes()">getAudioRecordingFileTypes</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getCallId(java.lang.String)">getCallId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getEndpoints()">getEndpoints</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getIncomingCallTimeoutSeconds()">getIncomingCallTimeoutSeconds</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getMaximumUsers()">getMaximumUsers</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getMaximumVideoUsers()">getMaximumVideoUsers</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getParticipantVolume(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">getParticipantVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getPhoneDeviceController()">getPhoneDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getServiceVersion()">getServiceVersion</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getVideoChatDeviceController()">getVideoChatDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getVideoPlayer(com.ibm.collaboration.realtime.telephony.service.CallId)">getVideoPlayer</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getVideoRecordingFileTypes()">getVideoRecordingFileTypes</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#getVoiceChatDeviceController()">getVoiceChatDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#initialize()">initialize</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#isCapabilitySupported(java.lang.String, com.ibm.collaboration.realtime.telephony.service.CallId)">isCapabilitySupported</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#isServiceAvailable()">isServiceAvailable</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#leaveCall(com.ibm.collaboration.realtime.telephony.service.CallId)">leaveCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#lockCall(com.ibm.collaboration.realtime.telephony.service.CallId)">lockCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#mergeCalls(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.service.CallId)">mergeCalls</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#muteCall(com.ibm.collaboration.realtime.telephony.service.CallId)">muteCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#muteParticipant(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">muteParticipant</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#muteParticipantAudio(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">muteParticipantAudio</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#muteParticipantVideo(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">muteParticipantVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#pauseCall(com.ibm.collaboration.realtime.telephony.service.CallId)">pauseCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#redirectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.Address)">redirectIncomingCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#rejectIncomingCall(java.lang.String)">rejectIncomingCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#removeListener(com.ibm.collaboration.realtime.telephony.CallListener)">removeListener</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#removeModerator(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">removeModerator</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#removeParticipant(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">removeParticipant</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#removeParticipants(com.ibm.collaboration.realtime.telephony.service.CallId, java.util.List)">removeParticipants</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#requestParticipantUnmute(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String, boolean)">requestParticipantUnmute</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#requestProviderProperties(java.lang.String)">requestProviderProperties</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#resumeCall(com.ibm.collaboration.realtime.telephony.service.CallId)">resumeCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#saveEndpoints(java.util.List)">saveEndpoints</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#sendDtmfDigits(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">sendDtmfDigits</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#sendDtmfEvent(com.ibm.collaboration.realtime.telephony.service.CallId, int)">sendDtmfEvent</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#setAudioPort(java.lang.String)">setAudioPort</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#setCallProperty(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String, java.lang.String)">setCallProperty</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#setIncomingCallTimeoutSeconds(int)">setIncomingCallTimeoutSeconds</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#setParticipantProperty(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String, java.lang.String, java.lang.String)">setParticipantProperty</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#setParticipantsProperty(com.ibm.collaboration.realtime.telephony.service.CallId, java.util.List, java.lang.String, java.lang.String)">setParticipantsProperty</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#setParticipantVolume(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String, double)">setParticipantVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#setPreferredEndpoint(com.ibm.collaboration.realtime.telephony.EndpointDescriptor, com.ibm.collaboration.realtime.telephony.EndpointDescriptor, boolean)">setPreferredEndpoint</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#setVideoPort(java.lang.String)">setVideoPort</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#silenceParticipant(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">silenceParticipant</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#startCall(java.util.List, com.ibm.collaboration.realtime.telephony.CallOptions)">startCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#startLocalVideo(com.ibm.collaboration.realtime.telephony.service.CallId, org.eclipse.swt.widgets.Canvas)">startLocalVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#startRecording(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.CallRecordingOptions)">startRecording</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#startRemoteVideo(com.ibm.collaboration.realtime.telephony.service.CallId, org.eclipse.swt.widgets.Canvas)">startRemoteVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#startVideo(com.ibm.collaboration.realtime.telephony.service.CallId, org.eclipse.swt.widgets.Canvas, org.eclipse.swt.widgets.Canvas)">startVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#stopLocalVideo(com.ibm.collaboration.realtime.telephony.service.CallId)">stopLocalVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#stopRecording(com.ibm.collaboration.realtime.telephony.service.CallId)">stopRecording</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#stopRemoteVideo(com.ibm.collaboration.realtime.telephony.service.CallId)">stopRemoteVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#stopVideo(com.ibm.collaboration.realtime.telephony.service.CallId)">stopVideo</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#transferCall(com.ibm.collaboration.realtime.telephony.service.CallId, com.ibm.collaboration.realtime.telephony.Address)">transferCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#unlockCall(com.ibm.collaboration.realtime.telephony.service.CallId)">unlockCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#unmuteCall(com.ibm.collaboration.realtime.telephony.service.CallId)">unmuteCall</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#unmuteParticipant(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">unmuteParticipant</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#unmuteParticipantAudio(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">unmuteParticipantAudio</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html#unmuteParticipantVideo(com.ibm.collaboration.realtime.telephony.service.CallId, java.lang.String)">unmuteParticipantVideo</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.Capability"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="AbstractVideoChatServiceProvider()"><!-- --></A><H3>
+AbstractVideoChatServiceProvider</H3>
+<PRE>
+public <B>AbstractVideoChatServiceProvider</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractClickToCallServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractVoiceChatServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/service/AbstractVideoChatServiceProvider.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractVideoChatServiceProvider.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.service.AbstractCallServiceProvider">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;METHOD</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

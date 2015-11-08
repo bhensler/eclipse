@@ -1,0 +1,594 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>LookupComp</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="LookupComp";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/lookup/GroupSizeListener.html" title="interface in com.lotus.sametime.lookup"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/lookup/LookupEvent.html" title="class in com.lotus.sametime.lookup"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/lookup/LookupComp.html" target="_top">Frames</a></li>
+<li><a href="LookupComp.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.lookup</div>
+<h2 title="Class LookupComp" class="title">Class LookupComp</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">com.lotus.sametime.core.comparch.STCompPart</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../com/lotus/sametime/core/comparch/STComp.html" title="class in com.lotus.sametime.core.comparch">com.lotus.sametime.core.comparch.STComp</a></li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.lookup.LookupComp</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../com/lotus/sametime/core/comparch/STCompApi.html" title="interface in com.lotus.sametime.core.comparch">STCompApi</a>, <a href="../../../../com/lotus/sametime/lookup/LookupService.html" title="interface in com.lotus.sametime.lookup">LookupService</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">LookupComp</span>
+extends <a href="../../../../com/lotus/sametime/core/comparch/STComp.html" title="class in com.lotus.sametime.core.comparch">STComp</a>
+implements <a href="../../../../com/lotus/sametime/lookup/LookupService.html" title="interface in com.lotus.sametime.lookup">LookupService</a></pre>
+<div class="block">Component implementing the lookup service.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_com.lotus.sametime.lookup.LookupService">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;com.lotus.sametime.lookup.<a href="../../../../com/lotus/sametime/lookup/LookupService.html" title="interface in com.lotus.sametime.lookup">LookupService</a></h3>
+<code><a href="../../../../com/lotus/sametime/lookup/LookupService.html#COMP_NAME">COMP_NAME</a>, <a href="../../../../com/lotus/sametime/lookup/LookupService.html#COMP_VERSION">COMP_VERSION</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#LookupComp(com.lotus.sametime.core.comparch.STSession)">LookupComp</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)</code>
+<div class="block">Constructs a new lookup component which is associated with the given
+ Sametime session.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#addLookupServiceListener(com.lotus.sametime.lookup.LookupServiceListener)">addLookupServiceListener</a></strong>(<a href="../../../../com/lotus/sametime/lookup/LookupServiceListener.html" title="interface in com.lotus.sametime.lookup">LookupServiceListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified storage listener to receive storage events from this
+ component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#componentLoaded(com.lotus.sametime.core.comparch.STCompApi)">componentLoaded</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STCompApi.html" title="interface in com.lotus.sametime.core.comparch">STCompApi</a>&nbsp;newComponent)</code>
+<div class="block">Handle Notifications that a new component was loaded to the current
+ session.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/lookup/GroupContentGetter.html" title="class in com.lotus.sametime.lookup">GroupContentGetter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#createGroupContentGetter()">createGroupContentGetter</a></strong>()</code>
+<div class="block">Creates and returns a group content getter object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/lookup/GroupSizeGetter.html" title="class in com.lotus.sametime.lookup">GroupSizeGetter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#createGroupSizeGetter()">createGroupSizeGetter</a></strong>()</code>
+<div class="block">Creates and returns a group size getter object.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/lookup/Resolver.html" title="class in com.lotus.sametime.lookup">Resolver</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#createResolver(boolean, boolean, boolean, boolean)">createResolver</a></strong>(boolean&nbsp;onlyUnique,
+              boolean&nbsp;exhaustiveLookup,
+              boolean&nbsp;resolveUsers,
+              boolean&nbsp;resolveGroups)</code>
+<div class="block">Creates and returns a resolver object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#processGroupContentEvent(com.lotus.sametime.lookup.GroupContentEvent)">processGroupContentEvent</a></strong>(<a href="../../../../com/lotus/sametime/lookup/GroupContentEvent.html" title="class in com.lotus.sametime.lookup">GroupContentEvent</a>&nbsp;event)</code>
+<div class="block">Handles a resolve event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#processLookupEvent(com.lotus.sametime.lookup.LookupEvent)">processLookupEvent</a></strong>(<a href="../../../../com/lotus/sametime/lookup/LookupEvent.html" title="class in com.lotus.sametime.lookup">LookupEvent</a>&nbsp;event)</code>
+<div class="block">Handles a lookup event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#processResolveImplEvent(com.lotus.sametime.lookup.ResolveImplEvent)">processResolveImplEvent</a></strong>(com.lotus.sametime.lookup.ResolveImplEvent&nbsp;event)</code>
+<div class="block">Handles a resolve event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#processSTEvent(com.lotus.sametime.core.comparch.STEvent)">processSTEvent</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STEvent.html" title="class in com.lotus.sametime.core.comparch">STEvent</a>&nbsp;event)</code>
+<div class="block">Receives an STEvent event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#removeLookupServiceListener(com.lotus.sametime.lookup.LookupServiceListener)">removeLookupServiceListener</a></strong>(<a href="../../../../com/lotus/sametime/lookup/LookupServiceListener.html" title="interface in com.lotus.sametime.lookup">LookupServiceListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified storage service listener so that it no longer
+ receives storage events from this component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#resolved(com.lotus.sametime.lookup.Resolver, com.lotus.sametime.lookup.ResolveResponse)">resolved</a></strong>(<a href="../../../../com/lotus/sametime/lookup/Resolver.html" title="class in com.lotus.sametime.lookup">Resolver</a>&nbsp;resolver,
+        com.lotus.sametime.lookup.ResolveResponse&nbsp;resolved)</code>
+<div class="block">A user was resolved.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#resolveNames(java.lang.String[], boolean, boolean, boolean, boolean, com.lotus.sametime.lookup.Resolver)">resolveNames</a></strong>(java.lang.String[]&nbsp;names,
+            boolean&nbsp;onlyUnique,
+            boolean&nbsp;exhaustiveLookup,
+            boolean&nbsp;resolveUsers,
+            boolean&nbsp;resolveGroups,
+            <a href="../../../../com/lotus/sametime/lookup/Resolver.html" title="class in com.lotus.sametime.lookup">Resolver</a>&nbsp;resolver)</code>
+<div class="block">Resolves event handler - Creates a channel or uses an existing one to send
+ a resolve request.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#start()">start</a></strong>()</code>
+<div class="block">Starts the component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/lookup/LookupComp.html#stop()">stop</a></strong>()</code>
+<div class="block">Stops the component.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_com.lotus.sametime.core.comparch.STCompPart">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.lotus.sametime.core.comparch.<a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></h3>
+<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getComponentListener()">getComponentListener</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getName()">getName</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getSession()">getSession</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getUniqueId()">getUniqueId</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#isActive()">isActive</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#sendEvent(com.lotus.sametime.core.comparch.STEvent)">sendEvent</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#toString()">toString</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="LookupComp(com.lotus.sametime.core.comparch.STSession)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>LookupComp</h4>
+<pre>public&nbsp;LookupComp(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)
+           throws <a href="../../../../com/lotus/sametime/core/comparch/DuplicateObjectException.html" title="class in com.lotus.sametime.core.comparch">DuplicateObjectException</a></pre>
+<div class="block">Constructs a new lookup component which is associated with the given
+ Sametime session.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>session</code> - The session object associated with this
+                   component.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/DuplicateObjectException.html" title="class in com.lotus.sametime.core.comparch">DuplicateObjectException</a></code> - If a lookup component is
+                   already registered in the same session.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="start()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>start</h4>
+<pre>protected&nbsp;void&nbsp;start()</pre>
+<div class="block">Starts the component.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#start()">start</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="stop()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stop</h4>
+<pre>protected&nbsp;void&nbsp;stop()</pre>
+<div class="block">Stops the component.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#stop()">stop</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="createResolver(boolean, boolean, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createResolver</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/lookup/Resolver.html" title="class in com.lotus.sametime.lookup">Resolver</a>&nbsp;createResolver(boolean&nbsp;onlyUnique,
+                      boolean&nbsp;exhaustiveLookup,
+                      boolean&nbsp;resolveUsers,
+                      boolean&nbsp;resolveGroups)</pre>
+<div class="block">Creates and returns a resolver object.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/lookup/LookupService.html#createResolver(boolean, boolean, boolean, boolean)">createResolver</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/lookup/LookupService.html" title="interface in com.lotus.sametime.lookup">LookupService</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>onlyUnique</code> - Whether the created resolver object should
+                   resolve successfully only if the provided name is
+                   resolved uniquely.</dd><dd><code>exhaustiveLookup</code> - Whether the created resolver object
+                   should perform an exhaustive lookup through all
+                   directories or stop in the first directory where a match
+                   is found.</dd><dd><code>resolveUsers</code> - Whether the created resolver should search
+                   the directory for users matching the provided name.</dd><dd><code>resolveGroups</code> - Whether the created resolver should search
+                   the directory for groups matching the provided name.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The resolver object.</dd></dl>
+</li>
+</ul>
+<a name="createGroupContentGetter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createGroupContentGetter</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/lookup/GroupContentGetter.html" title="class in com.lotus.sametime.lookup">GroupContentGetter</a>&nbsp;createGroupContentGetter()</pre>
+<div class="block">Creates and returns a group content getter object.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/lookup/LookupService.html#createGroupContentGetter()">createGroupContentGetter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/lookup/LookupService.html" title="interface in com.lotus.sametime.lookup">LookupService</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The group content getter object.</dd></dl>
+</li>
+</ul>
+<a name="createGroupSizeGetter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createGroupSizeGetter</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/lookup/GroupSizeGetter.html" title="class in com.lotus.sametime.lookup">GroupSizeGetter</a>&nbsp;createGroupSizeGetter()</pre>
+<div class="block">Creates and returns a group size getter object.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/lookup/LookupService.html#createGroupSizeGetter()">createGroupSizeGetter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/lookup/LookupService.html" title="interface in com.lotus.sametime.lookup">LookupService</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The group size getter object.</dd></dl>
+</li>
+</ul>
+<a name="addLookupServiceListener(com.lotus.sametime.lookup.LookupServiceListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addLookupServiceListener</h4>
+<pre>public&nbsp;void&nbsp;addLookupServiceListener(<a href="../../../../com/lotus/sametime/lookup/LookupServiceListener.html" title="interface in com.lotus.sametime.lookup">LookupServiceListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified storage listener to receive storage events from this
+ component.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/lookup/LookupService.html#addLookupServiceListener(com.lotus.sametime.lookup.LookupServiceListener)">addLookupServiceListener</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/lookup/LookupService.html" title="interface in com.lotus.sametime.lookup">LookupService</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeLookupServiceListener(com.lotus.sametime.lookup.LookupServiceListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeLookupServiceListener</h4>
+<pre>public&nbsp;void&nbsp;removeLookupServiceListener(<a href="../../../../com/lotus/sametime/lookup/LookupServiceListener.html" title="interface in com.lotus.sametime.lookup">LookupServiceListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified storage service listener so that it no longer
+ receives storage events from this component.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/lookup/LookupService.html#removeLookupServiceListener(com.lotus.sametime.lookup.LookupServiceListener)">removeLookupServiceListener</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/lookup/LookupService.html" title="interface in com.lotus.sametime.lookup">LookupService</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="resolveNames(java.lang.String[], boolean, boolean, boolean, boolean, com.lotus.sametime.lookup.Resolver)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolveNames</h4>
+<pre>protected&nbsp;void&nbsp;resolveNames(java.lang.String[]&nbsp;names,
+                boolean&nbsp;onlyUnique,
+                boolean&nbsp;exhaustiveLookup,
+                boolean&nbsp;resolveUsers,
+                boolean&nbsp;resolveGroups,
+                <a href="../../../../com/lotus/sametime/lookup/Resolver.html" title="class in com.lotus.sametime.lookup">Resolver</a>&nbsp;resolver)</pre>
+<div class="block">Resolves event handler - Creates a channel or uses an existing one to send
+ a resolve request.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>names</code> - The names of the users to resolve.</dd><dd><code>onlyUnique</code> - true if we want exact matches only.</dd><dd><code>exhaustiveLookup</code> - true if we want to look through all the
+                   NAB-s.</dd><dd><code>resolveUsers</code> - true if we want answers for matched users.</dd><dd><code>resolveGroups</code> - True if we want answers for groups.</dd><dd><code>resolver</code> - The resolver object to send the response to.</dd></dl>
+</li>
+</ul>
+<a name="processSTEvent(com.lotus.sametime.core.comparch.STEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processSTEvent</h4>
+<pre>protected&nbsp;void&nbsp;processSTEvent(<a href="../../../../com/lotus/sametime/core/comparch/STEvent.html" title="class in com.lotus.sametime.core.comparch">STEvent</a>&nbsp;event)</pre>
+<div class="block">Receives an STEvent event.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#processSTEvent(com.lotus.sametime.core.comparch.STEvent)">processSTEvent</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="processLookupEvent(com.lotus.sametime.lookup.LookupEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processLookupEvent</h4>
+<pre>protected&nbsp;void&nbsp;processLookupEvent(<a href="../../../../com/lotus/sametime/lookup/LookupEvent.html" title="class in com.lotus.sametime.lookup">LookupEvent</a>&nbsp;event)</pre>
+<div class="block">Handles a lookup event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event. object</dd></dl>
+</li>
+</ul>
+<a name="processResolveImplEvent(com.lotus.sametime.lookup.ResolveImplEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processResolveImplEvent</h4>
+<pre>protected&nbsp;void&nbsp;processResolveImplEvent(com.lotus.sametime.lookup.ResolveImplEvent&nbsp;event)</pre>
+<div class="block">Handles a resolve event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event. object</dd></dl>
+</li>
+</ul>
+<a name="processGroupContentEvent(com.lotus.sametime.lookup.GroupContentEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processGroupContentEvent</h4>
+<pre>protected&nbsp;void&nbsp;processGroupContentEvent(<a href="../../../../com/lotus/sametime/lookup/GroupContentEvent.html" title="class in com.lotus.sametime.lookup">GroupContentEvent</a>&nbsp;event)</pre>
+<div class="block">Handles a resolve event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event. object</dd></dl>
+</li>
+</ul>
+<a name="resolved(com.lotus.sametime.lookup.Resolver, com.lotus.sametime.lookup.ResolveResponse)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resolved</h4>
+<pre>protected&nbsp;void&nbsp;resolved(<a href="../../../../com/lotus/sametime/lookup/Resolver.html" title="class in com.lotus.sametime.lookup">Resolver</a>&nbsp;resolver,
+            com.lotus.sametime.lookup.ResolveResponse&nbsp;resolved)</pre>
+<div class="block">A user was resolved.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>resolver</code> - The resolver that initiated the request.</dd><dd><code>resolved</code> - The response received.</dd></dl>
+</li>
+</ul>
+<a name="componentLoaded(com.lotus.sametime.core.comparch.STCompApi)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>componentLoaded</h4>
+<pre>protected&nbsp;void&nbsp;componentLoaded(<a href="../../../../com/lotus/sametime/core/comparch/STCompApi.html" title="interface in com.lotus.sametime.core.comparch">STCompApi</a>&nbsp;newComponent)</pre>
+<div class="block"><span class="strong">Description copied from class:&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#componentLoaded(com.lotus.sametime.core.comparch.STCompApi)">STCompPart</a></code></span></div>
+<div class="block">Handle Notifications that a new component was loaded to the current
+ session. Components that need other components as dependencies should
+ override this method and behave appropriately.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#componentLoaded(com.lotus.sametime.core.comparch.STCompApi)">componentLoaded</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>newComponent</code> - the new component that was loaded.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#componentLoaded(com.lotus.sametime.core.comparch.STCompApi)"><code>STCompPart.componentLoaded(STCompApi)</code></a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/lookup/GroupSizeListener.html" title="interface in com.lotus.sametime.lookup"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/lookup/LookupEvent.html" title="class in com.lotus.sametime.lookup"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/lookup/LookupComp.html" target="_top">Frames</a></li>
+<li><a href="LookupComp.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

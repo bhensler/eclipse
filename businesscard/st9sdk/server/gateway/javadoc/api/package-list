@@ -1,0 +1,6 @@
+com.ibm.collaboration.realtime.gateway
+com.ibm.collaboration.realtime.gateway.config
+com.ibm.collaboration.realtime.gateway.dto
+com.ibm.collaboration.realtime.gateway.event
+com.ibm.collaboration.realtime.gateway.plugin
+com.ibm.rtc.gateway.events

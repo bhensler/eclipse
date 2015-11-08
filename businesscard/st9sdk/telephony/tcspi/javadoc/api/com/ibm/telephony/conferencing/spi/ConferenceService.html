@@ -1,0 +1,890 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ConferenceService (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ConferenceService (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractSipConferenceService.html" title="class in com.ibm.telephony.conferencing.spi"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceServiceContext.html" title="interface in com.ibm.telephony.conferencing.spi"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/telephony/conferencing/spi/ConferenceService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ConferenceService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.telephony.conferencing.spi</FONT>
+<BR>
+Interface ConferenceService</H2>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html" title="class in com.ibm.telephony.conferencing.spi">AbstractConferenceService</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractSipConferenceService.html" title="class in com.ibm.telephony.conferencing.spi">AbstractSipConferenceService</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>ConferenceService</B></DL>
+</PRE>
+
+<P>
+This interface should not be implemented directly. Service providers should extend the AbstactConerenceService class.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MAX_AUDIO_CONFERENCE_USERS_PROPERTY">MAX_AUDIO_CONFERENCE_USERS_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MAX_CONFERENCE_USERS_PROPERTY">MAX_CONFERENCE_USERS_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MAX_VIDEO_CONFERENCE_USERS_PROPERTY">MAX_VIDEO_CONFERENCE_USERS_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MEDIA_AUDIO">MEDIA_AUDIO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Media flag values for choosing, audio only, video only, or
+ audio + video on new dial method with media flag parameter</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MEDIA_CONTROL_START">MEDIA_CONTROL_START</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MEDIA_CONTROL_STOP">MEDIA_CONTROL_STOP</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MEDIA_FLAG_VALUE_AUDIO_ONLY">MEDIA_FLAG_VALUE_AUDIO_ONLY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MEDIA_FLAG_VALUE_AUDIO_VIDEO">MEDIA_FLAG_VALUE_AUDIO_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MEDIA_FLAG_VALUE_VIDEO_ONLY">MEDIA_FLAG_VALUE_VIDEO_ONLY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#MEDIA_VIDEO">MEDIA_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#addConferenceServiceListener(com.ibm.telephony.conferencing.spi.event.ConferenceServiceListener)">addConferenceServiceListener</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/spi/event/ConferenceServiceListener.html" title="interface in com.ibm.telephony.conferencing.spi.event">ConferenceServiceListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#associate(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">associate</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;namedUser,
+          <A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;connectedUser,
+          <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#createConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">createConference</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                 java.lang.String&nbsp;documentText,
+                 <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#deleteConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">deleteConference</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                 java.lang.String&nbsp;conferenceId,
+                 <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#dial(com.ibm.telephony.conferencing.User, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">dial</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+     java.lang.String&nbsp;endPoint,
+     java.lang.String&nbsp;dialMode,
+     <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#dialExtended(com.ibm.telephony.conferencing.User, java.lang.String, java.lang.String, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">dialExtended</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+             java.lang.String&nbsp;endPoint,
+             java.lang.String&nbsp;dialMode,
+             int&nbsp;mediaFlag,
+             <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#disconnectUser(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">disconnectUser</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+               <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#editConference(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">editConference</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+               java.lang.String&nbsp;conferenceId,
+               java.lang.String&nbsp;documentText,
+               <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#getConfiguration(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">getConfiguration</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#init(com.ibm.telephony.conferencing.spi.ConferenceServiceContext, java.util.Properties)">init</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceServiceContext.html" title="interface in com.ibm.telephony.conferencing.spi">ConferenceServiceContext</A>&nbsp;conferenceServiceContext,
+     java.util.Properties&nbsp;properties)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#isAvailable()">isAvailable</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#mediaControl(com.ibm.telephony.conferencing.User, int, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">mediaControl</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+             int&nbsp;controlFlag,
+             int&nbsp;mediaFlag,
+             <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#registerUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">registerUser</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+             java.lang.String&nbsp;conferenceId,
+             java.lang.String&nbsp;userName,
+             java.lang.String&nbsp;userRole,
+             java.lang.String&nbsp;pin,
+             <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#removeConferenceServiceListener(com.ibm.telephony.conferencing.spi.event.ConferenceServiceListener)">removeConferenceServiceListener</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/spi/event/ConferenceServiceListener.html" title="interface in com.ibm.telephony.conferencing.spi.event">ConferenceServiceListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#setConferenceProperty(com.ibm.telephony.conferencing.Conference, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">setConferenceProperty</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Conference.html" title="interface in com.ibm.telephony.conferencing">Conference</A>&nbsp;conference,
+                      <A HREF="../../../../../com/ibm/telephony/conferencing/Property.html" title="class in com.ibm.telephony.conferencing">Property</A>&nbsp;property,
+                      <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#setUserProperty(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">setUserProperty</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+                <A HREF="../../../../../com/ibm/telephony/conferencing/Property.html" title="class in com.ibm.telephony.conferencing">Property</A>&nbsp;property,
+                <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#start()">start</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#startConferenceControl(com.ibm.telephony.conferencing.Login, java.lang.String, java.util.List, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">startConferenceControl</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                       java.lang.String&nbsp;conferenceId,
+                       java.util.List&nbsp;initalProperties,
+                       <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#stop()">stop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#stopConferenceControl(com.ibm.telephony.conferencing.Conference, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">stopConferenceControl</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Conference.html" title="interface in com.ibm.telephony.conferencing">Conference</A>&nbsp;conference,
+                      <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#unregisterUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">unregisterUser</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+               java.lang.String&nbsp;conferenceId,
+               java.lang.String&nbsp;userName,
+               <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceService.html#validateConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">validateConference</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                   java.lang.String&nbsp;documentText,
+                   <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MEDIA_AUDIO"><!-- --></A><H3>
+MEDIA_AUDIO</H3>
+<PRE>
+static final int <B>MEDIA_AUDIO</B></PRE>
+<DL>
+<DD>Media flag values for choosing, audio only, video only, or
+ audio + video on new dial method with media flag parameter
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MEDIA_AUDIO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_VIDEO"><!-- --></A><H3>
+MEDIA_VIDEO</H3>
+<PRE>
+static final int <B>MEDIA_VIDEO</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MEDIA_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_FLAG_VALUE_AUDIO_ONLY"><!-- --></A><H3>
+MEDIA_FLAG_VALUE_AUDIO_ONLY</H3>
+<PRE>
+static final int <B>MEDIA_FLAG_VALUE_AUDIO_ONLY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MEDIA_FLAG_VALUE_AUDIO_ONLY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_FLAG_VALUE_VIDEO_ONLY"><!-- --></A><H3>
+MEDIA_FLAG_VALUE_VIDEO_ONLY</H3>
+<PRE>
+static final int <B>MEDIA_FLAG_VALUE_VIDEO_ONLY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MEDIA_FLAG_VALUE_VIDEO_ONLY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_FLAG_VALUE_AUDIO_VIDEO"><!-- --></A><H3>
+MEDIA_FLAG_VALUE_AUDIO_VIDEO</H3>
+<PRE>
+static final int <B>MEDIA_FLAG_VALUE_AUDIO_VIDEO</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MEDIA_FLAG_VALUE_AUDIO_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_CONTROL_STOP"><!-- --></A><H3>
+MEDIA_CONTROL_STOP</H3>
+<PRE>
+static final int <B>MEDIA_CONTROL_STOP</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MEDIA_CONTROL_STOP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_CONTROL_START"><!-- --></A><H3>
+MEDIA_CONTROL_START</H3>
+<PRE>
+static final int <B>MEDIA_CONTROL_START</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MEDIA_CONTROL_START">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MAX_CONFERENCE_USERS_PROPERTY"><!-- --></A><H3>
+MAX_CONFERENCE_USERS_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>MAX_CONFERENCE_USERS_PROPERTY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MAX_CONFERENCE_USERS_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MAX_AUDIO_CONFERENCE_USERS_PROPERTY"><!-- --></A><H3>
+MAX_AUDIO_CONFERENCE_USERS_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>MAX_AUDIO_CONFERENCE_USERS_PROPERTY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MAX_AUDIO_CONFERENCE_USERS_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MAX_VIDEO_CONFERENCE_USERS_PROPERTY"><!-- --></A><H3>
+MAX_VIDEO_CONFERENCE_USERS_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>MAX_VIDEO_CONFERENCE_USERS_PROPERTY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.telephony.conferencing.spi.ConferenceService.MAX_VIDEO_CONFERENCE_USERS_PROPERTY">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="init(com.ibm.telephony.conferencing.spi.ConferenceServiceContext, java.util.Properties)"><!-- --></A><H3>
+init</H3>
+<PRE>
+void <B>init</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceServiceContext.html" title="interface in com.ibm.telephony.conferencing.spi">ConferenceServiceContext</A>&nbsp;conferenceServiceContext,
+          java.util.Properties&nbsp;properties)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="start()"><!-- --></A><H3>
+start</H3>
+<PRE>
+void <B>start</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#start()"><CODE>AbstractConferenceService.start()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stop()"><!-- --></A><H3>
+stop</H3>
+<PRE>
+void <B>stop</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#stop()"><CODE>AbstractConferenceService.stop()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isAvailable()"><!-- --></A><H3>
+isAvailable</H3>
+<PRE>
+boolean <B>isAvailable</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#isAvailable()"><CODE>AbstractConferenceService.isAvailable()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConfiguration(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+getConfiguration</H3>
+<PRE>
+void <B>getConfiguration</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#getConfiguration(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.getConfiguration(ConferenceResponseHandler listener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="validateConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+validateConference</H3>
+<PRE>
+void <B>validateConference</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                        java.lang.String&nbsp;documentText,
+                        <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#validateConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.validateConference(Login login, String documentText, ConferenceResponseHandler listener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+createConference</H3>
+<PRE>
+void <B>createConference</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                      java.lang.String&nbsp;documentText,
+                      <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#createConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.createConference(Login login, String documentText, ConferenceResponseHandler listener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deleteConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+deleteConference</H3>
+<PRE>
+void <B>deleteConference</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                      java.lang.String&nbsp;conferenceId,
+                      <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#deleteConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.deleteConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="editConference(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+editConference</H3>
+<PRE>
+void <B>editConference</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                    java.lang.String&nbsp;conferenceId,
+                    java.lang.String&nbsp;documentText,
+                    <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#editConference(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.editConference(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+registerUser</H3>
+<PRE>
+void <B>registerUser</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                  java.lang.String&nbsp;conferenceId,
+                  java.lang.String&nbsp;userName,
+                  java.lang.String&nbsp;userRole,
+                  java.lang.String&nbsp;pin,
+                  <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#registerUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.registerUser(Login login, String conferenceId, String userName, String userRole, String userPin, ConferenceResponseHandler listener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unregisterUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+unregisterUser</H3>
+<PRE>
+void <B>unregisterUser</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                    java.lang.String&nbsp;conferenceId,
+                    java.lang.String&nbsp;userName,
+                    <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#unregisterUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.unregisterUser(Login login, String conferenceId, String userName, ConferenceResponseHandler listener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startConferenceControl(com.ibm.telephony.conferencing.Login, java.lang.String, java.util.List, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+startConferenceControl</H3>
+<PRE>
+void <B>startConferenceControl</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Login.html" title="class in com.ibm.telephony.conferencing">Login</A>&nbsp;login,
+                            java.lang.String&nbsp;conferenceId,
+                            java.util.List&nbsp;initalProperties,
+                            <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#startConferenceControl(com.ibm.telephony.conferencing.Login, java.lang.String, java.util.List, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.startConferenceControl(com.ibm.telephony.conferencing.Login, java.lang.String, java.util.List, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopConferenceControl(com.ibm.telephony.conferencing.Conference, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+stopConferenceControl</H3>
+<PRE>
+void <B>stopConferenceControl</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Conference.html" title="interface in com.ibm.telephony.conferencing">Conference</A>&nbsp;conference,
+                           <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#stopConferenceControl(com.ibm.telephony.conferencing.Conference, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.stopConferenceControl(com.ibm.telephony.conferencing.Conference, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setConferenceProperty(com.ibm.telephony.conferencing.Conference, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+setConferenceProperty</H3>
+<PRE>
+void <B>setConferenceProperty</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/Conference.html" title="interface in com.ibm.telephony.conferencing">Conference</A>&nbsp;conference,
+                           <A HREF="../../../../../com/ibm/telephony/conferencing/Property.html" title="class in com.ibm.telephony.conferencing">Property</A>&nbsp;property,
+                           <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#setConferenceProperty(com.ibm.telephony.conferencing.Conference, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.setConferenceProperty(com.ibm.telephony.conferencing.Conference, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="dial(com.ibm.telephony.conferencing.User, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+dial</H3>
+<PRE>
+void <B>dial</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+          java.lang.String&nbsp;endPoint,
+          java.lang.String&nbsp;dialMode,
+          <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#dial(com.ibm.telephony.conferencing.User, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.dial(User user, String endPoint, String dialMode, ConferenceResponseHandler listener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="dialExtended(com.ibm.telephony.conferencing.User, java.lang.String, java.lang.String, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+dialExtended</H3>
+<PRE>
+void <B>dialExtended</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+                  java.lang.String&nbsp;endPoint,
+                  java.lang.String&nbsp;dialMode,
+                  int&nbsp;mediaFlag,
+                  <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#dialExtended(com.ibm.telephony.conferencing.User, java.lang.String, java.lang.String, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.dialExtended(User user, String endPoint, String dialMode, int mediaFlag, ConferenceResponseHandler listener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="associate(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+associate</H3>
+<PRE>
+void <B>associate</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;namedUser,
+               <A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;connectedUser,
+               <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#associate(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.associate(User namedUser, User connectedUser, ConferenceResponseHandler listener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="disconnectUser(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+disconnectUser</H3>
+<PRE>
+void <B>disconnectUser</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+                    <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#disconnectUser(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.disconnectUser(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUserProperty(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+setUserProperty</H3>
+<PRE>
+void <B>setUserProperty</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+                     <A HREF="../../../../../com/ibm/telephony/conferencing/Property.html" title="class in com.ibm.telephony.conferencing">Property</A>&nbsp;property,
+                     <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#setUserProperty(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.setUserProperty(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mediaControl(com.ibm.telephony.conferencing.User, int, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+mediaControl</H3>
+<PRE>
+void <B>mediaControl</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+                  int&nbsp;controlFlag,
+                  int&nbsp;mediaFlag,
+                  <A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#mediaControl(com.ibm.telephony.conferencing.User, int, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>AbstractConferenceService.mediaControl(User user, int controlFlag, int mediaFlag, ConferenceResponseHandler listener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addConferenceServiceListener(com.ibm.telephony.conferencing.spi.event.ConferenceServiceListener)"><!-- --></A><H3>
+addConferenceServiceListener</H3>
+<PRE>
+void <B>addConferenceServiceListener</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/spi/event/ConferenceServiceListener.html" title="interface in com.ibm.telephony.conferencing.spi.event">ConferenceServiceListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#addConferenceServiceListener(com.ibm.telephony.conferencing.spi.event.ConferenceServiceListener)"><CODE>AbstractConferenceService.addConferenceServiceListener(com.ibm.telephony.conferencing.spi.event.ConferenceServiceListener)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeConferenceServiceListener(com.ibm.telephony.conferencing.spi.event.ConferenceServiceListener)"><!-- --></A><H3>
+removeConferenceServiceListener</H3>
+<PRE>
+void <B>removeConferenceServiceListener</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/spi/event/ConferenceServiceListener.html" title="interface in com.ibm.telephony.conferencing.spi.event">ConferenceServiceListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractConferenceService.html#removeConferenceServiceListener(com.ibm.telephony.conferencing.spi.event.ConferenceServiceListener)"><CODE>AbstractConferenceService.removeConferenceServiceListener(com.ibm.telephony.conferencing.spi.event.ConferenceServiceListener)</CODE></A></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/spi/AbstractSipConferenceService.html" title="class in com.ibm.telephony.conferencing.spi"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/spi/ConferenceServiceContext.html" title="interface in com.ibm.telephony.conferencing.spi"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/telephony/conferencing/spi/ConferenceService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ConferenceService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

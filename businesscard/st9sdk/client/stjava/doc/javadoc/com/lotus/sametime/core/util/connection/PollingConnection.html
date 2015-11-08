@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>PollingConnection</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PollingConnection";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/NetworkMonitor.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/RC2Connection.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/core/util/connection/PollingConnection.html" target="_top">Frames</a></li>
+<li><a href="PollingConnection.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_com.lotus.sametime.core.util.connection.Connection">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#methods_inherited_from_class_com.lotus.sametime.core.util.connection.HttpConnection">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Method</li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.core.util.connection</div>
+<h2 title="Class PollingConnection" class="title">Class PollingConnection</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html" title="class in com.lotus.sametime.core.util.connection">com.lotus.sametime.core.util.connection.Connection</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html" title="class in com.lotus.sametime.core.util.connection">com.lotus.sametime.core.util.connection.HttpConnection</a></li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.core.util.connection.PollingConnection</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">PollingConnection</span>
+extends <a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html" title="class in com.lotus.sametime.core.util.connection">HttpConnection</a></pre>
+<div class="block">A polling HTTP connection.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html" title="class in com.lotus.sametime.core.util.connection"><code>HttpConnection</code></a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_com.lotus.sametime.core.util.connection.Connection">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;com.lotus.sametime.core.util.connection.<a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html" title="class in com.lotus.sametime.core.util.connection">Connection</a></h3>
+<code><a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#m_closedListener">m_closedListener</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#m_dataListener">m_dataListener</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#m_receiver">m_receiver</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#m_sender">m_sender</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#m_sessionName">m_sessionName</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/PollingConnection.html#PollingConnection(int, long)">PollingConnection</a></strong>(int&nbsp;port,
+                 long&nbsp;timeout)</code>
+<div class="block">Creates a new connection to the host provided on login on the given port.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/PollingConnection.html#PollingConnection(java.lang.String, int, long)">PollingConnection</a></strong>(java.lang.String&nbsp;host,
+                 int&nbsp;port,
+                 long&nbsp;timeout)</code>
+<div class="block">Creates a new connection to the given server on the given port.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/connection/PollingConnection.html#PollingConnection(java.net.URL, long)">PollingConnection</a></strong>(java.net.URL&nbsp;hostURL,
+                 long&nbsp;timeout)</code>
+<div class="block">Creates a new connection to the specified URL.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_com.lotus.sametime.core.util.connection.HttpConnection">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.lotus.sametime.core.util.connection.<a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html" title="class in com.lotus.sametime.core.util.connection">HttpConnection</a></h3>
+<code><a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html#getConnectionInfo()">getConnectionInfo</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html#getHostUrl()">getHostUrl</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html#getHttpPort()">getHttpPort</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html#getProxyPort()">getProxyPort</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html#getProxyServer()">getProxyServer</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html#initializeConnection(java.lang.String, com.lotus.sametime.core.util.connection.ConnectionInitializer)">initializeConnection</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/HttpConnection.html#isOurOwnConnection()">isOurOwnConnection</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_com.lotus.sametime.core.util.connection.Connection">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.lotus.sametime.core.util.connection.<a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html" title="class in com.lotus.sametime.core.util.connection">Connection</a></h3>
+<code><a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#close()">close</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#close(int)">close</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#enableTLS()">enableTLS</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#getClosedListener()">getClosedListener</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#getDataListener()">getDataListener</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#getHost()">getHost</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#getLocalAddress()">getLocalAddress</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#getNetworkCloseReason()">getNetworkCloseReason</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#getTimeout()">getTimeout</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#isReady()">isReady</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#isReadyForInitialSend()">isReadyForInitialSend</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#networkError(int)">networkError</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#resetState()">resetState</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#sendMessage(byte[], byte)">sendMessage</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#setBytesToReceive(int)">setBytesToReceive</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#setClosedListener(com.lotus.sametime.core.util.connection.ClosedListener)">setClosedListener</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#setDataListener(com.lotus.sametime.core.util.connection.DataListener)">setDataListener</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#setHost(java.lang.String)">setHost</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#setKeepAliveParams(long, byte[])">setKeepAliveParams</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#setSessionName(java.lang.String)">setSessionName</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#tlsCapable()">tlsCapable</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#tlsEnabled()">tlsEnabled</a>, <a href="../../../../../../com/lotus/sametime/core/util/connection/Connection.html#toString()">toString</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PollingConnection(java.lang.String, int, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PollingConnection</h4>
+<pre>public&nbsp;PollingConnection(java.lang.String&nbsp;host,
+                 int&nbsp;port,
+                 long&nbsp;timeout)</pre>
+<div class="block">Creates a new connection to the given server on the given port.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>port</code> - The host. When null the host provided on login will be used</dd><dd><code>port</code> - The port.</dd><dd><code>timeout</code> - The timeout period to use when attempting to     
+     connect, in miliseconds.</dd></dl>
+</li>
+</ul>
+<a name="PollingConnection(int, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PollingConnection</h4>
+<pre>public&nbsp;PollingConnection(int&nbsp;port,
+                 long&nbsp;timeout)</pre>
+<div class="block">Creates a new connection to the host provided on login on the given port.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>port</code> - The port.</dd><dd><code>timeout</code> - The timeout period to use when attempting to     
+     connect, in miliseconds.</dd></dl>
+</li>
+</ul>
+<a name="PollingConnection(java.net.URL, long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PollingConnection</h4>
+<pre>public&nbsp;PollingConnection(java.net.URL&nbsp;hostURL,
+                 long&nbsp;timeout)</pre>
+<div class="block">Creates a new connection to the specified URL.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>hostURL</code> - The URL to connect to.</dd><dd><code>timeout</code> - The timeout period to use when attempting to     
+     connect, in miliseconds.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/NetworkMonitor.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../../com/lotus/sametime/core/util/connection/RC2Connection.html" title="class in com.lotus.sametime.core.util.connection"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/core/util/connection/PollingConnection.html" target="_top">Frames</a></li>
+<li><a href="PollingConnection.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_com.lotus.sametime.core.util.connection.Connection">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#methods_inherited_from_class_com.lotus.sametime.core.util.connection.HttpConnection">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Method</li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

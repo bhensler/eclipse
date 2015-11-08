@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright IBM Corp. 2008, 2014  All Rights Reserved.            -->
+
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Call Center Web Module</display-name>
+	
+	<servlet id="LoginServlet">
+		<display-name>LoginServlet</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.ibm.sample.callcenter.servlet.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet id="CallCenterServlet">
+		<display-name>CallCenterServlet</display-name>
+		<servlet-name>CallCenterServlet</servlet-name>
+		<servlet-class>com.ibm.sample.callcenter.servlet.CallCenterServlet</servlet-class>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CallCenterServlet</servlet-name>
+		<url-pattern>/metasoft/*</url-pattern>
+	</servlet-mapping>
+	<resource-ref id="ResourceRef_CallCenterDB">
+		<res-ref-name>jdbc/CallCenterDB</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>		
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

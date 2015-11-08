@@ -1,0 +1,527 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+AbstractTelephoneNumberService (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AbstractTelephoneNumberService (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractTelephoneNumberService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.number</FONT>
+<BR>
+Class AbstractTelephoneNumberService</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.telephony.number.AbstractTelephoneNumberService</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number">TelephoneNumberService</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>AbstractTelephoneNumberService</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number">TelephoneNumberService</A></DL>
+</PRE>
+
+<P>
+Default implementation of the TelephoneNumberService interface.
+ TelephoneNumberService implementation classes should extend this
+ class and override the default implementation as needed. Note
+ that it is not necessary to override the default implementation
+ in order to use different values for the extension delimiters,
+ national prefixes, or international prefixes, since those values
+ are defined by managed plug-in preferences. See the methods in
+ TelephoneNumberService for more information.
+ <p>
+ Note that AbstractTelephoneNumberService protected methods do not
+ appear in the Sametime SDK Javadoc, but are available for use by
+ customers who provide their own TelephoneNumberService implementation.
+ See the telephone number service sample plug-in in the Sametime SDK
+ Client Telephony Toolkit for more information on these methods.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#AbstractTelephoneNumberService()">AbstractTelephoneNumberService</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#getExtensionDelimiters()">getExtensionDelimiters</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the extension delimiters that were set using
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setExtensionDelimiters(java.lang.String)"><CODE>TelephoneNumberService.setExtensionDelimiters(String)</CODE></A>, null if
+ none were specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#getInternationalPrefixes()">getInternationalPrefixes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the international prefixes that were set using
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setInternationalPrefixes(java.lang.String)"><CODE>TelephoneNumberService.setInternationalPrefixes(String)</CODE></A>, null if
+ none were specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#getNationalPrefixes()">getNationalPrefixes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the national prefixes that were set using
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setNationalPrefixes(java.lang.String)"><CODE>TelephoneNumberService.setNationalPrefixes(String)</CODE></A>, null if none
+ were specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#getTelephoneNumber(com.ibm.collaboration.realtime.telephony.Address)">getTelephoneNumber</A></B>(<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Address.html" title="interface in com.ibm.collaboration.realtime.telephony">Address</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resolves a telephone number for an Address representing a
+ Sametime person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#setExtensionDelimiters(java.lang.String)">setExtensionDelimiters</A></B>(java.lang.String&nbsp;delimiters)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets one or more comma-separated extension delimiters, which
+ indicate the presence of an extension in the telephone number.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#setInternationalPrefixes(java.lang.String)">setInternationalPrefixes</A></B>(java.lang.String&nbsp;prefixes)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets one or more comma-separated international dialing prefixes
+ that might be used in a telephone number.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#setNationalPrefixes(java.lang.String)">setNationalPrefixes</A></B>(java.lang.String&nbsp;prefixes)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets one or more comma-separated national dialing prefixes
+ that might be used in a telephone number.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="AbstractTelephoneNumberService()"><!-- --></A><H3>
+AbstractTelephoneNumberService</H3>
+<PRE>
+public <B>AbstractTelephoneNumberService</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getTelephoneNumber(com.ibm.collaboration.realtime.telephony.Address)"><!-- --></A><H3>
+getTelephoneNumber</H3>
+<PRE>
+public java.lang.String <B>getTelephoneNumber</B>(<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Address.html" title="interface in com.ibm.collaboration.realtime.telephony">Address</A>&nbsp;address)
+                                    throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Resolves a telephone number for an Address representing a
+ Sametime person.  This method will not be called for Address
+ objects that represent phone numbers or external contacts.
+ <p>
+ The default implementation retrieves the value of "telephone"
+ attribute in the Sametime directory for the user specified by
+ the Address object. If the Address object also includes an
+ addressUri value, and it doesn't exactly match the value from
+ the directory, the addressUri is returned without further
+ processing. This is because the telephone number service is
+ intended to process numbers retrieved from the directory,
+ not user-specified numbers. 
+ <p>
+ If no directory telephone number was found, the addressUri
+ (if any) from the Address object is returned without further
+ processing. If no addressUri was specified, and the user
+ is someone other than the local user (the caller), the user's
+ location profile is checked for a number (this is typically
+ the number displayed on the user's business card); if found,
+ that number is returned without further processing. If no
+ number can be found, a TelephonyServiceException is thrown.
+ <p>
+ Assuming the directory telephone number was retrieved successfully,
+ the number is processed as described below and then returned:
+ <p>
+ 1. If any extension delimiters were specified, each delimiter
+    is checked to see if it occurs anywhere within the number,
+    stopping when a match is found. If a match is found, whatever
+    follows the delimiter is assumed to be an extension number,
+    and both the delimiter and extension are removed from the
+    directory number. In addition, if the directory number belongs
+    to someone other than the local user , and the Sametime Computer
+    Phone is being used to make the call, the extension is dialed
+    automatically as soon as the call is connected.
+ <p>
+ 2. If any national dialing prefixes were specified, each prefix
+    is checked to see if it occurs anywhere within the number,
+    stopping when a match is found. If a match is found, the prefix
+    is removed from the number.
+ <p>
+ 3. If any international dialing prefixes were specified, each
+    prefix is checked to see if it occurs at the beginning of the
+    number, stopping when a match is found. If a match is found,
+    the prefix is removed and replaced with the '+' character.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getTelephoneNumber(com.ibm.collaboration.realtime.telephony.Address)">getTelephoneNumber</A></CODE> in interface <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number">TelephoneNumberService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - Address representing a Sametime person
+<DT><B>Returns:</B><DD>Telephone number for the specified person.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the number cannot be found or another exception is encountered</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getExtensionDelimiters()"><!-- --></A><H3>
+getExtensionDelimiters</H3>
+<PRE>
+public java.lang.String <B>getExtensionDelimiters</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getExtensionDelimiters()">TelephoneNumberService</A></CODE></B></DD>
+<DD>Gets the extension delimiters that were set using
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setExtensionDelimiters(java.lang.String)"><CODE>TelephoneNumberService.setExtensionDelimiters(String)</CODE></A>, null if
+ none were specified. See setExtensionDelimiters for
+ more information.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getExtensionDelimiters()">getExtensionDelimiters</A></CODE> in interface <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number">TelephoneNumberService</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>extension delimiters, null if none specified.<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getExtensionDelimiters()"><CODE>TelephoneNumberService.getExtensionDelimiters()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInternationalPrefixes()"><!-- --></A><H3>
+getInternationalPrefixes</H3>
+<PRE>
+public java.lang.String <B>getInternationalPrefixes</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getInternationalPrefixes()">TelephoneNumberService</A></CODE></B></DD>
+<DD>Gets the international prefixes that were set using
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setInternationalPrefixes(java.lang.String)"><CODE>TelephoneNumberService.setInternationalPrefixes(String)</CODE></A>, null if
+ none were specified. See setInternationalPrefixes for
+ more information.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getInternationalPrefixes()">getInternationalPrefixes</A></CODE> in interface <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number">TelephoneNumberService</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>international prefixes, null if none specified.<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getInternationalPrefixes()"><CODE>TelephoneNumberService.getInternationalPrefixes()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNationalPrefixes()"><!-- --></A><H3>
+getNationalPrefixes</H3>
+<PRE>
+public java.lang.String <B>getNationalPrefixes</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getNationalPrefixes()">TelephoneNumberService</A></CODE></B></DD>
+<DD>Gets the national prefixes that were set using
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setNationalPrefixes(java.lang.String)"><CODE>TelephoneNumberService.setNationalPrefixes(String)</CODE></A>, null if none
+ were specified. See setNationalPrefixes for more
+ information.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getNationalPrefixes()">getNationalPrefixes</A></CODE> in interface <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number">TelephoneNumberService</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>international prefixes, null if none specified.<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#getNationalPrefixes()"><CODE>TelephoneNumberService.getNationalPrefixes()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setExtensionDelimiters(java.lang.String)"><!-- --></A><H3>
+setExtensionDelimiters</H3>
+<PRE>
+public void <B>setExtensionDelimiters</B>(java.lang.String&nbsp;delimiters)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setExtensionDelimiters(java.lang.String)">TelephoneNumberService</A></CODE></B></DD>
+<DD>Sets one or more comma-separated extension delimiters, which
+ indicate the presence of an extension in the telephone number.
+ The Sametime Connect client calls this method with the value
+ specified in the managed plug-in preference
+ com.ibm.collaboration.realtime.telephony.ui/extensionDelimiters.
+ The preference value defaults to "ext", but can be changed by
+ the Sametime administrator as needed. 
+ 
+ See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html" title="class in com.ibm.collaboration.realtime.telephony.number"><CODE>AbstractTelephoneNumberService</CODE></A> for more information on
+ how extension delimiters are processed by the default implementation.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setExtensionDelimiters(java.lang.String)">setExtensionDelimiters</A></CODE> in interface <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number">TelephoneNumberService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>delimiters</CODE> - one or more comma-separated extension delimiters<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setExtensionDelimiters(java.lang.String)"><CODE>TelephoneNumberService.setExtensionDelimiters(String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInternationalPrefixes(java.lang.String)"><!-- --></A><H3>
+setInternationalPrefixes</H3>
+<PRE>
+public void <B>setInternationalPrefixes</B>(java.lang.String&nbsp;prefixes)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setInternationalPrefixes(java.lang.String)">TelephoneNumberService</A></CODE></B></DD>
+<DD>Sets one or more comma-separated international dialing prefixes
+ that might be used in a telephone number. The Sametime Connect
+ client calls this method with the value (if any) specified in
+ the managed plug-in preference
+ com.ibm.collaboration.realtime.telephony.ui/internationalPrefixes.
+ There is no default international prefix, but one or more values
+ can be specified by the Sametime administrator as needed. 
+ 
+ See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#getTelephoneNumber(com.ibm.collaboration.realtime.telephony.Address)"><CODE>getTelephoneNumber(Address)</CODE></A>
+ for more information on how international prefixes are processed by
+ the default implementation.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setInternationalPrefixes(java.lang.String)">setInternationalPrefixes</A></CODE> in interface <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number">TelephoneNumberService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>prefixes</CODE> - one or more comma-separated international prefixes<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setInternationalPrefixes(java.lang.String)"><CODE>TelephoneNumberService.setInternationalPrefixes(String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setNationalPrefixes(java.lang.String)"><!-- --></A><H3>
+setNationalPrefixes</H3>
+<PRE>
+public void <B>setNationalPrefixes</B>(java.lang.String&nbsp;prefixes)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setNationalPrefixes(java.lang.String)">TelephoneNumberService</A></CODE></B></DD>
+<DD>Sets one or more comma-separated national dialing prefixes
+ that might be used in a telephone number. The Sametime Connect
+ client calls this method with the value (if any) specified in
+ the managed plug-in preference
+ com.ibm.collaboration.realtime.telephony.ui/nationalPrefixes.
+ The preference value defaults to "(0)", but can be changed by
+ the Sametime administrator as needed. 
+ 
+ See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html#getTelephoneNumber(com.ibm.collaboration.realtime.telephony.Address)"><CODE>getTelephoneNumber(Address)</CODE></A>
+ for more information on how national prefixes are processed by
+ the default implementation.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setNationalPrefixes(java.lang.String)">setNationalPrefixes</A></CODE> in interface <CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number">TelephoneNumberService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>prefixes</CODE> - one or more comma-separated national prefixes<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html#setNationalPrefixes(java.lang.String)"><CODE>TelephoneNumberService.setNationalPrefixes(String)</CODE></A></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/number/TelephoneNumberService.html" title="interface in com.ibm.collaboration.realtime.telephony.number"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/number/AbstractTelephoneNumberService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractTelephoneNumberService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

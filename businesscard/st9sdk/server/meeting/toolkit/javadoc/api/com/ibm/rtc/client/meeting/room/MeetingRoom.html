@@ -1,0 +1,1292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MeetingRoom (IBM Lotus Sametime 8.5.2 SDK: IBM Sametime Meeting Remote Client API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MeetingRoom (IBM Lotus Sametime 8.5.2 SDK: IBM Sametime Meeting Remote Client API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/AdminRoomServices.html" title="class in com.ibm.rtc.client.meeting.room"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryControl.html" title="class in com.ibm.rtc.client.meeting.room"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/rtc/client/meeting/room/MeetingRoom.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MeetingRoom.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_classes_inherited_from_class_java.util.AbstractMap">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.rtc.client.meeting.room</FONT>
+<BR>
+Class MeetingRoom</H2>
+<PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.html?is-external=true" title="class or interface in java.util">java.util.AbstractMap</A>&lt;K,V&gt;
+      <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">java.util.HashMap</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&gt;
+          <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.rtc.client.meeting.room.MeetingRoom</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&gt;</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>MeetingRoom</B><DT>extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&gt;</DL>
+</PRE>
+
+<P>
+This class represents a meeting room with all its attributes. A room name or a permaName (permanent identifier 
+ for the room usually derived from the room name) is required for room creation. All other attributes are optional
+ and can be added/edited later. The room name is also editable. However, the permaName is immutable.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../serialized-form.html#com.ibm.rtc.client.meeting.room.MeetingRoom">Serialized Form</A></DL>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="nested_classes_inherited_from_class_java.util.AbstractMap"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from class java.util.<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.html?is-external=true" title="class or interface in java.util">AbstractMap</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.SimpleEntry.html?is-external=true" title="class or interface in java.util">AbstractMap.SimpleEntry</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.SimpleEntry.html?is-external=true" title="class or interface in java.util">K</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.SimpleEntry.html?is-external=true" title="class or interface in java.util">V</A>&gt;, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.SimpleImmutableEntry.html?is-external=true" title="class or interface in java.util">AbstractMap.SimpleImmutableEntry</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.SimpleImmutableEntry.html?is-external=true" title="class or interface in java.util">K</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.SimpleImmutableEntry.html?is-external=true" title="class or interface in java.util">V</A>&gt;</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#MeetingRoom()">MeetingRoom</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default constructor for meeting room object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#MeetingRoom(java.lang.String)">MeetingRoom</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructor taking in a room name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#MeetingRoom(java.lang.String, java.lang.String)">MeetingRoom</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomName,
+            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;permaName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructor taking in a room name and a perma name.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#allowsVideo()">allowsVideo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a boolean indicating whether the room allows video.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getActiveUserCount()">getActiveUserCount</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the number of users currently active in the meeting room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getCallData()">getCallData</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the call-in info associated with the room (if any).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;com.ibm.json.java.JSONObject</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getConferencingInfo()">getConferencingInfo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the A/V conferencing info associated with the room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getCreatedDate()">getCreatedDate</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the date, in milliseconds, at which the room was created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getCreator()">getCreator</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the creator of the room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getDescription()">getDescription</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the description of the room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;com.ibm.json.java.JSONArray</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getExtendedData()">getExtendedData</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns all the extended data for a room as JSONArray.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;com.ibm.json.java.JSONObject</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getExtendedData(java.lang.String)">getExtendedData</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the extended data associated with a specific plugin Id on the server.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getId()">getId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A version 4 GUID uniquely identifying a room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getLastAccessed()">getLastAccessed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the time, in milliseconds, of the last significant room event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getLibrarySize()">getLibrarySize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns he size, in bytes, of all the uploaded material in the meeting room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getManagersList()">getManagersList</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the list of room managers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getOrg()">getOrg</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the organization field if set during room creation</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getOriginId()">getOriginId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the associated ID for the room, when the room originated from some other source.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getOriginType()">getOriginType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the origin type for the room if it was specified at creation time.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getOwner()">getOwner</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID (userId) of the owner.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getOwnerIconUrl()">getOwnerIconUrl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getOwnerName()">getOwnerName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the display name of the room owner.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getPassword()">getPassword</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the room password.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getPermaName()">getPermaName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the permanent identifier for the room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getRoomName()">getRoomName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the display name of the meeting room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getRoomUrl()">getRoomUrl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the meeting room URL</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#hasPassword()">hasPassword</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if the room has a password</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#isDisposable()">isDisposable</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns if the room is disposable or not.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#isLargeMeeting()">isLargeMeeting</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns if the room will host large meetings.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#isRestricted()">isRestricted</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates if a room is restricted or has managed access.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#isUnlisted()">isUnlisted</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns if a room is hidden.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setCallData(java.lang.String)">setCallData</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;callData)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the call-in info for the room (optional)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setConferencingInfo(com.ibm.json.java.JSONObject)">setConferencingInfo</A></B>(com.ibm.json.java.JSONObject&nbsp;confInfo)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the A/V conferencing info for the room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setDescription(java.lang.String)">setDescription</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the description of the room (optional).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setDisposable(boolean)">setDisposable</A></B>(boolean&nbsp;isDisposable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates whether or not the room is a disposable, instant meeting room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setExtendedData(java.lang.String, java.util.Map)">setExtendedData</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id,
+                <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&gt;&nbsp;extData)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setOnBehalfOf(java.lang.String)">setOnBehalfOf</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;userid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the user on behalf of whom this meeting room will be created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setOrg(java.lang.String)">setOrg</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;org)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used to set the organization associated with the meeting room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setOriginId(java.lang.String)">setOriginId</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;originId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used to store an associated ID for the room, when the room originated from some other source to be used with
+ originType.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setOriginType(java.lang.String)">setOriginType</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;originType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used to indicate from where the room originated (for instance, "companyXYZ" or "Corp123").</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setPassword(java.lang.String)">setPassword</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the room password.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setPermaName(java.lang.String)">setPermaName</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;permaName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the permanent identifier for the room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setRestricted(boolean)">setRestricted</A></B>(boolean&nbsp;restricted)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the restricted flag on a room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setRoomName(java.lang.String)">setRoomName</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the display name of the meeting room.A name or permaname is required for the room on creation.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setSupportsLargeMeetings(boolean)">setSupportsLargeMeetings</A></B>(boolean&nbsp;supportsLargeMeetings)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When set to true, it indicates whether or not a room will host large meetings.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#setUnlisted(boolean)">setUnlisted</A></B>(boolean&nbsp;isUnlisted)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If true, makes the room hidden to other users.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.util.HashMap"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.util.<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true" title="class or interface in java.util">HashMap</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#clear()" title="class or interface in java.util">clear</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#clone()" title="class or interface in java.util">clone</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#containsKey(java.lang.Object)" title="class or interface in java.util">containsKey</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#containsValue(java.lang.Object)" title="class or interface in java.util">containsValue</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#entrySet()" title="class or interface in java.util">entrySet</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#get(java.lang.Object)" title="class or interface in java.util">get</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#isEmpty()" title="class or interface in java.util">isEmpty</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#keySet()" title="class or interface in java.util">keySet</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#put(K, V)" title="class or interface in java.util">put</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#putAll(java.util.Map)" title="class or interface in java.util">putAll</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#remove(java.lang.Object)" title="class or interface in java.util">remove</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#size()" title="class or interface in java.util">size</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html?is-external=true#values()" title="class or interface in java.util">values</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.util.AbstractMap"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.util.<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.html?is-external=true" title="class or interface in java.util">AbstractMap</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.util">equals</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.html?is-external=true#hashCode()" title="class or interface in java.util">hashCode</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.util.Map"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface java.util.<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.util">equals</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true#hashCode()" title="class or interface in java.util">hashCode</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MeetingRoom()"><!-- --></A><H3>
+MeetingRoom</H3>
+<PRE>
+public <B>MeetingRoom</B>()</PRE>
+<DL>
+<DD>Default constructor for meeting room object. Room attributes can be filled in via setters.
+<P>
+</DL>
+<HR>
+
+<A NAME="MeetingRoom(java.lang.String)"><!-- --></A><H3>
+MeetingRoom</H3>
+<PRE>
+public <B>MeetingRoom</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomName)</PRE>
+<DL>
+<DD>Constructor taking in a room name. If null is passed in, it will be ignored when the room is created.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>roomName</CODE> - Room's display name</DL>
+</DL>
+<HR>
+
+<A NAME="MeetingRoom(java.lang.String, java.lang.String)"><!-- --></A><H3>
+MeetingRoom</H3>
+<PRE>
+public <B>MeetingRoom</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomName,
+                   <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;permaName)</PRE>
+<DL>
+<DD>Constructor taking in a room name and a perma name. Null values can be passed in for either/both and set via setters later. Note that
+ room creation will not succeed without a room name or perma name.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>roomName</CODE> - Room's display name<DD><CODE>permaName</CODE> - The permanent identifier for the room</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="setRoomName(java.lang.String)"><!-- --></A><H3>
+setRoomName</H3>
+<PRE>
+public void <B>setRoomName</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomName)</PRE>
+<DL>
+<DD>Sets the display name of the meeting room.A name or permaname is required for the room on creation.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomName</CODE> - Meeting room name</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRoomName()"><!-- --></A><H3>
+getRoomName</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getRoomName</B>()</PRE>
+<DL>
+<DD>Returns the display name of the meeting room.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String Room name</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRoomUrl()"><!-- --></A><H3>
+getRoomUrl</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getRoomUrl</B>()</PRE>
+<DL>
+<DD>Returns the meeting room URL
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String Meeting room URL</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPermaName(java.lang.String)"><!-- --></A><H3>
+setPermaName</H3>
+<PRE>
+public void <B>setPermaName</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;permaName)</PRE>
+<DL>
+<DD>Sets the permanent identifier for the room. By default, this is derived from the room's display name.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>permaName</CODE> - Permaname of the room.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPermaName()"><!-- --></A><H3>
+getPermaName</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getPermaName</B>()</PRE>
+<DL>
+<DD>Returns the permanent identifier for the room.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setOnBehalfOf(java.lang.String)"><!-- --></A><H3>
+setOnBehalfOf</H3>
+<PRE>
+public void <B>setOnBehalfOf</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;userid)</PRE>
+<DL>
+<DD>Sets the user on behalf of whom this meeting room will be created. Currently only applies for
+ room creation.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>userid</CODE> - </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPassword(java.lang.String)"><!-- --></A><H3>
+setPassword</H3>
+<PRE>
+public void <B>setPassword</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;password)</PRE>
+<DL>
+<DD>Sets the room password.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>password</CODE> - String</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPassword()"><!-- --></A><H3>
+getPassword</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getPassword</B>()</PRE>
+<DL>
+<DD>Returns the room password.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getManagersList()"><!-- --></A><H3>
+getManagersList</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt; <B>getManagersList</B>()</PRE>
+<DL>
+<DD>Returns the list of room managers. The room owner and creator are usually managers by default.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List<String> contains the managers' userIdes.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDescription(java.lang.String)"><!-- --></A><H3>
+setDescription</H3>
+<PRE>
+public void <B>setDescription</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</PRE>
+<DL>
+<DD>Sets the description of the room (optional).
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>description</CODE> - String</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDescription()"><!-- --></A><H3>
+getDescription</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDescription</B>()</PRE>
+<DL>
+<DD>Returns the description of the room.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String null if this was not set on room create</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUnlisted(boolean)"><!-- --></A><H3>
+setUnlisted</H3>
+<PRE>
+public void <B>setUnlisted</B>(boolean&nbsp;isUnlisted)</PRE>
+<DL>
+<DD>If true, makes the room hidden to other users. The room will not show up in search results.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>isUnlisted</CODE> - </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isUnlisted()"><!-- --></A><H3>
+isUnlisted</H3>
+<PRE>
+public boolean <B>isUnlisted</B>()</PRE>
+<DL>
+<DD>Returns if a room is hidden.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean true if hidden, false if not.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setExtendedData(java.lang.String, java.util.Map)"><!-- --></A><H3>
+setExtendedData</H3>
+<PRE>
+public void <B>setExtendedData</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id,
+                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&gt;&nbsp;extData)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getExtendedData(java.lang.String)"><!-- --></A><H3>
+getExtendedData</H3>
+<PRE>
+public com.ibm.json.java.JSONObject <B>getExtendedData</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id)</PRE>
+<DL>
+<DD>Returns the extended data associated with a specific plugin Id on the server. Note that this API call will only work against post 8.5.2 IFR servers. Else
+ it will return null
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The plugin Id whose extended data is requested
+<DT><B>Returns:</B><DD>JSONObject object containing key/value pairs of extended data properties</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getExtendedData()"><!-- --></A><H3>
+getExtendedData</H3>
+<PRE>
+public com.ibm.json.java.JSONArray <B>getExtendedData</B>()</PRE>
+<DL>
+<DD>Returns all the extended data for a room as JSONArray. This is an array of JSONObjects
+ keyed by the extension plugin Id on the server. Note that this API call will only work against post 8.5.2 IFR servers. Else
+ it will return null
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>JSONArray</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCallData(java.lang.String)"><!-- --></A><H3>
+setCallData</H3>
+<PRE>
+public void <B>setCallData</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;callData)</PRE>
+<DL>
+<DD>Sets the call-in info for the room (optional)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>callData</CODE> - </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setConferencingInfo(com.ibm.json.java.JSONObject)"><!-- --></A><H3>
+setConferencingInfo</H3>
+<PRE>
+public void <B>setConferencingInfo</B>(com.ibm.json.java.JSONObject&nbsp;confInfo)</PRE>
+<DL>
+<DD>Sets the A/V conferencing info for the room.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>confInfo</CODE> - A JSONObject representing the A/V conferencing info for the room 
+ or <code>null</code> to remove the current setting.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConferencingInfo()"><!-- --></A><H3>
+getConferencingInfo</H3>
+<PRE>
+public com.ibm.json.java.JSONObject <B>getConferencingInfo</B>()</PRE>
+<DL>
+<DD>Returns the A/V conferencing info associated with the room.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>JSONObject representing the conferencing info.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLibrarySize()"><!-- --></A><H3>
+getLibrarySize</H3>
+<PRE>
+public long <B>getLibrarySize</B>()</PRE>
+<DL>
+<DD>Returns he size, in bytes, of all the uploaded material in the meeting room. This does not include the 
+ size of converted material.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>long</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCallData()"><!-- --></A><H3>
+getCallData</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getCallData</B>()</PRE>
+<DL>
+<DD>Returns the call-in info associated with the room (if any).
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String Null if no call data was set.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDisposable(boolean)"><!-- --></A><H3>
+setDisposable</H3>
+<PRE>
+public void <B>setDisposable</B>(boolean&nbsp;isDisposable)</PRE>
+<DL>
+<DD>Indicates whether or not the room is a disposable, instant meeting room.
+ Since these rooms cannot have passwords, any password rules on the server are ignored if this flag is set.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>isDisposable</CODE> - true if the room is disposable.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isDisposable()"><!-- --></A><H3>
+isDisposable</H3>
+<PRE>
+public boolean <B>isDisposable</B>()</PRE>
+<DL>
+<DD>Returns if the room is disposable or not.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean true if the room is disposable.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSupportsLargeMeetings(boolean)"><!-- --></A><H3>
+setSupportsLargeMeetings</H3>
+<PRE>
+public void <B>setSupportsLargeMeetings</B>(boolean&nbsp;supportsLargeMeetings)</PRE>
+<DL>
+<DD>When set to true, it indicates whether or not a room will host large meetings. Certain features inside
+ the meeting room may be limited and a set of policies and permissions will be in play in the room. This mode is
+ mainly used for performance enhancements.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>supportsLargeMeetings</CODE> - boolean</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isLargeMeeting()"><!-- --></A><H3>
+isLargeMeeting</H3>
+<PRE>
+public boolean <B>isLargeMeeting</B>()</PRE>
+<DL>
+<DD>Returns if the room will host large meetings.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean true if the room will host large meetings.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setOriginType(java.lang.String)"><!-- --></A><H3>
+setOriginType</H3>
+<PRE>
+public void <B>setOriginType</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;originType)</PRE>
+<DL>
+<DD>Used to indicate from where the room originated (for instance, "companyXYZ" or "Corp123").
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>originType</CODE> - String</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOriginType()"><!-- --></A><H3>
+getOriginType</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getOriginType</B>()</PRE>
+<DL>
+<DD>Returns the origin type for the room if it was specified at creation time.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String Null if not set.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setOriginId(java.lang.String)"><!-- --></A><H3>
+setOriginId</H3>
+<PRE>
+public void <B>setOriginId</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;originId)</PRE>
+<DL>
+<DD>Used to store an associated ID for the room, when the room originated from some other source to be used with
+ originType.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>originId</CODE> - Associated ID for the room, when the room originated from some other source</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOriginId()"><!-- --></A><H3>
+getOriginId</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getOriginId</B>()</PRE>
+<DL>
+<DD>Returns the associated ID for the room, when the room originated from some other source.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String Associated ID for the room, when the room originated from some other source.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getId()"><!-- --></A><H3>
+getId</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getId</B>()</PRE>
+<DL>
+<DD>A version 4 GUID uniquely identifying a room. An ID is automatically generated for each room at time of creation.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String Room GUID</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOwnerName()"><!-- --></A><H3>
+getOwnerName</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getOwnerName</B>()</PRE>
+<DL>
+<DD>Returns the display name of the room owner. This is different from the ownerID. See <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getOwner()"><CODE>getOwner()</CODE></A>.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String Display name of the owner</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getActiveUserCount()"><!-- --></A><H3>
+getActiveUserCount</H3>
+<PRE>
+public long <B>getActiveUserCount</B>()</PRE>
+<DL>
+<DD>Returns the number of users currently active in the meeting room.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>long Active user count</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="allowsVideo()"><!-- --></A><H3>
+allowsVideo</H3>
+<PRE>
+public boolean <B>allowsVideo</B>()</PRE>
+<DL>
+<DD>Returns a boolean indicating whether the room allows video.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean True if the room allows video</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCreatedDate()"><!-- --></A><H3>
+getCreatedDate</H3>
+<PRE>
+public long <B>getCreatedDate</B>()</PRE>
+<DL>
+<DD>Returns the date, in milliseconds, at which the room was created.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>long The date, in milliseconds, at which the room was created.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCreator()"><!-- --></A><H3>
+getCreator</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getCreator</B>()</PRE>
+<DL>
+<DD>Returns the creator of the room. In most cases, this is the same as the owner. However, these can be different.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String: userId of the creator.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="hasPassword()"><!-- --></A><H3>
+hasPassword</H3>
+<PRE>
+public boolean <B>hasPassword</B>()</PRE>
+<DL>
+<DD>Returns true if the room has a password
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean True if the room has a password. False, otherwise</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isRestricted()"><!-- --></A><H3>
+isRestricted</H3>
+<PRE>
+public boolean <B>isRestricted</B>()</PRE>
+<DL>
+<DD>Indicates if a room is restricted or has managed access.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean True if the room is restricted. False, otherwise</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRestricted(boolean)"><!-- --></A><H3>
+setRestricted</H3>
+<PRE>
+public void <B>setRestricted</B>(boolean&nbsp;restricted)</PRE>
+<DL>
+<DD>Sets the restricted flag on a room.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>restricted</CODE> - True if the room should be restricted. False, otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLastAccessed()"><!-- --></A><H3>
+getLastAccessed</H3>
+<PRE>
+public long <B>getLastAccessed</B>()</PRE>
+<DL>
+<DD>Returns the time, in milliseconds, of the last significant room event. This includes when a user joins,leaves etc..
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>long The time, in milliseconds, of the last significant room event</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setOrg(java.lang.String)"><!-- --></A><H3>
+setOrg</H3>
+<PRE>
+public void <B>setOrg</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;org)</PRE>
+<DL>
+<DD>Used to set the organization associated with the meeting room.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOrg()"><!-- --></A><H3>
+getOrg</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getOrg</B>()</PRE>
+<DL>
+<DD>Returns the organization field if set during room creation
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String The organization associated with the room</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOwner()"><!-- --></A><H3>
+getOwner</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getOwner</B>()</PRE>
+<DL>
+<DD>Returns the ID (userId) of the owner.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String The owner's userId</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.html?is-external=true#toString()" title="class or interface in java.util">toString</A></CODE> in class <CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.html?is-external=true" title="class or interface in java.util">AbstractMap</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/AbstractMap.html?is-external=true#toString()" title="class or interface in java.util"><CODE>AbstractMap.toString()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOwnerIconUrl()"><!-- --></A><H3>
+getOwnerIconUrl</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getOwnerIconUrl</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/AdminRoomServices.html" title="class in com.ibm.rtc.client.meeting.room"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryControl.html" title="class in com.ibm.rtc.client.meeting.room"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/rtc/client/meeting/room/MeetingRoom.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MeetingRoom.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_classes_inherited_from_class_java.util.AbstractMap">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2011, 2011  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

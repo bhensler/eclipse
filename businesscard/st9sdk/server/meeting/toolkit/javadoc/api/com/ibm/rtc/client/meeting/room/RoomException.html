@@ -1,0 +1,642 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+RoomException (IBM Lotus Sametime 8.5.2 SDK: IBM Sametime Meeting Remote Client API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="RoomException (IBM Lotus Sametime 8.5.2 SDK: IBM Sametime Meeting Remote Client API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryResults.html" title="class in com.ibm.rtc.client.meeting.room"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html" title="class in com.ibm.rtc.client.meeting.room"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/rtc/client/meeting/room/RoomException.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RoomException.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.rtc.client.meeting.room</FONT>
+<BR>
+Class RoomException</H2>
+<PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">java.lang.Throwable</A>
+      <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">java.lang.Exception</A>
+          <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../com/ibm/rtc/client/http/BaseException.html" title="class in com.ibm.rtc.client.http">com.ibm.rtc.client.http.BaseException</A>
+              <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.rtc.client.meeting.room.RoomException</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>RoomException</B><DT>extends <A HREF="../../../../../../com/ibm/rtc/client/http/BaseException.html" title="class in com.ibm.rtc.client.http">BaseException</A></DL>
+</PRE>
+
+<P>
+Used to distinguish exceptions related to the use of the room management REST API, where the remote client
+ is able to communicate with the server, but the server is not able to fulfill the request for some reason.
+ The methods on this class provide the details needed to distinguish between several different types of issues.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../serialized-form.html#com.ibm.rtc.client.meeting.room.RoomException">Serialized Form</A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#CONFLICTING_ROOM_NAME">CONFLICTING_ROOM_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 8, meaning that while attempting
+ to process a requests to create a room, it's parameters were in conflict with
+ a pre-existing room's name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#DANGEROUS_CONTENT_ERROR">DANGEROUS_CONTENT_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 4, meaning that while attempting
+ to save some free form text (ex: room name, description, etc.), dangerous
+ content, such as active JavaScript content was detected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#INSUFFICIENT_ACCESS_ERROR">INSUFFICIENT_ACCESS_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 6, meaning that while attempting
+ to process a request, the user does not have certain privileges, for
+ example, some features are only available to users mapped to the 'admin' role.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#INSUFFICIENT_PASSWORD_ERROR">INSUFFICIENT_PASSWORD_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 0, meaning the password supplied, 
+ does not comply with the server's configuration for password settings.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#INVALID_PARAMETER_ERROR">INVALID_PARAMETER_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 7, meaning that while attempting
+ to process a requests, at least one parameter's value was invalid or out of range.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#INVALID_USERID_ERROR">INVALID_USERID_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 1, meaning one of the userId's
+ used in the request is invalid.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#MAXIMUM_LIMIT_EXCEEDED_ERROR">MAXIMUM_LIMIT_EXCEEDED_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 3, meaning that while attempting
+ to create a new room for a specific user, the user is already at maximum
+ capacity, according to the policy assigned to the user, or one of the user's group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#MISSING_SECURITY_TOKEN_ERROR">MISSING_SECURITY_TOKEN_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 5, meaning that while attempting
+ to process the requests, the security token was missing.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#ROOM_MIGRATION_ERROR">ROOM_MIGRATION_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 2, meaning that while attempting
+ to migrate a room from a classic server, an error occurred.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#UNDEFINED_ERROR">UNDEFINED_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server was able to specify a distinct error value from the REST API,
+ however, the HTTP status code might give relevant information, likewise
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#toString()" title="class or interface in java.lang"><CODE>Throwable.toString()</CODE></A> might give more details.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#USER_NOT_AUTHENTIC">USER_NOT_AUTHENTIC</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The server sent distinct error value 9, meaning that while attempting
+ to process a requests to create a room, the user was not authentic</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getErrorCode()">getErrorCode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the application specific error code from the server, related to room management.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getHttpStatusCode()">getHttpStatusCode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the general HTTP status code, associated with this exception.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getMessage()">getMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getParameterName()">getParameterName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If there is a specific parameter associated with the error code, this returns parameter name as a string, otherwise returns null.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()">getReasonText</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If there is text associated with the error code, returns non-localized text, otherwise this returns <code>null</code>.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.rtc.client.http.BaseException"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.ibm.rtc.client.http.<A HREF="../../../../../../com/ibm/rtc/client/http/BaseException.html" title="class in com.ibm.rtc.client.http">BaseException</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/rtc/client/http/BaseException.html#getHttpResponse()">getHttpResponse</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/BaseException.html#getStatusCode()">getStatusCode</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/BaseException.html#getStatusText()">getStatusText</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Throwable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#fillInStackTrace()" title="class or interface in java.lang">fillInStackTrace</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getCause()" title="class or interface in java.lang">getCause</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getLocalizedMessage()" title="class or interface in java.lang">getLocalizedMessage</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getStackTrace()" title="class or interface in java.lang">getStackTrace</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#initCause(java.lang.Throwable)" title="class or interface in java.lang">initCause</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#printStackTrace()" title="class or interface in java.lang">printStackTrace</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#printStackTrace(java.io.PrintStream)" title="class or interface in java.lang">printStackTrace</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#printStackTrace(java.io.PrintWriter)" title="class or interface in java.lang">printStackTrace</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#setStackTrace(java.lang.StackTraceElement[])" title="class or interface in java.lang">setStackTrace</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#toString()" title="class or interface in java.lang">toString</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="UNDEFINED_ERROR"><!-- --></A><H3>
+UNDEFINED_ERROR</H3>
+<PRE>
+public static final int <B>UNDEFINED_ERROR</B></PRE>
+<DL>
+<DD>The server was able to specify a distinct error value from the REST API,
+ however, the HTTP status code might give relevant information, likewise
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#toString()" title="class or interface in java.lang"><CODE>Throwable.toString()</CODE></A> might give more details.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getHttpStatusCode()"><CODE>getHttpStatusCode()</CODE></A>, 
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#toString()" title="class or interface in java.lang"><CODE>Throwable.toString()</CODE></A>, 
+<A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.UNDEFINED_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INSUFFICIENT_PASSWORD_ERROR"><!-- --></A><H3>
+INSUFFICIENT_PASSWORD_ERROR</H3>
+<PRE>
+public static final int <B>INSUFFICIENT_PASSWORD_ERROR</B></PRE>
+<DL>
+<DD>The server sent distinct error value 0, meaning the password supplied, 
+ does not comply with the server's configuration for password settings.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.INSUFFICIENT_PASSWORD_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INVALID_USERID_ERROR"><!-- --></A><H3>
+INVALID_USERID_ERROR</H3>
+<PRE>
+public static final int <B>INVALID_USERID_ERROR</B></PRE>
+<DL>
+<DD>The server sent distinct error value 1, meaning one of the userId's
+ used in the request is invalid.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A>, 
+<A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.INVALID_USERID_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ROOM_MIGRATION_ERROR"><!-- --></A><H3>
+ROOM_MIGRATION_ERROR</H3>
+<PRE>
+public static final int <B>ROOM_MIGRATION_ERROR</B></PRE>
+<DL>
+<DD>The server sent distinct error value 2, meaning that while attempting
+ to migrate a room from a classic server, an error occurred.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A>, 
+<A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.ROOM_MIGRATION_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MAXIMUM_LIMIT_EXCEEDED_ERROR"><!-- --></A><H3>
+MAXIMUM_LIMIT_EXCEEDED_ERROR</H3>
+<PRE>
+public static final int <B>MAXIMUM_LIMIT_EXCEEDED_ERROR</B></PRE>
+<DL>
+<DD>The server sent distinct error value 3, meaning that while attempting
+ to create a new room for a specific user, the user is already at maximum
+ capacity, according to the policy assigned to the user, or one of the user's group.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A>, 
+<A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.MAXIMUM_LIMIT_EXCEEDED_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DANGEROUS_CONTENT_ERROR"><!-- --></A><H3>
+DANGEROUS_CONTENT_ERROR</H3>
+<PRE>
+public static final int <B>DANGEROUS_CONTENT_ERROR</B></PRE>
+<DL>
+<DD>The server sent distinct error value 4, meaning that while attempting
+ to save some free form text (ex: room name, description, etc.), dangerous
+ content, such as active JavaScript content was detected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A>, 
+<A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.DANGEROUS_CONTENT_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MISSING_SECURITY_TOKEN_ERROR"><!-- --></A><H3>
+MISSING_SECURITY_TOKEN_ERROR</H3>
+<PRE>
+public static final int <B>MISSING_SECURITY_TOKEN_ERROR</B></PRE>
+<DL>
+<DD>The server sent distinct error value 5, meaning that while attempting
+ to process the requests, the security token was missing.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A>, 
+<A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.MISSING_SECURITY_TOKEN_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INSUFFICIENT_ACCESS_ERROR"><!-- --></A><H3>
+INSUFFICIENT_ACCESS_ERROR</H3>
+<PRE>
+public static final int <B>INSUFFICIENT_ACCESS_ERROR</B></PRE>
+<DL>
+<DD>The server sent distinct error value 6, meaning that while attempting
+ to process a request, the user does not have certain privileges, for
+ example, some features are only available to users mapped to the 'admin' role.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A>, 
+<A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.INSUFFICIENT_ACCESS_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INVALID_PARAMETER_ERROR"><!-- --></A><H3>
+INVALID_PARAMETER_ERROR</H3>
+<PRE>
+public static final int <B>INVALID_PARAMETER_ERROR</B></PRE>
+<DL>
+<DD>The server sent distinct error value 7, meaning that while attempting
+ to process a requests, at least one parameter's value was invalid or out of range.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getParameterName()"><CODE>for more details.</CODE></A>, 
+<A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.INVALID_PARAMETER_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFLICTING_ROOM_NAME"><!-- --></A><H3>
+CONFLICTING_ROOM_NAME</H3>
+<PRE>
+public static final int <B>CONFLICTING_ROOM_NAME</B></PRE>
+<DL>
+<DD>The server sent distinct error value 8, meaning that while attempting
+ to process a requests to create a room, it's parameters were in conflict with
+ a pre-existing room's name.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.CONFLICTING_ROOM_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="USER_NOT_AUTHENTIC"><!-- --></A><H3>
+USER_NOT_AUTHENTIC</H3>
+<PRE>
+public static final int <B>USER_NOT_AUTHENTIC</B></PRE>
+<DL>
+<DD>The server sent distinct error value 9, meaning that while attempting
+ to process a requests to create a room, the user was not authentic
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.rtc.client.meeting.room.RoomException.USER_NOT_AUTHENTIC">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getMessage()"><!-- --></A><H3>
+getMessage</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getMessage</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true#getMessage()" title="class or interface in java.lang">getMessage</A></CODE> in class <CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getHttpStatusCode()"><!-- --></A><H3>
+getHttpStatusCode</H3>
+<PRE>
+public int <B>getHttpStatusCode</B>()</PRE>
+<DL>
+<DD>Returns the general HTTP status code, associated with this exception.
+ For a more specific, and application oriented error code, use <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getErrorCode()"><CODE>getErrorCode()</CODE></A>
+ and for the textual reason, use <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A>.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The general HTTP status code associated with this exception.<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getErrorCode()"><CODE>getErrorCode()</CODE></A>, 
+<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getParameterName()"><CODE>getParameterName()</CODE></A>, 
+<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getErrorCode()"><!-- --></A><H3>
+getErrorCode</H3>
+<PRE>
+public int <B>getErrorCode</B>()</PRE>
+<DL>
+<DD>Returns the application specific error code from the server, related to room management.
+ See the constants defined in this class for more detail:
+ <ul>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#UNDEFINED_ERROR"><CODE>UNDEFINED_ERROR</CODE></A></li>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#DANGEROUS_CONTENT_ERROR"><CODE>DANGEROUS_CONTENT_ERROR</CODE></A></li>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#INSUFFICIENT_PASSWORD_ERROR"><CODE>INSUFFICIENT_PASSWORD_ERROR</CODE></A></li>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#INVALID_USERID_ERROR"><CODE>INVALID_USERID_ERROR</CODE></A></li>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#ROOM_MIGRATION_ERROR"><CODE>ROOM_MIGRATION_ERROR</CODE></A></li>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#MAXIMUM_LIMIT_EXCEEDED_ERROR"><CODE>MAXIMUM_LIMIT_EXCEEDED_ERROR</CODE></A></li>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#DANGEROUS_CONTENT_ERROR"><CODE>DANGEROUS_CONTENT_ERROR</CODE></A></li>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#MISSING_SECURITY_TOKEN_ERROR"><CODE>MISSING_SECURITY_TOKEN_ERROR</CODE></A></li>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#INSUFFICIENT_ACCESS_ERROR"><CODE>INSUFFICIENT_ACCESS_ERROR</CODE></A></li>
+ <li><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#INVALID_PARAMETER_ERROR"><CODE>INVALID_PARAMETER_ERROR</CODE></A></li>
+ </ul>
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the application specific error code from the server, related to room management.<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getHttpStatusCode()"><CODE>getHttpStatusCode()</CODE></A>, 
+<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getParameterName()"><CODE>getParameterName()</CODE></A>, 
+<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getReasonText()"><!-- --></A><H3>
+getReasonText</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getReasonText</B>()</PRE>
+<DL>
+<DD>If there is text associated with the error code, returns non-localized text, otherwise this returns <code>null</code>.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the reason text, or <code>null</code> if there is no reason text.<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getErrorCode()"><CODE>getErrorCode()</CODE></A>, 
+<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getHttpStatusCode()"><CODE>getHttpStatusCode()</CODE></A>, 
+<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getParameterName()"><CODE>getParameterName()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParameterName()"><!-- --></A><H3>
+getParameterName</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getParameterName</B>()</PRE>
+<DL>
+<DD>If there is a specific parameter associated with the error code, this returns parameter name as a string, otherwise returns null.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the parameter name, or <code>null</code> if there is no specific parameter related to this exception.<DT><B>See Also:</B><DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getErrorCode()"><CODE>getErrorCode()</CODE></A>, 
+<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getHttpStatusCode()"><CODE>getHttpStatusCode()</CODE></A>, 
+<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html#getReasonText()"><CODE>getReasonText()</CODE></A></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryResults.html" title="class in com.ibm.rtc.client.meeting.room"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html" title="class in com.ibm.rtc.client.meeting.room"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/rtc/client/meeting/room/RoomException.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RoomException.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2011, 2011  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

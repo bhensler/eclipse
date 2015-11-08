@@ -1,0 +1,1312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+VideoDeviceController (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="VideoDeviceController (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoResolution.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="VideoDeviceController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.device</FONT>
+<BR>
+Interface VideoDeviceController</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceNotifier</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VideoChatDeviceController</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVideoChatDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractVideoChatDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVideoDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractVideoDeviceController</A></DD>
+</DL>
+<HR>
+<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I>
+<P>
+<DL>
+<DT><PRE><FONT SIZE="-1">@Deprecated
+</FONT>public interface <B>VideoDeviceController</B><DT>extends <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A></DL>
+</PRE>
+
+<P>
+VideoDeviceController is used to control local computer video devices.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_BIT_RATE">CAPABILITY_BIT_RATE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The desired bit rate can be determined and set, and supported
+ bit rates can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_CAMERA_DEVICE">CAPABILITY_CAMERA_DEVICE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The camera device can be determined and set, and available camera
+ devices can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_DISPLAY_DEVICE">CAPABILITY_DISPLAY_DEVICE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The video display device can be determined and set, and available
+ display devices can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_FRAME_RATE">CAPABILITY_FRAME_RATE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The desired frame rate can be determined and set, and supported
+ frame rates can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_GET_VIDEO_PORT">CAPABILITY_GET_VIDEO_PORT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The device's video port can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_LOCAL_VIDEO_PREVIEW">CAPABILITY_LOCAL_VIDEO_PREVIEW</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The ability to preview local video is supported, for example, when the user
+ selects the preview option in the Sametime Connect video preferences.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_RESOLUTION">CAPABILITY_RESOLUTION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The video resolution can be determined and set, and supported
+ resolutions can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_SET_VIDEO_PORT">CAPABILITY_SET_VIDEO_PORT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The device's video port can be set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_VIDEO_CODEC">CAPABILITY_VIDEO_CODEC</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The video codec can be determined and set, and supported codecs
+ can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#CAPABILITY_VIDEO_TEST">CAPABILITY_VIDEO_TEST</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;A video test can be performed.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceController"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_DO_NOT_DISTURB">CAPABILITY_DO_NOT_DISTURB</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_FEATURE_ID">CAPABILITY_FEATURE_ID</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MICROPHONE_BOOST">CAPABILITY_MICROPHONE_BOOST</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MICROPHONE_VOLUME">CAPABILITY_MICROPHONE_VOLUME</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MUTE_MICROPHONE">CAPABILITY_MUTE_MICROPHONE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MUTE_SPEAKER">CAPABILITY_MUTE_SPEAKER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE">CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE">CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SHOW_PROPERTIES">CAPABILITY_SHOW_PROPERTIES</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SPEAKER_VOLUME">CAPABILITY_SPEAKER_VOLUME</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getAvailableCameraDevices()">getAvailableCameraDevices</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns a list of available video camera devices, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getAvailableDisplayDevices()">getAvailableDisplayDevices</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns a list of available video display devices, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getBitRate()">getBitRate</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the desired video bit rate in kilobits per second, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getCameraDevice()">getCameraDevice</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the current camera device used for video capture, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getDisplayDevice()">getDisplayDevice</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the current device used for video display, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getFrameRate()">getFrameRate</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the desired video frame rate in frames per second, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoResolution.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VideoResolution</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getResolution()">getResolution</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the current video resolution, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getSupportedBitRates()">getSupportedBitRates</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns a list of supported video bit rates in kilobits per second, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getSupportedFrameRates()">getSupportedFrameRates</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns a list of supported video frame rates in frames per second, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getSupportedResolutions()">getSupportedResolutions</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns a list of supported video resolutions, if supported by the
+ service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getSupportedVideoCodecs()">getSupportedVideoCodecs</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns a list of supported video codecs, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getUnavailableCameraDevices()">getUnavailableCameraDevices</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns a list of the detected but unavailable video camera devices, 
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getVideoCodec()">getVideoCodec</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the name of the current video codec, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getVideoPort()">getVideoPort</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the device's video port, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#isLocalPreviewInProgress()">isLocalPreviewInProgress</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if a local video preview for this device is in progress,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#isVideoTestInProgress()">isVideoTestInProgress</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if a video test for this device is in progress,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#setBitRate(int)">setBitRate</A></B>(int&nbsp;kbps)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the desired video bit rate in kilobits per second, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#setCameraDevice(java.lang.String)">setCameraDevice</A></B>(java.lang.String&nbsp;device)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the camera device used for video capture, if supported by the
+ service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#setDisplayDevice(java.lang.String)">setDisplayDevice</A></B>(java.lang.String&nbsp;device)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the device used for video display, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#setFrameRate(int)">setFrameRate</A></B>(int&nbsp;fps)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the desired video frame rate in frames per second, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#setResolution(com.ibm.collaboration.realtime.telephony.device.VideoResolution)">setResolution</A></B>(<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoResolution.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VideoResolution</A>&nbsp;resolution)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the current video resolution, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#setVideoCodec(java.lang.String)">setVideoCodec</A></B>(java.lang.String&nbsp;codec)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the name of the current video codec, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#setVideoPort(java.lang.String)">setVideoPort</A></B>(java.lang.String&nbsp;port)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the device's video port, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#startLocalPreview(org.eclipse.swt.widgets.Canvas)">startLocalPreview</A></B>(org.eclipse.swt.widgets.Canvas&nbsp;canvas)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Begins a local video preview, using the current video device settings
+ and the specified SWT canvas, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#startVideoTest()">startVideoTest</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Begins a video test for this device, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#stopLocalPreview()">stopLocalPreview</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Stops an in-progress local video preview for this device, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#stopVideoTest()">stopVideoTest</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Stops an in-progress video test for this device.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceController"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#decreaseMicrophoneVolume()">decreaseMicrophoneVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#decreaseSpeakerVolume()">decreaseSpeakerVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getDeviceAddress()">getDeviceAddress</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getFeature(java.lang.String)">getFeature</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getMicrophoneVolume()">getMicrophoneVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getSpeakerVolume()">getSpeakerVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#increaseMicrophoneVolume()">increaseMicrophoneVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#increaseSpeakerVolume()">increaseSpeakerVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isDoNotDisturb()">isDoNotDisturb</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isFeatureEnabled(java.lang.String)">isFeatureEnabled</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isMicrophoneBoostEnabled()">isMicrophoneBoostEnabled</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isMicrophoneMuted()">isMicrophoneMuted</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isSpeakerMuted()">isSpeakerMuted</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#muteMicrophone()">muteMicrophone</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#muteSpeaker()">muteSpeaker</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setDoNotDisturb(boolean)">setDoNotDisturb</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeature(java.lang.String, java.lang.Object)">setFeature</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeatureEnabled(java.lang.String, boolean)">setFeatureEnabled</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setMicrophoneBoostEnabled(boolean)">setMicrophoneBoostEnabled</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setMicrophoneVolume(double)">setMicrophoneVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setSpeakerVolume(double)">setSpeakerVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#showProperties()">showProperties</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#unmuteMicrophone()">unmuteMicrophone</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#unmuteSpeaker()">unmuteSpeaker</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceNotifier"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceNotifier</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html#addListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">addListener</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html#removeListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">removeListener</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CAPABILITY_BIT_RATE"><!-- --></A><H3>
+CAPABILITY_BIT_RATE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_BIT_RATE</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The desired bit rate can be determined and set, and supported
+ bit rates can be determined.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_BIT_RATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_CAMERA_DEVICE"><!-- --></A><H3>
+CAPABILITY_CAMERA_DEVICE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_CAMERA_DEVICE</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The camera device can be determined and set, and available camera
+ devices can be determined.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_CAMERA_DEVICE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_DISPLAY_DEVICE"><!-- --></A><H3>
+CAPABILITY_DISPLAY_DEVICE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_DISPLAY_DEVICE</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The video display device can be determined and set, and available
+ display devices can be determined.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_DISPLAY_DEVICE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_FRAME_RATE"><!-- --></A><H3>
+CAPABILITY_FRAME_RATE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_FRAME_RATE</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The desired frame rate can be determined and set, and supported
+ frame rates can be determined.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_FRAME_RATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_GET_VIDEO_PORT"><!-- --></A><H3>
+CAPABILITY_GET_VIDEO_PORT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_GET_VIDEO_PORT</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The device's video port can be determined.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_GET_VIDEO_PORT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_LOCAL_VIDEO_PREVIEW"><!-- --></A><H3>
+CAPABILITY_LOCAL_VIDEO_PREVIEW</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_LOCAL_VIDEO_PREVIEW</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The ability to preview local video is supported, for example, when the user
+ selects the preview option in the Sametime Connect video preferences.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_LOCAL_VIDEO_PREVIEW">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RESOLUTION"><!-- --></A><H3>
+CAPABILITY_RESOLUTION</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RESOLUTION</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The video resolution can be determined and set, and supported
+ resolutions can be determined.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_RESOLUTION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_VIDEO_PORT"><!-- --></A><H3>
+CAPABILITY_SET_VIDEO_PORT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_VIDEO_PORT</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The device's video port can be set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_SET_VIDEO_PORT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_VIDEO_CODEC"><!-- --></A><H3>
+CAPABILITY_VIDEO_CODEC</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_VIDEO_CODEC</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The video codec can be determined and set, and supported codecs
+ can be determined.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_VIDEO_CODEC">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_VIDEO_TEST"><!-- --></A><H3>
+CAPABILITY_VIDEO_TEST</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_VIDEO_TEST</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>A video test can be performed.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.VideoDeviceController.CAPABILITY_VIDEO_TEST">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getAvailableCameraDevices()"><!-- --></A><H3>
+getAvailableCameraDevices</H3>
+<PRE>
+java.util.List <B>getAvailableCameraDevices</B>()
+                                         throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns a list of available video camera devices, if supported
+ by the service provider. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getCameraDevice()"><CODE>getCameraDevice()</CODE></A> to
+ determine which camera device is currently being used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of strings for names of available camera devices.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUnavailableCameraDevices()"><!-- --></A><H3>
+getUnavailableCameraDevices</H3>
+<PRE>
+java.util.List <B>getUnavailableCameraDevices</B>()
+                                           throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns a list of the detected but unavailable video camera devices, 
+ if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of strings for names of unavailable camera devices.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAvailableDisplayDevices()"><!-- --></A><H3>
+getAvailableDisplayDevices</H3>
+<PRE>
+java.util.List <B>getAvailableDisplayDevices</B>()
+                                          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns a list of available video display devices, if supported
+ by the service provider. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getDisplayDevice()"><CODE>getDisplayDevice()</CODE></A> to
+ determine which display device is currently being used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of strings for names of available display devices.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBitRate()"><!-- --></A><H3>
+getBitRate</H3>
+<PRE>
+int <B>getBitRate</B>()
+               throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the desired video bit rate in kilobits per second, if
+ supported by the service provider. See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#setBitRate(int)"><CODE>setBitRate(int)</CODE></A>
+ for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Desired bit rate in kilobits per second, 0 if none specified.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCameraDevice()"><!-- --></A><H3>
+getCameraDevice</H3>
+<PRE>
+java.lang.String <B>getCameraDevice</B>()
+                                 throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the current camera device used for video capture, if
+ supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Name of current video camera device, null for default device.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDisplayDevice()"><!-- --></A><H3>
+getDisplayDevice</H3>
+<PRE>
+java.lang.String <B>getDisplayDevice</B>()
+                                  throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the current device used for video display, if supported
+ by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Name of current video display device, null for default device.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFrameRate()"><!-- --></A><H3>
+getFrameRate</H3>
+<PRE>
+int <B>getFrameRate</B>()
+                 throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the desired video frame rate in frames per second, if
+ supported by the service provider. See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#setFrameRate(int)"><CODE>setFrameRate(int)</CODE></A>
+ for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Desired frame rate in frames per second, 0 if none specified.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getResolution()"><!-- --></A><H3>
+getResolution</H3>
+<PRE>
+<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoResolution.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VideoResolution</A> <B>getResolution</B>()
+                              throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the current video resolution, if supported by the service
+ provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Current video resolution, null if none specified.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedBitRates()"><!-- --></A><H3>
+getSupportedBitRates</H3>
+<PRE>
+java.util.List <B>getSupportedBitRates</B>()
+                                    throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns a list of supported video bit rates in kilobits per second, if
+ supported by the service provider. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getBitRate()"><CODE>getBitRate()</CODE></A> to
+ determine which desired bit rate is currently being used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of Integers for supported bit rates, in kilobits per second.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedFrameRates()"><!-- --></A><H3>
+getSupportedFrameRates</H3>
+<PRE>
+java.util.List <B>getSupportedFrameRates</B>()
+                                      throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns a list of supported video frame rates in frames per second, if
+ supported by the service provider. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getFrameRate()"><CODE>getFrameRate()</CODE></A> to
+ determine which desired frame rate is currently being used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of Integers for supported frame rates, in frames per second.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedResolutions()"><!-- --></A><H3>
+getSupportedResolutions</H3>
+<PRE>
+java.util.List <B>getSupportedResolutions</B>()
+                                       throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns a list of supported video resolutions, if supported by the
+ service provider. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getResolution()"><CODE>getResolution()</CODE></A> to determine which
+ resolution is currently being used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoResolution.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><CODE>VideoResolution</CODE></A> objects supported resolutions.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedVideoCodecs()"><!-- --></A><H3>
+getSupportedVideoCodecs</H3>
+<PRE>
+java.util.List <B>getSupportedVideoCodecs</B>()
+                                       throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns a list of supported video codecs, if supported by the service
+ provider. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getVideoCodec()"><CODE>getVideoCodec()</CODE></A> to determine which codec is
+ currently being used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of strings for names of supported codecs.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVideoCodec()"><!-- --></A><H3>
+getVideoCodec</H3>
+<PRE>
+java.lang.String <B>getVideoCodec</B>()
+                               throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the name of the current video codec, if supported by the service
+ provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Current video codec, null if none specified.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVideoPort()"><!-- --></A><H3>
+getVideoPort</H3>
+<PRE>
+java.lang.String <B>getVideoPort</B>()
+                              throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the device's video port, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Video port, null if none specified.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isLocalPreviewInProgress()"><!-- --></A><H3>
+isLocalPreviewInProgress</H3>
+<PRE>
+boolean <B>isLocalPreviewInProgress</B>()
+                                 throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if a local video preview for this device is in progress,
+ if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if a local video preview is in progress, false otherwise.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVideoTestInProgress()"><!-- --></A><H3>
+isVideoTestInProgress</H3>
+<PRE>
+boolean <B>isVideoTestInProgress</B>()
+                              throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if a video test for this device is in progress,
+ if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if a video test is in progress, false otherwise.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setBitRate(int)"><!-- --></A><H3>
+setBitRate</H3>
+<PRE>
+void <B>setBitRate</B>(int&nbsp;kbps)
+                throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the desired video bit rate in kilobits per second, if supported
+ by the service provider. The specified bit rate should be one of the
+ values returned by <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getSupportedBitRates()"><CODE>getSupportedBitRates()</CODE></A>. The actual bit
+ rate used will be determined by the service provider, based on the
+ selected codec, frame rate, and resolution.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>kbps</CODE> - desired bit rate in kilobits per second
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the bit rate is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCameraDevice(java.lang.String)"><!-- --></A><H3>
+setCameraDevice</H3>
+<PRE>
+void <B>setCameraDevice</B>(java.lang.String&nbsp;device)
+                     throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the camera device used for video capture, if supported by the
+ service provider. The input should be one of the devices returned by
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getAvailableCameraDevices()"><CODE>getAvailableCameraDevices()</CODE></A>, or null for the default device.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>device</CODE> - camera device to use for video capture, null to use default device
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the device is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDisplayDevice(java.lang.String)"><!-- --></A><H3>
+setDisplayDevice</H3>
+<PRE>
+void <B>setDisplayDevice</B>(java.lang.String&nbsp;device)
+                      throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the device used for video display, if supported by the service
+ provider. The input should be one of the devices returned by
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getAvailableDisplayDevices()"><CODE>getAvailableDisplayDevices()</CODE></A>, or null for the default device.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>device</CODE> - device to use for video display, null to use default device
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the device is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFrameRate(int)"><!-- --></A><H3>
+setFrameRate</H3>
+<PRE>
+void <B>setFrameRate</B>(int&nbsp;fps)
+                  throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the desired video frame rate in frames per second, if supported
+ by the service provider. The specified frame rate should be one of
+ the values returned by <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getSupportedFrameRates()"><CODE>getSupportedFrameRates()</CODE></A>. The actual
+ frame rate used will be determined by the service provider, based on
+ the selected codec, bit rate, and resolution.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>fps</CODE> - desired frame rate in frames per second
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the frame rate is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setResolution(com.ibm.collaboration.realtime.telephony.device.VideoResolution)"><!-- --></A><H3>
+setResolution</H3>
+<PRE>
+void <B>setResolution</B>(<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoResolution.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VideoResolution</A>&nbsp;resolution)
+                   throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the current video resolution, if supported by the service
+ provider. The specified resolution should be one of the values
+ returned by <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getSupportedResolutions()"><CODE>getSupportedResolutions()</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>resolution</CODE> - current video resolution
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the resolution is null or invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setVideoCodec(java.lang.String)"><!-- --></A><H3>
+setVideoCodec</H3>
+<PRE>
+void <B>setVideoCodec</B>(java.lang.String&nbsp;codec)
+                   throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the name of the current video codec, if supported by the service
+ provider. The specified codec should be one of the names returned by
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html#getSupportedVideoCodecs()"><CODE>getSupportedVideoCodecs()</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>codec</CODE> - video codec name
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the codec name is null or invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setVideoPort(java.lang.String)"><!-- --></A><H3>
+setVideoPort</H3>
+<PRE>
+void <B>setVideoPort</B>(java.lang.String&nbsp;port)
+                  throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the device's video port, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>port</CODE> - video port
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the port is null or invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startLocalPreview(org.eclipse.swt.widgets.Canvas)"><!-- --></A><H3>
+startLocalPreview</H3>
+<PRE>
+void <B>startLocalPreview</B>(org.eclipse.swt.widgets.Canvas&nbsp;canvas)
+                       throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Begins a local video preview, using the current video device settings
+ and the specified SWT canvas, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>canvas</CODE> - SWT canvas for local video
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the STW canvas is null
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startVideoTest()"><!-- --></A><H3>
+startVideoTest</H3>
+<PRE>
+void <B>startVideoTest</B>()
+                    throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Begins a video test for this device, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopLocalPreview()"><!-- --></A><H3>
+stopLocalPreview</H3>
+<PRE>
+void <B>stopLocalPreview</B>()
+                      throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Stops an in-progress local video preview for this device, if supported
+ by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidOperationException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidOperationException</A></CODE> - if no video preview is in progress
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopVideoTest()"><!-- --></A><H3>
+stopVideoTest</H3>
+<PRE>
+void <B>stopVideoTest</B>()
+                   throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Stops an in-progress video test for this device.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidOperationException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidOperationException</A></CODE> - if no video test is in progress
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoResolution.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="VideoDeviceController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

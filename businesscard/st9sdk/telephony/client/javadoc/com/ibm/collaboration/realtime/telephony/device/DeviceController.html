@@ -1,0 +1,1185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+DeviceController (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="DeviceController (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/CallForwardingOptions.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/DeviceController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DeviceController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.device</FONT>
+<BR>
+Interface DeviceController</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceNotifier</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">PhoneDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VideoChatDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VideoDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VoiceChatDeviceController</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractPhoneDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractPhoneDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVideoChatDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractVideoChatDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVideoDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractVideoDeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVoiceChatDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractVoiceChatDeviceController</A></DD>
+</DL>
+<HR>
+<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I>
+<P>
+<DL>
+<DT><PRE><FONT SIZE="-1">@Deprecated
+</FONT>public interface <B>DeviceController</B><DT>extends <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceNotifier</A></DL>
+</PRE>
+
+<P>
+DeviceController is the base interface for controllers of audio and
+ video devices used for telephony.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_DO_NOT_DISTURB">CAPABILITY_DO_NOT_DISTURB</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The device has a do-not-disturb mode that can be determined and set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_FEATURE_ID">CAPABILITY_FEATURE_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Device features can be determined or set by feature ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MICROPHONE_BOOST">CAPABILITY_MICROPHONE_BOOST</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The device supports microphone boost.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MICROPHONE_VOLUME">CAPABILITY_MICROPHONE_VOLUME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The microphone volume can be determined and set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MUTE_MICROPHONE">CAPABILITY_MUTE_MICROPHONE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The device's microphone can be muted and unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MUTE_SPEAKER">CAPABILITY_MUTE_SPEAKER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The device's speaker can be muted and unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE">CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The microphone volume can be increased or decreased relative to the current setting.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE">CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The speaker volume can be increased or decreased relative to the current setting.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SHOW_PROPERTIES">CAPABILITY_SHOW_PROPERTIES</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The service provider can display properties for the device.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SPEAKER_VOLUME">CAPABILITY_SPEAKER_VOLUME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The speaker volume can be determined and set.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#decreaseMicrophoneVolume()">decreaseMicrophoneVolume</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Decreases the microphone volumne, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#decreaseSpeakerVolume()">decreaseSpeakerVolume</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Decreases the speaker volumne, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getDeviceAddress()">getDeviceAddress</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the device's address, if set by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Object</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getFeature(java.lang.String)">getFeature</A></B>(java.lang.String&nbsp;featureId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the settings of the specified device feature, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;double</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getMicrophoneVolume()">getMicrophoneVolume</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the microphone volumne, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;double</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getSpeakerVolume()">getSpeakerVolume</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the speaker volumne, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#increaseMicrophoneVolume()">increaseMicrophoneVolume</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Increases the microphone volumne, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#increaseSpeakerVolume()">increaseSpeakerVolume</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Increases the speaker volumne, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A></B>(java.lang.String&nbsp;capability)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if the device supports the specified capability.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isDoNotDisturb()">isDoNotDisturb</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if do-not-disturb (DND) mode is enabled,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isFeatureEnabled(java.lang.String)">isFeatureEnabled</A></B>(java.lang.String&nbsp;featureId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if the specified device feature is enabled, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isMicrophoneBoostEnabled()">isMicrophoneBoostEnabled</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if microphone boost is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isMicrophoneMuted()">isMicrophoneMuted</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if the device's microphone is muted, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isSpeakerMuted()">isSpeakerMuted</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if the device's speaker is muted, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#muteMicrophone()">muteMicrophone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Mutes the device's microphone, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#muteSpeaker()">muteSpeaker</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Mutes the device's speaker, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setDoNotDisturb(boolean)">setDoNotDisturb</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Enables or disables do-not-disturb (DND) mode,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeature(java.lang.String, java.lang.Object)">setFeature</A></B>(java.lang.String&nbsp;featureId,
+           java.lang.Object&nbsp;settings)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Changes the settings of the specified device feature, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeatureEnabled(java.lang.String, boolean)">setFeatureEnabled</A></B>(java.lang.String&nbsp;featureId,
+                  boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Enables or disables the specified device feature, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setMicrophoneBoostEnabled(boolean)">setMicrophoneBoostEnabled</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Enables or disables microphone boost, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setMicrophoneVolume(double)">setMicrophoneVolume</A></B>(double&nbsp;volume)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the microphone volumne, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setSpeakerVolume(double)">setSpeakerVolume</A></B>(double&nbsp;volume)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the speaker volumne, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#showProperties()">showProperties</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Displays properties for the device, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#unmuteMicrophone()">unmuteMicrophone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Unmutes the device's microphone, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#unmuteSpeaker()">unmuteSpeaker</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Unutes the device's speaker, if supported by the service provider.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceNotifier"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceNotifier</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html#addListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">addListener</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html#removeListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">removeListener</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CAPABILITY_DO_NOT_DISTURB"><!-- --></A><H3>
+CAPABILITY_DO_NOT_DISTURB</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_DO_NOT_DISTURB</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The device has a do-not-disturb mode that can be determined and set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_DO_NOT_DISTURB">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_FEATURE_ID"><!-- --></A><H3>
+CAPABILITY_FEATURE_ID</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_FEATURE_ID</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Device features can be determined or set by feature ID.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_FEATURE_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MICROPHONE_BOOST"><!-- --></A><H3>
+CAPABILITY_MICROPHONE_BOOST</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MICROPHONE_BOOST</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The device supports microphone boost.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_MICROPHONE_BOOST">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MICROPHONE_VOLUME"><!-- --></A><H3>
+CAPABILITY_MICROPHONE_VOLUME</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MICROPHONE_VOLUME</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The microphone volume can be determined and set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_MICROPHONE_VOLUME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MUTE_MICROPHONE"><!-- --></A><H3>
+CAPABILITY_MUTE_MICROPHONE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MUTE_MICROPHONE</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The device's microphone can be muted and unmuted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_MUTE_MICROPHONE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MUTE_SPEAKER"><!-- --></A><H3>
+CAPABILITY_MUTE_SPEAKER</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MUTE_SPEAKER</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The device's speaker can be muted and unmuted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_MUTE_SPEAKER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE"><!-- --></A><H3>
+CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The microphone volume can be increased or decreased relative to the current setting.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE"><!-- --></A><H3>
+CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The speaker volume can be increased or decreased relative to the current setting.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SHOW_PROPERTIES"><!-- --></A><H3>
+CAPABILITY_SHOW_PROPERTIES</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SHOW_PROPERTIES</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The service provider can display properties for the device.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_SHOW_PROPERTIES">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SPEAKER_VOLUME"><!-- --></A><H3>
+CAPABILITY_SPEAKER_VOLUME</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SPEAKER_VOLUME</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The speaker volume can be determined and set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.DeviceController.CAPABILITY_SPEAKER_VOLUME">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="decreaseMicrophoneVolume()"><!-- --></A><H3>
+decreaseMicrophoneVolume</H3>
+<PRE>
+void <B>decreaseMicrophoneVolume</B>()
+                              throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Decreases the microphone volumne, if supported by the service provider.
+ The service provider determines how much to decrease the volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="decreaseSpeakerVolume()"><!-- --></A><H3>
+decreaseSpeakerVolume</H3>
+<PRE>
+void <B>decreaseSpeakerVolume</B>()
+                           throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Decreases the speaker volumne, if supported by the service provider.
+ The service provider determines how much to decrease the volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDeviceAddress()"><!-- --></A><H3>
+getDeviceAddress</H3>
+<PRE>
+java.lang.String <B>getDeviceAddress</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the device's address, if set by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Device address, null if none specified.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFeature(java.lang.String)"><!-- --></A><H3>
+getFeature</H3>
+<PRE>
+java.lang.Object <B>getFeature</B>(java.lang.String&nbsp;featureId)
+                            throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the settings of the specified device feature, if supported
+ by the service provider. See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeature(java.lang.String, java.lang.Object)"><CODE>setFeature(String, Object)</CODE></A>
+ for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>featureId</CODE> - feature ID
+<DT><B>Returns:</B><DD>Device feature settings
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the ID is null or invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMicrophoneVolume()"><!-- --></A><H3>
+getMicrophoneVolume</H3>
+<PRE>
+double <B>getMicrophoneVolume</B>()
+                           throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the microphone volumne, if supported by the service provider.
+ The volume can range from 0 though 1, where 1 is the maximum volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Microphone volume (0-1).
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSpeakerVolume()"><!-- --></A><H3>
+getSpeakerVolume</H3>
+<PRE>
+double <B>getSpeakerVolume</B>()
+                        throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the speaker volumne, if supported by the service provider.
+ The volume can range from 0 though 1, where 1 is the maximum volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Speaker volume (0-1).
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5 (replaces com.ibm.collaboration.realtime.telephony.AudioDeviceController.getSpeakerVolume)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="increaseMicrophoneVolume()"><!-- --></A><H3>
+increaseMicrophoneVolume</H3>
+<PRE>
+void <B>increaseMicrophoneVolume</B>()
+                              throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Increases the microphone volumne, if supported by the service provider.
+ The service provider determines how much to increase the volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="increaseSpeakerVolume()"><!-- --></A><H3>
+increaseSpeakerVolume</H3>
+<PRE>
+void <B>increaseSpeakerVolume</B>()
+                           throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Increases the speaker volumne, if supported by the service provider.
+ The service provider determines how much to increase the volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isCapabilitySupported(java.lang.String)"><!-- --></A><H3>
+isCapabilitySupported</H3>
+<PRE>
+boolean <B>isCapabilitySupported</B>(java.lang.String&nbsp;capability)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if the device supports the specified capability. The
+ capabilities are specified by CAPABILITY_xxx constants defined in
+ this interface and subinterfaces.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>capability</CODE> - capability to test, one of the CAPABILITY_xxx values
+<DT><B>Returns:</B><DD>true if specified capability is supported, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isDoNotDisturb()"><!-- --></A><H3>
+isDoNotDisturb</H3>
+<PRE>
+boolean <B>isDoNotDisturb</B>()
+                       throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if do-not-disturb (DND) mode is enabled,
+ if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if DND mode is enabled, false otherwise.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isFeatureEnabled(java.lang.String)"><!-- --></A><H3>
+isFeatureEnabled</H3>
+<PRE>
+boolean <B>isFeatureEnabled</B>(java.lang.String&nbsp;featureId)
+                         throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if the specified device feature is enabled, if supported
+ by the service provider. See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeature(java.lang.String, java.lang.Object)"><CODE>setFeature(String, Object)</CODE></A>
+ for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>featureId</CODE> - feature ID
+<DT><B>Returns:</B><DD>true if specified feature is enabled, false otherwise.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the ID is null or invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isMicrophoneBoostEnabled()"><!-- --></A><H3>
+isMicrophoneBoostEnabled</H3>
+<PRE>
+boolean <B>isMicrophoneBoostEnabled</B>()
+                                 throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if microphone boost is enabled. Returns false if the
+ service provider does not support microphone boost.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if microphone boost is enabled, false otherwise.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isMicrophoneMuted()"><!-- --></A><H3>
+isMicrophoneMuted</H3>
+<PRE>
+boolean <B>isMicrophoneMuted</B>()
+                          throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if the device's microphone is muted, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if microphone is muted, false otherwise.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSpeakerMuted()"><!-- --></A><H3>
+isSpeakerMuted</H3>
+<PRE>
+boolean <B>isSpeakerMuted</B>()
+                       throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if the device's speaker is muted, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if speaker is muted, false otherwise.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="muteMicrophone()"><!-- --></A><H3>
+muteMicrophone</H3>
+<PRE>
+void <B>muteMicrophone</B>()
+                    throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Mutes the device's microphone, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="muteSpeaker()"><!-- --></A><H3>
+muteSpeaker</H3>
+<PRE>
+void <B>muteSpeaker</B>()
+                 throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Mutes the device's speaker, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDoNotDisturb(boolean)"><!-- --></A><H3>
+setDoNotDisturb</H3>
+<PRE>
+void <B>setDoNotDisturb</B>(boolean&nbsp;flag)
+                     throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Enables or disables do-not-disturb (DND) mode,
+ if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true to enable DND mode, false to disable
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFeature(java.lang.String, java.lang.Object)"><!-- --></A><H3>
+setFeature</H3>
+<PRE>
+void <B>setFeature</B>(java.lang.String&nbsp;featureId,
+                java.lang.Object&nbsp;settings)
+                throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Changes the settings of the specified device feature, if
+ supported by the service provider. This mechanism is used
+ to provide third-party plug-ins with access to device
+ features that are not specifically supported by Sametime
+ Connect. Both the feature ID and the feature settings data
+ type are determined by the service provider. For features
+ that have only two states (enabled and disabled) and no
+ other settings, use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeatureEnabled(java.lang.String, boolean)"><CODE>setFeatureEnabled(String, boolean)</CODE></A>
+ instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>featureId</CODE> - feature ID<DD><CODE>settings</CODE> - feature settings
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if either parameter is null or invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFeatureEnabled(java.lang.String, boolean)"><!-- --></A><H3>
+setFeatureEnabled</H3>
+<PRE>
+void <B>setFeatureEnabled</B>(java.lang.String&nbsp;featureId,
+                       boolean&nbsp;flag)
+                       throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Enables or disables the specified device feature, if supported
+ by the service provider. See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeature(java.lang.String, java.lang.Object)"><CODE>setFeature(String, Object)</CODE></A>
+ for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>featureId</CODE> - feature ID<DD><CODE>flag</CODE> - true to enable feature, false to disable
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the ID is null or invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMicrophoneBoostEnabled(boolean)"><!-- --></A><H3>
+setMicrophoneBoostEnabled</H3>
+<PRE>
+void <B>setMicrophoneBoostEnabled</B>(boolean&nbsp;flag)
+                               throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Enables or disables microphone boost, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true to enable microphone boost, false to disable boost
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMicrophoneVolume(double)"><!-- --></A><H3>
+setMicrophoneVolume</H3>
+<PRE>
+void <B>setMicrophoneVolume</B>(double&nbsp;volume)
+                         throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the microphone volumne, if supported by the service provider.
+ The volume can range from 0 though 1, where 1 is the maximum volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>volume</CODE> - microphone volume (0-1)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the volume is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSpeakerVolume(double)"><!-- --></A><H3>
+setSpeakerVolume</H3>
+<PRE>
+void <B>setSpeakerVolume</B>(double&nbsp;volume)
+                      throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the speaker volumne, if supported by the service provider.
+ The volume can range from 0 though 1, where 1 is the maximum volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>volume</CODE> - speaker volume (0-1)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the volume is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5 (replaces com.ibm.collaboration.realtime.telephony.AudioDeviceController.setSpeakerVolume)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="showProperties()"><!-- --></A><H3>
+showProperties</H3>
+<PRE>
+void <B>showProperties</B>()
+                    throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Displays properties for the device, if supported by the service provider.
+ The service provider handles the user interface for device properties.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unmuteMicrophone()"><!-- --></A><H3>
+unmuteMicrophone</H3>
+<PRE>
+void <B>unmuteMicrophone</B>()
+                      throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Unmutes the device's microphone, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unmuteSpeaker()"><!-- --></A><H3>
+unmuteSpeaker</H3>
+<PRE>
+void <B>unmuteSpeaker</B>()
+                   throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Unutes the device's speaker, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/CallForwardingOptions.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/DeviceController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DeviceController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

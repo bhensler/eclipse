@@ -1,0 +1,726 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+QuickFindResult (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="QuickFindResult (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindPersonResult.html" title="class in com.ibm.collaboration.realtime.quickfind"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/quickfind/QuickFindResult.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="QuickFindResult.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.quickfind</FONT>
+<BR>
+Class QuickFindResult</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.quickfind.QuickFindResult</B>
+</PRE>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindGroupResult.html" title="class in com.ibm.collaboration.realtime.quickfind">QuickFindGroupResult</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindPersonResult.html" title="class in com.ibm.collaboration.realtime.quickfind">QuickFindPersonResult</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>QuickFindResult</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+QuickFindResult is used to return the results of a search from the QuickFindWidget.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#QuickFindResult()">QuickFindResult</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default constructor.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#QuickFindResult(java.lang.String)">QuickFindResult</A></B>(java.lang.String&nbsp;r)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a QuickFindResult object given a single result String.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#QuickFindResult(java.lang.String[])">QuickFindResult</A></B>(java.lang.String[]&nbsp;r)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a QuickFindResult object given the array of result Strings.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Object</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#getData()">getData</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get optional data for this result.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#getKeywords()">getKeywords</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the keywords used in the quick find search to generate this result object, if available.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#getMaxRank()">getMaxRank</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the maximum rank available from this result's source.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#getNumResults()">getNumResults</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the number of results the search generated which are contained in this results object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#getRank()">getRank</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the rank of the result.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#getResults()">getResults</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the array of results from the search.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#getSearchString()">getSearchString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the search string used in the quick find search this result object is used with.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#getServiceName()">getServiceName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the name of the search service that returned this results.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.Date</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#getTimestamp()">getTimestamp</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the timestamp of this result, if one exists.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#performDefaultAction()">performDefaultAction</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Defines the default action for handling the result.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#performRightClickAction(com.ibm.collaboration.realtime.quickfind.ui.QuickFindWidget, org.eclipse.swt.graphics.Point)">performRightClickAction</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/ui/QuickFindWidget.html" title="class in com.ibm.collaboration.realtime.quickfind.ui">QuickFindWidget</A>&nbsp;qfw,
+                        org.eclipse.swt.graphics.Point&nbsp;loc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Defines the default action for handling the result when a user right clicks.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#setData(java.lang.Object)">setData</A></B>(java.lang.Object&nbsp;data)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set optional data for this result.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#setKeywords(java.lang.String)">setKeywords</A></B>(java.lang.String&nbsp;keywords)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the keywords to use with this quick find search.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#setMaxRank(int)">setMaxRank</A></B>(int&nbsp;maxRank)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the max rank available by this result's source.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#setRank(int)">setRank</A></B>(int&nbsp;rank)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the rank of the result.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#setResults(java.lang.String[])">setResults</A></B>(java.lang.String[]&nbsp;results)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the result array to use with this object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#setSearchString(java.lang.String)">setSearchString</A></B>(java.lang.String&nbsp;searchString)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the search string to use with this quick find search result object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#setServiceName(java.lang.String)">setServiceName</A></B>(java.lang.String&nbsp;serviceName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the name of the source search service for this result.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#setTimestamp(java.util.Date)">setTimestamp</A></B>(java.util.Date&nbsp;timestamp)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set a timestamp for the result.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindResult.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return a string representation of this result object</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="QuickFindResult()"><!-- --></A><H3>
+QuickFindResult</H3>
+<PRE>
+public <B>QuickFindResult</B>()</PRE>
+<DL>
+<DD>The default constructor.
+<P>
+</DL>
+<HR>
+
+<A NAME="QuickFindResult(java.lang.String[])"><!-- --></A><H3>
+QuickFindResult</H3>
+<PRE>
+public <B>QuickFindResult</B>(java.lang.String[]&nbsp;r)</PRE>
+<DL>
+<DD>Construct a QuickFindResult object given the array of result Strings. These strings are used in the quick find dropdown display
+ to represent the data returned in this result.
+<P>
+</DL>
+<HR>
+
+<A NAME="QuickFindResult(java.lang.String)"><!-- --></A><H3>
+QuickFindResult</H3>
+<PRE>
+public <B>QuickFindResult</B>(java.lang.String&nbsp;r)</PRE>
+<DL>
+<DD>Construct a QuickFindResult object given a single result String. This string is used in the quick find dropdown display
+ to represent the data returned in this result.
+<P>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getResults()"><!-- --></A><H3>
+getResults</H3>
+<PRE>
+public java.lang.String[] <B>getResults</B>()</PRE>
+<DL>
+<DD>Returns the array of results from the search.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String array of results.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setResults(java.lang.String[])"><!-- --></A><H3>
+setResults</H3>
+<PRE>
+public void <B>setResults</B>(java.lang.String[]&nbsp;results)</PRE>
+<DL>
+<DD>Sets the result array to use with this object.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>results</CODE> - String array of results.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public java.lang.String <B>toString</B>()</PRE>
+<DL>
+<DD>Return a string representation of this result object
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE>toString</CODE> in class <CODE>java.lang.Object</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String representation of this result object.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeywords()"><!-- --></A><H3>
+getKeywords</H3>
+<PRE>
+public java.lang.String <B>getKeywords</B>()</PRE>
+<DL>
+<DD>Returns the keywords used in the quick find search to generate this result object, if available. A data source
+ may only use some words provided in the search string to find its results. This is used to provide feedback back
+ to the system about which words it is using.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String of keywords used in search.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setKeywords(java.lang.String)"><!-- --></A><H3>
+setKeywords</H3>
+<PRE>
+public void <B>setKeywords</B>(java.lang.String&nbsp;keywords)</PRE>
+<DL>
+<DD>Set the keywords to use with this quick find search. This is usually set by the data source.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>keywords</CODE> - String keywords to use with this search.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRank()"><!-- --></A><H3>
+getRank</H3>
+<PRE>
+public int <B>getRank</B>()</PRE>
+<DL>
+<DD>Returns the rank of the result. Results may be ranked by their source for accuracy. This rank
+ can then be used for filtering purposes.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Rank of the result.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRank(int)"><!-- --></A><H3>
+setRank</H3>
+<PRE>
+public void <B>setRank</B>(int&nbsp;rank)</PRE>
+<DL>
+<DD>Set the rank of the result. This is useful for customizing rankings based on user preferences and
+ for normalizing ranks between results returned from multiple sources which use different ranking scales.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>rank</CODE> - Rank of the result.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTimestamp()"><!-- --></A><H3>
+getTimestamp</H3>
+<PRE>
+public java.util.Date <B>getTimestamp</B>()</PRE>
+<DL>
+<DD>Get the timestamp of this result, if one exists.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Timestamp</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTimestamp(java.util.Date)"><!-- --></A><H3>
+setTimestamp</H3>
+<PRE>
+public void <B>setTimestamp</B>(java.util.Date&nbsp;timestamp)</PRE>
+<DL>
+<DD>Set a timestamp for the result.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>timestamp</CODE> - Date timestamp for the result.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMaxRank()"><!-- --></A><H3>
+getMaxRank</H3>
+<PRE>
+public int <B>getMaxRank</B>()</PRE>
+<DL>
+<DD>Return the maximum rank available from this result's source. The methods getRank and getMaxRank will give the implementor an
+ X out of Y scale which can be used for normalization against results from other sources. This is set by the data source.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Maximum rank for this result.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMaxRank(int)"><!-- --></A><H3>
+setMaxRank</H3>
+<PRE>
+public void <B>setMaxRank</B>(int&nbsp;maxRank)</PRE>
+<DL>
+<DD>Set the max rank available by this result's source. This gives context to the rank returned by getRank and is helpful for
+ normalizing against results from other sources.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>maxRank</CODE> - Maximum rank for this result.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumResults()"><!-- --></A><H3>
+getNumResults</H3>
+<PRE>
+public int <B>getNumResults</B>()</PRE>
+<DL>
+<DD>Return the number of results the search generated which are contained in this results object.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Number of results this search generated.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSearchString()"><!-- --></A><H3>
+getSearchString</H3>
+<PRE>
+public java.lang.String <B>getSearchString</B>()</PRE>
+<DL>
+<DD>Returns the search string used in the quick find search this result object is used with. This is the raw string provided by the user
+ in the QuickFindWidget.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The search string for this result object.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSearchString(java.lang.String)"><!-- --></A><H3>
+setSearchString</H3>
+<PRE>
+public void <B>setSearchString</B>(java.lang.String&nbsp;searchString)</PRE>
+<DL>
+<DD>Sets the search string to use with this quick find search result object. This is the raw string provided by the user
+ in the QuickFindWidget.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>searchString</CODE> - The search string.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getServiceName()"><!-- --></A><H3>
+getServiceName</H3>
+<PRE>
+public java.lang.String <B>getServiceName</B>()</PRE>
+<DL>
+<DD>Returns the name of the search service that returned this results.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The name of the search service.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setServiceName(java.lang.String)"><!-- --></A><H3>
+setServiceName</H3>
+<PRE>
+public void <B>setServiceName</B>(java.lang.String&nbsp;serviceName)</PRE>
+<DL>
+<DD>Sets the name of the source search service for this result.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>serviceName</CODE> - The name of the source search service.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setData(java.lang.Object)"><!-- --></A><H3>
+setData</H3>
+<PRE>
+public void <B>setData</B>(java.lang.Object&nbsp;data)</PRE>
+<DL>
+<DD>Set optional data for this result. A typical example would be the Person object associated with the result whose
+ name is returned from the getResults method.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>data</CODE> - Optional data for this result.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getData()"><!-- --></A><H3>
+getData</H3>
+<PRE>
+public java.lang.Object <B>getData</B>()</PRE>
+<DL>
+<DD>Get optional data for this result. A typical example would be the Person object associated with the result whose
+ name is returned from the getResults method.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Optional data for this result.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="performDefaultAction()"><!-- --></A><H3>
+performDefaultAction</H3>
+<PRE>
+public void <B>performDefaultAction</B>()</PRE>
+<DL>
+<DD>Defines the default action for handling the result. This is typically set by the data source on a per class basis.
+ For example a QuickFindPersonResult's default action is to start a chat with that person. It is possible for implementors
+ to define their own custom result types with their own default actions.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="performRightClickAction(com.ibm.collaboration.realtime.quickfind.ui.QuickFindWidget, org.eclipse.swt.graphics.Point)"><!-- --></A><H3>
+performRightClickAction</H3>
+<PRE>
+public void <B>performRightClickAction</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/ui/QuickFindWidget.html" title="class in com.ibm.collaboration.realtime.quickfind.ui">QuickFindWidget</A>&nbsp;qfw,
+                                    org.eclipse.swt.graphics.Point&nbsp;loc)</PRE>
+<DL>
+<DD>Defines the default action for handling the result when a user right clicks. This is typically set by the data source on a
+ per class basis. It is possible for implementors to define their own custom result types with their own default actions.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>qfw</CODE> - The quick find widget associated with this result.<DD><CODE>loc</CODE> - The location point that was clicked.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/quickfind/QuickFindPersonResult.html" title="class in com.ibm.collaboration.realtime.quickfind"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/quickfind/QuickFindResult.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="QuickFindResult.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

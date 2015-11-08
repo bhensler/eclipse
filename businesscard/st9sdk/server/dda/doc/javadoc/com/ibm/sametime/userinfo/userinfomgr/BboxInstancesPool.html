@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>BboxInstancesPool</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="BboxInstancesPool";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html" title="class in com.ibm.sametime.userinfo.userinfomgr"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html" target="_top">Frames</a></li>
+<li><a href="BboxInstancesPool.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.ibm.sametime.userinfo.userinfomgr</div>
+<h2 title="Class BboxInstancesPool" class="title">Class BboxInstancesPool</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.ibm.sametime.userinfo.userinfomgr.BboxInstancesPool</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">BboxInstancesPool</span>
+extends java.lang.Object</pre>
+<div class="block">This class represents a pool of black box instances. The Instances are bb
+ objects that represent a connection to a db/ directory and thie number is
+ limited the Instances will be created , initialized and stored in a data
+ structure. when tha application needs to perform an operation that requires
+ accessing a db or directory it will ask an instance from the pool and return
+ it when the operation completes.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html#BboxInstancesPool(java.lang.String, int, int)">BboxInstancesPool</a></strong>(java.lang.String&nbsp;implName,
+                 int&nbsp;maxInstances,
+                 int&nbsp;priority)</code>
+<div class="block">The ctor method iitializes the pool and fills it with objects</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html#closeConnections()">closeConnections</a></strong>()</code>
+<div class="block">Nicely terminates instances in a pool</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html#getBbNameForPool()">getBbNameForPool</a></strong>()</code>
+<div class="block">REturns the black box name that this object supports</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html#getBbPriorityForPool()">getBbPriorityForPool</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/UserInfoBlackBoxAPI.html" title="interface in com.ibm.sametime.userinfo.userInfobbapi">UserInfoBlackBoxAPI</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html#getInstanceFromPool()">getInstanceFromPool</a></strong>()</code>
+<div class="block">Returns an object from the pool once it is available.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html#getNumberOfObjectsInPool()">getNumberOfObjectsInPool</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html#isPoolInitialized()">isPoolInitialized</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html#returnToPool(com.ibm.sametime.userinfo.userInfobbapi.UserInfoBlackBoxAPI)">returnToPool</a></strong>(<a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/UserInfoBlackBoxAPI.html" title="interface in com.ibm.sametime.userinfo.userInfobbapi">UserInfoBlackBoxAPI</a>&nbsp;implObj)</code>
+<div class="block">places the object back into the pool</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html#stop()">stop</a></strong>()</code>
+<div class="block">signals to stop allocating instances or removing existing objects from
+ the pool</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="BboxInstancesPool(java.lang.String, int, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BboxInstancesPool</h4>
+<pre>public&nbsp;BboxInstancesPool(java.lang.String&nbsp;implName,
+                 int&nbsp;maxInstances,
+                 int&nbsp;priority)</pre>
+<div class="block">The ctor method iitializes the pool and fills it with objects</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>implName</code> - -
+            the name of the class to load and create an instance of</dd><dd><code>maxInstances</code> - -
+            the maximum nyumber of objects this pool will hold. This
+            information is read from a configuration file</dd><dd><code>priority</code> - the priority of the pool according to the blsck box priority</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getInstanceFromPool()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInstanceFromPool</h4>
+<pre>public&nbsp;<a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/UserInfoBlackBoxAPI.html" title="interface in com.ibm.sametime.userinfo.userInfobbapi">UserInfoBlackBoxAPI</a>&nbsp;getInstanceFromPool()</pre>
+<div class="block">Returns an object from the pool once it is available.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>UserInfoBlackBoxAPI - an objecct from the pool or a new one that
+         was created if we havent reached the _maxInstancesAloowed limit</dd></dl>
+</li>
+</ul>
+<a name="returnToPool(com.ibm.sametime.userinfo.userInfobbapi.UserInfoBlackBoxAPI)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>returnToPool</h4>
+<pre>public&nbsp;void&nbsp;returnToPool(<a href="../../../../../com/ibm/sametime/userinfo/userInfobbapi/UserInfoBlackBoxAPI.html" title="interface in com.ibm.sametime.userinfo.userInfobbapi">UserInfoBlackBoxAPI</a>&nbsp;implObj)</pre>
+<div class="block">places the object back into the pool</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>implObj-</code> - the object to return to pool</dd></dl>
+</li>
+</ul>
+<a name="stop()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stop</h4>
+<pre>public&nbsp;void&nbsp;stop()</pre>
+<div class="block">signals to stop allocating instances or removing existing objects from
+ the pool</div>
+</li>
+</ul>
+<a name="getBbNameForPool()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBbNameForPool</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getBbNameForPool()</pre>
+<div class="block">REturns the black box name that this object supports</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>String - the name of the black box that the pool holds its
+         objects</dd></dl>
+</li>
+</ul>
+<a name="getBbPriorityForPool()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBbPriorityForPool</h4>
+<pre>public&nbsp;int&nbsp;getBbPriorityForPool()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the priority of these pool as assigned to in the ctor int</dd></dl>
+</li>
+</ul>
+<a name="isPoolInitialized()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isPoolInitialized</h4>
+<pre>public&nbsp;boolean&nbsp;isPoolInitialized()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the state f the pool whether it wapopulate with valid instances
+         boolean</dd></dl>
+</li>
+</ul>
+<a name="closeConnections()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>closeConnections</h4>
+<pre>public&nbsp;void&nbsp;closeConnections()</pre>
+<div class="block">Nicely terminates instances in a pool</div>
+</li>
+</ul>
+<a name="getNumberOfObjectsInPool()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getNumberOfObjectsInPool</h4>
+<pre>public&nbsp;int&nbsp;getNumberOfObjectsInPool()</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../../com/ibm/sametime/userinfo/userinfomgr/UserInfoMgr.html" title="class in com.ibm.sametime.userinfo.userinfomgr"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/ibm/sametime/userinfo/userinfomgr/BboxInstancesPool.html" target="_top">Frames</a></li>
+<li><a href="BboxInstancesPool.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

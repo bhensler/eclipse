@@ -1,0 +1,32 @@
+Connect APIs Toolkit:
+- stjavatk.jar
+Java Toolkit:
+- CommRes.jar
+- STComm.jar
+- stcommsrvrtk.jar
+- stjavatk.jar
+- sturlcon10.dll
+- StConnAgent70.dll
+- StConnAgent70.exe
+Community Server Toolkit:
+- CommRes.jar
+- stcommsrvrtk.jar
+Database and Directory Access Toolkit:
+- libstts.so for AIX and Linux
+- stts.lib for Windows
+Sametime Gateway Toolkit:
+- rtcgw_samplesEAR.ear
+Telephony Conferencing Service Provider Interface Toolkit:
+- TelephonyService.jar
+Client Telephony Toolkit:
+- com.ibm.collaboration.realtime.telephony.core
+Advanced Toolkit: 
+- CallCenterApp.ear
+- compliance.sample.jar
+- LdapAdapter.jar
+ST Meeting Remote Client API Toolkit:
+- meeting.client.core.jar
+- json4j.jar
+- httpclient-4.0.1.jar
+- httpcore-4.0.1.jar
+- apache-mime4j-0.6.jar

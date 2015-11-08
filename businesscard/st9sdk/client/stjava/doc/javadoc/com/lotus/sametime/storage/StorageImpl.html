@@ -1,0 +1,781 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>StorageImpl</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="StorageImpl";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/storage/StorageEvent.html" title="class in com.lotus.sametime.storage"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/storage/StorageRequest.html" title="class in com.lotus.sametime.storage"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/storage/StorageImpl.html" target="_top">Frames</a></li>
+<li><a href="StorageImpl.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.storage</div>
+<h2 title="Class StorageImpl" class="title">Class StorageImpl</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">com.lotus.sametime.core.comparch.STCompPart</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html" title="class in com.lotus.sametime.core.comparch">com.lotus.sametime.core.comparch.STCompImpl</a></li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.storage.StorageImpl</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../com/lotus/sametime/community/ChannelListener.html" title="interface in com.lotus.sametime.community">ChannelListener</a>, <a href="../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a>, <a href="../../../../com/lotus/sametime/community/OTMServiceListener.html" title="interface in com.lotus.sametime.community">OTMServiceListener</a>, <a href="../../../../com/lotus/sametime/community/ServiceListener.html" title="interface in com.lotus.sametime.community">ServiceListener</a>, java.util.EventListener</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">StorageImpl</span>
+extends <a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html" title="class in com.lotus.sametime.core.comparch">STCompImpl</a>
+implements <a href="../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a>, <a href="../../../../com/lotus/sametime/community/ChannelListener.html" title="interface in com.lotus.sametime.community">ChannelListener</a>, <a href="../../../../com/lotus/sametime/community/ServiceListener.html" title="interface in com.lotus.sametime.community">ServiceListener</a>, <a href="../../../../com/lotus/sametime/community/OTMServiceListener.html" title="interface in com.lotus.sametime.community">OTMServiceListener</a></pre>
+<div class="block">Storage semantic component</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#m_enableBuffering">m_enableBuffering</a></strong></code>
+<div class="block">Flag indicating whether buffering will be enabled/disabled when the
+ storage service is down.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static short</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#ST_OTM_STORAGE_CHANGED">ST_OTM_STORAGE_CHANGED</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static short</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#ST_OTM_STORAGE_SUBSCRIBE">ST_OTM_STORAGE_SUBSCRIBE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static short</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#ST_OTM_STORAGE_UNSUBSCRIBE">ST_OTM_STORAGE_UNSUBSCRIBE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static short</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#VPCONFIG_STORAGE_GET">VPCONFIG_STORAGE_GET</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static short</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#VPCONFIG_STORAGE_ONGET">VPCONFIG_STORAGE_ONGET</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static short</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#VPCONFIG_STORAGE_ONSET">VPCONFIG_STORAGE_ONSET</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static short</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#VPCONFIG_STORAGE_SET">VPCONFIG_STORAGE_SET</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#StorageImpl(com.lotus.sametime.core.comparch.STSession)">StorageImpl</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)</code>
+<div class="block">Constructor</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#channelClosed(com.lotus.sametime.community.ChannelEvent)">channelClosed</a></strong>(<a href="../../../../com/lotus/sametime/community/ChannelEvent.html" title="class in com.lotus.sametime.community">ChannelEvent</a>&nbsp;event)</code>
+<div class="block">The channel was closed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#channelMsgReceived(com.lotus.sametime.community.ChannelEvent)">channelMsgReceived</a></strong>(<a href="../../../../com/lotus/sametime/community/ChannelEvent.html" title="class in com.lotus.sametime.community">ChannelEvent</a>&nbsp;event)</code>
+<div class="block">Message sent on channel.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#channelOpened(com.lotus.sametime.community.ChannelEvent)">channelOpened</a></strong>(<a href="../../../../com/lotus/sametime/community/ChannelEvent.html" title="class in com.lotus.sametime.community">ChannelEvent</a>&nbsp;event)</code>
+<div class="block">A channel was opened.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#channelOpenFailed(com.lotus.sametime.community.ChannelEvent)">channelOpenFailed</a></strong>(<a href="../../../../com/lotus/sametime/community/ChannelEvent.html" title="class in com.lotus.sametime.community">ChannelEvent</a>&nbsp;event)</code>
+<div class="block">Failed to open the channel.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#checkTimeout(int)">checkTimeout</a></strong>(int&nbsp;timeout)</code>
+<div class="block">Checks for all request that their timeout is expired and sends a failed
+ response.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#componentLoaded(com.lotus.sametime.core.comparch.STCompApi)">componentLoaded</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STCompApi.html" title="interface in com.lotus.sametime.core.comparch">STCompApi</a>&nbsp;newComponent)</code>
+<div class="block">Listen to notification on newly loaded components.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#get(java.lang.Integer, java.util.Vector, com.lotus.sametime.core.types.STUser)">get</a></strong>(java.lang.Integer&nbsp;requestId,
+   java.util.Vector&nbsp;v,
+   <a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;stUser)</code>
+<div class="block">Get the value for a list of ids.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#isServiceUp()">isServiceUp</a></strong>()</code>
+<div class="block">Check if the storage service server application is ready.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#loggedIn(com.lotus.sametime.community.LoginEvent)">loggedIn</a></strong>(<a href="../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</code>
+<div class="block">Logged in event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#loggedOut(com.lotus.sametime.community.LoginEvent)">loggedOut</a></strong>(<a href="../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</code>
+<div class="block">Logged out - Clean whatever's needed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#otmRecieved(com.lotus.sametime.community.OTMEvent)">otmRecieved</a></strong>(<a href="../../../../com/lotus/sametime/community/OTMEvent.html" title="class in com.lotus.sametime.community">OTMEvent</a>&nbsp;event)</code>
+<div class="block">Listens to incoming notification of attribute change events through the
+ otm channel.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#processSTEvent(com.lotus.sametime.core.comparch.STEvent)">processSTEvent</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STEvent.html" title="class in com.lotus.sametime.core.comparch">STEvent</a>&nbsp;event)</code>
+<div class="block">Receive a ubq event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#sendOTMDenied(com.lotus.sametime.community.OTMEvent)">sendOTMDenied</a></strong>(<a href="../../../../com/lotus/sametime/community/OTMEvent.html" title="class in com.lotus.sametime.community">OTMEvent</a>&nbsp;event)</code>
+<div class="block">An Otm was denied.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#serviceAvailable(com.lotus.sametime.community.ServiceEvent)">serviceAvailable</a></strong>(<a href="../../../../com/lotus/sametime/community/ServiceEvent.html" title="class in com.lotus.sametime.community">ServiceEvent</a>&nbsp;event)</code>
+<div class="block">Listens to service sensed events.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#set(java.lang.Integer, java.util.Vector, com.lotus.sametime.core.types.STUser)">set</a></strong>(java.lang.Integer&nbsp;requestId,
+   java.util.Vector&nbsp;v,
+   <a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;stUser)</code>
+<div class="block">Set the value for a list of attributes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#start()">start</a></strong>()</code>
+<div class="block">Starts the component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#stop()">stop</a></strong>()</code>
+<div class="block">Stops the component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/storage/StorageImpl.html#toString()">toString</a></strong>()</code>
+<div class="block">Return a string representation of this object.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_com.lotus.sametime.core.comparch.STCompPart">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.lotus.sametime.core.comparch.<a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></h3>
+<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getComponentListener()">getComponentListener</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getName()">getName</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getSession()">getSession</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getUniqueId()">getUniqueId</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#isActive()">isActive</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#sendEvent(com.lotus.sametime.core.comparch.STEvent)">sendEvent</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="VPCONFIG_STORAGE_GET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VPCONFIG_STORAGE_GET</h4>
+<pre>public static final&nbsp;short VPCONFIG_STORAGE_GET</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#com.lotus.sametime.storage.StorageImpl.VPCONFIG_STORAGE_GET">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="VPCONFIG_STORAGE_ONGET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VPCONFIG_STORAGE_ONGET</h4>
+<pre>public static final&nbsp;short VPCONFIG_STORAGE_ONGET</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#com.lotus.sametime.storage.StorageImpl.VPCONFIG_STORAGE_ONGET">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="VPCONFIG_STORAGE_SET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VPCONFIG_STORAGE_SET</h4>
+<pre>public static final&nbsp;short VPCONFIG_STORAGE_SET</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#com.lotus.sametime.storage.StorageImpl.VPCONFIG_STORAGE_SET">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="VPCONFIG_STORAGE_ONSET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VPCONFIG_STORAGE_ONSET</h4>
+<pre>public static final&nbsp;short VPCONFIG_STORAGE_ONSET</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#com.lotus.sametime.storage.StorageImpl.VPCONFIG_STORAGE_ONSET">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_OTM_STORAGE_SUBSCRIBE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_OTM_STORAGE_SUBSCRIBE</h4>
+<pre>public static final&nbsp;short ST_OTM_STORAGE_SUBSCRIBE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#com.lotus.sametime.storage.StorageImpl.ST_OTM_STORAGE_SUBSCRIBE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_OTM_STORAGE_UNSUBSCRIBE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_OTM_STORAGE_UNSUBSCRIBE</h4>
+<pre>public static final&nbsp;short ST_OTM_STORAGE_UNSUBSCRIBE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#com.lotus.sametime.storage.StorageImpl.ST_OTM_STORAGE_UNSUBSCRIBE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ST_OTM_STORAGE_CHANGED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ST_OTM_STORAGE_CHANGED</h4>
+<pre>public static final&nbsp;short ST_OTM_STORAGE_CHANGED</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#com.lotus.sametime.storage.StorageImpl.ST_OTM_STORAGE_CHANGED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="m_enableBuffering">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>m_enableBuffering</h4>
+<pre>protected&nbsp;boolean m_enableBuffering</pre>
+<div class="block">Flag indicating whether buffering will be enabled/disabled when the
+ storage service is down. When enabled all requests sent when the service
+ is down will be sent to the server when it goes back up.</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="StorageImpl(com.lotus.sametime.core.comparch.STSession)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>StorageImpl</h4>
+<pre>public&nbsp;StorageImpl(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)
+            throws <a href="../../../../com/lotus/sametime/core/comparch/DuplicateObjectException.html" title="class in com.lotus.sametime.core.comparch">DuplicateObjectException</a></pre>
+<div class="block">Constructor</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>session</code> - The session that this component registers to.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/DuplicateObjectException.html" title="class in com.lotus.sametime.core.comparch">DuplicateObjectException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="start()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>start</h4>
+<pre>public&nbsp;void&nbsp;start()</pre>
+<div class="block">Starts the component.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#start()">start</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="stop()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>stop</h4>
+<pre>public&nbsp;void&nbsp;stop()</pre>
+<div class="block">Stops the component.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html#stop()">stop</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html" title="class in com.lotus.sametime.core.comparch">STCompImpl</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="componentLoaded(com.lotus.sametime.core.comparch.STCompApi)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>componentLoaded</h4>
+<pre>public&nbsp;void&nbsp;componentLoaded(<a href="../../../../com/lotus/sametime/core/comparch/STCompApi.html" title="interface in com.lotus.sametime.core.comparch">STCompApi</a>&nbsp;newComponent)</pre>
+<div class="block">Listen to notification on newly loaded components.
+ Checks if the component which was loaded is required by this component.
+ If it is required save a pointer to the component and registers listeners.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#componentLoaded(com.lotus.sametime.core.comparch.STCompApi)">componentLoaded</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>newComponent</code> - The newly loaded component.</dd></dl>
+</li>
+</ul>
+<a name="channelOpened(com.lotus.sametime.community.ChannelEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>channelOpened</h4>
+<pre>public&nbsp;void&nbsp;channelOpened(<a href="../../../../com/lotus/sametime/community/ChannelEvent.html" title="class in com.lotus.sametime.community">ChannelEvent</a>&nbsp;event)</pre>
+<div class="block">A channel was opened.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/ChannelListener.html#channelOpened(com.lotus.sametime.community.ChannelEvent)">channelOpened</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/ChannelListener.html" title="interface in com.lotus.sametime.community">ChannelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/community/Channel.html" title="class in com.lotus.sametime.community"><code>Channel</code></a></dd></dl>
+</li>
+</ul>
+<a name="channelMsgReceived(com.lotus.sametime.community.ChannelEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>channelMsgReceived</h4>
+<pre>public&nbsp;void&nbsp;channelMsgReceived(<a href="../../../../com/lotus/sametime/community/ChannelEvent.html" title="class in com.lotus.sametime.community">ChannelEvent</a>&nbsp;event)</pre>
+<div class="block">Message sent on channel.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/ChannelListener.html#channelMsgReceived(com.lotus.sametime.community.ChannelEvent)">channelMsgReceived</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/ChannelListener.html" title="interface in com.lotus.sametime.community">ChannelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><code>com.lotus.sametime.vpbase.Channel</code></dd></dl>
+</li>
+</ul>
+<a name="channelClosed(com.lotus.sametime.community.ChannelEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>channelClosed</h4>
+<pre>public&nbsp;void&nbsp;channelClosed(<a href="../../../../com/lotus/sametime/community/ChannelEvent.html" title="class in com.lotus.sametime.community">ChannelEvent</a>&nbsp;event)</pre>
+<div class="block">The channel was closed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/ChannelListener.html#channelClosed(com.lotus.sametime.community.ChannelEvent)">channelClosed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/ChannelListener.html" title="interface in com.lotus.sametime.community">ChannelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><code>com.lotus.sametime.vpbase.Channel</code></dd></dl>
+</li>
+</ul>
+<a name="channelOpenFailed(com.lotus.sametime.community.ChannelEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>channelOpenFailed</h4>
+<pre>public&nbsp;void&nbsp;channelOpenFailed(<a href="../../../../com/lotus/sametime/community/ChannelEvent.html" title="class in com.lotus.sametime.community">ChannelEvent</a>&nbsp;event)</pre>
+<div class="block">Failed to open the channel.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/ChannelListener.html#channelOpenFailed(com.lotus.sametime.community.ChannelEvent)">channelOpenFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/ChannelListener.html" title="interface in com.lotus.sametime.community">ChannelListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><code>com.lotus.sametime.vpbase.Channel</code></dd></dl>
+</li>
+</ul>
+<a name="loggedOut(com.lotus.sametime.community.LoginEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loggedOut</h4>
+<pre>public&nbsp;void&nbsp;loggedOut(<a href="../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</pre>
+<div class="block">Logged out - Clean whatever's needed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/LoginListener.html#loggedOut(com.lotus.sametime.community.LoginEvent)">loggedOut</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/community/LoginEvent.html#getReason()"><code>LoginEvent.getReason()</code></a>, 
+<a href="../../../../com/lotus/sametime/community/LoginEvent.html#getCommunity()"><code>LoginEvent.getCommunity()</code></a></dd></dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
+<div class="block"><span class="strong">Description copied from class:&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html#toString()">STCompImpl</a></code></span></div>
+<div class="block">Return a string representation of this object.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html#toString()">toString</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html" title="class in com.lotus.sametime.core.comparch">STCompImpl</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>String representation of the object.</dd></dl>
+</li>
+</ul>
+<a name="checkTimeout(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checkTimeout</h4>
+<pre>public&nbsp;void&nbsp;checkTimeout(int&nbsp;timeout)</pre>
+<div class="block">Checks for all request that their timeout is expired and sends a failed
+ response.</div>
+</li>
+</ul>
+<a name="set(java.lang.Integer, java.util.Vector, com.lotus.sametime.core.types.STUser)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>set</h4>
+<pre>public&nbsp;void&nbsp;set(java.lang.Integer&nbsp;requestId,
+       java.util.Vector&nbsp;v,
+       <a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;stUser)</pre>
+<div class="block">Set the value for a list of attributes.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>requestId</code> - The request's id.</dd><dd><code>v</code> - List of StorageItems to be stored.</dd><dd><code>stUser</code> - The specific user that this operation is relating
+                   to. Added for support for Server application to access
+                   all of the users data.</dd></dl>
+</li>
+</ul>
+<a name="get(java.lang.Integer, java.util.Vector, com.lotus.sametime.core.types.STUser)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get</h4>
+<pre>public&nbsp;void&nbsp;get(java.lang.Integer&nbsp;requestId,
+       java.util.Vector&nbsp;v,
+       <a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;stUser)</pre>
+<div class="block">Get the value for a list of ids.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>requestId</code> - The request's id.</dd><dd><code>v</code> - List of String ids of storage items to be retrived.</dd><dd><code>stUser</code> - The specific user that this operation is relating
+                   to. Added for support for Server application to access
+                   all of the users data.</dd></dl>
+</li>
+</ul>
+<a name="processSTEvent(com.lotus.sametime.core.comparch.STEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processSTEvent</h4>
+<pre>public&nbsp;void&nbsp;processSTEvent(<a href="../../../../com/lotus/sametime/core/comparch/STEvent.html" title="class in com.lotus.sametime.core.comparch">STEvent</a>&nbsp;event)</pre>
+<div class="block">Receive a ubq event.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#processSTEvent(com.lotus.sametime.core.comparch.STEvent)">processSTEvent</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event.</dd></dl>
+</li>
+</ul>
+<a name="serviceAvailable(com.lotus.sametime.community.ServiceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serviceAvailable</h4>
+<pre>public&nbsp;void&nbsp;serviceAvailable(<a href="../../../../com/lotus/sametime/community/ServiceEvent.html" title="class in com.lotus.sametime.community">ServiceEvent</a>&nbsp;event)</pre>
+<div class="block">Listens to service sensed events. Checks to see that configuration service
+ comes back up.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/ServiceListener.html#serviceAvailable(com.lotus.sametime.community.ServiceEvent)">serviceAvailable</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/ServiceListener.html" title="interface in com.lotus.sametime.community">ServiceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/community/ServiceEvent.html#getServiceType()"><code>ServiceEvent.getServiceType()</code></a></dd></dl>
+</li>
+</ul>
+<a name="loggedIn(com.lotus.sametime.community.LoginEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loggedIn</h4>
+<pre>public&nbsp;void&nbsp;loggedIn(<a href="../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</pre>
+<div class="block">Logged in event.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/LoginListener.html#loggedIn(com.lotus.sametime.community.LoginEvent)">loggedIn</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/community/LoginEvent.html#getCommunity()"><code>LoginEvent.getCommunity()</code></a></dd></dl>
+</li>
+</ul>
+<a name="otmRecieved(com.lotus.sametime.community.OTMEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>otmRecieved</h4>
+<pre>public&nbsp;void&nbsp;otmRecieved(<a href="../../../../com/lotus/sametime/community/OTMEvent.html" title="class in com.lotus.sametime.community">OTMEvent</a>&nbsp;event)</pre>
+<div class="block">Listens to incoming notification of attribute change events through the
+ otm channel.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/OTMServiceListener.html#otmRecieved(com.lotus.sametime.community.OTMEvent)">otmRecieved</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/OTMServiceListener.html" title="interface in com.lotus.sametime.community">OTMServiceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><code>com.lotus.sametime.vpbase.OtmEventListener</code></dd></dl>
+</li>
+</ul>
+<a name="sendOTMDenied(com.lotus.sametime.community.OTMEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendOTMDenied</h4>
+<pre>public&nbsp;void&nbsp;sendOTMDenied(<a href="../../../../com/lotus/sametime/community/OTMEvent.html" title="class in com.lotus.sametime.community">OTMEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/community/OTMServiceListener.html#sendOTMDenied(com.lotus.sametime.community.OTMEvent)">OTMServiceListener</a></code></span></div>
+<div class="block">An Otm was denied.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/OTMServiceListener.html#sendOTMDenied(com.lotus.sametime.community.OTMEvent)">sendOTMDenied</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/OTMServiceListener.html" title="interface in com.lotus.sametime.community">OTMServiceListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="isServiceUp()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isServiceUp</h4>
+<pre>protected&nbsp;boolean&nbsp;isServiceUp()</pre>
+<div class="block">Check if the storage service server application is ready.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/storage/StorageEvent.html" title="class in com.lotus.sametime.storage"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/storage/StorageRequest.html" title="class in com.lotus.sametime.storage"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/storage/StorageImpl.html" target="_top">Frames</a></li>
+<li><a href="StorageImpl.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

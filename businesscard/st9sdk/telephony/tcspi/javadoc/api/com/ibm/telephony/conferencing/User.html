@@ -1,0 +1,1397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+User (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="User (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/ibm/telephony/conferencing/UnsupportedRequestException.html" title="class in com.ibm.telephony.conferencing"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/ibm/telephony/conferencing/User.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="User.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.telephony.conferencing</FONT>
+<BR>
+Interface User</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html" title="interface in com.ibm.telephony.conferencing">PropertyContainer</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../com/ibm/telephony/conferencing/spi/DefaultUser.html" title="class in com.ibm.telephony.conferencing.spi">DefaultUser</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>User</B><DT>extends <A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html" title="interface in com.ibm.telephony.conferencing">PropertyContainer</A></DL>
+</PRE>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#APPLICATION_PRESENCE_PROPERTY">APPLICATION_PRESENCE_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to indicate that a user has a presence in an application above the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#AUDIO_SOURCE_IDENTIFIER_PROPERTY">AUDIO_SOURCE_IDENTIFIER_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to indicate that the source identifier (SSRC) for the audio source</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#CLIENT_VERSION">CLIENT_VERSION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to tell the server the client version of a given user</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#CONNECTED">CONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#CONNECTING">CONNECTING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#CONNECTION_PROPERTY">CONNECTION_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the connectivity state of a particular user.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#CONNECTION_VIDEO_PROPERTY">CONNECTION_VIDEO_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the user's video connection state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#DIAL_ENABLED_PROPERTY">DIAL_ENABLED_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to indicate that a User can request that a service provider dial them into a telephony conference.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#DISCONNECTED">DISCONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#ENDPOINT_IS_COMPUTER">ENDPOINT_IS_COMPUTER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to tell whether the user endpoint is a Sametime client or not</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#LISTEN_ONLY_USER_ROLE">LISTEN_ONLY_USER_ROLE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#LOCALE_PROPERTY">LOCALE_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to indicate a user's locale.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#MEDIA_CHANGE_PROPERTY">MEDIA_CHANGE_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to a media change for a user based on media change on the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#MODERATOR_USER_ROLE">MODERATOR_USER_ROLE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#MUTED_PROPERTY">MUTED_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the user's mute state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#MUTED_VIDEO_PROPERTY">MUTED_VIDEO_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the users muted video state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#PARTICIPANT_ASSOCIATED_ID">PARTICIPANT_ASSOCIATED_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to inform a call participant of its associated participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#PARTICIPANT_DIAL_FAILURE">PARTICIPANT_DIAL_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to tell whether the dial attempt by the user failed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#PARTICIPANT_DISPLAY_NAME">PARTICIPANT_DISPLAY_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property representing the participant's human-readable name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#PARTICIPANT_PAUSE_PROPERTY">PARTICIPANT_PAUSE_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the user pause state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#PARTICIPANT_PAUSED">PARTICIPANT_PAUSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#PARTICIPANT_RESUMED">PARTICIPANT_RESUMED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#PARTICIPANT_USER_ROLE">PARTICIPANT_USER_ROLE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#ROLE_PROPERTY">ROLE_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the users role in the conference, set by calls to the registerUser() method
+
+        Default:        UserRoles.PARTICIPANT_USER_ROLE
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#SELF_MUTED">SELF_MUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#SILENCED">SILENCED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#SILENCED_PROPERTY">SILENCED_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the users silenced state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#SILENCED_VIDEO_PROPERTY">SILENCED_VIDEO_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the users silenced video state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#TALKING_PROPERTY">TALKING_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the users talking state, set by the service provider on a User object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#UNMUTED">UNMUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#UNSILENCED">UNSILENCED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#VIDEO_LAYOUT_ARRANGEMENT_PROPERTY">VIDEO_LAYOUT_ARRANGEMENT_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to indicate the current video arrangement for this user (service provider defined).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#VIDEO_LAYOUT_TYPE_PROPERTY">VIDEO_LAYOUT_TYPE_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to indicate that the video layout for this user (service provider defined).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#VIDEO_SHOW_ALWAYS_PROPERTY">VIDEO_SHOW_ALWAYS_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to indicate that a User always show video in a conference (true/false).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#VIDEO_SOURCE_IDENTIFIER_PROPERTY">VIDEO_SOURCE_IDENTIFIER_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property to indicate that the source identifier (SSRC) for the video source</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#VOICE_LEVEL_PROPERTY">VOICE_LEVEL_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the user voice level.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#WAITING">WAITING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#associate(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">associate</A></B>(<A HREF="../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+          <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#dial(java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">dial</A></B>(java.lang.String&nbsp;endPoint,
+     java.lang.String&nbsp;dialMode,
+     <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method has the conference service dial the specified endpoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#dial(java.lang.String, java.lang.String, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">dial</A></B>(java.lang.String&nbsp;endPoint,
+     java.lang.String&nbsp;dialMode,
+     int&nbsp;mediaFlag,
+     <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method has the conference service dial the specified endpoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#disconnect(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">disconnect</A></B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method disconnects a registered user without formally unregistering.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/ibm/telephony/conferencing/Conference.html" title="interface in com.ibm.telephony.conferencing">Conference</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#getConference()">getConference</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#getName()">getName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#getPin()">getPin</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#getRole()">getRole</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;float</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#getVoiceLevel()">getVoiceLevel</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#isConnected()">isConnected</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#isConnecting()">isConnecting</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#isMuted()">isMuted</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#isSilenced()">isSilenced</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#isTalking()">isTalking</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/User.html#unregister(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">unregister</A></B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method provides a cleanup mechanism for registered users.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.telephony.conferencing.PropertyContainer"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.telephony.conferencing.<A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html" title="interface in com.ibm.telephony.conferencing">PropertyContainer</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html#addPropertyContainerListener(com.ibm.telephony.conferencing.event.PropertyContainerListener)">addPropertyContainerListener</A>, <A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html#removePropertyContainerListener(com.ibm.telephony.conferencing.event.PropertyContainerListener)">removePropertyContainerListener</A>, <A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html#setProperty(com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">setProperty</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CONNECTION_PROPERTY"><!-- --></A><H3>
+CONNECTION_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>CONNECTION_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the connectivity state of a particular user.
+
+        Read only
+
+        A value of "disconnected" indicates that this user is not currently connected to the conference.
+        A value of "connecting" indicates the service provider know this user is connecting to the conference.
+        For example this will happen when the service provider has successfully dialed a user but they have not yet
+  connected.
+  A value of "connected" indicates the user has made a connection to the conference and can now participate
+ 
+        Default:        User.DISCONNECTED
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.CONNECTION_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DISCONNECTED"><!-- --></A><H3>
+DISCONNECTED</H3>
+<PRE>
+static final java.lang.String <B>DISCONNECTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.DISCONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONNECTING"><!-- --></A><H3>
+CONNECTING</H3>
+<PRE>
+static final java.lang.String <B>CONNECTING</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.CONNECTING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="WAITING"><!-- --></A><H3>
+WAITING</H3>
+<PRE>
+static final java.lang.String <B>WAITING</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.WAITING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONNECTED"><!-- --></A><H3>
+CONNECTED</H3>
+<PRE>
+static final java.lang.String <B>CONNECTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.CONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONNECTION_VIDEO_PROPERTY"><!-- --></A><H3>
+CONNECTION_VIDEO_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>CONNECTION_VIDEO_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the user's video connection state.
+ 
+  Values: DISCONNECTED, CONNECTING, WAITING, CONNECTED
+ 
+  Default:      DISCONNECTED
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.CONNECTION_VIDEO_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MUTED_PROPERTY"><!-- --></A><H3>
+MUTED_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>MUTED_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the user's mute state. This can be set by the user either by DTMF on a telephone or in an application.
+ 
+  Default:      UNMUTED
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.MUTED_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UNMUTED"><!-- --></A><H3>
+UNMUTED</H3>
+<PRE>
+static final java.lang.String <B>UNMUTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.UNMUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SELF_MUTED"><!-- --></A><H3>
+SELF_MUTED</H3>
+<PRE>
+static final java.lang.String <B>SELF_MUTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.SELF_MUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SILENCED_PROPERTY"><!-- --></A><H3>
+SILENCED_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>SILENCED_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the users silenced state. The silence state overrides the mute state
+ 
+  Default:      UNSILENCED
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.SILENCED_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UNSILENCED"><!-- --></A><H3>
+UNSILENCED</H3>
+<PRE>
+static final java.lang.String <B>UNSILENCED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.UNSILENCED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SILENCED"><!-- --></A><H3>
+SILENCED</H3>
+<PRE>
+static final java.lang.String <B>SILENCED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.SILENCED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MUTED_VIDEO_PROPERTY"><!-- --></A><H3>
+MUTED_VIDEO_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>MUTED_VIDEO_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the users muted video state. This can be set by the user either by DTMF on a telephone or in an application.
+
+  Values are UNMUTED, SELF_MUTED, SILENCED
+ 
+  Default:      UNMUTED
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.MUTED_VIDEO_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SILENCED_VIDEO_PROPERTY"><!-- --></A><H3>
+SILENCED_VIDEO_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>SILENCED_VIDEO_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the users silenced video state. This can be set by the user either by DTMF on a telephone or in an application.
+
+  Values are SILENCED, UNSILENCED
+ 
+  Default:      UNSILENCED
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+ 
+  NOTE: This difference from MUTED_VIDEO_PROPERTY in that only
+        the moderator can unsilence
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.SILENCED_VIDEO_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="VOICE_LEVEL_PROPERTY"><!-- --></A><H3>
+VOICE_LEVEL_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>VOICE_LEVEL_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the user voice level.
+
+        Values are floats ranging from 0.0 to 1.0 with 0.0 muted and 1.0 being full volume
+
+        Default:        0.5
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.VOICE_LEVEL_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TALKING_PROPERTY"><!-- --></A><H3>
+TALKING_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>TALKING_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the users talking state, set by the service provider on a User object.
+
+        Read only
+
+        A Property.TRUE value indicates the user is talking.
+  A Property.FALSE value indicates the user is not talking. 
+ 
+        Default:        Property.FALSE
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.TALKING_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ROLE_PROPERTY"><!-- --></A><H3>
+ROLE_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>ROLE_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the users role in the conference, set by calls to the registerUser() method
+
+        Default:        UserRoles.PARTICIPANT_USER_ROLE
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.ROLE_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MODERATOR_USER_ROLE"><!-- --></A><H3>
+MODERATOR_USER_ROLE</H3>
+<PRE>
+static final java.lang.String <B>MODERATOR_USER_ROLE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.MODERATOR_USER_ROLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PARTICIPANT_USER_ROLE"><!-- --></A><H3>
+PARTICIPANT_USER_ROLE</H3>
+<PRE>
+static final java.lang.String <B>PARTICIPANT_USER_ROLE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.PARTICIPANT_USER_ROLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LISTEN_ONLY_USER_ROLE"><!-- --></A><H3>
+LISTEN_ONLY_USER_ROLE</H3>
+<PRE>
+static final java.lang.String <B>LISTEN_ONLY_USER_ROLE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.LISTEN_ONLY_USER_ROLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DIAL_ENABLED_PROPERTY"><!-- --></A><H3>
+DIAL_ENABLED_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>DIAL_ENABLED_PROPERTY</B></PRE>
+<DL>
+<DD>Property to indicate that a User can request that a service provider dial them into a telephony conference.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.DIAL_ENABLED_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="VIDEO_LAYOUT_TYPE_PROPERTY"><!-- --></A><H3>
+VIDEO_LAYOUT_TYPE_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>VIDEO_LAYOUT_TYPE_PROPERTY</B></PRE>
+<DL>
+<DD>Property to indicate that the video layout for this user (service provider defined).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.VIDEO_LAYOUT_TYPE_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="VIDEO_LAYOUT_ARRANGEMENT_PROPERTY"><!-- --></A><H3>
+VIDEO_LAYOUT_ARRANGEMENT_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>VIDEO_LAYOUT_ARRANGEMENT_PROPERTY</B></PRE>
+<DL>
+<DD>Property to indicate the current video arrangement for this user (service provider defined).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.VIDEO_LAYOUT_ARRANGEMENT_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="VIDEO_SHOW_ALWAYS_PROPERTY"><!-- --></A><H3>
+VIDEO_SHOW_ALWAYS_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>VIDEO_SHOW_ALWAYS_PROPERTY</B></PRE>
+<DL>
+<DD>Property to indicate that a User always show video in a conference (true/false).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.VIDEO_SHOW_ALWAYS_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="APPLICATION_PRESENCE_PROPERTY"><!-- --></A><H3>
+APPLICATION_PRESENCE_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>APPLICATION_PRESENCE_PROPERTY</B></PRE>
+<DL>
+<DD>Property to indicate that a user has a presence in an application above the service provider.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.APPLICATION_PRESENCE_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="AUDIO_SOURCE_IDENTIFIER_PROPERTY"><!-- --></A><H3>
+AUDIO_SOURCE_IDENTIFIER_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>AUDIO_SOURCE_IDENTIFIER_PROPERTY</B></PRE>
+<DL>
+<DD>Property to indicate that the source identifier (SSRC) for the audio source
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.AUDIO_SOURCE_IDENTIFIER_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="VIDEO_SOURCE_IDENTIFIER_PROPERTY"><!-- --></A><H3>
+VIDEO_SOURCE_IDENTIFIER_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>VIDEO_SOURCE_IDENTIFIER_PROPERTY</B></PRE>
+<DL>
+<DD>Property to indicate that the source identifier (SSRC) for the video source
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.VIDEO_SOURCE_IDENTIFIER_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LOCALE_PROPERTY"><!-- --></A><H3>
+LOCALE_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>LOCALE_PROPERTY</B></PRE>
+<DL>
+<DD>Property to indicate a user's locale.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.LOCALE_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_CHANGE_PROPERTY"><!-- --></A><H3>
+MEDIA_CHANGE_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>MEDIA_CHANGE_PROPERTY</B></PRE>
+<DL>
+<DD>Property to a media change for a user based on media change on the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.MEDIA_CHANGE_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CLIENT_VERSION"><!-- --></A><H3>
+CLIENT_VERSION</H3>
+<PRE>
+static final java.lang.String <B>CLIENT_VERSION</B></PRE>
+<DL>
+<DD>Property to tell the server the client version of a given user
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.CLIENT_VERSION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ENDPOINT_IS_COMPUTER"><!-- --></A><H3>
+ENDPOINT_IS_COMPUTER</H3>
+<PRE>
+static final java.lang.String <B>ENDPOINT_IS_COMPUTER</B></PRE>
+<DL>
+<DD>Property to tell whether the user endpoint is a Sametime client or not
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.ENDPOINT_IS_COMPUTER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PARTICIPANT_DIAL_FAILURE"><!-- --></A><H3>
+PARTICIPANT_DIAL_FAILURE</H3>
+<PRE>
+static final java.lang.String <B>PARTICIPANT_DIAL_FAILURE</B></PRE>
+<DL>
+<DD>Property to tell whether the dial attempt by the user failed. Used for dial failures early in dial processing
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.PARTICIPANT_DIAL_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PARTICIPANT_DISPLAY_NAME"><!-- --></A><H3>
+PARTICIPANT_DISPLAY_NAME</H3>
+<PRE>
+static final java.lang.String <B>PARTICIPANT_DISPLAY_NAME</B></PRE>
+<DL>
+<DD>Property representing the participant's human-readable name.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.PARTICIPANT_DISPLAY_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PARTICIPANT_ASSOCIATED_ID"><!-- --></A><H3>
+PARTICIPANT_ASSOCIATED_ID</H3>
+<PRE>
+static final java.lang.String <B>PARTICIPANT_ASSOCIATED_ID</B></PRE>
+<DL>
+<DD>Property to inform a call participant of its associated participant.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.PARTICIPANT_ASSOCIATED_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PARTICIPANT_PAUSE_PROPERTY"><!-- --></A><H3>
+PARTICIPANT_PAUSE_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>PARTICIPANT_PAUSE_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the user pause state.
+  
+  Values are PARTICIPANT_PAUSED and PARTICIPANT_RESUMED
+ 
+  Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.PARTICIPANT_PAUSE_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PARTICIPANT_PAUSED"><!-- --></A><H3>
+PARTICIPANT_PAUSED</H3>
+<PRE>
+static final java.lang.String <B>PARTICIPANT_PAUSED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.PARTICIPANT_PAUSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PARTICIPANT_RESUMED"><!-- --></A><H3>
+PARTICIPANT_RESUMED</H3>
+<PRE>
+static final java.lang.String <B>PARTICIPANT_RESUMED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.User.PARTICIPANT_RESUMED">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getName()"><!-- --></A><H3>
+getName</H3>
+<PRE>
+java.lang.String <B>getName</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPin()"><!-- --></A><H3>
+getPin</H3>
+<PRE>
+java.lang.String <B>getPin</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRole()"><!-- --></A><H3>
+getRole</H3>
+<PRE>
+java.lang.String <B>getRole</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConference()"><!-- --></A><H3>
+getConference</H3>
+<PRE>
+<A HREF="../../../../com/ibm/telephony/conferencing/Conference.html" title="interface in com.ibm.telephony.conferencing">Conference</A> <B>getConference</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unregister(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+unregister</H3>
+<PRE>
+void <B>unregister</B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)
+                throws <A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></PRE>
+<DL>
+<DD>This method provides a cleanup mechanism for registered users. This does not imply that a
+ conference will be terminated if its owner is unregistered.
+ 
+ An unregistered user will be removed from the conference access list and disconnected from
+ the conference if active.
+ 
+ Successful request:    listener.unregisterUser is called
+ Event contents:                User object from the request.
+ 
+ Failed Request:                listener.requestFailed with appropriate error code
+ Possible error codes:
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - the listener that receives the response.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></CODE> - when any exceptional situation occurs that prevents the
+ request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="dial(java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+dial</H3>
+<PRE>
+void <B>dial</B>(java.lang.String&nbsp;endPoint,
+          java.lang.String&nbsp;dialMode,
+          <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)
+          throws <A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></PRE>
+<DL>
+<DD>This method has the conference service dial the specified endpoint.
+ 
+ Successful request:    listener.dial is called
+ Event contents:                ConferenceId, UserId, and endPoint of the request.
+ 
+ Failed Request:                listener.requestFailed with appropriate error code
+ Possible error codes:
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>endPoint</CODE> - the "callable" endpoint. Phone number or SIP URI?<DD><CODE>dialMode</CODE> - the mode the service should use to dial the endpoint.<DD><CODE>listener</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></CODE> - when any exceptional situation occurs that prevents the
+ request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="dial(java.lang.String, java.lang.String, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+dial</H3>
+<PRE>
+void <B>dial</B>(java.lang.String&nbsp;endPoint,
+          java.lang.String&nbsp;dialMode,
+          int&nbsp;mediaFlag,
+          <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)
+          throws <A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></PRE>
+<DL>
+<DD>This method has the conference service dial the specified endpoint.
+ 
+ Successful request:    listener.dial is called
+ Event contents:                ConferenceId, UserId, and endPoint of the request.
+ 
+ Failed Request:                listener.requestFailed with appropriate error code
+ Possible error codes:
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>endPoint</CODE> - the "callable" endpoint. Phone number or SIP URI?<DD><CODE>dialMode</CODE> - the mode the service should use to dial the endpoint.<DD><CODE>mediaFlag</CODE> - the media flag indicating audio, video, or both<DD><CODE>listener</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></CODE> - when any exceptional situation occurs that prevents the
+ request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="disconnect(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+disconnect</H3>
+<PRE>
+void <B>disconnect</B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)
+                throws <A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></PRE>
+<DL>
+<DD>This method disconnects a registered user without formally unregistering.
+ 
+ Successful request:    listener.disconnect is called
+ Event contents:                User object from the request.
+ 
+ Failed Request:                listener.requestFailed with appropriate error code
+ Possible error codes:
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - the listener that receives the response.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></CODE> - when any exceptional situation occurs that prevents the
+ request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="associate(com.ibm.telephony.conferencing.User, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+associate</H3>
+<PRE>
+void <B>associate</B>(<A HREF="../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+               <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)
+               throws <A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing">ConferenceException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isConnected()"><!-- --></A><H3>
+isConnected</H3>
+<PRE>
+boolean <B>isConnected</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isConnecting()"><!-- --></A><H3>
+isConnecting</H3>
+<PRE>
+boolean <B>isConnecting</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isTalking()"><!-- --></A><H3>
+isTalking</H3>
+<PRE>
+boolean <B>isTalking</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isMuted()"><!-- --></A><H3>
+isMuted</H3>
+<PRE>
+boolean <B>isMuted</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSilenced()"><!-- --></A><H3>
+isSilenced</H3>
+<PRE>
+boolean <B>isSilenced</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVoiceLevel()"><!-- --></A><H3>
+getVoiceLevel</H3>
+<PRE>
+float <B>getVoiceLevel</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/ibm/telephony/conferencing/UnsupportedRequestException.html" title="class in com.ibm.telephony.conferencing"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/ibm/telephony/conferencing/User.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="User.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

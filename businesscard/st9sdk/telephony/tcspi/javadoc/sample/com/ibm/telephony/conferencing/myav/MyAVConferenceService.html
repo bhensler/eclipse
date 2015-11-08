@@ -1,0 +1,1175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MyAVConferenceService (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration Sample API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MyAVConferenceService (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration Sample API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConfig.html" title="class in com.ibm.telephony.conferencing.myav"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/telephony/conferencing/myav/MyAVConferenceService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MyAVConferenceService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.telephony.conferencing.myav</FONT>
+<BR>
+Class MyAVConferenceService</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by ">com.ibm.telephony.conferencing.spi.AbstractConferenceService
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by ">com.ibm.telephony.conferencing.spi.AbstractSipConferenceService
+          <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.telephony.conferencing.myav.MyAVConferenceService</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html" title="interface in com.ibm.telephony.conferencing.myav">MyAVConstants</A>, com.ibm.telephony.conferencing.spi.ConferenceService, com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>MyAVConferenceService</B><DT>extends com.ibm.telephony.conferencing.spi.AbstractSipConferenceService<DT>implements <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html" title="interface in com.ibm.telephony.conferencing.myav">MyAVConstants</A></DL>
+</PRE>
+
+<P>
+Service Provider skeletal example for Sametime Media Server.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.telephony.conferencing.myav.MyAVConstants"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.telephony.conferencing.myav.<A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html" title="interface in com.ibm.telephony.conferencing.myav">MyAVConstants</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#DIAL_FAILURE">DIAL_FAILURE</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#GENERAL_EXCEPTION_FAILURE">GENERAL_EXCEPTION_FAILURE</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#INVALID_ENDPOINT">INVALID_ENDPOINT</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_ASSOCIATE">MYAV_CMD_ASSOCIATE</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_CREATE_CONFERENCE">MYAV_CMD_CREATE_CONFERENCE</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DELETE_CONFERENCE">MYAV_CMD_DELETE_CONFERENCE</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DIAL">MYAV_CMD_DIAL</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DIAL_EXTENDED">MYAV_CMD_DIAL_EXTENDED</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_DISCONNECT_USER">MYAV_CMD_DISCONNECT_USER</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_MEDIA_CONTROL">MYAV_CMD_MEDIA_CONTROL</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_REGISTER_USER">MYAV_CMD_REGISTER_USER</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_REGISTER_USER_SIP">MYAV_CMD_REGISTER_USER_SIP</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_SET_CONFERENCE_PROPERTY">MYAV_CMD_SET_CONFERENCE_PROPERTY</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_SET_USER_PROPERTY">MYAV_CMD_SET_USER_PROPERTY</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_START_CONFERENCE_CONTROL">MYAV_CMD_START_CONFERENCE_CONTROL</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_STOP_CONFERENCE_CONTROL">MYAV_CMD_STOP_CONFERENCE_CONTROL</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_TIMEOUT_ERROR">MYAV_CMD_TIMEOUT_ERROR</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_CMD_UNREGISTER_USER">MYAV_CMD_UNREGISTER_USER</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_ACK">MYAV_NOTIFICATION_USER_ACK</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_BYE">MYAV_NOTIFICATION_USER_BYE</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_INVITE">MYAV_NOTIFICATION_USER_INVITE</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYAV_NOTIFICATION_USER_SET_PROPERTY">MYAV_NOTIFICATION_USER_SET_PROPERTY</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYMCU_CONFERENCE_AGENT_ID_PREFIX">MYMCU_CONFERENCE_AGENT_ID_PREFIX</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#MYMCU_SERVLET_CONTEXT">MYMCU_SERVLET_CONTEXT</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SERVICE_UNAVAILABLE">SERVICE_UNAVAILABLE</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_APP_SESSION_EXPIRES_MINUTES">SIP_APP_SESSION_EXPIRES_MINUTES</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_REGISTER_DELAY_MS">SIP_REGISTER_DELAY_MS</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_REGISTER_EXPIRES_SECONDS">SIP_REGISTER_EXPIRES_SECONDS</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#SIP_REGISTER_INTERVAL_MS">SIP_REGISTER_INTERVAL_MS</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#TIMEOUT_FAILURE">TIMEOUT_FAILURE</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#UNKNOWN_USER_NAME">UNKNOWN_USER_NAME</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_CONNECTED">USER_CONNECTED</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_CONNECTION_PROPERTY">USER_CONNECTION_PROPERTY</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_DISCONNECTED">USER_DISCONNECTED</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_DISPLAY_NAME">USER_DISPLAY_NAME</A>, <A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConstants.html#USER_TALKING_PROPERTY">USER_TALKING_PROPERTY</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.telephony.conferencing.spi.ConferenceService"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.telephony.conferencing.spi.ConferenceService</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>MAX_AUDIO_CONFERENCE_USERS_PROPERTY, MAX_CONFERENCE_USERS_PROPERTY, MAX_VIDEO_CONFERENCE_USERS_PROPERTY, MEDIA_AUDIO, MEDIA_CONTROL_START, MEDIA_CONTROL_STOP, MEDIA_FLAG_VALUE_AUDIO_ONLY, MEDIA_FLAG_VALUE_AUDIO_VIDEO, MEDIA_FLAG_VALUE_VIDEO_ONLY, MEDIA_VIDEO</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#MyAVConferenceService()">MyAVConferenceService</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Override default constructor for logging purposes only.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.Properties</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#getConfiguration()">getConfiguration</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method returns additional properties to be merged with statically defined properties
+ in ConferenceManager.properties file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#getId()">getId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method returns an identifier for this implementation used for differentiating
+ service providers; it appears in the server logs and is used as the key
+ in client's A/V conference-related preferences.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#init(com.ibm.telephony.conferencing.spi.ConferenceServiceContext, java.util.Properties)">init</A></B>(com.ibm.telephony.conferencing.spi.ConferenceServiceContext&nbsp;conferenceServiceContext,
+     java.util.Properties&nbsp;properties)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#mcuNotifyUserAck(java.lang.String, java.lang.String)">mcuNotifyUserAck</A></B>(java.lang.String&nbsp;conferenceId,
+                 java.lang.String&nbsp;userUri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#mcuNotifyUserBye(java.lang.String, java.lang.String)">mcuNotifyUserBye</A></B>(java.lang.String&nbsp;conferenceId,
+                 java.lang.String&nbsp;userUri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#mcuNotifyUserInvite(java.lang.String, java.lang.String)">mcuNotifyUserInvite</A></B>(java.lang.String&nbsp;conferenceId,
+                    java.lang.String&nbsp;userUri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#mcuNotifyUserSetProperty(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">mcuNotifyUserSetProperty</A></B>(java.lang.String&nbsp;conferenceId,
+                         java.lang.String&nbsp;userName,
+                         java.lang.String&nbsp;propertyName,
+                         java.lang.String&nbsp;propertyValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processAssociate(com.ibm.telephony.conferencing.spi.DefaultUser, com.ibm.telephony.conferencing.spi.DefaultUser, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processAssociate</A></B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;namedUser,
+                 com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;connectedUser,
+                 com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method indicates the named user is in fact the same as an already connected user.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processCreateConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processCreateConference</A></B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                        java.lang.String&nbsp;conferenceDocumentText,
+                        com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method will be called when a new conference is needed and is the only mechanism for a service provider to 
+ return a unique id for a conference.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processDeleteConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processDeleteConference</A></B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                        java.lang.String&nbsp;conferenceId,
+                        com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method will be called when a conference should be removed from the service provider's list of available
+ resources.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processDial(com.ibm.telephony.conferencing.spi.DefaultUser, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processDial</A></B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+            java.lang.String&nbsp;endPoint,
+            java.lang.String&nbsp;dialMode,
+            com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method indicates a user that should be dialed at the specified end-point.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processDialExtended(com.ibm.telephony.conferencing.spi.DefaultUser, java.lang.String, java.lang.String, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processDialExtended</A></B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+                    java.lang.String&nbsp;endPoint,
+                    java.lang.String&nbsp;dialMode,
+                    int&nbsp;mediaFlag,
+                    com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method indicates a user that should be dialed at the specified end-point.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processDisconnectUser(com.ibm.telephony.conferencing.spi.DefaultUser, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processDisconnectUser</A></B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+                      com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method indicates that a user should be disconnected from the conference.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processEditConference(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processEditConference</A></B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                      java.lang.String&nbsp;conferenceId,
+                      java.lang.String&nbsp;conferenceDocumentText,
+                      com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method will be called to update the conference data for an already created conference.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processMediaControl(com.ibm.telephony.conferencing.spi.DefaultUser, int, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processMediaControl</A></B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+                    int&nbsp;controlFlag,
+                    int&nbsp;mediaFlag,
+                    com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method indicates a user has requested a media start/stop.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processRegisterUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processRegisterUser</A></B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                    java.lang.String&nbsp;conferenceId,
+                    java.lang.String&nbsp;userName,
+                    java.lang.String&nbsp;userRole,
+                    java.lang.String&nbsp;userPin,
+                    com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is used to either notify service providers of a user that will be participating in a conference, or 
+ change the userRole for an existing user.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processRegisterUserSip(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processRegisterUserSip</A></B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                       java.lang.String&nbsp;conferenceId,
+                       java.lang.String&nbsp;userName,
+                       java.lang.String&nbsp;userRole,
+                       java.lang.String&nbsp;userPin,
+                       java.lang.String&nbsp;sipUri,
+                       com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is the same as <code>processRegisterUser</code> with the addition of 
+ the SIP URI of the user for a SIP enabled conference.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processSetConferenceProperty(com.ibm.telephony.conferencing.spi.DefaultConference, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processSetConferenceProperty</A></B>(com.ibm.telephony.conferencing.spi.DefaultConference&nbsp;conference,
+                             com.ibm.telephony.conferencing.Property&nbsp;property,
+                             com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method indicates that a conference property should be set on the specified conference object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processSetUserProperty(com.ibm.telephony.conferencing.spi.DefaultUser, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processSetUserProperty</A></B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+                       com.ibm.telephony.conferencing.Property&nbsp;property,
+                       com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method indicates a user specific property that should be set by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processStartConferenceControl(com.ibm.telephony.conferencing.Login, java.lang.String, java.util.List, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processStartConferenceControl</A></B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                              java.lang.String&nbsp;conferenceId,
+                              java.util.List&nbsp;initialProperties,
+                              com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method will be called to prepare the service provider for real-time control of a conference.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processStopConferenceControl(com.ibm.telephony.conferencing.spi.DefaultConference, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processStopConferenceControl</A></B>(com.ibm.telephony.conferencing.spi.DefaultConference&nbsp;conference,
+                             com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is an indication that the service provider can stop managing the conference in a real-time control 
+ manner.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processTimeoutError(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processTimeoutError</A></B>(com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method will be called when an asynchronous request has not been answered in an appropriate amount of time
+ defined in the ConferenceManager.properties file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processUnregisterUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processUnregisterUser</A></B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                      java.lang.String&nbsp;conferenceId,
+                      java.lang.String&nbsp;userName,
+                      com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method provides a way to remove users from a conference, which is different from hanging up a user.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processValidateConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">processValidateConference</A></B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                          java.lang.String&nbsp;conferenceDocumentText,
+                          com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method will be called to validate a conference document in the context of a login before the conference
+ is actually created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#start()">start</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method will be called once after creation.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#stop()">stop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method will be called before disposing of the service.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.telephony.conferencing.spi.AbstractSipConferenceService"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.ibm.telephony.conferencing.spi.AbstractSipConferenceService</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>getSipFactory, setSipFactory</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.telephony.conferencing.spi.AbstractConferenceService"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.ibm.telephony.conferencing.spi.AbstractConferenceService</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>addConference, addConferenceServiceListener, associate, associateUsers, createConference, createConference, createDefaultUser, deleteConference, deliverAssociateResponse, deliverCreateConferenceResponse, deliverDeleteConferenceResponse, deliverDialExtendedResponse, deliverDialResponse, deliverDisconnectUserResponse, deliverEditConferenceResponse, deliverFailureResponse, deliverGetConfigurationResponse, deliverMediaControlResponse, deliverRegisterUserResponse, deliverRegisterUserSipResponse, deliverSetPropertyResponse, deliverStartConferenceControlResponse, deliverStartConferenceControlResponse, deliverStopConferenceControlResponse, deliverUnregisterUserResponse, deliverValidateConferenceResponse, dial, dialExtended, disconnectUser, editConference, generateUniqueUserName, generateUniqueUserNameWithPrefix, getConferenceWithId, getConfiguration, isAvailable, listenerIsActive, mediaControl, registerUser, registerUser, registerUser, registerUserSip, removeConference, removeConferenceServiceListener, serviceStarted, setConferenceProperty, setUserProperty, startConferenceControl, stopConferenceControl, unregisterUser, unregisterUser, validateConference</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MyAVConferenceService()"><!-- --></A><H3>
+MyAVConferenceService</H3>
+<PRE>
+public <B>MyAVConferenceService</B>()</PRE>
+<DL>
+<DD>Override default constructor for logging purposes only.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#init(com.ibm.telephony.conferencing.spi.ConferenceServiceContext, java.util.Properties)"><CODE>init(ConferenceServiceContext, Properties)</CODE></A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getId()"><!-- --></A><H3>
+getId</H3>
+<PRE>
+public java.lang.String <B>getId</B>()</PRE>
+<DL>
+<DD>This method returns an identifier for this implementation used for differentiating
+ service providers; it appears in the server logs and is used as the key
+ in client's A/V conference-related preferences. By default, it returns the fully qualified class name.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE>getId</CODE> in class <CODE>com.ibm.telephony.conferencing.spi.AbstractConferenceService</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>a unique string for this service provider.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConfiguration()"><!-- --></A><H3>
+getConfiguration</H3>
+<PRE>
+public java.util.Properties <B>getConfiguration</B>()</PRE>
+<DL>
+<DD>This method returns additional properties to be merged with statically defined properties
+ in ConferenceManager.properties file.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>getConfiguration</CODE> in class <CODE>com.ibm.telephony.conferencing.spi.AbstractConferenceService</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>See Also:</B><DD><CODE>AbstractConferenceService.getConfiguration(ConferenceResponseHandler)</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="init(com.ibm.telephony.conferencing.spi.ConferenceServiceContext, java.util.Properties)"><!-- --></A><H3>
+init</H3>
+<PRE>
+public void <B>init</B>(com.ibm.telephony.conferencing.spi.ConferenceServiceContext&nbsp;conferenceServiceContext,
+                 java.util.Properties&nbsp;properties)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>init</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceService</CODE><DT><B>Overrides:</B><DD><CODE>init</CODE> in class <CODE>com.ibm.telephony.conferencing.spi.AbstractConferenceService</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="start()"><!-- --></A><H3>
+start</H3>
+<PRE>
+public void <B>start</B>()</PRE>
+<DL>
+<DD>This method will be called once after creation.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>start</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceService</CODE><DT><B>Overrides:</B><DD><CODE>start</CODE> in class <CODE>com.ibm.telephony.conferencing.spi.AbstractConferenceService</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stop()"><!-- --></A><H3>
+stop</H3>
+<PRE>
+public void <B>stop</B>()</PRE>
+<DL>
+<DD>This method will be called before disposing of the service.
+ It is expected this will only happen when the container is
+ being shutdown.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>stop</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceService</CODE><DT><B>Overrides:</B><DD><CODE>stop</CODE> in class <CODE>com.ibm.telephony.conferencing.spi.AbstractConferenceService</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processAssociate(com.ibm.telephony.conferencing.spi.DefaultUser, com.ibm.telephony.conferencing.spi.DefaultUser, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processAssociate</H3>
+<PRE>
+public void <B>processAssociate</B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;namedUser,
+                             com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;connectedUser,
+                             com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                      throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method indicates the named user is in fact the same as an already connected user.
+ The conference should take steps necessary to synchronize the two (e.g., by renaming
+ "Guest" user to the named user).  
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processAssociate</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>namedUser</CODE> - user with given name<DD><CODE>connectedUser</CODE> - user instance already connected (e.g., as "Guest")<DD><CODE>handler</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processCreateConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processCreateConference</H3>
+<PRE>
+public void <B>processCreateConference</B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                                    java.lang.String&nbsp;conferenceDocumentText,
+                                    com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                             throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method will be called when a new conference is needed and is the only mechanism for a service provider to 
+ return a unique id for a conference. It does not indicate that real-time control of a conference will be started, 
+ but rather that the service provider should setup, allocate, and reserve any conferencing resources needed to 
+ support the conference specified in the documentText parameter. For example, the service provider should use 
+ this method to determine call-in phone numbers, access codes, and supported features for the conference, and return 
+ this information in deliverCreateConferenceResponse(). On success, service providers must also return a unique id for 
+ the conference which might be used to encode affinity to a particular audio bridge or some other embedded information.
+  
+ The login information can be used to authorize the creation of the conference. 
+
+ A failure during processing of this method should result in a call to deliverFailureResponse() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processCreateConference</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>login</CODE> - the login information to validate the context of the request<DD><CODE>conferenceDocumentText</CODE> - the document that describes the conference to schedule<DD><CODE>handler</CODE> - the listener that receives the response.
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted<DT><B>See Also:</B><DD><CODE>AbstractConferenceService.deliverCreateConferenceResponse(java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processDeleteConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processDeleteConference</H3>
+<PRE>
+public void <B>processDeleteConference</B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                                    java.lang.String&nbsp;conferenceId,
+                                    com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                             throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method will be called when a conference should be removed from the service provider's list of available
+ resources. If successful, this method should call deliverCancelConferenceResponse() with the conferenceId.
+ 
+ The login information should be used to authorize the removal of this conference.
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processDeleteConference</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>login</CODE> - the login information to validate the context of the request<DD><CODE>conferenceId</CODE> - the id of the conference to cancel.<DD><CODE>handler</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processDial(com.ibm.telephony.conferencing.spi.DefaultUser, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processDial</H3>
+<PRE>
+public void <B>processDial</B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+                        java.lang.String&nbsp;endPoint,
+                        java.lang.String&nbsp;dialMode,
+                        com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                 throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method indicates a user that should be dialed at the specified end-point. Since the endpoint parameter is a 
+ string, it could be a phone number, SIP address, or any other identifier for the location of a user. The service 
+ provider should dial the user and then call deliverDialResponse() to indicate success.
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processDial</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>user</CODE> - the resolvable user that this call is for. This value may be null.<DD><CODE>endPoint</CODE> - the "callable" end-point such as a phone number or SIP URI<DD><CODE>dialMode</CODE> - a string from the DialModes class that indicates how the user should be dialed<DD><CODE>handler</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processDialExtended(com.ibm.telephony.conferencing.spi.DefaultUser, java.lang.String, java.lang.String, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processDialExtended</H3>
+<PRE>
+public void <B>processDialExtended</B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+                                java.lang.String&nbsp;endPoint,
+                                java.lang.String&nbsp;dialMode,
+                                int&nbsp;mediaFlag,
+                                com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                         throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method indicates a user that should be dialed at the specified end-point. Since the endpoint parameter is a 
+ string, it could be a phone number, SIP address, or any other identifier for the location of a user. The service 
+ provider should dial the user and then call deliverDialResponse() to indicate success.
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processDialExtended</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE><DT><B>Specified by:</B><DD><CODE>processDialExtended</CODE> in class <CODE>com.ibm.telephony.conferencing.spi.AbstractSipConferenceService</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>user</CODE> - the resolvable user that this call is for. This value may be null.<DD><CODE>endPoint</CODE> - the "callable" end-point such as a phone number or SIP URI<DD><CODE>dialMode</CODE> - a string from the DialModes class that indicates how the user should be dialed<DD><CODE>mediaFlag</CODE> - a flag indicating which media (audio, video, or both) to start<DD><CODE>handler</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processDisconnectUser(com.ibm.telephony.conferencing.spi.DefaultUser, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processDisconnectUser</H3>
+<PRE>
+public void <B>processDisconnectUser</B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+                                  com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                           throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method indicates that a user should be disconnected from the conference. It does not imply that the user should
+ be unregistered. If successful, the User object should be returned in a call to deliverDisconnectUserResponse(). 
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processDisconnectUser</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>user</CODE> - the user to disconnect<DD><CODE>handler</CODE> - the listener that receives the response.
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processEditConference(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processEditConference</H3>
+<PRE>
+public void <B>processEditConference</B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                                  java.lang.String&nbsp;conferenceId,
+                                  java.lang.String&nbsp;conferenceDocumentText,
+                                  com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                           throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method will be called to update the conference data for an already created conference. The new conference
+ data specified as a serialized XML document in documentText should replace the already existing conference data.
+ If successful, this method should call deliverEditConferenceResponse() with the conferenceId of the edited conference.
+ If the XML is not valid, for example if the requested schedule times are not available, the previous conference data
+ should be retained and the requestFailed() method should be called.
+ 
+ The login information should be used to authorize the editing of this conference.
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processEditConference</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>login</CODE> - the login information to validate the context of the request<DD><CODE>conferenceId</CODE> - the id of the conference to cancel.<DD><CODE>conferenceDocumentText</CODE> - the new conference data as a serialized XML string<DD><CODE>handler</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processMediaControl(com.ibm.telephony.conferencing.spi.DefaultUser, int, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processMediaControl</H3>
+<PRE>
+public void <B>processMediaControl</B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+                                int&nbsp;controlFlag,
+                                int&nbsp;mediaFlag,
+                                com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                         throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method indicates a user has requested a media start/stop. Since the endpoint parameter is a 
+ string, it could be a phone number, SIP address, or any other identifier for the location of a user. The service 
+ provider should dial the user and then call deliverDialResponse() to indicate success.
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processMediaControl</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>user</CODE> - the resolvable user that this call is for. This value may be null.<DD><CODE>controlFlag</CODE> - flag indicating operation (e.g. start or stop)<DD><CODE>mediaFlag</CODE> - flag indicating which media the operation applies to<DD><CODE>handler</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processRegisterUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processRegisterUser</H3>
+<PRE>
+public void <B>processRegisterUser</B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                                java.lang.String&nbsp;conferenceId,
+                                java.lang.String&nbsp;userName,
+                                java.lang.String&nbsp;userRole,
+                                java.lang.String&nbsp;userPin,
+                                com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                         throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method is used to either notify service providers of a user that will be participating in a conference, or 
+ change the userRole for an existing user. Conferences can either be open and allow any user to join, or closed and 
+ allow only registered users to join. With an open conference, a service provider must still explicitly register the 
+ users as they join the conference from audio bridge hardware. If this method is called for a conference that is active,
+ service providers should call the protected method, registerUser(), which will create a new User object if necessary, 
+ set some default user properties and add the User object to a running conference. Service providers can set their own 
+ user properties during user creation by overriding the populateDefaultUserProperties() method. The user PIN passed into
+ this method is guaranteed to be unique for a given conference if the service provider is relying on the calling 
+ application for PIN support. If a service provider is supplying its own PINs for users then those PINs should be unique 
+ per conference and returned in the call to deliverRegisterUserResponse(). If registration is successful, service
+ providers should call the deliverRegisterUserResponse() method.
+ 
+ When this method is called for a running conference, the userRole property of the user will be set to the 
+ userRole argument.
+ 
+ The login information should be used to authorize the registering of the user.
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processRegisterUser</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>login</CODE> - the login information to validate the context of the request<DD><CODE>conferenceId</CODE> - the conference this registration is scoped.<DD><CODE>userName</CODE> - uniquely identifies the user.<DD><CODE>userRole</CODE> - the initial role of the user<DD><CODE>userPin</CODE> - the PIN of the user<DD><CODE>handler</CODE> - the listener that receives the response.
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processRegisterUserSip(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processRegisterUserSip</H3>
+<PRE>
+public void <B>processRegisterUserSip</B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                                   java.lang.String&nbsp;conferenceId,
+                                   java.lang.String&nbsp;userName,
+                                   java.lang.String&nbsp;userRole,
+                                   java.lang.String&nbsp;userPin,
+                                   java.lang.String&nbsp;sipUri,
+                                   com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                            throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method is the same as <code>processRegisterUser</code> with the addition of 
+ the SIP URI of the user for a SIP enabled conference.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processRegisterUserSip</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE><DT><B>Specified by:</B><DD><CODE>processRegisterUserSip</CODE> in class <CODE>com.ibm.telephony.conferencing.spi.AbstractSipConferenceService</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sipUri</CODE> - The user's SIP URI
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConferenceService.html#processRegisterUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><CODE>processRegisterUser(Login login, String conferenceId, String userName, String userRole, String userPin, ConferenceResponseHandler handler)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processSetConferenceProperty(com.ibm.telephony.conferencing.spi.DefaultConference, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processSetConferenceProperty</H3>
+<PRE>
+public void <B>processSetConferenceProperty</B>(com.ibm.telephony.conferencing.spi.DefaultConference&nbsp;conference,
+                                         com.ibm.telephony.conferencing.Property&nbsp;property,
+                                         com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                                  throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method indicates that a conference property should be set on the specified conference object. If successful, 
+ the conference and property should be returned in a call to deliverSetPropertyResponse().
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processSetConferenceProperty</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>conference</CODE> - the effected conference<DD><CODE>property</CODE> - the property to set<DD><CODE>handler</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processSetUserProperty(com.ibm.telephony.conferencing.spi.DefaultUser, com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processSetUserProperty</H3>
+<PRE>
+public void <B>processSetUserProperty</B>(com.ibm.telephony.conferencing.spi.DefaultUser&nbsp;user,
+                                   com.ibm.telephony.conferencing.Property&nbsp;property,
+                                   com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                            throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method indicates a user specific property that should be set by the service provider. If successful, the User
+ and Property should be returned in a call to deliverSetPropertyResponse(). 
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processSetUserProperty</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>user</CODE> - the effected user<DD><CODE>property</CODE> - the property to set<DD><CODE>handler</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processStartConferenceControl(com.ibm.telephony.conferencing.Login, java.lang.String, java.util.List, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processStartConferenceControl</H3>
+<PRE>
+public void <B>processStartConferenceControl</B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                                          java.lang.String&nbsp;conferenceId,
+                                          java.util.List&nbsp;initialProperties,
+                                          com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                                   throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method will be called to prepare the service provider for real-time control of a conference. The service provider
+ should prepare any conferencing resources necessary to send and receive conference or user events within that conference. 
+ If this method is successful, a runtime conference object should be returned in a call to 
+ deliverStartConferenceControlResponse(). 
+ 
+ The login information should be used to authorize control of the conference.
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processStartConferenceControl</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>login</CODE> - the login information to validate the context of the request<DD><CODE>conferenceId</CODE> - The conference to enable control<DD><CODE>initialProperties</CODE> - The set of initial properties to set on the conference object<DD><CODE>handler</CODE> - The listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processStopConferenceControl(com.ibm.telephony.conferencing.spi.DefaultConference, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processStopConferenceControl</H3>
+<PRE>
+public void <B>processStopConferenceControl</B>(com.ibm.telephony.conferencing.spi.DefaultConference&nbsp;conference,
+                                         com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                                  throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method is an indication that the service provider can stop managing the conference in a real-time control 
+ manner. It does not mean that the audio conference should be terminated, only that the resources allocated 
+ to support real-time conference control can be disposed. If successful, the conference that was stopped should be 
+ returned in a call to deliverStopConferenceControl(). 
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processStopConferenceControl</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>conference</CODE> - The conference to disable control<DD><CODE>handler</CODE> - The listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processTimeoutError(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processTimeoutError</H3>
+<PRE>
+public void <B>processTimeoutError</B>(com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                         throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method will be called when an asynchronous request has not been answered in an appropriate amount of time
+ defined in the ConferenceManager.properties file. Service providers should cancel processing of the timed out
+ request and then call deliverFailureResponse() for the listener.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processTimeoutError</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>handler</CODE> - the listener that receives the response
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processUnregisterUser(com.ibm.telephony.conferencing.Login, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processUnregisterUser</H3>
+<PRE>
+public void <B>processUnregisterUser</B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                                  java.lang.String&nbsp;conferenceId,
+                                  java.lang.String&nbsp;userName,
+                                  com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                           throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method provides a way to remove users from a conference, which is different from hanging up a user. If the 
+ conference is active, the unregistered user should be ejected from the conference. If the conference is not active yet, 
+ then the unregistered user will be removed from the access list for the conference. If this method is called to 
+ unregister the owner of the conference, it should not result in the conference being terminated. 
+ 
+ If successful, a call should be made to deliverUnregisterUserResponse() after the user has been either disconnected
+ from the conference or removed from the access list. 
+
+ The login information should be used to authorize the registering of the user.
+ 
+ A failure during processing of this method should result in a call to requestFailed() with the appropriate error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processUnregisterUser</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>login</CODE> - the login information to validate the context of the request<DD><CODE>conferenceId</CODE> - the conference this registration is scoped.<DD><CODE>userName</CODE> - uniquely identifies the user.<DD><CODE>handler</CODE> - the listener that receives the response.
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE> - when any exceptional situation occurs that prevents the request from being attempted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processValidateConference(com.ibm.telephony.conferencing.Login, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+processValidateConference</H3>
+<PRE>
+public void <B>processValidateConference</B>(com.ibm.telephony.conferencing.Login&nbsp;login,
+                                      java.lang.String&nbsp;conferenceDocumentText,
+                                      com.ibm.telephony.conferencing.event.ConferenceResponseHandler&nbsp;handler)
+                               throws com.ibm.telephony.conferencing.ConferenceException</PRE>
+<DL>
+<DD>This method will be called to validate a conference document in the context of a login before the conference
+ is actually created. It is meant to give service providers a way to notify the calling application that 
+ a particular schedule or feature set is not available for the specified conference, either for all users or the 
+ particular user specified by the login parameter. If this method is successful, service providers should call 
+ deliverValidateConferenceResponse() with a conference document containing supported features. If this method
+ fails, service providers should call deliverFailureResponse() with an appropriate error code. Note that this
+ method may or may not be called before createConference() is called, and even though this method succeeds, 
+ a subsequent createConference() call with the same parameters can still fail.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>processValidateConference</CODE> in interface <CODE>com.ibm.telephony.conferencing.spi.ConferenceServiceRequests</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>login</CODE> - the login information to validate the context of the request<DD><CODE>conferenceDocumentText</CODE> - the document that describes the conference to validate<DD><CODE>handler</CODE> - the listener that receives the response.
+<DT><B>Throws:</B>
+<DD><CODE>com.ibm.telephony.conferencing.ConferenceException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuNotifyUserAck(java.lang.String, java.lang.String)"><!-- --></A><H3>
+mcuNotifyUserAck</H3>
+<PRE>
+public void <B>mcuNotifyUserAck</B>(java.lang.String&nbsp;conferenceId,
+                             java.lang.String&nbsp;userUri)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuNotifyUserInvite(java.lang.String, java.lang.String)"><!-- --></A><H3>
+mcuNotifyUserInvite</H3>
+<PRE>
+public void <B>mcuNotifyUserInvite</B>(java.lang.String&nbsp;conferenceId,
+                                java.lang.String&nbsp;userUri)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuNotifyUserSetProperty(java.lang.String, java.lang.String, java.lang.String, java.lang.String)"><!-- --></A><H3>
+mcuNotifyUserSetProperty</H3>
+<PRE>
+public void <B>mcuNotifyUserSetProperty</B>(java.lang.String&nbsp;conferenceId,
+                                     java.lang.String&nbsp;userName,
+                                     java.lang.String&nbsp;propertyName,
+                                     java.lang.String&nbsp;propertyValue)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mcuNotifyUserBye(java.lang.String, java.lang.String)"><!-- --></A><H3>
+mcuNotifyUserBye</H3>
+<PRE>
+public void <B>mcuNotifyUserBye</B>(java.lang.String&nbsp;conferenceId,
+                             java.lang.String&nbsp;userUri)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/myav/MyAVConfig.html" title="class in com.ibm.telephony.conferencing.myav"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/telephony/conferencing/myav/MyAVConferenceService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MyAVConferenceService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

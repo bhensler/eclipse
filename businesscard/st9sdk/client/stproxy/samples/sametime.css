@@ -1,0 +1,57 @@
+/* Copyright IBM Corp. 2009, 2014  All Rights Reserved.              */
+
+/* L-MCOS-96LQPJ                                                     */
+.stbody	{
+	background: #CCCCCC;
+	color:	#000000;
+}
+
+.stlogo	{
+	width: 100%;
+   text-align: center;
+   margin-bottom: 50px;
+}
+
+.stcolr	{
+	float: right;
+}
+
+.stcoll	{
+	float: left;
+}
+
+.stcoll, .stcolr {
+	border-width: medium;
+	border-style: ridge;
+	border-color: #CCCCFF;
+	width: 45%;
+   padding: 10px;
+}
+
+.stblist{
+	position: relative;
+	width:300px;
+	height:550px;
+	border:1px solid black;
+	overflow:auto;
+	background: #FFFFFF;
+}
+
+.sttext	{
+	font-size: 1.25em;
+	font-style: normal;
+}
+.stfootnote	{
+	font-size: 0.875em;
+	font-style: italic;
+   color: #000099;
+}
+
+.sttext, .stfootnote {
+	font-family: Arial, Verdana, sans-serif;
+}
+
+h1 {
+   color: #000099;
+   text-align: center;
+}

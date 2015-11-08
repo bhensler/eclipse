@@ -1,0 +1,556 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+LiveNameResolver (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="LiveNameResolver (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameListener.html" title="interface in com.ibm.rcp.realtime.livenames"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameSelection.html" title="interface in com.ibm.rcp.realtime.livenames"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/rcp/realtime/livenames/LiveNameResolver.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="LiveNameResolver.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.rcp.realtime.livenames</FONT>
+<BR>
+Interface LiveNameResolver</H2>
+<HR>
+<DL>
+<DT><PRE>public interface <B>LiveNameResolver</B></DL>
+</PRE>
+
+<P>
+Provides methods to gain awareness from abritrary names in a realtime collaboration
+ environment.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#addLiveNameListener(com.ibm.rcp.realtime.livenames.LiveNameListener)">addLiveNameListener</A></B>(<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameListener.html" title="interface in com.ibm.rcp.realtime.livenames">LiveNameListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a LiveNameListener</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#dispose()">dispose</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disposes this LiveNameResolver instance and releases all livenames this resolver
+ is monitoring.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#ignore(com.ibm.rcp.realtime.livenames.LiveName[])">ignore</A></B>(<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html" title="interface in com.ibm.rcp.realtime.livenames">LiveName</A>[]&nbsp;livenames)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to indicate the LiveNameListener is no longer interested in recieving
+ status change events for the given livenames.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#ignore(java.lang.String[])">ignore</A></B>(java.lang.String[]&nbsp;lookupNames)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to indicate the LiveNameListener is no longer interested in recieving
+ status change events for the given lookup names.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#ignore(java.lang.String, java.lang.String)">ignore</A></B>(java.lang.String&nbsp;contactId,
+       java.lang.String&nbsp;communityId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to indicate the LiveNameListener is no longer interested in recieving
+ status change events for the contact identified by the give contactId and communityId</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#refreshWatch(com.ibm.rcp.realtime.livenames.LiveName)">refreshWatch</A></B>(<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html" title="interface in com.ibm.rcp.realtime.livenames">LiveName</A>&nbsp;livename)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh the watch for the given livename.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#refreshWatch(java.lang.String, java.lang.String)">refreshWatch</A></B>(java.lang.String&nbsp;contactId,
+             java.lang.String&nbsp;communityId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh the watch for the livename that matches the given contact ID and community ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#removeLiveNameListener(com.ibm.rcp.realtime.livenames.LiveNameListener)">removeLiveNameListener</A></B>(<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameListener.html" title="interface in com.ibm.rcp.realtime.livenames">LiveNameListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the LiveNameListener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#resolve(java.lang.String)">resolve</A></B>(java.lang.String&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resolve the given name into a live object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#resolve(java.lang.String[])">resolve</A></B>(java.lang.String[]&nbsp;names)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resolve the given names into live objects.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#setCheckLocalCache(boolean)">setCheckLocalCache</A></B>(boolean&nbsp;checkLocalCache)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets whether or not this resolver will resolve the lookup name if 
+ it's already in the person cache as a contact ID or display name before
+ doing a lookup.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#setExhaustive(boolean)">setExhaustive</A></B>(boolean&nbsp;isExhaustive)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specify whether or not to use exhaustive search</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#setRebroadcastStatus(boolean)">setRebroadcastStatus</A></B>(boolean&nbsp;rebroadcast)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the rebroadcast status boolean of this resolver.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#watch(java.lang.String)">watch</A></B>(java.lang.String&nbsp;livenameId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attempts to watch a livename given a known livename ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameResolver.html#watch(java.lang.String, java.lang.String)">watch</A></B>(java.lang.String&nbsp;contactId,
+      java.lang.String&nbsp;communityId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attempts to watch a livename given a known livename contact ID 
+  and community ID.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="resolve(java.lang.String)"><!-- --></A><H3>
+resolve</H3>
+<PRE>
+void <B>resolve</B>(java.lang.String&nbsp;name)</PRE>
+<DL>
+<DD>Resolve the given name into a live object.
+ 
+ If multiple contacts exists in a multicommunity environment with the same name, 
+ the name may not be resolved.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - the email address or short name to resolve</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="resolve(java.lang.String[])"><!-- --></A><H3>
+resolve</H3>
+<PRE>
+void <B>resolve</B>(java.lang.String[]&nbsp;names)</PRE>
+<DL>
+<DD>Resolve the given names into live objects.
+ 
+ If multiple contacts exists in a multicommunity environment with the same name, 
+ the name may not be resolved.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>names</CODE> - the email addresses or short names to resolve</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRebroadcastStatus(boolean)"><!-- --></A><H3>
+setRebroadcastStatus</H3>
+<PRE>
+void <B>setRebroadcastStatus</B>(boolean&nbsp;rebroadcast)</PRE>
+<DL>
+<DD>Sets the rebroadcast status boolean of this resolver.
+ If set to true, the LiveNameResolver will rebroadcast status
+ events for names that have already been resolved by this resolver instance.
+ In other words, each time the caller attempts to resolve a particular name,
+ a statusChange event will occur.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>rebroadcast</CODE> - whether or not to rebroadcast status events for already watched names.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCheckLocalCache(boolean)"><!-- --></A><H3>
+setCheckLocalCache</H3>
+<PRE>
+void <B>setCheckLocalCache</B>(boolean&nbsp;checkLocalCache)</PRE>
+<DL>
+<DD>Sets whether or not this resolver will resolve the lookup name if 
+ it's already in the person cache as a contact ID or display name before
+ doing a lookup.
+ By default this is true.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>checkLocalCache</CODE> - </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addLiveNameListener(com.ibm.rcp.realtime.livenames.LiveNameListener)"><!-- --></A><H3>
+addLiveNameListener</H3>
+<PRE>
+void <B>addLiveNameListener</B>(<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameListener.html" title="interface in com.ibm.rcp.realtime.livenames">LiveNameListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Adds a LiveNameListener
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeLiveNameListener(com.ibm.rcp.realtime.livenames.LiveNameListener)"><!-- --></A><H3>
+removeLiveNameListener</H3>
+<PRE>
+void <B>removeLiveNameListener</B>(<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameListener.html" title="interface in com.ibm.rcp.realtime.livenames">LiveNameListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Removes the LiveNameListener.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - the LiveNameListener</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="dispose()"><!-- --></A><H3>
+dispose</H3>
+<PRE>
+void <B>dispose</B>()</PRE>
+<DL>
+<DD>Disposes this LiveNameResolver instance and releases all livenames this resolver
+ is monitoring.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="ignore(com.ibm.rcp.realtime.livenames.LiveName[])"><!-- --></A><H3>
+ignore</H3>
+<PRE>
+void <B>ignore</B>(<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html" title="interface in com.ibm.rcp.realtime.livenames">LiveName</A>[]&nbsp;livenames)</PRE>
+<DL>
+<DD>Called to indicate the LiveNameListener is no longer interested in recieving
+ status change events for the given livenames.
+ 
+ This allows the subscribed livenames to be ignored and removed from the livename cache.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>livenames</CODE> - the livenames to ignore</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="ignore(java.lang.String[])"><!-- --></A><H3>
+ignore</H3>
+<PRE>
+void <B>ignore</B>(java.lang.String[]&nbsp;lookupNames)</PRE>
+<DL>
+<DD>Called to indicate the LiveNameListener is no longer interested in recieving
+ status change events for the given lookup names.
+ 
+ This allows the subscribed livenames to be ignored and removed from the livename cache.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>lookupNames</CODE> - The lookup names to ignore</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="ignore(java.lang.String, java.lang.String)"><!-- --></A><H3>
+ignore</H3>
+<PRE>
+void <B>ignore</B>(java.lang.String&nbsp;contactId,
+            java.lang.String&nbsp;communityId)</PRE>
+<DL>
+<DD>Called to indicate the LiveNameListener is no longer interested in recieving
+ status change events for the contact identified by the give contactId and communityId
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>contactId</CODE> - <DD><CODE>communityId</CODE> - <DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="watch(java.lang.String)"><!-- --></A><H3>
+watch</H3>
+<PRE>
+void <B>watch</B>(java.lang.String&nbsp;livenameId)</PRE>
+<DL>
+<DD>Attempts to watch a livename given a known livename ID.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>livenameId</CODE> - Livename ID to watch.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="watch(java.lang.String, java.lang.String)"><!-- --></A><H3>
+watch</H3>
+<PRE>
+void <B>watch</B>(java.lang.String&nbsp;contactId,
+           java.lang.String&nbsp;communityId)</PRE>
+<DL>
+<DD>Attempts to watch a livename given a known livename contact ID 
+  and community ID.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>contactId</CODE> - <DD><CODE>communityId</CODE> - </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="refreshWatch(java.lang.String, java.lang.String)"><!-- --></A><H3>
+refreshWatch</H3>
+<PRE>
+void <B>refreshWatch</B>(java.lang.String&nbsp;contactId,
+                  java.lang.String&nbsp;communityId)</PRE>
+<DL>
+<DD>Refresh the watch for the livename that matches the given contact ID and community ID.
+ This updates the livename's watch timestamp which puts it last on the list
+ of livenames to be evicted in case the watch limit is exceeeded.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>contactId</CODE> - <DD><CODE>communityId</CODE> - <DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="refreshWatch(com.ibm.rcp.realtime.livenames.LiveName)"><!-- --></A><H3>
+refreshWatch</H3>
+<PRE>
+void <B>refreshWatch</B>(<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveName.html" title="interface in com.ibm.rcp.realtime.livenames">LiveName</A>&nbsp;livename)</PRE>
+<DL>
+<DD>Refresh the watch for the given livename.
+ This updates the livename's watch timestamp which puts it last on the list
+ of livenames to be evicted in case the watch limit is exceeeded.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>livename</CODE> - Livename to refresh the watch for.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setExhaustive(boolean)"><!-- --></A><H3>
+setExhaustive</H3>
+<PRE>
+void <B>setExhaustive</B>(boolean&nbsp;isExhaustive)</PRE>
+<DL>
+<DD>Specify whether or not to use exhaustive search
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>isExhaustive</CODE> - <DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.3</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameListener.html" title="interface in com.ibm.rcp.realtime.livenames"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/rcp/realtime/livenames/LiveNameSelection.html" title="interface in com.ibm.rcp.realtime.livenames"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/rcp/realtime/livenames/LiveNameResolver.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="LiveNameResolver.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

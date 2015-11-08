@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>AuctionConstants (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">AuctionConstants</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A>
+<A NAME="13"><A>
+<A NAME="14"><A><FONT ID="FormalComment">/**
+<A NAME="15"><A> * Constants for auction house sample.&lt;p&gt;
+<A NAME="16"><A> *
+<A NAME="17"><A> * @author: Volker Juergensen
+<A NAME="18"><A> */</FONT>
+<A NAME="19"><A><FONT ID="Class">class</FONT> AuctionConstants
+<A NAME="20"><A>{
+<A NAME="21"><A>    <FONT ID="FormalComment">/**
+<A NAME="22"><A>     * First place name.
+<A NAME="23"><A>     */</FONT>
+<A NAME="24"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> String PLACE1_NAME = <FONT ID="StringLiteral">"Room11"</FONT>;
+<A NAME="25"><A>    
+<A NAME="26"><A>    <FONT ID="FormalComment">/**
+<A NAME="27"><A>     * Second place name.
+<A NAME="28"><A>     */</FONT>
+<A NAME="29"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> String PLACE2_NAME = <FONT ID="StringLiteral">"Room22"</FONT>;
+<A NAME="30"><A>    
+<A NAME="31"><A>    <FONT ID="FormalComment">/**
+<A NAME="32"><A>     * Third place name.
+<A NAME="33"><A>     */</FONT>
+<A NAME="34"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> String PLACE3_NAME = <FONT ID="StringLiteral">"Room33"</FONT>;
+<A NAME="35"><A>    
+<A NAME="36"><A>    <FONT ID="FormalComment">/**
+<A NAME="37"><A>     * The type of place we use.
+<A NAME="38"><A>     */</FONT>
+<A NAME="39"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> PLACE_TYPE = <FONT ID="IntegerLiteral">0x55</FONT>;
+<A NAME="40"><A>    
+<A NAME="41"><A>    <FONT ID="FormalComment">/**
+<A NAME="42"><A>     * Our activity type.
+<A NAME="43"><A>     */</FONT>
+<A NAME="44"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> ACTIVITY_TYPE = <FONT ID="IntegerLiteral">0x61</FONT>;
+<A NAME="45"><A>    
+<A NAME="46"><A>    <FONT ID="FormalComment">/**
+<A NAME="47"><A>     * The place password. Usually, you would distribute it to
+<A NAME="48"><A>     * the users and prompt for it when they try to enter.
+<A NAME="49"><A>     */</FONT>
+<A NAME="50"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> String PLACE_PASSWORD = <FONT ID="StringLiteral">"secret"</FONT>;
+<A NAME="51"><A>
+<A NAME="52"><A>    <FONT ID="FormalComment">/**
+<A NAME="53"><A>     * Status: Auction stopped
+<A NAME="54"><A>     */</FONT>
+<A NAME="55"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> AUCTION_STATUS_INACTIVE = <FONT ID="IntegerLiteral">0</FONT>;
+<A NAME="56"><A>
+<A NAME="57"><A>    <FONT ID="FormalComment">/**
+<A NAME="58"><A>     * Status: Auction active
+<A NAME="59"><A>     */</FONT>
+<A NAME="60"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> AUCTION_STATUS_ACTIVE = <FONT ID="IntegerLiteral">1</FONT>;
+<A NAME="61"><A>
+<A NAME="62"><A>    <FONT ID="FormalComment">/**
+<A NAME="63"><A>     * Status: Auction status "ONE"
+<A NAME="64"><A>     */</FONT>
+<A NAME="65"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> AUCTION_STATUS_ONE = <FONT ID="IntegerLiteral">2</FONT>;
+<A NAME="66"><A>
+<A NAME="67"><A>    <FONT ID="FormalComment">/**
+<A NAME="68"><A>     * Status: Auction status "TWO"
+<A NAME="69"><A>     */</FONT>
+<A NAME="70"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> AUCTION_STATUS_TWO = <FONT ID="IntegerLiteral">3</FONT>;
+<A NAME="71"><A>
+<A NAME="72"><A>    <FONT ID="FormalComment">/**
+<A NAME="73"><A>     * Status: Auction status "SOLD"
+<A NAME="74"><A>     */</FONT>
+<A NAME="75"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> AUCTION_STATUS_SOLD = <FONT ID="IntegerLiteral">4</FONT>;
+<A NAME="76"><A>
+<A NAME="77"><A>    <FONT ID="FormalComment">/**
+<A NAME="78"><A>     * Auction place status attribute.&lt;p&gt;
+<A NAME="79"><A>     * AuctionStatus ID: 100000+10
+<A NAME="80"><A>     */</FONT>
+<A NAME="81"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> AUCTION_STATUS_ATTR = <FONT ID="IntegerLiteral">100000</FONT> + <FONT ID="IntegerLiteral">10</FONT>;
+<A NAME="82"><A>
+<A NAME="83"><A>    <FONT ID="FormalComment">/**
+<A NAME="84"><A>     * Auction place current bid attribute.&lt;p&gt;
+<A NAME="85"><A>     * Bid ID: 100000+20
+<A NAME="86"><A>     */</FONT>
+<A NAME="87"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> BID_ATTR_ID = <FONT ID="IntegerLiteral">100000</FONT> + <FONT ID="IntegerLiteral">20</FONT>;
+<A NAME="88"><A>
+<A NAME="89"><A>    <FONT ID="FormalComment">/**
+<A NAME="90"><A>     * Auction place current item title attribute.&lt;p&gt;
+<A NAME="91"><A>     * Item Title ID: 100000+30
+<A NAME="92"><A>     */</FONT>
+<A NAME="93"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> AUCTION_ITEM_TITLE_ATTR = <FONT ID="IntegerLiteral">100000</FONT> + <FONT ID="IntegerLiteral">30</FONT>;
+<A NAME="94"><A>
+<A NAME="95"><A>    <FONT ID="FormalComment">/**
+<A NAME="96"><A>     * Auction place current item url attribute.&lt;p&gt;
+<A NAME="97"><A>     * Item URL ID: 100000+31
+<A NAME="98"><A>     */</FONT>
+<A NAME="99"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> AUCTION_ITEM_URL_ATTR = <FONT ID="IntegerLiteral">100000</FONT> + <FONT ID="IntegerLiteral">31</FONT>;
+<A NAME="100"><A>
+<A NAME="101"><A>    <FONT ID="FormalComment">/**
+<A NAME="102"><A>     * Auction place current item minimum price attribute.&lt;p&gt;
+<A NAME="103"><A>     * Item Price ID: 100000+32
+<A NAME="104"><A>     */</FONT>
+<A NAME="105"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> AUCTION_ITEM_PRICE_ATTR = <FONT ID="IntegerLiteral">100000</FONT> + <FONT ID="IntegerLiteral">32</FONT>;
+<A NAME="106"><A>
+<A NAME="107"><A>    <FONT ID="FormalComment">/**
+<A NAME="108"><A>     * Auction sendData used for bidding.&lt;p&gt;
+<A NAME="109"><A>     * Bid Data ID: 100000 + 40
+<A NAME="110"><A>     */</FONT>
+<A NAME="111"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> BID_DATA_TYPE = <FONT ID="IntegerLiteral">100000</FONT> + <FONT ID="IntegerLiteral">40</FONT>;
+<A NAME="112"><A>
+<A NAME="113"><A>}
+<A NAME="114"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">AuctionConstants</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

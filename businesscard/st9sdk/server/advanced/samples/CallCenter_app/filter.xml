@@ -1,0 +1,7 @@
+<FindBugsFilter>
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+	<!-- ckarle filter package, nonproduct sample code -->
+	<Match>
+		<Package name="com.ibm.sample.callcenter.manager"/>
+	</Match>
+</FindBugsFilter>

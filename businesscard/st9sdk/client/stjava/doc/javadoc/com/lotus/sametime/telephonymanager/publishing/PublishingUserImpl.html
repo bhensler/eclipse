@@ -1,0 +1,441 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>PublishingUserImpl</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PublishingUserImpl";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html" title="interface in com.lotus.sametime.telephonymanager.publishing"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html" target="_top">Frames</a></li>
+<li><a href="PublishingUserImpl.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.telephonymanager.publishing</div>
+<h2 title="Class PublishingUserImpl" class="title">Class PublishingUserImpl</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.telephonymanager.publishing.PublishingUserImpl</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a>, <a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html" title="interface in com.lotus.sametime.telephonymanager.publishing">PublishingUser</a>, java.util.EventListener</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">PublishingUserImpl</span>
+extends java.lang.Object
+implements <a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html" title="interface in com.lotus.sametime.telephonymanager.publishing">PublishingUser</a>, <a href="../../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a></pre>
+<div class="block">A PublishingUser implementation for ST80 server versions (and above?)
+ 
+ Life Cycle :
+ When this object is created we request a server to login to (from the cluster),
+ and do the login.
+ When we receive the loggedIn event, we save the server that we were logged in to
+ and send it a publish request for the current telephony status of this user.
+ If we receive a loggedOut event, it is our responsibility to try to login again
+ to another server.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html#PublishingUserImpl(com.lotus.sametime.core.types.STId, int, java.lang.String, com.lotus.sametime.telephonymanager.TelephonyAdapterImpl)">PublishingUserImpl</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;userId,
+                  int&nbsp;attributeKey,
+                  java.lang.String&nbsp;attributeVal,
+                  <a href="../../../../../com/lotus/sametime/telephonymanager/TelephonyAdapterImpl.html" title="class in com.lotus.sametime.telephonymanager">TelephonyAdapterImpl</a>&nbsp;impl)</code>
+<div class="block">Construct a new Publishing User object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html#PublishingUserImpl(com.lotus.sametime.core.types.STId, int, com.lotus.sametime.telephonymanager.TelephonyAdapterImpl)">PublishingUserImpl</a></strong>(<a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;userId,
+                  int&nbsp;status,
+                  <a href="../../../../../com/lotus/sametime/telephonymanager/TelephonyAdapterImpl.html" title="class in com.lotus.sametime.telephonymanager">TelephonyAdapterImpl</a>&nbsp;impl)</code>
+<div class="block">An outdated constructor - for backward compatibility only.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html#cleanup()">cleanup</a></strong>()</code>
+<div class="block">This user is not required anymore, do the clean up</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html#loggedIn(com.lotus.sametime.community.LoginEvent)">loggedIn</a></strong>(<a href="../../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</code>
+<div class="block">Indicates that we were successfully logged in to the Sametime community.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html#loggedOut(com.lotus.sametime.community.LoginEvent)">loggedOut</a></strong>(<a href="../../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</code>
+<div class="block">Note, we will not get loggedOut with reason OK cause we remove the listener
+ before we logout.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html#removeTelephonyStatus()">removeTelephonyStatus</a></strong>()</code>
+<div class="block">Remove the telephony attribute of this user from the Sametime server
+ Note: in the current implementation, this also logout the user from the
+ server and cleans all necessary data and listeners</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html#removeUserAttribute(int)">removeUserAttribute</a></strong>(int&nbsp;attributeKey)</code>
+<div class="block">Remove an attribute from this user.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html#setTelephonyStatus(int)">setTelephonyStatus</a></strong>(int&nbsp;status)</code>
+<div class="block">Set the telephony status of this user.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html#setUserAttribute(int, java.lang.String)">setUserAttribute</a></strong>(int&nbsp;attributeKey,
+                java.lang.String&nbsp;attributeValue)</code>
+<div class="block">Set an attribute for this user.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PublishingUserImpl(com.lotus.sametime.core.types.STId, int, java.lang.String, com.lotus.sametime.telephonymanager.TelephonyAdapterImpl)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PublishingUserImpl</h4>
+<pre>public&nbsp;PublishingUserImpl(<a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;userId,
+                  int&nbsp;attributeKey,
+                  java.lang.String&nbsp;attributeVal,
+                  <a href="../../../../../com/lotus/sametime/telephonymanager/TelephonyAdapterImpl.html" title="class in com.lotus.sametime.telephonymanager">TelephonyAdapterImpl</a>&nbsp;impl)</pre>
+<div class="block">Construct a new Publishing User object.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>userId</code> - the Sametime user id</dd><dd><code>attributeKey</code> - the key of the attribute set for this user</dd><dd><code>attributeVal</code> - the value of the attribute set for this user</dd></dl>
+</li>
+</ul>
+<a name="PublishingUserImpl(com.lotus.sametime.core.types.STId, int, com.lotus.sametime.telephonymanager.TelephonyAdapterImpl)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PublishingUserImpl</h4>
+<pre>public&nbsp;PublishingUserImpl(<a href="../../../../../com/lotus/sametime/core/types/STId.html" title="class in com.lotus.sametime.core.types">STId</a>&nbsp;userId,
+                  int&nbsp;status,
+                  <a href="../../../../../com/lotus/sametime/telephonymanager/TelephonyAdapterImpl.html" title="class in com.lotus.sametime.telephonymanager">TelephonyAdapterImpl</a>&nbsp;impl)</pre>
+<div class="block">An outdated constructor - for backward compatibility only.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>userId</code> - the Sametime user id</dd><dd><code>status</code> - the telephony status</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="loggedIn(com.lotus.sametime.community.LoginEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loggedIn</h4>
+<pre>public&nbsp;void&nbsp;loggedIn(<a href="../../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/community/LoginListener.html#loggedIn(com.lotus.sametime.community.LoginEvent)">LoginListener</a></code></span></div>
+<div class="block">Indicates that we were successfully logged in to the Sametime community.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/community/LoginListener.html#loggedIn(com.lotus.sametime.community.LoginEvent)">loggedIn</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/community/LoginListener.html#loggedIn(com.lotus.sametime.community.LoginEvent)"><code>LoginListener.loggedIn(LoginEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="setTelephonyStatus(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setTelephonyStatus</h4>
+<pre>public&nbsp;void&nbsp;setTelephonyStatus(int&nbsp;status)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#setTelephonyStatus(int)">PublishingUser</a></code></span></div>
+<div class="block">Set the telephony status of this user.
+ If the new status is different from the old one, this will send a request
+ to the Sametime server to change the telephony status.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#setTelephonyStatus(int)">setTelephonyStatus</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html" title="interface in com.lotus.sametime.telephonymanager.publishing">PublishingUser</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>status</code> - The new telephony status</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#setTelephonyStatus(int)"><code>PublishingUser.setTelephonyStatus(int)</code></a></dd></dl>
+</li>
+</ul>
+<a name="removeTelephonyStatus()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeTelephonyStatus</h4>
+<pre>public&nbsp;void&nbsp;removeTelephonyStatus()</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#removeTelephonyStatus()">PublishingUser</a></code></span></div>
+<div class="block">Remove the telephony attribute of this user from the Sametime server
+ Note: in the current implementation, this also logout the user from the
+ server and cleans all necessary data and listeners</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#removeTelephonyStatus()">removeTelephonyStatus</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html" title="interface in com.lotus.sametime.telephonymanager.publishing">PublishingUser</a></code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#removeTelephonyStatus()"><code>PublishingUser.removeTelephonyStatus()</code></a></dd></dl>
+</li>
+</ul>
+<a name="cleanup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cleanup</h4>
+<pre>public&nbsp;void&nbsp;cleanup()</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#cleanup()">PublishingUser</a></code></span></div>
+<div class="block">This user is not required anymore, do the clean up</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#cleanup()">cleanup</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html" title="interface in com.lotus.sametime.telephonymanager.publishing">PublishingUser</a></code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#cleanup()"><code>PublishingUser.cleanup()</code></a></dd></dl>
+</li>
+</ul>
+<a name="loggedOut(com.lotus.sametime.community.LoginEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loggedOut</h4>
+<pre>public&nbsp;void&nbsp;loggedOut(<a href="../../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>&nbsp;event)</pre>
+<div class="block">Note, we will not get loggedOut with reason OK cause we remove the listener
+ before we logout.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/community/LoginListener.html#loggedOut(com.lotus.sametime.community.LoginEvent)">loggedOut</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/community/LoginListener.html" title="interface in com.lotus.sametime.community">LoginListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../com/lotus/sametime/community/LoginListener.html#loggedOut(com.lotus.sametime.community.LoginEvent)"><code>LoginListener.loggedOut(LoginEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="removeUserAttribute(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeUserAttribute</h4>
+<pre>public&nbsp;void&nbsp;removeUserAttribute(int&nbsp;attributeKey)</pre>
+<div class="block">Remove an attribute from this user.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#removeUserAttribute(int)">removeUserAttribute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html" title="interface in com.lotus.sametime.telephonymanager.publishing">PublishingUser</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>attributeKey</code> - the attribute's key</dd></dl>
+</li>
+</ul>
+<a name="setUserAttribute(int, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setUserAttribute</h4>
+<pre>public&nbsp;void&nbsp;setUserAttribute(int&nbsp;attributeKey,
+                    java.lang.String&nbsp;attributeValue)</pre>
+<div class="block">Set an attribute for this user.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html#setUserAttribute(int, java.lang.String)">setUserAttribute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html" title="interface in com.lotus.sametime.telephonymanager.publishing">PublishingUser</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>attributeKey</code> - the user attribute key</dd><dd><code>attributeValue</code> - the attribute value</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/telephonymanager/publishing/PublishingUser.html" title="interface in com.lotus.sametime.telephonymanager.publishing"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/telephonymanager/publishing/PublishingUserImpl.html" target="_top">Frames</a></li>
+<li><a href="PublishingUserImpl.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

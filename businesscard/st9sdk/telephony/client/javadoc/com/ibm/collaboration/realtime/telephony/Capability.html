@@ -1,0 +1,1627 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Capability (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Capability (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallVideoData.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/Capability.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Capability.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony</FONT>
+<BR>
+Interface Capability</H2>
+<DL>
+<DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html" title="interface in com.ibm.collaboration.realtime.telephony">CallManager</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/service/CallServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">CallServiceProvider</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html" title="interface in com.ibm.collaboration.realtime.telephony">CapabilityManager</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/service/ClickToCallServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">ClickToCallServiceProvider</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html" title="interface in com.ibm.collaboration.realtime.telephony">Participant</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/service/VideoChatServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">VideoChatServiceProvider</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/service/VoiceChatServiceProvider.html" title="interface in com.ibm.collaboration.realtime.telephony.service">VoiceChatServiceProvider</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractCallServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service">AbstractCallServiceProvider</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractClickToCallServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service">AbstractClickToCallServiceProvider</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractVideoChatServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service">AbstractVideoChatServiceProvider</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/service/AbstractVoiceChatServiceProvider.html" title="class in com.ibm.collaboration.realtime.telephony.service">AbstractVoiceChatServiceProvider</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>Capability</B></DL>
+</PRE>
+
+<P>
+Capability defines capabilities that can be supported by a telephony
+ service provider for an individual call or participant. This interface
+ is extended by other interfaces that support the ability to query
+ capabilities.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ACCEPT_INCOMING_CALL">CAPABILITY_ACCEPT_INCOMING_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An incoming call event can be accepted without connecting to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT">CAPABILITY_ADD_PARTICIPANT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant can be added to an existing call by any other participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY">CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant can be added to an existing call, but only by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ALTERNATE_CALL">CAPABILITY_ALTERNATE_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ability to switch between an active call and paused (held) call is supported.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ANSWER_CALL">CAPABILITY_ANSWER_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Active call can support answering the call with the current endpoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO">CAPABILITY_AUDIO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computer-to-computer audio (voice-over-IP) calls are supported.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO_DEVICE_CONTROL">CAPABILITY_AUDIO_DEVICE_CONTROL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CAN_CONSULT">CAPABILITY_CAN_CONSULT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Active call can support a consultation.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO">CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Both local and remote video can be displayed in a single SWT canvas.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONFERENCE_CALL">CAPABILITY_CONFERENCE_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call can be placed to more than two parties at the same time.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONNECT_INCOMING_CALL">CAPABILITY_CONNECT_INCOMING_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An incoming call event can be accepted to connect to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DETECT_VOICE_ACTIVITY">CAPABILITY_DETECT_VOICE_ACTIVITY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DISCONNECT_CALL">CAPABILITY_DISCONNECT_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant can disconnect from the call and continue to receive call events.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_DIGITS">CAPABILITY_DTMF_DIGITS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A string of DTMF digits can processed on a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_EVENT">CAPABILITY_DTMF_EVENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A DTMF event can be processed on a call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT">CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A ring-no-answer timeout is supported for telephony endpoints.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_EXECUTE_COMMAND">CAPABILITY_EXECUTE_COMMAND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Service provider-specific commands can be executed via the executeCommand method.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_CALL_PROPERTY">CAPABILITY_GET_CALL_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call's properties can be queried.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_ENDPOINTS">CAPABILITY_GET_ENDPOINTS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The service provider can specify telephony endpoints when requested to do so.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_PROPERTY">CAPABILITY_GET_PARTICIPANT_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant's properties can be queried.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_VOLUME">CAPABILITY_GET_PARTICIPANT_VOLUME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant's volume can be determined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INCOMING_CALL_TIMEOUT">CAPABILITY_INCOMING_CALL_TIMEOUT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An incoming call event can time out and become invalid after a specified number of seconds.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL">CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other participant(s) can be invited in a paused call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LEAVE_CALL">CAPABILITY_LEAVE_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The call moderator can leave the call without ending it for other participants.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LOCK_CALL">CAPABILITY_LOCK_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call can be locked to prevent other participants from joining.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MERGE_CALLS">CAPABILITY_MERGE_CALLS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calls can be merged.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_CALL">CAPABILITY_MUTE_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call can be muted and unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT">CAPABILITY_MUTE_PARTICIPANT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant can be muted and unmuted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_AUDIO">CAPABILITY_MUTE_PARTICIPANT_AUDIO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant's audio can be muted and unmuted independently of video.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_VIDEO">CAPABILITY_MUTE_PARTICIPANT_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant's video can be muted and unmuted independently of audio.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PAUSE_CALL">CAPABILITY_PAUSE_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call can be paused (put on hold) and resumed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PHONE_DEVICE_CONTROL">CAPABILITY_PHONE_DEVICE_CONTROL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_AUDIO_FILE">CAPABILITY_PLAY_AUDIO_FILE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Audio file playback is supported.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_VIDEO_FILE">CAPABILITY_PLAY_VIDEO_FILE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video file playback is supported.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO">CAPABILITY_RECORD_AUDIO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The audio portion of a call can be recorded.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO_ONLY">CAPABILITY_RECORD_AUDIO_ONLY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The audio portion of a video call can be recorded without the video.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_LOCAL">CAPABILITY_RECORD_COMPRESS_LOCAL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call recorded on the client can be stored in compressed format.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_SERVER">CAPABILITY_RECORD_COMPRESS_SERVER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call recorded on the server can be stored in compressed format.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL">CAPABILITY_RECORD_LOCAL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call can be recorded on the client, to a local file.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL_STREAM">CAPABILITY_RECORD_LOCAL_STREAM</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call can be recorded on the client, to an output stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER">CAPABILITY_RECORD_SERVER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call can be recorded on the server.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED">CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When recording a call on the server, a filename can be specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED">CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When recording a call on the server, a filename must be specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_VIDEO">CAPABILITY_RECORD_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Both the audio and video of a call can be recorded.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REDIRECT_INCOMING_CALL">CAPABILITY_REDIRECT_INCOMING_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An incoming call be redirected to another address.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REJECT_INCOMING_CALL">CAPABILITY_REJECT_INCOMING_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An incoming call event can be rejected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REMOVE_PARTICIPANT">CAPABILITY_REMOVE_PARTICIPANT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant can be removed from an existing call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PARTICIPANT_UNMUTE">CAPABILITY_REQUEST_PARTICIPANT_UNMUTE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A request to unmute a participant can be sent to the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PROVIDER_PROPERTIES">CAPABILITY_REQUEST_PROVIDER_PROPERTIES</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The service provider's configuration properties can be requested using requestProviderProperties.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SAVE_ENDPOINTS">CAPABILITY_SAVE_ENDPOINTS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The service provider should be notified when Preferred Numbers preference page is saved.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_AUDIO_PORT">CAPABILITY_SET_AUDIO_PORT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The UDP port used for voice chat audio streams can be set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_CALL_PROPERTY">CAPABILITY_SET_CALL_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A call's properties can be set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_MODERATOR">CAPABILITY_SET_MODERATOR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One or more call moderators can be specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_PROPERTY">CAPABILITY_SET_PARTICIPANT_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant's properties can be set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_VOLUME">CAPABILITY_SET_PARTICIPANT_VOLUME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant's volume can be set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PREFERRED_ENDPOINT">CAPABILITY_SET_PREFERRED_ENDPOINT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The service provider should be notified whenever the preferred telephony endpoint changes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_VIDEO_PORT">CAPABILITY_SET_VIDEO_PORT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The UDP port used for video call video streams can be set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SILENCE_PARTICIPANT">CAPABILITY_SILENCE_PARTICIPANT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A participant can be silenced by the moderator, meaning the moderator can
+ mute the participant's audio such that the participant cannot unmute himself.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SIP_URI">CAPABILITY_SIP_URI</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A SIP URI can be specified wherever a phone number is allowed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TELEPHONY">CAPABILITY_TELEPHONY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Telephone calls are supported, meaning calls can include telephone number endpoints.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_CALL">CAPABILITY_TRANSFER_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An active call be transferred to another address.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_TO_DEVICE">CAPABILITY_TRANSFER_TO_DEVICE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An active call be transferred to another device.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO">CAPABILITY_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Video calls are supported.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO_DEVICE_CONTROL">CAPABILITY_VIDEO_DEVICE_CONTROL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A></B>(java.lang.String&nbsp;capability)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the service provider supports the specified capability.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CAPABILITY_ACCEPT_INCOMING_CALL"><!-- --></A><H3>
+CAPABILITY_ACCEPT_INCOMING_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_ACCEPT_INCOMING_CALL</B></PRE>
+<DL>
+<DD>An incoming call event can be accepted without connecting to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_ACCEPT_INCOMING_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_ADD_PARTICIPANT"><!-- --></A><H3>
+CAPABILITY_ADD_PARTICIPANT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_ADD_PARTICIPANT</B></PRE>
+<DL>
+<DD>A participant can be added to an existing call by any other participant.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_ADD_PARTICIPANT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY"><!-- --></A><H3>
+CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY</B></PRE>
+<DL>
+<DD>A participant can be added to an existing call, but only by the moderator.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_ALTERNATE_CALL"><!-- --></A><H3>
+CAPABILITY_ALTERNATE_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_ALTERNATE_CALL</B></PRE>
+<DL>
+<DD>The ability to switch between an active call and paused (held) call is supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_ALTERNATE_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_AUDIO"><!-- --></A><H3>
+CAPABILITY_AUDIO</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_AUDIO</B></PRE>
+<DL>
+<DD>Computer-to-computer audio (voice-over-IP) calls are supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_AUDIO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_AUDIO_DEVICE_CONTROL"><!-- --></A><H3>
+CAPABILITY_AUDIO_DEVICE_CONTROL</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>CAPABILITY_AUDIO_DEVICE_CONTROL</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Audio device control is supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (previously named CAPABILITY_VOIP_AUDIO_DEVICE_CONTROL)</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_AUDIO_DEVICE_CONTROL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO"><!-- --></A><H3>
+CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO</B></PRE>
+<DL>
+<DD>Both local and remote video can be displayed in a single SWT canvas.
+ If this capability is not supported, local and remote video are displayed
+ in separate canvases.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_CONFERENCE_CALL"><!-- --></A><H3>
+CAPABILITY_CONFERENCE_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_CONFERENCE_CALL</B></PRE>
+<DL>
+<DD>A call can be placed to more than two parties at the same time.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_CONFERENCE_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_CONNECT_INCOMING_CALL"><!-- --></A><H3>
+CAPABILITY_CONNECT_INCOMING_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_CONNECT_INCOMING_CALL</B></PRE>
+<DL>
+<DD>An incoming call event can be accepted to connect to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_CONNECT_INCOMING_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_DETECT_VOICE_ACTIVITY"><!-- --></A><H3>
+CAPABILITY_DETECT_VOICE_ACTIVITY</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>CAPABILITY_DETECT_VOICE_ACTIVITY</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>A participant's voice activity can be detected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_DETECT_VOICE_ACTIVITY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_DISCONNECT_CALL"><!-- --></A><H3>
+CAPABILITY_DISCONNECT_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_DISCONNECT_CALL</B></PRE>
+<DL>
+<DD>A participant can disconnect from the call and continue to receive call events.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_DISCONNECT_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_DTMF_DIGITS"><!-- --></A><H3>
+CAPABILITY_DTMF_DIGITS</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_DTMF_DIGITS</B></PRE>
+<DL>
+<DD>A string of DTMF digits can processed on a call.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_DTMF_DIGITS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_DTMF_EVENT"><!-- --></A><H3>
+CAPABILITY_DTMF_EVENT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_DTMF_EVENT</B></PRE>
+<DL>
+<DD>A DTMF event can be processed on a call.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_DTMF_EVENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT"><!-- --></A><H3>
+CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT</B></PRE>
+<DL>
+<DD>A ring-no-answer timeout is supported for telephony endpoints.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_EXECUTE_COMMAND"><!-- --></A><H3>
+CAPABILITY_EXECUTE_COMMAND</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_EXECUTE_COMMAND</B></PRE>
+<DL>
+<DD>Service provider-specific commands can be executed via the executeCommand method.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_EXECUTE_COMMAND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_GET_CALL_PROPERTY"><!-- --></A><H3>
+CAPABILITY_GET_CALL_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_GET_CALL_PROPERTY</B></PRE>
+<DL>
+<DD>A call's properties can be queried.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_GET_CALL_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_GET_ENDPOINTS"><!-- --></A><H3>
+CAPABILITY_GET_ENDPOINTS</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_GET_ENDPOINTS</B></PRE>
+<DL>
+<DD>The service provider can specify telephony endpoints when requested to do so.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_GET_ENDPOINTS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_GET_PARTICIPANT_PROPERTY"><!-- --></A><H3>
+CAPABILITY_GET_PARTICIPANT_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_GET_PARTICIPANT_PROPERTY</B></PRE>
+<DL>
+<DD>A participant's properties can be queried.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_GET_PARTICIPANT_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_GET_PARTICIPANT_VOLUME"><!-- --></A><H3>
+CAPABILITY_GET_PARTICIPANT_VOLUME</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_GET_PARTICIPANT_VOLUME</B></PRE>
+<DL>
+<DD>A participant's volume can be determined.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_GET_PARTICIPANT_VOLUME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_INCOMING_CALL_TIMEOUT"><!-- --></A><H3>
+CAPABILITY_INCOMING_CALL_TIMEOUT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_INCOMING_CALL_TIMEOUT</B></PRE>
+<DL>
+<DD>An incoming call event can time out and become invalid after a specified number of seconds.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (previously named CAPABILITY_VOIP_INCOMING_CALL_TIMEOUT)</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_INCOMING_CALL_TIMEOUT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_LEAVE_CALL"><!-- --></A><H3>
+CAPABILITY_LEAVE_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_LEAVE_CALL</B></PRE>
+<DL>
+<DD>The call moderator can leave the call without ending it for other participants.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_LEAVE_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_LOCK_CALL"><!-- --></A><H3>
+CAPABILITY_LOCK_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_LOCK_CALL</B></PRE>
+<DL>
+<DD>A call can be locked to prevent other participants from joining.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_LOCK_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MERGE_CALLS"><!-- --></A><H3>
+CAPABILITY_MERGE_CALLS</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MERGE_CALLS</B></PRE>
+<DL>
+<DD>Calls can be merged.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.0.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_MERGE_CALLS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MUTE_CALL"><!-- --></A><H3>
+CAPABILITY_MUTE_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MUTE_CALL</B></PRE>
+<DL>
+<DD>A call can be muted and unmuted.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_MUTE_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MUTE_PARTICIPANT"><!-- --></A><H3>
+CAPABILITY_MUTE_PARTICIPANT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MUTE_PARTICIPANT</B></PRE>
+<DL>
+<DD>A participant can be muted and unmuted. To determine whether audio and video
+ can be muted independently, use CAPABILITY_MUTE_PARTICIPANT_AUDIO and
+ CAPABILITY_MUTE_PARTICIPANT_VIDEO. See also
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SILENCE_PARTICIPANT"><CODE>CAPABILITY_SILENCE_PARTICIPANT</CODE></A>
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_MUTE_PARTICIPANT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MUTE_PARTICIPANT_AUDIO"><!-- --></A><H3>
+CAPABILITY_MUTE_PARTICIPANT_AUDIO</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MUTE_PARTICIPANT_AUDIO</B></PRE>
+<DL>
+<DD>A participant's audio can be muted and unmuted independently of video.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_MUTE_PARTICIPANT_AUDIO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MUTE_PARTICIPANT_VIDEO"><!-- --></A><H3>
+CAPABILITY_MUTE_PARTICIPANT_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MUTE_PARTICIPANT_VIDEO</B></PRE>
+<DL>
+<DD>A participant's video can be muted and unmuted independently of audio.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_MUTE_PARTICIPANT_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_PAUSE_CALL"><!-- --></A><H3>
+CAPABILITY_PAUSE_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_PAUSE_CALL</B></PRE>
+<DL>
+<DD>A call can be paused (put on hold) and resumed.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (previously named CAPABILITY_VOIP_PAUSE_CALL)</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_PAUSE_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_PHONE_DEVICE_CONTROL"><!-- --></A><H3>
+CAPABILITY_PHONE_DEVICE_CONTROL</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>CAPABILITY_PHONE_DEVICE_CONTROL</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Phone device control is supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_PHONE_DEVICE_CONTROL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_PLAY_AUDIO_FILE"><!-- --></A><H3>
+CAPABILITY_PLAY_AUDIO_FILE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_PLAY_AUDIO_FILE</B></PRE>
+<DL>
+<DD>Audio file playback is supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (previously named CAPABILITY_VOIP_PLAY_FILE)</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_PLAY_AUDIO_FILE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_PLAY_VIDEO_FILE"><!-- --></A><H3>
+CAPABILITY_PLAY_VIDEO_FILE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_PLAY_VIDEO_FILE</B></PRE>
+<DL>
+<DD>Video file playback is supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_PLAY_VIDEO_FILE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_AUDIO"><!-- --></A><H3>
+CAPABILITY_RECORD_AUDIO</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_AUDIO</B></PRE>
+<DL>
+<DD>The audio portion of a call can be recorded.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_AUDIO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_AUDIO_ONLY"><!-- --></A><H3>
+CAPABILITY_RECORD_AUDIO_ONLY</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_AUDIO_ONLY</B></PRE>
+<DL>
+<DD>The audio portion of a video call can be recorded without the video.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_AUDIO_ONLY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_COMPRESS_LOCAL"><!-- --></A><H3>
+CAPABILITY_RECORD_COMPRESS_LOCAL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_COMPRESS_LOCAL</B></PRE>
+<DL>
+<DD>A call recorded on the client can be stored in compressed format.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_COMPRESS_LOCAL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_COMPRESS_SERVER"><!-- --></A><H3>
+CAPABILITY_RECORD_COMPRESS_SERVER</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_COMPRESS_SERVER</B></PRE>
+<DL>
+<DD>A call recorded on the server can be stored in compressed format.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_COMPRESS_SERVER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_LOCAL"><!-- --></A><H3>
+CAPABILITY_RECORD_LOCAL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_LOCAL</B></PRE>
+<DL>
+<DD>A call can be recorded on the client, to a local file.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_LOCAL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_LOCAL_STREAM"><!-- --></A><H3>
+CAPABILITY_RECORD_LOCAL_STREAM</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_LOCAL_STREAM</B></PRE>
+<DL>
+<DD>A call can be recorded on the client, to an output stream.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_LOCAL_STREAM">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_SERVER"><!-- --></A><H3>
+CAPABILITY_RECORD_SERVER</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_SERVER</B></PRE>
+<DL>
+<DD>A call can be recorded on the server.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_SERVER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED"><!-- --></A><H3>
+CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED</B></PRE>
+<DL>
+<DD>When recording a call on the server, a filename can be specified.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED"><!-- --></A><H3>
+CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED</B></PRE>
+<DL>
+<DD>When recording a call on the server, a filename must be specified.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_RECORD_VIDEO"><!-- --></A><H3>
+CAPABILITY_RECORD_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_RECORD_VIDEO</B></PRE>
+<DL>
+<DD>Both the audio and video of a call can be recorded.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_RECORD_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_REDIRECT_INCOMING_CALL"><!-- --></A><H3>
+CAPABILITY_REDIRECT_INCOMING_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_REDIRECT_INCOMING_CALL</B></PRE>
+<DL>
+<DD>An incoming call be redirected to another address.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_REDIRECT_INCOMING_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_REJECT_INCOMING_CALL"><!-- --></A><H3>
+CAPABILITY_REJECT_INCOMING_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_REJECT_INCOMING_CALL</B></PRE>
+<DL>
+<DD>An incoming call event can be rejected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_REJECT_INCOMING_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_REMOVE_PARTICIPANT"><!-- --></A><H3>
+CAPABILITY_REMOVE_PARTICIPANT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_REMOVE_PARTICIPANT</B></PRE>
+<DL>
+<DD>A participant can be removed from an existing call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_REMOVE_PARTICIPANT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_REQUEST_PARTICIPANT_UNMUTE"><!-- --></A><H3>
+CAPABILITY_REQUEST_PARTICIPANT_UNMUTE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_REQUEST_PARTICIPANT_UNMUTE</B></PRE>
+<DL>
+<DD>A request to unmute a participant can be sent to the moderator.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_REQUEST_PARTICIPANT_UNMUTE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_REQUEST_PROVIDER_PROPERTIES"><!-- --></A><H3>
+CAPABILITY_REQUEST_PROVIDER_PROPERTIES</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_REQUEST_PROVIDER_PROPERTIES</B></PRE>
+<DL>
+<DD>The service provider's configuration properties can be requested using requestProviderProperties.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_REQUEST_PROVIDER_PROPERTIES">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SAVE_ENDPOINTS"><!-- --></A><H3>
+CAPABILITY_SAVE_ENDPOINTS</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SAVE_ENDPOINTS</B></PRE>
+<DL>
+<DD>The service provider should be notified when Preferred Numbers preference page is saved.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SAVE_ENDPOINTS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_AUDIO_PORT"><!-- --></A><H3>
+CAPABILITY_SET_AUDIO_PORT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_AUDIO_PORT</B></PRE>
+<DL>
+<DD>The UDP port used for voice chat audio streams can be set.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SET_AUDIO_PORT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_CALL_PROPERTY"><!-- --></A><H3>
+CAPABILITY_SET_CALL_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_CALL_PROPERTY</B></PRE>
+<DL>
+<DD>A call's properties can be set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SET_CALL_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_MODERATOR"><!-- --></A><H3>
+CAPABILITY_SET_MODERATOR</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_MODERATOR</B></PRE>
+<DL>
+<DD>One or more call moderators can be specified.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SET_MODERATOR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_PARTICIPANT_PROPERTY"><!-- --></A><H3>
+CAPABILITY_SET_PARTICIPANT_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_PARTICIPANT_PROPERTY</B></PRE>
+<DL>
+<DD>A participant's properties can be set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SET_PARTICIPANT_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_PARTICIPANT_VOLUME"><!-- --></A><H3>
+CAPABILITY_SET_PARTICIPANT_VOLUME</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_PARTICIPANT_VOLUME</B></PRE>
+<DL>
+<DD>A participant's volume can be set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SET_PARTICIPANT_VOLUME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_PREFERRED_ENDPOINT"><!-- --></A><H3>
+CAPABILITY_SET_PREFERRED_ENDPOINT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_PREFERRED_ENDPOINT</B></PRE>
+<DL>
+<DD>The service provider should be notified whenever the preferred telephony endpoint changes.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SET_PREFERRED_ENDPOINT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SET_VIDEO_PORT"><!-- --></A><H3>
+CAPABILITY_SET_VIDEO_PORT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SET_VIDEO_PORT</B></PRE>
+<DL>
+<DD>The UDP port used for video call video streams can be set.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SET_VIDEO_PORT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SILENCE_PARTICIPANT"><!-- --></A><H3>
+CAPABILITY_SILENCE_PARTICIPANT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SILENCE_PARTICIPANT</B></PRE>
+<DL>
+<DD>A participant can be silenced by the moderator, meaning the moderator can
+ mute the participant's audio such that the participant cannot unmute himself.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SILENCE_PARTICIPANT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_SIP_URI"><!-- --></A><H3>
+CAPABILITY_SIP_URI</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_SIP_URI</B></PRE>
+<DL>
+<DD>A SIP URI can be specified wherever a phone number is allowed.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_SIP_URI">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_TELEPHONY"><!-- --></A><H3>
+CAPABILITY_TELEPHONY</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_TELEPHONY</B></PRE>
+<DL>
+<DD>Telephone calls are supported, meaning calls can include telephone number endpoints.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_TELEPHONY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_TRANSFER_CALL"><!-- --></A><H3>
+CAPABILITY_TRANSFER_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_TRANSFER_CALL</B></PRE>
+<DL>
+<DD>An active call be transferred to another address.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_TRANSFER_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_TRANSFER_TO_DEVICE"><!-- --></A><H3>
+CAPABILITY_TRANSFER_TO_DEVICE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_TRANSFER_TO_DEVICE</B></PRE>
+<DL>
+<DD>An active call be transferred to another device.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_TRANSFER_TO_DEVICE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_VIDEO"><!-- --></A><H3>
+CAPABILITY_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_VIDEO</B></PRE>
+<DL>
+<DD>Video calls are supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_VIDEO_DEVICE_CONTROL"><!-- --></A><H3>
+CAPABILITY_VIDEO_DEVICE_CONTROL</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>CAPABILITY_VIDEO_DEVICE_CONTROL</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I><DD>Video device control is supported.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_VIDEO_DEVICE_CONTROL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL"><!-- --></A><H3>
+CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL</B></PRE>
+<DL>
+<DD>Other participant(s) can be invited in a paused call.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_CAN_CONSULT"><!-- --></A><H3>
+CAPABILITY_CAN_CONSULT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_CAN_CONSULT</B></PRE>
+<DL>
+<DD>Active call can support a consultation.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_CAN_CONSULT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_ANSWER_CALL"><!-- --></A><H3>
+CAPABILITY_ANSWER_CALL</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_ANSWER_CALL</B></PRE>
+<DL>
+<DD>Active call can support answering the call with the current endpoint.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.Capability.CAPABILITY_ANSWER_CALL">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="isCapabilitySupported(java.lang.String)"><!-- --></A><H3>
+isCapabilitySupported</H3>
+<PRE>
+boolean <B>isCapabilitySupported</B>(java.lang.String&nbsp;capability)</PRE>
+<DL>
+<DD>Determines if the service provider supports the specified capability.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>capability</CODE> - capability to test, one of the CAPABILITY_xxx values
+<DT><B>Returns:</B><DD>true if specified capability is supported, false otherwise.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the capability is null</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallVideoData.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/Capability.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Capability.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

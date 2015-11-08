@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:policy-template xmlns:p="http://www.ibm.com/sametime/console/policy-template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ibm.com/sametime/console/policy-template PolicyTemplate.xsd">
+	
+	<p:policy-attribute-group id="msserver.policygroup.1" label="ms.policygroup.1.label" description="ms.policygroup.1.description">
+	<!-- ms.policygroup.1.label=General Meeting Settings -->
+	
+		<p:policy-attribute id="ms.9" type="integer" current-value="100" default-value="100" label="ms.9.label" description="ms.9.desc" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.9.label=Maximum persistent meeting rooms this user can own -->
+	
+		<p:policy-attribute id="ms.15" type="boolean" current-value="1" default-value="1" label="ms.15.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.15.label=Allow user to create instant (non-persistent) meeting rooms -->
+	
+		<p:policy-attribute id="ms.17" type="boolean" current-value="1" default-value="1" label="ms.17.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.17.label=Automatically connect to meeting server when logging into Sametime Connect -->
+	
+		<p:policy-attribute id="ms.14" type="boolean" current-value="1" default-value="1" label="ms.14.label" description="ms.14.desc" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.14.label=Allow searching of meeting rooms -->
+	
+		<p:policy-attribute id="ms.13" type="boolean" current-value="0" default-value="0" label="ms.13.label" description="ms.13.desc" master-attribute-link="ms.14" possible-values="" possible-value-labels="" />
+		<!-- ms.13.label=Allow searching of hidden meeting rooms -->
+	
+		<p:policy-attribute id="ms.16" type="boolean" current-value="1" default-value="1" label="ms.16.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.16.label=Show "Scheduled Meetings" view -->
+	
+		<p:policy-attribute id="ms.11" type="boolean" current-value="1" default-value="1" label="ms.11.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.11.label=Allow meetings to be recorded -->
+	
+		<p:policy-attribute id="ms.12" type="boolean" current-value="1" default-value="1" label="ms.12.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.12.label=Allow meeting room content to be downloaded -->
+	
+		<p:policy-attribute id="ms.1" type="choice" current-value="2" default-value="2" label="ms.1.label" description=""  master-attribute-link="" possible-values="0,1,2" possible-value-labels="ms.1.a.label,ms.1.b.label,ms.1.c.label" />
+		<!-- ms.1.label=Meeting room group chats -->
+
+		<p:policy-attribute id="ms.21" type="boolean" current-value="1" default-value="1" label="ms.21.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.21.label=Allow meeting room polls -->
+
+		<p:policy-attribute id="ms.22" type="boolean" current-value="1" default-value="1" label="ms.22.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.22.label=Allow annotations of uploaded content -->
+
+	</p:policy-attribute-group>
+		
+	<p:policy-attribute-group id="msserver.policygroup.2" label="ms.policygroup.2.label" description="ms.policygroup.2.description">
+	<!-- ms.policygroup.2.label=General Meeting Settings -->		
+		
+		<p:policy-attribute id="ms.7" type="integer" current-value="50" default-value="50" label="ms.7.label" description="ms.7.desc" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.7.label=Maximum file upload size, in Megabytes -->
+		
+		<p:policy-attribute id="ms.8" type="integer" current-value="200" default-value="200" label="ms.8.label" description="ms.8.desc" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.8.label=Maximum total size of library, in Megabytes -->
+		
+	</p:policy-attribute-group>
+
+	<p:policy-attribute-group id="msserver.policygroup.3" label="ms.policygroup.3.label" description="ms.policygroup.3.description">
+	<!-- ms.policygroup.3.label=Screen Sharing -->
+	
+		<p:policy-attribute id="ms.2" type="choice" current-value="2" default-value="2" label="ms.2.label" description="" master-attribute-link="" possible-values="0,1,2" possible-value-labels="ms.2.a.label,ms.2.b.label,ms.2.c.label" />
+		<!-- ms.2.label=Allow screen sharing -->
+		
+		<p:policy-attribute id="ms.3" type="boolean" current-value="1" default-value="1" label="ms.3.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.3.label=Allow user to control another's screen -->
+		
+		<p:policy-attribute id="ms.18" type="boolean" current-value="1" default-value="1" label="ms.18.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.18.label=Allow peer-to-peer application sharing -->
+		
+		<p:policy-attribute id="ms.19" type="boolean" current-value="0" default-value="0" label="ms.19.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- ms.19.label=Enforce bandwidth limits -->
+		
+		<p:policy-attribute id="ms.20" type="integer" current-value="500" default-value="500" label="ms.20.label" description="ms.20.desc" master-attribute-link="ms.19" possible-values="" possible-value-labels="" />
+		<!-- ms.20.label=Maximum bandwidth size, in Kilobytes per second -->
+		
+	</p:policy-attribute-group>
+	
+	<p:policy-attribute-group id="msserver.policygroup.classic" label="ms.policygroup.classic.label" description="ms.policygroup.classic.description"> -->
+	<!-- ms.policygroup.classic.label=Sametime Classic Meetings -->
+	
+		<p:policy-attribute id="attribute1001" type="boolean" current-value="1" default-value="1" label="attribute1001.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- attribute1001.label=Allow users to create instant meetings and breakout sessions -->
+		
+		<p:policy-attribute id="attribute1002" type="choice" current-value="0" default-value="0" label="attribute1002.label" description="" master-attribute-link="" possible-values="0,1,2" possible-value-labels="attribute1002.a.label,attribute1002.b.label,attribute1002.c.label"/>
+		<!-- attribute1002.label=Allow Sametime IP audio and video for instant meetings and breakout sessions -->
+
+		<p:policy-attribute id="attribute1003" type="boolean" current-value="1" default-value="1" label="attribute1003.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- attribute1003.label=Allow participation in meeting room chats -->
+	
+		<p:policy-attribute id="attribute1004" type="choice" current-value="2" default-value="2" label="attribute1004.label" description="" master-attribute-link="" possible-values="0,1,2" possible-value-labels="attribute1004.a.label,attribute1004.b.label,attribute1004.c.label"/>
+		<!-- attribute1004.label=Allow screen sharing -->
+
+		<p:policy-attribute id="attribute1005" type="boolean" current-value="1" default-value="1" label="attribute1005.label" description="" master-attribute-link="" possible-values="" possible-value-labels="" />
+		<!-- attribute1005.label=Allow user to control another user's shared screen -->
+		
+	</p:policy-attribute-group>
+
+</p:policy-template>

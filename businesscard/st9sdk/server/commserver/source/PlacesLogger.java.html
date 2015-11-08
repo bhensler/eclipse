@@ -1,0 +1,303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>PlacesLogger (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">PlacesLogger</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.*;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.*;
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.placessa.*;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.connection.*;
+<A NAME="17"><A>
+<A NAME="18"><A><FONT ID="Import">import</FONT> java.awt.*;
+<A NAME="19"><A>
+<A NAME="20"><A>
+<A NAME="21"><A><FONT ID="FormalComment">/**
+<A NAME="22"><A> * A sample of the places sa toolkit. Monitors the places that are created and
+<A NAME="23"><A> * logs their operations.
+<A NAME="24"><A> */</FONT>
+<A NAME="25"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> PlacesLogger <FONT ID="Implements">implements</FONT> LoginListener, ActivityServiceListener
+<A NAME="26"><A>{
+<A NAME="27"><A>    <FONT ID="SingleLineComment">//
+<A NAME="28"><A></FONT>    <FONT ID="SingleLineComment">// Constants.
+<A NAME="29"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="30"><A></FONT>
+<A NAME="31"><A>    <FONT ID="FormalComment">/**
+<A NAME="32"><A>     * The activity type we support.
+<A NAME="33"><A>     */</FONT>
+<A NAME="34"><A>    <FONT ID="SingleLineComment">// For some reason, the places sa doesn't support global activities. 
+<A NAME="35"><A></FONT>    <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> ACTIVITY_TYPE = <FONT ID="IntegerLiteral">0x55</FONT>;
+<A NAME="36"><A>
+<A NAME="37"><A>    <FONT ID="FormalComment">/**
+<A NAME="38"><A>     * The type of places we log.
+<A NAME="39"><A>     */</FONT>
+<A NAME="40"><A>    <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> PLACE_TYPE = <FONT ID="IntegerLiteral">0</FONT>;
+<A NAME="41"><A>
+<A NAME="42"><A>    <FONT ID="SingleLineComment">//
+<A NAME="43"><A></FONT>    <FONT ID="SingleLineComment">// Members.
+<A NAME="44"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="45"><A></FONT>    <FONT ID="FormalComment">/**
+<A NAME="46"><A>     * The session object.
+<A NAME="47"><A>     */</FONT>
+<A NAME="48"><A>    <FONT ID="Private">private</FONT> STSession m_session;
+<A NAME="49"><A>
+<A NAME="50"><A>    <FONT ID="FormalComment">/**
+<A NAME="51"><A>     * The places admin service.
+<A NAME="52"><A>     */</FONT>
+<A NAME="53"><A>    <FONT ID="Private">private</FONT> PlacesAdminService m_adminService;
+<A NAME="54"><A>
+<A NAME="55"><A>    <FONT ID="FormalComment">/**
+<A NAME="56"><A>     * The activity service.
+<A NAME="57"><A>     */</FONT>
+<A NAME="58"><A>    <FONT ID="Private">private</FONT> ActivityService m_activityService;
+<A NAME="59"><A>
+<A NAME="60"><A>    <FONT ID="FormalComment">/**
+<A NAME="61"><A>     * The output frame.
+<A NAME="62"><A>     */</FONT>
+<A NAME="63"><A>    <FONT ID="Private">private</FONT> <A HREF="LogFrame.java.html">LogFrame</A> m_frame;
+<A NAME="64"><A>
+<A NAME="65"><A>    <FONT ID="FormalComment">/**
+<A NAME="66"><A>     * Constructor.
+<A NAME="67"><A>     *
+<A NAME="68"><A>     * @param hostName The name of the server to connect to.
+<A NAME="69"><A>     */</FONT>
+<A NAME="70"><A>    <FONT ID="Public">public</FONT> PlacesLogger(String hostName)
+<A NAME="71"><A>    {
+<A NAME="72"><A>        <FONT ID="SingleLineComment">// Create and load the session of components.
+<A NAME="73"><A></FONT>        <FONT ID="Try">try</FONT>
+<A NAME="74"><A>        {
+<A NAME="75"><A>            m_session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">"PlacesLogger"</FONT>);
+<A NAME="76"><A>
+<A NAME="77"><A>            String [] compNames  = { ServerAppService.COMP_NAME, 
+<A NAME="78"><A>                ActivityService.COMP_NAME, PlacesAdminService.COMP_NAME };
+<A NAME="79"><A>            m_session.loadComponents( compNames );
+<A NAME="80"><A>            
+<A NAME="81"><A>            m_session.start();
+<A NAME="82"><A>        }
+<A NAME="83"><A>        <FONT ID="Catch">catch</FONT>(DuplicateObjectException e)
+<A NAME="84"><A>        {
+<A NAME="85"><A>            e.printStackTrace();
+<A NAME="86"><A>            exit();
+<A NAME="87"><A>        }
+<A NAME="88"><A>
+<A NAME="89"><A>        <FONT ID="SingleLineComment">// Get a reference to the needed components.
+<A NAME="90"><A></FONT>        m_adminService
+<A NAME="91"><A>            = (PlacesAdminService)m_session.getCompApi(PlacesAdminService.COMP_NAME);
+<A NAME="92"><A>        m_adminService.addPlacesAdminListener(<FONT ID="New">new</FONT> AdminHandler());
+<A NAME="93"><A>
+<A NAME="94"><A>        m_activityService
+<A NAME="95"><A>            = (ActivityService)m_session.getCompApi(ActivityService.COMP_NAME);
+<A NAME="96"><A>        m_activityService.addActivityServiceListener(<FONT ID="This">this</FONT>);
+<A NAME="97"><A>
+<A NAME="98"><A>        login(hostName);
+<A NAME="99"><A>
+<A NAME="100"><A>        <FONT ID="SingleLineComment">// Create the frame.
+<A NAME="101"><A></FONT>        m_frame = <FONT ID="New">new</FONT> <A HREF="LogFrame.java.html">LogFrame</A>();
+<A NAME="102"><A>        m_frame.pack();
+<A NAME="103"><A>        m_frame.setVisible(<FONT ID="True">true</FONT>);
+<A NAME="104"><A>    }
+<A NAME="105"><A>
+<A NAME="106"><A>    <FONT ID="FormalComment">/**
+<A NAME="107"><A>     * Login to the sametime server as a server application.
+<A NAME="108"><A>     *
+<A NAME="109"><A>     * @param hostName The name of the host.
+<A NAME="110"><A>     */</FONT>
+<A NAME="111"><A>    <FONT ID="Void">void</FONT> login(String hostName)
+<A NAME="112"><A>    {
+<A NAME="113"><A>        ServerAppService saService =
+<A NAME="114"><A>            (ServerAppService)m_session.getCompApi(ServerAppService.COMP_NAME);
+<A NAME="115"><A>
+<A NAME="116"><A>        <FONT ID="Short">short</FONT> loginType = STUserInstance.LT_SERVER_APP;
+<A NAME="117"><A>        <FONT ID="Int">int</FONT>[] supportedServices = { ACTIVITY_TYPE };
+<A NAME="118"><A>        
+<A NAME="119"><A>        <FONT ID="SingleLineComment">// Server applications login directly to the server, and not through
+<A NAME="120"><A></FONT>        <FONT ID="SingleLineComment">// the mux. So we can't use the default port.
+<A NAME="121"><A></FONT>        Connection[] connections = {
+<A NAME="122"><A>            <FONT ID="New">new</FONT> SocketConnection(<FONT ID="IntegerLiteral">1516</FONT>, <FONT ID="IntegerLiteral">17000</FONT>),
+<A NAME="123"><A>        };
+<A NAME="124"><A>        saService.setConnectivity(connections);
+<A NAME="125"><A>
+<A NAME="126"><A>        saService.addLoginListener(<FONT ID="This">this</FONT>);
+<A NAME="127"><A>        saService.loginAsServerApp(hostName, loginType, <FONT ID="StringLiteral">"PlacesLogger"</FONT>,
+<A NAME="128"><A>                                   supportedServices);
+<A NAME="129"><A>    }
+<A NAME="130"><A>
+<A NAME="131"><A>    <FONT ID="FormalComment">/**
+<A NAME="132"><A>     * Terminate the application.
+<A NAME="133"><A>     */</FONT>
+<A NAME="134"><A>    <FONT ID="Void">void</FONT> exit()
+<A NAME="135"><A>    {
+<A NAME="136"><A>        m_session.stop();
+<A NAME="137"><A>        m_session.unloadSession();
+<A NAME="138"><A>        System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="139"><A>    }
+<A NAME="140"><A>
+<A NAME="141"><A>    <FONT ID="SingleLineComment">//
+<A NAME="142"><A></FONT>    <FONT ID="SingleLineComment">// Places Activity Listener
+<A NAME="143"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="144"><A></FONT>    <FONT ID="FormalComment">/**
+<A NAME="145"><A>     * A request for an activity as come from a place.
+<A NAME="146"><A>     *
+<A NAME="147"><A>     * @param event The event object.
+<A NAME="148"><A>     * @see PlacesActivityEvent#getManagedActivity
+<A NAME="149"><A>     * @see PlacesActivityEvent#getPlace
+<A NAME="150"><A>     */</FONT>
+<A NAME="151"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> activityRequested(ActivityServiceEvent event)
+<A NAME="152"><A>    {
+<A NAME="153"><A>        <FONT ID="SingleLineComment">// A place was created and our activity is requested.
+<A NAME="154"><A></FONT>        Place place = event.getPlace();
+<A NAME="155"><A>
+<A NAME="156"><A>        System.out.println(<FONT ID="StringLiteral">"Place: "</FONT> + place.getName());
+<A NAME="157"><A>        m_activityService.acceptActivity(event.getMyActivity(), <FONT ID="Null">null</FONT>);
+<A NAME="158"><A>
+<A NAME="159"><A>        <FONT ID="New">new</FONT> <A HREF="PlaceHandler.java.html">PlaceHandler</A>(event.getMyActivity(), m_frame);
+<A NAME="160"><A>    }
+<A NAME="161"><A>
+<A NAME="162"><A>    <FONT ID="SingleLineComment">//
+<A NAME="163"><A></FONT>    <FONT ID="SingleLineComment">// Login Listener.
+<A NAME="164"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="165"><A></FONT>
+<A NAME="166"><A>     <FONT ID="FormalComment">/**
+<A NAME="167"><A>     * Indicates that we were successfully logged in to the Sametime community.
+<A NAME="168"><A>     *
+<A NAME="169"><A>     * @param event The event object.
+<A NAME="170"><A>     * @see LoginEvent#getCommunity
+<A NAME="171"><A>     */</FONT>
+<A NAME="172"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event)
+<A NAME="173"><A>    {
+<A NAME="174"><A>        System.out.println(<FONT ID="StringLiteral">"Logger: LoggedIn"</FONT>);
+<A NAME="175"><A>    }
+<A NAME="176"><A>
+<A NAME="177"><A>    <FONT ID="FormalComment">/**
+<A NAME="178"><A>     * Indicates that we were successfully logged out of the Sametime community, or a login
+<A NAME="179"><A>     * request was refused.
+<A NAME="180"><A>     *
+<A NAME="181"><A>     * @param event The event object.
+<A NAME="182"><A>     * @see LoginEvent#getReason
+<A NAME="183"><A>     * @see LoginEvent#getCommunity
+<A NAME="184"><A>     */</FONT>
+<A NAME="185"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event)
+<A NAME="186"><A>    {
+<A NAME="187"><A>        System.out.println(<FONT ID="StringLiteral">"Logger: LoggedOut"</FONT> + event.getReason());
+<A NAME="188"><A>        exit();
+<A NAME="189"><A>    }
+<A NAME="190"><A>
+<A NAME="191"><A>
+<A NAME="192"><A>    <FONT ID="SingleLineComment">//
+<A NAME="193"><A></FONT>    <FONT ID="SingleLineComment">// Admin Listener.
+<A NAME="194"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="195"><A></FONT>
+<A NAME="196"><A>    <FONT ID="FormalComment">/**
+<A NAME="197"><A>     * Handles places admin events.
+<A NAME="198"><A>     */</FONT>
+<A NAME="199"><A>    <FONT ID="Class">class</FONT> AdminHandler <FONT ID="Extends">extends</FONT> PlacesAdminAdapter
+<A NAME="200"><A>    {
+<A NAME="201"><A>        <FONT ID="FormalComment">/**
+<A NAME="202"><A>        * The Places service is available.
+<A NAME="203"><A>        *
+<A NAME="204"><A>        * @param event The event object.
+<A NAME="205"><A>        */</FONT>
+<A NAME="206"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> serviceAvailable(PlacesAdminEvent event)
+<A NAME="207"><A>        {
+<A NAME="208"><A>            <FONT ID="SingleLineComment">// Set our activity as a default activity for the place type we
+<A NAME="209"><A></FONT>            <FONT ID="SingleLineComment">// are interested in.
+<A NAME="210"><A></FONT>            System.out.println(<FONT ID="StringLiteral">"AdminService available"</FONT>);
+<A NAME="211"><A>            m_adminService.setDefaultActivity(PLACE_TYPE, ACTIVITY_TYPE, <FONT ID="Null">null</FONT>);
+<A NAME="212"><A>        }
+<A NAME="213"><A>
+<A NAME="214"><A>        <FONT ID="FormalComment">/**
+<A NAME="215"><A>        * The Places server is unavailable.
+<A NAME="216"><A>        *
+<A NAME="217"><A>        * @param event The event object.
+<A NAME="218"><A>        */</FONT>
+<A NAME="219"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> serviceUnavailable(PlacesAdminEvent event)
+<A NAME="220"><A>        {
+<A NAME="221"><A>            System.out.println(<FONT ID="StringLiteral">"AdminService un available"</FONT>);
+<A NAME="222"><A>            exit();
+<A NAME="223"><A>        }
+<A NAME="224"><A>        <FONT ID="FormalComment">/**
+<A NAME="225"><A>        * The 'Set default activity' operation succeded.
+<A NAME="226"><A>        *
+<A NAME="227"><A>        * @param event The event object.
+<A NAME="228"><A>        * @see PlacesAdminEvent#getPlaceType
+<A NAME="229"><A>        * @see PlacesAdminEvent#getActivityType
+<A NAME="230"><A>        * @see PlacesAdminEvent#getActivityData
+<A NAME="231"><A>        */</FONT>
+<A NAME="232"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> defaultActivitySet(PlacesAdminEvent event)
+<A NAME="233"><A>        {
+<A NAME="234"><A>            System.out.println(<FONT ID="StringLiteral">"Default activity set"</FONT>);
+<A NAME="235"><A>        }
+<A NAME="236"><A>
+<A NAME="237"><A>        <FONT ID="FormalComment">/**
+<A NAME="238"><A>        * The 'Set default activity' operation failed.
+<A NAME="239"><A>        *
+<A NAME="240"><A>        * @param event The event object.
+<A NAME="241"><A>        * @see PlacesAdminEvent#getPlaceType
+<A NAME="242"><A>        * @see PlacesAdminEvent#getActivityType
+<A NAME="243"><A>        * @see PlacesAdminEvent#getActivityData
+<A NAME="244"><A>        * @see PlacesAdminEvent#getReason
+<A NAME="245"><A>        */</FONT>
+<A NAME="246"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setDefaultActivityFailed(PlacesAdminEvent event)
+<A NAME="247"><A>        {
+<A NAME="248"><A>            System.out.println(<FONT ID="StringLiteral">"Set default activity failed"</FONT>);
+<A NAME="249"><A>            exit();
+<A NAME="250"><A>        }
+<A NAME="251"><A>    }
+<A NAME="252"><A>
+<A NAME="253"><A>
+<A NAME="254"><A>    <FONT ID="FormalComment">/**
+<A NAME="255"><A>     * Application entry point.
+<A NAME="256"><A>     */</FONT>
+<A NAME="257"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args)
+<A NAME="258"><A>    {
+<A NAME="259"><A>        <FONT ID="If">if</FONT> (args.length != <FONT ID="IntegerLiteral">1</FONT>)
+<A NAME="260"><A>        {
+<A NAME="261"><A>            System.err.println(<FONT ID="StringLiteral">"Usage: PlacesLogger [serverName]"</FONT>);
+<A NAME="262"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="263"><A>        }
+<A NAME="264"><A>
+<A NAME="265"><A>        <FONT ID="New">new</FONT> <A HREF="PlacesLogger.java.html">PlacesLogger</A>(args[<FONT ID="IntegerLiteral">0</FONT>]);
+<A NAME="266"><A>    }
+<A NAME="267"><A>
+<A NAME="268"><A>}
+<A NAME="269"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">PlacesLogger</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

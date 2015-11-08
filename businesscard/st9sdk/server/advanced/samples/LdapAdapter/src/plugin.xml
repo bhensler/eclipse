@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<plugin id="com.ibm.rtc.extensions.userinformationprovider"
+			name="LdapUserInformationProvider"
+			version="1.0.0"
+			provider-name="IBM">
+			
+		 <!--
+		   	Sample extension implementation for the user info provider extension points
+		   	The user information is pulled out of the sametime server ldap
+		   -->
+	<extension
+		id="ldapadaptor"
+	    name="LdapUserInformationProviderExtension"
+	    point="com.ibm.rtc.extensions.UserInformationProvider">
+		<implementation class="com.ibm.stadvanced.samples.ldapadaptor.LdapUserInformationProvider"/>
+	</extension>
+ </plugin>		   

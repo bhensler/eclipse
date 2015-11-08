@@ -1,0 +1,1429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+DefaultMessageHandler (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="DefaultMessageHandler (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/messages/BuddySelectedMessage.html" title="class in com.ibm.collaboration.realtime.messages"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/messages/HoverBizCardOpenedMessage.html" title="class in com.ibm.collaboration.realtime.messages"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DefaultMessageHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.messages</FONT>
+<BR>
+Class DefaultMessageHandler</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.messages.DefaultMessageHandler</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>DefaultMessageHandler</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></DL>
+</PRE>
+
+<P>
+Default implementation of MessageHandler interface. Plug-ins that need
+ to process specific messages should extend this class and override the
+ appropriate handleMessage methods.
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleDefaultMessage(com.ibm.collaboration.realtime.messages.Message)">handleDefaultMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/Message.html" title="class in com.ibm.collaboration.realtime.messages">Message</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a generic message event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.AddContactToBuddyListMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/AddContactToBuddyListMessage.html" title="class in com.ibm.collaboration.realtime.messages">AddContactToBuddyListMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to signal the client to open the AddToContactlist dialog with the supplied user</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.AlertUserActionMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/AlertUserActionMessage.html" title="class in com.ibm.collaboration.realtime.messages">AlertUserActionMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an AlertUserActionMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.AlertUserMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/AlertUserMessage.html" title="class in com.ibm.collaboration.realtime.messages">AlertUserMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an AlertUserMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.ApplicationDefinedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/ApplicationDefinedMessage.html" title="class in com.ibm.collaboration.realtime.messages">ApplicationDefinedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ApplicationDefinedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.BuddySelectedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/BuddySelectedMessage.html" title="class in com.ibm.collaboration.realtime.messages">BuddySelectedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a BuddySelectedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.HoverBizCardOpenedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/HoverBizCardOpenedMessage.html" title="class in com.ibm.collaboration.realtime.messages">HoverBizCardOpenedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle HoverBizCardOpenedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowCloseWarningMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImChatWindowCloseWarningMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImChatWindowCloseWarningMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle ImChatWindowCloseWarningMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowFlashWindowMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImChatWindowFlashWindowMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImChatWindowFlashWindowMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImChatWindowFlashWindowMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowForceFocusMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImChatWindowForceFocusMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImChatWindowForceFocusMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImChatWindowForceFocusMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowToolbarRedrawMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImChatWindowToolbarRedrawMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImChatWindowToolbarRedrawMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImChatWindowToolbarRedrawMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImConnectedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImConnectedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImConnectedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImConnectedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImConnectionStatusLocationChangeMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImConnectionStatusLocationChangeMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImConnectionStatusLocationChangeMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImConnectionStatusLocationChangeMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImDisconnectedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImDisconnectedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImDisconnectedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImDisconnectedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConnectionClosedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConnectionClosedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImTextConnectionClosedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConnectionOpenMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionOpenMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConnectionOpenMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImTextConnectionOpenMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConnectionOpenSuccessMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionOpenSuccessMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConnectionOpenSuccessMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImTextConnectionOpenSuccessMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConversionManyToManyMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConversionManyToManyMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConversionManyToManyMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImTextConversionManyToManyMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextReceivedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextReceivedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextReceivedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImTextReceivedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextSendFailedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextSendFailedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextSendFailedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImTextSendFailedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextSendMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextSendMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextSendMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImTextSendMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextTypingMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextTypingMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextTypingMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImTextTypingMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextTypingRequestMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextTypingRequestMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextTypingRequestMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImTextTypingRequestMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImWindowClosedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImWindowClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImWindowClosedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImWindowClosedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImWindowOpenedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImWindowOpenedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImWindowOpenedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ImWindowOpenedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.InitializeCommandMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/InitializeCommandMessage.html" title="class in com.ibm.collaboration.realtime.messages">InitializeCommandMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an InitializeCommandMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyCreateMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyCreateMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyCreateMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyCreateMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyCreateSuccessMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyCreateSuccessMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyCreateSuccessMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyCreateSuccessMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteAcceptMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteAcceptMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteAcceptMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyInviteAcceptMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteDeclineMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteDeclineMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteDeclineMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyInviteDeclineMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyInviteMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteOthersMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteOthersMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteOthersMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyInviteOthersMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyLeaveMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyLeaveMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyLeaveMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyLeaveMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextConnectionClosedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyTextConnectionClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyTextConnectionClosedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an ManyToManyTextConnectionClosedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextReceivedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyTextReceivedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyTextReceivedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyTextReceivedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextSendMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyTextSendMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyTextSendMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyTextSendMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyUserEnterExitMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyUserEnterExitMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyUserEnterExitMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ManyToManyUserEnterExitMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.PartnerLocationFromServerMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/PartnerLocationFromServerMessage.html" title="class in com.ibm.collaboration.realtime.messages">PartnerLocationFromServerMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a PartnerLocationFromServerMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.PartnerStatusUpdateMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/PartnerStatusUpdateMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">PartnerStatusUpdateMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a PartnerStatusUpdateMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.PlugInBroadcastInfoMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/PlugInBroadcastInfoMessage.html" title="class in com.ibm.collaboration.realtime.messages">PlugInBroadcastInfoMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a PlugInBroadcastInfoMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.PlugInInitializedMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/PlugInInitializedMessage.html" title="class in com.ibm.collaboration.realtime.messages">PlugInInitializedMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a PlugInInitializedMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.ResetUserMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/ResetUserMessage.html" title="class in com.ibm.collaboration.realtime.messages">ResetUserMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a ResetUserMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.StartInstantMeeting85Message)">handleMessage</A></B>(com.ibm.collaboration.realtime.messages.StartInstantMeeting85Message&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to signal opening invitation to Instant Meeting dialog for 8.5 meetings</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.StartInstantMeetingMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/StartInstantMeetingMessage.html" title="class in com.ibm.collaboration.realtime.messages">StartInstantMeetingMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to signal opening invitation to Instant Meeting dialog</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.StartInstantShareMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/StartInstantShareMessage.html" title="class in com.ibm.collaboration.realtime.messages">StartInstantShareMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to signal opening invitation to Instant Share dialog</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.UserIdleTrackMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/UserIdleTrackMessage.html" title="class in com.ibm.collaboration.realtime.messages">UserIdleTrackMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle a UserIdleTrackMessage event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.WorkstationLockTrackMessage)">handleMessage</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/WorkstationLockTrackMessage.html" title="class in com.ibm.collaboration.realtime.messages">WorkstationLockTrackMessage</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called to handle an WorkstationLockTrackMessage event.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="handleDefaultMessage(com.ibm.collaboration.realtime.messages.Message)"><!-- --></A><H3>
+handleDefaultMessage</H3>
+<PRE>
+public abstract void <B>handleDefaultMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/Message.html" title="class in com.ibm.collaboration.realtime.messages">Message</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a generic message event. Subclasses must override
+ this method, but can ignore the generic message, assuming they use
+ handleMessage for specific message types they wish to handle.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleDefaultMessage(com.ibm.collaboration.realtime.messages.Message)">handleDefaultMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - message event object</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.AlertUserActionMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/AlertUserActionMessage.html" title="class in com.ibm.collaboration.realtime.messages">AlertUserActionMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an AlertUserActionMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.AlertUserActionMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - AlertUserActionMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.AlertUserMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/AlertUserMessage.html" title="class in com.ibm.collaboration.realtime.messages">AlertUserMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an AlertUserMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.AlertUserMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - AlertUserMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.ApplicationDefinedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/ApplicationDefinedMessage.html" title="class in com.ibm.collaboration.realtime.messages">ApplicationDefinedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ApplicationDefinedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.ApplicationDefinedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ApplicationDefinedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.BuddySelectedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/BuddySelectedMessage.html" title="class in com.ibm.collaboration.realtime.messages">BuddySelectedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a BuddySelectedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.BuddySelectedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - BuddySelectedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.HoverBizCardOpenedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/HoverBizCardOpenedMessage.html" title="class in com.ibm.collaboration.realtime.messages">HoverBizCardOpenedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle HoverBizCardOpenedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.HoverBizCardOpenedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - HoverBizCardOpenedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowCloseWarningMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImChatWindowCloseWarningMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImChatWindowCloseWarningMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle ImChatWindowCloseWarningMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowCloseWarningMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImChatWindowCloseWarningMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowFlashWindowMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImChatWindowFlashWindowMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImChatWindowFlashWindowMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImChatWindowFlashWindowMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowFlashWindowMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImChatWindowFlashWindowMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowForceFocusMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImChatWindowForceFocusMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImChatWindowForceFocusMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImChatWindowForceFocusMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowForceFocusMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImChatWindowForceFocusMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowToolbarRedrawMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImChatWindowToolbarRedrawMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImChatWindowToolbarRedrawMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImChatWindowToolbarRedrawMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImChatWindowToolbarRedrawMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImChatWindowToolbarRedrawMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImConnectedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImConnectedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImConnectedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImConnectedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImConnectedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImConnectedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImConnectionStatusLocationChangeMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImConnectionStatusLocationChangeMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImConnectionStatusLocationChangeMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImConnectionStatusLocationChangeMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImConnectionStatusLocationChangeMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImConnectionStatusLocationChangeMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImDisconnectedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImDisconnectedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImDisconnectedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImDisconnectedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImDisconnectedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImDisconnectedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConnectionClosedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConnectionClosedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImTextConnectionClosedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConnectionClosedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImTextConnectionClosedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConnectionOpenMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionOpenMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConnectionOpenMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImTextConnectionOpenMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConnectionOpenMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImTextConnectionOpenMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConnectionOpenSuccessMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConnectionOpenSuccessMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConnectionOpenSuccessMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImTextConnectionOpenSuccessMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConnectionOpenSuccessMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImTextConnectionOpenSuccessMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConversionManyToManyMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextConversionManyToManyMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextConversionManyToManyMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImTextConversionManyToManyMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextConversionManyToManyMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImTextConversionManyToManyMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextReceivedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextReceivedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextReceivedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImTextReceivedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextReceivedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImTextReceivedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextSendFailedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextSendFailedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextSendFailedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImTextSendFailedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextSendFailedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImTextSendFailedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextSendMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextSendMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextSendMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImTextSendMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextSendMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImTextSendMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextTypingMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextTypingMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextTypingMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImTextTypingMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextTypingMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImTextTypingMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextTypingRequestMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImTextTypingRequestMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImTextTypingRequestMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImTextTypingRequestMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImTextTypingRequestMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImTextTypingRequestMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImWindowClosedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImWindowClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImWindowClosedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImWindowClosedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImWindowClosedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImWindowClosedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ImWindowOpenedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ImWindowOpenedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ImWindowOpenedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ImWindowOpenedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ImWindowOpenedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ImWindowOpenedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.InitializeCommandMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/InitializeCommandMessage.html" title="class in com.ibm.collaboration.realtime.messages">InitializeCommandMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an InitializeCommandMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.InitializeCommandMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - InitializeCommandMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyCreateMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyCreateMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyCreateMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyCreateMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyCreateMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyCreateMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyCreateSuccessMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyCreateSuccessMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyCreateSuccessMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyCreateSuccessMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyCreateSuccessMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyCreateSuccessMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteAcceptMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteAcceptMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteAcceptMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyInviteAcceptMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteAcceptMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyInviteAcceptMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteDeclineMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteDeclineMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteDeclineMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyInviteDeclineMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteDeclineMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyInviteDeclineMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyInviteMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyInviteMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteOthersMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyInviteOthersMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyInviteOthersMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyInviteOthersMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyInviteOthersMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyInviteOthersMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyLeaveMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyLeaveMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyLeaveMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyLeaveMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyLeaveMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyLeaveMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextConnectionClosedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyTextConnectionClosedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyTextConnectionClosedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an ManyToManyTextConnectionClosedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextConnectionClosedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyTextConnectionClosedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextReceivedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyTextReceivedMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyTextReceivedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyTextReceivedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextReceivedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyTextReceivedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextSendMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyTextSendMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyTextSendMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyTextSendMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyTextSendMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyTextSendMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyUserEnterExitMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/ManyToManyUserEnterExitMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">ManyToManyUserEnterExitMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ManyToManyUserEnterExitMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.ManyToManyUserEnterExitMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ManyToManyUserEnterExitMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.PartnerLocationFromServerMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/PartnerLocationFromServerMessage.html" title="class in com.ibm.collaboration.realtime.messages">PartnerLocationFromServerMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a PartnerLocationFromServerMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.PartnerLocationFromServerMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - PartnerLocationFromServerMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.im.PartnerStatusUpdateMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/im/PartnerStatusUpdateMessage.html" title="class in com.ibm.collaboration.realtime.messages.im">PartnerStatusUpdateMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a PartnerStatusUpdateMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.im.PartnerStatusUpdateMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - PartnerStatusUpdateMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.PlugInBroadcastInfoMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/PlugInBroadcastInfoMessage.html" title="class in com.ibm.collaboration.realtime.messages">PlugInBroadcastInfoMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a PlugInBroadcastInfoMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.PlugInBroadcastInfoMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - PlugInBroadcastInfoMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.PlugInInitializedMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/PlugInInitializedMessage.html" title="class in com.ibm.collaboration.realtime.messages">PlugInInitializedMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a PlugInInitializedMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.PlugInInitializedMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - PlugInInitializedMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.ResetUserMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/ResetUserMessage.html" title="class in com.ibm.collaboration.realtime.messages">ResetUserMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a ResetUserMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.ResetUserMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - ResetUserMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.UserIdleTrackMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/UserIdleTrackMessage.html" title="class in com.ibm.collaboration.realtime.messages">UserIdleTrackMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle a UserIdleTrackMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.UserIdleTrackMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - UserIdleTrackMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.WorkstationLockTrackMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/WorkstationLockTrackMessage.html" title="class in com.ibm.collaboration.realtime.messages">WorkstationLockTrackMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to handle an WorkstationLockTrackMessage event.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.WorkstationLockTrackMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - WorkstationLockTrackMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.AddContactToBuddyListMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/AddContactToBuddyListMessage.html" title="class in com.ibm.collaboration.realtime.messages">AddContactToBuddyListMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to signal the client to open the AddToContactlist dialog with the supplied user
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.AddContactToBuddyListMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - AddContactToBuddyListMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.StartInstantShareMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/StartInstantShareMessage.html" title="class in com.ibm.collaboration.realtime.messages">StartInstantShareMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to signal opening invitation to Instant Share dialog
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.StartInstantShareMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - StartInstantShareMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.StartInstantMeetingMessage)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/messages/StartInstantMeetingMessage.html" title="class in com.ibm.collaboration.realtime.messages">StartInstantMeetingMessage</A>&nbsp;message)</PRE>
+<DL>
+<DD>Called to signal opening invitation to Instant Meeting dialog
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.StartInstantMeetingMessage)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - StartInstantMeetingMessage<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="handleMessage(com.ibm.collaboration.realtime.messages.StartInstantMeeting85Message)"><!-- --></A><H3>
+handleMessage</H3>
+<PRE>
+public void <B>handleMessage</B>(com.ibm.collaboration.realtime.messages.StartInstantMeeting85Message&nbsp;message)</PRE>
+<DL>
+<DD>Called to signal opening invitation to Instant Meeting dialog for 8.5 meetings
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html#handleMessage(com.ibm.collaboration.realtime.messages.StartInstantMeeting85Message)">handleMessage</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/messages/MessageHandler.html" title="interface in com.ibm.collaboration.realtime.messages">MessageHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - StartInstantMeeting85Message<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/messages/BuddySelectedMessage.html" title="class in com.ibm.collaboration.realtime.messages"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/messages/HoverBizCardOpenedMessage.html" title="class in com.ibm.collaboration.realtime.messages"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/messages/DefaultMessageHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DefaultMessageHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

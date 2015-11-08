@@ -1,0 +1,6 @@
+LIBRARY "StFileTransfer.dll"
+
+EXPORTS
+  stDdaFtInit
+  stDdaFtTerminate
+  stDdaFtScanFile

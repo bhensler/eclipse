@@ -1,0 +1,41 @@
+INFORMACJE LICENCYJNE
+
+Wymienione poniøej Programy sπ licencjonowane na poniøszych warunkach, ktÛre uzupe≥niajπ warunki MiÍdzynarodowa Umowa Licencyjna na Programy nieobjÍte Gwarancjπ.
+
+Nazwa Programu: IBM Sametime Remote Meeting Client SDK
+Numer Programu: 5724-J23
+
+Ograniczenia dotyczπce uøywania Programu
+
+Program ten jest dostarczany jedynie w celu uøywania z Okreúlonymi Programami zidentyfikowanymi poniøej lub ich kolejnymi wersjami. Licencjobiorcy nie wolno uøywaÊ tego Programu w po≥πczeniu z øadnym innym oprogramowaniem.
+
+Okreúlone Programy:
+IBM Sametime Standard or IBM Sametime Advanced
+
+NarzÍdzie programistyczne
+
+Ten Program zosta≥ zaprojektowany z myúlπ o udzielaniu pomocy w projektowaniu oprogramowania i systemÛw.Licencjobiorca ponosi wy≥πcznπ odpowiedzialnoúÊ za aplikacje i systemy stworzone przy uøyciu Programu oraz przyjmuje na siebie wszelkie ryzyko i odpowiedzialnoúÊ z nimi zwiπzane.
+
+Elementy Podlegajπce Redystrybucji
+
+Jeúli Program zawiera komponenty bÍdπce Elementami Podlegajπcymi Redystrybucji, zostanπ one zidentyfikowane w pliku REDIST do≥πczonym do Programu. Poza prawami licencyjnymi przyznanymi na mocy Umowy, Licencjobiorca moøe dystrybuowaÊ Elementy Podlegajπce Redystrybucji na nastÍpujπcych warunkach:
+1) Muszπ byÊ one redystrybuowane w postaci kodu wynikowego oraz zgodnie z wszystkimi wskazÛwkami, instrukcjami i specyfikacjami w pliku REDIST lub dokumentacji do≥πczonej do Programu;
+2) Jeúli dokumentacja do≥πczona do Programu wyraünie zezwala Licencjobiorcy na modyfikowanie PlikÛw Podlegajπcych Redystrybucji, wÛwczas takie modyfikacje muszπ byÊ zgodne z wszystkimi wskazÛwkami, instrukcjami i specyfikacjami w tej dokumentacji i byÊ traktowane jak Pliki Podlegajπce Redystrybucji;
+3) Pliki Podlegajπce Redystrybucji moøna dystrybuowaÊ jedynie jako czÍúÊ aplikacji Licencjobiorcy opracowanej z uøyciem Programu (zwanej dalej "Aplikacjπ Licencjobiorcy") i jedynie do wspierania klientÛw Licencjobiorcy w zwiπzku z uøywaniem przez nich Aplikacji Licencjobiorcy. Aplikacja Licencjobiorcy musi stanowiÊ istotnπ wartoúÊ dodanπ, tak aby Pliki Podlegajπce Redystrybucji nie stanowi≥y istotnej motywacji do nabycia przez uøytkownikÛw koÒcowych oprogramowania Licencjobiorcy;
+4) Jeúli Pliki Podlegajπce Redystrybucji obejmujπ úrodowisko Java Runtime Environment, Licencjobiorca musi rÛwnieø do≥πczyÊ do Aplikacji Licencjobiorcy inne niø Java Pliki Podlegajπce Redystrybucji, chyba øe Aplikacja ta jest zaprojektowana z myúlπ o uruchamianiu jedynie na urzπdzeniach komputerowych ogÛlnego zastosowania (na przyk≥ad laptopach, desktopach i serwerach), a nie na urzπdzeniach kieszonkowych ani przenoúnych (tzn. urzπdzeniach zawierajπcych mikroprocesor, ale nie bÍdπcych przede wszystkich urzπdzeniami obliczeniowymi);
+5) Licencjobiorca nie moøe usuwaÊ øadnych plikÛw z uwagami dotyczπcymi praw autorskich i innymi zawartych w Plikach Podlegajπcych Redystrybucji;
+6) Licencjobiorca bÍdzie chroniÊ IBM, dostawcÛw IBM i dystrybutorÛw IBM przed wszelkimi roszczeniami wynikajπcymi z uøywania lub rozpowszechniania Aplikacji Licencjobiorcy;
+7) Licencjobiorca nie moøe korzystaÊ ze úcieøek o tej samej nazwie, co úcieøki do oryginalnych plikÛw/modu≥Ûw PlikÛw Podlegajπcych Redystrybucji;
+8) Licencjobiorca nie moøe wykorzystywaÊ - w zwiπzku z czynnoúciami marketingowymi odnoszπcymi siÍ do Aplikacji Licencjobiorcy - nazw ani znakÛw towarowych IBM, dostawcÛw IBM ani dystrybutorÛw IBM bez ich wczeúniejszej pisemnej zgody;
+9) IBM, dostawcy IBM i dystrybutorzy IBM dostarczajπ Pliki Podlegajπce Redystrybucji oraz zwiπzanπ z nimi dokumentacjÍ bez zobowiπzania do wsparcia i W STANIE, W JAKIM SI  ZNAJDUJ• ("AS IS"), BEZ UDZIELANIA JAKICHKOLWIEK GWARANCJI (R KOJMI  WY£•CZA SI ), WYRAèNYCH LUB DOMNIEMANYCH, A W SZCZEG”LNOåCI GWARANCJI PRAWA W£ASNOåCI, NIENARUSZANIA PRAW OS”B TRZECICH ORAZ DOMNIEMANYCH GWARANCJI i WARUNK”W PRZYDATNOåCI HANDLOWEJ I PRZYDATNOåCI DO OKREåLONEGO CELU;
+10) Licencjobiorca ponosi odpowiedzialnoúÊ za wszelkπ pomoc technicznπ dotyczπcπ Aplikacji Licencjobiorcy oraz wszelkich modyfikacji ElementÛw Podlegajπcych Redystrybucji;
+11) Umowa licencyjna Licencjobiorcy z uøytkownikiem koÒcowym Aplikacji Licencjobiorcy musi powiadamiaÊ uøytkownika koÒcowego, øe PlikÛw Podlegajπcych Redystrybucji oraz ich modyfikacji nie moøna i) uøywaÊ do celÛw innych niø umoøliwienie dzia≥ania Aplikacji Licencjobiorcy, ii) kopiowaÊ (z wyjπtkiem tworzenia kopii zapasowych), iii) dalej dystrybuowaÊ ani przenosiÊ bez Aplikacji Licencjobiorcy ani iv) deasemblowaÊ, dekompilowaÊ ani poddawaÊ translacji w inny sposÛb, z wyjπtkiem przypadkÛw wyraünie dozwolonych przez prawo, bez moøliwoúci wy≥πczenia na mocy umowy. Ponadto umowa licencyjna Licencjobiorcy musi zapewniaÊ IBM ochronÍ co najmniej rÛwnπ zapewnianej przez warunki niniejszej Umowy.
+
+Komponenty èrÛd≥owe i Materia≥y Przyk≥adowe
+
+Program moøe zawieraÊ komponenty w postaci kodu ürÛd≥owego (zwane dalej "Komponentami èrÛd≥owymi") oraz inne materia≥y okreúlone jako Materia≥y Przyk≥adowe. Licencjobiorca moøe kopiowaÊ i modyfikowaÊ Komponenty èrÛd≥owe i Materia≥y Przyk≥adowe jedynie na uøytek wewnÍtrzny, pod warunkiem, øe uøytek taki mieúci siÍ w granicach praw licencyjnych na mocy niniejszej Umowy, zaú Licencjobiorca nie bÍdzie zmieniaÊ ani usuwaÊ øadnych informacji czy uwag o prawach autorskich zawartych w Komponentach èrÛd≥owych lub Materia≥ach Przyk≥adowych. IBM dostarcza Komponenty èrÛd≥owe i Materia≥y Przyk≥adowe bez zobowiπzania do wsparcia, W STANIE, W JAKIM SI  ZNAJDUJ• ("AS IS"), BEZ UDZIELANIA JAKICHKOLWIEK GWARANCJI (R KOJMI  R”WNIEØ WY£•CZA SI ), WYRAèNYCH LUB DOMNIEMANYCH, A W SZCZEG”LNOåCI GWARANCJI PRAWA W£ASNOåCI, NIENARUSZANIA PRAW OS”B TRZECICH ORAZ DOMNIEMANYCH GWARANCJI i WARUNK”W PRZYDATNOåCI HANDLOWEJ I PRZYDATNOåCI DO OKREåLONEGO CELU.
+
+W przypadku KomponentÛw èrÛd≥owych i Materia≥Ûw Przyk≥adowych wymienionych w pliku REDIST Programu Licencjobiorca moøe redystrybuowaÊ zmodyfikowane wersje tych KomponentÛw èrÛd≥owych i Materia≥Ûw Przyk≥adowych, zgodnie z warunkami niniejszej licencji oraz wszelkimi instrukcjami w pliku REDIST.
+
+D/N:  L-KBIM-8G3SXW
+P/N:  L-KBIM-8G3SXW 

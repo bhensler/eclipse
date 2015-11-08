@@ -1,0 +1,362 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+AbstractVoiceChatDeviceController (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AbstractVoiceChatDeviceController (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVideoDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../../index.html?com/ibm/collaboration/realtime/telephony/service/device/AbstractVoiceChatDeviceController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractVoiceChatDeviceController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.service.device</FONT>
+<BR>
+Class AbstractVoiceChatDeviceController</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/AbstractDeviceNotifier.html" title="class in com.ibm.collaboration.realtime.telephony.device">com.ibm.collaboration.realtime.telephony.device.AbstractDeviceNotifier</A>
+      <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractDeviceNotifier.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">com.ibm.collaboration.realtime.telephony.service.device.AbstractDeviceNotifier</A>
+          <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">com.ibm.collaboration.realtime.telephony.service.device.AbstractDeviceController</A>
+              <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.telephony.service.device.AbstractVoiceChatDeviceController</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceNotifier</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VoiceChatDeviceController</A></DD>
+</DL>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVideoChatDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractVideoChatDeviceController</A></DD>
+</DL>
+<HR>
+<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I>
+<P>
+<DL>
+<DT><PRE><FONT SIZE="-1">@Deprecated
+</FONT>public abstract class <B>AbstractVoiceChatDeviceController</B><DT>extends <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractDeviceController</A><DT>implements <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VoiceChatDeviceController</A></DL>
+</PRE>
+
+<P>
+AbstractVoiceChatDeviceController provides an abstract implementation
+ of the <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><CODE>VoiceChatDeviceController</CODE></A> interface. See
+ <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device"><CODE>AbstractDeviceController</CODE></A> for more information.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.VoiceChatDeviceController"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VoiceChatDeviceController</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_ALERTS">CAPABILITY_ALERTS</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_AUDIO_CODEC">CAPABILITY_AUDIO_CODEC</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_AUDIO_TEST">CAPABILITY_AUDIO_TEST</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_GET_AUDIO_PORT">CAPABILITY_GET_AUDIO_PORT</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_MICROPHONE_DEVICE">CAPABILITY_MICROPHONE_DEVICE</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_PLAY_INCOMING_RING">CAPABILITY_PLAY_INCOMING_RING</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_RING_DEVICE">CAPABILITY_RING_DEVICE</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SET_AUDIO_PORT">CAPABILITY_SET_AUDIO_PORT</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SOUND_BUSY">CAPABILITY_SOUND_BUSY</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SOUND_CALLER_JOINED">CAPABILITY_SOUND_CALLER_JOINED</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SOUND_CALLER_LEFT">CAPABILITY_SOUND_CALLER_LEFT</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SOUND_HANGUP">CAPABILITY_SOUND_HANGUP</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SOUND_PAUSE">CAPABILITY_SOUND_PAUSE</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SOUND_RESUME">CAPABILITY_SOUND_RESUME</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SOUND_RING_IN">CAPABILITY_SOUND_RING_IN</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SOUND_RING_OUT">CAPABILITY_SOUND_RING_OUT</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_SPEAKER_DEVICE">CAPABILITY_SPEAKER_DEVICE</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#CAPABILITY_VOICE_DETECTION">CAPABILITY_VOICE_DETECTION</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceController"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_DO_NOT_DISTURB">CAPABILITY_DO_NOT_DISTURB</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_FEATURE_ID">CAPABILITY_FEATURE_ID</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MICROPHONE_BOOST">CAPABILITY_MICROPHONE_BOOST</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MICROPHONE_VOLUME">CAPABILITY_MICROPHONE_VOLUME</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MUTE_MICROPHONE">CAPABILITY_MUTE_MICROPHONE</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MUTE_SPEAKER">CAPABILITY_MUTE_SPEAKER</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE">CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE">CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SHOW_PROPERTIES">CAPABILITY_SHOW_PROPERTIES</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SPEAKER_VOLUME">CAPABILITY_SPEAKER_VOLUME</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVoiceChatDeviceController.html#playIncomingRing()">playIncomingRing</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Plays the incoming ring sound on the ring device, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVoiceChatDeviceController.html#stopIncomingRing()">stopIncomingRing</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Stops playing an incoming ring sound that was started using
+ <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#playIncomingRing()"><CODE>VoiceChatDeviceController.playIncomingRing()</CODE></A>, if supported by the service provider.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.service.device.AbstractDeviceController"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.ibm.collaboration.realtime.telephony.service.device.<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractDeviceController</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractDeviceController.html#getDeviceAddress()">getDeviceAddress</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractDeviceController.html#setDeviceAddress(java.lang.String)">setDeviceAddress</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.AbstractDeviceNotifier"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/AbstractDeviceNotifier.html" title="class in com.ibm.collaboration.realtime.telephony.device">AbstractDeviceNotifier</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/AbstractDeviceNotifier.html#addListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">addListener</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/AbstractDeviceNotifier.html#dispatchEvent(com.ibm.collaboration.realtime.telephony.device.DeviceEvent)">dispatchEvent</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/AbstractDeviceNotifier.html#removeListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">removeListener</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.VoiceChatDeviceController"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VoiceChatDeviceController</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getAudioCodec()">getAudioCodec</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getAudioPort()">getAudioPort</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getAvailableMicrophoneDevices()">getAvailableMicrophoneDevices</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getAvailableSpeakerDevices()">getAvailableSpeakerDevices</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getBusySound()">getBusySound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getCallerJoinedSound()">getCallerJoinedSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getCallerLeftSound()">getCallerLeftSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getHangUpSound()">getHangUpSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getInomingRingSound()">getInomingRingSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getMicrophoneDevice()">getMicrophoneDevice</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getOutgoingRingSound()">getOutgoingRingSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getPauseCallSound()">getPauseCallSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getResumeCallSound()">getResumeCallSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getRingDevice()">getRingDevice</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getSpeakerDevice()">getSpeakerDevice</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getSupportedAudioCodecs()">getSupportedAudioCodecs</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#getSupportedSoundFileTypes()">getSupportedSoundFileTypes</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#isAlertSoundsEnabled()">isAlertSoundsEnabled</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#isAudioTestInProgress()">isAudioTestInProgress</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#isVoiceActivityDetectionEnabled()">isVoiceActivityDetectionEnabled</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setAlertSoundsEnabled(boolean)">setAlertSoundsEnabled</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setAudioCodec(java.lang.String)">setAudioCodec</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setAudioPort(java.lang.String)">setAudioPort</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setBusySound(java.lang.String)">setBusySound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setCallerJoinedSound(java.lang.String)">setCallerJoinedSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setCallerLeftSound(java.lang.String)">setCallerLeftSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setHangUpSound(java.lang.String)">setHangUpSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setIncomingRingSound(java.lang.String)">setIncomingRingSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setMicrophoneDevice(java.lang.String)">setMicrophoneDevice</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setOutgoingRingSound(java.lang.String)">setOutgoingRingSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setPauseCallSound(java.lang.String)">setPauseCallSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setResumeCallSound(java.lang.String)">setResumeCallSound</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setRingDevice(java.lang.String)">setRingDevice</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setSpeakerDevice(java.lang.String)">setSpeakerDevice</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setVoiceActivityDetectionEnabled(boolean)">setVoiceActivityDetectionEnabled</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#startAudioTest()">startAudioTest</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#stopAudioTest()">stopAudioTest</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceController"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#decreaseMicrophoneVolume()">decreaseMicrophoneVolume</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#decreaseSpeakerVolume()">decreaseSpeakerVolume</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getDeviceAddress()">getDeviceAddress</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getFeature(java.lang.String)">getFeature</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getMicrophoneVolume()">getMicrophoneVolume</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getSpeakerVolume()">getSpeakerVolume</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#increaseMicrophoneVolume()">increaseMicrophoneVolume</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#increaseSpeakerVolume()">increaseSpeakerVolume</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isDoNotDisturb()">isDoNotDisturb</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isFeatureEnabled(java.lang.String)">isFeatureEnabled</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isMicrophoneBoostEnabled()">isMicrophoneBoostEnabled</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isMicrophoneMuted()">isMicrophoneMuted</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isSpeakerMuted()">isSpeakerMuted</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#muteMicrophone()">muteMicrophone</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#muteSpeaker()">muteSpeaker</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setDoNotDisturb(boolean)">setDoNotDisturb</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeature(java.lang.String, java.lang.Object)">setFeature</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeatureEnabled(java.lang.String, boolean)">setFeatureEnabled</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setMicrophoneBoostEnabled(boolean)">setMicrophoneBoostEnabled</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setMicrophoneVolume(double)">setMicrophoneVolume</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setSpeakerVolume(double)">setSpeakerVolume</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#showProperties()">showProperties</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#unmuteMicrophone()">unmuteMicrophone</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#unmuteSpeaker()">unmuteSpeaker</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceNotifier"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceNotifier</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html#addListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">addListener</A>, <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html#removeListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">removeListener</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="playIncomingRing()"><!-- --></A><H3>
+playIncomingRing</H3>
+<PRE>
+public void <B>playIncomingRing</B>()
+                      throws <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#playIncomingRing()">VoiceChatDeviceController</A></CODE></B></DD>
+<DD>Plays the incoming ring sound on the ring device, if supported
+ by the service provider. The ring sound plays until stopped using
+ <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#stopIncomingRing()"><CODE>VoiceChatDeviceController.stopIncomingRing()</CODE></A>. Use <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setIncomingRingSound(java.lang.String)"><CODE>VoiceChatDeviceController.setIncomingRingSound(String)</CODE></A>
+ and <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#setRingDevice(java.lang.String)"><CODE>VoiceChatDeviceController.setRingDevice(String)</CODE></A> to specify, respectively, the
+ incoming ring sound and ring device
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#playIncomingRing()">playIncomingRing</A></CODE> in interface <CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VoiceChatDeviceController</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#playIncomingRing()"><CODE>VoiceChatDeviceController.playIncomingRing()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopIncomingRing()"><!-- --></A><H3>
+stopIncomingRing</H3>
+<PRE>
+public void <B>stopIncomingRing</B>()
+                      throws <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#stopIncomingRing()">VoiceChatDeviceController</A></CODE></B></DD>
+<DD>Stops playing an incoming ring sound that was started using
+ <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#playIncomingRing()"><CODE>VoiceChatDeviceController.playIncomingRing()</CODE></A>, if supported by the service provider.
+ Does nothing if the incoming ring is not currently playing.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#stopIncomingRing()">stopIncomingRing</A></CODE> in interface <CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VoiceChatDeviceController</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if some other error occurs<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html#stopIncomingRing()"><CODE>VoiceChatDeviceController.stopIncomingRing()</CODE></A></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractVideoDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../../index.html?com/ibm/collaboration/realtime/telephony/service/device/AbstractVoiceChatDeviceController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractVoiceChatDeviceController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

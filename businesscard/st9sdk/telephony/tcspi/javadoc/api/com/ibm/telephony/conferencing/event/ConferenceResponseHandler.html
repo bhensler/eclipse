@@ -1,0 +1,626 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ConferenceResponseHandler (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ConferenceResponseHandler (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseAdapter.html" title="class in com.ibm.telephony.conferencing.event"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/event/PropertyContainerAdapter.html" title="class in com.ibm.telephony.conferencing.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ConferenceResponseHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.telephony.conferencing.event</FONT>
+<BR>
+Interface ConferenceResponseHandler</H2>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseAdapter.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponseAdapter</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>ConferenceResponseHandler</B></DL>
+</PRE>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#associate(com.ibm.telephony.conferencing.event.ConferenceResponse)">associate</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#blockThread()">blockThread</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#cancelConference(com.ibm.telephony.conferencing.event.ConferenceResponse)">cancelConference</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#createConference(com.ibm.telephony.conferencing.event.ConferenceResponse)">createConference</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#dial(com.ibm.telephony.conferencing.event.ConferenceResponse)">dial</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#disconnectUser(com.ibm.telephony.conferencing.event.ConferenceResponse)">disconnectUser</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#editConference(com.ibm.telephony.conferencing.event.ConferenceResponse)">editConference</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#getConfiguration(com.ibm.telephony.conferencing.event.ConferenceResponse)">getConfiguration</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#getLocale()">getLocale</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#getPropertyName()">getPropertyName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#getServiceProviders(com.ibm.telephony.conferencing.event.ConferenceResponse)">getServiceProviders</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#getTurnAuthToken(com.ibm.telephony.conferencing.event.ConferenceResponse)">getTurnAuthToken</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#getVideoRooms(com.ibm.telephony.conferencing.event.ConferenceResponse)">getVideoRooms</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;conferenceResponse)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#isProcessed()">isProcessed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#isSynchronous()">isSynchronous</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#registerUser(com.ibm.telephony.conferencing.event.ConferenceResponse)">registerUser</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#releaseThread()">releaseThread</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#requestFailed(com.ibm.telephony.conferencing.event.ConferenceResponse)">requestFailed</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#setProperty(com.ibm.telephony.conferencing.event.ConferenceResponse)">setProperty</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#startConferenceControl(com.ibm.telephony.conferencing.event.ConferenceResponse)">startConferenceControl</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#stopConferenceControl(com.ibm.telephony.conferencing.event.ConferenceResponse)">stopConferenceControl</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#unregisterUser(com.ibm.telephony.conferencing.event.ConferenceResponse)">unregisterUser</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html#validateConference(com.ibm.telephony.conferencing.event.ConferenceResponse)">validateConference</A></B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getServiceProviders(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+getServiceProviders</H3>
+<PRE>
+void <B>getServiceProviders</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConfiguration(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+getConfiguration</H3>
+<PRE>
+void <B>getConfiguration</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTurnAuthToken(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+getTurnAuthToken</H3>
+<PRE>
+void <B>getTurnAuthToken</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="validateConference(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+validateConference</H3>
+<PRE>
+void <B>validateConference</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createConference(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+createConference</H3>
+<PRE>
+void <B>createConference</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="editConference(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+editConference</H3>
+<PRE>
+void <B>editConference</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="cancelConference(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+cancelConference</H3>
+<PRE>
+void <B>cancelConference</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerUser(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+registerUser</H3>
+<PRE>
+void <B>registerUser</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unregisterUser(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+unregisterUser</H3>
+<PRE>
+void <B>unregisterUser</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startConferenceControl(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+startConferenceControl</H3>
+<PRE>
+void <B>startConferenceControl</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopConferenceControl(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+stopConferenceControl</H3>
+<PRE>
+void <B>stopConferenceControl</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="dial(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+dial</H3>
+<PRE>
+void <B>dial</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="associate(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+associate</H3>
+<PRE>
+void <B>associate</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="disconnectUser(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+disconnectUser</H3>
+<PRE>
+void <B>disconnectUser</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProperty(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+setProperty</H3>
+<PRE>
+void <B>setProperty</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="requestFailed(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+requestFailed</H3>
+<PRE>
+void <B>requestFailed</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSynchronous()"><!-- --></A><H3>
+isSynchronous</H3>
+<PRE>
+boolean <B>isSynchronous</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isProcessed()"><!-- --></A><H3>
+isProcessed</H3>
+<PRE>
+boolean <B>isProcessed</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="blockThread()"><!-- --></A><H3>
+blockThread</H3>
+<PRE>
+void <B>blockThread</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="releaseThread()"><!-- --></A><H3>
+releaseThread</H3>
+<PRE>
+void <B>releaseThread</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLocale()"><!-- --></A><H3>
+getLocale</H3>
+<PRE>
+java.lang.String <B>getLocale</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVideoRooms(com.ibm.telephony.conferencing.event.ConferenceResponse)"><!-- --></A><H3>
+getVideoRooms</H3>
+<PRE>
+void <B>getVideoRooms</B>(<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponse.html" title="class in com.ibm.telephony.conferencing.event">ConferenceResponse</A>&nbsp;conferenceResponse)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPropertyName()"><!-- --></A><H3>
+getPropertyName</H3>
+<PRE>
+java.lang.String <B>getPropertyName</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/event/ConferenceResponseAdapter.html" title="class in com.ibm.telephony.conferencing.event"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/telephony/conferencing/event/PropertyContainerAdapter.html" title="class in com.ibm.telephony.conferencing.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ConferenceResponseHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

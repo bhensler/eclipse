@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>TelephonySample (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">TelephonySample</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.STId;
+<A NAME="2"><A><FONT ID="Import">import</FONT> com.lotus.sametime.telephony.TelephonyStatus;
+<A NAME="3"><A><FONT ID="Import">import</FONT> com.lotus.sametime.telephonymanager.TelephonyAdapterComp;
+<A NAME="4"><A><FONT ID="Import">import</FONT> com.lotus.sametime.telephonymanager.api.TelephonyAdapterErrorEvent;
+<A NAME="5"><A><FONT ID="Import">import</FONT> com.lotus.sametime.telephonymanager.api.TelephonyAdapterListener;
+<A NAME="6"><A><FONT ID="Import">import</FONT> com.lotus.sametime.telephonymanager.api.TelephonyAdapterService;
+<A NAME="7"><A><FONT ID="Import">import</FONT> com.lotus.sametime.telephonymanager.exceptions.MissingConfigurationInfoException;
+<A NAME="8"><A>
+<A NAME="9"><A><FONT ID="FormalComment">/**
+<A NAME="10"><A> * Sample application which uses the TelephonyAdapter Component.
+<A NAME="11"><A> * 
+<A NAME="12"><A> *  The sample application demonstrates how to initiate the TelephonyAdapter component,
+<A NAME="13"><A> *  register as a listener in order to get the component's notifications and issue the 
+<A NAME="14"><A> *  following requests:
+<A NAME="15"><A> *  1. Watch user sametime status changes.
+<A NAME="16"><A> *  2. Publish telephony status changes.
+<A NAME="17"><A> *  
+<A NAME="18"><A> *  The TelephonySample implements the TelephonyAdapterListener in order to get the
+<A NAME="19"><A> *  TelephonyAdapter component events.
+<A NAME="20"><A> *  
+<A NAME="21"><A> * Note: The TelephonyAdapter Component uses its own configuration file.
+<A NAME="22"><A> * One of the configuration parameters is the Sametime server to login to.
+<A NAME="23"><A> * For additional information please refer to the file st.telephony.adapter.properties
+<A NAME="24"><A> * 
+<A NAME="25"><A> * The example specific implementation:
+<A NAME="26"><A> * -----------------------------------
+<A NAME="27"><A> * Initiate the TelephonyAdapter component
+<A NAME="28"><A> * Add watch on a user and receive its Sametime status.
+<A NAME="29"><A> * Publish the user's telephony status to the Sametime server.
+<A NAME="30"><A> * 
+<A NAME="31"><A> * 
+<A NAME="32"><A> * @author Einat Avikser, April 2010
+<A NAME="33"><A> *
+<A NAME="34"><A> */</FONT>
+<A NAME="35"><A>
+<A NAME="36"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> TelephonySample <FONT ID="Implements">implements</FONT> TelephonyAdapterListener {
+<A NAME="37"><A>
+<A NAME="38"><A>    <FONT ID="FormalComment">/**
+<A NAME="39"><A>     * The program name - this is required for printing purposes.
+<A NAME="40"><A>     */</FONT>
+<A NAME="41"><A>    <FONT ID="Private">private</FONT> String _className = <A HREF="TelephonySample.java.html">TelephonySample</A>.<FONT ID="Class">class</FONT>.getName();
+<A NAME="42"><A>    
+<A NAME="43"><A>    <FONT ID="FormalComment">/**
+<A NAME="44"><A>     * The user on which we will add watch on and publish its telephony status
+<A NAME="45"><A>     */</FONT>
+<A NAME="46"><A>    <FONT ID="Private">private</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> String USER_TELEPHONY_ID = <FONT ID="StringLiteral">"****@*****"</FONT>;
+<A NAME="47"><A>    
+<A NAME="48"><A>    
+<A NAME="49"><A>    <FONT ID="FormalComment">/**
+<A NAME="50"><A>     * The Telephony Status to publish for the user.
+<A NAME="51"><A>     * 
+<A NAME="52"><A>     * Possible values are defined at com.lotus.sametime.telephony.TelephonyStatus :
+<A NAME="53"><A>     *  TELEPHONE_STATUS_UNKNOWN = 0 
+<A NAME="54"><A>     *  TELEPHONE_STATUS_AVAILABLE = 1 
+<A NAME="55"><A>     *  TELEPHONE_STATUS_BUSY = 2 
+<A NAME="56"><A>     *  TELEPHONE_STATUS_DO_NOT_DISTURB = 3 
+<A NAME="57"><A>     *  TELEPHONE_STATUS_NOT_SUT_USER = 4 
+<A NAME="58"><A>     *  
+<A NAME="59"><A>     *  It is the client's implementation Responsibility to determine the visualization
+<A NAME="60"><A>     *  of the various Telephony status values.
+<A NAME="61"><A>     * 
+<A NAME="62"><A>     */</FONT>
+<A NAME="63"><A>    <FONT ID="Private">private</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> USER_TELEPHONY_STATUS = TelephonyStatus.TELEPHONE_STATUS_BUSY;
+<A NAME="64"><A>    
+<A NAME="65"><A>    
+<A NAME="66"><A>    <FONT ID="FormalComment">/**
+<A NAME="67"><A>     * The TelephonyAdapter service
+<A NAME="68"><A>     */</FONT>
+<A NAME="69"><A>    <FONT ID="Private">private</FONT> TelephonyAdapterService _service = <FONT ID="Null">null</FONT>;
+<A NAME="70"><A>    
+<A NAME="71"><A>    <FONT ID="FormalComment">/**
+<A NAME="72"><A>     * Construct a new TelephonySample object 
+<A NAME="73"><A>     */</FONT>
+<A NAME="74"><A>    <FONT ID="Public">public</FONT> TelephonySample() {
+<A NAME="75"><A>    }
+<A NAME="76"><A>    
+<A NAME="77"><A>    <FONT ID="FormalComment">/**
+<A NAME="78"><A>     * The example initiation:
+<A NAME="79"><A>     * 
+<A NAME="80"><A>     * 1. Instantiate the Telephony Adapter.
+<A NAME="81"><A>     * 2. Register the example program as listener in order to get the 
+<A NAME="82"><A>     *    Telephony Adapter notifications.
+<A NAME="83"><A>     * 3. Initiate the Telephony Adapter component, this will create the connection with the configured
+<A NAME="84"><A>     *    Sametime server
+<A NAME="85"><A>     *    
+<A NAME="86"><A>     */</FONT>
+<A NAME="87"><A>    
+<A NAME="88"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> init() {
+<A NAME="89"><A>        System.out.println(_className+<FONT ID="StringLiteral">": init started"</FONT>);
+<A NAME="90"><A>        
+<A NAME="91"><A>        <FONT ID="SingleLineComment">//Instantiate the Telephony Adapter component.
+<A NAME="92"><A></FONT>        _service = TelephonyAdapterComp.getInstance();
+<A NAME="93"><A>        
+<A NAME="94"><A>        <FONT ID="SingleLineComment">//Register the example program as listener
+<A NAME="95"><A></FONT>        _service.setListener(<FONT ID="This">this</FONT>);
+<A NAME="96"><A>        
+<A NAME="97"><A>        <FONT ID="SingleLineComment">//Initiate the Telephony Adapter component.
+<A NAME="98"><A></FONT>        <FONT ID="Try">try</FONT> {
+<A NAME="99"><A>            _service.initiate();
+<A NAME="100"><A>        } <FONT ID="Catch">catch</FONT> (MissingConfigurationInfoException e) {
+<A NAME="101"><A>            e.printStackTrace();
+<A NAME="102"><A>        }
+<A NAME="103"><A>    }
+<A NAME="104"><A>
+<A NAME="105"><A>    <FONT ID="FormalComment">/**
+<A NAME="106"><A>     * communityAvailable
+<A NAME="107"><A>     * The Sametime server is now available for adding watch on users and publishing the 
+<A NAME="108"><A>     * telephony status of users
+<A NAME="109"><A>     */</FONT>
+<A NAME="110"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> communityAvailable() {
+<A NAME="111"><A>        
+<A NAME="112"><A>        System.out.println(<FONT ID="StringLiteral">"communityAvailable"</FONT>);
+<A NAME="113"><A>        
+<A NAME="114"><A>        <FONT ID="SingleLineComment">// Add watch on the telephony user
+<A NAME="115"><A></FONT>        watchUser();
+<A NAME="116"><A>        
+<A NAME="117"><A>        <FONT ID="SingleLineComment">// Publish the telephony status of the telephony user
+<A NAME="118"><A></FONT>        publishTelephonyStatus();
+<A NAME="119"><A>        
+<A NAME="120"><A>        
+<A NAME="121"><A>    }
+<A NAME="122"><A>    
+<A NAME="123"><A>    <FONT ID="FormalComment">/**
+<A NAME="124"><A>     * communityNotAvailable
+<A NAME="125"><A>     * The Sametime server is no longer available for adding watch on users and publishing the 
+<A NAME="126"><A>     * telephony status of users
+<A NAME="127"><A>     */</FONT>
+<A NAME="128"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> communityNotAvailable() {
+<A NAME="129"><A>        System.out.println(<FONT ID="StringLiteral">"communityNotAvailable"</FONT>);
+<A NAME="130"><A>    }
+<A NAME="131"><A>    
+<A NAME="132"><A>    <FONT ID="FormalComment">/**
+<A NAME="133"><A>     * Error has occurred while trying to add watch or 
+<A NAME="134"><A>     * publish a telephony status
+<A NAME="135"><A>     * @param event   The error event passed to the application
+<A NAME="136"><A>     */</FONT>
+<A NAME="137"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> errorEvent(TelephonyAdapterErrorEvent event) {
+<A NAME="138"><A>        System.out.println(<FONT ID="StringLiteral">"errorEvent: "</FONT>+ event.getDescription());
+<A NAME="139"><A>        }
+<A NAME="140"><A>    
+<A NAME="141"><A>    <FONT ID="FormalComment">/**
+<A NAME="142"><A>     * The Sametime status of a user whom we asked to add watch on,
+<A NAME="143"><A>     * has changed
+<A NAME="144"><A>     * @param telephonyUserId   The user identification at the using application side
+<A NAME="145"><A>     * @param sametimeStatus    The new sametime status
+<A NAME="146"><A>     */</FONT>
+<A NAME="147"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> sametimeStatusChanged(String telephonyUserId, <FONT ID="Int">int</FONT> sametimeStatus) {
+<A NAME="148"><A>
+<A NAME="149"><A>        System.out.println(<FONT ID="StringLiteral">"sametimeStatusChanged for user: "</FONT>+ telephonyUserId +
+<A NAME="150"><A>                <FONT ID="StringLiteral">" Sametime status: "</FONT> + sametimeStatus);
+<A NAME="151"><A>    }
+<A NAME="152"><A>    
+<A NAME="153"><A>    <FONT ID="FormalComment">/**
+<A NAME="154"><A>     * Event notification about name resolving
+<A NAME="155"><A>     * @param userEmail   The email of the Sametime user
+<A NAME="156"><A>     * @param userId      The Sametime user ID
+<A NAME="157"><A>     */</FONT>
+<A NAME="158"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> nameResolved(String userEmail, STId userId) {
+<A NAME="159"><A>        System.out.println(<FONT ID="StringLiteral">"nameResolved for user: "</FONT>+ userEmail +
+<A NAME="160"><A>                <FONT ID="StringLiteral">" Sametime Id: "</FONT> + userId);
+<A NAME="161"><A>        }
+<A NAME="162"><A>    
+<A NAME="163"><A>    
+<A NAME="164"><A>    
+<A NAME="165"><A>    <FONT ID="FormalComment">/**
+<A NAME="166"><A>     * Add watch on the telephony user.
+<A NAME="167"><A>     * Any Sametime status changes of the watched users will be notified by the 
+<A NAME="168"><A>     * sametimeStatusChanged API.
+<A NAME="169"><A>     */</FONT>
+<A NAME="170"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> watchUser() {
+<A NAME="171"><A>            _service.addWatch(USER_TELEPHONY_ID);
+<A NAME="172"><A>            System.out.println(<FONT ID="StringLiteral">"Add watch on user: "</FONT> + USER_TELEPHONY_ID);
+<A NAME="173"><A>    }
+<A NAME="174"><A>    
+<A NAME="175"><A>    <FONT ID="FormalComment">/**
+<A NAME="176"><A>     * Publish a telephony status of the user
+<A NAME="177"><A>     */</FONT>
+<A NAME="178"><A>
+<A NAME="179"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> publishTelephonyStatus() {
+<A NAME="180"><A>        _service.publishTelephonyStatus(USER_TELEPHONY_ID, USER_TELEPHONY_STATUS);
+<A NAME="181"><A>        System.out.println(<FONT ID="StringLiteral">"Publish telephony status: "</FONT>+ USER_TELEPHONY_STATUS + <FONT ID="StringLiteral">" for user: "</FONT> + USER_TELEPHONY_ID);
+<A NAME="182"><A>    }
+<A NAME="183"><A>    
+<A NAME="184"><A>    
+<A NAME="185"><A>    <FONT ID="FormalComment">/**
+<A NAME="186"><A>     * Event notification about attribute modification
+<A NAME="187"><A>     * @param userId           The user Sametime ID
+<A NAME="188"><A>     * @param attributeValue   The byte array of the user logins and related values
+<A NAME="189"><A>     */</FONT>
+<A NAME="190"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> selectedUserAttributeChanged(STId userId, <FONT ID="Byte">byte</FONT>[] attributeValue) {
+<A NAME="191"><A>    }
+<A NAME="192"><A>    
+<A NAME="193"><A>    <FONT ID="FormalComment">/**
+<A NAME="194"><A>     * Event notification about attribute removal
+<A NAME="195"><A>     * @param userId    The user Sametime ID
+<A NAME="196"><A>     */</FONT>
+<A NAME="197"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> selectedUserAttributeRemoved(STId userId) {
+<A NAME="198"><A>    }
+<A NAME="199"><A>    
+<A NAME="200"><A>    
+<A NAME="201"><A>
+<A NAME="202"><A>    <FONT ID="FormalComment">/**
+<A NAME="203"><A>     * Example initiation
+<A NAME="204"><A>     * @param args
+<A NAME="205"><A>     */</FONT>
+<A NAME="206"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args) {
+<A NAME="207"><A>        System.out.println(<FONT ID="StringLiteral">"TelephonySample: main"</FONT>);
+<A NAME="208"><A>        
+<A NAME="209"><A>        <FONT ID="SingleLineComment">//Create the example program object and activate it.
+<A NAME="210"><A></FONT>        <A HREF="TelephonySample.java.html">TelephonySample</A> sample = <FONT ID="New">new</FONT> <A HREF="TelephonySample.java.html">TelephonySample</A>();
+<A NAME="211"><A>        sample.init();
+<A NAME="212"><A>    }
+<A NAME="213"><A>}
+<A NAME="214"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">TelephonySample</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

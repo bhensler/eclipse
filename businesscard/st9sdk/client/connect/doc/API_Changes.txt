@@ -1,0 +1,82 @@
+This document provides a list of IBM(R) Sametime(R) Connect API
+interfaces and classes that have been added or deprecated since the IBM
+Sametime 9.0 release.
+
+Note the following:
+
+1. All deprecated APIs have been replaced with equivalent APIs. In most
+   cases, the deprecated APIs were simply renamed for consistency with
+   other IBM Sametime Connect APIs.
+   
+2. Deprecated APIs are marked as deprecated in the API Javadoc
+   
+3. Classes and members (constructors, fields, methods, inner classes) that were
+   added for 9.0 are marked as "Since Sametime 9.0" in the API Javadoc.
+
+--------------------------------------------------------------------------------
+     New Interfaces and Classes
+--------------------------------------------------------------------------------
+
+com.ibm.collaboration.realtime.quickfind.QuickFindCache
+
+--------------------------------------------------------------------------------
+     New Members in Existing Interfaces and Classes
+--------------------------------------------------------------------------------
+
+com.ibm.collaboration.realtime.imhub.actions.BuddyListAction
+     (String, int)
+com.ibm.rcp.realtime.livenames.LiveNameResolver
+     setExhaustive(boolean)
+com.ibm.collaboration.realtime.contacts.search.DirectoryInfo
+     MAIL
+com.ibm.collaboration.realtime.util.ProductVersion
+     getFixpackRelease()
+     getBuildRelease()
+com.ibm.collaboration.realtime.im.community.config.CommunityConfig
+     getFakeKey()
+     getPrivateLoginToken()
+     setPrivateLoginToken(String)
+     hasAccount()
+     setHasAccount(boolean)
+     setIsInCalendarMeeting(boolean)
+     getIsInCalendarMeeting()
+     setBeforeCalMtgStatus(String)
+     getBeforeCalMtgStatus()
+     setBeforeCalMtgMessage(String)
+     getBeforeCalMtgMessage()
+     setBeforeNotesLockStatus(int)
+     getBeforeNotesLockStatus()
+com.ibm.collaboration.realtime.quickfind.ui.QuickFindWidget
+     (Composite)
+     (Composite, int, int)
+     setDrawBackgroundGradient(boolean, boolean)
+     setBackgroundGradientColor()
+     setDrawBackgroundGradient(boolean, boolean, boolean)
+
+--------------------------------------------------------------------------------
+     Deprecated Interfaces and Classes
+--------------------------------------------------------------------------------
+
+None identified for this release.
+
+
+--------------------------------------------------------------------------------
+     Deprecated Members in Existing Interfaces and Classes
+--------------------------------------------------------------------------------
+
+None identified for this release.
+
+
+--------------------------------------------------------------------------------
+     Interfaces and Classes that have been removed
+--------------------------------------------------------------------------------
+
+None identified for this release.
+
+
+--------------------------------------------------------------------------------
+     Members in Existing Interfaces and Classes that have been removed
+--------------------------------------------------------------------------------
+
+com.ibm.collaboration.realtime.im.community.config.CommunityConfig
+     getKey()

@@ -1,0 +1,905 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+CallAction (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CallAction (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/ParticipantDisplayInformation.html" title="interface in com.ibm.collaboration.realtime.telephony.ui.extension"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../../index.html?com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CallAction.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.ui.extension</FONT>
+<BR>
+Class CallAction</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by ">org.eclipse.core.commands.common.EventManager
+      <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by ">org.eclipse.jface.action.AbstractAction
+          <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by ">org.eclipse.jface.action.Action
+              <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.telephony.ui.extension.CallAction</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD>com.ibm.collaboration.realtime.telephony.ui.extension.ICallUIExtension, org.eclipse.jface.action.IAction</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>CallAction</B><DT>extends org.eclipse.jface.action.Action<DT>implements com.ibm.collaboration.realtime.telephony.ui.extension.ICallUIExtension</DL>
+</PRE>
+
+<P>
+Action class for actions that appear on the telephony toolbar area in
+ a telephony or video chat window, using the
+ com.ibm.collaboration.realtime.telephony.ui.callAction extension point.
+ The toolbar area consists of three toolbars, one next to the other.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_ACCEPT_CALL">PATH_ACCEPT_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_BEFORE_CALL">PATH_BEFORE_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_CALL">PATH_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_COLLAPSE">PATH_COLLAPSE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_DECLINE_CALL">PATH_DECLINE_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_EXTRAS">PATH_EXTRAS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_EXTRAS_PARENT">PATH_EXTRAS_PARENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_FORWARD_CALL">PATH_FORWARD_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_INCOMING_CALL_BUTTON">PATH_INCOMING_CALL_BUTTON</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_LAYOUT">PATH_LAYOUT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_MEETING_FULLSCREEN">PATH_MEETING_FULLSCREEN</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meeting specific path</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_TOOLS_START">PATH_TOOLS_START</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_VIDEO">PATH_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#PATH_VIDEO_PARENT">PATH_VIDEO_PARENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_org.eclipse.jface.action.IAction"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface org.eclipse.jface.action.IAction</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>AS_CHECK_BOX, AS_DROP_DOWN_MENU, AS_PUSH_BUTTON, AS_RADIO_BUTTON, AS_UNSPECIFIED, CHECKED, DESCRIPTION, ENABLED, HANDLED, IMAGE, RESULT, TEXT, TOOL_TIP_TEXT</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#CallAction()">CallAction</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default constructor.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#dispose()">dispose</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the toolbar containing this action is disposed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#getCall()">getCall</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the call handler if one was set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;org.eclipse.swt.widgets.Shell</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#getControlShell()">getControlShell</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the parent Shell object associated with this CallAction, returns null if the 
+ Shell instance is not retrievable.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">IncomingCallEvent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#getIncomingCallEvent()">getIncomingCallEvent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the incoming call event associated with an incomoing call, in the case of an outgoing call 
+ or any other call state other than incoming null is returned.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#getMenuText()">getMenuText</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**
+ this get the toolbar item text  that should display for the action
+ needs to be implemented so that an action that gets used to create a toolbar item
+ get texts or does not get text.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#getToolbarPath()">getToolbarPath</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the tool bar path for this action, call - left most toolbar with
+ call controls  video - middle toolbar with video controls 
+ extras - right most toolbar with extra tools  toolsStart - used for
+ menu to set items in the top section </TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;org.eclipse.swt.graphics.Rectangle</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#getToolItemBounds()">getToolItemBounds</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the bounds of the toolbar icon associated with this action.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#isLocalUserPaused()">isLocalUserPaused</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if the local user on the call associated with this action is paused, false otherwise</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#isVisible()">isVisible</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this action is visible.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#isVisible(boolean)">isVisible</A></B>(boolean&nbsp;delegateCheck)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This should be called when checking if the action is visible, if param is set to true a check if a callActionModify 
+ extension has been set for this action will be done, if found the the delegates isVisible() method will be called.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html#run()">run</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the action is run, can be overridden.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_org.eclipse.jface.action.Action"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class org.eclipse.jface.action.Action</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>convertAccelerator, convertAccelerator, findKeyCode, findKeyString, findModifier, findModifierString, getAccelerator, getActionDefinitionId, getDescription, getDisabledImageDescriptor, getHelpListener, getHoverImageDescriptor, getId, getImageDescriptor, getMenuCreator, getStyle, getText, getToolTipText, isChecked, isEnabled, isHandled, notifyResult, removeAcceleratorText, removeMnemonics, runWithEvent, setAccelerator, setActionDefinitionId, setChecked, setDescription, setDisabledImageDescriptor, setEnabled, setHelpListener, setHoverImageDescriptor, setId, setImageDescriptor, setMenuCreator, setText, setToolTipText</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_org.eclipse.jface.action.AbstractAction"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class org.eclipse.jface.action.AbstractAction</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>addPropertyChangeListener, removePropertyChangeListener</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.ui.extension.ICallUIExtension"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.ui.extension.ICallUIExtension</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>setCall</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_org.eclipse.jface.action.IAction"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface org.eclipse.jface.action.IAction</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>addPropertyChangeListener, removePropertyChangeListener</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="PATH_VIDEO_PARENT"><!-- --></A><H3>
+PATH_VIDEO_PARENT</H3>
+<PRE>
+public static final java.lang.String <B>PATH_VIDEO_PARENT</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_VIDEO_PARENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_EXTRAS_PARENT"><!-- --></A><H3>
+PATH_EXTRAS_PARENT</H3>
+<PRE>
+public static final java.lang.String <B>PATH_EXTRAS_PARENT</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_EXTRAS_PARENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_CALL"><!-- --></A><H3>
+PATH_CALL</H3>
+<PRE>
+public static final java.lang.String <B>PATH_CALL</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_VIDEO"><!-- --></A><H3>
+PATH_VIDEO</H3>
+<PRE>
+public static final java.lang.String <B>PATH_VIDEO</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_VIDEO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_EXTRAS"><!-- --></A><H3>
+PATH_EXTRAS</H3>
+<PRE>
+public static final java.lang.String <B>PATH_EXTRAS</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_EXTRAS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_COLLAPSE"><!-- --></A><H3>
+PATH_COLLAPSE</H3>
+<PRE>
+public static final java.lang.String <B>PATH_COLLAPSE</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_COLLAPSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_TOOLS_START"><!-- --></A><H3>
+PATH_TOOLS_START</H3>
+<PRE>
+public static final java.lang.String <B>PATH_TOOLS_START</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_TOOLS_START">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_MEETING_FULLSCREEN"><!-- --></A><H3>
+PATH_MEETING_FULLSCREEN</H3>
+<PRE>
+public static final java.lang.String <B>PATH_MEETING_FULLSCREEN</B></PRE>
+<DL>
+<DD>Meeting specific path
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_MEETING_FULLSCREEN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_BEFORE_CALL"><!-- --></A><H3>
+PATH_BEFORE_CALL</H3>
+<PRE>
+public static final java.lang.String <B>PATH_BEFORE_CALL</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_BEFORE_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_ACCEPT_CALL"><!-- --></A><H3>
+PATH_ACCEPT_CALL</H3>
+<PRE>
+public static final java.lang.String <B>PATH_ACCEPT_CALL</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR1
+ Indicates action is to be evaluated for display in Accept Call UI</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_ACCEPT_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_DECLINE_CALL"><!-- --></A><H3>
+PATH_DECLINE_CALL</H3>
+<PRE>
+public static final java.lang.String <B>PATH_DECLINE_CALL</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR1
+ Indicates action is to be evaluated for display in Decline Call UI</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_DECLINE_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_FORWARD_CALL"><!-- --></A><H3>
+PATH_FORWARD_CALL</H3>
+<PRE>
+public static final java.lang.String <B>PATH_FORWARD_CALL</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR1
+ Indicates action is to be evaluated for display in Transfer/Forward Call UI</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_FORWARD_CALL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_INCOMING_CALL_BUTTON"><!-- --></A><H3>
+PATH_INCOMING_CALL_BUTTON</H3>
+<PRE>
+public static final java.lang.String <B>PATH_INCOMING_CALL_BUTTON</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.3
+ Indicates action is to be evaluated for display as a high touch button on incoming call window</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_INCOMING_CALL_BUTTON">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PATH_LAYOUT"><!-- --></A><H3>
+PATH_LAYOUT</H3>
+<PRE>
+public static final java.lang.String <B>PATH_LAYOUT</B></PRE>
+<DL>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 9.0.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ui.extension.CallAction.PATH_LAYOUT">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CallAction()"><!-- --></A><H3>
+CallAction</H3>
+<PRE>
+public <B>CallAction</B>()</PRE>
+<DL>
+<DD>The default constructor.
+<P>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getCall()"><!-- --></A><H3>
+getCall</H3>
+<PRE>
+public <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A> <B>getCall</B>()</PRE>
+<DL>
+<DD>Returns the call handler if one was set.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>getCall</CODE> in interface <CODE>com.ibm.collaboration.realtime.telephony.ui.extension.ICallUIExtension</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Call handler or null.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getIncomingCallEvent()"><!-- --></A><H3>
+getIncomingCallEvent</H3>
+<PRE>
+public <A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">IncomingCallEvent</A> <B>getIncomingCallEvent</B>()</PRE>
+<DL>
+<DD>Returns the incoming call event associated with an incomoing call, in the case of an outgoing call 
+ or any other call state other than incoming null is returned.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>getIncomingCallEvent</CODE> in interface <CODE>com.ibm.collaboration.realtime.telephony.ui.extension.ICallUIExtension</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>IncomingCallEvent for an incoming call, for any other call state null<DT><B>Since:</B></DT>
+  <DD>8.5.2 IFR1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMenuText()"><!-- --></A><H3>
+getMenuText</H3>
+<PRE>
+public java.lang.String <B>getMenuText</B>()</PRE>
+<DL>
+<DD>/**
+ this get the toolbar item text  that should display for the action
+ needs to be implemented so that an action that gets used to create a toolbar item
+ get texts or does not get text.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String text to display in a toolbar item (would contain hotkey char &) ,  null if there is no text for the menu item<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="run()"><!-- --></A><H3>
+run</H3>
+<PRE>
+public void <B>run</B>()</PRE>
+<DL>
+<DD>Called when the action is run, can be overridden.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE>run</CODE> in interface <CODE>org.eclipse.jface.action.IAction</CODE><DT><B>Overrides:</B><DD><CODE>run</CODE> in class <CODE>org.eclipse.jface.action.Action</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getToolbarPath()"><!-- --></A><H3>
+getToolbarPath</H3>
+<PRE>
+public java.lang.String <B>getToolbarPath</B>()</PRE>
+<DL>
+<DD>Returns the tool bar path for this action, call - left most toolbar with
+ call controls </li> video - middle toolbar with video controls </li>
+ extras - right most toolbar with extra tools </li> toolsStart - used for
+ menu to set items in the top section </li>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Tool bar path.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="dispose()"><!-- --></A><H3>
+dispose</H3>
+<PRE>
+public void <B>dispose</B>()</PRE>
+<DL>
+<DD>Called when the toolbar containing this action is disposed.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVisible(boolean)"><!-- --></A><H3>
+isVisible</H3>
+<PRE>
+public boolean <B>isVisible</B>(boolean&nbsp;delegateCheck)</PRE>
+<DL>
+<DD>This should be called when checking if the action is visible, if param is set to true a check if a callActionModify 
+ extension has been set for this action will be done, if found the the delegates isVisible() method will be called.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>boolean</CODE> - 
+<DT><B>Returns:</B><DD>boolean<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVisible()"><!-- --></A><H3>
+isVisible</H3>
+<PRE>
+public boolean <B>isVisible</B>()</PRE>
+<DL>
+<DD>Determines if this action is visible. Override this if you want to
+ override visibility of the action based on something you control, such as
+ user policy.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this action should be visible, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getToolItemBounds()"><!-- --></A><H3>
+getToolItemBounds</H3>
+<PRE>
+public org.eclipse.swt.graphics.Rectangle <B>getToolItemBounds</B>()</PRE>
+<DL>
+<DD>Returns the bounds of the toolbar icon associated with this action.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Toolbar icon bounds as Rectangle.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getControlShell()"><!-- --></A><H3>
+getControlShell</H3>
+<PRE>
+public org.eclipse.swt.widgets.Shell <B>getControlShell</B>()</PRE>
+<DL>
+<DD>Get the parent Shell object associated with this CallAction, returns null if the 
+ Shell instance is not retrievable.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the parent Shell object of the element that contains this CallAction instance or null if the 
+ Shell instance is not retrievable<DT><B>Since:</B></DT>
+  <DD>Sametome 8.5.2 IFR 1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isLocalUserPaused()"><!-- --></A><H3>
+isLocalUserPaused</H3>
+<PRE>
+public boolean <B>isLocalUserPaused</B>()</PRE>
+<DL>
+<DD>Returns true if the local user on the call associated with this action is paused, false otherwise
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/telephony/ui/extension/ParticipantDisplayInformation.html" title="interface in com.ibm.collaboration.realtime.telephony.ui.extension"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../../index.html?com/ibm/collaboration/realtime/telephony/ui/extension/CallAction.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CallAction.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

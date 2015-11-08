@@ -1,0 +1,906 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>Place</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Place";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/placessa/OutgoingMessageListener.html" title="interface in com.lotus.sametime.placessa"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/placessa/PlaceAdapter.html" title="class in com.lotus.sametime.placessa"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/placessa/Place.html" target="_top">Frames</a></li>
+<li><a href="Place.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_com.lotus.sametime.placessa.PlaceMemberImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.placessa</div>
+<h2 title="Class Place" class="title">Class Place</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">com.lotus.sametime.placessa.PlaceMemberImpl</a></li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.placessa.Place</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../com/lotus/sametime/placessa/PlaceMember.html" title="interface in com.lotus.sametime.placessa">PlaceMember</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">Place</span>
+extends <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></pre>
+<div class="block">Represents a single instance of a place.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_com.lotus.sametime.placessa.PlaceMemberImpl">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;com.lotus.sametime.placessa.<a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></h3>
+<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#m_memberId">m_memberId</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#m_session">m_session</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#Place(com.lotus.sametime.core.comparch.STSession, java.lang.String, int, java.lang.String)">Place</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session,
+     java.lang.String&nbsp;placeName,
+     int&nbsp;placeType,
+     java.lang.String&nbsp;orgName)</code>
+<div class="block">Construct a new place object.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#addAllowedUsers(com.lotus.sametime.core.types.STUser[])">addAllowedUsers</a></strong>(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;users)</code>
+<div class="block">Limits access to the place to the specified list of users.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#addExternalUser(java.lang.String, java.lang.String, boolean)">addExternalUser</a></strong>(java.lang.String&nbsp;userId,
+               java.lang.String&nbsp;userName,
+               boolean&nbsp;isOnStage)</code>
+<div class="block">Add a user to the place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#addIncomingMessageListener(com.lotus.sametime.placessa.IncomingMessageListener)">addIncomingMessageListener</a></strong>(<a href="../../../../com/lotus/sametime/placessa/IncomingMessageListener.html" title="interface in com.lotus.sametime.placessa">IncomingMessageListener</a>&nbsp;listener)</code>
+<div class="block">Add a listener to receive all messages that are sent to this member.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#addPlaceListener(com.lotus.sametime.placessa.PlaceListener)">addPlaceListener</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceListener.html" title="interface in com.lotus.sametime.placessa">PlaceListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified Place listener to receive place events.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#addSections(int, int)">addSections</a></strong>(int&nbsp;sectionsCount,
+           int&nbsp;sectionsCapacity)</code>
+<div class="block">Add new sections to the place.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#equals(java.lang.Object)">equals</a></strong>(java.lang.Object&nbsp;obj)</code>
+<div class="block">Compares to a given object.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#getEncLevel()">getEncLevel</a></strong>()</code>
+<div class="block">Get the minimum encryption level that is used in the place.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Enumeration</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#getMembers()">getMembers</a></strong>()</code>
+<div class="block">Gets the list of members in this place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.util.Enumeration</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#getMyActivities()">getMyActivities</a></strong>()</code>
+<div class="block">Get the list of acivities that are managed by this app.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/placessa/MyActivity.html" title="class in com.lotus.sametime.placessa">MyActivity</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#getMyActivity(int)">getMyActivity</a></strong>(int&nbsp;activityType)</code>
+<div class="block">Get the 'MyActivity' object for the given activity type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#getName()">getName</a></strong>()</code>
+<div class="block">Gets the place name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#getOrganizationName()">getOrganizationName</a></strong>()</code>
+<div class="block">Get the organization name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/placessa/Place.html" title="class in com.lotus.sametime.placessa">Place</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#getPlace()">getPlace</a></strong>()</code>
+<div class="block">Gets the place  this member is in.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#getType()">getType</a></strong>()</code>
+<div class="block">Get the place type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#handleActivityAdded(com.lotus.sametime.placessa.PlaceEvent)">handleActivityAdded</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</code>
+<div class="block">Handle the 'Activity added' event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#handleActivityRemoved(com.lotus.sametime.placessa.PlaceEvent)">handleActivityRemoved</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</code>
+<div class="block">Handle the 'Activity removed' event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#handleAddAllowedUsersFailed(com.lotus.sametime.placessa.PlaceEvent)">handleAddAllowedUsersFailed</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</code>
+<div class="block">Handle the 'Add allowed users failed' event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#handleAllowedUsersAdded(com.lotus.sametime.placessa.PlaceEvent)">handleAllowedUsersAdded</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</code>
+<div class="block">Handle the 'Allowed users added' event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#handleAllowedUsersRemoved(com.lotus.sametime.placessa.PlaceEvent)">handleAllowedUsersRemoved</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</code>
+<div class="block">Handle the 'Allowed users removed' event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#handlePlaceLeft(com.lotus.sametime.placessa.PlaceEvent)">handlePlaceLeft</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</code>
+<div class="block">Handle the 'Place left' event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#handleRemoveAllowedUsersFailed(com.lotus.sametime.placessa.PlaceEvent)">handleRemoveAllowedUsersFailed</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</code>
+<div class="block">Handle the 'Remove allowed users failed' event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#handleSectionAdded(com.lotus.sametime.placessa.PlaceEvent)">handleSectionAdded</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</code>
+<div class="block">Handle the 'Section added' event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#hashCode()">hashCode</a></strong>()</code>
+<div class="block">Returns a hash code value for the object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#processEvent(com.lotus.sametime.placessa.PlacesServerEvent)">processEvent</a></strong>(com.lotus.sametime.placessa.PlacesServerEvent&nbsp;event)</code>
+<div class="block">Receives a places event.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#processPlaceEvent(com.lotus.sametime.placessa.PlaceEvent)">processPlaceEvent</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</code>
+<div class="block">Handle an event regarding this object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#processSectionEvent(com.lotus.sametime.placessa.SectionEvent)">processSectionEvent</a></strong>(<a href="../../../../com/lotus/sametime/placessa/SectionEvent.html" title="class in com.lotus.sametime.placessa">SectionEvent</a>&nbsp;event)</code>
+<div class="block">Handle an event regarding a section in this place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#removeAllowedUsers(com.lotus.sametime.core.types.STUser[])">removeAllowedUsers</a></strong>(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;users)</code>
+<div class="block">Removes the specified users from the list of users that are allowed to
+ enter to the place.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#removeExternalUser(com.lotus.sametime.placessa.UserInPlace)">removeExternalUser</a></strong>(<a href="../../../../com/lotus/sametime/placessa/UserInPlace.html" title="class in com.lotus.sametime.placessa">UserInPlace</a>&nbsp;externalUser)</code>
+<div class="block">Remove an external user from the place.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#removeIncomingMessageListener(com.lotus.sametime.placessa.IncomingMessageListener)">removeIncomingMessageListener</a></strong>(<a href="../../../../com/lotus/sametime/placessa/IncomingMessageListener.html" title="interface in com.lotus.sametime.placessa">IncomingMessageListener</a>&nbsp;listener)</code>
+<div class="block">Remove a listener to receive all messages that are sent to this member.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#removePlaceListener(com.lotus.sametime.placessa.PlaceListener)">removePlaceListener</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceListener.html" title="interface in com.lotus.sametime.placessa">PlaceListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified Place listener so that it no longer
+ receives place events.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#sendSnapshot(com.lotus.sametime.placessa.PlaceMemberListener)">sendSnapshot</a></strong>(<a href="../../../../com/lotus/sametime/placessa/PlaceMemberListener.html" title="interface in com.lotus.sametime.placessa">PlaceMemberListener</a>&nbsp;listener)</code>
+<div class="block">Simulate a snapshot on this member.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#setPlaceType(int)">setPlaceType</a></strong>(int&nbsp;placeType)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;
+<div class="deprecatedContent">This method is only used to overcome a bug in 2.0 server.</div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#subscribeOnMessages()">subscribeOnMessages</a></strong>()</code>
+<div class="block">Subscribe on the place messages.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/placessa/Place.html#unsubscribeOnMessages()">unsubscribeOnMessages</a></strong>()</code>
+<div class="block">Unsubscribe on the place messages.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_com.lotus.sametime.placessa.PlaceMemberImpl">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.lotus.sametime.placessa.<a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></h3>
+<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#addIncomingListenerWithoutSubscribing(com.lotus.sametime.placessa.IncomingMessageListener)">addIncomingListenerWithoutSubscribing</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#addOutgoingMessageListener(com.lotus.sametime.placessa.OutgoingMessageListener)">addOutgoingMessageListener</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#addPlaceMemberListener(com.lotus.sametime.placessa.PlaceMemberListener)">addPlaceMemberListener</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#getAttributes()">getAttributes</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#getMemberId()">getMemberId</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleAttrChanged(com.lotus.sametime.placessa.PlaceMemberEvent)">handleAttrChanged</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleAttrDeleted(com.lotus.sametime.placessa.PlaceMemberEvent)">handleAttrDeleted</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleChangeAttrFailed(com.lotus.sametime.placessa.PlaceMemberEvent)">handleChangeAttrFailed</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleDataReceived(com.lotus.sametime.placessa.MessageEvent)">handleDataReceived</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleDataSent(com.lotus.sametime.placessa.MessageEvent)">handleDataSent</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleDeleteAttrFailed(com.lotus.sametime.placessa.PlaceMemberEvent)">handleDeleteAttrFailed</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleGetAttrFailed(com.lotus.sametime.placessa.PlaceMemberEvent)">handleGetAttrFailed</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleSendFailed(com.lotus.sametime.placessa.PlaceMemberEvent)">handleSendFailed</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleTextReceived(com.lotus.sametime.placessa.MessageEvent)">handleTextReceived</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#handleTextSent(com.lotus.sametime.placessa.MessageEvent)">handleTextSent</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#hasIncomingListeners()">hasIncomingListeners</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#hasOutgoingListeners()">hasOutgoingListeners</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#processMessageEvent(com.lotus.sametime.placessa.MessageEvent)">processMessageEvent</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#processPlaceMemberEvent(com.lotus.sametime.placessa.PlaceMemberEvent)">processPlaceMemberEvent</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#putAttribute(com.lotus.sametime.core.types.STAttribute)">putAttribute</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#queryAttribute(int)">queryAttribute</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#removeAttribute(int)">removeAttribute</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#removeIncomingListenerWithoutSubscribing(com.lotus.sametime.placessa.IncomingMessageListener)">removeIncomingListenerWithoutSubscribing</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#removeOutgoingMessageListener(com.lotus.sametime.placessa.OutgoingMessageListener)">removeOutgoingMessageListener</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#removePlaceMemberListener(com.lotus.sametime.placessa.PlaceMemberListener)">removePlaceMemberListener</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#requestSnapshot(com.lotus.sametime.placessa.PlaceMemberListener)">requestSnapshot</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#sendData(int, byte[])">sendData</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#sendEvent(com.lotus.sametime.core.comparch.STEvent)">sendEvent</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#sendText(java.lang.String)">sendText</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#subscribe()">subscribe</a>, <a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#unsubscribe()">unsubscribe</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Place(com.lotus.sametime.core.comparch.STSession, java.lang.String, int, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Place</h4>
+<pre>protected&nbsp;Place(<a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session,
+     java.lang.String&nbsp;placeName,
+     int&nbsp;placeType,
+     java.lang.String&nbsp;orgName)</pre>
+<div class="block">Construct a new place object.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>session</code> - The session object we are associated with.</dd><dd><code>placeName</code> - The unique name of the place.</dd><dd><code>placeType</code> - The type of the place.</dd><dd><code>orgName</code> - The organization name.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="addPlaceListener(com.lotus.sametime.placessa.PlaceListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPlaceListener</h4>
+<pre>public&nbsp;void&nbsp;addPlaceListener(<a href="../../../../com/lotus/sametime/placessa/PlaceListener.html" title="interface in com.lotus.sametime.placessa">PlaceListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified Place listener to receive place events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removePlaceListener(com.lotus.sametime.placessa.PlaceListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removePlaceListener</h4>
+<pre>public&nbsp;void&nbsp;removePlaceListener(<a href="../../../../com/lotus/sametime/placessa/PlaceListener.html" title="interface in com.lotus.sametime.placessa">PlaceListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified Place listener so that it no longer
+ receives place events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="addAllowedUsers(com.lotus.sametime.core.types.STUser[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addAllowedUsers</h4>
+<pre>public&nbsp;void&nbsp;addAllowedUsers(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;users)</pre>
+<div class="block">Limits access to the place to the specified list of users.
+ By default everyone can access the place.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>users</code> - The users that are allowed to enter.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/placessa/PlaceListener.html#addAllowedUsersFailed(com.lotus.sametime.placessa.PlaceEvent)"><code>PlaceListener.addAllowedUsersFailed(com.lotus.sametime.placessa.PlaceEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="removeAllowedUsers(com.lotus.sametime.core.types.STUser[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeAllowedUsers</h4>
+<pre>public&nbsp;void&nbsp;removeAllowedUsers(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;users)</pre>
+<div class="block">Removes the specified users from the list of users that are allowed to
+ enter to the place.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>users</code> - The users to remove.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/placessa/PlaceListener.html#removeAllowedUsersFailed(com.lotus.sametime.placessa.PlaceEvent)"><code>PlaceListener.removeAllowedUsersFailed(com.lotus.sametime.placessa.PlaceEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="addSections(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addSections</h4>
+<pre>public&nbsp;void&nbsp;addSections(int&nbsp;sectionsCount,
+               int&nbsp;sectionsCapacity)</pre>
+<div class="block">Add new sections to the place.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>sectionsCount</code> - The number of sections to add.</dd><dd><code>sectionsCapacity</code> - The capacity of the new sections.</dd></dl>
+</li>
+</ul>
+<a name="addExternalUser(java.lang.String, java.lang.String, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addExternalUser</h4>
+<pre>public&nbsp;void&nbsp;addExternalUser(java.lang.String&nbsp;userId,
+                   java.lang.String&nbsp;userName,
+                   boolean&nbsp;isOnStage)</pre>
+<div class="block">Add a user to the place.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>userId</code> - The id of the external user.</dd><dd><code>userName</code> - The name of the external user.</dd><dd><code>isOnStage</code> - Should the user be put on the 'stage' section.</dd></dl>
+</li>
+</ul>
+<a name="removeExternalUser(com.lotus.sametime.placessa.UserInPlace)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeExternalUser</h4>
+<pre>public&nbsp;void&nbsp;removeExternalUser(<a href="../../../../com/lotus/sametime/placessa/UserInPlace.html" title="class in com.lotus.sametime.placessa">UserInPlace</a>&nbsp;externalUser)</pre>
+<div class="block">Remove an external user from the place.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>externalUser</code> - The user to remove.</dd></dl>
+</li>
+</ul>
+<a name="subscribeOnMessages()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>subscribeOnMessages</h4>
+<pre>protected&nbsp;void&nbsp;subscribeOnMessages()</pre>
+<div class="block">Subscribe on the place messages. 
+ called all the messages that are sent in the place will also 
+ be transfered to this component.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#addIncomingMessageListener(com.lotus.sametime.placessa.IncomingMessageListener)"><code>PlaceMemberImpl.addIncomingMessageListener(com.lotus.sametime.placessa.IncomingMessageListener)</code></a>, 
+<a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#addOutgoingMessageListener(com.lotus.sametime.placessa.OutgoingMessageListener)"><code>PlaceMemberImpl.addOutgoingMessageListener(com.lotus.sametime.placessa.OutgoingMessageListener)</code></a></dd></dl>
+</li>
+</ul>
+<a name="unsubscribeOnMessages()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>unsubscribeOnMessages</h4>
+<pre>protected&nbsp;void&nbsp;unsubscribeOnMessages()</pre>
+<div class="block">Unsubscribe on the place messages.</div>
+</li>
+</ul>
+<a name="getMembers()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMembers</h4>
+<pre>public&nbsp;java.util.Enumeration&nbsp;getMembers()</pre>
+<div class="block">Gets the list of members in this place.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The list of members in this place.</dd></dl>
+</li>
+</ul>
+<a name="getName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getName()</pre>
+<div class="block">Gets the place name.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The place name.</dd></dl>
+</li>
+</ul>
+<a name="getType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getType</h4>
+<pre>public&nbsp;int&nbsp;getType()</pre>
+<div class="block">Get the place type.</div>
+</li>
+</ul>
+<a name="getOrganizationName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOrganizationName</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getOrganizationName()</pre>
+<div class="block">Get the organization name.</div>
+</li>
+</ul>
+<a name="getPlace()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPlace</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/placessa/Place.html" title="class in com.lotus.sametime.placessa">Place</a>&nbsp;getPlace()</pre>
+<div class="block">Gets the place  this member is in.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/placessa/PlaceMember.html#getPlace()">getPlace</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/placessa/PlaceMember.html" title="interface in com.lotus.sametime.placessa">PlaceMember</a></code></dd>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#getPlace()">getPlace</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The place object this member is in.</dd></dl>
+</li>
+</ul>
+<a name="setPlaceType(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPlaceType</h4>
+<pre>public&nbsp;void&nbsp;setPlaceType(int&nbsp;placeType)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;This method is only used to overcome a bug in 2.0 server.</div>
+<div class="block">Set the place type. Use this method when working with servers earlier that 2.5.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>placeType</code> - The place type.</dd></dl>
+</li>
+</ul>
+<a name="equals(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;obj)</pre>
+<div class="block">Compares to a given object.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#equals(java.lang.Object)">equals</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>obj</code> - The object to be compared.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>True if are the same; false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="hashCode()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<div class="block"><span class="strong">Description copied from class:&nbsp;<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#hashCode()">PlaceMemberImpl</a></code></span></div>
+<div class="block">Returns a hash code value for the object. This method is supported
+ for the benefit of hashtables such as those provided by
+ java.util.Hashtable.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#hashCode()">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>A hash code value for this object.</dd></dl>
+</li>
+</ul>
+<a name="getMyActivity(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMyActivity</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/placessa/MyActivity.html" title="class in com.lotus.sametime.placessa">MyActivity</a>&nbsp;getMyActivity(int&nbsp;activityType)</pre>
+<div class="block">Get the 'MyActivity' object for the given activity type.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>activityType</code> - he type of the activity in question.</dd></dl>
+</li>
+</ul>
+<a name="getMyActivities()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMyActivities</h4>
+<pre>public&nbsp;java.util.Enumeration&nbsp;getMyActivities()</pre>
+<div class="block">Get the list of acivities that are managed by this app.</div>
+</li>
+</ul>
+<a name="getEncLevel()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEncLevel</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;getEncLevel()</pre>
+<div class="block">Get the minimum encryption level that is used in the place.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>EncLevel the encryption level of the place.</dd></dl>
+</li>
+</ul>
+<a name="addIncomingMessageListener(com.lotus.sametime.placessa.IncomingMessageListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addIncomingMessageListener</h4>
+<pre>public&nbsp;void&nbsp;addIncomingMessageListener(<a href="../../../../com/lotus/sametime/placessa/IncomingMessageListener.html" title="interface in com.lotus.sametime.placessa">IncomingMessageListener</a>&nbsp;listener)</pre>
+<div class="block">Add a listener to receive all messages that are sent to this member.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#addIncomingMessageListener(com.lotus.sametime.placessa.IncomingMessageListener)">addIncomingMessageListener</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="removeIncomingMessageListener(com.lotus.sametime.placessa.IncomingMessageListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeIncomingMessageListener</h4>
+<pre>public&nbsp;void&nbsp;removeIncomingMessageListener(<a href="../../../../com/lotus/sametime/placessa/IncomingMessageListener.html" title="interface in com.lotus.sametime.placessa">IncomingMessageListener</a>&nbsp;listener)</pre>
+<div class="block">Remove a listener to receive all messages that are sent to this member.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#removeIncomingMessageListener(com.lotus.sametime.placessa.IncomingMessageListener)">removeIncomingMessageListener</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="sendSnapshot(com.lotus.sametime.placessa.PlaceMemberListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendSnapshot</h4>
+<pre>protected&nbsp;void&nbsp;sendSnapshot(<a href="../../../../com/lotus/sametime/placessa/PlaceMemberListener.html" title="interface in com.lotus.sametime.placessa">PlaceMemberListener</a>&nbsp;listener)</pre>
+<div class="block">Simulate a snapshot on this member.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#sendSnapshot(com.lotus.sametime.placessa.PlaceMemberListener)">sendSnapshot</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The new listener.</dd></dl>
+</li>
+</ul>
+<a name="processEvent(com.lotus.sametime.placessa.PlacesServerEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processEvent</h4>
+<pre>protected&nbsp;void&nbsp;processEvent(com.lotus.sametime.placessa.PlacesServerEvent&nbsp;event)</pre>
+<div class="block">Receives a places event.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html#processEvent(com.lotus.sametime.placessa.PlacesServerEvent)">processEvent</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/placessa/PlaceMemberImpl.html" title="class in com.lotus.sametime.placessa">PlaceMemberImpl</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The received event.</dd></dl>
+</li>
+</ul>
+<a name="processPlaceEvent(com.lotus.sametime.placessa.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processPlaceEvent</h4>
+<pre>protected&nbsp;void&nbsp;processPlaceEvent(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block">Handle an event regarding this object. Used internally by the
+ Places service.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - </dd></dl>
+</li>
+</ul>
+<a name="processSectionEvent(com.lotus.sametime.placessa.SectionEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processSectionEvent</h4>
+<pre>protected&nbsp;void&nbsp;processSectionEvent(<a href="../../../../com/lotus/sametime/placessa/SectionEvent.html" title="class in com.lotus.sametime.placessa">SectionEvent</a>&nbsp;event)</pre>
+<div class="block">Handle an event regarding a section in this place.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="handlePlaceLeft(com.lotus.sametime.placessa.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handlePlaceLeft</h4>
+<pre>protected&nbsp;void&nbsp;handlePlaceLeft(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block">Handle the 'Place left' event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="handleSectionAdded(com.lotus.sametime.placessa.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleSectionAdded</h4>
+<pre>protected&nbsp;void&nbsp;handleSectionAdded(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block">Handle the 'Section added' event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="handleActivityAdded(com.lotus.sametime.placessa.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleActivityAdded</h4>
+<pre>protected&nbsp;void&nbsp;handleActivityAdded(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block">Handle the 'Activity added' event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="handleActivityRemoved(com.lotus.sametime.placessa.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleActivityRemoved</h4>
+<pre>protected&nbsp;void&nbsp;handleActivityRemoved(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block">Handle the 'Activity removed' event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="handleAddAllowedUsersFailed(com.lotus.sametime.placessa.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleAddAllowedUsersFailed</h4>
+<pre>protected&nbsp;void&nbsp;handleAddAllowedUsersFailed(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block">Handle the 'Add allowed users failed' event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="handleRemoveAllowedUsersFailed(com.lotus.sametime.placessa.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleRemoveAllowedUsersFailed</h4>
+<pre>protected&nbsp;void&nbsp;handleRemoveAllowedUsersFailed(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block">Handle the 'Remove allowed users failed' event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="handleAllowedUsersAdded(com.lotus.sametime.placessa.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>handleAllowedUsersAdded</h4>
+<pre>protected&nbsp;void&nbsp;handleAllowedUsersAdded(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block">Handle the 'Allowed users added' event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="handleAllowedUsersRemoved(com.lotus.sametime.placessa.PlaceEvent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>handleAllowedUsersRemoved</h4>
+<pre>protected&nbsp;void&nbsp;handleAllowedUsersRemoved(<a href="../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>&nbsp;event)</pre>
+<div class="block">Handle the 'Allowed users removed' event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/placessa/OutgoingMessageListener.html" title="interface in com.lotus.sametime.placessa"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/placessa/PlaceAdapter.html" title="class in com.lotus.sametime.placessa"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/placessa/Place.html" target="_top">Frames</a></li>
+<li><a href="Place.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_com.lotus.sametime.placessa.PlaceMemberImpl">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

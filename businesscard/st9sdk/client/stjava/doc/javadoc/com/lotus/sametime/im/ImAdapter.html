@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>ImAdapter</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ImAdapter";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/im/Im.html" title="class in com.lotus.sametime.im"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/im/ImComp.html" title="class in com.lotus.sametime.im"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/im/ImAdapter.html" target="_top">Frames</a></li>
+<li><a href="ImAdapter.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.im</div>
+<h2 title="Class ImAdapter" class="title">Class ImAdapter</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.im.ImAdapter</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">ImAdapter</span>
+extends java.lang.Object
+implements <a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a></pre>
+<div class="block">An abstract adapter class for receiving Instant Message (IM) events.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../com/lotus/sametime/im/ImAdapter.html#ImAdapter()">ImAdapter</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/ImAdapter.html#dataReceived(com.lotus.sametime.im.ImEvent)">dataReceived</a></strong>(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</code>
+<div class="block">Data sent via the specified IM session was received.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/ImAdapter.html#imClosed(com.lotus.sametime.im.ImEvent)">imClosed</a></strong>(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</code>
+<div class="block">The IM session was closed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/ImAdapter.html#imOpened(com.lotus.sametime.im.ImEvent)">imOpened</a></strong>(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</code>
+<div class="block">The IM session has been successfully opened.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/ImAdapter.html#openImFailed(com.lotus.sametime.im.ImEvent)">openImFailed</a></strong>(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</code>
+<div class="block">The request to open an IM session failed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/ImAdapter.html#textReceived(com.lotus.sametime.im.ImEvent)">textReceived</a></strong>(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</code>
+<div class="block">Text sent via the specified IM session was received.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="ImAdapter()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ImAdapter</h4>
+<pre>public&nbsp;ImAdapter()</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="imOpened(com.lotus.sametime.im.ImEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>imOpened</h4>
+<pre>public&nbsp;void&nbsp;imOpened(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</pre>
+<div class="block">The IM session has been successfully opened.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/im/ImListener.html#imOpened(com.lotus.sametime.im.ImEvent)">imOpened</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/im/ImListener.html#imOpened(com.lotus.sametime.im.ImEvent)"><code>ImListener.imOpened(com.lotus.sametime.im.ImEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="openImFailed(com.lotus.sametime.im.ImEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>openImFailed</h4>
+<pre>public&nbsp;void&nbsp;openImFailed(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</pre>
+<div class="block">The request to open an IM session failed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/im/ImListener.html#openImFailed(com.lotus.sametime.im.ImEvent)">openImFailed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/im/ImListener.html#openImFailed(com.lotus.sametime.im.ImEvent)"><code>ImListener.openImFailed(com.lotus.sametime.im.ImEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="imClosed(com.lotus.sametime.im.ImEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>imClosed</h4>
+<pre>public&nbsp;void&nbsp;imClosed(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</pre>
+<div class="block">The IM session was closed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/im/ImListener.html#imClosed(com.lotus.sametime.im.ImEvent)">imClosed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/im/ImListener.html#imClosed(com.lotus.sametime.im.ImEvent)"><code>ImListener.imClosed(com.lotus.sametime.im.ImEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="textReceived(com.lotus.sametime.im.ImEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>textReceived</h4>
+<pre>public&nbsp;void&nbsp;textReceived(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</pre>
+<div class="block">Text sent via the specified IM session was received.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/im/ImListener.html#textReceived(com.lotus.sametime.im.ImEvent)">textReceived</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/im/ImListener.html#textReceived(com.lotus.sametime.im.ImEvent)"><code>ImListener.textReceived(com.lotus.sametime.im.ImEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="dataReceived(com.lotus.sametime.im.ImEvent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>dataReceived</h4>
+<pre>public&nbsp;void&nbsp;dataReceived(<a href="../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>&nbsp;evt)</pre>
+<div class="block">Data sent via the specified IM session was received.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/im/ImListener.html#dataReceived(com.lotus.sametime.im.ImEvent)">dataReceived</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/im/ImListener.html#dataReceived(com.lotus.sametime.im.ImEvent)"><code>ImListener.dataReceived(com.lotus.sametime.im.ImEvent)</code></a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/im/Im.html" title="class in com.lotus.sametime.im"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/im/ImComp.html" title="class in com.lotus.sametime.im"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/im/ImAdapter.html" target="_top">Frames</a></li>
+<li><a href="ImAdapter.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

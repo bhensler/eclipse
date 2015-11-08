@@ -1,0 +1,812 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MediaEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MediaEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/LocalMediaEventListener.html" title="interface in com.ibm.collaboration.realtime.telephony.media"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEventAdapter.html" title="class in com.ibm.collaboration.realtime.telephony.media"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/media/MediaEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MediaEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.media</FONT>
+<BR>
+Interface MediaEvent</H2>
+<HR>
+<DL>
+<DT><PRE>public interface <B>MediaEvent</B></DL>
+</PRE>
+
+<P>
+<code>MediaEvent</code> defines Telephony Media Engine notifications.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#AUDIO_DEVICE_FAILURE">AUDIO_DEVICE_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#CAMERA_NOT_SUPPORTED">CAMERA_NOT_SUPPORTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#ICE_ALLOCATION_FAILURE">ICE_ALLOCATION_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#INVALID_CAMERA_DEVICE">INVALID_CAMERA_DEVICE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#INVALID_MICROPHONE_DEVICE">INVALID_MICROPHONE_DEVICE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#INVALID_PROPERTIES_FAILURE">INVALID_PROPERTIES_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#INVALID_SPEAKER_DEVICE">INVALID_SPEAKER_DEVICE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#MEDIA_AUDIO_RECEIVE_STREAM_CHANGED">MEDIA_AUDIO_RECEIVE_STREAM_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when audio has been received from a different media stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#MEDIA_AUDIO_SPEAKING">MEDIA_AUDIO_SPEAKING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when an audio speaking interval has been detected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#MEDIA_SEND_RTP_DATAGRAM_PACKET">MEDIA_SEND_RTP_DATAGRAM_PACKET</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a RTP media stream packet is sent.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#MEDIA_VIDEO_PACKETS_OVERFLOWED">MEDIA_VIDEO_PACKETS_OVERFLOWED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when the processing of video packets has overflowed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#MEDIA_VIDEO_PRESENTING">MEDIA_VIDEO_PRESENTING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when a video presentation interval has been detected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#MEDIA_VIDEO_RECEIVE_STREAM_CHANGED">MEDIA_VIDEO_RECEIVE_STREAM_CHANGED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when video has been received from a different media stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#SIP_CALL_FAILURE">SIP_CALL_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#SIP_REGISTRATION_FAILURE">SIP_REGISTRATION_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#START_VIDEO_FAILURE">START_VIDEO_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#TLS_CERT_AVAILABLE_FAILURE">TLS_CERT_AVAILABLE_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#TLS_HOSTNAME_FAILURE">TLS_HOSTNAME_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#TLS_SELF_SIGNED_CERT_FAILURE">TLS_SELF_SIGNED_CERT_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#TURN_AUTHENTICATION_CONF_FAILURE">TURN_AUTHENTICATION_CONF_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#TURN_FAILED_DOWN_FAILURE">TURN_FAILED_DOWN_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#TURN_SERVER_SETTING_FAILURE">TURN_SERVER_SETTING_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#TURN_UNAVILABLE_FAILURE">TURN_UNAVILABLE_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#TURN_UNAVILABLE_HTTP_FAILURE">TURN_UNAVILABLE_HTTP_FAILURE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#getCallId()">getCallId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID of the call associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#getConferenceCallId()">getConferenceCallId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the conference call ID associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Object</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#getData()">getData</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the data associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#getDataLength()">getDataLength</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the length of the data associated with this event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#getTimestamp()">getTimestamp</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the time in milliseconds when this event was created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEvent.html#getType()">getType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the event type.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MEDIA_AUDIO_SPEAKING"><!-- --></A><H3>
+MEDIA_AUDIO_SPEAKING</H3>
+<PRE>
+static final int <B>MEDIA_AUDIO_SPEAKING</B></PRE>
+<DL>
+<DD>Generated when an audio speaking interval has been detected.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.MEDIA_AUDIO_SPEAKING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_VIDEO_PRESENTING"><!-- --></A><H3>
+MEDIA_VIDEO_PRESENTING</H3>
+<PRE>
+static final int <B>MEDIA_VIDEO_PRESENTING</B></PRE>
+<DL>
+<DD>Generated when a video presentation interval has been detected.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.MEDIA_VIDEO_PRESENTING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_SEND_RTP_DATAGRAM_PACKET"><!-- --></A><H3>
+MEDIA_SEND_RTP_DATAGRAM_PACKET</H3>
+<PRE>
+static final int <B>MEDIA_SEND_RTP_DATAGRAM_PACKET</B></PRE>
+<DL>
+<DD>Generated when a RTP media stream packet is sent.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.MEDIA_SEND_RTP_DATAGRAM_PACKET">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_AUDIO_RECEIVE_STREAM_CHANGED"><!-- --></A><H3>
+MEDIA_AUDIO_RECEIVE_STREAM_CHANGED</H3>
+<PRE>
+static final int <B>MEDIA_AUDIO_RECEIVE_STREAM_CHANGED</B></PRE>
+<DL>
+<DD>Generated when audio has been received from a different media stream.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.MEDIA_AUDIO_RECEIVE_STREAM_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_VIDEO_RECEIVE_STREAM_CHANGED"><!-- --></A><H3>
+MEDIA_VIDEO_RECEIVE_STREAM_CHANGED</H3>
+<PRE>
+static final int <B>MEDIA_VIDEO_RECEIVE_STREAM_CHANGED</B></PRE>
+<DL>
+<DD>Generated when video has been received from a different media stream.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.MEDIA_VIDEO_RECEIVE_STREAM_CHANGED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MEDIA_VIDEO_PACKETS_OVERFLOWED"><!-- --></A><H3>
+MEDIA_VIDEO_PACKETS_OVERFLOWED</H3>
+<PRE>
+static final int <B>MEDIA_VIDEO_PACKETS_OVERFLOWED</B></PRE>
+<DL>
+<DD>Generated when the processing of video packets has overflowed.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.MEDIA_VIDEO_PACKETS_OVERFLOWED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SIP_REGISTRATION_FAILURE"><!-- --></A><H3>
+SIP_REGISTRATION_FAILURE</H3>
+<PRE>
+static final int <B>SIP_REGISTRATION_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.SIP_REGISTRATION_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ICE_ALLOCATION_FAILURE"><!-- --></A><H3>
+ICE_ALLOCATION_FAILURE</H3>
+<PRE>
+static final int <B>ICE_ALLOCATION_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.ICE_ALLOCATION_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TURN_AUTHENTICATION_CONF_FAILURE"><!-- --></A><H3>
+TURN_AUTHENTICATION_CONF_FAILURE</H3>
+<PRE>
+static final int <B>TURN_AUTHENTICATION_CONF_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.TURN_AUTHENTICATION_CONF_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TURN_UNAVILABLE_HTTP_FAILURE"><!-- --></A><H3>
+TURN_UNAVILABLE_HTTP_FAILURE</H3>
+<PRE>
+static final int <B>TURN_UNAVILABLE_HTTP_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.TURN_UNAVILABLE_HTTP_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TURN_UNAVILABLE_FAILURE"><!-- --></A><H3>
+TURN_UNAVILABLE_FAILURE</H3>
+<PRE>
+static final int <B>TURN_UNAVILABLE_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.TURN_UNAVILABLE_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TURN_SERVER_SETTING_FAILURE"><!-- --></A><H3>
+TURN_SERVER_SETTING_FAILURE</H3>
+<PRE>
+static final int <B>TURN_SERVER_SETTING_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.TURN_SERVER_SETTING_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TURN_FAILED_DOWN_FAILURE"><!-- --></A><H3>
+TURN_FAILED_DOWN_FAILURE</H3>
+<PRE>
+static final int <B>TURN_FAILED_DOWN_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.TURN_FAILED_DOWN_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TLS_CERT_AVAILABLE_FAILURE"><!-- --></A><H3>
+TLS_CERT_AVAILABLE_FAILURE</H3>
+<PRE>
+static final int <B>TLS_CERT_AVAILABLE_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.TLS_CERT_AVAILABLE_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TLS_SELF_SIGNED_CERT_FAILURE"><!-- --></A><H3>
+TLS_SELF_SIGNED_CERT_FAILURE</H3>
+<PRE>
+static final int <B>TLS_SELF_SIGNED_CERT_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.TLS_SELF_SIGNED_CERT_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TLS_HOSTNAME_FAILURE"><!-- --></A><H3>
+TLS_HOSTNAME_FAILURE</H3>
+<PRE>
+static final int <B>TLS_HOSTNAME_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.TLS_HOSTNAME_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INVALID_PROPERTIES_FAILURE"><!-- --></A><H3>
+INVALID_PROPERTIES_FAILURE</H3>
+<PRE>
+static final int <B>INVALID_PROPERTIES_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.INVALID_PROPERTIES_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAMERA_NOT_SUPPORTED"><!-- --></A><H3>
+CAMERA_NOT_SUPPORTED</H3>
+<PRE>
+static final int <B>CAMERA_NOT_SUPPORTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.CAMERA_NOT_SUPPORTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INVALID_CAMERA_DEVICE"><!-- --></A><H3>
+INVALID_CAMERA_DEVICE</H3>
+<PRE>
+static final int <B>INVALID_CAMERA_DEVICE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.INVALID_CAMERA_DEVICE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INVALID_MICROPHONE_DEVICE"><!-- --></A><H3>
+INVALID_MICROPHONE_DEVICE</H3>
+<PRE>
+static final int <B>INVALID_MICROPHONE_DEVICE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.INVALID_MICROPHONE_DEVICE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INVALID_SPEAKER_DEVICE"><!-- --></A><H3>
+INVALID_SPEAKER_DEVICE</H3>
+<PRE>
+static final int <B>INVALID_SPEAKER_DEVICE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.INVALID_SPEAKER_DEVICE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="AUDIO_DEVICE_FAILURE"><!-- --></A><H3>
+AUDIO_DEVICE_FAILURE</H3>
+<PRE>
+static final int <B>AUDIO_DEVICE_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.AUDIO_DEVICE_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="START_VIDEO_FAILURE"><!-- --></A><H3>
+START_VIDEO_FAILURE</H3>
+<PRE>
+static final int <B>START_VIDEO_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.START_VIDEO_FAILURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SIP_CALL_FAILURE"><!-- --></A><H3>
+SIP_CALL_FAILURE</H3>
+<PRE>
+static final int <B>SIP_CALL_FAILURE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.media.MediaEvent.SIP_CALL_FAILURE">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getTimestamp()"><!-- --></A><H3>
+getTimestamp</H3>
+<PRE>
+long <B>getTimestamp</B>()</PRE>
+<DL>
+<DD>Returns the time in milliseconds when this event was created.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Time in milliseconds when this event was created.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getType()"><!-- --></A><H3>
+getType</H3>
+<PRE>
+int <B>getType</B>()</PRE>
+<DL>
+<DD>Returns the event type. See the MEDIA_xxx constants in this interface.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Event type.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCallId()"><!-- --></A><H3>
+getCallId</H3>
+<PRE>
+java.lang.String <B>getCallId</B>()</PRE>
+<DL>
+<DD>Returns the ID of the call associated with this event.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>call ID.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConferenceCallId()"><!-- --></A><H3>
+getConferenceCallId</H3>
+<PRE>
+java.lang.String <B>getConferenceCallId</B>()</PRE>
+<DL>
+<DD>Returns the conference call ID associated with this event.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>call ID.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getData()"><!-- --></A><H3>
+getData</H3>
+<PRE>
+java.lang.Object <B>getData</B>()</PRE>
+<DL>
+<DD>Returns the data associated with this event.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>data associated with this event.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDataLength()"><!-- --></A><H3>
+getDataLength</H3>
+<PRE>
+int <B>getDataLength</B>()</PRE>
+<DL>
+<DD>Returns the length of the data associated with this event.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the length of the data associated with this event.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/LocalMediaEventListener.html" title="interface in com.ibm.collaboration.realtime.telephony.media"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/media/MediaEventAdapter.html" title="class in com.ibm.collaboration.realtime.telephony.media"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/media/MediaEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MediaEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

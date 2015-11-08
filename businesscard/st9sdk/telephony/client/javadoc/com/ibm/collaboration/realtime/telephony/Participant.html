@@ -1,0 +1,1415 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Participant (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Participant (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/Participant.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Participant.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony</FONT>
+<BR>
+Interface Participant</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>Participant</B><DT>extends <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></DL>
+</PRE>
+
+<P>
+Participant represents a participant in a call.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.Capability"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ACCEPT_INCOMING_CALL">CAPABILITY_ACCEPT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT">CAPABILITY_ADD_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY">CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ALTERNATE_CALL">CAPABILITY_ALTERNATE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ANSWER_CALL">CAPABILITY_ANSWER_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO">CAPABILITY_AUDIO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO_DEVICE_CONTROL">CAPABILITY_AUDIO_DEVICE_CONTROL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CAN_CONSULT">CAPABILITY_CAN_CONSULT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO">CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONFERENCE_CALL">CAPABILITY_CONFERENCE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONNECT_INCOMING_CALL">CAPABILITY_CONNECT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DETECT_VOICE_ACTIVITY">CAPABILITY_DETECT_VOICE_ACTIVITY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DISCONNECT_CALL">CAPABILITY_DISCONNECT_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_DIGITS">CAPABILITY_DTMF_DIGITS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_EVENT">CAPABILITY_DTMF_EVENT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT">CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_EXECUTE_COMMAND">CAPABILITY_EXECUTE_COMMAND</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_CALL_PROPERTY">CAPABILITY_GET_CALL_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_ENDPOINTS">CAPABILITY_GET_ENDPOINTS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_PROPERTY">CAPABILITY_GET_PARTICIPANT_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_VOLUME">CAPABILITY_GET_PARTICIPANT_VOLUME</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INCOMING_CALL_TIMEOUT">CAPABILITY_INCOMING_CALL_TIMEOUT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL">CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LEAVE_CALL">CAPABILITY_LEAVE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LOCK_CALL">CAPABILITY_LOCK_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MERGE_CALLS">CAPABILITY_MERGE_CALLS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_CALL">CAPABILITY_MUTE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT">CAPABILITY_MUTE_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_AUDIO">CAPABILITY_MUTE_PARTICIPANT_AUDIO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_VIDEO">CAPABILITY_MUTE_PARTICIPANT_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PAUSE_CALL">CAPABILITY_PAUSE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PHONE_DEVICE_CONTROL">CAPABILITY_PHONE_DEVICE_CONTROL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_AUDIO_FILE">CAPABILITY_PLAY_AUDIO_FILE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_VIDEO_FILE">CAPABILITY_PLAY_VIDEO_FILE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO">CAPABILITY_RECORD_AUDIO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO_ONLY">CAPABILITY_RECORD_AUDIO_ONLY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_LOCAL">CAPABILITY_RECORD_COMPRESS_LOCAL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_SERVER">CAPABILITY_RECORD_COMPRESS_SERVER</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL">CAPABILITY_RECORD_LOCAL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL_STREAM">CAPABILITY_RECORD_LOCAL_STREAM</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER">CAPABILITY_RECORD_SERVER</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED">CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED">CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_VIDEO">CAPABILITY_RECORD_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REDIRECT_INCOMING_CALL">CAPABILITY_REDIRECT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REJECT_INCOMING_CALL">CAPABILITY_REJECT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REMOVE_PARTICIPANT">CAPABILITY_REMOVE_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PARTICIPANT_UNMUTE">CAPABILITY_REQUEST_PARTICIPANT_UNMUTE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PROVIDER_PROPERTIES">CAPABILITY_REQUEST_PROVIDER_PROPERTIES</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SAVE_ENDPOINTS">CAPABILITY_SAVE_ENDPOINTS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_AUDIO_PORT">CAPABILITY_SET_AUDIO_PORT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_CALL_PROPERTY">CAPABILITY_SET_CALL_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_MODERATOR">CAPABILITY_SET_MODERATOR</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_PROPERTY">CAPABILITY_SET_PARTICIPANT_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_VOLUME">CAPABILITY_SET_PARTICIPANT_VOLUME</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PREFERRED_ENDPOINT">CAPABILITY_SET_PREFERRED_ENDPOINT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_VIDEO_PORT">CAPABILITY_SET_VIDEO_PORT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SILENCE_PARTICIPANT">CAPABILITY_SILENCE_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SIP_URI">CAPABILITY_SIP_URI</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TELEPHONY">CAPABILITY_TELEPHONY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_CALL">CAPABILITY_TRANSFER_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_TO_DEVICE">CAPABILITY_TRANSFER_TO_DEVICE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO">CAPABILITY_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO_DEVICE_CONTROL">CAPABILITY_VIDEO_DEVICE_CONTROL</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Object</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#executeCommand(java.lang.String, java.lang.Object)">executeCommand</A></B>(java.lang.String&nbsp;commandId,
+               java.lang.Object&nbsp;options)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Executes a provider-specific command for this participant, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getAddressUri()">getAddressUri</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the address URI used to call this participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getCallId()">getCallId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the unique ID of the call that this participant is associated with.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getDisplayName()">getDisplayName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the display name for this participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getId()">getId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the unique ID of this participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;org.eclipse.jface.resource.ImageDescriptor</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getImage()">getImage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the image to display for this participant in the call window.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.Properties</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getProperties()">getProperties</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the properties of this participant, null if not available.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Object</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getProviderData()">getProviderData</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an object containing service provider-specific data, if any,
+ for this participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" title="interface in com.ibm.collaboration.realtime.telephony">ParticipantStatus</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getStatus()">getStatus</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the current call status of this participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" title="interface in com.ibm.collaboration.realtime.telephony">ParticipantStatus</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getVideoStatus()">getVideoStatus</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5 -- use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getStatus()"><CODE>getStatus()</CODE></A> instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;double</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getVolume()">getVolume</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the volume for this participant, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isActive()">isActive</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the participant is active on the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isAudioMuted()">isAudioMuted</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant's audio has been muted, either by himself or
+  by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isAudioMutedByModerator()">isAudioMutedByModerator</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant's audio has been muted by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A></B>(java.lang.String&nbsp;capability)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the service provider supports the specified capability
+ for this participant's call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isModerator()">isModerator</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant is the call moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isMuted()">isMuted</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant's audio or video have been muted,
+  either by himself or by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isMutedByModerator()">isMutedByModerator</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant's audio or video have been muted by the
+  moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isMuteLocked()">isMuteLocked</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant is mute locked, meaning his/her audio is muted
+  such that he/she cannot unmute himself/herself.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isPaused()">isPaused</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant has paused the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isSilenced()">isSilenced</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant is silenced, meaning his/her audio is muted
+  such that he/she cannot unmute himself/herself.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isTalking()">isTalking</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant is talking.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isUnmuteRequested()">isUnmuteRequested</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isVideoMuted()">isVideoMuted</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant's video has been muted, either by himself or
+  by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isVideoMutedByModerator()">isVideoMutedByModerator</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant's video has been muted by the moderator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isVisible()">isVisible</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if this participant's video is currently being displayed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#mute()">mute</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mutes this participant's audio and video, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#muteAudio()">muteAudio</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mutes this participant's audio only, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#muteLocked()">muteLocked</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mutes this participant's audio and prevents the participant from
+ unmuting himself, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#muteUnLocked()">muteUnLocked</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#muteVideo()">muteVideo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mutes this participant's video only, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#requestUnmute(boolean)">requestUnmute</A></B>(boolean&nbsp;isRequested)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a request to the call moderator to unmute this participant, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#setDisplayName(java.lang.String)">setDisplayName</A></B>(java.lang.String&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the display name for this participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#setImage(org.eclipse.jface.resource.ImageDescriptor)">setImage</A></B>(org.eclipse.jface.resource.ImageDescriptor&nbsp;image)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the image to display for this participant in the call window.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#setProperty(java.lang.String, java.lang.String)">setProperty</A></B>(java.lang.String&nbsp;name,
+            java.lang.String&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets a property for this participant if supported by the service provider,
+ replacing any existing property with the same name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#setVolume(double)">setVolume</A></B>(double&nbsp;volume)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the volume for this participant, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#silence()">silence</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mutes this participant's audio and prevents the participant from
+ unmuting himself, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#silenceAudio()">silenceAudio</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#unmute()">unmute</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unmutes this participant's audio and video, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#unmuteAudio()">unmuteAudio</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unmutes this participant's audio only, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#unmuteVideo()">unmuteVideo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unmutes this participant's video only, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#unSilenceAudio()">unSilenceAudio</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="executeCommand(java.lang.String, java.lang.Object)"><!-- --></A><H3>
+executeCommand</H3>
+<PRE>
+java.lang.Object <B>executeCommand</B>(java.lang.String&nbsp;commandId,
+                                java.lang.Object&nbsp;options)
+                                throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Executes a provider-specific command for this participant, if
+ supported by the service provider. This mechanism is used to
+ provide third-party plug-ins with the ability to access services
+ that are not specifically supported by Sametime Connect. The
+ command ID and the data types for the input options and return
+ value are determined by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>commandId</CODE> - command ID<DD><CODE>options</CODE> - command options
+<DT><B>Returns:</B><DD>Command result, null if no return value is required.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if a required parameter is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#executeCommand(java.lang.String, java.lang.Object)"><CODE>Call.executeCommand(String, Object)</CODE></A>, 
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#executeCommand(java.lang.String, java.lang.Object)"><CODE>CallManager.executeCommand(String, Object)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAddressUri()"><!-- --></A><H3>
+getAddressUri</H3>
+<PRE>
+java.lang.String <B>getAddressUri</B>()</PRE>
+<DL>
+<DD>Returns the address URI used to call this participant.
+ See <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Address.html#setAddressUri(java.lang.String)"><CODE>Address.setAddressUri(String)</CODE></A> for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Participant address URI, null if not available.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCallId()"><!-- --></A><H3>
+getCallId</H3>
+<PRE>
+java.lang.String <B>getCallId</B>()</PRE>
+<DL>
+<DD>Returns the unique ID of the call that this participant is associated with.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Participant ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDisplayName()"><!-- --></A><H3>
+getDisplayName</H3>
+<PRE>
+java.lang.String <B>getDisplayName</B>()</PRE>
+<DL>
+<DD>Returns the display name for this participant.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Participant display name, null if not available.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getId()"><!-- --></A><H3>
+getId</H3>
+<PRE>
+java.lang.String <B>getId</B>()</PRE>
+<DL>
+<DD>Returns the unique ID of this participant.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Participant ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getImage()"><!-- --></A><H3>
+getImage</H3>
+<PRE>
+org.eclipse.jface.resource.ImageDescriptor <B>getImage</B>()</PRE>
+<DL>
+<DD>Returns the image to display for this participant in the call window.
+ See <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#setImage(org.eclipse.jface.resource.ImageDescriptor)"><CODE>setImage(ImageDescriptor)</CODE></A> for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Participant call window image descriptor, null if none specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProperties()"><!-- --></A><H3>
+getProperties</H3>
+<PRE>
+java.util.Properties <B>getProperties</B>()</PRE>
+<DL>
+<DD>Returns the properties of this participant, null if not available.
+ If there are no properties defined for this participant, returns
+ an empty Properties object.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Properties for this participant, null if not available.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProviderData()"><!-- --></A><H3>
+getProviderData</H3>
+<PRE>
+java.lang.Object <B>getProviderData</B>()</PRE>
+<DL>
+<DD>Returns an object containing service provider-specific data, if any,
+ for this participant. Since the Sametime telephony capabilities can be
+ replaced by third-party implementations, applications should not
+ assume a specific service provider is being used. Service providers
+ can set or update the provider data for this participant by generating
+ an EVENT_PROVIDER_DATA_CHANGE event.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Provider-specific data, null if none specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getStatus()"><!-- --></A><H3>
+getStatus</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" title="interface in com.ibm.collaboration.realtime.telephony">ParticipantStatus</A> <B>getStatus</B>()</PRE>
+<DL>
+<DD>Returns the current call status of this participant.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Participant's call status.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVideoStatus()"><!-- --></A><H3>
+getVideoStatus</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" title="interface in com.ibm.collaboration.realtime.telephony">ParticipantStatus</A> <B>getVideoStatus</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5 -- use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#getStatus()"><CODE>getStatus()</CODE></A> instead.</I>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVolume()"><!-- --></A><H3>
+getVolume</H3>
+<PRE>
+double <B>getVolume</B>()
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns the volume for this participant, if supported by the service provider.
+ The volume can range from 0 though 1, where 1 is the maximum volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Participant's volume (0-1).
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isActive()"><!-- --></A><H3>
+isActive</H3>
+<PRE>
+boolean <B>isActive</B>()</PRE>
+<DL>
+<DD>Determines if the participant is active on the call. An active participant
+ is either connected to the call, or in the process of joining the call.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if the participant is active in this call, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isAudioMuted()"><!-- --></A><H3>
+isAudioMuted</H3>
+<PRE>
+boolean <B>isAudioMuted</B>()</PRE>
+<DL>
+<DD>Determines if this participant's audio has been muted, either by himself or
+  by the moderator.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant's audio has been muted, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isAudioMutedByModerator()"><!-- --></A><H3>
+isAudioMutedByModerator</H3>
+<PRE>
+boolean <B>isAudioMutedByModerator</B>()</PRE>
+<DL>
+<DD>Determines if this participant's audio has been muted by the moderator.
+  If the service provider cannot distinguish between self muting and
+  moderator muting, this method will always return false.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant's audio has been muted by the moderator, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isCapabilitySupported(java.lang.String)"><!-- --></A><H3>
+isCapabilitySupported</H3>
+<PRE>
+boolean <B>isCapabilitySupported</B>(java.lang.String&nbsp;capability)</PRE>
+<DL>
+<DD>Determines if the service provider supports the specified capability
+ for this participant's call. This overrides the behavior of the
+ inherited method <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#isCapabilitySupported(java.lang.String)"><CODE>Capability.isCapabilitySupported(String)</CODE></A>,
+ which is not specific to a call.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A></CODE> in interface <CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>capability</CODE> - capability to test, one of the CAPABILITY_xxx values
+<DT><B>Returns:</B><DD>true if specified capability is supported for this call, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isModerator()"><!-- --></A><H3>
+isModerator</H3>
+<PRE>
+boolean <B>isModerator</B>()</PRE>
+<DL>
+<DD>Determines if this participant is the call moderator.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant is the moderator, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isMuted()"><!-- --></A><H3>
+isMuted</H3>
+<PRE>
+boolean <B>isMuted</B>()</PRE>
+<DL>
+<DD>Determines if this participant's audio or video have been muted,
+  either by himself or by the moderator. Use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isAudioMuted()"><CODE>isAudioMuted()</CODE></A>
+  and <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isVideoMuted()"><CODE>isVideoMuted()</CODE></A> to determine if just the audio or just
+  the video has been muted.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant's audio or video have been muted, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isMutedByModerator()"><!-- --></A><H3>
+isMutedByModerator</H3>
+<PRE>
+boolean <B>isMutedByModerator</B>()</PRE>
+<DL>
+<DD>Determines if this participant's audio or video have been muted by the
+  moderator. Use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isAudioMutedByModerator()"><CODE>isAudioMutedByModerator()</CODE></A> and
+  <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#isVideoMutedByModerator()"><CODE>isVideoMutedByModerator()</CODE></A> to determine if the moderator has
+  muted just the audio, just the video, or both. If the service provider
+  cannot distinguish between self muting and moderator muting, this
+  method will always return false.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant has been muted by the moderator, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSilenced()"><!-- --></A><H3>
+isSilenced</H3>
+<PRE>
+boolean <B>isSilenced</B>()</PRE>
+<DL>
+<DD>Determines if this participant is silenced, meaning his/her audio is muted
+  such that he/she cannot unmute himself/herself.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant is silenced, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isPaused()"><!-- --></A><H3>
+isPaused</H3>
+<PRE>
+boolean <B>isPaused</B>()</PRE>
+<DL>
+<DD>Determines if this participant has paused the call.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant is paused, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isTalking()"><!-- --></A><H3>
+isTalking</H3>
+<PRE>
+boolean <B>isTalking</B>()</PRE>
+<DL>
+<DD>Determines if this participant is talking.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant is talking, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVideoMuted()"><!-- --></A><H3>
+isVideoMuted</H3>
+<PRE>
+boolean <B>isVideoMuted</B>()</PRE>
+<DL>
+<DD>Determines if this participant's video has been muted, either by himself or
+  by the moderator.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant's video has been muted, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVideoMutedByModerator()"><!-- --></A><H3>
+isVideoMutedByModerator</H3>
+<PRE>
+boolean <B>isVideoMutedByModerator</B>()</PRE>
+<DL>
+<DD>Determines if this participant's video has been muted by the moderator.
+  If the service provider cannot distinguish between self muting and
+  moderator muting, this method will always return false.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant's video has been muted by the moderator, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVisible()"><!-- --></A><H3>
+isVisible</H3>
+<PRE>
+boolean <B>isVisible</B>()</PRE>
+<DL>
+<DD>Determines if this participant's video is currently being displayed.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant is visible, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mute()"><!-- --></A><H3>
+mute</H3>
+<PRE>
+void <B>mute</B>()
+          throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Mutes this participant's audio and video, if supported by the service provider.
+ Depending on the service provider, the participant may or may not able to
+ unmute himself. To prevent the user from unmuting himself, use
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#silence()"><CODE>silence()</CODE></A> instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="muteAudio()"><!-- --></A><H3>
+muteAudio</H3>
+<PRE>
+void <B>muteAudio</B>()
+               throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Mutes this participant's audio only, if supported by the service provider.
+ See <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#mute()"><CODE>mute()</CODE></A> for additional information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="muteVideo()"><!-- --></A><H3>
+muteVideo</H3>
+<PRE>
+void <B>muteVideo</B>()
+               throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Mutes this participant's video only, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="requestUnmute(boolean)"><!-- --></A><H3>
+requestUnmute</H3>
+<PRE>
+void <B>requestUnmute</B>(boolean&nbsp;isRequested)
+                   throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Sends a request to the call moderator to unmute this participant, if
+ supported by the service provider. This alerts the moderator that the
+ participant wishes to be unmuted, but does not unmute the participant.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>isRequested</CODE> - 
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDisplayName(java.lang.String)"><!-- --></A><H3>
+setDisplayName</H3>
+<PRE>
+void <B>setDisplayName</B>(java.lang.String&nbsp;name)</PRE>
+<DL>
+<DD>Sets the display name for this participant.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - display name<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setImage(org.eclipse.jface.resource.ImageDescriptor)"><!-- --></A><H3>
+setImage</H3>
+<PRE>
+void <B>setImage</B>(org.eclipse.jface.resource.ImageDescriptor&nbsp;image)</PRE>
+<DL>
+<DD>Sets the image to display for this participant in the call window.
+ If no image is specified, the image from the participant's business
+ card is used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>image</CODE> - participant image descriptor or null<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProperty(java.lang.String, java.lang.String)"><!-- --></A><H3>
+setProperty</H3>
+<PRE>
+void <B>setProperty</B>(java.lang.String&nbsp;name,
+                 java.lang.String&nbsp;value)
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Sets a property for this participant if supported by the service provider,
+ replacing any existing property with the same name. To set a property for
+ all participants in this call, use the setParticipantProperty method in Call.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - property name<DD><CODE>value</CODE> - property value or null
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the name is null or nvalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setVolume(double)"><!-- --></A><H3>
+setVolume</H3>
+<PRE>
+void <B>setVolume</B>(double&nbsp;volume)
+               throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Sets the volume for this participant, if supported by the service provider.
+ The volume can range from 0 though 1, where 1 is the maximum volume.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>volume</CODE> - participant volume (0-1)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the volume is invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="silence()"><!-- --></A><H3>
+silence</H3>
+<PRE>
+void <B>silence</B>()
+             throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Mutes this participant's audio and prevents the participant from
+ unmuting himself, if supported by the service provider. The participant
+ remains muted until one of the unmute methods is used to unmute him.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unmute()"><!-- --></A><H3>
+unmute</H3>
+<PRE>
+void <B>unmute</B>()
+            throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Unmutes this participant's audio and video, if supported by the service
+ provider. Note that a participant who mutes himself cannot be unmuted by
+ the moderator or another participant.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unmuteAudio()"><!-- --></A><H3>
+unmuteAudio</H3>
+<PRE>
+void <B>unmuteAudio</B>()
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Unmutes this participant's audio only, if supported by the service provider.
+ See <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#unmute()"><CODE>unmute()</CODE></A> for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unmuteVideo()"><!-- --></A><H3>
+unmuteVideo</H3>
+<PRE>
+void <B>unmuteVideo</B>()
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Unmutes this participant's video only, if supported by the service provider.
+ See <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#unmute()"><CODE>unmute()</CODE></A> for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isMuteLocked()"><!-- --></A><H3>
+isMuteLocked</H3>
+<PRE>
+boolean <B>isMuteLocked</B>()</PRE>
+<DL>
+<DD>Determines if this participant is mute locked, meaning his/her audio is muted
+  such that he/she cannot unmute himself/herself.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if this participant is mutelocked, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 9.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="muteLocked()"><!-- --></A><H3>
+muteLocked</H3>
+<PRE>
+void <B>muteLocked</B>()
+                throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Mutes this participant's audio and prevents the participant from
+ unmuting himself, if supported by the service provider. The participant
+ remains muted until one of the unmute methods is used to unmute him.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 9.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="muteUnLocked()"><!-- --></A><H3>
+muteUnLocked</H3>
+<PRE>
+void <B>muteUnLocked</B>()
+                  throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="silenceAudio()"><!-- --></A><H3>
+silenceAudio</H3>
+<PRE>
+void <B>silenceAudio</B>()
+                  throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unSilenceAudio()"><!-- --></A><H3>
+unSilenceAudio</H3>
+<PRE>
+void <B>unSilenceAudio</B>()
+                    throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isUnmuteRequested()"><!-- --></A><H3>
+isUnmuteRequested</H3>
+<PRE>
+boolean <B>isUnmuteRequested</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/Participant.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Participant.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

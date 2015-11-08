@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+CapabilityEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CapabilityEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallStartedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CapabilityEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.event</FONT>
+<BR>
+Interface CapabilityEvent</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A>, java.io.Serializable, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>CapabilityEvent</B><DT>extends <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A></DL>
+</PRE>
+
+<P>
+CapabilityEvent is used to indicate that a call capability
+ is supported or no longer supported. This event might be generated
+ by <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/CapabilityManager.html#broadcastSupportedCapabilities()"><CODE>CapabilityManager.broadcastSupportedCapabilities()</CODE></A>, or
+ when a service provider indicates that value of a capability has
+ changed.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.CallEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_BEGIN_RECORDING">EVENT_CALL_BEGIN_RECORDING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_BEGIN_VIDEO">EVENT_CALL_BEGIN_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_DENY_VIDEO">EVENT_CALL_DENY_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_DISCONNECTED">EVENT_CALL_DISCONNECTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_END_RECORDING">EVENT_CALL_END_RECORDING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_END_VIDEO">EVENT_CALL_END_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_ENDING">EVENT_CALL_ENDING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_HISTORY_UPDATE">EVENT_CALL_HISTORY_UPDATE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_LOCKED">EVENT_CALL_LOCKED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_MUTED">EVENT_CALL_MUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_PAUSED">EVENT_CALL_PAUSED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_PROPERTIES">EVENT_CALL_PROPERTIES</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_PROPERTY_CHANGE">EVENT_CALL_PROPERTY_CHANGE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_READY">EVENT_CALL_READY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_REQUEST_VIDEO">EVENT_CALL_REQUEST_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_RESUMED">EVENT_CALL_RESUMED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_STARTED">EVENT_CALL_STARTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_STARTING">EVENT_CALL_STARTING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_TERMINATED">EVENT_CALL_TERMINATED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_TRANSFERRED">EVENT_CALL_TRANSFERRED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_UNLOCKED">EVENT_CALL_UNLOCKED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_UNMUTED">EVENT_CALL_UNMUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CAPABILITY">EVENT_CAPABILITY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL">EVENT_INCOMING_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL_ACCEPTED">EVENT_INCOMING_CALL_ACCEPTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL_INVALID">EVENT_INCOMING_CALL_INVALID</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL_REDIRECTED">EVENT_INCOMING_CALL_REDIRECTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_ADDED">EVENT_PARTICIPANT_ADDED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_ASSOCIATED_ID">EVENT_PARTICIPANT_ASSOCIATED_ID</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_BEGIN_TALKING">EVENT_PARTICIPANT_BEGIN_TALKING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_BUSY">EVENT_PARTICIPANT_BUSY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_CONNECTED">EVENT_PARTICIPANT_CONNECTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_CONNECTING">EVENT_PARTICIPANT_CONNECTING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_DISCONNECTED">EVENT_PARTICIPANT_DISCONNECTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_DISPLAYED">EVENT_PARTICIPANT_DISPLAYED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_END_TALKING">EVENT_PARTICIPANT_END_TALKING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_HIDDEN">EVENT_PARTICIPANT_HIDDEN</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_ACCEPTED">EVENT_PARTICIPANT_INVITE_ACCEPTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_CANCELLED">EVENT_PARTICIPANT_INVITE_CANCELLED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_DECLINED">EVENT_PARTICIPANT_INVITE_DECLINED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_ERROR">EVENT_PARTICIPANT_INVITE_ERROR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_NO_RESPONSE">EVENT_PARTICIPANT_INVITE_NO_RESPONSE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITED">EVENT_PARTICIPANT_INVITED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MODERATOR_ADDED">EVENT_PARTICIPANT_MODERATOR_ADDED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MODERATOR_REMOVED">EVENT_PARTICIPANT_MODERATOR_REMOVED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTE_LOCKED">EVENT_PARTICIPANT_MUTE_LOCKED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTE_UNLOCKED">EVENT_PARTICIPANT_MUTE_UNLOCKED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTED">EVENT_PARTICIPANT_MUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTED_BY_MODERATOR">EVENT_PARTICIPANT_MUTED_BY_MODERATOR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_NO_ANSWER">EVENT_PARTICIPANT_NO_ANSWER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_PAUSED">EVENT_PARTICIPANT_PAUSED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_PROPERTY_CHANGE">EVENT_PARTICIPANT_PROPERTY_CHANGE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_REMOVED">EVENT_PARTICIPANT_REMOVED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_RESUMED">EVENT_PARTICIPANT_RESUMED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_RINGING">EVENT_PARTICIPANT_RINGING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_SERVICE_ERROR">EVENT_PARTICIPANT_SERVICE_ERROR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_SILENCED">EVENT_PARTICIPANT_SILENCED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED">EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTE_REQUESTED">EVENT_PARTICIPANT_UNMUTE_REQUESTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTED">EVENT_PARTICIPANT_UNMUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR">EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNSILENCED">EVENT_PARTICIPANT_UNSILENCED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_MUTED">EVENT_PARTICIPANT_VIDEO_MUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR">EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_UNMUTED">EVENT_PARTICIPANT_VIDEO_UNMUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR">EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_DATA_CHANGE">EVENT_PROVIDER_DATA_CHANGE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_ENDPOINT_CHANGE">EVENT_PROVIDER_ENDPOINT_CHANGE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_PROPERTIES">EVENT_PROVIDER_PROPERTIES</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_PROPERTY_CHANGE">EVENT_PROVIDER_PROPERTY_CHANGE</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.TelephonyEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_PROVIDER">EVENT_PROVIDER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_SERVICE_ERROR">EVENT_SERVICE_ERROR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_UNKNOWN">EVENT_UNKNOWN</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html#getCapability()">getCapability</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the capability for which this event was generated,
+ one of the constants defined in the <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>Capability</CODE></A> interface.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html#isSupported()">isSupported</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines whether or not the capability is supported.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.CallEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getAddressUri()">getAddressUri</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getCallId()">getCallId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getParticipantId()">getParticipantId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getReason()">getReason</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#isAudioOnly()">isAudioOnly</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#isVideoOnly()">isVideoOnly</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setAddressUri(java.lang.String)">setAddressUri</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setCallId(java.lang.String)">setCallId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setIsAudioOnly(boolean)">setIsAudioOnly</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setIsVideoOnly(boolean)">setIsVideoOnly</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setParticipantId(java.lang.String)">setParticipantId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setReason(java.lang.String)">setReason</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.TelephonyEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getDetails()">getDetails</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getEventType()">getEventType</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getProviderData()">getProviderData</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setDetails(java.lang.String)">setDetails</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setEventType(java.lang.String)">setEventType</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setProviderData(java.lang.Object)">setProviderData</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getCapability()"><!-- --></A><H3>
+getCapability</H3>
+<PRE>
+java.lang.String <B>getCapability</B>()</PRE>
+<DL>
+<DD>Returns the capability for which this event was generated,
+ one of the constants defined in the <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>Capability</CODE></A> interface.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Capability for which this event was generated.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSupported()"><!-- --></A><H3>
+isSupported</H3>
+<PRE>
+boolean <B>isSupported</B>()</PRE>
+<DL>
+<DD>Determines whether or not the capability is supported.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if the capability is supported, false otherwise.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallStartedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CapabilityEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

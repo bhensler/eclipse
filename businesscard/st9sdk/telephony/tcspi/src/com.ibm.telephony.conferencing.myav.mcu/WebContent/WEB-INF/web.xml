@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+                         "http://java.sun.com/dtd/web-app_2_3.dtd">
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<web-app id="WebApp">
+  <display-name>MyMCU</display-name>
+  <listener>
+    <!--@%Update%@: NEVER REMOVE THIS COMMENT.  Added by the SIP Update Operation-->
+    <listener-class>com.ibm.telephony.conferencing.myav.mcu.MyMCUServlet</listener-class>
+  </listener>
+  <servlet>
+    <!--@%Update%@: NEVER REMOVE THIS COMMENT.  Added by the SIP Update Operation-->
+    <servlet-name>MyMCUServlet</servlet-name>
+    <display-name>MyMCUServlet</display-name>
+    <description/>
+    <servlet-class>com.ibm.telephony.conferencing.myav.mcu.MyMCUServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <!--@%Update%@: NEVER REMOVE THIS COMMENT.  Added by the SIP Update Operation-->
+    <servlet-name>MyMCUServlet</servlet-name>
+    <url-pattern>/MyMCUServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

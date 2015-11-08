@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC "-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN" "http://java.sun.com/dtd/application_1_3.dtd">
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<application id="Application_ID">
+	<display-name>MyMCU</display-name>
+	<module id="WebModule_1252094415125">
+		<web>
+			<web-uri>com.ibm.telephony.conferencing.myav.mcu.war</web-uri>
+			<context-root>mymcu</context-root>
+		</web>
+	</module>
+</application>

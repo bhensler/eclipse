@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Sametime Connect Web API: Dynamic Contact List Sample</title>
+
+		<!-- Step #1: Import the ST Connect Web API Stylesheet -->
+		<link rel="stylesheet" href="http://localhost:59449/stwebapi/main.css" type="text/css" />
+
+		<!-- Step #2: Import the ST Connect Web API getStatus JavaScript include file -->
+		<script type="text/javascript" src="http://localhost:59449/stwebapi/getStatus.js"></script>
+	</head>
+
+	<script language="javascript">
+		// Step #3: Define functions to resolve livenames and dynamically add them to the contact table
+
+		function createLivename(userId) {
+
+			// Create any element to use as the container
+			var livenameElement = document.createElement("div");
+
+			// Set the userId attribute
+			livenameElement.setAttribute("userId", userId);
+
+			// set the class attribute
+			livenameElement.setAttribute("class", "awareness");
+
+			// Create a sametime.livename (first arg is userId, second arg is the element you just created)
+			var livename = new sametime.livename(userId, livenameElement);
+
+			// Call start() to start watching awareness
+			livename.start();
+
+			// Return livename element
+			return livenameElement;
+		}
+
+		function addLivenameToMyBuddiesTable(livename) {
+			var table = document.getElementById('myBuddiesTable');
+			var lastRow = table.rows.length;
+
+			// Add row to end of table
+			var rowCount = lastRow;
+			var row = table.insertRow(lastRow);
+
+			// Create the cell and add the livename
+			var livenameCell = row.insertCell(0);
+			livenameCell.appendChild(livename)
+		}
+	</script>
+
+	<body>
+		<h2 align="center">Dynamic Contact List</h2>
+		<!-- Step #4: Define the add contact form and hook it to the methods defined above -->
+		<table id="addPartnerTable" border="1" cellpadding="3">
+			<thead>
+				<tr>
+					<td colspan="3" align="center"><B>Add Contact</B></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="3">
+						<form name="addContactForm">
+							Enter user ID: <input type="text" name="buddyListUserId" id="buddyListUserId" value=""/>  <input type="button" value="Add to BuddyList" onClick="addLivenameToMyBuddiesTable(createLivename(document.getElementById('buddyListUserId').value));"/>
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br><br><br><br>
+		<!-- Step #5: Create the buddylist table -->
+		<table id="myBuddiesTable" border="1" cellpadding="3">
+			<thead>
+				<tr>
+					<td colspan="2" align="center"><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Buddies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</B></td>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>AuctionHouse (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">AuctionHouse</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A>
+<A NAME="13"><A>
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.placessa.*;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.*;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.STSession;
+<A NAME="17"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.DuplicateObjectException;
+<A NAME="18"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="19"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.connection.*;
+<A NAME="20"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.constants.*;
+<A NAME="21"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.*;
+<A NAME="22"><A>
+<A NAME="23"><A><FONT ID="Import">import</FONT> java.util.*;
+<A NAME="24"><A><FONT ID="Import">import</FONT> java.net.*;
+<A NAME="25"><A><FONT ID="Import">import</FONT> java.io.*;
+<A NAME="26"><A>
+<A NAME="27"><A><FONT ID="FormalComment">/**
+<A NAME="28"><A> * The auction house activity.
+<A NAME="29"><A> * 
+<A NAME="30"><A> * @author Assaf Azaria, August 2001.
+<A NAME="31"><A> */</FONT>
+<A NAME="32"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> AuctionHouse <FONT ID="Implements">implements</FONT> ActivityServiceListener
+<A NAME="33"><A>{
+<A NAME="34"><A>    <FONT ID="FormalComment">/**
+<A NAME="35"><A>     * The session object.
+<A NAME="36"><A>     */</FONT>  
+<A NAME="37"><A>    <FONT ID="Private">private</FONT> STSession m_session;        
+<A NAME="38"><A>    
+<A NAME="39"><A>    <FONT ID="FormalComment">/**
+<A NAME="40"><A>     * The activity service.
+<A NAME="41"><A>     */</FONT> 
+<A NAME="42"><A>    <FONT ID="Private">private</FONT> ActivityService m_activityService;        
+<A NAME="43"><A>    
+<A NAME="44"><A>    <FONT ID="FormalComment">/**
+<A NAME="45"><A>     * The places administration service.
+<A NAME="46"><A>     */</FONT>
+<A NAME="47"><A>    <FONT ID="Private">private</FONT> PlacesAdminService m_adminService;
+<A NAME="48"><A>    
+<A NAME="49"><A>    <FONT ID="FormalComment">/**
+<A NAME="50"><A>     * The auction input frame.
+<A NAME="51"><A>     */</FONT>
+<A NAME="52"><A>    <FONT ID="Private">private</FONT> <A HREF="AuctionFrame.java.html">AuctionFrame</A> m_frame;        
+<A NAME="53"><A>    
+<A NAME="54"><A>    <FONT ID="FormalComment">/**
+<A NAME="55"><A>     * Before we exit the app we destroy all 3 places. This counter counts down the 
+<A NAME="56"><A>     * number of places left to be destructed.
+<A NAME="57"><A>     */</FONT>    
+<A NAME="58"><A>    <FONT ID="Private">private</FONT> <FONT ID="Int">int</FONT> m_destructionCount = <FONT ID="IntegerLiteral">3</FONT>;
+<A NAME="59"><A>    
+<A NAME="60"><A>    <FONT ID="FormalComment">/**
+<A NAME="61"><A>     * Construct a new Auction house activity.
+<A NAME="62"><A>     * 
+<A NAME="63"><A>     * @param hostName The name of the sametime server to connect to.
+<A NAME="64"><A>     */</FONT>
+<A NAME="65"><A>    <FONT ID="Public">public</FONT> AuctionHouse(String hostName)
+<A NAME="66"><A>    {
+<A NAME="67"><A>        <FONT ID="SingleLineComment">// Create and load the session of components.
+<A NAME="68"><A></FONT>        <FONT ID="Try">try</FONT>
+<A NAME="69"><A>        {
+<A NAME="70"><A>            m_session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">"AuctionHouse"</FONT>);
+<A NAME="71"><A>            String [] compNames  = { ServerAppService.COMP_NAME, 
+<A NAME="72"><A>                                     ActivityService.COMP_NAME, 
+<A NAME="73"><A>                                     PlacesAdminService.COMP_NAME };
+<A NAME="74"><A>            
+<A NAME="75"><A>            m_session.loadComponents( compNames );
+<A NAME="76"><A>            
+<A NAME="77"><A>            m_session.start();
+<A NAME="78"><A>        }
+<A NAME="79"><A>        <FONT ID="Catch">catch</FONT>(DuplicateObjectException e)
+<A NAME="80"><A>        {
+<A NAME="81"><A>            e.printStackTrace();
+<A NAME="82"><A>            exit();
+<A NAME="83"><A>        }
+<A NAME="84"><A>
+<A NAME="85"><A>        <FONT ID="SingleLineComment">// Get a reference to the needed components.
+<A NAME="86"><A></FONT>        m_activityService = 
+<A NAME="87"><A>            (ActivityService)m_session.getCompApi(ActivityService.COMP_NAME);        
+<A NAME="88"><A>        m_activityService.addActivityServiceListener(<FONT ID="This">this</FONT>);
+<A NAME="89"><A>        m_adminService = 
+<A NAME="90"><A>            (PlacesAdminService)m_session.getCompApi(PlacesAdminService.COMP_NAME);        
+<A NAME="91"><A>        m_adminService.addPlacesAdminListener(<FONT ID="New">new</FONT> AdminHandler());
+<A NAME="92"><A>        
+<A NAME="93"><A>        login(hostName);    
+<A NAME="94"><A>    }    
+<A NAME="95"><A>    
+<A NAME="96"><A>    <FONT ID="FormalComment">/**
+<A NAME="97"><A>     * Login to the sametime server as a server application.
+<A NAME="98"><A>     *
+<A NAME="99"><A>     * @param hostName The name of the host.
+<A NAME="100"><A>     */</FONT>
+<A NAME="101"><A>    <FONT ID="Void">void</FONT> login(String hostName)
+<A NAME="102"><A>    {
+<A NAME="103"><A>        ServerAppService saService =
+<A NAME="104"><A>            (ServerAppService)m_session.getCompApi(ServerAppService.COMP_NAME);
+<A NAME="105"><A>
+<A NAME="106"><A>        <FONT ID="Short">short</FONT> loginType = STUserInstance.LT_SERVER_APP;
+<A NAME="107"><A>        <FONT ID="Int">int</FONT>[] supportedServices = { AuctionConstants.ACTIVITY_TYPE };
+<A NAME="108"><A>
+<A NAME="109"><A>        <FONT ID="SingleLineComment">// We don't want to connect through the mux.        
+<A NAME="110"><A></FONT>        Connection[] connections = {
+<A NAME="111"><A>            <FONT ID="New">new</FONT> SocketConnection(<FONT ID="IntegerLiteral">1516</FONT>, <FONT ID="IntegerLiteral">17000</FONT>),
+<A NAME="112"><A>        };
+<A NAME="113"><A>
+<A NAME="114"><A>        saService.setConnectivity(connections);
+<A NAME="115"><A>
+<A NAME="116"><A>        saService.addLoginListener(<FONT ID="New">new</FONT> loginHandler());
+<A NAME="117"><A>        saService.loginAsServerApp(hostName, loginType, <FONT ID="StringLiteral">"AuctionHouse"</FONT>,
+<A NAME="118"><A>                                   supportedServices);
+<A NAME="119"><A>    }   
+<A NAME="120"><A>    
+<A NAME="121"><A>    <FONT ID="FormalComment">/**
+<A NAME="122"><A>     * Terminate the application.
+<A NAME="123"><A>     */</FONT>
+<A NAME="124"><A>    <FONT ID="Void">void</FONT> exit()
+<A NAME="125"><A>    {
+<A NAME="126"><A>        <FONT ID="SingleLineComment">// Kill the places.        
+<A NAME="127"><A></FONT>        <FONT ID="If">if</FONT> (m_adminService != <FONT ID="Null">null</FONT>)
+<A NAME="128"><A>        {            
+<A NAME="129"><A>            m_adminService.destroyPlace(AuctionConstants.PLACE1_NAME,                                         AuctionConstants.PLACE_TYPE);
+<A NAME="130"><A>            m_adminService.destroyPlace(AuctionConstants.PLACE2_NAME, 
+<A NAME="131"><A>                                        AuctionConstants.PLACE_TYPE);            
+<A NAME="132"><A>            m_adminService.destroyPlace(AuctionConstants.PLACE3_NAME,                                         AuctionConstants.PLACE_TYPE);
+<A NAME="133"><A>        }
+<A NAME="134"><A>        <FONT ID="Else">else</FONT>
+<A NAME="135"><A>        {   
+<A NAME="136"><A>            m_session.stop();
+<A NAME="137"><A>            m_session.unloadSession();
+<A NAME="138"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>);        
+<A NAME="139"><A>        }
+<A NAME="140"><A>    }
+<A NAME="141"><A>
+<A NAME="142"><A>    <FONT ID="SingleLineComment">//
+<A NAME="143"><A></FONT>    <FONT ID="SingleLineComment">// Listeners.
+<A NAME="144"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="145"><A></FONT>    
+<A NAME="146"><A>    <FONT ID="FormalComment">/**
+<A NAME="147"><A>     * A request for an activity has come from a place. 
+<A NAME="148"><A>     * 
+<A NAME="149"><A>     * @param event The event object.
+<A NAME="150"><A>     * @see ActivityServiceEvent#getMyActivity
+<A NAME="151"><A>     * @see ActivityServiceEvent#getPlace
+<A NAME="152"><A>     */</FONT>
+<A NAME="153"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> activityRequested(ActivityServiceEvent event)
+<A NAME="154"><A>    {
+<A NAME="155"><A>        MyActivity myActivity = event.getMyActivity();
+<A NAME="156"><A>        m_activityService.acceptActivity(myActivity, <FONT ID="Null">null</FONT>);
+<A NAME="157"><A>        
+<A NAME="158"><A>        <FONT ID="SingleLineComment">// Create an auction room object.
+<A NAME="159"><A></FONT>        <A HREF="AuctionRoom.java.html">AuctionRoom</A> newRoom = <FONT ID="New">new</FONT> <A HREF="AuctionRoom.java.html">AuctionRoom</A>(myActivity, m_frame);
+<A NAME="160"><A>    }
+<A NAME="161"><A>    
+<A NAME="162"><A>    <FONT ID="FormalComment">/**
+<A NAME="163"><A>     * Login Listener.
+<A NAME="164"><A>     */</FONT>
+<A NAME="165"><A>    <FONT ID="Class">class</FONT> loginHandler <FONT ID="Implements">implements</FONT> LoginListener    
+<A NAME="166"><A>    {        
+<A NAME="167"><A>        <FONT ID="FormalComment">/**
+<A NAME="168"><A>         * Indicates that we were successfully logged in to the Sametime          
+<A NAME="169"><A>         * community.
+<A NAME="170"><A>         *
+<A NAME="171"><A>         * @param event The event object.
+<A NAME="172"><A>         * @see LoginEvent#getCommunity
+<A NAME="173"><A>         */</FONT>
+<A NAME="174"><A>         <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event)
+<A NAME="175"><A>         {
+<A NAME="176"><A>            System.out.println(<FONT ID="StringLiteral">"AuctionHouse: LoggedIn"</FONT>);                        
+<A NAME="177"><A>            m_frame = <FONT ID="New">new</FONT> <A HREF="AuctionFrame.java.html">AuctionFrame</A>(AuctionHouse.<FONT ID="This">this</FONT>);
+<A NAME="178"><A>            m_frame.pack();
+<A NAME="179"><A>            m_frame.setVisible(<FONT ID="True">true</FONT>);
+<A NAME="180"><A>        }
+<A NAME="181"><A>
+<A NAME="182"><A>        <FONT ID="FormalComment">/**
+<A NAME="183"><A>         * Indicates that we were successfully logged out of the Sametime          
+<A NAME="184"><A>         * community, or a login request was refused.
+<A NAME="185"><A>         *
+<A NAME="186"><A>         * @param event The event object.
+<A NAME="187"><A>         * @see LoginEvent#getReason
+<A NAME="188"><A>         * @see LoginEvent#getCommunity
+<A NAME="189"><A>         */</FONT>
+<A NAME="190"><A>         <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event)
+<A NAME="191"><A>         {
+<A NAME="192"><A>            System.out.println(<FONT ID="StringLiteral">"AuctionHouse: LoggedOut "</FONT> +                               
+<A NAME="193"><A>                               event.getReason());
+<A NAME="194"><A>            m_session.stop();
+<A NAME="195"><A>            m_session.unloadSession();
+<A NAME="196"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>); 
+<A NAME="197"><A>         }    
+<A NAME="198"><A>    }
+<A NAME="199"><A>    
+<A NAME="200"><A>    <FONT ID="FormalComment">/**
+<A NAME="201"><A>     * Admin Listener.
+<A NAME="202"><A>     */</FONT>    
+<A NAME="203"><A>    <FONT ID="Class">class</FONT> AdminHandler <FONT ID="Extends">extends</FONT> PlacesAdminAdapter    
+<A NAME="204"><A>    {
+<A NAME="205"><A>        <FONT ID="FormalComment">/** 
+<A NAME="206"><A>         * The Places service is available.
+<A NAME="207"><A>         * 
+<A NAME="208"><A>         * @param event The event object.
+<A NAME="209"><A>         */</FONT>
+<A NAME="210"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> serviceAvailable(PlacesAdminEvent event)
+<A NAME="211"><A>        {
+<A NAME="212"><A>            <FONT ID="SingleLineComment">// Set our activity as the default activity.
+<A NAME="213"><A></FONT>            m_adminService.setDefaultActivity(AuctionConstants.PLACE_TYPE, 
+<A NAME="214"><A>                                              AuctionConstants.ACTIVITY_TYPE,
+<A NAME="215"><A>                                              <FONT ID="Null">null</FONT>);
+<A NAME="216"><A>        }
+<A NAME="217"><A>    
+<A NAME="218"><A>        <FONT ID="FormalComment">/**  
+<A NAME="219"><A>         * The Places service is unavailable.
+<A NAME="220"><A>         * 
+<A NAME="221"><A>         * @param event The event object.
+<A NAME="222"><A>         */</FONT>
+<A NAME="223"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> serviceUnavailable(PlacesAdminEvent event)
+<A NAME="224"><A>        {
+<A NAME="225"><A>            System.out.println(<FONT ID="StringLiteral">"Auction house: Admin service unavailable"</FONT>);
+<A NAME="226"><A>            exit();
+<A NAME="227"><A>        }
+<A NAME="228"><A>        
+<A NAME="229"><A>        <FONT ID="FormalComment">/**
+<A NAME="230"><A>         * The 'Set default activity' operation succeded.
+<A NAME="231"><A>         * 
+<A NAME="232"><A>         * @param event The event object.
+<A NAME="233"><A>         * @see PlacesAdminEvent#getPlaceType
+<A NAME="234"><A>         */</FONT>
+<A NAME="235"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> defaultActivitySet(PlacesAdminEvent event)
+<A NAME="236"><A>        {
+<A NAME="237"><A>            System.out.println(<FONT ID="StringLiteral">"Auction house: Default activity set"</FONT>);        
+<A NAME="238"><A>            
+<A NAME="239"><A>            <FONT ID="SingleLineComment">// Create the auction places.
+<A NAME="240"><A></FONT>            m_adminService.createPersistentPlace(AuctionConstants.PLACE1_NAME, 
+<A NAME="241"><A>                                                 AuctionConstants.PLACE1_NAME,
+<A NAME="242"><A>                                                 AuctionConstants.PLACE_TYPE,
+<A NAME="243"><A>                                                 AuctionConstants.PLACE_PASSWORD,
+<A NAME="244"><A>                                                 EncLevel.ENC_LEVEL_DONT_CARE);
+<A NAME="245"><A>            
+<A NAME="246"><A>            m_adminService.createPersistentPlace(AuctionConstants.PLACE2_NAME, 
+<A NAME="247"><A>                                                 AuctionConstants.PLACE2_NAME,
+<A NAME="248"><A>                                                 AuctionConstants.PLACE_TYPE,
+<A NAME="249"><A>                                                 AuctionConstants.PLACE_PASSWORD,
+<A NAME="250"><A>                                                 EncLevel.ENC_LEVEL_DONT_CARE);
+<A NAME="251"><A>            
+<A NAME="252"><A>            m_adminService.createPersistentPlace(AuctionConstants.PLACE3_NAME, 
+<A NAME="253"><A>                                                 AuctionConstants.PLACE3_NAME,
+<A NAME="254"><A>                                                 AuctionConstants.PLACE_TYPE,
+<A NAME="255"><A>                                                 AuctionConstants.PLACE_PASSWORD,
+<A NAME="256"><A>                                                 EncLevel.ENC_LEVEL_DONT_CARE);
+<A NAME="257"><A>                                                 
+<A NAME="258"><A>        }
+<A NAME="259"><A>        
+<A NAME="260"><A>        <FONT ID="FormalComment">/**
+<A NAME="261"><A>         * The create persistent place operation failed.
+<A NAME="262"><A>         * 
+<A NAME="263"><A>         * @param event The event object.
+<A NAME="264"><A>         * @see PlacesAdminEvent#getPlaceName
+<A NAME="265"><A>         * @see PlacesAdminEvent#getPlaceType
+<A NAME="266"><A>         * @see PlacesAdminEvent#getReason
+<A NAME="267"><A>         */</FONT>
+<A NAME="268"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> createPersistentPlaceFailed(PlacesAdminEvent event)
+<A NAME="269"><A>        {
+<A NAME="270"><A>            System.out.println(<FONT ID="StringLiteral">"COULDN'T CREATE THE PLACE: "</FONT> + event.getPlaceName() + 
+<A NAME="271"><A>                               <FONT ID="StringLiteral">" Reason code: "</FONT> + event.getReason());
+<A NAME="272"><A>        }
+<A NAME="273"><A>        
+<A NAME="274"><A>        <FONT ID="FormalComment">/**
+<A NAME="275"><A>         * The 'Set default activity' operation failed.
+<A NAME="276"><A>         * 
+<A NAME="277"><A>         * @param event The event object.
+<A NAME="278"><A>         * @see PlacesAdminEvent#getPlaceType
+<A NAME="279"><A>         * @see PlacesAdminEvent#getReason
+<A NAME="280"><A>         */</FONT>
+<A NAME="281"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setDefaultActivityFailed(PlacesAdminEvent event)
+<A NAME="282"><A>        {
+<A NAME="283"><A>            System.out.println(<FONT ID="StringLiteral">"Auction house: Can't register as default"</FONT> +
+<A NAME="284"><A>                               <FONT ID="StringLiteral">" activity"</FONT> + event.getReason());
+<A NAME="285"><A>            exit();
+<A NAME="286"><A>        }
+<A NAME="287"><A>        
+<A NAME="288"><A>        <FONT ID="FormalComment">/**
+<A NAME="289"><A>        * The destroy place operation succeeded.
+<A NAME="290"><A>        * 
+<A NAME="291"><A>         * @param event The event object.
+<A NAME="292"><A>         * @see PlacesAdminEvent#getPlaceName
+<A NAME="293"><A>         * @see PlacesAdminEvent#getPlaceType
+<A NAME="294"><A>         */</FONT>
+<A NAME="295"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> placeDestroyed(PlacesAdminEvent event)
+<A NAME="296"><A>        {
+<A NAME="297"><A>            System.out.println(<FONT ID="StringLiteral">"PLACE DESTROYED: "</FONT> + event.getPlaceName());    
+<A NAME="298"><A>            
+<A NAME="299"><A>            <FONT ID="SingleLineComment">// if all 3 places have been destroyed, we can leave.
+<A NAME="300"><A></FONT>            <FONT ID="If">if</FONT> (--m_destructionCount == <FONT ID="IntegerLiteral">0</FONT>)
+<A NAME="301"><A>            {
+<A NAME="302"><A>                m_session.stop();
+<A NAME="303"><A>                m_session.unloadSession();
+<A NAME="304"><A>                System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="305"><A>            }
+<A NAME="306"><A>        }
+<A NAME="307"><A>        
+<A NAME="308"><A>        <FONT ID="FormalComment">/**
+<A NAME="309"><A>        * The destroy place operation failed.
+<A NAME="310"><A>        * 
+<A NAME="311"><A>        * @param event The event object.
+<A NAME="312"><A>        * @see PlacesAdminEvent#getPlaceName
+<A NAME="313"><A>        * @see PlacesAdminEvent#getReason
+<A NAME="314"><A>        */</FONT>
+<A NAME="315"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> destroyPlaceFailed(PlacesAdminEvent event)
+<A NAME="316"><A>        {
+<A NAME="317"><A>            System.out.println(<FONT ID="StringLiteral">"FAILED TO DESTROY PLACE: "</FONT> + event.getPlaceName() +
+<A NAME="318"><A>                              <FONT ID="StringLiteral">" Reason: "</FONT> + event.getReason());
+<A NAME="319"><A>        }
+<A NAME="320"><A>    }        
+<A NAME="321"><A>    
+<A NAME="322"><A>    <FONT ID="FormalComment">/**
+<A NAME="323"><A>     * Application entry point.
+<A NAME="324"><A>     */</FONT>
+<A NAME="325"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args)
+<A NAME="326"><A>    {
+<A NAME="327"><A>        <FONT ID="If">if</FONT> (args.length != <FONT ID="IntegerLiteral">1</FONT>)
+<A NAME="328"><A>        {  
+<A NAME="329"><A>            System.err.println(<FONT ID="StringLiteral">"Usage: AuctionHouse [serverName]"</FONT>);
+<A NAME="330"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="331"><A>        } 
+<A NAME="332"><A>
+<A NAME="333"><A>        <FONT ID="New">new</FONT> <A HREF="AuctionHouse.java.html">AuctionHouse</A>(args[<FONT ID="IntegerLiteral">0</FONT>]);
+<A NAME="334"><A>    }
+<A NAME="335"><A>    
+<A NAME="336"><A>}
+<A NAME="337"><A>
+<A NAME="338"><A>
+<A NAME="339"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">AuctionHouse</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

@@ -1,0 +1,881 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+IncomingCallEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="IncomingCallEvent (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ParticipantAddedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IncomingCallEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.event</FONT>
+<BR>
+Interface IncomingCallEvent</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A>, java.io.Serializable, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>IncomingCallEvent</B><DT>extends <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A></DL>
+</PRE>
+
+<P>
+IncomingCallEvent is a call event used to signal an incoming call. The listener
+ can, for example, use this event to display a dialog asking the recipient how
+ to handle the incoming call, and then use
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#acceptIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallListener)"><CODE>CallManager.acceptIncomingCall(String, com.ibm.collaboration.realtime.telephony.CallListener)</CODE></A> or
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#connectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallOptions, com.ibm.collaboration.realtime.telephony.CallListener)"><CODE>CallManager.connectIncomingCall(String, com.ibm.collaboration.realtime.telephony.CallOptions, com.ibm.collaboration.realtime.telephony.CallListener)</CODE></A>
+ to process the call. <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getDetails()"><CODE>TelephonyEvent.getDetails()</CODE></A> might contain a
+ user-specified informational message that can be displayed in the UI if
+ appropriate. See CallEvent for more information.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.CallEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_BEGIN_RECORDING">EVENT_CALL_BEGIN_RECORDING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_BEGIN_VIDEO">EVENT_CALL_BEGIN_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_DENY_VIDEO">EVENT_CALL_DENY_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_DISCONNECTED">EVENT_CALL_DISCONNECTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_END_RECORDING">EVENT_CALL_END_RECORDING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_END_VIDEO">EVENT_CALL_END_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_ENDING">EVENT_CALL_ENDING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_HISTORY_UPDATE">EVENT_CALL_HISTORY_UPDATE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_LOCKED">EVENT_CALL_LOCKED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_MUTED">EVENT_CALL_MUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_PAUSED">EVENT_CALL_PAUSED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_PROPERTIES">EVENT_CALL_PROPERTIES</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_PROPERTY_CHANGE">EVENT_CALL_PROPERTY_CHANGE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_READY">EVENT_CALL_READY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_REQUEST_VIDEO">EVENT_CALL_REQUEST_VIDEO</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_RESUMED">EVENT_CALL_RESUMED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_STARTED">EVENT_CALL_STARTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_STARTING">EVENT_CALL_STARTING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_TERMINATED">EVENT_CALL_TERMINATED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_TRANSFERRED">EVENT_CALL_TRANSFERRED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_UNLOCKED">EVENT_CALL_UNLOCKED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CALL_UNMUTED">EVENT_CALL_UNMUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_CAPABILITY">EVENT_CAPABILITY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL">EVENT_INCOMING_CALL</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL_ACCEPTED">EVENT_INCOMING_CALL_ACCEPTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL_INVALID">EVENT_INCOMING_CALL_INVALID</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_INCOMING_CALL_REDIRECTED">EVENT_INCOMING_CALL_REDIRECTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_ADDED">EVENT_PARTICIPANT_ADDED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_ASSOCIATED_ID">EVENT_PARTICIPANT_ASSOCIATED_ID</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_BEGIN_TALKING">EVENT_PARTICIPANT_BEGIN_TALKING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_BUSY">EVENT_PARTICIPANT_BUSY</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_CONNECTED">EVENT_PARTICIPANT_CONNECTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_CONNECTING">EVENT_PARTICIPANT_CONNECTING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_DISCONNECTED">EVENT_PARTICIPANT_DISCONNECTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_DISPLAYED">EVENT_PARTICIPANT_DISPLAYED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_END_TALKING">EVENT_PARTICIPANT_END_TALKING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_HIDDEN">EVENT_PARTICIPANT_HIDDEN</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_ACCEPTED">EVENT_PARTICIPANT_INVITE_ACCEPTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_CANCELLED">EVENT_PARTICIPANT_INVITE_CANCELLED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_DECLINED">EVENT_PARTICIPANT_INVITE_DECLINED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_ERROR">EVENT_PARTICIPANT_INVITE_ERROR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITE_NO_RESPONSE">EVENT_PARTICIPANT_INVITE_NO_RESPONSE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_INVITED">EVENT_PARTICIPANT_INVITED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MODERATOR_ADDED">EVENT_PARTICIPANT_MODERATOR_ADDED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MODERATOR_REMOVED">EVENT_PARTICIPANT_MODERATOR_REMOVED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTE_LOCKED">EVENT_PARTICIPANT_MUTE_LOCKED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTE_UNLOCKED">EVENT_PARTICIPANT_MUTE_UNLOCKED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTED">EVENT_PARTICIPANT_MUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_MUTED_BY_MODERATOR">EVENT_PARTICIPANT_MUTED_BY_MODERATOR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_NO_ANSWER">EVENT_PARTICIPANT_NO_ANSWER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_PAUSED">EVENT_PARTICIPANT_PAUSED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_PROPERTY_CHANGE">EVENT_PARTICIPANT_PROPERTY_CHANGE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_REMOVED">EVENT_PARTICIPANT_REMOVED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_RESUMED">EVENT_PARTICIPANT_RESUMED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_RINGING">EVENT_PARTICIPANT_RINGING</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_SERVICE_ERROR">EVENT_PARTICIPANT_SERVICE_ERROR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_SILENCED">EVENT_PARTICIPANT_SILENCED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED">EVENT_PARTICIPANT_UNMUTE_REQUEST_CANCELLED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTE_REQUESTED">EVENT_PARTICIPANT_UNMUTE_REQUESTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTED">EVENT_PARTICIPANT_UNMUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR">EVENT_PARTICIPANT_UNMUTED_BY_MODERATOR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_UNSILENCED">EVENT_PARTICIPANT_UNSILENCED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_MUTED">EVENT_PARTICIPANT_VIDEO_MUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR">EVENT_PARTICIPANT_VIDEO_MUTED_BY_MODERATOR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_UNMUTED">EVENT_PARTICIPANT_VIDEO_UNMUTED</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR">EVENT_PARTICIPANT_VIDEO_UNMUTED_BY_MODERATOR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_DATA_CHANGE">EVENT_PROVIDER_DATA_CHANGE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_ENDPOINT_CHANGE">EVENT_PROVIDER_ENDPOINT_CHANGE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_PROPERTIES">EVENT_PROVIDER_PROPERTIES</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#EVENT_PROVIDER_PROPERTY_CHANGE">EVENT_PROVIDER_PROPERTY_CHANGE</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.TelephonyEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_PROVIDER">EVENT_PROVIDER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_SERVICE_ERROR">EVENT_SERVICE_ERROR</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#EVENT_UNKNOWN">EVENT_UNKNOWN</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#getCalledAddressUri()">getCalledAddressUri</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List&lt;java.lang.String&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#getCalledAddressUris()">getCalledAddressUris</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the address URIs of the devices being called, null if unknown
+ or not applicable.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#getCallerName()">getCallerName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the name of the person who initiated this call, used for caller ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#getCommunityId()">getCommunityId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID of the Sametime community associated with the incoming call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#getConferenceParticipantIds()">getConferenceParticipantIds</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the list of participant IDs for people invited to this conference
+ call, not including the caller, if supplied by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#getPlaceId()">getPlaceId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID of the Sametime place associated with the incoming call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isAudioCall()">isAudioCall</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the incoming call is a computer-to-computer audio
+ call (voice chat), rather than a telephone call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isConferenceCall()">isConferenceCall</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the incoming call is a conference call with more than two participants.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isTelephoneCall()">isTelephoneCall</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the incoming call is a telephone call, meaning
+ the call can be answered using a telephone number endpoint.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isVideoCall()">isVideoCall</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if the incoming call is a video call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isVoiceChat()">isVoiceChat</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Renamed to <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isAudioCall()"><CODE>isAudioCall()</CODE></A> for Sametime 8.5.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setCalledAddressUri(java.lang.String)">setCalledAddressUri</A></B>(java.lang.String&nbsp;addressUri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setCalledAddressUris(java.util.List)">setCalledAddressUris</A></B>(java.util.List&lt;java.lang.String&gt;&nbsp;addressUris)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the address URIs of the devices being called.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setCallerName(java.lang.String)">setCallerName</A></B>(java.lang.String&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the name of the person who initiated this call, used for caller ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setCommunityId(java.lang.String)">setCommunityId</A></B>(java.lang.String&nbsp;communityId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the Sametime community ID for the incoming call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setConferenceParticipantIds(java.util.List)">setConferenceParticipantIds</A></B>(java.util.List&nbsp;participantIds)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the list of participant IDs for people invited to this conference
+ call, not including the caller.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setIsAudioCall(boolean)">setIsAudioCall</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies whether the incoming call is a computer-to-computer audio
+ call (voice chat), rather than a telephone call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setIsConferenceCall(boolean)">setIsConferenceCall</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies whether the incoming call is a conference call with more than two
+ participants.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setIsTelephoneCall(boolean)">setIsTelephoneCall</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies whether the incoming call is a telephone call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setIsVideoCall(boolean)">setIsVideoCall</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies whether the incoming call is a video call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setIsVoiceChat(boolean)">setIsVoiceChat</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Renamed to <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setIsAudioCall(boolean)"><CODE>setIsAudioCall(boolean)</CODE></A> for Sametime 8.5.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setPlaceId(java.lang.String)">setPlaceId</A></B>(java.lang.String&nbsp;placeId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the Sametime place ID for the incoming call.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.CallEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">CallEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getAddressUri()">getAddressUri</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getCallId()">getCallId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getParticipantId()">getParticipantId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getReason()">getReason</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#isAudioOnly()">isAudioOnly</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#isVideoOnly()">isVideoOnly</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setAddressUri(java.lang.String)">setAddressUri</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setCallId(java.lang.String)">setCallId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setIsAudioOnly(boolean)">setIsAudioOnly</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setIsVideoOnly(boolean)">setIsVideoOnly</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setParticipantId(java.lang.String)">setParticipantId</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#setReason(java.lang.String)">setReason</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.event.TelephonyEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.event.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event">TelephonyEvent</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getDetails()">getDetails</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getEventType()">getEventType</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#getProviderData()">getProviderData</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setDetails(java.lang.String)">setDetails</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setEventType(java.lang.String)">setEventType</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/TelephonyEvent.html#setProviderData(java.lang.Object)">setProviderData</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getCalledAddressUri()"><!-- --></A><H3>
+getCalledAddressUri</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>java.lang.String <B>getCalledAddressUri</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;
+<P>
+<DD>Returns the address URI of the device being called, null if unknown
+ or not applicable.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Address URI of called device, null if not specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCalledAddressUris()"><!-- --></A><H3>
+getCalledAddressUris</H3>
+<PRE>
+java.util.List&lt;java.lang.String&gt; <B>getCalledAddressUris</B>()</PRE>
+<DL>
+<DD>Returns the address URIs of the devices being called, null if unknown
+ or not applicable.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Address URIs of called devices, null if not specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCallerName()"><!-- --></A><H3>
+getCallerName</H3>
+<PRE>
+java.lang.String <B>getCallerName</B>()</PRE>
+<DL>
+<DD>Returns the name of the person who initiated this call, used for caller ID.
+ Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getParticipantId()"><CODE>CallEvent.getParticipantId()</CODE></A> to get the caller's participant ID,
+ and <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getAddressUri()"><CODE>CallEvent.getAddressUri()</CODE></A> to get the caller's phone number.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Caller's name, null if not specified.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCommunityId()"><!-- --></A><H3>
+getCommunityId</H3>
+<PRE>
+java.lang.String <B>getCommunityId</B>()</PRE>
+<DL>
+<DD>Returns the ID of the Sametime community associated with the incoming call.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Sametime community ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConferenceParticipantIds()"><!-- --></A><H3>
+getConferenceParticipantIds</H3>
+<PRE>
+java.util.List <B>getConferenceParticipantIds</B>()</PRE>
+<DL>
+<DD>Returns the list of participant IDs for people invited to this conference
+ call, not including the caller, if supplied by the service provider. Use
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CallEvent.html#getParticipantId()"><CODE>CallEvent.getParticipantId()</CODE></A> to get the caller's participant ID.
+ Returns null if this isn't a conference call or the participant list is
+ not available.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of conference participant ID strings, null if not available.<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPlaceId()"><!-- --></A><H3>
+getPlaceId</H3>
+<PRE>
+java.lang.String <B>getPlaceId</B>()</PRE>
+<DL>
+<DD>Returns the ID of the Sametime place associated with the incoming call.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Sametime place ID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isAudioCall()"><!-- --></A><H3>
+isAudioCall</H3>
+<PRE>
+boolean <B>isAudioCall</B>()</PRE>
+<DL>
+<DD>Determines if the incoming call is a computer-to-computer audio
+ call (voice chat), rather than a telephone call. For incoming
+ telephone calls using the Sametime computer phone, this method
+ returns false and <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isTelephoneCall()"><CODE>isTelephoneCall()</CODE></A> returns true. For an
+ incoming computer audio/video call, note that both isAudioCall()
+ and <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isVideoCall()"><CODE>isVideoCall()</CODE></A> return true -- these methods are not
+ mutually exclusive.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if the incoming call is a computer audio call, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isConferenceCall()"><!-- --></A><H3>
+isConferenceCall</H3>
+<PRE>
+boolean <B>isConferenceCall</B>()</PRE>
+<DL>
+<DD>Determines if the incoming call is a conference call with more than two participants.
+ See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setIsConferenceCall(boolean)"><CODE>setIsConferenceCall(boolean)</CODE></A> for more information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if the incoming call is a conference call, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isTelephoneCall()"><!-- --></A><H3>
+isTelephoneCall</H3>
+<PRE>
+boolean <B>isTelephoneCall</B>()</PRE>
+<DL>
+<DD>Determines if the incoming call is a telephone call, meaning
+ the call can be answered using a telephone number endpoint.
+ See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isAudioCall()"><CODE>isAudioCall()</CODE></A> and <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isVideoCall()"><CODE>isVideoCall()</CODE></A> for
+ additional information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if the incoming call is a telephone call, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVideoCall()"><!-- --></A><H3>
+isVideoCall</H3>
+<PRE>
+boolean <B>isVideoCall</B>()</PRE>
+<DL>
+<DD>Determines if the incoming call is a video call. Note
+ that both computer audio and telephone calls can include
+ video, and calls can include just video if supported by the
+ service provider. See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isAudioCall()"><CODE>isAudioCall()</CODE></A> and
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isTelephoneCall()"><CODE>isTelephoneCall()</CODE></A> for additional information.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if the incoming call is a video call, false otherwise.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isVoiceChat()"><!-- --></A><H3>
+isVoiceChat</H3>
+<PRE>
+boolean <B>isVoiceChat</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Renamed to <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isAudioCall()"><CODE>isAudioCall()</CODE></A> for Sametime 8.5.</I>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCalledAddressUri(java.lang.String)"><!-- --></A><H3>
+setCalledAddressUri</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>void <B>setCalledAddressUri</B>(java.lang.String&nbsp;addressUri)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;
+<P>
+<DD>Sets the address URI of the device being called.
+ This method is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addressUri</CODE> - address URI of called device or null<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCalledAddressUris(java.util.List)"><!-- --></A><H3>
+setCalledAddressUris</H3>
+<PRE>
+void <B>setCalledAddressUris</B>(java.util.List&lt;java.lang.String&gt;&nbsp;addressUris)</PRE>
+<DL>
+<DD>Sets the address URIs of the devices being called.
+ This method is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addressUris</CODE> - address URIs of called devices or null<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2 IFR1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCallerName(java.lang.String)"><!-- --></A><H3>
+setCallerName</H3>
+<PRE>
+void <B>setCallerName</B>(java.lang.String&nbsp;name)</PRE>
+<DL>
+<DD>Sets the name of the person who initiated this call, used for caller ID.
+ This method is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - caller's name or null<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCommunityId(java.lang.String)"><!-- --></A><H3>
+setCommunityId</H3>
+<PRE>
+void <B>setCommunityId</B>(java.lang.String&nbsp;communityId)</PRE>
+<DL>
+<DD>Sets the Sametime community ID for the incoming call. This method is
+ for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>communityId</CODE> - Sametime community ID
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the community ID is null.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (moved here from com.ibm.collaboration.realtime.telephony.service.event.IncomingCallEventInternal)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setConferenceParticipantIds(java.util.List)"><!-- --></A><H3>
+setConferenceParticipantIds</H3>
+<PRE>
+void <B>setConferenceParticipantIds</B>(java.util.List&nbsp;participantIds)</PRE>
+<DL>
+<DD>Sets the list of participant IDs for people invited to this conference
+ call, not including the caller. This method is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>participantIds</CODE> - list of conference participant ID strings or null<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsAudioCall(boolean)"><!-- --></A><H3>
+setIsAudioCall</H3>
+<PRE>
+void <B>setIsAudioCall</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD>Specifies whether the incoming call is a computer-to-computer audio
+ call (voice chat), rather than a telephone call. See <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isAudioCall()"><CODE>isAudioCall()</CODE></A>
+ for more information. This method is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true if the incoming call is a computer audio call, false (the default) otherwise<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsConferenceCall(boolean)"><!-- --></A><H3>
+setIsConferenceCall</H3>
+<PRE>
+void <B>setIsConferenceCall</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD>Specifies whether the incoming call is a conference call with more than two
+ participants. This reflects the number of people invited to the call, not
+ necessarily the number of people who actually join the call. This information
+ is provided as a hint to the user interface, but is not required for proper
+ handling of the call. Since the service provider might be unable to determine
+ if the call is a conference call, a value of false (the default) does not
+ necessarily mean the call is not a conference call. Any type of call can be a
+ conference call, if supported by the service provider. This method is for service
+ provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true if the incoming call is a conference call, false (the default) otherwise<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsTelephoneCall(boolean)"><!-- --></A><H3>
+setIsTelephoneCall</H3>
+<PRE>
+void <B>setIsTelephoneCall</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD>Specifies whether the incoming call is a telephone call. See
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isTelephoneCall()"><CODE>isTelephoneCall()</CODE></A> for more information. This method
+ is for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true if the incoming call is a telephone call, false (the default) otherwise<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsVideoCall(boolean)"><!-- --></A><H3>
+setIsVideoCall</H3>
+<PRE>
+void <B>setIsVideoCall</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD>Specifies whether the incoming call is a video call. See
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#isVideoCall()"><CODE>isVideoCall()</CODE></A> for more information. This method is
+ for service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true if the incoming call is a video call, false (the default) otherwise<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsVoiceChat(boolean)"><!-- --></A><H3>
+setIsVoiceChat</H3>
+<PRE>
+void <B>setIsVoiceChat</B>(boolean&nbsp;flag)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Renamed to <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html#setIsAudioCall(boolean)"><CODE>setIsAudioCall(boolean)</CODE></A> for Sametime 8.5.</I>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPlaceId(java.lang.String)"><!-- --></A><H3>
+setPlaceId</H3>
+<PRE>
+void <B>setPlaceId</B>(java.lang.String&nbsp;placeId)</PRE>
+<DL>
+<DD>Sets the Sametime place ID for the incoming call. This method is for
+ service provider use only.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>placeId</CODE> - Sametime place ID
+<DT><B>Throws:</B>
+<DD><CODE>InvalidParameterException</CODE> - if the place ID is null.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (moved here from com.ibm.collaboration.realtime.telephony.service.event.IncomingCallEventInternal)</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/CapabilityEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/event/ParticipantAddedEvent.html" title="interface in com.ibm.collaboration.realtime.telephony.event"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/event/IncomingCallEvent.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IncomingCallEvent.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

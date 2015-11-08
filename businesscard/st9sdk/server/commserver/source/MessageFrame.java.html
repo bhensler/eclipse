@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>MessageFrame (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">MessageFrame</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> java.awt.*;
+<A NAME="13"><A><FONT ID="Import">import</FONT> java.awt.event.*;
+<A NAME="14"><A>
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.STUser;
+<A NAME="16"><A>
+<A NAME="17"><A><FONT ID="FormalComment">/**
+<A NAME="18"><A> * The oflline message frame.
+<A NAME="19"><A> *
+<A NAME="20"><A> * @author Assaf Azaria, July 2001.
+<A NAME="21"><A> */</FONT>
+<A NAME="22"><A><FONT ID="Class">class</FONT> MessageFrame <FONT ID="Extends">extends</FONT> Frame <FONT ID="Implements">implements</FONT> ActionListener
+<A NAME="23"><A>{
+<A NAME="24"><A>    <FONT ID="FormalComment">/**
+<A NAME="25"><A>     * Our parent frame.
+<A NAME="26"><A>     */</FONT>
+<A NAME="27"><A>    <FONT ID="Private">private</FONT> <A HREF="Client.java.html">Client</A> m_parent;
+<A NAME="28"><A>
+<A NAME="29"><A>    <FONT ID="FormalComment">/**
+<A NAME="30"><A>     * The text area.
+<A NAME="31"><A>     */</FONT>
+<A NAME="32"><A>    <FONT ID="Private">private</FONT> TextArea m_textArea;
+<A NAME="33"><A>
+<A NAME="34"><A>    <FONT ID="FormalComment">/**
+<A NAME="35"><A>     * The send button.
+<A NAME="36"><A>     */</FONT>
+<A NAME="37"><A>    <FONT ID="Private">private</FONT> Button m_btnSend;
+<A NAME="38"><A>
+<A NAME="39"><A>    <FONT ID="FormalComment">/**
+<A NAME="40"><A>     * The close button.
+<A NAME="41"><A>     */</FONT>
+<A NAME="42"><A>    <FONT ID="Private">private</FONT> Button m_btnClose;
+<A NAME="43"><A>
+<A NAME="44"><A>    <FONT ID="FormalComment">/**
+<A NAME="45"><A>     * The message nominee.
+<A NAME="46"><A>     */</FONT>
+<A NAME="47"><A>    <FONT ID="Private">private</FONT> STUser m_user;
+<A NAME="48"><A>
+<A NAME="49"><A>    <FONT ID="FormalComment">/**
+<A NAME="50"><A>     * Create a new message frame.
+<A NAME="51"><A>     */</FONT>
+<A NAME="52"><A>    <FONT ID="Public">public</FONT> MessageFrame(<A HREF="Client.java.html">Client</A> parent, STUser user)
+<A NAME="53"><A>    {
+<A NAME="54"><A>        <FONT ID="Super">super</FONT>(<FONT ID="StringLiteral">"Enter offline message"</FONT>);
+<A NAME="55"><A>
+<A NAME="56"><A>        m_user = user;
+<A NAME="57"><A>        m_parent = parent;
+<A NAME="58"><A>
+<A NAME="59"><A>        setBackground(Color.lightGray);
+<A NAME="60"><A>
+<A NAME="61"><A>        Panel btnPanel = <FONT ID="New">new</FONT> Panel(<FONT ID="New">new</FONT> GridLayout(<FONT ID="IntegerLiteral">1</FONT>,<FONT ID="IntegerLiteral">5</FONT>));
+<A NAME="62"><A>        btnPanel.add(<FONT ID="New">new</FONT> Panel());
+<A NAME="63"><A>        btnPanel.add(<FONT ID="New">new</FONT> Panel());
+<A NAME="64"><A>        btnPanel.add(<FONT ID="New">new</FONT> Panel());
+<A NAME="65"><A>        btnPanel.add(m_btnSend = <FONT ID="New">new</FONT> Button(<FONT ID="StringLiteral">"Send"</FONT>));
+<A NAME="66"><A>        btnPanel.add(m_btnClose = <FONT ID="New">new</FONT> Button(<FONT ID="StringLiteral">"Close"</FONT>));
+<A NAME="67"><A>
+<A NAME="68"><A>        setLayout(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="69"><A>        add(<FONT ID="StringLiteral">"Center"</FONT>, m_textArea = <FONT ID="New">new</FONT> TextArea());
+<A NAME="70"><A>        add(<FONT ID="StringLiteral">"South"</FONT>, btnPanel);
+<A NAME="71"><A>
+<A NAME="72"><A>        m_btnSend.addActionListener(<FONT ID="This">this</FONT>);
+<A NAME="73"><A>        m_btnClose.addActionListener(<FONT ID="This">this</FONT>);
+<A NAME="74"><A>
+<A NAME="75"><A>        addWindowListener(<FONT ID="New">new</FONT> WindowAdapter()
+<A NAME="76"><A>            {
+<A NAME="77"><A>                <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> windowClosing(WindowEvent event)
+<A NAME="78"><A>                {
+<A NAME="79"><A>                    dispose();
+<A NAME="80"><A>                }
+<A NAME="81"><A>
+<A NAME="82"><A>            });
+<A NAME="83"><A>    }
+<A NAME="84"><A>
+<A NAME="85"><A>    <FONT ID="FormalComment">/**
+<A NAME="86"><A>     * Button clicks.
+<A NAME="87"><A>     */</FONT>
+<A NAME="88"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> actionPerformed(ActionEvent event)
+<A NAME="89"><A>    {
+<A NAME="90"><A>        <FONT ID="If">if</FONT> (event.getSource() == m_btnSend)
+<A NAME="91"><A>        {
+<A NAME="92"><A>            String message = m_textArea.getText();
+<A NAME="93"><A>            m_parent.sendOfflineMessage(m_user, message);
+<A NAME="94"><A>            dispose();
+<A NAME="95"><A>        }
+<A NAME="96"><A>        <FONT ID="Else">else</FONT> <FONT ID="If">if</FONT> (event.getSource() == m_btnClose)
+<A NAME="97"><A>        {
+<A NAME="98"><A>            dispose();
+<A NAME="99"><A>        }
+<A NAME="100"><A>    }
+<A NAME="101"><A>}
+<A NAME="102"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">MessageFrame</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

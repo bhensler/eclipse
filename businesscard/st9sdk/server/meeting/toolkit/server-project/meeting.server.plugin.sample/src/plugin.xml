@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- IBM Confidential                                                  -->
+<!--                                                                   -->
+<!-- OCO Source Materials                                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 2006                                      -->
+<!--                                                                   -->
+<!-- The source code for this program is not published or otherwise    -->
+<!-- divested of its trade secrets, irrespective of what has been      -->
+<!-- deposited with the U.S. Copyright Office.                         -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+<plugin
+	id="client_sdk_extension_sample"
+	name="client_sdk_extension_sample"
+	version="8.5.0"
+	provider-name="IBM">
+	<extension
+		point="rtc4web.messaging_filter"
+		id="client_sdk__messaging_filter"
+		name="client_sdk_messaging_filter">
+		<action class="com.ibm.rtc.sample.Sample">
+		</action>
+	</extension>
+</plugin>

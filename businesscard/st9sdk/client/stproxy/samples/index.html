@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright IBM Corp. 2009, 2014  All Rights Reserved.              -->
+
+<!--
+ * L-MCOS-96LQPJ
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>IBM Sametime 8.5.2 IFR 1 Examples</title>
+   <style type="text/css">
+      li    { list-style: circle outside; color:blue; }
+      .code { font-family: monospace; }
+   </style>
+</head>
+<body style="width:50%;">
+   <p>
+      This directory contains a number of sample web pages that illustrate how to
+      incorporate Sametime functionality into your web pages. Note that to run these
+      samples, it is necessary to deploy them to a server which is in the same domain
+      as your Sametime 8.5 Proxy Server, in order to avoid same-source issues when
+      executing JavaScript on the pages. The server can, of course, be on your local
+      machine, but it must be referenced via its domain address, and not by its IP
+      address or "localhost".
+   </p>
+   <p>
+      The examples included are as follows:
+      <ul>
+          <li>example1.jsp</li>
+          This simple example illustrates how to launch the pre-made web client from within an application.</p>
+          <li>example2.jsp</li>
+          Here you can see how to include LiveNames in your application using simple tags.
+          <li>example3.jsp</li>
+          This includes the user's BuddyList in your application.
+          Note that this actually uses the complete client, but presents it as the BuddyList.
+          <li>example4.jsp</li>
+          This shows how to include a QuickFind component on the page, and how to add an extra
+          context menu item selectively to the livenames on the QuickFind.
+          <li>example5.jsp</li>
+          This includes a component on the page to allow you change your presence status.
+          <li>example6.jsp</li>
+          This example shows how to include a user's business card information on the page.
+          <li>example7.jsp</li>
+          Here we embed a chat window on the page.
+          <li>example8.jsp</li>
+          This shows how to customise LiveNames in your application, by utilising the LiveNameModel.
+          In particular, it shows how to use the base components without depending on the Dojo Toolkit.
+          <li>example9.jsp</li>
+          This example shows how to embed the entire web client into a web page.
+          <li>example10.jsp</li>
+          This example shows how to embed a contact list into a web page.
+          <li>example11.jsp</li>
+          This example illustrates how to create livenames without the use of the Dojo Toolkit.
+          This also shows how to use the base components without depending on the Dojo Toolkit.
+      </ul>
+   </p>
+   <p>
+      Note that the samples must be updated with real values, i.e. the following values must be changed
+      to allow them to work:
+      <ul>
+         <li>&lt;YourServer&gt;:9080</li>
+         This should be set to the address and port of your proxy server; the port is usually 9080 or 9081.
+         <li>&lt;YourUser&gt; and &lt;YourPassword&gt;</li>
+         Change this to the username and password of a user in order to login. It's more usual to use tokens,
+         so alter the <span class="code">loginByPassword</span> to <span class="code">loginByToken</span> to
+         take advantage of this.
+         <li>&lt;YourUser1&gt;, &lt;YourUser2&gt;, ...</li>
+         Change these to other users to illustrate livenames or other functions on other users in the system
+      </ul>
+   </p>
+</body>
+</html>
+

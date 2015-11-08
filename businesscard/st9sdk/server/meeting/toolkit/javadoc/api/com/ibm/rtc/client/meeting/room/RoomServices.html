@@ -1,0 +1,860 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+RoomServices (IBM Lotus Sametime 8.5.2 SDK: IBM Sametime Meeting Remote Client API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="RoomServices (IBM Lotus Sametime 8.5.2 SDK: IBM Sametime Meeting Remote Client API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/rtc/client/meeting/room/RoomServices.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RoomServices.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.rtc.client.meeting.room</FONT>
+<BR>
+Class RoomServices</H2>
+<PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html" title="class in com.ibm.rtc.client.http">com.ibm.rtc.client.http.ServiceBase</A>
+      <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.rtc.client.meeting.room.RoomServices</B>
+</PRE>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/AdminRoomServices.html" title="class in com.ibm.rtc.client.meeting.room">AdminRoomServices</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>RoomServices</B><DT>extends <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html" title="class in com.ibm.rtc.client.http">ServiceBase</A></DL>
+</PRE>
+
+<P>
+Provides a way to perform various room related operations including creation, editing,
+ deletion, search etc..All operations require logging in to the server as an authentic user.The server
+ URL complete with host name and port should be passed into this class.
+ <p>
+ Example:
+ <pre>
+ <code>RoomServices roomServices = new RoomServices("http://server.mycompany.com:80");
+ roomServices.login(userName,password);
+ </code>
+ </pre>
+ A MalformedURLException will be thrown if the server URL is not well-formed. If an invalid host name is entered,
+ an UnknownHostException will be thrown at runtime.
+ Rooms can be created with only a name or a permaname. The owner of the room and
+ creator are managers of the room automatically. Other room properties take on the default values. In general,
+ the default settings are permissive and require user edits to make it otherwise.
+ <pre>
+ <code>roomServices.createRoom("myroom");</code>
+ </pre>
+ Rooms can also be created by passing a MeetingRoom object set with specific properties.
+  <pre>
+ <code>MeetingRoom room = new MeetingRoom();
+ room.setDescription("XYZ");
+ room.setIsDisposable(true);
+ room.setUnlisted(true);
+ roomServices.createRoom("myroom","password",room);
+ </code>
+ </pre>
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#RoomServices(java.lang.String)">RoomServices</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;server)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default constructor for RoomServices.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#RoomServices(java.net.URL)">RoomServices</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;url)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructor for RoomServices</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#RoomServices(java.net.URL, java.lang.String)">RoomServices</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;url,
+             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;loginContextRoot)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructor for RoomServices</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#addManager(java.lang.String, java.lang.String)">addManager</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+           <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;manager)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a user to the room's list of managers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#addManagers(java.lang.String, java.util.Set)">addManagers</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+            <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;managersToAdd)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds the given set of managers to the room.By default, the room's owner is a manager.If one bad userId is passed in, no managers get
+ added to the room.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#addManagers(java.lang.String, java.lang.String...)">addManagers</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>...&nbsp;managers)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a list of managers to the room.By default, the room's owner is a manager.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/rtc4web/RealTimeSession.html" title="class in com.ibm.rtc.client.rtc4web">RealTimeSession</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#createRealTimeSession(java.lang.String, boolean)">createRealTimeSession</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+                      boolean&nbsp;useAsyncUpdates)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#createRoom(com.ibm.rtc.client.meeting.room.MeetingRoom)">createRoom</A></B>(<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A>&nbsp;roomMap)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a room with the given name, password and set of room attributes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#createRoom(java.lang.String)">createRoom</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a meeting room given a room name and returns a MeetingRoom object with the room attributes filled in.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#createRoom(java.lang.String, java.lang.String)">createRoom</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+           <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a meeting room with the given room name & password and returns a MeetingRoom object with the room attributes filled in.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#deleteRoom(java.lang.String)">deleteRoom</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deletes the room owned by the caller, with the given roomId, typically a UUID, available via <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getId()"><CODE>MeetingRoom.getId()</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#editRoom(java.lang.String, com.ibm.rtc.client.meeting.room.MeetingRoom)">editRoom</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id,
+         <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A>&nbsp;roomMap)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edits the properties of the room with the given ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#editRoom(java.lang.String, java.lang.String)">editRoom</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id,
+         <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit the name of the room with the given ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#get(java.lang.String)">get</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches room information given a room Id.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#get(java.lang.String, java.lang.String)">get</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;owner,
+    <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;permaName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches a meeting room given the owner's ID (different from the ownerName which is usually the CN) and the
+ room permaname.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryResults.html" title="class in com.ibm.rtc.client.meeting.room">QueryResults</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#getCallersRooms(com.ibm.rtc.client.meeting.room.QueryControl)">getCallersRooms</A></B>(<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryControl.html" title="class in com.ibm.rtc.client.meeting.room">QueryControl</A>&nbsp;query)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns all the rooms the calling user owns and manages in a QueryResults object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#getRoomByOriginInfo(java.lang.String, java.lang.String)">getRoomByOriginInfo</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;originType,
+                    <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;originId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a meeting room based on origin info.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryResults.html" title="class in com.ibm.rtc.client.meeting.room">QueryResults</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#getRoomsByOwner(java.lang.String, com.ibm.rtc.client.meeting.room.QueryControl)">getRoomsByOwner</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;ownerId,
+                <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryControl.html" title="class in com.ibm.rtc.client.meeting.room">QueryControl</A>&nbsp;query)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns all the rooms owned by the specified user as a QueryResults object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#removeManager(java.lang.String, java.lang.String)">removeManager</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+              <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;manager)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the specified user from the managers' list.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#removeManagers(java.lang.String, java.util.Set)">removeManagers</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+               <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;managersToRemove)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the specified users from the managers' list.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#removeManagers(java.lang.String, java.lang.String...)">removeManagers</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+               <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>...&nbsp;managers)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the specified users from the managers' list.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryResults.html" title="class in com.ibm.rtc.client.meeting.room">QueryResults</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomServices.html#search(java.lang.String, com.ibm.rtc.client.meeting.room.QueryControl)">search</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;searchString,
+       <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryControl.html" title="class in com.ibm.rtc.client.meeting.room">QueryControl</A>&nbsp;searchParams)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Searches for rooms or owners containing the specified search string and returns the result.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.rtc.client.http.ServiceBase"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.ibm.rtc.client.http.<A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html" title="class in com.ibm.rtc.client.http">ServiceBase</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getCookie(java.lang.String)">getCookie</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getCookies()">getCookies</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getCsrfToken()">getCsrfToken</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getCustomSessionHeaders()">getCustomSessionHeaders</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getHttpService()">getHttpService</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getNonce()">getNonce</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getPriorReqHeaders()">getPriorReqHeaders</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getServer()">getServer</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getTokenTimeout()">getTokenTimeout</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getUser()">getUser</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#getUserId()">getUserId</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#httpRequest(com.ibm.rtc.client.http.HttpServiceWrapper.Method, java.lang.String)">httpRequest</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#httpRequest(com.ibm.rtc.client.http.HttpServiceWrapper.Method, java.lang.String, boolean)">httpRequest</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#httpRequest(com.ibm.rtc.client.http.HttpServiceWrapper.Method, java.lang.String, java.lang.String[], java.lang.String[])">httpRequest</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#httpRequest(com.ibm.rtc.client.http.HttpServiceWrapper.Method, java.lang.String, java.lang.String[], java.lang.String[], java.io.File[], boolean)">httpRequest</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#httpRequest(com.ibm.rtc.client.http.HttpServiceWrapper.Method, java.lang.String, java.lang.String, java.io.InputStream, long)">httpRequest</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#httpRequest(com.ibm.rtc.client.http.HttpServiceWrapper.Method, java.lang.String, java.lang.String, java.lang.String)">httpRequest</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#login(java.lang.String, java.lang.String)">login</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#login(java.lang.String, java.lang.String, com.ibm.rtc.client.http.ReloginListener)">login</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#loginWithToken(java.lang.String)">loginWithToken</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#loginWithToken(java.lang.String, com.ibm.rtc.client.http.ReloginListener)">loginWithToken</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#logout()">logout</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#removeCsrfToken()">removeCsrfToken</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#setCsrfToken(java.lang.String)">setCsrfToken</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#setHttpService(com.ibm.rtc.client.http.HttpServiceWrapper)">setHttpService</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#setNonce(java.lang.String)">setNonce</A>, <A HREF="../../../../../../com/ibm/rtc/client/http/ServiceBase.html#shutdown()">shutdown</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="RoomServices(java.lang.String)"><!-- --></A><H3>
+RoomServices</H3>
+<PRE>
+public <B>RoomServices</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;server)
+             throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A></PRE>
+<DL>
+<DD>Default constructor for RoomServices. If the server does not exist or is not reachable, a java.net.UnknownHostException
+ will be thrown.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>server</CODE> - The server should contain the fully qualified domain name of the host and the port.
+ Example: http://server.company.com:80
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A></CODE> - Thrown if the server URL is not properly constructed</DL>
+</DL>
+<HR>
+
+<A NAME="RoomServices(java.net.URL)"><!-- --></A><H3>
+RoomServices</H3>
+<PRE>
+public <B>RoomServices</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;url)
+             throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A></PRE>
+<DL>
+<DD>Constructor for RoomServices
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>url</CODE> - Valid server URL
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A></CODE></DL>
+</DL>
+<HR>
+
+<A NAME="RoomServices(java.net.URL, java.lang.String)"><!-- --></A><H3>
+RoomServices</H3>
+<PRE>
+public <B>RoomServices</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;url,
+                    <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;loginContextRoot)
+             throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A></PRE>
+<DL>
+<DD>Constructor for RoomServices
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>url</CODE> - Valid server URL<DD><CODE>loginContextRoot</CODE> - an alternate context root used for login, for example to use "stmeetings" instead of the default "rtcauth"
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A></CODE></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="createRoom(java.lang.String)"><!-- --></A><H3>
+createRoom</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A> <B>createRoom</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)
+                       throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></PRE>
+<DL>
+<DD>Creates a meeting room given a room name and returns a MeetingRoom object with the room attributes filled in. The room
+ is created with a version 4 GUID uniquely identifying the room. An ID is automatically generated for each room at time of creation.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The name of the room. Room names cannot be empty or null.
+<DT><B>Returns:</B><DD>MeetingRoom Newly created meeting room
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createRoom(java.lang.String, java.lang.String)"><!-- --></A><H3>
+createRoom</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A> <B>createRoom</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                              <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;password)
+                       throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></PRE>
+<DL>
+<DD>Creates a meeting room with the given room name & password and returns a MeetingRoom object with the room attributes filled in. The room
+ is created with a version 4 GUID uniquely identifying the room. An ID is automatically generated for each room at time of creation.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The name of the room. Room names cannot be empty or null.<DD><CODE>password</CODE> - If the password is empty, the room will be created with no password
+<DT><B>Returns:</B><DD>MeetingRoom Newly created meeting room
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createRoom(com.ibm.rtc.client.meeting.room.MeetingRoom)"><!-- --></A><H3>
+createRoom</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A> <B>createRoom</B>(<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A>&nbsp;roomMap)
+                       throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></PRE>
+<DL>
+<DD>Creates a room with the given name, password and set of room attributes. The room
+ is created with a version 4 GUID uniquely identifying the room. An ID is automatically generated for each room at time of creation. Rooms
+ require a valid name OR permaname. In the absence of both, a RoomException will be thrown.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomMap</CODE> - Represents all the attributes the meeting room should be created with. Not all attributes need to be filled in.
+ Defaults will be returned for attributes not specified.
+<DT><B>Returns:</B><DD>MeetingRoom Represents the room that has been successfully created on the server.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addManagers(java.lang.String, java.lang.String...)"><!-- --></A><H3>
+addManagers</H3>
+<PRE>
+public void <B>addManagers</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>...&nbsp;managers)
+                 throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Adds a list of managers to the room.By default, the room's owner is a manager.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomId</CODE> - The GUID of the room generated when the room is created. See <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getId()"><CODE>MeetingRoom.getId()</CODE></A><DD><CODE>managers</CODE> - List of userIdes of users to be added as managers.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE> - thrown when in cases where the call is not allowed, or the parameters are invalid.
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addManagers(java.lang.String, java.util.Set)"><!-- --></A><H3>
+addManagers</H3>
+<PRE>
+public void <B>addManagers</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;managersToAdd)
+                 throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Adds the given set of managers to the room.By default, the room's owner is a manager.If one bad userId is passed in, no managers get
+ added to the room. A RoomException will be thrown.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomId</CODE> - The GUID of the room generated when the room is created. See <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getId()"><CODE>MeetingRoom.getId()</CODE></A><DD><CODE>managersToAdd</CODE> - List of userIdes of users to be added as managers.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE> - If the roomId is not valid or if a manager Id is not valid.
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="editRoom(java.lang.String, com.ibm.rtc.client.meeting.room.MeetingRoom)"><!-- --></A><H3>
+editRoom</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A> <B>editRoom</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id,
+                            <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A>&nbsp;roomMap)
+                     throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Edits the properties of the room with the given ID. Some properties like the permaname are not editable.
+ Attempting to edit the permaname will appear to succeed but will be a virtual no-op.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The room GUID generated at creation time<DD><CODE>roomMap</CODE> - Attributes that need to be modified. Values that haven't changed will be ignored on the server.
+<DT><B>Returns:</B><DD>MeetingRoom edited room object.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE> - if there is a logic problem.
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if there is a connection problem.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addManager(java.lang.String, java.lang.String)"><!-- --></A><H3>
+addManager</H3>
+<PRE>
+public void <B>addManager</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+                       <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;manager)
+                throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                       <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Adds a user to the room's list of managers. By default, the room's owner is a manager.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomId</CODE> - Room ID generated at creation time.<DD><CODE>manager</CODE> - The ID of the user to be added as manager.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeManagers(java.lang.String, java.util.Set)"><!-- --></A><H3>
+removeManagers</H3>
+<PRE>
+public void <B>removeManagers</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+                           <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;managersToRemove)
+                    throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                           <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Removes the specified users from the managers' list.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomId</CODE> - Room ID generated at creation time.<DD><CODE>managersToRemove</CODE> - Set of userIdes of the users to be removed
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeManager(java.lang.String, java.lang.String)"><!-- --></A><H3>
+removeManager</H3>
+<PRE>
+public void <B>removeManager</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+                          <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;manager)
+                   throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                          <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Removes the specified user from the managers' list.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomId</CODE> - Room ID generated at creation time.<DD><CODE>manager</CODE> - userId Id of user to be removed from the managers' list
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeManagers(java.lang.String, java.lang.String...)"><!-- --></A><H3>
+removeManagers</H3>
+<PRE>
+public void <B>removeManagers</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+                           <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>...&nbsp;managers)
+                    throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                           <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Removes the specified users from the managers' list.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomId</CODE> - Room ID generated at creation time.<DD><CODE>managers</CODE> - userIdes of the users to be removed
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="editRoom(java.lang.String, java.lang.String)"><!-- --></A><H3>
+editRoom</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A> <B>editRoom</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id,
+                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)
+                     throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Edit the name of the room with the given ID.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - Room GUID generated at creation time.<DD><CODE>name</CODE> - The name of the room cannot be empty or null.
+<DT><B>Returns:</B><DD>MeetingRoom Edited room object
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deleteRoom(java.lang.String)"><!-- --></A><H3>
+deleteRoom</H3>
+<PRE>
+public void <B>deleteRoom</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId)
+                throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                       <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Deletes the room owned by the caller, with the given roomId, typically a UUID, available via <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html#getId()"><CODE>MeetingRoom.getId()</CODE></A>.
+ Note that the roomId is different from the room name and deletion will only succeed when using the roomId.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomId</CODE> - or UUID of the room.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE> - in several cases, for example, if the user is not logged in, or the room does not belong to the calling user.
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="search(java.lang.String, com.ibm.rtc.client.meeting.room.QueryControl)"><!-- --></A><H3>
+search</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryResults.html" title="class in com.ibm.rtc.client.meeting.room">QueryResults</A> <B>search</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;searchString,
+                           <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryControl.html" title="class in com.ibm.rtc.client.meeting.room">QueryControl</A>&nbsp;searchParams)
+                    throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                           <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A>,
+                           <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Searches for rooms or owners containing the specified search string and returns the result.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>searchString</CODE> - The text to be searched<DD><CODE>searchParams</CODE> - Control parameters for the search.
+<DT><B>Returns:</B><DD>QueryResults Results of the search. Rooms containing the search text in either the room name OR the owner's ID
+ will be returned.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="get(java.lang.String)"><!-- --></A><H3>
+get</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A> <B>get</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId)
+                throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A>,
+                       <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></PRE>
+<DL>
+<DD>Fetches room information given a room Id. Returns null if the roomId does not exist.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>roomId</CODE> - The GUID of the room generated at creation time.
+<DT><B>Returns:</B><DD>MeetingRoom The requested room populated with its attributes. Null if the room doesn't exist.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="get(java.lang.String, java.lang.String)"><!-- --></A><H3>
+get</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A> <B>get</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;owner,
+                       <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;permaName)
+                throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Fetches a meeting room given the owner's ID (different from the ownerName which is usually the CN) and the
+ room permaname.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>owner</CODE> - The ID of the owner (usually userId), different from owner name.
+<DT><B>Returns:</B><DD>MeetingRoom The requested room.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createRealTimeSession(java.lang.String, boolean)"><!-- --></A><H3>
+createRealTimeSession</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/rtc4web/RealTimeSession.html" title="class in com.ibm.rtc.client.rtc4web">RealTimeSession</A> <B>createRealTimeSession</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;roomId,
+                                             boolean&nbsp;useAsyncUpdates)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCallersRooms(com.ibm.rtc.client.meeting.room.QueryControl)"><!-- --></A><H3>
+getCallersRooms</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryResults.html" title="class in com.ibm.rtc.client.meeting.room">QueryResults</A> <B>getCallersRooms</B>(<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryControl.html" title="class in com.ibm.rtc.client.meeting.room">QueryControl</A>&nbsp;query)
+                             throws <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns all the rooms the calling user owns and manages in a QueryResults object.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>query</CODE> - control object specifying query parameters.
+<DT><B>Returns:</B><DD>QueryResults set of results with meeting rooms
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRoomsByOwner(java.lang.String, com.ibm.rtc.client.meeting.room.QueryControl)"><!-- --></A><H3>
+getRoomsByOwner</H3>
+<PRE>
+public <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryResults.html" title="class in com.ibm.rtc.client.meeting.room">QueryResults</A> <B>getRoomsByOwner</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;ownerId,
+                                    <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/QueryControl.html" title="class in com.ibm.rtc.client.meeting.room">QueryControl</A>&nbsp;query)
+                             throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                                    <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns all the rooms owned by the specified user as a QueryResults object. Rooms of other users of which this user is a
+ manager will not be returned in the result.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>ownerId</CODE> - userId of the owner whose rooms are to be retrieved<DD><CODE>query</CODE> - Query control object specifying query parameters.
+<DT><B>Returns:</B><DD>QueryResults set of results with meeting rooms
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE> - if some logical flaw occurs for example if the caller is not logged in, then can not anonymously search 
+ for other user's rooms.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRoomByOriginInfo(java.lang.String, java.lang.String)"><!-- --></A><H3>
+getRoomByOriginInfo</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/MeetingRoom.html" title="class in com.ibm.rtc.client.meeting.room">MeetingRoom</A>&gt; <B>getRoomByOriginInfo</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;originType,
+                                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;originId)
+                                           throws <A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A>,
+                                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns a meeting room based on origin info. These properties can be passed into the meeting room at creation
+ time. The originType and originId together should return a unique meeting room.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>originType</CODE> - Indicates from where the room originated (for instance, "companyXYZ" or "Corp123").<DD><CODE>originId</CODE> - The associated ID with the room when the room originated elsewhere (other than meetings).
+<DT><B>Returns:</B><DD>MeetingRoom The room with the specified originType and originId. Null if none found.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - thrown on the occurrence of communication errors, such as a bad host name, port, or network failure.
+<DD><CODE><A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room">RoomException</A></CODE></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/rtc/client/meeting/room/RoomException.html" title="class in com.ibm.rtc.client.meeting.room"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/rtc/client/meeting/room/RoomServices.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RoomServices.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2011, 2011  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

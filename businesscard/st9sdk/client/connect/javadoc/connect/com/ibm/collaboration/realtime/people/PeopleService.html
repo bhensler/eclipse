@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PeopleService (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PeopleService (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/NestableGroup.html" title="interface in com.ibm.collaboration.realtime.people"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/people/PeopleService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeopleService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.people</FONT>
+<BR>
+Interface PeopleService</H2>
+<HR>
+<DL>
+<DT><PRE>public interface <B>PeopleService</B></DL>
+</PRE>
+
+<P>
+PeopleService provides methods to manage people.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#SERVICE_TYPE">SERVICE_TYPE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Service ID used with <A HREF="../../../../../com/ibm/collaboration/realtime/servicehub/package-summary.html"><CODE>com.ibm.collaboration.realtime.servicehub</CODE></A>
+ to load this service.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#addPersonListener(com.ibm.collaboration.realtime.people.PersonListener)">addPersonListener</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/PersonListener.html" title="interface in com.ibm.collaboration.realtime.people">PersonListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a person event listener for notifications of Person lifecycle events.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#createConversation(com.ibm.collaboration.realtime.people.Person)">createConversation</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>&nbsp;person)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a chat conversation with the specified person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#createNwayInvite(com.ibm.collaboration.realtime.people.Person[])">createNwayInvite</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[]&nbsp;persons)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an n-way chat invitation dialog with the specified people.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#createNwayInvite(com.ibm.collaboration.realtime.people.Person[], java.lang.String)">createNwayInvite</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[]&nbsp;persons,
+                 java.lang.String&nbsp;invitationTopic)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an n-way chat invitation dialog with the specified people and the provided topic.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#getPerson(java.lang.String, java.lang.String)">getPerson</A></B>(java.lang.String&nbsp;contactId,
+          java.lang.String&nbsp;communityId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>use getPerson(String contactId, String communityId, boolean isExternal)
+ 
+ Returns the specified person, retrieving from the person cache or directory.
+ The person is retrieved from the cache if present there, otherwise the
+ peron is retrieved from the directory and added to the cache. The specified
+ person cannot be an external user connected via a gateway.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#getPerson(java.lang.String, java.lang.String, boolean)">getPerson</A></B>(java.lang.String&nbsp;contactId,
+          java.lang.String&nbsp;communityId,
+          boolean&nbsp;isExternal)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the specified person, retrieving from the person cache or directory.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#getPerson(java.lang.String, java.lang.String, java.lang.String, boolean)">getPerson</A></B>(java.lang.String&nbsp;contactId,
+          java.lang.String&nbsp;communityId,
+          java.lang.String&nbsp;gatewayCommunityId,
+          boolean&nbsp;isExternal)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the specified person, retrieving from the person cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#getPersonById(java.lang.String)">getPersonById</A></B>(java.lang.String&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the specified person, retrieving from the person cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#getPersons()">getPersons</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns all person objects, retrieving from the person cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#getPersonsByCommunity(java.lang.String)">getPersonsByCommunity</A></B>(java.lang.String&nbsp;communityId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns all person objects from a community, retrieving from the person cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#loadPersonData(com.ibm.collaboration.realtime.people.Person[])">loadPersonData</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[]&nbsp;persons)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads directory data for the specified people into the person cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#refreshWatch(com.ibm.collaboration.realtime.people.Person)">refreshWatch</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>&nbsp;person)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh the watch for the given person.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#removePersonListener(com.ibm.collaboration.realtime.people.PersonListener)">removePersonListener</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/PersonListener.html" title="interface in com.ibm.collaboration.realtime.people">PersonListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a person event listener that was added using
+ <A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#addPersonListener(com.ibm.collaboration.realtime.people.PersonListener)"><CODE>addPersonListener(PersonListener)</CODE></A>.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="SERVICE_TYPE"><!-- --></A><H3>
+SERVICE_TYPE</H3>
+<PRE>
+static final java.lang.String <B>SERVICE_TYPE</B></PRE>
+<DL>
+<DD>Service ID used with <A HREF="../../../../../com/ibm/collaboration/realtime/servicehub/package-summary.html"><CODE>com.ibm.collaboration.realtime.servicehub</CODE></A>
+ to load this service.
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="createConversation(com.ibm.collaboration.realtime.people.Person)"><!-- --></A><H3>
+createConversation</H3>
+<PRE>
+void <B>createConversation</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>&nbsp;person)</PRE>
+<DL>
+<DD>Create a chat conversation with the specified person. Checks first to see if
+ the person can accept chat (only certain online states can).
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>person</CODE> - person with whom to create chat conversation</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createNwayInvite(com.ibm.collaboration.realtime.people.Person[])"><!-- --></A><H3>
+createNwayInvite</H3>
+<PRE>
+void <B>createNwayInvite</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[]&nbsp;persons)</PRE>
+<DL>
+<DD>Create an n-way chat invitation dialog with the specified people.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>persons</CODE> - array of Person objects for people to invite</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createNwayInvite(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><!-- --></A><H3>
+createNwayInvite</H3>
+<PRE>
+void <B>createNwayInvite</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[]&nbsp;persons,
+                      java.lang.String&nbsp;invitationTopic)</PRE>
+<DL>
+<DD>Create an n-way chat invitation dialog with the specified people and the provided topic.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>persons</CODE> - array of Person objects for people to invite<DD><CODE>invitationTopic</CODE> - Nway topic to display in the invitation dialog.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPerson(java.lang.String, java.lang.String)"><!-- --></A><H3>
+getPerson</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A> <B>getPerson</B>(java.lang.String&nbsp;contactId,
+                 java.lang.String&nbsp;communityId)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>use getPerson(String contactId, String communityId, boolean isExternal)
+ 
+ Returns the specified person, retrieving from the person cache or directory.
+ The person is retrieved from the cache if present there, otherwise the
+ peron is retrieved from the directory and added to the cache. The specified
+ person cannot be an external user connected via a gateway.</I>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>contactId</CODE> - contact ID of person to retrieve<DD><CODE>communityId</CODE> - ID of community to retrieve person from
+<DT><B>Returns:</B><DD>Person for the specified person.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPerson(java.lang.String, java.lang.String, boolean)"><!-- --></A><H3>
+getPerson</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A> <B>getPerson</B>(java.lang.String&nbsp;contactId,
+                 java.lang.String&nbsp;communityId,
+                 boolean&nbsp;isExternal)</PRE>
+<DL>
+<DD>Returns the specified person, retrieving from the person cache or directory.
+ The person is retrieved from the cache if present there, otherwise the
+ peron is retrieved from the directory and added to the cache. The specified
+ person can be an external user connected via a gateway.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>contactId</CODE> - contact ID of person to retrieve<DD><CODE>communityId</CODE> - ID of community to retrieve person from<DD><CODE>isExternal</CODE> - true if the person is an external (gatewayed) user, false otherwise
+<DT><B>Returns:</B><DD>Person for the specified person.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPerson(java.lang.String, java.lang.String, java.lang.String, boolean)"><!-- --></A><H3>
+getPerson</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A> <B>getPerson</B>(java.lang.String&nbsp;contactId,
+                 java.lang.String&nbsp;communityId,
+                 java.lang.String&nbsp;gatewayCommunityId,
+                 boolean&nbsp;isExternal)</PRE>
+<DL>
+<DD>Returns the specified person, retrieving from the person cache.
+ The person is retrieved from the cache if present there, otherwise the
+ peron is created and added to the cache. The specified
+ person can be an external user connected via a gateway.
+ If the person is external, a gateway community ID may be specified.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>contactId</CODE> - contact ID of person to retrieve<DD><CODE>communityId</CODE> - ID of community to retrieve person from<DD><CODE>gatewayCommunityId</CODE> - ID of the gateway community to which the external user belongs, or null.<DD><CODE>isExternal</CODE> - true if the person is an external (gatewayed) user, false otherwise
+<DT><B>Returns:</B><DD>Person for the specified person.<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPersonById(java.lang.String)"><!-- --></A><H3>
+getPersonById</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A> <B>getPersonById</B>(java.lang.String&nbsp;id)</PRE>
+<DL>
+<DD>Returns the specified person, retrieving from the person cache.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - ID of person to get from cache
+<DT><B>Returns:</B><DD>Person for specified person, null if not found in cache.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPersons()"><!-- --></A><H3>
+getPersons</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[] <B>getPersons</B>()</PRE>
+<DL>
+<DD>Returns all person objects, retrieving from the person cache.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Array of Person objects<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPersonsByCommunity(java.lang.String)"><!-- --></A><H3>
+getPersonsByCommunity</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[] <B>getPersonsByCommunity</B>(java.lang.String&nbsp;communityId)</PRE>
+<DL>
+<DD>Returns all person objects from a community, retrieving from the person cache.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>communityId</CODE> - ID of community to retrieve person objects from
+<DT><B>Returns:</B><DD>Array of Person objects<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="loadPersonData(com.ibm.collaboration.realtime.people.Person[])"><!-- --></A><H3>
+loadPersonData</H3>
+<PRE>
+void <B>loadPersonData</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>[]&nbsp;persons)</PRE>
+<DL>
+<DD>Loads directory data for the specified people into the person cache.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>persons</CODE> - array of Person objects for people whose data to load<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="refreshWatch(com.ibm.collaboration.realtime.people.Person)"><!-- --></A><H3>
+refreshWatch</H3>
+<PRE>
+void <B>refreshWatch</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people">Person</A>&nbsp;person)</PRE>
+<DL>
+<DD>Refresh the watch for the given person.
+ This updates the person's watch timestamp which puts it last on the list
+ of persons to be evicted in case the watch limit is exceeeded.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>person</CODE> - Person to refresh watch for.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addPersonListener(com.ibm.collaboration.realtime.people.PersonListener)"><!-- --></A><H3>
+addPersonListener</H3>
+<PRE>
+void <B>addPersonListener</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/PersonListener.html" title="interface in com.ibm.collaboration.realtime.people">PersonListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Adds a person event listener for notifications of Person lifecycle events.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - Person listener to add.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removePersonListener(com.ibm.collaboration.realtime.people.PersonListener)"><!-- --></A><H3>
+removePersonListener</H3>
+<PRE>
+void <B>removePersonListener</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/people/PersonListener.html" title="interface in com.ibm.collaboration.realtime.people">PersonListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Removes a person event listener that was added using
+ <A HREF="../../../../../com/ibm/collaboration/realtime/people/PeopleService.html#addPersonListener(com.ibm.collaboration.realtime.people.PersonListener)"><CODE>addPersonListener(PersonListener)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - Person listener to remove.<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/NestableGroup.html" title="interface in com.ibm.collaboration.realtime.people"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/people/Person.html" title="interface in com.ibm.collaboration.realtime.people"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/people/PeopleService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeopleService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

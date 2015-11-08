@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>ImageCanvas (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">ImageCanvas</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A>
+<A NAME="13"><A>
+<A NAME="14"><A>  <FONT ID="SingleLineComment">// AWT
+<A NAME="15"><A></FONT><FONT ID="Import">import</FONT> java.awt.*;
+<A NAME="16"><A><FONT ID="Import">import</FONT> java.awt.image.*;
+<A NAME="17"><A>
+<A NAME="18"><A><FONT ID="FormalComment">/**
+<A NAME="19"><A> * Class to show a image of the Auction Item on screen
+<A NAME="20"><A> */</FONT>
+<A NAME="21"><A><FONT ID="Class">class</FONT> ImageCanvas <FONT ID="Extends">extends</FONT> Canvas <FONT ID="Implements">implements</FONT> ImageObserver
+<A NAME="22"><A>{
+<A NAME="23"><A>    <FONT ID="FormalComment">/**
+<A NAME="24"><A>     * Original Image
+<A NAME="25"><A>     */</FONT>
+<A NAME="26"><A>    <FONT ID="Private">private</FONT> Image m_origimage;
+<A NAME="27"><A>
+<A NAME="28"><A>    <FONT ID="FormalComment">/**
+<A NAME="29"><A>     * Current Image
+<A NAME="30"><A>     */</FONT>
+<A NAME="31"><A>    <FONT ID="Private">private</FONT> Image m_curimage;
+<A NAME="32"><A>
+<A NAME="33"><A>    <FONT ID="FormalComment">/**
+<A NAME="34"><A>     * Constructor to create the canvas
+<A NAME="35"><A>     *
+<A NAME="36"><A>     * @param image Image The image to be shown
+<A NAME="37"><A>     */</FONT>
+<A NAME="38"><A>    <FONT ID="Public">public</FONT> ImageCanvas(Image image)
+<A NAME="39"><A>    {
+<A NAME="40"><A>        m_origimage = image;
+<A NAME="41"><A>        pickImage();
+<A NAME="42"><A>        setBounds(<FONT ID="IntegerLiteral">0</FONT>, <FONT ID="IntegerLiteral">0</FONT>, <FONT ID="IntegerLiteral">150</FONT>, <FONT ID="IntegerLiteral">150</FONT>);
+<A NAME="43"><A>    }
+<A NAME="44"><A>    <FONT ID="FormalComment">/**
+<A NAME="45"><A>     * Paint the image
+<A NAME="46"><A>     *
+<A NAME="47"><A>     * @param g Graphics Graphics context to paint on
+<A NAME="48"><A>     */</FONT>
+<A NAME="49"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> paint(Graphics g)
+<A NAME="50"><A>    {
+<A NAME="51"><A>        g.drawImage(m_curimage, <FONT ID="IntegerLiteral">0</FONT>, <FONT ID="IntegerLiteral">0</FONT>, <FONT ID="This">this</FONT>);
+<A NAME="52"><A>    }
+<A NAME="53"><A>    <FONT ID="FormalComment">/**
+<A NAME="54"><A>     * Select the image
+<A NAME="55"><A>     */</FONT>
+<A NAME="56"><A>    <FONT ID="Public">public</FONT> <FONT ID="Synchronized">synchronized</FONT> Image pickImage()
+<A NAME="57"><A>    {
+<A NAME="58"><A>        ImageProducer src = m_origimage.getSource();
+<A NAME="59"><A>        Image choice = m_origimage;
+<A NAME="60"><A>
+<A NAME="61"><A>        <FONT ID="If">if</FONT> (m_curimage != choice)
+<A NAME="62"><A>            {
+<A NAME="63"><A>            <FONT ID="If">if</FONT> (m_curimage != <FONT ID="Null">null</FONT> &amp;&amp; m_curimage != m_origimage)
+<A NAME="64"><A>                {
+<A NAME="65"><A>                m_curimage.flush();
+<A NAME="66"><A>            }
+<A NAME="67"><A>            m_curimage = choice;
+<A NAME="68"><A>        }
+<A NAME="69"><A>        <FONT ID="Return">return</FONT> choice;
+<A NAME="70"><A>    }
+<A NAME="71"><A>    <FONT ID="FormalComment">/**
+<A NAME="72"><A>     * Set a new Image
+<A NAME="73"><A>     *
+<A NAME="74"><A>     * @param image Image Image to be shown
+<A NAME="75"><A>     */</FONT>
+<A NAME="76"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setImage(Image image)
+<A NAME="77"><A>    {
+<A NAME="78"><A>        m_origimage = image;
+<A NAME="79"><A>        pickImage();
+<A NAME="80"><A>        invalidate();
+<A NAME="81"><A>        repaint();
+<A NAME="82"><A>    }
+<A NAME="83"><A>    <FONT ID="FormalComment">/**
+<A NAME="84"><A>     * Set a new Image by URL
+<A NAME="85"><A>     *
+<A NAME="86"><A>     * @param url String URL to image
+<A NAME="87"><A>     */</FONT>
+<A NAME="88"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setImage(String url)
+<A NAME="89"><A>    {
+<A NAME="90"><A>        Image im = Toolkit.getDefaultToolkit().getImage(url);
+<A NAME="91"><A>        setImage(im);
+<A NAME="92"><A>    }
+<A NAME="93"><A>}
+<A NAME="94"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">ImageCanvas</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

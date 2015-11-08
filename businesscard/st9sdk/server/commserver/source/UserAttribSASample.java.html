@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>UserAttribSASample (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">UserAttribSASample</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.LoginEvent;
+<A NAME="2"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.LoginListener;
+<A NAME="3"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.ServerAppService;
+<A NAME="4"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.DuplicateObjectException;
+<A NAME="5"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.STSession;
+<A NAME="6"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.STAttribute;
+<A NAME="7"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.STUser;
+<A NAME="8"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.STUserInstance;
+<A NAME="9"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.connection.Connection;
+<A NAME="10"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.connection.SocketConnection;
+<A NAME="11"><A><FONT ID="Import">import</FONT> com.lotus.sametime.lookup.LookupService;
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.lookup.ResolveEvent;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.lookup.ResolveListener;
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.lookup.Resolver;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.onlinedirectory.OnlineDirectoryService;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.userattributesa.UserAttributeSAEvent;
+<A NAME="17"><A><FONT ID="Import">import</FONT> com.lotus.sametime.userattributesa.UserAttributeSAListener;
+<A NAME="18"><A><FONT ID="Import">import</FONT> com.lotus.sametime.userattributesa.UserAttributeSAService;
+<A NAME="19"><A><FONT ID="Import">import</FONT> com.lotus.sametime.userattributesa.UserAttributeSAServiceEvent;
+<A NAME="20"><A>
+<A NAME="21"><A>
+<A NAME="22"><A><FONT ID="FormalComment">/**
+<A NAME="23"><A> * Sample SA which uses the User Attributes SA Service to manipulate 
+<A NAME="24"><A> * user's attributes.  
+<A NAME="25"><A> * 
+<A NAME="26"><A> * @author Amir Perlman, Jan 23, 2007
+<A NAME="27"><A> *
+<A NAME="28"><A> */</FONT>
+<A NAME="29"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> UserAttribSASample <FONT ID="Implements">implements</FONT> UserAttributeSAListener, 
+<A NAME="30"><A>                                           LoginListener, 
+<A NAME="31"><A>                                           ResolveListener {
+<A NAME="32"><A>    
+<A NAME="33"><A>    <FONT ID="FormalComment">/**
+<A NAME="34"><A>     * Sametime Session holding the required services that will be used
+<A NAME="35"><A>     * by this SA. 
+<A NAME="36"><A>     */</FONT>
+<A NAME="37"><A>    <FONT ID="Private">private</FONT> STSession _session;
+<A NAME="38"><A>    
+<A NAME="39"><A>    <FONT ID="FormalComment">/**
+<A NAME="40"><A>     * User attribute SA Service. 
+<A NAME="41"><A>     */</FONT>
+<A NAME="42"><A>    <FONT ID="Private">private</FONT> UserAttributeSAService _userAttribSvc;
+<A NAME="43"><A>    
+<A NAME="44"><A>    <FONT ID="FormalComment">/**
+<A NAME="45"><A>     * The user on which we will set the attribute. 
+<A NAME="46"><A>     */</FONT>
+<A NAME="47"><A>    <FONT ID="Private">private</FONT> String _userName; 
+<A NAME="48"><A>    
+<A NAME="49"><A>    
+<A NAME="50"><A>    <FONT ID="FormalComment">/**
+<A NAME="51"><A>     * Construct a new SA 
+<A NAME="52"><A>     */</FONT>
+<A NAME="53"><A>    <FONT ID="Public">public</FONT> UserAttribSASample(String server, String userName) {
+<A NAME="54"><A>        
+<A NAME="55"><A>        <FONT ID="SingleLineComment">//Keep the user name as it will be needed later. 
+<A NAME="56"><A></FONT>        _userName = userName;
+<A NAME="57"><A>        
+<A NAME="58"><A>        <FONT ID="Try">try</FONT> {
+<A NAME="59"><A>            <FONT ID="SingleLineComment">//Load components. 
+<A NAME="60"><A></FONT>            _session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">"UserAttribSASample"</FONT> + <FONT ID="This">this</FONT>);
+<A NAME="61"><A>            String[] comps = { ServerAppService.COMP_NAME, 
+<A NAME="62"><A>                               OnlineDirectoryService.COMP_NAME,
+<A NAME="63"><A>                               UserAttributeSAService.COMP_NAME,
+<A NAME="64"><A>                               LookupService.COMP_NAME };
+<A NAME="65"><A>            _session.loadComponents(comps);
+<A NAME="66"><A>            _session.start();
+<A NAME="67"><A>            
+<A NAME="68"><A>            ServerAppService saSvc = (ServerAppService) 
+<A NAME="69"><A>                                     _session.getCompApi(ServerAppService.COMP_NAME);
+<A NAME="70"><A>            
+<A NAME="71"><A>            _userAttribSvc = (UserAttributeSAService) 
+<A NAME="72"><A>                             _session.getCompApi(UserAttributeSAService.COMP_NAME);
+<A NAME="73"><A>            _userAttribSvc.addUserAttributeSAListener(<FONT ID="This">this</FONT>);
+<A NAME="74"><A>            
+<A NAME="75"><A>            <FONT ID="SingleLineComment">//Login as a server app
+<A NAME="76"><A></FONT>            saSvc.addLoginListener(<FONT ID="This">this</FONT>);
+<A NAME="77"><A>            
+<A NAME="78"><A>            <FONT ID="SingleLineComment">// Login as a server app
+<A NAME="79"><A></FONT>            <FONT ID="SingleLineComment">//SPR #SQLI77U7XU - adding connectivity 
+<A NAME="80"><A></FONT>            Connection[] connections = { <FONT ID="New">new</FONT> SocketConnection(<FONT ID="IntegerLiteral">1516</FONT>, <FONT ID="IntegerLiteral">17000</FONT>), };
+<A NAME="81"><A>            saSvc.setConnectivity(connections);
+<A NAME="82"><A>            <FONT ID="Int">int</FONT>[] supportedServices = {};
+<A NAME="83"><A>
+<A NAME="84"><A>            saSvc.loginAsServerApp(server, STUserInstance.LT_SERVER_APP, 
+<A NAME="85"><A>                                  <FONT ID="StringLiteral">"User Attributes SA"</FONT>, supportedServices);
+<A NAME="86"><A>        } 
+<A NAME="87"><A>        <FONT ID="Catch">catch</FONT> (DuplicateObjectException e) {
+<A NAME="88"><A>            e.printStackTrace();
+<A NAME="89"><A>        }
+<A NAME="90"><A>        
+<A NAME="91"><A>    }
+<A NAME="92"><A>    
+<A NAME="93"><A>    <FONT ID="FormalComment">/**
+<A NAME="94"><A>     * @see UserAttributeSAListener#attributeRemoved(UserAttributeSAEvent)
+<A NAME="95"><A>     */</FONT>
+<A NAME="96"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> attributeRemoved(UserAttributeSAEvent evt) {
+<A NAME="97"><A>        System.out.println(<FONT ID="StringLiteral">"User attribute removed successfully."</FONT>);
+<A NAME="98"><A>    }
+<A NAME="99"><A>
+<A NAME="100"><A>    <FONT ID="FormalComment">/**
+<A NAME="101"><A>     * @see UserAttributeSAListener#attributeSet(UserAttributeSAEvent)
+<A NAME="102"><A>     */</FONT>
+<A NAME="103"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> attributeSet(UserAttributeSAEvent evt) {
+<A NAME="104"><A>        System.out.println(<FONT ID="StringLiteral">"User attribute updated successfully."</FONT>);
+<A NAME="105"><A>    }
+<A NAME="106"><A>
+<A NAME="107"><A>    <FONT ID="FormalComment">/**
+<A NAME="108"><A>     * @see UserAttributeSAListener#removeAttributeFailed(UserAttributeSAEvent)
+<A NAME="109"><A>     */</FONT>
+<A NAME="110"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> removeAttributeFailed(UserAttributeSAEvent evt) {
+<A NAME="111"><A>        System.err.println(<FONT ID="StringLiteral">"Failed to remove a user attribute."</FONT>);
+<A NAME="112"><A>    }
+<A NAME="113"><A>    
+<A NAME="114"><A>    <FONT ID="FormalComment">/**
+<A NAME="115"><A>     * @see UserAttributeSAListener#serviceAvailable(UserAttributeSAServiceEvent)
+<A NAME="116"><A>     */</FONT>
+<A NAME="117"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> serviceAvailable(UserAttributeSAServiceEvent event) {
+<A NAME="118"><A>        System.out.println(<FONT ID="StringLiteral">"User Attributes SA Service Available"</FONT>);
+<A NAME="119"><A>        <FONT ID="SingleLineComment">//Wait for service available before attempting to user the service
+<A NAME="120"><A></FONT>        
+<A NAME="121"><A>        <FONT ID="SingleLineComment">//Resolve the user name into STUser object
+<A NAME="122"><A></FONT>        LookupService lookupSvc = (LookupService) _session.getCompApi(LookupService.COMP_NAME);
+<A NAME="123"><A>        Resolver resolver = lookupSvc.createResolver(<FONT ID="True">true</FONT>, <FONT ID="False">false</FONT>, <FONT ID="True">true</FONT>, <FONT ID="False">false</FONT>);
+<A NAME="124"><A>        
+<A NAME="125"><A>        resolver.addResolveListener(<FONT ID="This">this</FONT>);
+<A NAME="126"><A>        resolver.resolve(_userName);
+<A NAME="127"><A>    }
+<A NAME="128"><A>
+<A NAME="129"><A>    <FONT ID="FormalComment">/**
+<A NAME="130"><A>     * @see UserAttributeSAListener#serviceUnavailable(UserAttributeSAServiceEvent)
+<A NAME="131"><A>     */</FONT>
+<A NAME="132"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> serviceUnavailable(UserAttributeSAServiceEvent event) {
+<A NAME="133"><A>        System.out.println(<FONT ID="StringLiteral">"User Attributes SA Service Unavailable"</FONT>);
+<A NAME="134"><A>    }
+<A NAME="135"><A>
+<A NAME="136"><A>    <FONT ID="FormalComment">/**
+<A NAME="137"><A>     * @see UserAttributeSAListener#setAttributeFailed(UserAttributeSAEvent)
+<A NAME="138"><A>     */</FONT>
+<A NAME="139"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setAttributeFailed(UserAttributeSAEvent evt) {
+<A NAME="140"><A>        System.err.println(<FONT ID="StringLiteral">"Failed to Set attribute, reason: "</FONT> + 
+<A NAME="141"><A>                            Integer.toHexString(evt.getReason()));
+<A NAME="142"><A>    }
+<A NAME="143"><A>    
+<A NAME="144"><A>    <FONT ID="FormalComment">/**
+<A NAME="145"><A>     * @see LoginListener#loggedIn(LoginEvent)
+<A NAME="146"><A>     */</FONT>
+<A NAME="147"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event) {
+<A NAME="148"><A>        System.out.println(<FONT ID="StringLiteral">"Server Application Logged In"</FONT>);
+<A NAME="149"><A>    }
+<A NAME="150"><A>
+<A NAME="151"><A>    <FONT ID="FormalComment">/**
+<A NAME="152"><A>     * @see LoginListener#loggedOut(LoginEvent)
+<A NAME="153"><A>     */</FONT>
+<A NAME="154"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event) {
+<A NAME="155"><A>        System.err.println(<FONT ID="StringLiteral">"Logged Out, reason:"</FONT> + Integer.toHexString(event.getReason()));
+<A NAME="156"><A>    }
+<A NAME="157"><A>
+<A NAME="158"><A>    <FONT ID="FormalComment">/**
+<A NAME="159"><A>     * @see ResolveListener#resolveConflict(ResolveEvent)
+<A NAME="160"><A>     */</FONT>
+<A NAME="161"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> resolveConflict(ResolveEvent event) {
+<A NAME="162"><A>        System.err.println(<FONT ID="StringLiteral">"Error failed to resolve user uniquely"</FONT>);
+<A NAME="163"><A>    }
+<A NAME="164"><A>
+<A NAME="165"><A>    <FONT ID="FormalComment">/**
+<A NAME="166"><A>     * @see ResolveListener#resolveFailed(ResolveEvent)
+<A NAME="167"><A>     */</FONT>
+<A NAME="168"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> resolveFailed(ResolveEvent event) {
+<A NAME="169"><A>        System.err.println(<FONT ID="StringLiteral">"Error Failed to resolver user name"</FONT>);
+<A NAME="170"><A>    }
+<A NAME="171"><A>
+<A NAME="172"><A>    <FONT ID="FormalComment">/**
+<A NAME="173"><A>     * @see ResolveListener#resolved(ResolveEvent)
+<A NAME="174"><A>     */</FONT>
+<A NAME="175"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> resolved(ResolveEvent event) {
+<A NAME="176"><A>        
+<A NAME="177"><A>        <FONT ID="SingleLineComment">//Inlcude a time stamp in the attribute content so we will get an 
+<A NAME="178"><A></FONT>        <FONT ID="SingleLineComment">//event each time it is updated
+<A NAME="179"><A></FONT>        java.util.Date d = <FONT ID="New">new</FONT> java.util.Date();
+<A NAME="180"><A>        STAttribute attr = <FONT ID="New">new</FONT> STAttribute(<FONT ID="IntegerLiteral">778877</FONT>, <FONT ID="StringLiteral">"Some exciting new value"</FONT> + 
+<A NAME="181"><A>                                            <FONT ID="StringLiteral">", Date: "</FONT> + d.toString());
+<A NAME="182"><A>        
+<A NAME="183"><A>        System.out.println(<FONT ID="StringLiteral">"User Resolved successfully, updating attribute: "</FONT> + 
+<A NAME="184"><A>                           attr.getKey());
+<A NAME="185"><A>        _userAttribSvc.setAttribute((STUser) event.getResolved(), attr);
+<A NAME="186"><A>        
+<A NAME="187"><A>    }
+<A NAME="188"><A>
+<A NAME="189"><A>    <FONT ID="FormalComment">/**
+<A NAME="190"><A>     * Startup a SA that will update a user's attribute
+<A NAME="191"><A>     * @param args
+<A NAME="192"><A>     */</FONT>
+<A NAME="193"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args) {
+<A NAME="194"><A>        <FONT ID="If">if</FONT>(args.length &lt; <FONT ID="IntegerLiteral">2</FONT>) {
+<A NAME="195"><A>            System.err.println(<FONT ID="StringLiteral">"Error, command line parameters must include "</FONT> +
+<A NAME="196"><A>                               <FONT ID="StringLiteral">"a server name and a user's name."</FONT>);
+<A NAME="197"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="198"><A>        }
+<A NAME="199"><A>        
+<A NAME="200"><A>        <FONT ID="New">new</FONT> <A HREF="UserAttribSASample.java.html">UserAttribSASample</A>(args[<FONT ID="IntegerLiteral">0</FONT>], args[<FONT ID="IntegerLiteral">1</FONT>]);
+<A NAME="201"><A>    }
+<A NAME="202"><A>
+<A NAME="203"><A>}
+<A NAME="204"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">UserAttribSASample</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Sametime Connect Web API: Contact Status Information Sample</title>
+
+		<!-- Step #1: Import the ST Connect Web API Stylesheet -->
+		<link rel="stylesheet" href="http://localhost:59449/stwebapi/main.css" type="text/css" />
+
+		<!-- Step #2: Import the ST Connect Web API getStatus JavaScript include file -->
+		<script type="text/javascript" src="http://localhost:59449/stwebapi/getStatus.js"></script>
+	</head>
+
+	<script language="javascript">
+
+		// Step #3: Define functions to resolve livenames and dynamically add them to the contact table
+
+		// Sametime Connect Web API Servlet URL
+		var sametime_servletUrl = "http://localhost:59449/stwebapi/";
+
+		// Hashtable to store contacts
+		var myBuddies = {};
+
+		// This function will take a userId, resolve it to create a livename, and add it to the contacts table
+		function addLivenameToMyBuddiesTable(userId) {
+
+			// Check if userId is already in the buddylist:
+			if (myBuddies[userId] == null) {
+
+				// Create any element to use as the container
+				var livenameElement = document.createElement("div");
+
+				// Set the userId attribute
+				livenameElement.setAttribute("userId", userId);
+
+				// set the class attribute
+				livenameElement.setAttribute("class", "awareness");
+
+				// Create a sametime.livename (first arg is userId, second arg is the element you just created)
+				var livename = new sametime.livename(userId, livenameElement);
+
+				// Call start() to start watching awareness
+				livename.start();
+
+				// Store livename in a local hashtable
+				myBuddies[userId] = livename;
+
+				// Find the last row in the table
+				var table = document.getElementById('myBuddiesTable');
+				var lastRow = table.rows.length;
+
+				// Add row to end of table
+				var rowCount = lastRow;
+				var row = table.insertRow(lastRow);
+
+				// Create a cell to hold the radio button
+				var radioCell = row.insertCell(0);
+				var cellName = "buddyListCell";
+				var contactElement = document.createElement(document.uniqueID?'<input type="radio" name="' + cellName + '">':'input');
+				contactElement.type = 'radio';
+				contactElement.id = cellName;
+				contactElement.value = userId;
+				contactElement.size = 100;
+				contactElement.onclick = function(){ getContactStatus(this.value); };
+				radioCell.appendChild(contactElement);
+
+				// Create a cell to hold the livename
+				var livenameCell = row.insertCell(1);
+				livenameCell.appendChild(livenameElement);
+
+				// Create a cell to hold the contact information
+				var infoCell = row.insertCell(2);
+				var infoElement = document.createElement("div");
+				infoElement.name = "infoCell" + userId;
+				infoElement.id = "infoCell" + userId;
+				infoElement.innerHTML = "&nbsp;";
+				infoCell.appendChild(infoElement);
+			}
+		}
+
+		// Reset all the information cells
+		function clearInfoCells() {
+			var divs = document.getElementsByTagName("div") ;
+			for(var x = 0; x < divs.length; x++ )
+			{
+				var currentDiv = divs[x];
+				if(currentDiv.id.indexOf("infoCell", 0) > -1)
+				{
+					currentDiv.innerHTML = "";
+				}
+			}
+		}
+
+		// Step #4: Define functions to retrieve contact information from the client
+
+		// This function will trigger the call to retrieve the user's status (contact information) from the Connect Client
+		var getContactStatus = function(userid)
+		{
+			//	remove existing script if it is the same, to save memory
+			var currentScript = document.getElementById("stscript" + userid);
+			if(currentScript != null) {
+				currentScript.parentNode.removeChild(currentScript);
+			}
+
+			var d = new Date();
+
+			// The format of the URL to access is [servlet]/[action]?&userId=[userid]
+			var url = sametime_servletUrl + "getstatus?userId=" + userid;
+
+			// Create a callback function (updateContactInfo) and add it to the page.
+			// When the servlet returns, the callback function will be triggered.
+			var head = document.getElementsByTagName("head")[0];
+			var script = document.createElement("script");
+			url =  url + "&jsonp=updateContactInfo&time=" + d.getTime();
+			script.src = url;
+			script.id = "stscript" + userid;
+			script.type = "text/javascript";
+			head.appendChild(script);
+		}
+
+		// This function will update the information cell of the selected contact with some of the data received from the getstatus call
+		var updateContactInfo = function(partner) {
+			clearInfoCells();
+			if (partner != null) {
+				var infoHtml = "No status information available.";
+				if ( (partner.statusMessage != null) && (partner.statusMessage != "") ) {
+					infoHtml = "Status Message = " + partner.statusMessage + "<br>";
+				}
+				if ( (partner.locationInfo.userDefinedLocationName != null) &&
+					 (partner.locationInfo.userDefinedLocationName != "") ) {
+					infoHtml = infoHtml + "Location = " + partner.locationInfo.userDefinedLocationName + "<br>";
+					if (partner.locationInfo.phoneNumber != "") {
+						infoHtml = infoHtml + "&nbsp;&nbsp;&nbsp;&nbsp;" + "Phone = " + partner.locationInfo.phoneNumber + "<br>";
+					}
+					if (partner.locationInfo.cityName != "") {
+						infoHtml = infoHtml + "&nbsp;&nbsp;&nbsp;&nbsp;" +
+						"Address = " + partner.locationInfo.cityName + ", " + partner.locationInfo.stateName + ", " + partner.locationInfo.postalCode + ", " + partner.locationInfo.countryName;
+					}
+				}
+				document.getElementById("infoCell" + partner.contactId).innerHTML = infoHtml;
+			}
+		}
+	</script>
+
+	<body>
+		<h2 align="center">Contact Status Information Sample</h2>
+		<!-- Step #5: Define the add contact form and hook it to the methods defined above -->
+		<table id="addPartnerTable" border="1" cellpadding="3">
+			<thead>
+				<tr>
+					<td align="center"><B>Add Contact</B></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<form name="addContactForm">
+							Enter user ID: <input type="text" name="buddyListUserId" id="buddyListUserId" value=""/>  <input type="button" value="Add to BuddyList" onClick="addLivenameToMyBuddiesTable(document.getElementById('buddyListUserId').value);"/>
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br><br><br><br>
+		<!-- Step #6: Create the buddylist table -->
+		<table id="myBuddiesTable" border="1" cellpadding="3">
+			<thead>
+				<tr>
+					<td colspan="3" align="center"><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Buddies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</B><br><br>
+						<i>Select the radio button next to a contact to see their information.</i>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td align="center">Buddy</td>
+					<td align="center">Contact Status Information</td>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</body>
+</html>

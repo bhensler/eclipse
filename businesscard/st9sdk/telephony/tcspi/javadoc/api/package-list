@@ -1,0 +1,6 @@
+com.ibm.telephony.conferencing
+com.ibm.telephony.conferencing.event
+com.ibm.telephony.conferencing.log
+com.ibm.telephony.conferencing.spi
+com.ibm.telephony.conferencing.spi.event
+com.ibm.telephony.conferencing.util

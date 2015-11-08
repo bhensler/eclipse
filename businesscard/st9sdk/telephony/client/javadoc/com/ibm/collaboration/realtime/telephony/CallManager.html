@@ -1,0 +1,1798 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+CallManager (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CallManager (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallOptions.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/CallManager.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CallManager.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony</FONT>
+<BR>
+Interface CallManager</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>CallManager</B><DT>extends <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></DL>
+</PRE>
+
+<P>
+CallManager is to start or join a call between two or more parties.
+ Use one of the methods in the Call interface to end the call.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#CALL_TYPE_AUDIO">CALL_TYPE_AUDIO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies an audio call, used with <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#CALL_TYPE_TELEPHONE">CALL_TYPE_TELEPHONE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies a telephone call, used with <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#CALL_TYPE_VIDEO">CALL_TYPE_VIDEO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies an video call, used with <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#SERVICE_TYPE_CLICK_TO_CALL">SERVICE_TYPE_CLICK_TO_CALL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#SERVICE_TYPE_VIDEO_CHAT">SERVICE_TYPE_VIDEO_CHAT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#SERVICE_TYPE_VOICE_CHAT">SERVICE_TYPE_VOICE_CHAT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.Capability"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ACCEPT_INCOMING_CALL">CAPABILITY_ACCEPT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT">CAPABILITY_ADD_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY">CAPABILITY_ADD_PARTICIPANT_MODERATOR_ONLY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ALTERNATE_CALL">CAPABILITY_ALTERNATE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ANSWER_CALL">CAPABILITY_ANSWER_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO">CAPABILITY_AUDIO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_AUDIO_DEVICE_CONTROL">CAPABILITY_AUDIO_DEVICE_CONTROL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CAN_CONSULT">CAPABILITY_CAN_CONSULT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO">CAPABILITY_COMBINED_LOCAL_REMOTE_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONFERENCE_CALL">CAPABILITY_CONFERENCE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_CONNECT_INCOMING_CALL">CAPABILITY_CONNECT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DETECT_VOICE_ACTIVITY">CAPABILITY_DETECT_VOICE_ACTIVITY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DISCONNECT_CALL">CAPABILITY_DISCONNECT_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_DIGITS">CAPABILITY_DTMF_DIGITS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_DTMF_EVENT">CAPABILITY_DTMF_EVENT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT">CAPABILITY_ENDPOINT_RING_NO_ANSWER_TIMEOUT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_EXECUTE_COMMAND">CAPABILITY_EXECUTE_COMMAND</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_CALL_PROPERTY">CAPABILITY_GET_CALL_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_ENDPOINTS">CAPABILITY_GET_ENDPOINTS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_PROPERTY">CAPABILITY_GET_PARTICIPANT_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_GET_PARTICIPANT_VOLUME">CAPABILITY_GET_PARTICIPANT_VOLUME</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INCOMING_CALL_TIMEOUT">CAPABILITY_INCOMING_CALL_TIMEOUT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL">CAPABILITY_INVITE_OTHERS_IN_PAUSED_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LEAVE_CALL">CAPABILITY_LEAVE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_LOCK_CALL">CAPABILITY_LOCK_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MERGE_CALLS">CAPABILITY_MERGE_CALLS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_CALL">CAPABILITY_MUTE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT">CAPABILITY_MUTE_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_AUDIO">CAPABILITY_MUTE_PARTICIPANT_AUDIO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_MUTE_PARTICIPANT_VIDEO">CAPABILITY_MUTE_PARTICIPANT_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PAUSE_CALL">CAPABILITY_PAUSE_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PHONE_DEVICE_CONTROL">CAPABILITY_PHONE_DEVICE_CONTROL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_AUDIO_FILE">CAPABILITY_PLAY_AUDIO_FILE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_PLAY_VIDEO_FILE">CAPABILITY_PLAY_VIDEO_FILE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO">CAPABILITY_RECORD_AUDIO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_AUDIO_ONLY">CAPABILITY_RECORD_AUDIO_ONLY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_LOCAL">CAPABILITY_RECORD_COMPRESS_LOCAL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_COMPRESS_SERVER">CAPABILITY_RECORD_COMPRESS_SERVER</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL">CAPABILITY_RECORD_LOCAL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_LOCAL_STREAM">CAPABILITY_RECORD_LOCAL_STREAM</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER">CAPABILITY_RECORD_SERVER</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED">CAPABILITY_RECORD_SERVER_FILENAME_ALLOWED</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED">CAPABILITY_RECORD_SERVER_FILENAME_REQUIRED</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_RECORD_VIDEO">CAPABILITY_RECORD_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REDIRECT_INCOMING_CALL">CAPABILITY_REDIRECT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REJECT_INCOMING_CALL">CAPABILITY_REJECT_INCOMING_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REMOVE_PARTICIPANT">CAPABILITY_REMOVE_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PARTICIPANT_UNMUTE">CAPABILITY_REQUEST_PARTICIPANT_UNMUTE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_REQUEST_PROVIDER_PROPERTIES">CAPABILITY_REQUEST_PROVIDER_PROPERTIES</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SAVE_ENDPOINTS">CAPABILITY_SAVE_ENDPOINTS</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_AUDIO_PORT">CAPABILITY_SET_AUDIO_PORT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_CALL_PROPERTY">CAPABILITY_SET_CALL_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_MODERATOR">CAPABILITY_SET_MODERATOR</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_PROPERTY">CAPABILITY_SET_PARTICIPANT_PROPERTY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PARTICIPANT_VOLUME">CAPABILITY_SET_PARTICIPANT_VOLUME</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_PREFERRED_ENDPOINT">CAPABILITY_SET_PREFERRED_ENDPOINT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SET_VIDEO_PORT">CAPABILITY_SET_VIDEO_PORT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SILENCE_PARTICIPANT">CAPABILITY_SILENCE_PARTICIPANT</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_SIP_URI">CAPABILITY_SIP_URI</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TELEPHONY">CAPABILITY_TELEPHONY</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_CALL">CAPABILITY_TRANSFER_CALL</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_TRANSFER_TO_DEVICE">CAPABILITY_TRANSFER_TO_DEVICE</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO">CAPABILITY_VIDEO</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#CAPABILITY_VIDEO_DEVICE_CONTROL">CAPABILITY_VIDEO_DEVICE_CONTROL</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#acceptIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallListener)">acceptIncomingCall</A></B>(java.lang.String&nbsp;callId,
+                   <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accepts an incoming call in response to an IncomingCallEvent,
+ without connecting to the call, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#addIncomingCallHandler(com.ibm.collaboration.realtime.telephony.IncomingCallHandler)">addIncomingCallHandler</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" title="interface in com.ibm.collaboration.realtime.telephony">IncomingCallHandler</A>&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a handler for incoming calls.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#addListener(com.ibm.collaboration.realtime.telephony.CallListener)">addListener</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds an event listener for events that aren't associated with an existing
+ Call object, for example, IncomingCallEvent.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#alternateCall(com.ibm.collaboration.realtime.telephony.Call, com.ibm.collaboration.realtime.telephony.Call)">alternateCall</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A>&nbsp;activeCall,
+              <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A>&nbsp;pausedCall)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alternates between an active call and one that was previous paused (put on
+ hold), if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#connectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallOptions, com.ibm.collaboration.realtime.telephony.CallListener)">connectIncomingCall</A></B>(java.lang.String&nbsp;callId,
+                    <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallOptions.html" title="interface in com.ibm.collaboration.realtime.telephony">CallOptions</A>&nbsp;options,
+                    <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accepts an incoming call in response to an IncomingCallEvent and
+ immediately connects to the call, using the specified options, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#createCall(java.lang.String)">createCall</A></B>(java.lang.String&nbsp;callId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a Call object with the specified call ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#destroy()">destroy</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the client shuts down, to allow the service provider to release
+ any system resources.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Object</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#executeCommand(java.lang.String, java.lang.Object)">executeCommand</A></B>(java.lang.String&nbsp;commandId,
+               java.lang.Object&nbsp;options)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Executes a provider-specific command that isn't associated with a
+ specific call, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html" title="interface in com.ibm.collaboration.realtime.telephony.device">MediaPlayer</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getAudioPlayer()">getAudioPlayer</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a media player for audio files, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getAudioRecordingFileTypes()">getAudioRecordingFileTypes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a list of audio file types supported for recording
+ voice calls, null if recording calls is not supported.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getCall(java.lang.String)">getCall</A></B>(java.lang.String&nbsp;callId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a Call object for the specified call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getEndpoints()">getEndpoints</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a list of <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>EndpointDescriptor</CODE></A> objects representing
+ telephony endpoints, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getIncomingCallTimeoutSeconds()">getIncomingCallTimeoutSeconds</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the number of seconds after which an incoming call event will
+ time out and become invalid, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getMaximumUsers()">getMaximumUsers</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getMaximumVideoUsers()">getMaximumVideoUsers</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>No longer used starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">PhoneDeviceController</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getPhoneDeviceController()">getPhoneDeviceController</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Exception</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getServiceUnavailableCause()">getServiceUnavailableCause</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a Exception that indicates why the service provider
+ is unavailable, null if the service is available.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getServiceVersion()">getServiceVersion</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns version information from the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/VideoChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VideoChatDeviceController</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getVideoChatDeviceController()">getVideoChatDeviceController</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html" title="interface in com.ibm.collaboration.realtime.telephony.device">MediaPlayer</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getVideoPlayer()">getVideoPlayer</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a media player for video files, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VoiceChatDeviceController</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getVoiceChatDeviceController()">getVoiceChatDeviceController</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#initialize()">initialize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initializes the service provider associated with this call manager.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#isServiceAvailable()">isServiceAvailable</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines if a service provider is available.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#redirectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.Address)">redirectIncomingCall</A></B>(java.lang.String&nbsp;callId,
+                     <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Address.html" title="interface in com.ibm.collaboration.realtime.telephony">Address</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Redirects an incoming call to the specified address, in response to
+ an IncomingCallEvent, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#rejectIncomingCall(java.lang.String)">rejectIncomingCall</A></B>(java.lang.String&nbsp;callId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rejects an incoming call in response to an IncomingCallEvent,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#removeIncomingCallHandler(com.ibm.collaboration.realtime.telephony.IncomingCallHandler)">removeIncomingCallHandler</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" title="interface in com.ibm.collaboration.realtime.telephony">IncomingCallHandler</A>&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes an incoming call handler that was added using
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#addIncomingCallHandler(com.ibm.collaboration.realtime.telephony.IncomingCallHandler)"><CODE>addIncomingCallHandler(IncomingCallHandler)</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#removeListener(com.ibm.collaboration.realtime.telephony.CallListener)">removeListener</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a listener that was added using the <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#addListener(com.ibm.collaboration.realtime.telephony.CallListener)"><CODE>addListener(CallListener)</CODE></A>
+ method.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#requestProviderProperties(java.lang.String)">requestProviderProperties</A></B>(java.lang.String&nbsp;communityId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Requests provider configuration properties from the service provider,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#saveEndpoints(java.util.List)">saveEndpoints</A></B>(java.util.List&nbsp;endpoints)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the Preferred Numbers preference page is saved, if
+ supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#setAudioPort(java.lang.String)">setAudioPort</A></B>(java.lang.String&nbsp;udpPort)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the UDP port that will be used to transmit audio streams in a voice chat,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#setIncomingCallTimeoutSeconds(int)">setIncomingCallTimeoutSeconds</A></B>(int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the number of seconds after which an incoming call event
+ will time out and become invalid, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#setPreferredEndpoint(com.ibm.collaboration.realtime.telephony.EndpointDescriptor, com.ibm.collaboration.realtime.telephony.EndpointDescriptor, boolean)">setPreferredEndpoint</A></B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony">EndpointDescriptor</A>&nbsp;preferredEndpoint,
+                     <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony">EndpointDescriptor</A>&nbsp;alternateEndpoint,
+                     boolean&nbsp;manualChange)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the preferred telephony endpoint for making and receiving
+ calls changes, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#setVideoPort(java.lang.String)">setVideoPort</A></B>(java.lang.String&nbsp;udpPort)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the UDP port that will be used to transmit video streams in a video call,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startCall(java.util.List, com.ibm.collaboration.realtime.telephony.CallOptions, com.ibm.collaboration.realtime.telephony.CallListener)">startCall</A></B>(java.util.List&nbsp;addresses,
+          <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallOptions.html" title="interface in com.ibm.collaboration.realtime.telephony">CallOptions</A>&nbsp;options,
+          <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initiates a call to the specified participant(s), using the specified
+ options.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)">startUiCall</A></B>(com.ibm.collaboration.realtime.people.Person[]&nbsp;persons,
+            java.lang.String&nbsp;callType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initiates an audio, video, or telephone call to the specified participant(s),
+ via the Sametime Connect user interface, as if the user initiated the call
+ using one of the UI call actions.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String, java.lang.String)">startUiCall</A></B>(com.ibm.collaboration.realtime.people.Person[]&nbsp;persons,
+            java.lang.String&nbsp;callType,
+            java.lang.String&nbsp;tcspiProviderData)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Same as <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A>, except that an additional
+ service provider-specific parameter can be specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(java.lang.String)">startUiCall</A></B>(java.lang.String&nbsp;number)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initiates a telephone call to the specified telephone number, via the Sametime
+ Connect user interface, as if the user initiated the call using one of the UI
+ call actions.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(java.lang.String[], java.lang.String)">startUiCall</A></B>(java.lang.String[]&nbsp;participantIds,
+            java.lang.String&nbsp;callType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initiates an audio, video, or telephone call to the specified participant(s),
+ via the Sametime Connect user interface, as if the user initiated the call
+ using one of the UI call actions.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(java.lang.String[], java.lang.String, java.lang.String)">startUiCall</A></B>(java.lang.String[]&nbsp;participantIds,
+            java.lang.String&nbsp;callType,
+            java.lang.String&nbsp;tcspiProviderData)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Same as <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(java.lang.String[], java.lang.String)"><CODE>startUiCall(String[], String)</CODE></A>, except that an additional
+ service provider-specific parameter can be specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(java.lang.String, java.lang.String)">startUiCall</A></B>(java.lang.String&nbsp;number,
+            java.lang.String&nbsp;tcspiProviderData)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Same as <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(java.lang.String)"><CODE>startUiCall(String)</CODE></A>, except that an additional
+ service provider-specific parameter can be specified.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.Capability"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html" title="interface in com.ibm.collaboration.realtime.telephony">Capability</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Capability.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="SERVICE_TYPE_CLICK_TO_CALL"><!-- --></A><H3>
+SERVICE_TYPE_CLICK_TO_CALL</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>SERVICE_TYPE_CLICK_TO_CALL</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DL>
+<HR>
+
+<A NAME="SERVICE_TYPE_VIDEO_CHAT"><!-- --></A><H3>
+SERVICE_TYPE_VIDEO_CHAT</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>SERVICE_TYPE_VIDEO_CHAT</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DL>
+<HR>
+
+<A NAME="SERVICE_TYPE_VOICE_CHAT"><!-- --></A><H3>
+SERVICE_TYPE_VOICE_CHAT</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>static final java.lang.String <B>SERVICE_TYPE_VOICE_CHAT</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used as of Sametime 8.5.</I><DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DL>
+<HR>
+
+<A NAME="CALL_TYPE_AUDIO"><!-- --></A><H3>
+CALL_TYPE_AUDIO</H3>
+<PRE>
+static final java.lang.String <B>CALL_TYPE_AUDIO</B></PRE>
+<DL>
+<DD>Specifies an audio call, used with <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A>.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.CallManager.CALL_TYPE_AUDIO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CALL_TYPE_TELEPHONE"><!-- --></A><H3>
+CALL_TYPE_TELEPHONE</H3>
+<PRE>
+static final java.lang.String <B>CALL_TYPE_TELEPHONE</B></PRE>
+<DL>
+<DD>Specifies a telephone call, used with <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A>.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.CallManager.CALL_TYPE_TELEPHONE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CALL_TYPE_VIDEO"><!-- --></A><H3>
+CALL_TYPE_VIDEO</H3>
+<PRE>
+static final java.lang.String <B>CALL_TYPE_VIDEO</B></PRE>
+<DL>
+<DD>Specifies an video call, used with <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A>.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.CallManager.CALL_TYPE_VIDEO">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="acceptIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallListener)"><!-- --></A><H3>
+acceptIncomingCall</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A> <B>acceptIncomingCall</B>(java.lang.String&nbsp;callId,
+                        <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)
+                        throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Accepts an incoming call in response to an IncomingCallEvent,
+ without connecting to the call, if supported by the service provider.
+ For Call objects created using <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#createCall(java.lang.String)"><CODE>createCall(String)</CODE></A>, use
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#acceptIncomingCall()"><CODE>Call.acceptIncomingCall()</CODE></A> instead of this method. To
+ accept the call and connect to it immediately, use
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#connectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallOptions, com.ibm.collaboration.realtime.telephony.CallListener)"><CODE>connectIncomingCall(String, CallOptions, CallListener)</CODE></A> instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>callId</CODE> - ID string of incoming call to accept<DD><CODE>listener</CODE> - call event listener to register for this call
+<DT><B>Returns:</B><DD>Call object for accepted call.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if any parameter is invalid, or if any required parameter is null
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnknownCallException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnknownCallException</A></CODE> - if there's no call with the specified ID
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addIncomingCallHandler(com.ibm.collaboration.realtime.telephony.IncomingCallHandler)"><!-- --></A><H3>
+addIncomingCallHandler</H3>
+<PRE>
+void <B>addIncomingCallHandler</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" title="interface in com.ibm.collaboration.realtime.telephony">IncomingCallHandler</A>&nbsp;handler)
+                            throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Adds a handler for incoming calls.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>handler</CODE> - incoming call handler to add
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the handler is null
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addListener(com.ibm.collaboration.realtime.telephony.CallListener)"><!-- --></A><H3>
+addListener</H3>
+<PRE>
+void <B>addListener</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Adds an event listener for events that aren't associated with an existing
+ Call object, for example, IncomingCallEvent. To add an event listener for
+ an existing Call object, use Call.addListener instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - event listener to add
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the listener is null
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="alternateCall(com.ibm.collaboration.realtime.telephony.Call, com.ibm.collaboration.realtime.telephony.Call)"><!-- --></A><H3>
+alternateCall</H3>
+<PRE>
+void <B>alternateCall</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A>&nbsp;activeCall,
+                   <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A>&nbsp;pausedCall)
+                   throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Alternates between an active call and one that was previous paused (put on
+ hold), if supported by the service provider. This is equivalent to pausing
+ the active call and then resuming the paused call, but some service providers
+ can do this more efficiently as a single operation.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>activeCall</CODE> - active call to pause<DD><CODE>pausedCall</CODE> - paused call to resume
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if either parameter is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallOptions, com.ibm.collaboration.realtime.telephony.CallListener)"><!-- --></A><H3>
+connectIncomingCall</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A> <B>connectIncomingCall</B>(java.lang.String&nbsp;callId,
+                         <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallOptions.html" title="interface in com.ibm.collaboration.realtime.telephony">CallOptions</A>&nbsp;options,
+                         <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)
+                         throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Accepts an incoming call in response to an IncomingCallEvent and
+ immediately connects to the call, using the specified options, if
+ supported by the service provider. For Call objects created using
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#createCall(java.lang.String)"><CODE>createCall(String)</CODE></A>, use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#connectIncomingCall(com.ibm.collaboration.realtime.telephony.CallOptions)"><CODE>Call.connectIncomingCall(CallOptions)</CODE></A>
+ instead of this method. See <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallOptions.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>CallOptions</CODE></A> for more information
+ about call options. To accept the call without connecting to it,
+ use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#acceptIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.CallListener)"><CODE>acceptIncomingCall(String, CallListener)</CODE></A> instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>callId</CODE> - ID string of incoming call to connect<DD><CODE>options</CODE> - call options, can be null if not required by provider<DD><CODE>listener</CODE> - call event listener to register for this call
+<DT><B>Returns:</B><DD>Call object for connected call.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if a required parameter is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnknownCallException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnknownCallException</A></CODE> - if there's no call with the specified ID
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (replaces connectIncomingCall(String, Properties, CallListener))</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createCall(java.lang.String)"><!-- --></A><H3>
+createCall</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A> <B>createCall</B>(java.lang.String&nbsp;callId)
+                throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Creates a Call object with the specified call ID. The new Call object
+ can be used to start a new call or process an incoming call, as an
+ alternative to using other CallManager methods to do so. For an incoming
+ call, the call ID should be the one returned by IncomingCallEvent.getCallId().
+ Using the Call object to start a call or process an incoming call provides
+ immediate access to the call state.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>callId</CODE> - call ID string
+<DT><B>Returns:</B><DD>Call object for specified call.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the call ID is null
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE><DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="destroy()"><!-- --></A><H3>
+destroy</H3>
+<PRE>
+void <B>destroy</B>()
+             throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Called when the client shuts down, to allow the service provider to release
+ any system resources.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="executeCommand(java.lang.String, java.lang.Object)"><!-- --></A><H3>
+executeCommand</H3>
+<PRE>
+java.lang.Object <B>executeCommand</B>(java.lang.String&nbsp;commandId,
+                                java.lang.Object&nbsp;options)
+                                throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Executes a provider-specific command that isn't associated with a
+ specific call, if supported by the service provider. This mechanism
+ is used to provide third-party plug-ins with the ability to access
+ services that are not specifically supported by Sametime Connect.
+ The command ID and the data types for the input options and return
+ value are determined by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>commandId</CODE> - command ID<DD><CODE>options</CODE> - command options
+<DT><B>Returns:</B><DD>Command result, null if no return value is required.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if a required parameter is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#executeCommand(java.lang.String, java.lang.Object)"><CODE>Call.executeCommand(String, Object)</CODE></A>, 
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html#executeCommand(java.lang.String, java.lang.Object)"><CODE>Participant.executeCommand(String, Object)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAudioPlayer()"><!-- --></A><H3>
+getAudioPlayer</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html" title="interface in com.ibm.collaboration.realtime.telephony.device">MediaPlayer</A> <B>getAudioPlayer</B>()
+                           throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns a media player for audio files, if supported by the service
+ provider. Audio files are played independently of any call. To play
+ an audio file for all participants on a call, use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#getAudioPlayer()"><CODE>Call.getAudioPlayer()</CODE></A>
+ instead. To play video files, use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getVideoPlayer()"><CODE>getVideoPlayer()</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Media player for audio files.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the service provider does not support audio file playback
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (replaces getAudioFilePlayer)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAudioRecordingFileTypes()"><!-- --></A><H3>
+getAudioRecordingFileTypes</H3>
+<PRE>
+java.util.List <B>getAudioRecordingFileTypes</B>()
+                                          throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns a list of audio file types supported for recording
+ voice calls, null if recording calls is not supported.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of audio file type strings, null if none supported.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCall(java.lang.String)"><!-- --></A><H3>
+getCall</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A> <B>getCall</B>(java.lang.String&nbsp;callId)
+             throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns a Call object for the specified call. Call objects
+ are only available for active calls.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>callId</CODE> - call ID string
+<DT><B>Returns:</B><DD>Call object for specified call.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the call ID is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnknownCallException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnknownCallException</A></CODE> - if there's no call with the specified ID
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE><DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getEndpoints()"><!-- --></A><H3>
+getEndpoints</H3>
+<PRE>
+java.util.List <B>getEndpoints</B>()
+                            throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns a list of <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>EndpointDescriptor</CODE></A> objects representing
+ telephony endpoints, if supported by the service provider. These
+ endpoints are defined by the service provider, and are added to
+ the Preferred Numbers preferences page, along with other endpoints
+ obtained by Sametime Connect or defined by the user. This method
+ is called after the service provider generates a service initialized
+ event, and whenever Preferred Numbers preferences are reloaded from
+ persistent storage.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of EndpointDescriptor objects for service provider telephony endpoints, null if none.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the service provider does not support audio file playback
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getIncomingCallTimeoutSeconds()"><!-- --></A><H3>
+getIncomingCallTimeoutSeconds</H3>
+<PRE>
+int <B>getIncomingCallTimeoutSeconds</B>()
+                                  throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns the number of seconds after which an incoming call event will
+ time out and become invalid, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Incoming call timeout, in seconds.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the incoming call timeout is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (moved here from VoipCallManager)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMaximumUsers()"><!-- --></A><H3>
+getMaximumUsers</H3>
+<PRE>
+int <B>getMaximumUsers</B>()
+                    throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used starting with Sametime 8.5.2.</I>
+<P>
+<DD>Returns the maximum number of users that the service provider supports
+ on a single call, Integer.MAX_VALUE if there's no maximum.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Maximum number of users.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMaximumVideoUsers()"><!-- --></A><H3>
+getMaximumVideoUsers</H3>
+<PRE>
+int <B>getMaximumVideoUsers</B>()
+                         throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>No longer used starting with Sametime 8.5.2.</I>
+<P>
+<DD>Returns the maximum number of video users that the service provider
+ supports on a single call, Integer.MAX_VALUE if there's no maximum.
+ This number might be less than maximum number of users returned by
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getMaximumUsers()"><CODE>getMaximumUsers()</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Maximum number of video users.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPhoneDeviceController()"><!-- --></A><H3>
+getPhoneDeviceController</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">PhoneDeviceController</A> <B>getPhoneDeviceController</B>()
+                                               throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I>
+<P>
+<DD>Returns a phone device controller, if supported by the service
+ provider. The phone device controller is used to manage a telephone
+ device such as a softphone.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PhoneDeviceController object.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getServiceUnavailableCause()"><!-- --></A><H3>
+getServiceUnavailableCause</H3>
+<PRE>
+java.lang.Exception <B>getServiceUnavailableCause</B>()</PRE>
+<DL>
+<DD>Returns a Exception that indicates why the service provider
+ is unavailable, null if the service is available.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Exception indicating cause of service problem or null.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getServiceVersion()"><!-- --></A><H3>
+getServiceVersion</H3>
+<PRE>
+java.lang.String <B>getServiceVersion</B>()
+                                   throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns version information from the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Call service provider version string, null if not available.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVideoChatDeviceController()"><!-- --></A><H3>
+getVideoChatDeviceController</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/VideoChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VideoChatDeviceController</A> <B>getVideoChatDeviceController</B>()
+                                                       throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I>
+<P>
+<DD>Returns a video chat device controller, if supported by the service
+ provider. The video chat device controller is used to manage local
+ computer video devices for video chat calls.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>VideoChatDeviceController object.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the service provider does not support video device control
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVideoPlayer()"><!-- --></A><H3>
+getVideoPlayer</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html" title="interface in com.ibm.collaboration.realtime.telephony.device">MediaPlayer</A> <B>getVideoPlayer</B>()
+                           throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Returns a media player for video files, if supported by the service
+ provider. Video files are played independently of any call. To play
+ a video file for all participants on a call, use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#getVideoPlayer()"><CODE>Call.getVideoPlayer()</CODE></A>
+ instead. To play audio files, use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#getAudioPlayer()"><CODE>getAudioPlayer()</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Media player for video files.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the service provider does not support video file playback
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVoiceChatDeviceController()"><!-- --></A><H3>
+getVoiceChatDeviceController</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/device/VoiceChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">VoiceChatDeviceController</A> <B>getVoiceChatDeviceController</B>()
+                                                       throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I>
+<P>
+<DD>Returns a voice chat device controller, if supported by the service
+ provider. The voice chat device controller is used to manage local
+ computer audio devices for voice chat calls.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>VoiceChatDeviceController object.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the service provider does not support audio device control
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (replaces getAudioDeviceController)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="initialize()"><!-- --></A><H3>
+initialize</H3>
+<PRE>
+void <B>initialize</B>()
+                throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Initializes the service provider associated with this call manager.
+ Does nothing if the service provider has already been initialized.
+ It isn't necessary to call this method explicitly, since the service
+ provider will be initialized automatically when necessary. However,
+ you can call this method explicitly to validate the service provider
+ type and availability.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/ServiceUnavailableException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">ServiceUnavailableException</A></CODE> - if the operation fails
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE><DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isServiceAvailable()"><!-- --></A><H3>
+isServiceAvailable</H3>
+<PRE>
+boolean <B>isServiceAvailable</B>()</PRE>
+<DL>
+<DD>Determines if a service provider is available.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if service provider is available, false if unavailable.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="redirectIncomingCall(java.lang.String, com.ibm.collaboration.realtime.telephony.Address)"><!-- --></A><H3>
+redirectIncomingCall</H3>
+<PRE>
+void <B>redirectIncomingCall</B>(java.lang.String&nbsp;callId,
+                          <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Address.html" title="interface in com.ibm.collaboration.realtime.telephony">Address</A>&nbsp;address)
+                          throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Redirects an incoming call to the specified address, in response to
+ an IncomingCallEvent, if supported by the service provider.
+ For Call objects created using <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#createCall(java.lang.String)"><CODE>createCall(String)</CODE></A>, use
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#redirectIncomingCall(com.ibm.collaboration.realtime.telephony.Address)"><CODE>Call.redirectIncomingCall(Address)</CODE></A> instead of this method.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>callId</CODE> - ID string of incoming call to redirect<DD><CODE>address</CODE> - destination address
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if either parameter is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnknownCallException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnknownCallException</A></CODE> - if there's no call with the specified ID
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="rejectIncomingCall(java.lang.String)"><!-- --></A><H3>
+rejectIncomingCall</H3>
+<PRE>
+void <B>rejectIncomingCall</B>(java.lang.String&nbsp;callId)
+                        throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Rejects an incoming call in response to an IncomingCallEvent,
+ if supported by the service provider. For Call objects created
+ using <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#createCall(java.lang.String)"><CODE>createCall(String)</CODE></A>, use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#rejectIncomingCall()"><CODE>Call.rejectIncomingCall()</CODE></A>
+ instead of this method.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>callId</CODE> - ID string of incoming call to reject
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the callId parameter is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnknownCallException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnknownCallException</A></CODE> - if there's no call with the specified ID
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeIncomingCallHandler(com.ibm.collaboration.realtime.telephony.IncomingCallHandler)"><!-- --></A><H3>
+removeIncomingCallHandler</H3>
+<PRE>
+void <B>removeIncomingCallHandler</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/IncomingCallHandler.html" title="interface in com.ibm.collaboration.realtime.telephony">IncomingCallHandler</A>&nbsp;handler)
+                               throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Removes an incoming call handler that was added using
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#addIncomingCallHandler(com.ibm.collaboration.realtime.telephony.IncomingCallHandler)"><CODE>addIncomingCallHandler(IncomingCallHandler)</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>handler</CODE> - incoming call handler to remove
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the handler is null
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeListener(com.ibm.collaboration.realtime.telephony.CallListener)"><!-- --></A><H3>
+removeListener</H3>
+<PRE>
+void <B>removeListener</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)
+                    throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Removes a listener that was added using the <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#addListener(com.ibm.collaboration.realtime.telephony.CallListener)"><CODE>addListener(CallListener)</CODE></A>
+ method. To remove an event listener for an existing Call object, use
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#removeListener(com.ibm.collaboration.realtime.telephony.CallListener)"><CODE>Call.removeListener(CallListener)</CODE></A> instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - event listener to remove
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the listener is null
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="requestProviderProperties(java.lang.String)"><!-- --></A><H3>
+requestProviderProperties</H3>
+<PRE>
+void <B>requestProviderProperties</B>(java.lang.String&nbsp;communityId)
+                               throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Requests provider configuration properties from the service provider,
+ if supported by the service provider. These properties will be provided
+ via an CallPropertiesEvent with the event type EVENT_PROVIDER_PROPERTIES.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>communityId</CODE> - ID of community for service provider
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if community ID is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (moved here from ThirdPartyCallManager)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="saveEndpoints(java.util.List)"><!-- --></A><H3>
+saveEndpoints</H3>
+<PRE>
+void <B>saveEndpoints</B>(java.util.List&nbsp;endpoints)
+                   throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Called when the Preferred Numbers preference page is saved, if
+ supported by the service provider. The input is a list of
+ of <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>EndpointDescriptor</CODE></A> objects representing the telephony
+ endpoints defined on the preference page. The list is empty if no
+ endpoints are defined.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>endpoints</CODE> - list of EndpointDescriptor objects for Preferred Number endpoints
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setAudioPort(java.lang.String)"><!-- --></A><H3>
+setAudioPort</H3>
+<PRE>
+void <B>setAudioPort</B>(java.lang.String&nbsp;udpPort)
+                  throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Sets the UDP port that will be used to transmit audio streams in a voice chat,
+ if supported by the service provider. The Sametime administrator can set a user
+ policy that specifies which UDP port should be used for voice chat. When that
+ policy is received by the client, this method is called. Note that the port might
+ change during a Sametime session. The default audio port value is 20830. The
+ specified port should be an even number. Note that audio uses two UDP ports, the
+ specified one, and the next sequential one (20831 by default) for error correction.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>udpPort</CODE> - UDP port to use for audio streams
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIncomingCallTimeoutSeconds(int)"><!-- --></A><H3>
+setIncomingCallTimeoutSeconds</H3>
+<PRE>
+void <B>setIncomingCallTimeoutSeconds</B>(int&nbsp;timeout)
+                                   throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Sets the number of seconds after which an incoming call event
+ will time out and become invalid, if supported by the service
+ provider. The service provider determines the range of valid values.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>timeout</CODE> - incoming call timeout, in seconds
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the timeout value is invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if the incoming call timeout is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (moved here from VoipCallManager)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPreferredEndpoint(com.ibm.collaboration.realtime.telephony.EndpointDescriptor, com.ibm.collaboration.realtime.telephony.EndpointDescriptor, boolean)"><!-- --></A><H3>
+setPreferredEndpoint</H3>
+<PRE>
+void <B>setPreferredEndpoint</B>(<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony">EndpointDescriptor</A>&nbsp;preferredEndpoint,
+                          <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/EndpointDescriptor.html" title="interface in com.ibm.collaboration.realtime.telephony">EndpointDescriptor</A>&nbsp;alternateEndpoint,
+                          boolean&nbsp;manualChange)
+                          throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Called when the preferred telephony endpoint for making and receiving
+ calls changes, if supported by the service provider. The preferred endpoint
+ can be changed by the user or as the result of a location change. An optional
+ alternate preferred endpoint can be specified, which is used for incoming
+ telephone calls when the preferred endpoint is not a telephone device.
+ The manualChange parameter indicates whether or not the preferred endpoint
+ was changed manually by the user, using the preferred device drop-down list
+ on the main window toolbar. Once the user manually changes the endpoint, no
+ further automatic changes will be processed, unless the user undoes the manual
+ change.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>preferredEndpoint</CODE> - endpoint descriptor for preferred endpoint<DD><CODE>alternateEndpoint</CODE> - endpoint descriptor for alternate endpoint, null if not specified<DD><CODE>manualChange</CODE> - true if preferred endpoint was manually changed by the user, false otherwise
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the preferred endpoint is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setVideoPort(java.lang.String)"><!-- --></A><H3>
+setVideoPort</H3>
+<PRE>
+void <B>setVideoPort</B>(java.lang.String&nbsp;udpPort)
+                  throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Sets the UDP port that will be used to transmit video streams in a video call,
+ if supported by the service provider. The Sametime administrator can set a user
+ policy that specifies which UDP port should be used for video calls. When that
+ policy is received by the client, this method is called. Note that the port might
+ change during a Sametime session. The default video port value is 20832. The
+ specified port should be an even number. Note that video uses two UDP ports, the
+ specified one, and the next sequential one (20833 by default) for error correction.
+ To set the UDP port for audio streams, use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#setAudioPort(java.lang.String)"><CODE>setAudioPort(String)</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>udpPort</CODE> - UDP port to use for video streams
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startCall(java.util.List, com.ibm.collaboration.realtime.telephony.CallOptions, com.ibm.collaboration.realtime.telephony.CallListener)"><!-- --></A><H3>
+startCall</H3>
+<PRE>
+<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html" title="interface in com.ibm.collaboration.realtime.telephony">Call</A> <B>startCall</B>(java.util.List&nbsp;addresses,
+               <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallOptions.html" title="interface in com.ibm.collaboration.realtime.telephony">CallOptions</A>&nbsp;options,
+               <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony">CallListener</A>&nbsp;listener)
+               throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Initiates a call to the specified participant(s), using the specified
+ options. For Call objects created using <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#createCall(java.lang.String)"><CODE>createCall(String)</CODE></A>,
+ use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#startCall(java.util.List, com.ibm.collaboration.realtime.telephony.CallOptions)"><CODE>Call.startCall(List, CallOptions)</CODE></A> instead of this method.
+ The service provider calls all participants using the specified
+ addresses; the list should include an Address for the caller as the first
+ entry. See <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallOptions.html" title="interface in com.ibm.collaboration.realtime.telephony"><CODE>CallOptions</CODE></A> for more information about call options.
+ For video calls, use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Call.html#startVideo(org.eclipse.swt.widgets.Canvas, org.eclipse.swt.widgets.Canvas)"><CODE>Call.startVideo(Canvas, Canvas)</CODE></A> to display
+ video for the call.
+ <p>
+ Note: If this method is called by an external client plug-in, rather than
+ the Sametime Connect user interface, no call window or other UI components
+ will appear when the call starts. To initiate a call using the Sametime
+ UI, use one of the startUiCall methods instead.
+ </p>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addresses</CODE> - list of Address objects for participants to call<DD><CODE>options</CODE> - call options, can be null if not required by provider<DD><CODE>listener</CODE> - call event listener to register for this call
+<DT><B>Returns:</B><DD>Call object for the new call.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if a required parameter is null or invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/UnknownAddressException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnknownAddressException</A></CODE> - if any of the specified addresses cannot be resolved
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1 (replaces startCall(List, Properties, CallListener))</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><!-- --></A><H3>
+startUiCall</H3>
+<PRE>
+void <B>startUiCall</B>(com.ibm.collaboration.realtime.people.Person[]&nbsp;persons,
+                 java.lang.String&nbsp;callType)
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Initiates an audio, video, or telephone call to the specified participant(s),
+ via the Sametime Connect user interface, as if the user initiated the call
+ using one of the UI call actions. The participants are specified as an array
+ of Person objects; it is not necessary to include an entry for the caller.
+ A call type can be specified if needed, but the recommended approach is to
+ specify a null call type, which will cause the user's preferred device and
+ other preferences to determine the call type. If a call type is specified,
+ and it's not compatible with the current preferred device, the preferred
+ device is changed to a compatible device before the call is placed.
+ <p>
+ Unlike <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startCall(java.util.List, com.ibm.collaboration.realtime.telephony.CallOptions, com.ibm.collaboration.realtime.telephony.CallListener)"><CODE>startCall(List, CallOptions, CallListener)</CODE></A>, this method does not
+ return a Call object or provide the application with any control over the call;
+ this method starts a call in the UI, which the user controls as if he or
+ she started the call directly. This method is intended for external plug-ins
+ or applications that provide their own separate UI with actions to start a
+ Sametime Connect call.
+ </p>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>persons</CODE> - array of Person objects for participants to call<DD><CODE>callType</CODE> - one of the CALL_TYPE_xxx values defined in this class, or null to use the default call type
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if either parameter is invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String, java.lang.String)"><!-- --></A><H3>
+startUiCall</H3>
+<PRE>
+void <B>startUiCall</B>(com.ibm.collaboration.realtime.people.Person[]&nbsp;persons,
+                 java.lang.String&nbsp;callType,
+                 java.lang.String&nbsp;tcspiProviderData)
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Same as <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A>, except that an additional
+ service provider-specific parameter can be specified. This parameter
+ is used for TCSPI service providers, and is passed to the TCPSI implementation
+ via the com.ibm.telephony.conferencing.property.ProviderData property in
+ the TCSPI conference document.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>persons</CODE> - array of Person objects for participants to call<DD><CODE>callType</CODE> - one of the CALL_TYPE_xxx values defined in this class, or null to use the default call type<DD><CODE>tcspiProviderData</CODE> - additional parameter to be passed to the TCSPI service provider, null if not used
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the persons or callType parameter is invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startUiCall(java.lang.String[], java.lang.String)"><!-- --></A><H3>
+startUiCall</H3>
+<PRE>
+void <B>startUiCall</B>(java.lang.String[]&nbsp;participantIds,
+                 java.lang.String&nbsp;callType)
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Initiates an audio, video, or telephone call to the specified participant(s),
+ via the Sametime Connect user interface, as if the user initiated the call
+ using one of the UI call actions. The participants are specified as an array
+ of participant ID strings -- the participant ID is the participant's Sametime
+ user ID; it is not necessary to include an entry for the caller.
+ See <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A> for more information. When
+ logged in to multiple communities, using startUiCall(Person[], String) is
+ recommended, because a Person object identifies which community the person
+ belongs to, while the participant ID does not.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>participantIds</CODE> - array of participant ID strings for participants to call<DD><CODE>callType</CODE> - one of the CALL_TYPE_xxx values defined in this class, or null to use the default call type
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if either parameter is invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startUiCall(java.lang.String[], java.lang.String, java.lang.String)"><!-- --></A><H3>
+startUiCall</H3>
+<PRE>
+void <B>startUiCall</B>(java.lang.String[]&nbsp;participantIds,
+                 java.lang.String&nbsp;callType,
+                 java.lang.String&nbsp;tcspiProviderData)
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Same as <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(java.lang.String[], java.lang.String)"><CODE>startUiCall(String[], String)</CODE></A>, except that an additional
+ service provider-specific parameter can be specified. See
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String, java.lang.String)"><CODE>startUiCall(Person[], String, String)</CODE></A> for more information on
+ the additional parameter.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>participantIds</CODE> - array of participant ID strings for participants to call<DD><CODE>callType</CODE> - one of the CALL_TYPE_xxx values defined in this class, or null to use the default call type<DD><CODE>tcspiProviderData</CODE> - additional parameter to be passed to the TCSPI service provider, null if not used
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the participantIds or callType parameter is invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startUiCall(java.lang.String)"><!-- --></A><H3>
+startUiCall</H3>
+<PRE>
+void <B>startUiCall</B>(java.lang.String&nbsp;number)
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Initiates a telephone call to the specified telephone number, via the Sametime
+ Connect user interface, as if the user initiated the call using one of the UI
+ call actions. If the current preferred device is not a telephone device, the
+ preferred device is changed to the first available telephone device before the
+ call is placed. See <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String)"><CODE>startUiCall(Person[], String)</CODE></A> for additional information.
+ <p>
+ Starting with Sametime 8.5.2 IFR 1, the telephone number can end with an optional
+ passcode with the format ";postd=nnnnn", for example "1-555-666-7777;postd=1234#".
+ The passcode ("1234#" in this example) is dialed automatically when the call is
+ connected, but only when the Sametime softphone is used for the call. The passcode
+ can contain digits, '#', '*' and 'p', where 'p' inserts a brief pause. 
+ </p>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>number</CODE> - telephone number to call
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the phone number is invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startUiCall(java.lang.String, java.lang.String)"><!-- --></A><H3>
+startUiCall</H3>
+<PRE>
+void <B>startUiCall</B>(java.lang.String&nbsp;number,
+                 java.lang.String&nbsp;tcspiProviderData)
+                 throws <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD>Same as <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(java.lang.String)"><CODE>startUiCall(String)</CODE></A>, except that an additional
+ service provider-specific parameter can be specified. See
+ <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallManager.html#startUiCall(com.ibm.collaboration.realtime.people.Person[], java.lang.String, java.lang.String)"><CODE>startUiCall(Person[], String, String)</CODE></A> for more information on
+ the additional parameter.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>number</CODE> - telephone number to call<DD><CODE>tcspiProviderData</CODE> - additional parameter to be passed to the TCSPI service provider, null if not used
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the phone number is invalid
+<DD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallListener.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/CallOptions.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/CallManager.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CallManager.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>Match (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">Match</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.NdrInputStream;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.NdrOutputStream;
+<A NAME="14"><A>
+<A NAME="15"><A><FONT ID="Import">import</FONT> java.util.Vector;
+<A NAME="16"><A><FONT ID="Import">import</FONT> java.util.Enumeration;
+<A NAME="17"><A><FONT ID="Import">import</FONT> java.io.IOException;
+<A NAME="18"><A>
+<A NAME="19"><A>
+<A NAME="20"><A><FONT ID="FormalComment">/**
+<A NAME="21"><A> *  Match: represent one match between two basketball teams
+<A NAME="22"><A> */</FONT>
+<A NAME="23"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> Match
+<A NAME="24"><A>{
+<A NAME="25"><A>    <FONT ID="FormalComment">/**
+<A NAME="26"><A>     * The Match ID
+<A NAME="27"><A>     */</FONT>
+<A NAME="28"><A>    <FONT ID="Private">private</FONT> String m_id;
+<A NAME="29"><A>    
+<A NAME="30"><A>    <FONT ID="FormalComment">/**
+<A NAME="31"><A>     * Home team name
+<A NAME="32"><A>     */</FONT>
+<A NAME="33"><A>    <FONT ID="Private">private</FONT> String m_home;
+<A NAME="34"><A>    
+<A NAME="35"><A>    <FONT ID="FormalComment">/**
+<A NAME="36"><A>     * Visitors team name
+<A NAME="37"><A>     */</FONT>
+<A NAME="38"><A>    <FONT ID="Private">private</FONT> String m_visitors;
+<A NAME="39"><A>    
+<A NAME="40"><A>    <FONT ID="FormalComment">/**
+<A NAME="41"><A>     * Home team score
+<A NAME="42"><A>     */</FONT>
+<A NAME="43"><A>    <FONT ID="Private">private</FONT> <FONT ID="Int">int</FONT> m_homeScore;
+<A NAME="44"><A>    
+<A NAME="45"><A>    <FONT ID="FormalComment">/**
+<A NAME="46"><A>     * Visitors score
+<A NAME="47"><A>     */</FONT>
+<A NAME="48"><A>    <FONT ID="Private">private</FONT> <FONT ID="Int">int</FONT> m_visitorsScore;
+<A NAME="49"><A>    
+<A NAME="50"><A>    <FONT ID="FormalComment">/**
+<A NAME="51"><A>     * The match listeners list
+<A NAME="52"><A>     */</FONT>
+<A NAME="53"><A>    Vector m_listeners = <FONT ID="New">new</FONT> Vector();
+<A NAME="54"><A>    
+<A NAME="55"><A>    <FONT ID="FormalComment">/**
+<A NAME="56"><A>     * CTor
+<A NAME="57"><A>     */</FONT>
+<A NAME="58"><A>    <FONT ID="Public">public</FONT> Match()
+<A NAME="59"><A>    {
+<A NAME="60"><A>        m_id = <FONT ID="New">new</FONT> String(<FONT ID="StringLiteral">""</FONT>); 
+<A NAME="61"><A>        m_home = <FONT ID="New">new</FONT> String(<FONT ID="StringLiteral">""</FONT>); 
+<A NAME="62"><A>        m_visitors = <FONT ID="New">new</FONT> String(<FONT ID="StringLiteral">""</FONT>); 
+<A NAME="63"><A>        m_homeScore = <FONT ID="IntegerLiteral">0</FONT>;
+<A NAME="64"><A>        m_visitorsScore = <FONT ID="IntegerLiteral">0</FONT>;
+<A NAME="65"><A>    }
+<A NAME="66"><A>    
+<A NAME="67"><A>    <FONT ID="FormalComment">/**
+<A NAME="68"><A>     * Add a MatchListener to our list
+<A NAME="69"><A>     */</FONT>
+<A NAME="70"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> addMatchListener(<A HREF="MatchListener.java.html">MatchListener</A> listener)
+<A NAME="71"><A>    {
+<A NAME="72"><A>        <FONT ID="SingleLineComment">// add the new listener
+<A NAME="73"><A></FONT>        m_listeners.addElement(listener);
+<A NAME="74"><A>        
+<A NAME="75"><A>        <FONT ID="SingleLineComment">// Send a snapshot to the listener
+<A NAME="76"><A></FONT>        listener.matchUpdated(<FONT ID="This">this</FONT>);
+<A NAME="77"><A>    }
+<A NAME="78"><A>    
+<A NAME="79"><A>    <FONT ID="FormalComment">/**
+<A NAME="80"><A>     * Remove a match listener from our list
+<A NAME="81"><A>     */</FONT>
+<A NAME="82"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> removeMatchListener(<A HREF="MatchListener.java.html">MatchListener</A> listener)
+<A NAME="83"><A>    {
+<A NAME="84"><A>        <FONT ID="SingleLineComment">// Remove the listener
+<A NAME="85"><A></FONT>        m_listeners.removeElement(listener);
+<A NAME="86"><A>    }
+<A NAME="87"><A>    
+<A NAME="88"><A>    <FONT ID="FormalComment">/**
+<A NAME="89"><A>     * Send an update event to all listeners
+<A NAME="90"><A>     */</FONT>
+<A NAME="91"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> updateAllListeners()
+<A NAME="92"><A>    {
+<A NAME="93"><A>        <A HREF="MatchListener.java.html">MatchListener</A> listener;
+<A NAME="94"><A>        Enumeration enumeration = m_listeners.elements();       
+<A NAME="95"><A>        <FONT ID="While">while</FONT>(enumeration.hasMoreElements())
+<A NAME="96"><A>        {
+<A NAME="97"><A>            listener = (<A HREF="MatchListener.java.html">MatchListener</A>) enumeration.nextElement();
+<A NAME="98"><A>            listener.matchUpdated(<FONT ID="This">this</FONT>);
+<A NAME="99"><A>        }
+<A NAME="100"><A>    }
+<A NAME="101"><A>    
+<A NAME="102"><A>    <FONT ID="FormalComment">/**
+<A NAME="103"><A>     * Get the match ID
+<A NAME="104"><A>     */</FONT>
+<A NAME="105"><A>    <FONT ID="Public">public</FONT> String getID()
+<A NAME="106"><A>    {
+<A NAME="107"><A>        <FONT ID="Return">return</FONT> m_id;
+<A NAME="108"><A>    }
+<A NAME="109"><A>    
+<A NAME="110"><A>    <FONT ID="FormalComment">/**
+<A NAME="111"><A>     * Set the match ID
+<A NAME="112"><A>     */</FONT>
+<A NAME="113"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setID(String id)
+<A NAME="114"><A>    {
+<A NAME="115"><A>        m_id = id;
+<A NAME="116"><A>    }
+<A NAME="117"><A>    
+<A NAME="118"><A>    
+<A NAME="119"><A>    <FONT ID="FormalComment">/**
+<A NAME="120"><A>     * Get the home team name
+<A NAME="121"><A>     */</FONT>
+<A NAME="122"><A>    <FONT ID="Public">public</FONT> String getHomeTeamName()
+<A NAME="123"><A>    {
+<A NAME="124"><A>        <FONT ID="Return">return</FONT> m_home;
+<A NAME="125"><A>    }
+<A NAME="126"><A>    
+<A NAME="127"><A>    <FONT ID="FormalComment">/**
+<A NAME="128"><A>     * Set the home team name
+<A NAME="129"><A>     */</FONT>
+<A NAME="130"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setHomeTeamName(String home)
+<A NAME="131"><A>    {
+<A NAME="132"><A>        m_home = home;
+<A NAME="133"><A>    }
+<A NAME="134"><A>    
+<A NAME="135"><A>    <FONT ID="FormalComment">/**
+<A NAME="136"><A>     * Get the visitors team name
+<A NAME="137"><A>     */</FONT>
+<A NAME="138"><A>    <FONT ID="Public">public</FONT> String getVisitorsTeamName()
+<A NAME="139"><A>    {
+<A NAME="140"><A>        <FONT ID="Return">return</FONT> m_visitors;
+<A NAME="141"><A>    }
+<A NAME="142"><A>    
+<A NAME="143"><A>    <FONT ID="FormalComment">/**
+<A NAME="144"><A>     * Set the visitors team name
+<A NAME="145"><A>     */</FONT>
+<A NAME="146"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setVisitorsTeamName(String visitors)
+<A NAME="147"><A>    {
+<A NAME="148"><A>        m_visitors = visitors;
+<A NAME="149"><A>    }
+<A NAME="150"><A>    
+<A NAME="151"><A>    <FONT ID="FormalComment">/**
+<A NAME="152"><A>     * Get the home team score
+<A NAME="153"><A>     */</FONT>
+<A NAME="154"><A>    <FONT ID="Public">public</FONT> <FONT ID="Int">int</FONT> getHomeTeamScore()
+<A NAME="155"><A>    {
+<A NAME="156"><A>        <FONT ID="Return">return</FONT> m_homeScore;
+<A NAME="157"><A>    }
+<A NAME="158"><A>    
+<A NAME="159"><A>    <FONT ID="FormalComment">/**
+<A NAME="160"><A>     * Set the home team score
+<A NAME="161"><A>     */</FONT>
+<A NAME="162"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setHomeTeamScore(<FONT ID="Int">int</FONT> score)
+<A NAME="163"><A>    {
+<A NAME="164"><A>        m_homeScore = score;
+<A NAME="165"><A>    }
+<A NAME="166"><A>    
+<A NAME="167"><A>    <FONT ID="FormalComment">/**
+<A NAME="168"><A>     * Get the visitors team score
+<A NAME="169"><A>     */</FONT>
+<A NAME="170"><A>    <FONT ID="Public">public</FONT> <FONT ID="Int">int</FONT> getVisitorsTeamScore()
+<A NAME="171"><A>    {
+<A NAME="172"><A>        <FONT ID="Return">return</FONT> m_visitorsScore;
+<A NAME="173"><A>    }
+<A NAME="174"><A>    
+<A NAME="175"><A>    <FONT ID="FormalComment">/**
+<A NAME="176"><A>     * Set the visitors team score
+<A NAME="177"><A>     */</FONT>
+<A NAME="178"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> setVisitorsTeamScore(<FONT ID="Int">int</FONT> score)
+<A NAME="179"><A>    {
+<A NAME="180"><A>        m_visitorsScore = score;
+<A NAME="181"><A>    }
+<A NAME="182"><A>    
+<A NAME="183"><A>    <FONT ID="SingleLineComment">//
+<A NAME="184"><A></FONT>    <FONT ID="SingleLineComment">// Streaming
+<A NAME="185"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="186"><A></FONT>    
+<A NAME="187"><A>    <FONT ID="FormalComment">/**
+<A NAME="188"><A>     * Dump content to NDR
+<A NAME="189"><A>     */</FONT>
+<A NAME="190"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> dump(NdrOutputStream  ndr) <FONT ID="Throws">throws</FONT> IOException
+<A NAME="191"><A>    {
+<A NAME="192"><A>        <FONT ID="SingleLineComment">// Write all our members into the NDR
+<A NAME="193"><A></FONT>        ndr.writeUTF(m_id);
+<A NAME="194"><A>        ndr.writeUTF(m_home);
+<A NAME="195"><A>        ndr.writeUTF(m_visitors);
+<A NAME="196"><A>        ndr.writeInt(m_homeScore);
+<A NAME="197"><A>        ndr.writeInt(m_visitorsScore);
+<A NAME="198"><A>    }
+<A NAME="199"><A>    
+<A NAME="200"><A>    <FONT ID="FormalComment">/**
+<A NAME="201"><A>     * Load content from NDR
+<A NAME="202"><A>     */</FONT>
+<A NAME="203"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> load(NdrInputStream  ndr) <FONT ID="Throws">throws</FONT> IOException
+<A NAME="204"><A>    {
+<A NAME="205"><A>        <FONT ID="SingleLineComment">// Read all our members from the NDR
+<A NAME="206"><A></FONT>        m_id = ndr.readUTF();
+<A NAME="207"><A>        m_home = ndr.readUTF();
+<A NAME="208"><A>        m_visitors = ndr.readUTF();
+<A NAME="209"><A>        m_homeScore = ndr.readInt();
+<A NAME="210"><A>        m_visitorsScore = ndr.readInt();
+<A NAME="211"><A>    }
+<A NAME="212"><A>}
+<A NAME="213"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">Match</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

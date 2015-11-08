@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<faceted-project>
+  <runtime name="was.base.v7"/>
+  <fixed facet="jst.java"/>
+  <fixed facet="jsr116.sip"/>
+  <installed facet="jst.java" version="5.0"/>
+  <installed facet="jst.web" version="2.3"/>
+  <installed facet="com.ibm.websphere.coexistence.web" version="6.1"/>
+  <installed facet="com.ibm.websphere.extended.web" version="6.1"/>
+  <installed facet="jsr116.sip" version="1.0"/>
+</faceted-project>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>MatchFrame (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">MatchFrame</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> java.awt.*;
+<A NAME="13"><A><FONT ID="Import">import</FONT> java.awt.event.*;
+<A NAME="14"><A>
+<A NAME="15"><A>
+<A NAME="16"><A><FONT ID="FormalComment">/**
+<A NAME="17"><A> * Frame: Show the UI for one game
+<A NAME="18"><A> */</FONT>
+<A NAME="19"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> MatchFrame <FONT ID="Extends">extends</FONT> Frame 
+<A NAME="20"><A>{
+<A NAME="21"><A>    <FONT ID="FormalComment">/**
+<A NAME="22"><A>     * The owner sports client
+<A NAME="23"><A>     */</FONT>
+<A NAME="24"><A>    <A HREF="SportsClient.java.html">SportsClient</A> m_sc;
+<A NAME="25"><A>    
+<A NAME="26"><A>    <FONT ID="FormalComment">/**
+<A NAME="27"><A>     * The Match ID
+<A NAME="28"><A>     */</FONT>
+<A NAME="29"><A>    String m_id;
+<A NAME="30"><A>    
+<A NAME="31"><A>    <FONT ID="FormalComment">/**
+<A NAME="32"><A>     * Home scores
+<A NAME="33"><A>     */</FONT>
+<A NAME="34"><A>    Label m_lblHomeScore;
+<A NAME="35"><A>    
+<A NAME="36"><A>    <FONT ID="FormalComment">/**
+<A NAME="37"><A>     * Visitors score
+<A NAME="38"><A>     */</FONT>
+<A NAME="39"><A>    Label m_lblVisitorsScore;
+<A NAME="40"><A>    
+<A NAME="41"><A>    <FONT ID="FormalComment">/**
+<A NAME="42"><A>     * Initial left position
+<A NAME="43"><A>     */</FONT>
+<A NAME="44"><A>    <FONT ID="Static">static</FONT> <FONT ID="Int">int</FONT> m_left = <FONT ID="IntegerLiteral">10</FONT>;
+<A NAME="45"><A>    
+<A NAME="46"><A>    <FONT ID="FormalComment">/**
+<A NAME="47"><A>     * Initial top position
+<A NAME="48"><A>     */</FONT>
+<A NAME="49"><A>    <FONT ID="Static">static</FONT> <FONT ID="Int">int</FONT> m_top = <FONT ID="IntegerLiteral">10</FONT>;
+<A NAME="50"><A>    
+<A NAME="51"><A>    <FONT ID="FormalComment">/**
+<A NAME="52"><A>     * CTor
+<A NAME="53"><A>     */</FONT>
+<A NAME="54"><A>    <FONT ID="Public">public</FONT> MatchFrame(<A HREF="SportsClient.java.html">SportsClient</A> client, String id)
+<A NAME="55"><A>    {
+<A NAME="56"><A>        m_sc = client;
+<A NAME="57"><A>        m_id = id;
+<A NAME="58"><A>        
+<A NAME="59"><A>        createUI();
+<A NAME="60"><A>    }
+<A NAME="61"><A>    
+<A NAME="62"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> createUI()
+<A NAME="63"><A>    {
+<A NAME="64"><A>        setLayout(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="65"><A>        
+<A NAME="66"><A>        m_lblHomeScore = <FONT ID="New">new</FONT> Label(<FONT ID="StringLiteral">"Home:"</FONT>);
+<A NAME="67"><A>        add(m_lblHomeScore, BorderLayout.NORTH );
+<A NAME="68"><A>        
+<A NAME="69"><A>        m_lblVisitorsScore = <FONT ID="New">new</FONT> Label(<FONT ID="StringLiteral">"Visitors:"</FONT>);
+<A NAME="70"><A>        add(m_lblVisitorsScore, BorderLayout.SOUTH );
+<A NAME="71"><A>        
+<A NAME="72"><A>        setSize(<FONT ID="IntegerLiteral">100</FONT>, <FONT ID="IntegerLiteral">100</FONT>);
+<A NAME="73"><A>        setLocation( m_left, m_top );
+<A NAME="74"><A>        m_left += <FONT ID="IntegerLiteral">20</FONT>;
+<A NAME="75"><A>        m_top += <FONT ID="IntegerLiteral">20</FONT>;
+<A NAME="76"><A>        setVisible(<FONT ID="True">true</FONT>);
+<A NAME="77"><A>        addWindowListener(                      <FONT ID="New">new</FONT> WindowAdapter()                         {                               <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> windowClosing(WindowEvent event)                                {                                   m_sc.removeMatchFrame(m_id);                                    dispose();
+<A NAME="78"><A>                                }                           }                       );      
+<A NAME="79"><A>    }
+<A NAME="80"><A>    
+<A NAME="81"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> updateMatch(<A HREF="Match.java.html">Match</A> match)
+<A NAME="82"><A>    {
+<A NAME="83"><A>        <FONT ID="SingleLineComment">// Do we have something to update?
+<A NAME="84"><A></FONT>        <FONT ID="If">if</FONT> ( match.getHomeTeamName().length() == <FONT ID="IntegerLiteral">0</FONT> )
+<A NAME="85"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="86"><A>        
+<A NAME="87"><A>        <FONT ID="SingleLineComment">// Title should be set only once
+<A NAME="88"><A></FONT>        <FONT ID="If">if</FONT> ( getTitle().length() == <FONT ID="IntegerLiteral">0</FONT> )
+<A NAME="89"><A>        {
+<A NAME="90"><A>            setTitle( match.getHomeTeamName() + <FONT ID="StringLiteral">"Vs. "</FONT> +  
+<A NAME="91"><A>                                    match.getVisitorsTeamName() );
+<A NAME="92"><A>        }
+<A NAME="93"><A>        
+<A NAME="94"><A>        <FONT ID="SingleLineComment">// Update score
+<A NAME="95"><A></FONT>        String s = match.getHomeTeamName() + <FONT ID="StringLiteral">": "</FONT> + match.getHomeTeamScore();
+<A NAME="96"><A>        m_lblHomeScore.setText(s);
+<A NAME="97"><A>        
+<A NAME="98"><A>        s = match.getVisitorsTeamName() + <FONT ID="StringLiteral">": "</FONT> + match.getVisitorsTeamScore();
+<A NAME="99"><A>        m_lblVisitorsScore.setText(s);
+<A NAME="100"><A>    }
+<A NAME="101"><A>}
+<A NAME="102"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">MatchFrame</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

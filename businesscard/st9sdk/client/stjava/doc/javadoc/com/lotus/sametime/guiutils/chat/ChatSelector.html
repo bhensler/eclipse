@@ -1,0 +1,689 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>ChatSelector</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ChatSelector";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendField.html" title="class in com.lotus.sametime.guiutils.chat"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/guiutils/chat/ChatSelector.html" target="_top">Frames</a></li>
+<li><a href="ChatSelector.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.guiutils.chat</div>
+<h2 title="Class ChatSelector" class="title">Class ChatSelector</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.guiutils.chat.ChatSelector</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.awt.event.FocusListener, java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.util.EventListener</dd>
+</dl>
+<hr>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;
+<div class="deprecatedContent">due to the availability of additional non-AWT frameworks. This
+             AWT component is no longer supported.</div>
+</div>
+<br>
+<pre>public class <span class="strong">ChatSelector</span>
+extends java.lang.Object
+implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener</pre>
+<div class="block">This is the object managing the text selection procedures in its host
+ ChatTranscript. Comments in this class use the term "session". A session
+ starts when the user clicks the mouse inside the transcript and continues
+ until the mouse is released. Between the click and the release the user might
+ have dragged the mouse.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat">ChatSelection</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#m_endSelection">m_endSelection</a></strong></code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The end of the current selection</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat">ChatSelection</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#m_startSelection">m_startSelection</a></strong></code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The start of the current selection</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatTranscript.html" title="class in com.lotus.sametime.guiutils.chat">ChatTranscript</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#m_transcript">m_transcript</a></strong></code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The selectors's hosting transcript</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#ChatSelector(com.lotus.sametime.guiutils.chat.ChatTranscript)">ChatSelector</a></strong>(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatTranscript.html" title="class in com.lotus.sametime.guiutils.chat">ChatTranscript</a>&nbsp;transcript)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructor</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#copySelectionToClip()">copySelectionToClip</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Copies selected text to system clipboard</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#focusGained(java.awt.event.FocusEvent)">focusGained</a></strong>(java.awt.event.FocusEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a component gains the keyboard focus.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#focusLost(java.awt.event.FocusEvent)">focusLost</a></strong>(java.awt.event.FocusEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a component losess the keyboard focus.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#getSelectedText()">getSelectedText</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Compiles selected text from paragraphs involved into a string</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#hasClipboardAccess()">hasClipboardAccess</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#highlightSelection(java.awt.Graphics, com.lotus.sametime.guiutils.chat.ChatSelection, com.lotus.sametime.guiutils.chat.ChatSelection)">highlightSelection</a></strong>(java.awt.Graphics&nbsp;g,
+                  <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat">ChatSelection</a>&nbsp;startSelection,
+                  <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat">ChatSelection</a>&nbsp;endSelection)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Adds or removes highlight to/from a selection.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#keyPressed(java.awt.event.KeyEvent)">keyPressed</a></strong>(java.awt.event.KeyEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Implementation of navigating with arrow keys</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#keyReleased(java.awt.event.KeyEvent)">keyReleased</a></strong>(java.awt.event.KeyEvent&nbsp;e)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#mouseClicked(java.awt.event.MouseEvent)">mouseClicked</a></strong>(java.awt.event.MouseEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when the mouse has been clicked on a component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#mouseDragged(java.awt.event.MouseEvent)">mouseDragged</a></strong>(java.awt.event.MouseEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a mouse button is pressed on a component and then dragged.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#mouseEntered(java.awt.event.MouseEvent)">mouseEntered</a></strong>(java.awt.event.MouseEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when the mouse enters a component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#mouseExited(java.awt.event.MouseEvent)">mouseExited</a></strong>(java.awt.event.MouseEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when the mouse exits a component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#mouseMoved(java.awt.event.MouseEvent)">mouseMoved</a></strong>(java.awt.event.MouseEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when the mouse button has been moved on a component (with no
+ buttons no down).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#mousePressed(java.awt.event.MouseEvent)">mousePressed</a></strong>(java.awt.event.MouseEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a mouse button has been pressed on a component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#mouseReleased(java.awt.event.MouseEvent)">mouseReleased</a></strong>(java.awt.event.MouseEvent&nbsp;evt)</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a mouse button has been released on a component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#removeSelection()">removeSelection</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the current selection (highlight and memory)</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelector.html#selectAll()">selectAll</a></strong>()</code>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Select all the text in the transcript</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="m_transcript">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>m_transcript</h4>
+<pre>protected&nbsp;<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatTranscript.html" title="class in com.lotus.sametime.guiutils.chat">ChatTranscript</a> m_transcript</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The selectors's hosting transcript</div>
+</li>
+</ul>
+<a name="m_startSelection">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>m_startSelection</h4>
+<pre>protected&nbsp;<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat">ChatSelection</a> m_startSelection</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The start of the current selection</div>
+</li>
+</ul>
+<a name="m_endSelection">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>m_endSelection</h4>
+<pre>protected&nbsp;<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat">ChatSelection</a> m_endSelection</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">The end of the current selection</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="ChatSelector(com.lotus.sametime.guiutils.chat.ChatTranscript)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ChatSelector</h4>
+<pre>protected&nbsp;ChatSelector(<a href="../../../../../com/lotus/sametime/guiutils/chat/ChatTranscript.html" title="class in com.lotus.sametime.guiutils.chat">ChatTranscript</a>&nbsp;transcript)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Constructor</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>transcript</code> - </dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="highlightSelection(java.awt.Graphics, com.lotus.sametime.guiutils.chat.ChatSelection, com.lotus.sametime.guiutils.chat.ChatSelection)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>highlightSelection</h4>
+<pre>protected&nbsp;void&nbsp;highlightSelection(java.awt.Graphics&nbsp;g,
+                      <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat">ChatSelection</a>&nbsp;startSelection,
+                      <a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat">ChatSelection</a>&nbsp;endSelection)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Adds or removes highlight to/from a selection. Does nothing when start
+ selection is equal to end selection, or when selcted range is completely
+ invisible in current scrolling position</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>g</code> - </dd><dd><code>startSelection</code> - </dd><dd><code>endSelection</code> - </dd></dl>
+</li>
+</ul>
+<a name="selectAll()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>selectAll</h4>
+<pre>protected&nbsp;void&nbsp;selectAll()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Select all the text in the transcript</div>
+</li>
+</ul>
+<a name="getSelectedText()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSelectedText</h4>
+<pre>protected&nbsp;java.lang.String&nbsp;getSelectedText()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Compiles selected text from paragraphs involved into a string</div>
+</li>
+</ul>
+<a name="copySelectionToClip()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copySelectionToClip</h4>
+<pre>protected&nbsp;void&nbsp;copySelectionToClip()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Copies selected text to system clipboard</div>
+</li>
+</ul>
+<a name="removeSelection()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeSelection</h4>
+<pre>protected&nbsp;void&nbsp;removeSelection()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Removes the current selection (highlight and memory)</div>
+</li>
+</ul>
+<a name="hasClipboardAccess()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasClipboardAccess</h4>
+<pre>public&nbsp;boolean&nbsp;hasClipboardAccess()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="mouseClicked(java.awt.event.MouseEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mouseClicked</h4>
+<pre>public&nbsp;void&nbsp;mouseClicked(java.awt.event.MouseEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when the mouse has been clicked on a component.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>mouseClicked</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="mouseEntered(java.awt.event.MouseEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mouseEntered</h4>
+<pre>public&nbsp;void&nbsp;mouseEntered(java.awt.event.MouseEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when the mouse enters a component.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>mouseEntered</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="mouseExited(java.awt.event.MouseEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mouseExited</h4>
+<pre>public&nbsp;void&nbsp;mouseExited(java.awt.event.MouseEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when the mouse exits a component.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>mouseExited</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="mousePressed(java.awt.event.MouseEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mousePressed</h4>
+<pre>public&nbsp;void&nbsp;mousePressed(java.awt.event.MouseEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a mouse button has been pressed on a component.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>mousePressed</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="mouseReleased(java.awt.event.MouseEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mouseReleased</h4>
+<pre>public&nbsp;void&nbsp;mouseReleased(java.awt.event.MouseEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a mouse button has been released on a component.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>mouseReleased</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="mouseDragged(java.awt.event.MouseEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mouseDragged</h4>
+<pre>public&nbsp;void&nbsp;mouseDragged(java.awt.event.MouseEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a mouse button is pressed on a component and then dragged.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>mouseDragged</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseMotionListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="mouseMoved(java.awt.event.MouseEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mouseMoved</h4>
+<pre>public&nbsp;void&nbsp;mouseMoved(java.awt.event.MouseEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when the mouse button has been moved on a component (with no
+ buttons no down).</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>mouseMoved</code>&nbsp;in interface&nbsp;<code>java.awt.event.MouseMotionListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="keyPressed(java.awt.event.KeyEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>keyPressed</h4>
+<pre>public&nbsp;void&nbsp;keyPressed(java.awt.event.KeyEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Implementation of navigating with arrow keys</div>
+</li>
+</ul>
+<a name="keyReleased(java.awt.event.KeyEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>keyReleased</h4>
+<pre>public&nbsp;void&nbsp;keyReleased(java.awt.event.KeyEvent&nbsp;e)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="focusGained(java.awt.event.FocusEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>focusGained</h4>
+<pre>public&nbsp;void&nbsp;focusGained(java.awt.event.FocusEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a component gains the keyboard focus.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>focusGained</code>&nbsp;in interface&nbsp;<code>java.awt.event.FocusListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+<a name="focusLost(java.awt.event.FocusEvent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>focusLost</h4>
+<pre>public&nbsp;void&nbsp;focusLost(java.awt.event.FocusEvent&nbsp;evt)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block">Invoked when a component losess the keyboard focus.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>focusLost</code>&nbsp;in interface&nbsp;<code>java.awt.event.FocusListener</code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>evt</code> - The event object.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSelection.html" title="class in com.lotus.sametime.guiutils.chat"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/guiutils/chat/ChatSendField.html" title="class in com.lotus.sametime.guiutils.chat"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/guiutils/chat/ChatSelector.html" target="_top">Frames</a></li>
+<li><a href="ChatSelector.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

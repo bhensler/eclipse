@@ -1,0 +1,24 @@
+HKCR
+{
+	STHelperExample.STHelperExampleEventH.1 = s 'STHelperExampleEventHandler Class'
+	{
+		CLSID = s '{D5EC9242-33D8-41A4-A717-B1A021E27F5B}'
+	}
+	STHelperExample.STHelperExampleEventHan = s 'STHelperExampleEventHandler Class'
+	{
+		CLSID = s '{D5EC9242-33D8-41A4-A717-B1A021E27F5B}'
+		CurVer = s 'STHelperExample.STHelperExampleEventH.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D5EC9242-33D8-41A4-A717-B1A021E27F5B} = s 'STHelperExampleEventHandler Class'
+		{
+			ProgID = s 'STHelperExample.STHelperExampleEventH.1'
+			VersionIndependentProgID = s 'STHelperExample.STHelperExampleEventHan'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{0AADF484-07ED-455E-A160-A73E9904B606}'
+		}
+	}
+}

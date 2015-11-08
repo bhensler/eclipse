@@ -1,0 +1,590 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>GenericAdapterImpl</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="GenericAdapterImpl";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterComp.html" title="class in com.lotus.sametime.genericadaptermanager"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericErrorEvent.html" title="class in com.lotus.sametime.genericadaptermanager"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html" target="_top">Frames</a></li>
+<li><a href="GenericAdapterImpl.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.genericadaptermanager</div>
+<h2 title="Class GenericAdapterImpl" class="title">Class GenericAdapterImpl</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">com.lotus.sametime.core.comparch.STCompPart</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html" title="class in com.lotus.sametime.core.comparch">com.lotus.sametime.core.comparch.STCompImpl</a></li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.genericadaptermanager.GenericAdapterImpl</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html" title="interface in com.lotus.sametime.genericadaptermanager.cluster">ClusterManagerListener</a>, <a href="../../../../com/lotus/sametime/genericadaptermanager/config/ConfigurationListener.html" title="interface in com.lotus.sametime.genericadaptermanager.config">ConfigurationListener</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">GenericAdapterImpl</span>
+extends <a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html" title="class in com.lotus.sametime.core.comparch">STCompImpl</a>
+implements <a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html" title="interface in com.lotus.sametime.genericadaptermanager.cluster">ClusterManagerListener</a>, <a href="../../../../com/lotus/sametime/genericadaptermanager/config/ConfigurationListener.html" title="interface in com.lotus.sametime.genericadaptermanager.config">ConfigurationListener</a></pre>
+<div class="block">This class holds the logic for the generic adapter functionality.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#GenericAdapterImpl(java.lang.String, com.lotus.sametime.core.comparch.STSession)">GenericAdapterImpl</a></strong>(java.lang.String&nbsp;componentName,
+                  <a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)</code>
+<div class="block">Creates a GenericAdapterImpl object</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#communityConnected()">communityConnected</a></strong>()</code>
+<div class="block">Callled when the VP community is connected.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#communityDisconnected()">communityDisconnected</a></strong>()</code>
+<div class="block">Handles the case of community down.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ClusterManager</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#getClusterMananger()">getClusterMananger</a></strong>()</code>
+<div class="block">retrieves the ClusterManager instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#initiate(com.lotus.sametime.genericadaptermanager.cluster.ClusterManagerListener, java.lang.String[])">initiate</a></strong>(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html" title="interface in com.lotus.sametime.genericadaptermanager.cluster">ClusterManagerListener</a>&nbsp;listener,
+        java.lang.String[]&nbsp;services)</code>
+<div class="block">Perform Initialization steps : load Configuration manager , connect to all 
+ servers and load the resolver component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#postReadConfiguration()">postReadConfiguration</a></strong>()</code>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required after the configuration 
+ data was read.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#postSendCommunityAvailableEvent()">postSendCommunityAvailableEvent</a></strong>()</code>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required after the CommunityAvailable
+ Event is sent.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#postSendCommunityUnAvailableEvent()">postSendCommunityUnAvailableEvent</a></strong>()</code>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required after the CommunityUnAvailable
+ Event is sent.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#preSendCommunityAvailableEvent()">preSendCommunityAvailableEvent</a></strong>()</code>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required before the CommunityAvailable
+ Event is sent.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#preSendCommunityUnAvailableEvent()">preSendCommunityUnAvailableEvent</a></strong>()</code>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required before the CommunityUnAvailable
+ Event is sent.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#processSTEvent(com.lotus.sametime.core.comparch.STEvent)">processSTEvent</a></strong>(<a href="../../../../com/lotus/sametime/core/comparch/STEvent.html" title="class in com.lotus.sametime.core.comparch">STEvent</a>&nbsp;event)</code>
+<div class="block">Gets events from the dispatcher.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#readConfigurationCompleted()">readConfigurationCompleted</a></strong>()</code>
+<div class="block">Notifies that the all configuration data has been read and 
+ processed</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#serverLoggedIn(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">serverLoggedIn</a></strong>(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ServerManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ServerManager</a>&nbsp;server)</code>
+<div class="block">Callled when logged in to a ST server.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#serverLoggedInOccured(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">serverLoggedInOccured</a></strong>(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ServerManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ServerManager</a>&nbsp;server)</code>
+<div class="block">The application should implement this method in order to perform specific
+ operation that it requires after the server is logged in  to 
+ ( for example  loading services)</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#serverLoggedOut(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">serverLoggedOut</a></strong>(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ServerManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ServerManager</a>&nbsp;server)</code>
+<div class="block">Called when logged out from a ST server</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html#serverLoggedOutOccured(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">serverLoggedOutOccured</a></strong>(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ServerManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ServerManager</a>&nbsp;server)</code>
+<div class="block">The application should implement this method in order to perform specific
+ operation that it requires after we logged out from the server.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_com.lotus.sametime.core.comparch.STCompImpl">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.lotus.sametime.core.comparch.<a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html" title="class in com.lotus.sametime.core.comparch">STCompImpl</a></h3>
+<code><a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html#stop()">stop</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompImpl.html#toString()">toString</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_com.lotus.sametime.core.comparch.STCompPart">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.lotus.sametime.core.comparch.<a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></h3>
+<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#componentLoaded(com.lotus.sametime.core.comparch.STCompApi)">componentLoaded</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getComponentListener()">getComponentListener</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getName()">getName</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getSession()">getSession</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#getUniqueId()">getUniqueId</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#isActive()">isActive</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#sendEvent(com.lotus.sametime.core.comparch.STEvent)">sendEvent</a>, <a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#start()">start</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="GenericAdapterImpl(java.lang.String, com.lotus.sametime.core.comparch.STSession)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>GenericAdapterImpl</h4>
+<pre>public&nbsp;GenericAdapterImpl(java.lang.String&nbsp;componentName,
+                  <a href="../../../../com/lotus/sametime/core/comparch/STSession.html" title="class in com.lotus.sametime.core.comparch">STSession</a>&nbsp;session)
+                   throws <a href="../../../../com/lotus/sametime/core/comparch/DuplicateObjectException.html" title="class in com.lotus.sametime.core.comparch">DuplicateObjectException</a></pre>
+<div class="block">Creates a GenericAdapterImpl object</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>session</code> - </dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/DuplicateObjectException.html" title="class in com.lotus.sametime.core.comparch">DuplicateObjectException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="initiate(com.lotus.sametime.genericadaptermanager.cluster.ClusterManagerListener, java.lang.String[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initiate</h4>
+<pre>public&nbsp;void&nbsp;initiate(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html" title="interface in com.lotus.sametime.genericadaptermanager.cluster">ClusterManagerListener</a>&nbsp;listener,
+            java.lang.String[]&nbsp;services)</pre>
+<div class="block">Perform Initialization steps : load Configuration manager , connect to all 
+ servers and load the resolver component. When this process is over a
+ notification will be sent to the listener</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - the listener to notify on server/cluster events</dd><dd><code>services</code> - the names of the services that should be loaded 
+ in the cluster</dd></dl>
+</li>
+</ul>
+<a name="processSTEvent(com.lotus.sametime.core.comparch.STEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processSTEvent</h4>
+<pre>public&nbsp;void&nbsp;processSTEvent(<a href="../../../../com/lotus/sametime/core/comparch/STEvent.html" title="class in com.lotus.sametime.core.comparch">STEvent</a>&nbsp;event)</pre>
+<div class="block">Gets events from the dispatcher. If the event wasn't handled, call to
+ super.processSTEvent for the default handling.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html#processSTEvent(com.lotus.sametime.core.comparch.STEvent)">processSTEvent</a></code>&nbsp;in class&nbsp;<code><a href="../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch">STCompPart</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - - the STEvent object</dd></dl>
+</li>
+</ul>
+<a name="serverLoggedIn(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverLoggedIn</h4>
+<pre>public final&nbsp;void&nbsp;serverLoggedIn(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ServerManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ServerManager</a>&nbsp;server)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html#serverLoggedIn(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">ClusterManagerListener</a></code></span></div>
+<div class="block">Callled when logged in to a ST server.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html#serverLoggedIn(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">serverLoggedIn</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html" title="interface in com.lotus.sametime.genericadaptermanager.cluster">ClusterManagerListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>server</code> - the ST server we are logged in to.</dd><dt><span class="strong">See Also:</span></dt><dd><code>ClusterManagerListener::serverLoggedIn</code></dd></dl>
+</li>
+</ul>
+<a name="serverLoggedInOccured(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverLoggedInOccured</h4>
+<pre>public abstract&nbsp;void&nbsp;serverLoggedInOccured(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ServerManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ServerManager</a>&nbsp;server)</pre>
+<div class="block">The application should implement this method in order to perform specific
+ operation that it requires after the server is logged in  to 
+ ( for example  loading services)</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>server</code> - - the server tat was just connected</dd></dl>
+</li>
+</ul>
+<a name="serverLoggedOut(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverLoggedOut</h4>
+<pre>public final&nbsp;void&nbsp;serverLoggedOut(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ServerManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ServerManager</a>&nbsp;server)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html#serverLoggedOut(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">ClusterManagerListener</a></code></span></div>
+<div class="block">Called when logged out from a ST server</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html#serverLoggedOut(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">serverLoggedOut</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html" title="interface in com.lotus.sametime.genericadaptermanager.cluster">ClusterManagerListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>server</code> - the ST server we were logged out from</dd><dt><span class="strong">See Also:</span></dt><dd><code>ClusterManagerListener::serverLoggedOut</code></dd></dl>
+</li>
+</ul>
+<a name="serverLoggedOutOccured(com.lotus.sametime.genericadaptermanager.cluster.ServerManager)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverLoggedOutOccured</h4>
+<pre>public abstract&nbsp;void&nbsp;serverLoggedOutOccured(<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ServerManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ServerManager</a>&nbsp;server)</pre>
+<div class="block">The application should implement this method in order to perform specific
+ operation that it requires after we logged out from the server.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>server</code> - - the server tat was just disconnected</dd></dl>
+</li>
+</ul>
+<a name="readConfigurationCompleted()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>readConfigurationCompleted</h4>
+<pre>public final&nbsp;void&nbsp;readConfigurationCompleted()</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/genericadaptermanager/config/ConfigurationListener.html#readConfigurationCompleted()">ConfigurationListener</a></code></span></div>
+<div class="block">Notifies that the all configuration data has been read and 
+ processed</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/genericadaptermanager/config/ConfigurationListener.html#readConfigurationCompleted()">readConfigurationCompleted</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/genericadaptermanager/config/ConfigurationListener.html" title="interface in com.lotus.sametime.genericadaptermanager.config">ConfigurationListener</a></code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>ConfigurationListener::readConfigurationCompleted</code></dd></dl>
+</li>
+</ul>
+<a name="postReadConfiguration()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postReadConfiguration</h4>
+<pre>public&nbsp;void&nbsp;postReadConfiguration()</pre>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required after the configuration 
+ data was read.</div>
+</li>
+</ul>
+<a name="communityConnected()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>communityConnected</h4>
+<pre>public final&nbsp;void&nbsp;communityConnected()</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html#communityConnected()">ClusterManagerListener</a></code></span></div>
+<div class="block">Callled when the VP community is connected.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html#communityConnected()">communityConnected</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html" title="interface in com.lotus.sametime.genericadaptermanager.cluster">ClusterManagerListener</a></code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>Send an event to inform the community is available.</code></dd></dl>
+</li>
+</ul>
+<a name="preSendCommunityAvailableEvent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preSendCommunityAvailableEvent</h4>
+<pre>public&nbsp;void&nbsp;preSendCommunityAvailableEvent()</pre>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required before the CommunityAvailable
+ Event is sent.</div>
+</li>
+</ul>
+<a name="postSendCommunityAvailableEvent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postSendCommunityAvailableEvent</h4>
+<pre>public&nbsp;void&nbsp;postSendCommunityAvailableEvent()</pre>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required after the CommunityAvailable
+ Event is sent.</div>
+</li>
+</ul>
+<a name="communityDisconnected()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>communityDisconnected</h4>
+<pre>public final&nbsp;void&nbsp;communityDisconnected()</pre>
+<div class="block">Handles the case of community down.
+ Sends a Community unavailable event,</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html#communityDisconnected()">communityDisconnected</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManagerListener.html" title="interface in com.lotus.sametime.genericadaptermanager.cluster">ClusterManagerListener</a></code></dd>
+<dt><span class="strong">See Also:</span></dt><dd><code>ClusterManagerListener::communityDisConnected</code></dd></dl>
+</li>
+</ul>
+<a name="preSendCommunityUnAvailableEvent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preSendCommunityUnAvailableEvent</h4>
+<pre>public&nbsp;void&nbsp;preSendCommunityUnAvailableEvent()</pre>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required before the CommunityUnAvailable
+ Event is sent.</div>
+</li>
+</ul>
+<a name="postSendCommunityUnAvailableEvent()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>postSendCommunityUnAvailableEvent</h4>
+<pre>public&nbsp;void&nbsp;postSendCommunityUnAvailableEvent()</pre>
+<div class="block">The application can (not mandatory) override this method in order to
+ perform additional operations required after the CommunityUnAvailable
+ Event is sent.</div>
+</li>
+</ul>
+<a name="getClusterMananger()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getClusterMananger</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/genericadaptermanager/cluster/ClusterManager.html" title="class in com.lotus.sametime.genericadaptermanager.cluster">ClusterManager</a>&nbsp;getClusterMananger()</pre>
+<div class="block">retrieves the ClusterManager instance.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericAdapterComp.html" title="class in com.lotus.sametime.genericadaptermanager"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/genericadaptermanager/GenericErrorEvent.html" title="class in com.lotus.sametime.genericadaptermanager"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/genericadaptermanager/GenericAdapterImpl.html" target="_top">Frames</a></li>
+<li><a href="GenericAdapterImpl.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

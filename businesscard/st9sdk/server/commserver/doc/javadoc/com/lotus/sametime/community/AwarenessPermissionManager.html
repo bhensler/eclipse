@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>AwarenessPermissionManager</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AwarenessPermissionManager";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/community/AwarenessPermissionListener.html" title="interface in com.lotus.sametime.community"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/community/Channel.html" title="class in com.lotus.sametime.community"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/community/AwarenessPermissionManager.html" target="_top">Frames</a></li>
+<li><a href="AwarenessPermissionManager.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.community</div>
+<h2 title="Class AwarenessPermissionManager" class="title">Class AwarenessPermissionManager</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.community.AwarenessPermissionManager</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html" title="interface in com.lotus.sametime.community">MyPrivacyListener</a>, java.util.EventListener</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">AwarenessPermissionManager</span>
+extends java.lang.Object
+implements <a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html" title="interface in com.lotus.sametime.community">MyPrivacyListener</a></pre>
+<div class="block">Represents an object to handle awareness permission request and approval.
+ <p>
+ Note: The sametime.ini flag ST_DEFAULT_PRIVACY under [Config] 
+ determines whether privacy settings of a user default to "everybody 
+ can see me" or "no one can see me." The default value of 0 means that 
+ "everyone can see me," and should not be changed for conventional 
+ installations. Installations that require the awareness permission 
+ feature should set this flag to 1, to indicate that users who never 
+ touched their privacy settings are initially not visible to anyone.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/community/AwarenessPermissionManager.html#acceptAwarenessPermissionRequest(com.lotus.sametime.core.types.STUser)">acceptAwarenessPermissionRequest</a></strong>(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;requestor)</code>
+<div class="block">Accepts a visibility request.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/community/AwarenessPermissionManager.html#addAwarenessPermissionListener(com.lotus.sametime.community.AwarenessPermissionListener)">addAwarenessPermissionListener</a></strong>(<a href="../../../../com/lotus/sametime/community/AwarenessPermissionListener.html" title="interface in com.lotus.sametime.community">AwarenessPermissionListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified AwarenessPermission listener to receive events regarding
+ awareness permission.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/community/AwarenessPermissionManager.html#cancelAwarenessPermissionRequest(com.lotus.sametime.core.types.STUser[])">cancelAwarenessPermissionRequest</a></strong>(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;targets)</code>
+<div class="block">Cancels a visibility request issued previously to the specified targets.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/community/AwarenessPermissionManager.html#changeMyPrivacyDenied(com.lotus.sametime.community.MyPrivacyEvent)">changeMyPrivacyDenied</a></strong>(<a href="../../../../com/lotus/sametime/community/MyPrivacyEvent.html" title="class in com.lotus.sametime.community">MyPrivacyEvent</a>&nbsp;event)</code>
+<div class="block">Indicates that the change privacy list request was denied.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/community/AwarenessPermissionManager.html#declineAwarenessPermissionRequest(com.lotus.sametime.core.types.STUser)">declineAwarenessPermissionRequest</a></strong>(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;requestor)</code>
+<div class="block">Declines a visibility request (to allow awareness of me) from the specified object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/community/AwarenessPermissionManager.html#myPrivacyChanged(com.lotus.sametime.community.MyPrivacyEvent)">myPrivacyChanged</a></strong>(<a href="../../../../com/lotus/sametime/community/MyPrivacyEvent.html" title="class in com.lotus.sametime.community">MyPrivacyEvent</a>&nbsp;event)</code>
+<div class="block">Indicates that the privacy list has changed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/community/AwarenessPermissionManager.html#processAwarenessPermissionsEvent(com.lotus.sametime.community.AwarenessPermissionEvent)">processAwarenessPermissionsEvent</a></strong>(<a href="../../../../com/lotus/sametime/community/AwarenessPermissionEvent.html" title="class in com.lotus.sametime.community">AwarenessPermissionEvent</a>&nbsp;event)</code>
+<div class="block">processAwarenessPermissionsEvent</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/community/AwarenessPermissionManager.html#removeAwarenessPermissionListener(com.lotus.sametime.community.AwarenessPermissionListener)">removeAwarenessPermissionListener</a></strong>(<a href="../../../../com/lotus/sametime/community/AwarenessPermissionListener.html" title="interface in com.lotus.sametime.community">AwarenessPermissionListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified AwarenessPermission listener.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/community/AwarenessPermissionManager.html#requestAwarenessPermission(com.lotus.sametime.core.types.STUser[])">requestAwarenessPermission</a></strong>(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;targets)</code>
+<div class="block">Requests that specified users allow themselves to be visible.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="addAwarenessPermissionListener(com.lotus.sametime.community.AwarenessPermissionListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addAwarenessPermissionListener</h4>
+<pre>public&nbsp;void&nbsp;addAwarenessPermissionListener(<a href="../../../../com/lotus/sametime/community/AwarenessPermissionListener.html" title="interface in com.lotus.sametime.community">AwarenessPermissionListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified AwarenessPermission listener to receive events regarding
+ awareness permission.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeAwarenessPermissionListener(com.lotus.sametime.community.AwarenessPermissionListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeAwarenessPermissionListener</h4>
+<pre>public&nbsp;void&nbsp;removeAwarenessPermissionListener(<a href="../../../../com/lotus/sametime/community/AwarenessPermissionListener.html" title="interface in com.lotus.sametime.community">AwarenessPermissionListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified AwarenessPermission listener.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="requestAwarenessPermission(com.lotus.sametime.core.types.STUser[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>requestAwarenessPermission</h4>
+<pre>public&nbsp;void&nbsp;requestAwarenessPermission(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;targets)</pre>
+<div class="block">Requests that specified users allow themselves to be visible.
+ Note: This method can be called only by the requestor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>targets</code> - The users we want to have awareness of.</dd></dl>
+</li>
+</ul>
+<a name="cancelAwarenessPermissionRequest(com.lotus.sametime.core.types.STUser[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cancelAwarenessPermissionRequest</h4>
+<pre>public&nbsp;void&nbsp;cancelAwarenessPermissionRequest(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>[]&nbsp;targets)</pre>
+<div class="block">Cancels a visibility request issued previously to the specified targets.
+ Note: This method can be called only by the requestor.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>targets</code> - The targets for which we are cancelling the request.</dd></dl>
+</li>
+</ul>
+<a name="acceptAwarenessPermissionRequest(com.lotus.sametime.core.types.STUser)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>acceptAwarenessPermissionRequest</h4>
+<pre>public&nbsp;void&nbsp;acceptAwarenessPermissionRequest(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;requestor)</pre>
+<div class="block">Accepts a visibility request.
+ Note: This method can be called only by the target.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>requestor</code> - The user that issued the awareness request.</dd></dl>
+</li>
+</ul>
+<a name="declineAwarenessPermissionRequest(com.lotus.sametime.core.types.STUser)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>declineAwarenessPermissionRequest</h4>
+<pre>public&nbsp;void&nbsp;declineAwarenessPermissionRequest(<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;requestor)</pre>
+<div class="block">Declines a visibility request (to allow awareness of me) from the specified object.
+ Note: This method can be called only by the target.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>requestor</code> - The user that issued the visibility request.</dd></dl>
+</li>
+</ul>
+<a name="processAwarenessPermissionsEvent(com.lotus.sametime.community.AwarenessPermissionEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processAwarenessPermissionsEvent</h4>
+<pre>protected&nbsp;void&nbsp;processAwarenessPermissionsEvent(<a href="../../../../com/lotus/sametime/community/AwarenessPermissionEvent.html" title="class in com.lotus.sametime.community">AwarenessPermissionEvent</a>&nbsp;event)</pre>
+<div class="block">processAwarenessPermissionsEvent</div>
+</li>
+</ul>
+<a name="changeMyPrivacyDenied(com.lotus.sametime.community.MyPrivacyEvent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>changeMyPrivacyDenied</h4>
+<pre>public&nbsp;void&nbsp;changeMyPrivacyDenied(<a href="../../../../com/lotus/sametime/community/MyPrivacyEvent.html" title="class in com.lotus.sametime.community">MyPrivacyEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html#changeMyPrivacyDenied(com.lotus.sametime.community.MyPrivacyEvent)">MyPrivacyListener</a></code></span></div>
+<div class="block">Indicates that the change privacy list request was denied.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html#changeMyPrivacyDenied(com.lotus.sametime.community.MyPrivacyEvent)">changeMyPrivacyDenied</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html" title="interface in com.lotus.sametime.community">MyPrivacyListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html#changeMyPrivacyDenied(com.lotus.sametime.community.MyPrivacyEvent)"><code>MyPrivacyListener.changeMyPrivacyDenied(MyPrivacyEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="myPrivacyChanged(com.lotus.sametime.community.MyPrivacyEvent)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>myPrivacyChanged</h4>
+<pre>public&nbsp;void&nbsp;myPrivacyChanged(<a href="../../../../com/lotus/sametime/community/MyPrivacyEvent.html" title="class in com.lotus.sametime.community">MyPrivacyEvent</a>&nbsp;event)</pre>
+<div class="block"><span class="strong">Description copied from interface:&nbsp;<code><a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html#myPrivacyChanged(com.lotus.sametime.community.MyPrivacyEvent)">MyPrivacyListener</a></code></span></div>
+<div class="block">Indicates that the privacy list has changed.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html#myPrivacyChanged(com.lotus.sametime.community.MyPrivacyEvent)">myPrivacyChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html" title="interface in com.lotus.sametime.community">MyPrivacyListener</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>event</code> - The event object.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/community/MyPrivacyListener.html#myPrivacyChanged(com.lotus.sametime.community.MyPrivacyEvent)"><code>MyPrivacyListener.myPrivacyChanged(MyPrivacyEvent)</code></a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/community/AwarenessPermissionListener.html" title="interface in com.lotus.sametime.community"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/community/Channel.html" title="class in com.lotus.sametime.community"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/community/AwarenessPermissionManager.html" target="_top">Frames</a></li>
+<li><a href="AwarenessPermissionManager.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

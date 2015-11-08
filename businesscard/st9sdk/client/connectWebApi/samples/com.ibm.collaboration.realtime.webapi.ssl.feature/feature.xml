@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
+<feature
+      id="com.ibm.collaboration.realtime.webapi.ssl.feature"
+      label="%featureName"
+      version="9.0"
+      provider-name="%providerName">
+   <install-handler handler="com.ibm.rcp.installhandler.RCPInstallHandler"/>
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license>
+      %license
+   </license>
+
+</feature>

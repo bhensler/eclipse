@@ -1,0 +1,666 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ParticipantStatus (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ParticipantStatus (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/PropertyNames.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ParticipantStatus.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony</FONT>
+<BR>
+Interface ParticipantStatus</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Status.html" title="interface in com.ibm.collaboration.realtime.telephony">Status</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>ParticipantStatus</B><DT>extends <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Status.html" title="interface in com.ibm.collaboration.realtime.telephony">Status</A></DL>
+</PRE>
+
+<P>
+ParticipantStatus represents the status of a call participant.
+ The REASON_xxx codes are used for STATUS_DISCONNECTED.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#REASON_CALL_TERMINATED">REASON_CALL_TERMINATED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The call was terminated.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#REASON_CALL_TRANSFERRED">REASON_CALL_TRANSFERRED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The call was transferred to another participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#REASON_CALL_TRANSFERRED_ACTIVE">REASON_CALL_TRANSFERRED_ACTIVE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The call was transferred to another participant after the call was accepted by a participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#REASON_CALL_TRANSFERRED_TO_DEVICE">REASON_CALL_TRANSFERRED_TO_DEVICE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The call was transferred to another telephone device for the same participant.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#REASON_HUNG_UP">REASON_HUNG_UP</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant hung up.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#REASON_NOT_REACHABLE">REASON_NOT_REACHABLE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant is not reachable for some other reason.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#REASON_SERVICE_TERMINATED">REASON_SERVICE_TERMINATED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The call service was terminated because the user logged out or the service is no longer available.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_ADDED">STATUS_ADDED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant has been added to the call, but not yet connected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_BUSY">STATUS_BUSY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant's phone is busy.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_CONNECTING">STATUS_CONNECTING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant is in the process of being connected to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_DISCONNECTED">STATUS_DISCONNECTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant is disconnected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_INVITE_ACCEPTED">STATUS_INVITE_ACCEPTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant accepted the invitation to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_INVITE_CANCELLED">STATUS_INVITE_CANCELLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant's invitation was cancelled by the inviter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_INVITE_DECLINED">STATUS_INVITE_DECLINED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant declined the invitation to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_INVITE_ERROR">STATUS_INVITE_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant could not be invited.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_INVITE_NO_RESPONSE">STATUS_INVITE_NO_RESPONSE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant did not respond to the invitation to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_INVITED">STATUS_INVITED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant was invited to the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_NO_ANSWER">STATUS_NO_ANSWER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant did not answer the phone.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_REMOVED">STATUS_REMOVED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant has been removed from the call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#STATUS_RINGING">STATUS_RINGING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The participant's phone is ringing.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.Status"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Status.html" title="interface in com.ibm.collaboration.realtime.telephony">Status</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Status.html#STATUS_CONNECTED">STATUS_CONNECTED</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Status.html#STATUS_ERROR">STATUS_ERROR</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Status.html#STATUS_UNKNOWN">STATUS_UNKNOWN</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#getReason()">getReason</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the reason code associated with the participant status.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.Status"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Status.html" title="interface in com.ibm.collaboration.realtime.telephony">Status</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Status.html#getDetails()">getDetails</A>, <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Status.html#getStatus()">getStatus</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="REASON_SERVICE_TERMINATED"><!-- --></A><H3>
+REASON_SERVICE_TERMINATED</H3>
+<PRE>
+static final java.lang.String <B>REASON_SERVICE_TERMINATED</B></PRE>
+<DL>
+<DD>The call service was terminated because the user logged out or the service is no longer available.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.REASON_SERVICE_TERMINATED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="REASON_CALL_TERMINATED"><!-- --></A><H3>
+REASON_CALL_TERMINATED</H3>
+<PRE>
+static final java.lang.String <B>REASON_CALL_TERMINATED</B></PRE>
+<DL>
+<DD>The call was terminated.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.REASON_CALL_TERMINATED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="REASON_CALL_TRANSFERRED"><!-- --></A><H3>
+REASON_CALL_TRANSFERRED</H3>
+<PRE>
+static final java.lang.String <B>REASON_CALL_TRANSFERRED</B></PRE>
+<DL>
+<DD>The call was transferred to another participant.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.REASON_CALL_TRANSFERRED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="REASON_CALL_TRANSFERRED_TO_DEVICE"><!-- --></A><H3>
+REASON_CALL_TRANSFERRED_TO_DEVICE</H3>
+<PRE>
+static final java.lang.String <B>REASON_CALL_TRANSFERRED_TO_DEVICE</B></PRE>
+<DL>
+<DD>The call was transferred to another telephone device for the same participant.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.REASON_CALL_TRANSFERRED_TO_DEVICE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="REASON_CALL_TRANSFERRED_ACTIVE"><!-- --></A><H3>
+REASON_CALL_TRANSFERRED_ACTIVE</H3>
+<PRE>
+static final java.lang.String <B>REASON_CALL_TRANSFERRED_ACTIVE</B></PRE>
+<DL>
+<DD>The call was transferred to another participant after the call was accepted by a participant.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime Unified Telephony 8.0, Sametime 8.5</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.REASON_CALL_TRANSFERRED_ACTIVE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="REASON_HUNG_UP"><!-- --></A><H3>
+REASON_HUNG_UP</H3>
+<PRE>
+static final java.lang.String <B>REASON_HUNG_UP</B></PRE>
+<DL>
+<DD>The participant hung up.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.REASON_HUNG_UP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="REASON_NOT_REACHABLE"><!-- --></A><H3>
+REASON_NOT_REACHABLE</H3>
+<PRE>
+static final java.lang.String <B>REASON_NOT_REACHABLE</B></PRE>
+<DL>
+<DD>The participant is not reachable for some other reason.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.REASON_NOT_REACHABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_ADDED"><!-- --></A><H3>
+STATUS_ADDED</H3>
+<PRE>
+static final java.lang.String <B>STATUS_ADDED</B></PRE>
+<DL>
+<DD>The participant has been added to the call, but not yet connected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_ADDED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_BUSY"><!-- --></A><H3>
+STATUS_BUSY</H3>
+<PRE>
+static final java.lang.String <B>STATUS_BUSY</B></PRE>
+<DL>
+<DD>The participant's phone is busy.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_BUSY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_CONNECTING"><!-- --></A><H3>
+STATUS_CONNECTING</H3>
+<PRE>
+static final java.lang.String <B>STATUS_CONNECTING</B></PRE>
+<DL>
+<DD>The participant is in the process of being connected to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_CONNECTING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_DISCONNECTED"><!-- --></A><H3>
+STATUS_DISCONNECTED</H3>
+<PRE>
+static final java.lang.String <B>STATUS_DISCONNECTED</B></PRE>
+<DL>
+<DD>The participant is disconnected. Use <A HREF="../../../../../com/ibm/collaboration/realtime/telephony/ParticipantStatus.html#getReason()"><CODE>getReason()</CODE></A> to determine the reason.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_DISCONNECTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_INVITE_ACCEPTED"><!-- --></A><H3>
+STATUS_INVITE_ACCEPTED</H3>
+<PRE>
+static final java.lang.String <B>STATUS_INVITE_ACCEPTED</B></PRE>
+<DL>
+<DD>The participant accepted the invitation to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_INVITE_ACCEPTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_INVITE_CANCELLED"><!-- --></A><H3>
+STATUS_INVITE_CANCELLED</H3>
+<PRE>
+static final java.lang.String <B>STATUS_INVITE_CANCELLED</B></PRE>
+<DL>
+<DD>The participant's invitation was cancelled by the inviter.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_INVITE_CANCELLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_INVITE_DECLINED"><!-- --></A><H3>
+STATUS_INVITE_DECLINED</H3>
+<PRE>
+static final java.lang.String <B>STATUS_INVITE_DECLINED</B></PRE>
+<DL>
+<DD>The participant declined the invitation to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_INVITE_DECLINED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_INVITE_ERROR"><!-- --></A><H3>
+STATUS_INVITE_ERROR</H3>
+<PRE>
+static final java.lang.String <B>STATUS_INVITE_ERROR</B></PRE>
+<DL>
+<DD>The participant could not be invited.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_INVITE_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_INVITE_NO_RESPONSE"><!-- --></A><H3>
+STATUS_INVITE_NO_RESPONSE</H3>
+<PRE>
+static final java.lang.String <B>STATUS_INVITE_NO_RESPONSE</B></PRE>
+<DL>
+<DD>The participant did not respond to the invitation to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_INVITE_NO_RESPONSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_INVITED"><!-- --></A><H3>
+STATUS_INVITED</H3>
+<PRE>
+static final java.lang.String <B>STATUS_INVITED</B></PRE>
+<DL>
+<DD>The participant was invited to the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_INVITED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_NO_ANSWER"><!-- --></A><H3>
+STATUS_NO_ANSWER</H3>
+<PRE>
+static final java.lang.String <B>STATUS_NO_ANSWER</B></PRE>
+<DL>
+<DD>The participant did not answer the phone.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_NO_ANSWER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_REMOVED"><!-- --></A><H3>
+STATUS_REMOVED</H3>
+<PRE>
+static final java.lang.String <B>STATUS_REMOVED</B></PRE>
+<DL>
+<DD>The participant has been removed from the call.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_REMOVED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STATUS_RINGING"><!-- --></A><H3>
+STATUS_RINGING</H3>
+<PRE>
+static final java.lang.String <B>STATUS_RINGING</B></PRE>
+<DL>
+<DD>The participant's phone is ringing.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.ParticipantStatus.STATUS_RINGING">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getReason()"><!-- --></A><H3>
+getReason</H3>
+<PRE>
+java.lang.String <B>getReason</B>()</PRE>
+<DL>
+<DD>Returns the reason code associated with the participant status.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Status reason, null if not available.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/Participant.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/ibm/collaboration/realtime/telephony/PropertyNames.html" title="interface in com.ibm.collaboration.realtime.telephony"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/ibm/collaboration/realtime/telephony/ParticipantStatus.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ParticipantStatus.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright IBM Corp. 2010, 2014  All Rights Reserved.              -->
+
+<plugin id="com.ibm.meeting.compliance.sample"
+	name="Sametime Meetings Sample Compliance Plug-ins" version="1.0.0"
+	provider-name="IBM">
+	<extension point="com.ibm.meeting.compliance.plugin.user_join_handler"
+		id="sampleJoinHandlerPlugin" name="Sample Join Handler">
+		<action
+			class="com.ibm.meeting.compliance.sample.SampleUserHandler">
+		</action>
+	</extension>
+	<extension point="com.ibm.meeting.compliance.plugin.poll_sent_handler"
+		id="samplePollSentHandlerPlugin" name="Sample Poll Sent Handler">
+		<action
+			class="com.ibm.meeting.compliance.sample.SamplePollSentHandler">
+		</action>
+	</extension>
+	<extension point="com.ibm.meeting.compliance.plugin.chat_sent_handler"
+		id="sampleChatSentHandlerPlugin" name="Sample Chat Sent Handler">
+		<action
+			class="com.ibm.meeting.compliance.sample.SampleChatSentHandler">
+		</action>
+	</extension>
+	<extension point="com.ibm.meeting.compliance.plugin.library_event_handler"
+		id="sampleLibraryEventHandlerPlugin" name="Sample Library Event Handler">
+		<action
+			class="com.ibm.meeting.compliance.sample.SampleLibraryEventHandler">
+		</action>
+	</extension>
+	<requires>
+		<import plugin="com.ibm.collaboration.realtime.plugin" />
+	</requires>
+</plugin>

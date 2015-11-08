@@ -1,0 +1,465 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>Im</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Im";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../com/lotus/sametime/im/ImAdapter.html" title="class in com.lotus.sametime.im"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/im/Im.html" target="_top">Frames</a></li>
+<li><a href="Im.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.im</div>
+<h2 title="Class Im" class="title">Class Im</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.im.Im</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">Im</span>
+extends java.lang.Object</pre>
+<div class="block">Represents a single Instant Message (IM) session to a specified user.
+ Enables sending and receiving a message to/from the user on the other side
+ of the session.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#addImListener(com.lotus.sametime.im.ImListener)">addImListener</a></strong>(<a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a>&nbsp;listener)</code>
+<div class="block">Adds the specified IM listener to receive IM events.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#close(int)">close</a></strong>(int&nbsp;reason)</code>
+<div class="block">Closes the IM session.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#getAcceptingSideStatus()">getAcceptingSideStatus</a></strong>()</code>
+<div class="block">Gets the status of the party that accepted the session.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/community/Channel.html" title="class in com.lotus.sametime.community">Channel</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#getChannel()">getChannel</a></strong>()</code>
+<div class="block">Retrieves IM channel</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#getEncLevel()">getEncLevel</a></strong>()</code>
+<div class="block">Gets the IM session encryption level.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#getPartner()">getPartner</a></strong>()</code>
+<div class="block">Gets the IM partner user object.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#getPartnerDetails()">getPartnerDetails</a></strong>()</code>
+<div class="block">Gets the IM partner details.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#getToUser()">getToUser</a></strong>()</code>
+<div class="block">Retrieves toUser object</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#getType()">getType</a></strong>()</code>
+<div class="block">Gets the IM type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#isOpen()">isOpen</a></strong>()</code>
+<div class="block">Whether the IM channel is open.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#open()">open</a></strong>()</code>
+<div class="block">Opens the IM session.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#removeImListener(com.lotus.sametime.im.ImListener)">removeImListener</a></strong>(<a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a>&nbsp;listener)</code>
+<div class="block">Removes the specified IM listener so that it no longer receives IM events.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#sendData(boolean, int, int, byte[])">sendData</a></strong>(boolean&nbsp;encrypted,
+        int&nbsp;dataType,
+        int&nbsp;dataSubType,
+        byte[]&nbsp;data)</code>
+<div class="block">Sends data to the other party.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/im/Im.html#sendText(boolean, java.lang.String)">sendText</a></strong>(boolean&nbsp;encrypted,
+        java.lang.String&nbsp;text)</code>
+<div class="block">Sends text to the other party.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getToUser()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getToUser</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;getToUser()</pre>
+<div class="block">Retrieves toUser object</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>STUser object describing a user the IM is intended for</dd></dl>
+</li>
+</ul>
+<a name="getChannel()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getChannel</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/community/Channel.html" title="class in com.lotus.sametime.community">Channel</a>&nbsp;getChannel()</pre>
+<div class="block">Retrieves IM channel</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Channel object a given IM is sent on</dd></dl>
+</li>
+</ul>
+<a name="addImListener(com.lotus.sametime.im.ImListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addImListener</h4>
+<pre>public&nbsp;void&nbsp;addImListener(<a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a>&nbsp;listener)</pre>
+<div class="block">Adds the specified IM listener to receive IM events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be added.</dd></dl>
+</li>
+</ul>
+<a name="removeImListener(com.lotus.sametime.im.ImListener)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeImListener</h4>
+<pre>public&nbsp;void&nbsp;removeImListener(<a href="../../../../com/lotus/sametime/im/ImListener.html" title="interface in com.lotus.sametime.im">ImListener</a>&nbsp;listener)</pre>
+<div class="block">Removes the specified IM listener so that it no longer receives IM events.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - The listener to be removed.</dd></dl>
+</li>
+</ul>
+<a name="open()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>open</h4>
+<pre>public&nbsp;void&nbsp;open()</pre>
+<div class="block">Opens the IM session.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/im/ImListener.html#imOpened(com.lotus.sametime.im.ImEvent)"><code>ImListener.imOpened(com.lotus.sametime.im.ImEvent)</code></a>, 
+<a href="../../../../com/lotus/sametime/im/ImListener.html#openImFailed(com.lotus.sametime.im.ImEvent)"><code>ImListener.openImFailed(com.lotus.sametime.im.ImEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="close(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>close</h4>
+<pre>public&nbsp;void&nbsp;close(int&nbsp;reason)</pre>
+<div class="block">Closes the IM session.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>reason</code> - The reason for closing the session.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/im/ImListener.html#imClosed(com.lotus.sametime.im.ImEvent)"><code>ImListener.imClosed(com.lotus.sametime.im.ImEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="sendText(boolean, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendText</h4>
+<pre>public&nbsp;void&nbsp;sendText(boolean&nbsp;encrypted,
+            java.lang.String&nbsp;text)</pre>
+<div class="block">Sends text to the other party.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>encrypted</code> - Whether or not the text should be encrypted.
+                   True if encrypted; false otherwise. Not relevant if the
+                   IM session was not set to be encrypted.</dd><dd><code>text</code> - The text to be sent.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/im/ImListener.html#textReceived(com.lotus.sametime.im.ImEvent)"><code>ImListener.textReceived(com.lotus.sametime.im.ImEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="sendData(boolean, int, int, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendData</h4>
+<pre>public&nbsp;void&nbsp;sendData(boolean&nbsp;encrypted,
+            int&nbsp;dataType,
+            int&nbsp;dataSubType,
+            byte[]&nbsp;data)</pre>
+<div class="block">Sends data to the other party.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>encrypted</code> - Whether or not the text should be encrypted.
+                   True if encrypted; false otherwise. Not relevant if the
+                   IM session was not set to be encrypted.</dd><dd><code>dataType</code> - The type of the data.</dd><dd><code>dataSubType</code> - The subtype of the data.</dd><dd><code>data</code> - The message data.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../com/lotus/sametime/im/ImListener.html#dataReceived(com.lotus.sametime.im.ImEvent)"><code>ImListener.dataReceived(com.lotus.sametime.im.ImEvent)</code></a></dd></dl>
+</li>
+</ul>
+<a name="isOpen()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOpen</h4>
+<pre>public&nbsp;boolean&nbsp;isOpen()</pre>
+<div class="block">Whether the IM channel is open.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>True if the IM is open, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="getPartnerDetails()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPartnerDetails</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/core/types/STUserInstance.html" title="class in com.lotus.sametime.core.types">STUserInstance</a>&nbsp;getPartnerDetails()</pre>
+<div class="block">Gets the IM partner details.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The IM partner details. Null is returned if the session
+                   is not currently open.</dd></dl>
+</li>
+</ul>
+<a name="getPartner()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPartner</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/core/types/STUser.html" title="class in com.lotus.sametime.core.types">STUser</a>&nbsp;getPartner()</pre>
+<div class="block">Gets the IM partner user object.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The IM partner user object.</dd></dl>
+</li>
+</ul>
+<a name="getAcceptingSideStatus()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAcceptingSideStatus</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/core/types/STUserStatus.html" title="class in com.lotus.sametime.core.types">STUserStatus</a>&nbsp;getAcceptingSideStatus()</pre>
+<div class="block">Gets the status of the party that accepted the session. This status is set
+ when the session is created.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Status of the party that accepted the session.</dd></dl>
+</li>
+</ul>
+<a name="getType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getType</h4>
+<pre>public&nbsp;int&nbsp;getType()</pre>
+<div class="block">Gets the IM type.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The IM type.</dd></dl>
+</li>
+</ul>
+<a name="getEncLevel()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getEncLevel</h4>
+<pre>public&nbsp;<a href="../../../../com/lotus/sametime/core/constants/EncLevel.html" title="class in com.lotus.sametime.core.constants">EncLevel</a>&nbsp;getEncLevel()</pre>
+<div class="block">Gets the IM session encryption level.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The IM's encryption level.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../com/lotus/sametime/im/ImAdapter.html" title="class in com.lotus.sametime.im"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/im/Im.html" target="_top">Frames</a></li>
+<li><a href="Im.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

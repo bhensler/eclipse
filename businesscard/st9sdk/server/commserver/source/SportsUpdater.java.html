@@ -1,0 +1,424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>SportsUpdater (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">SportsUpdater</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.*;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.*;
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.connection.*;
+<A NAME="16"><A>
+<A NAME="17"><A><FONT ID="Import">import</FONT> java.util.Vector;
+<A NAME="18"><A><FONT ID="Import">import</FONT> java.util.Enumeration;
+<A NAME="19"><A><FONT ID="Import">import</FONT> java.util.Random;
+<A NAME="20"><A>
+<A NAME="21"><A><FONT ID="FormalComment">/**
+<A NAME="22"><A> * SportsUpdater: The sports updater server application
+<A NAME="23"><A> */</FONT>
+<A NAME="24"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> SportsUpdater <FONT ID="Extends">extends</FONT> Thread
+<A NAME="25"><A>    <FONT ID="Implements">implements</FONT>  LoginListener, 
+<A NAME="26"><A>                ChannelServiceListener
+<A NAME="27"><A>{
+<A NAME="28"><A>    <FONT ID="SingleLineComment">// Message types
+<A NAME="29"><A></FONT>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Short">short</FONT> MSG_AVAILABLE_MATCHES = <FONT ID="IntegerLiteral">1</FONT>;
+<A NAME="30"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Short">short</FONT> MSG_SUBSCRIBE_2_MATCH = <FONT ID="IntegerLiteral">2</FONT>;
+<A NAME="31"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Short">short</FONT> MSG_UPDATE_MATCH = <FONT ID="IntegerLiteral">3</FONT>;
+<A NAME="32"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Short">short</FONT> MSG_UNSUBSCRIBE_FROM_MATCH = <FONT ID="IntegerLiteral">4</FONT>;   
+<A NAME="33"><A>    
+<A NAME="34"><A>    <FONT ID="FormalComment">/**
+<A NAME="35"><A>     * Our service type.
+<A NAME="36"><A>     */</FONT>
+<A NAME="37"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> SPORTS_SA_SERVICE_TYPE = <FONT ID="IntegerLiteral">0x64</FONT>;
+<A NAME="38"><A>    
+<A NAME="39"><A>    <FONT ID="FormalComment">/**
+<A NAME="40"><A>     * The session object.
+<A NAME="41"><A>     */</FONT>
+<A NAME="42"><A>    <FONT ID="Private">private</FONT> STSession m_session;
+<A NAME="43"><A>
+<A NAME="44"><A>     <FONT ID="FormalComment">/**
+<A NAME="45"><A>     * The server application service.
+<A NAME="46"><A>     */</FONT>
+<A NAME="47"><A>    <FONT ID="Private">private</FONT> ServerAppService m_saService;
+<A NAME="48"><A>        
+<A NAME="49"><A>    <FONT ID="FormalComment">/**
+<A NAME="50"><A>     * The matches list
+<A NAME="51"><A>     */</FONT>
+<A NAME="52"><A>    Vector m_matches = <FONT ID="New">new</FONT> Vector();
+<A NAME="53"><A>    
+<A NAME="54"><A>    <FONT ID="FormalComment">/**
+<A NAME="55"><A>     * The handles user list
+<A NAME="56"><A>     */</FONT>
+<A NAME="57"><A>    Vector m_users = <FONT ID="New">new</FONT> Vector();
+<A NAME="58"><A>    
+<A NAME="59"><A>    <FONT ID="FormalComment">/**
+<A NAME="60"><A>     *  Random to make some changes in the matches 
+<A NAME="61"><A>     */</FONT>
+<A NAME="62"><A>    Random m_rnd = <FONT ID="New">new</FONT> Random();
+<A NAME="63"><A>
+<A NAME="64"><A>    
+<A NAME="65"><A>    <FONT ID="FormalComment">/**
+<A NAME="66"><A>     * Initialize all variables
+<A NAME="67"><A>     */</FONT>
+<A NAME="68"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> initialize(String serverName)
+<A NAME="69"><A>    {
+<A NAME="70"><A>        <FONT ID="SingleLineComment">// init the sametime session and objects
+<A NAME="71"><A></FONT>        <FONT ID="Try">try</FONT>
+<A NAME="72"><A>        {
+<A NAME="73"><A>            <FONT ID="SingleLineComment">// First, we create a new session, that belongs uniquely to us.
+<A NAME="74"><A></FONT>            m_session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">""</FONT> + <FONT ID="This">this</FONT> );
+<A NAME="75"><A>            
+<A NAME="76"><A>            <FONT ID="SingleLineComment">// Load components, we only need ServerAppService for login and channel
+<A NAME="77"><A></FONT>            String [] compNames  = { ServerAppService.COMP_NAME };
+<A NAME="78"><A>            m_session.loadComponents( compNames );  
+<A NAME="79"><A>            m_saService = (ServerAppService) m_session.getCompApi
+<A NAME="80"><A>                (ServerAppService.COMP_NAME);
+<A NAME="81"><A>            
+<A NAME="82"><A>            <FONT ID="SingleLineComment">// start the session
+<A NAME="83"><A></FONT>            m_session.start();  
+<A NAME="84"><A>        }
+<A NAME="85"><A>        <FONT ID="Catch">catch</FONT> (DuplicateObjectException e)
+<A NAME="86"><A>        {
+<A NAME="87"><A>            System.out.println(<FONT ID="StringLiteral">"STSession or Components created twice."</FONT>);
+<A NAME="88"><A>            e.printStackTrace();
+<A NAME="89"><A>            System.exit(<FONT ID="IntegerLiteral">1</FONT>);
+<A NAME="90"><A>        }
+<A NAME="91"><A>                
+<A NAME="92"><A>        <FONT ID="SingleLineComment">// Now we can login
+<A NAME="93"><A></FONT>        login(serverName);      
+<A NAME="94"><A>    }
+<A NAME="95"><A>    
+<A NAME="96"><A>    <FONT ID="FormalComment">/**
+<A NAME="97"><A>     * login to Sametime as server application
+<A NAME="98"><A>     */</FONT>
+<A NAME="99"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> login(String serverName)
+<A NAME="100"><A>    {
+<A NAME="101"><A>        <FONT ID="SingleLineComment">// Add ourselves as login listener to the community 
+<A NAME="102"><A></FONT>        m_saService.addLoginListener( <FONT ID="This">this</FONT>);        
+<A NAME="103"><A>        
+<A NAME="104"><A>        <FONT ID="SingleLineComment">// Login to sametime as a server application, pass our ServiceType
+<A NAME="105"><A></FONT>        <FONT ID="Int">int</FONT>[] supportedServices = { SPORTS_SA_SERVICE_TYPE };
+<A NAME="106"><A>
+<A NAME="107"><A>        <FONT ID="SingleLineComment">// Server applications login directly to the server, and not through
+<A NAME="108"><A></FONT>        <FONT ID="SingleLineComment">// the mux. So we can't use the default port.
+<A NAME="109"><A></FONT>        Connection[] connections = {
+<A NAME="110"><A>            <FONT ID="New">new</FONT> SocketConnection(<FONT ID="IntegerLiteral">1516</FONT>, <FONT ID="IntegerLiteral">17000</FONT>),
+<A NAME="111"><A>        };
+<A NAME="112"><A>        
+<A NAME="113"><A>        m_saService.setConnectivity(connections);
+<A NAME="114"><A>        <FONT ID="Short">short</FONT> loginType = STUserInstance.LT_SERVER_APP;
+<A NAME="115"><A>        m_saService.loginAsServerApp( serverName, loginType, 
+<A NAME="116"><A>                                <FONT ID="StringLiteral">"Sports Updater"</FONT>, supportedServices);   
+<A NAME="117"><A>    }
+<A NAME="118"><A>    
+<A NAME="119"><A>    
+<A NAME="120"><A>    <FONT ID="SingleLineComment">//
+<A NAME="121"><A></FONT>    <FONT ID="SingleLineComment">// Implementing LoginListener.
+<A NAME="122"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="123"><A></FONT>
+<A NAME="124"><A>    <FONT ID="FormalComment">/**
+<A NAME="125"><A>     * Indicates that we were successfully logged in to the Sametime community.
+<A NAME="126"><A>     * 
+<A NAME="127"><A>     * @param            event The event object.
+<A NAME="128"><A>     * @see              LoginEvent#getCommunity
+<A NAME="129"><A>     */</FONT>
+<A NAME="130"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event)  
+<A NAME="131"><A>    {
+<A NAME="132"><A>        <FONT ID="SingleLineComment">// Read the matches database
+<A NAME="133"><A></FONT>        readMatchesDB();
+<A NAME="134"><A>        
+<A NAME="135"><A>        <FONT ID="SingleLineComment">// Start the updating thread
+<A NAME="136"><A></FONT>        start();
+<A NAME="137"><A>        
+<A NAME="138"><A>        <FONT ID="SingleLineComment">// Get a ref to the channel service
+<A NAME="139"><A></FONT>        ChannelService channelService =
+<A NAME="140"><A>            (ChannelService)m_session.getCompApi(ChannelService.COMP_NAME);
+<A NAME="141"><A>        channelService.addChannelServiceListener(<FONT ID="This">this</FONT>);
+<A NAME="142"><A>    }
+<A NAME="143"><A>    
+<A NAME="144"><A>    <FONT ID="FormalComment">/**
+<A NAME="145"><A>     * Indicates that we were successfully logged out of the Sametime community,
+<A NAME="146"><A>     * or a login request was refused.
+<A NAME="147"><A>     * 
+<A NAME="148"><A>     * @param            event The event object.
+<A NAME="149"><A>     * @see              LoginEvent#getReason
+<A NAME="150"><A>     * @see              LoginEvent#getCommunity
+<A NAME="151"><A>     */</FONT>
+<A NAME="152"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event) 
+<A NAME="153"><A>    {   
+<A NAME="154"><A>        System.out.println(<FONT ID="StringLiteral">"Loged out, reason = "</FONT> + event.getReason() );
+<A NAME="155"><A>    }
+<A NAME="156"><A>    
+<A NAME="157"><A>    <FONT ID="SingleLineComment">//
+<A NAME="158"><A></FONT>    <FONT ID="SingleLineComment">// Channel Service Listener.
+<A NAME="159"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="160"><A></FONT>    <FONT ID="FormalComment">/**
+<A NAME="161"><A>     * A channel was received. If a 'channel received' notification is not
+<A NAME="162"><A>     * handled by any listener (handling means accepting it, closing it,
+<A NAME="163"><A>     * or explicitly putting it in a pending state) it will be closed, to
+<A NAME="164"><A>     * make sure we have no zombie channels.
+<A NAME="165"><A>     *
+<A NAME="166"><A>     * @param event The event object.
+<A NAME="167"><A>     */</FONT>
+<A NAME="168"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> channelReceived(ChannelEvent event)
+<A NAME="169"><A>    {
+<A NAME="170"><A>        
+<A NAME="171"><A>        <FONT ID="If">if</FONT> (event.getChannel().getServiceType() == SPORTS_SA_SERVICE_TYPE) {<FONT ID="SingleLineComment">// SPR #WBLU7VR93B
+<A NAME="172"><A></FONT>            <FONT ID="SingleLineComment">// Another user wants to subscribe, 
+<A NAME="173"><A></FONT>            <FONT ID="SingleLineComment">// Create a user handler for this user
+<A NAME="174"><A></FONT>            <A HREF="UserHandler.java.html">UserHandler</A> user = <FONT ID="New">new</FONT> <A HREF="UserHandler.java.html">UserHandler</A>(<FONT ID="This">this</FONT>, event);
+<A NAME="175"><A>       
+<A NAME="176"><A>            <FONT ID="SingleLineComment">// Add it to our list
+<A NAME="177"><A></FONT>            addUserHandler(user);
+<A NAME="178"><A>        }
+<A NAME="179"><A>    }
+<A NAME="180"><A>    
+<A NAME="181"><A>    
+<A NAME="182"><A>
+<A NAME="183"><A>    <FONT ID="FormalComment">/**
+<A NAME="184"><A>     * Read the matches from a database (hord coded in the sample)
+<A NAME="185"><A>     */</FONT>
+<A NAME="186"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> readMatchesDB()
+<A NAME="187"><A>    {
+<A NAME="188"><A>        <FONT ID="SingleLineComment">// In a real world application
+<A NAME="189"><A></FONT>        <FONT ID="SingleLineComment">// This is where we would probably create the Match database
+<A NAME="190"><A></FONT>        <FONT ID="SingleLineComment">// after reading it from the web (using webservices for example)
+<A NAME="191"><A></FONT>        <FONT ID="SingleLineComment">// But, in order to simplify this sample we'll just create the 
+<A NAME="192"><A></FONT>        <FONT ID="SingleLineComment">//      matches hard coded
+<A NAME="193"><A></FONT>        <A HREF="Match.java.html">Match</A> m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="194"><A>        m.setID(<FONT ID="StringLiteral">"01"</FONT>);
+<A NAME="195"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Philadelphia"</FONT>);
+<A NAME="196"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Miami"</FONT>);
+<A NAME="197"><A>        m_matches.addElement(m);
+<A NAME="198"><A>        
+<A NAME="199"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="200"><A>        m.setID(<FONT ID="StringLiteral">"02"</FONT>);
+<A NAME="201"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"New Jersay"</FONT>);
+<A NAME="202"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Indiana"</FONT>);
+<A NAME="203"><A>        m_matches.addElement(m);
+<A NAME="204"><A>                
+<A NAME="205"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="206"><A>        m.setID(<FONT ID="StringLiteral">"03"</FONT>);
+<A NAME="207"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Houston"</FONT>);
+<A NAME="208"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"San Antonio"</FONT>);
+<A NAME="209"><A>        m_matches.addElement(m);
+<A NAME="210"><A>        
+<A NAME="211"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="212"><A>        m.setID(<FONT ID="StringLiteral">"04"</FONT>);
+<A NAME="213"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Phoenix"</FONT>);
+<A NAME="214"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Seattle"</FONT>);
+<A NAME="215"><A>        m_matches.addElement(m);
+<A NAME="216"><A>        
+<A NAME="217"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="218"><A>        m.setID(<FONT ID="StringLiteral">"05"</FONT>);
+<A NAME="219"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Chicago"</FONT>);
+<A NAME="220"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Denver"</FONT>);
+<A NAME="221"><A>        m_matches.addElement(m);m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="222"><A>        
+<A NAME="223"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="224"><A>        m.setID(<FONT ID="StringLiteral">"06"</FONT>);
+<A NAME="225"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Boston"</FONT>);
+<A NAME="226"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Orlando"</FONT>);
+<A NAME="227"><A>        m_matches.addElement(m);
+<A NAME="228"><A>        
+<A NAME="229"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="230"><A>        m.setID(<FONT ID="StringLiteral">"07"</FONT>);
+<A NAME="231"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"New York"</FONT>);
+<A NAME="232"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Washington"</FONT>);
+<A NAME="233"><A>        m_matches.addElement(m);
+<A NAME="234"><A>        
+<A NAME="235"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="236"><A>        m.setID(<FONT ID="StringLiteral">"08"</FONT>);
+<A NAME="237"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Milwaukee"</FONT>);
+<A NAME="238"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Detroit"</FONT>);
+<A NAME="239"><A>        m_matches.addElement(m);
+<A NAME="240"><A>
+<A NAME="241"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="242"><A>        m.setID(<FONT ID="StringLiteral">"09"</FONT>);
+<A NAME="243"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Toronto"</FONT>);
+<A NAME="244"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Charlote"</FONT>);
+<A NAME="245"><A>        m_matches.addElement(m);
+<A NAME="246"><A>
+<A NAME="247"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="248"><A>        m.setID(<FONT ID="StringLiteral">"10"</FONT>);
+<A NAME="249"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Atlanta"</FONT>);
+<A NAME="250"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Cleveland"</FONT>);
+<A NAME="251"><A>        m_matches.addElement(m);
+<A NAME="252"><A>
+<A NAME="253"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="254"><A>        m.setID(<FONT ID="StringLiteral">"11"</FONT>);
+<A NAME="255"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Minnesota"</FONT>);
+<A NAME="256"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Dallas"</FONT>);
+<A NAME="257"><A>        m_matches.addElement(m);
+<A NAME="258"><A>        
+<A NAME="259"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="260"><A>        m.setID(<FONT ID="StringLiteral">"12"</FONT>);
+<A NAME="261"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Utah"</FONT>);
+<A NAME="262"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Memphis"</FONT>);
+<A NAME="263"><A>        m_matches.addElement(m);
+<A NAME="264"><A>
+<A NAME="265"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="266"><A>        m.setID(<FONT ID="StringLiteral">"13"</FONT>);
+<A NAME="267"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"LA Lakers"</FONT>);
+<A NAME="268"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Sacramento"</FONT>);
+<A NAME="269"><A>        m_matches.addElement(m);
+<A NAME="270"><A>        
+<A NAME="271"><A>        m = <FONT ID="New">new</FONT> <A HREF="Match.java.html">Match</A>();
+<A NAME="272"><A>        m.setID(<FONT ID="StringLiteral">"14"</FONT>);
+<A NAME="273"><A>        m.setHomeTeamName(<FONT ID="StringLiteral">"Golden State"</FONT>);
+<A NAME="274"><A>        m.setVisitorsTeamName(<FONT ID="StringLiteral">"Portland"</FONT>);
+<A NAME="275"><A>        m_matches.addElement(m);
+<A NAME="276"><A>    }
+<A NAME="277"><A>    
+<A NAME="278"><A>    <FONT ID="FormalComment">/**
+<A NAME="279"><A>     * Get current matches
+<A NAME="280"><A>     */</FONT>
+<A NAME="281"><A>    <FONT ID="Public">public</FONT> Vector getMatches()
+<A NAME="282"><A>    {                        
+<A NAME="283"><A>        <FONT ID="SingleLineComment">// Return a clone to the real matches
+<A NAME="284"><A></FONT>        <FONT ID="Return">return</FONT> (Vector)m_matches.clone();
+<A NAME="285"><A>    }
+<A NAME="286"><A>    
+<A NAME="287"><A>    <FONT ID="FormalComment">/**
+<A NAME="288"><A>     * The updating thread
+<A NAME="289"><A>     */</FONT>
+<A NAME="290"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> run() 
+<A NAME="291"><A>    {
+<A NAME="292"><A>        <FONT ID="While">while</FONT> ( <FONT ID="True">true</FONT> )
+<A NAME="293"><A>        {
+<A NAME="294"><A>            <FONT ID="SingleLineComment">// Check for changes in the database
+<A NAME="295"><A></FONT>            refresh();
+<A NAME="296"><A>
+<A NAME="297"><A>            <FONT ID="SingleLineComment">// go to sleep for a while
+<A NAME="298"><A></FONT>            <FONT ID="Try">try</FONT> 
+<A NAME="299"><A>            {
+<A NAME="300"><A>                sleep(<FONT ID="IntegerLiteral">1000</FONT>);
+<A NAME="301"><A>            }
+<A NAME="302"><A>            <FONT ID="Catch">catch</FONT>( InterruptedException exc)
+<A NAME="303"><A>            {
+<A NAME="304"><A>            }
+<A NAME="305"><A>        }
+<A NAME="306"><A>    }
+<A NAME="307"><A>    
+<A NAME="308"><A>    <FONT ID="FormalComment">/**
+<A NAME="309"><A>     * Check for changes in the matches database (and send updates if needed)
+<A NAME="310"><A>     */</FONT>
+<A NAME="311"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> refresh()
+<A NAME="312"><A>    {
+<A NAME="313"><A>        <FONT ID="SingleLineComment">// In a real world application
+<A NAME="314"><A></FONT>        <FONT ID="SingleLineComment">// This is where we would updated the matches by reading the current 
+<A NAME="315"><A></FONT>        <FONT ID="SingleLineComment">//  score, match status etc from the web
+<A NAME="316"><A></FONT>        <FONT ID="SingleLineComment">// to simplify this sample we will just use a random refresh
+<A NAME="317"><A></FONT>        <A HREF="Match.java.html">Match</A> m;
+<A NAME="318"><A>        Enumeration enumeration = m_matches.elements();     
+<A NAME="319"><A>        <FONT ID="While">while</FONT>(enumeration.hasMoreElements())
+<A NAME="320"><A>        {
+<A NAME="321"><A>            m = (<A HREF="Match.java.html">Match</A>) enumeration.nextElement();
+<A NAME="322"><A>            refreshMatch(m);
+<A NAME="323"><A>        }
+<A NAME="324"><A>    }
+<A NAME="325"><A>
+<A NAME="326"><A>    <FONT ID="FormalComment">/**
+<A NAME="327"><A>     * Check for changes in the match and send update if needed
+<A NAME="328"><A>     */</FONT>
+<A NAME="329"><A>    <FONT ID="Private">private</FONT> <FONT ID="Void">void</FONT> refreshMatch(<A HREF="Match.java.html">Match</A> m)
+<A NAME="330"><A>    {
+<A NAME="331"><A>        
+<A NAME="332"><A>        <FONT ID="SingleLineComment">// Do we want to change this match at all
+<A NAME="333"><A></FONT>        <FONT ID="If">if</FONT> ( (m_rnd.nextInt() % <FONT ID="IntegerLiteral">3</FONT>) != <FONT ID="IntegerLiteral">0</FONT> )
+<A NAME="334"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="335"><A>        
+<A NAME="336"><A>        <FONT ID="SingleLineComment">// Randomally add between zero to three points to home team
+<A NAME="337"><A></FONT>        <FONT ID="If">if</FONT> ( (m_rnd.nextInt() % <FONT ID="IntegerLiteral">3</FONT> == <FONT ID="IntegerLiteral">0</FONT> ) )
+<A NAME="338"><A>            m.setHomeTeamScore( m.getHomeTeamScore() + <FONT ID="IntegerLiteral">2</FONT> );
+<A NAME="339"><A>        <FONT ID="Else">else</FONT> <FONT ID="If">if</FONT> ( (m_rnd.nextInt() % <FONT ID="IntegerLiteral">5</FONT> == <FONT ID="IntegerLiteral">0</FONT> ) )
+<A NAME="340"><A>            m.setHomeTeamScore( m.getHomeTeamScore() + <FONT ID="IntegerLiteral">1</FONT> );
+<A NAME="341"><A>        <FONT ID="Else">else</FONT> <FONT ID="If">if</FONT> ( (m_rnd.nextInt() % <FONT ID="IntegerLiteral">5</FONT> == <FONT ID="IntegerLiteral">0</FONT> ) )
+<A NAME="342"><A>            m.setHomeTeamScore( m.getHomeTeamScore() + <FONT ID="IntegerLiteral">3</FONT> );
+<A NAME="343"><A>
+<A NAME="344"><A>        <FONT ID="SingleLineComment">// Randomally add between zero to three points to visitors
+<A NAME="345"><A></FONT>        <FONT ID="If">if</FONT> ( (m_rnd.nextInt() % <FONT ID="IntegerLiteral">3</FONT> == <FONT ID="IntegerLiteral">0</FONT> ) )
+<A NAME="346"><A>            m.setVisitorsTeamScore( m.getVisitorsTeamScore() + <FONT ID="IntegerLiteral">2</FONT> );
+<A NAME="347"><A>        <FONT ID="Else">else</FONT> <FONT ID="If">if</FONT> ( (m_rnd.nextInt() % <FONT ID="IntegerLiteral">5</FONT> == <FONT ID="IntegerLiteral">0</FONT> ) )
+<A NAME="348"><A>            m.setVisitorsTeamScore( m.getVisitorsTeamScore() + <FONT ID="IntegerLiteral">1</FONT> );
+<A NAME="349"><A>        <FONT ID="Else">else</FONT> <FONT ID="If">if</FONT> ( (m_rnd.nextInt() % <FONT ID="IntegerLiteral">5</FONT> == <FONT ID="IntegerLiteral">0</FONT> ) )
+<A NAME="350"><A>            m.setVisitorsTeamScore( m.getVisitorsTeamScore() + <FONT ID="IntegerLiteral">3</FONT> );
+<A NAME="351"><A>        
+<A NAME="352"><A>        m.updateAllListeners();
+<A NAME="353"><A>    }
+<A NAME="354"><A>    
+<A NAME="355"><A>    
+<A NAME="356"><A>    <FONT ID="FormalComment">/**
+<A NAME="357"><A>     * Add a user handler from our users list
+<A NAME="358"><A>     */</FONT>
+<A NAME="359"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> addUserHandler(<A HREF="UserHandler.java.html">UserHandler</A> user)
+<A NAME="360"><A>    {
+<A NAME="361"><A>        <FONT ID="SingleLineComment">// add the new handler
+<A NAME="362"><A></FONT>        m_users.addElement(user);
+<A NAME="363"><A>    }
+<A NAME="364"><A>    
+<A NAME="365"><A>    <FONT ID="FormalComment">/**
+<A NAME="366"><A>     * Remove a user handler from our users list
+<A NAME="367"><A>     */</FONT>
+<A NAME="368"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> removeUserHandler(<A HREF="UserHandler.java.html">UserHandler</A> user)
+<A NAME="369"><A>    {
+<A NAME="370"><A>        <FONT ID="SingleLineComment">// remove the user listener
+<A NAME="371"><A></FONT>        m_users.removeElement(user);
+<A NAME="372"><A>    }
+<A NAME="373"><A>    
+<A NAME="374"><A>    
+<A NAME="375"><A>    <FONT ID="FormalComment">/**
+<A NAME="376"><A>     * Entry point of the application
+<A NAME="377"><A>     */</FONT>
+<A NAME="378"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args)
+<A NAME="379"><A>    {
+<A NAME="380"><A>        <FONT ID="If">if</FONT> ( args.length != <FONT ID="IntegerLiteral">1</FONT> )
+<A NAME="381"><A>        {
+<A NAME="382"><A>            System.out.println(<FONT ID="StringLiteral">"Usage: SportUpdater serverName"</FONT>);
+<A NAME="383"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="384"><A>        }
+<A NAME="385"><A>
+<A NAME="386"><A>        <FONT ID="New">new</FONT> <A HREF="SportsUpdater.java.html">SportsUpdater</A>().initialize(args[<FONT ID="IntegerLiteral">0</FONT>]);
+<A NAME="387"><A>    }
+<A NAME="388"><A>}
+<A NAME="389"><A>
+<A NAME="390"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">SportsUpdater</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

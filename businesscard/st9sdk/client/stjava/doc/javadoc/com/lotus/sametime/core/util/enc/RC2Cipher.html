@@ -1,0 +1,532 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>RC2Cipher</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="RC2Cipher";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/core/util/enc/DiffieHellman.html" title="class in com.lotus.sametime.core.util.enc"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/core/util/enc/RC2Cipher.html" target="_top">Frames</a></li>
+<li><a href="RC2Cipher.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.core.util.enc</div>
+<h2 title="Class RC2Cipher" class="title">Class RC2Cipher</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.core.util.enc.RC2Cipher</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">RC2Cipher</span>
+extends java.lang.Object</pre>
+<div class="block">This class is modelled after the Cipher class found in JCE.  The
+        methods provided here are a subset of that class.
+
+        Note that this class currently only provides support for the RC2
+        encryption algorithm, in CBC mode, using PKCS #5 padding.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#DECRYPT_MODE">DECRYPT_MODE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#Default_IV">Default_IV</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#ENCRYPT_MODE">ENCRYPT_MODE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#RC2_128_KEY_LENGTH">RC2_128_KEY_LENGTH</a></strong></code>
+<div class="block">The key length - in bytes - for RC2 128 bit encryption.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#RC2_40_KEY_LENGTH">RC2_40_KEY_LENGTH</a></strong></code>
+<div class="block">The key length - in bytes - for RC2 40 bit encryption.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#RC2Cipher()">RC2Cipher</a></strong>()</code>
+<div class="block">*       This is the constructor for the RC2Cipher.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#decryptOT(byte[], byte[], int)">decryptOT</a></strong>(byte[]&nbsp;message,
+         byte[]&nbsp;key,
+         int&nbsp;requiredKeyLength)</code>
+<div class="block">Decrypt a message using RC2.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#doFinal(byte[])">doFinal</a></strong>(byte[]&nbsp;input)</code>
+<div class="block">*       This method invokes the encryption/decryption engine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#encryptOT(byte[], byte[], int)">encryptOT</a></strong>(byte[]&nbsp;message,
+         byte[]&nbsp;key,
+         int&nbsp;requiredKeyLength)</code>
+<div class="block">Encrypt a message using RC2.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#getBlockSize()">getBlockSize</a></strong>()</code>
+<div class="block">*       This method returns the block size of the active block cipher.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html" title="class in com.lotus.sametime.core.util.enc">RC2Cipher</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#getInstance(java.lang.String)">getInstance</a></strong>(java.lang.String&nbsp;algorithm)</code>
+<div class="block">*       This method creates an instance of the RC2Cipher class.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#getIV()">getIV</a></strong>()</code>
+<div class="block">*       This method allows the caller to determine what IV will be used to
+  *     encrypt or decrypt the next block of data (assuming that it isn't
+  *     changed via the setIV method above).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#getOutputSize(int)">getOutputSize</a></strong>(int&nbsp;input_length)</code>
+<div class="block">*       This method determines the length of the ciphertext for a specified
+  *     amount of plaintext (the ciphertext will always be longer than than
+  *     the plaintext).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#init(int, byte[])">init</a></strong>(int&nbsp;cipher_mode,
+    byte[]&nbsp;key)</code>
+<div class="block">*       This method initializes the cipher for use.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html#setIV(byte[])">setIV</a></strong>(byte[]&nbsp;iv)</code>
+<div class="block">*       This method allows the caller to set the IV that will be used on
+  *     the next block of data to be encrypted or decrypted.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="RC2_128_KEY_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RC2_128_KEY_LENGTH</h4>
+<pre>public static final&nbsp;int RC2_128_KEY_LENGTH</pre>
+<div class="block">The key length - in bytes - for RC2 128 bit encryption.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.core.util.enc.RC2Cipher.RC2_128_KEY_LENGTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="RC2_40_KEY_LENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RC2_40_KEY_LENGTH</h4>
+<pre>public static final&nbsp;int RC2_40_KEY_LENGTH</pre>
+<div class="block">The key length - in bytes - for RC2 40 bit encryption.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.core.util.enc.RC2Cipher.RC2_40_KEY_LENGTH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ENCRYPT_MODE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ENCRYPT_MODE</h4>
+<pre>public static final&nbsp;int ENCRYPT_MODE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.core.util.enc.RC2Cipher.ENCRYPT_MODE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DECRYPT_MODE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DECRYPT_MODE</h4>
+<pre>public static final&nbsp;int DECRYPT_MODE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../constant-values.html#com.lotus.sametime.core.util.enc.RC2Cipher.DECRYPT_MODE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="Default_IV">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Default_IV</h4>
+<pre>public static final&nbsp;byte[] Default_IV</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="RC2Cipher()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>RC2Cipher</h4>
+<pre>public&nbsp;RC2Cipher()</pre>
+<div class="block">*       This is the constructor for the RC2Cipher.  It initializes the static
+  *     arrays shared by all instances of RC2Cipher (if they haven't already
+  *     been initialized by someone else).</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getInstance(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInstance</h4>
+<pre>public static&nbsp;<a href="../../../../../../com/lotus/sametime/core/util/enc/RC2Cipher.html" title="class in com.lotus.sametime.core.util.enc">RC2Cipher</a>&nbsp;getInstance(java.lang.String&nbsp;algorithm)</pre>
+<div class="block">*       This method creates an instance of the RC2Cipher class.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>algorithm</code> - *       This parameter specifies the name of the algorithm that the caller
+  *     wants to use.  Note that this is currently ignored.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>*       A pointer to the RC2Cipher object.</dd></dl>
+</li>
+</ul>
+<a name="getBlockSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBlockSize</h4>
+<pre>public&nbsp;int&nbsp;getBlockSize()</pre>
+<div class="block">*       This method returns the block size of the active block cipher.</div>
+</li>
+</ul>
+<a name="getOutputSize(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutputSize</h4>
+<pre>public&nbsp;int&nbsp;getOutputSize(int&nbsp;input_length)</pre>
+<div class="block">*       This method determines the length of the ciphertext for a specified
+  *     amount of plaintext (the ciphertext will always be longer than than
+  *     the plaintext).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>input_length</code> - *       The length of the plaintext.</dd></dl>
+</li>
+</ul>
+<a name="init(int, byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre>public&nbsp;void&nbsp;init(int&nbsp;cipher_mode,
+        byte[]&nbsp;key)</pre>
+<div class="block">*       This method initializes the cipher for use.  It specifies whether this
+  *     object will be used for encryption or decryption, and what key will be
+  *     used.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cipher_mode</code> - *       This parameter indicates either ENCRYPT_MODE or DECRYPT_MODE.</dd><dd><code>key</code> - *       This is the key to be used for encryption/decryption.</dd></dl>
+</li>
+</ul>
+<a name="setIV(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIV</h4>
+<pre>public&nbsp;void&nbsp;setIV(byte[]&nbsp;iv)</pre>
+<div class="block">*       This method allows the caller to set the IV that will be used on
+  *     the next block of data to be encrypted or decrypted.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>iv</code> - *       An 8-byte array containing the desired IV.</dd></dl>
+</li>
+</ul>
+<a name="getIV()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIV</h4>
+<pre>public&nbsp;byte[]&nbsp;getIV()</pre>
+<div class="block">*       This method allows the caller to determine what IV will be used to
+  *     encrypt or decrypt the next block of data (assuming that it isn't
+  *     changed via the setIV method above).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>*       The byte array that will be used as the next IV.</dd></dl>
+</li>
+</ul>
+<a name="doFinal(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doFinal</h4>
+<pre>public&nbsp;byte[]&nbsp;doFinal(byte[]&nbsp;input)</pre>
+<div class="block">*       This method invokes the encryption/decryption engine.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - *       The data to be processed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>*       The encrypted/decrypted data that resulted from the operation.</dd></dl>
+</li>
+</ul>
+<a name="encryptOT(byte[], byte[], int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encryptOT</h4>
+<pre>public static&nbsp;byte[]&nbsp;encryptOT(byte[]&nbsp;message,
+               byte[]&nbsp;key,
+               int&nbsp;requiredKeyLength)</pre>
+<div class="block">Encrypt a message using RC2.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - The message to encrypt.</dd><dd><code>key</code> - The key to use.</dd><dd><code>requiredKeyLength</code> - The number of bytes to use from the key.
+ This is used so that a long array could be used to pass a shorter key.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the encrypted message.</dd></dl>
+</li>
+</ul>
+<a name="decryptOT(byte[], byte[], int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>decryptOT</h4>
+<pre>public static&nbsp;byte[]&nbsp;decryptOT(byte[]&nbsp;message,
+               byte[]&nbsp;key,
+               int&nbsp;requiredKeyLength)</pre>
+<div class="block">Decrypt a message using RC2.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - The encrypted message.</dd><dd><code>key</code> - The key to use.</dd><dd><code>requiredKeyLength</code> - The number of bytes to use from the key.
+ This is used so that a long array could be used to pass a shorter key.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the decrypted message.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../../com/lotus/sametime/core/util/enc/DiffieHellman.html" title="class in com.lotus.sametime.core.util.enc"><span class="strong">Prev Class</span></a></li>
+<li>Next Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?com/lotus/sametime/core/util/enc/RC2Cipher.html" target="_top">Frames</a></li>
+<li><a href="RC2Cipher.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

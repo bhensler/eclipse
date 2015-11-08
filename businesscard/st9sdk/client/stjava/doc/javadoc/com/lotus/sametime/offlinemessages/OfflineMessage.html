@@ -1,0 +1,625 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>OfflineMessage</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="OfflineMessage";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/offlinemessages/Constants.html" title="class in com.lotus.sametime.offlinemessages"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessageComp.html" title="class in com.lotus.sametime.offlinemessages"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/offlinemessages/OfflineMessage.html" target="_top">Frames</a></li>
+<li><a href="OfflineMessage.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.offlinemessages</div>
+<h2 title="Class OfflineMessage" class="title">Class OfflineMessage</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.offlinemessages.OfflineMessage</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.lang.Comparable</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">OfflineMessage</span>
+extends java.lang.Object
+implements java.lang.Comparable</pre>
+<div class="block">Class representing an offline message sent either by user or by OfflineMessages service</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#OfflineMessage(com.lotus.sametime.core.util.NdrInputStream)">OfflineMessage</a></strong>(<a href="../../../../com/lotus/sametime/core/util/NdrInputStream.html" title="class in com.lotus.sametime.core.util">NdrInputStream</a>&nbsp;inStream)</code>
+<div class="block">Constructs an object received from the SA.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#OfflineMessage(java.lang.String, java.lang.String, java.lang.String, java.util.Date, java.util.Date, boolean, java.lang.String, java.lang.String)">OfflineMessage</a></strong>(java.lang.String&nbsp;senderUID,
+              java.lang.String&nbsp;senderName,
+              java.lang.String&nbsp;message,
+              java.util.Date&nbsp;expirationDate,
+              java.util.Date&nbsp;receivedTime,
+              boolean&nbsp;wasDelivered,
+              java.lang.String&nbsp;messageID,
+              java.lang.String&nbsp;recipientUID)</code>
+<div class="block">Constructs an object for storage a message read from DB.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#OfflineMessage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, long)">OfflineMessage</a></strong>(java.lang.String&nbsp;senderUID,
+              java.lang.String&nbsp;senderName,
+              java.lang.String&nbsp;recipientUID,
+              java.lang.String&nbsp;message,
+              long&nbsp;expirationUndelivered)</code>
+<div class="block">Constructs an object from a received IM object
+ It is intended for the server usage</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#compareTo(java.lang.Object)">compareTo</a></strong>(java.lang.Object&nbsp;other)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#dump(com.lotus.sametime.core.util.NdrOutputStream)">dump</a></strong>(<a href="../../../../com/lotus/sametime/core/util/NdrOutputStream.html" title="class in com.lotus.sametime.core.util">NdrOutputStream</a>&nbsp;outStream)</code>
+<div class="block">Dumps object data into output data stream</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.util.Date</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getExpirationDate()">getExpirationDate</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getMessage()">getMessage</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getMessageID()">getMessageID</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getMessageType()">getMessageType</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.util.Date</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getOriginalMsgReceivedTime()">getOriginalMsgReceivedTime</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.Date</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getReceivedTime()">getReceivedTime</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getRecipientDisplayName()">getRecipientDisplayName</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getRecipientUID()">getRecipientUID</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getSenderName()">getSenderName</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getSenderUID()">getSenderUID</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#getWasDelivered()">getWasDelivered</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#isSentByService()">isSentByService</a></strong>()</code>
+<div class="block">Verifies that a given offline message was sent by OfflineMessages service</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#load(com.lotus.sametime.core.util.NdrInputStream)">load</a></strong>(<a href="../../../../com/lotus/sametime/core/util/NdrInputStream.html" title="class in com.lotus.sametime.core.util">NdrInputStream</a>&nbsp;inStream)</code>
+<div class="block">Loads object data from input data stream</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#setExpirationDate(java.util.Date)">setExpirationDate</a></strong>(java.util.Date&nbsp;date)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#setExpiredNotificationParameters(java.lang.String, java.lang.String, java.util.Date)">setExpiredNotificationParameters</a></strong>(java.lang.String&nbsp;recipientUID,
+                                java.lang.String&nbsp;recipientDisplayName,
+                                java.util.Date&nbsp;originalTime)</code>
+<div class="block">Sets parameters for undelivered expired message notification
+ sent by OfflineMessages service</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#setMessage(java.lang.String)">setMessage</a></strong>(java.lang.String&nbsp;msg)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#setMessageID(java.lang.String)">setMessageID</a></strong>(java.lang.String&nbsp;messageID)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#setReceivedTime(java.util.Date)">setReceivedTime</a></strong>(java.util.Date&nbsp;time)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessage.html#toString()">toString</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="OfflineMessage(java.lang.String, java.lang.String, java.lang.String, java.util.Date, java.util.Date, boolean, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OfflineMessage</h4>
+<pre>public&nbsp;OfflineMessage(java.lang.String&nbsp;senderUID,
+              java.lang.String&nbsp;senderName,
+              java.lang.String&nbsp;message,
+              java.util.Date&nbsp;expirationDate,
+              java.util.Date&nbsp;receivedTime,
+              boolean&nbsp;wasDelivered,
+              java.lang.String&nbsp;messageID,
+              java.lang.String&nbsp;recipientUID)</pre>
+<div class="block">Constructs an object for storage a message read from DB.
+ It is intended for the server usage.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>senderUID</code> - a message sender ID</dd><dd><code>senderName</code> - sender's display name</dd><dd><code>message</code> - a message content</dd><dd><code>expirationDate</code> - a messages expiration date</dd><dd><code>receivedTime</code> - a message server time when the offline message was received</dd><dd><code>wasDelivered</code> - flag indicates whether a given message was delivered
+  to the recipient or not</dd><dd><code>messageID</code> - a message ID</dd><dd><code>recipientUID</code> - recipient's UID</dd></dl>
+</li>
+</ul>
+<a name="OfflineMessage(com.lotus.sametime.core.util.NdrInputStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>OfflineMessage</h4>
+<pre>public&nbsp;OfflineMessage(<a href="../../../../com/lotus/sametime/core/util/NdrInputStream.html" title="class in com.lotus.sametime.core.util">NdrInputStream</a>&nbsp;inStream)
+               throws java.io.IOException</pre>
+<div class="block">Constructs an object received from the SA. 
+ It is intended for the client usage</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>NdrInputStream</code> - object for data loading</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd></dl>
+</li>
+</ul>
+<a name="OfflineMessage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, long)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>OfflineMessage</h4>
+<pre>public&nbsp;OfflineMessage(java.lang.String&nbsp;senderUID,
+              java.lang.String&nbsp;senderName,
+              java.lang.String&nbsp;recipientUID,
+              java.lang.String&nbsp;message,
+              long&nbsp;expirationUndelivered)</pre>
+<div class="block">Constructs an object from a received IM object
+ It is intended for the server usage</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>senderUID</code> - sender user Sametime</dd><dd><code>senderName</code> - sender's user name</dd><dd><code>recipientUID</code> - recipient user ID</dd><dd><code>message</code> - message content</dd><dd><code>expirationUndelivered</code> - expiration interval for new messages</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getSenderUID()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSenderUID</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getSenderUID()</pre>
+</li>
+</ul>
+<a name="getMessage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMessage</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getMessage()</pre>
+</li>
+</ul>
+<a name="getExpirationDate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getExpirationDate</h4>
+<pre>public&nbsp;java.util.Date&nbsp;getExpirationDate()</pre>
+</li>
+</ul>
+<a name="getWasDelivered()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWasDelivered</h4>
+<pre>public&nbsp;boolean&nbsp;getWasDelivered()</pre>
+</li>
+</ul>
+<a name="getReceivedTime()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getReceivedTime</h4>
+<pre>public&nbsp;java.util.Date&nbsp;getReceivedTime()</pre>
+</li>
+</ul>
+<a name="getMessageID()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMessageID</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getMessageID()</pre>
+</li>
+</ul>
+<a name="setMessageID(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMessageID</h4>
+<pre>public&nbsp;void&nbsp;setMessageID(java.lang.String&nbsp;messageID)</pre>
+</li>
+</ul>
+<a name="setExpirationDate(java.util.Date)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setExpirationDate</h4>
+<pre>public&nbsp;void&nbsp;setExpirationDate(java.util.Date&nbsp;date)</pre>
+</li>
+</ul>
+<a name="setReceivedTime(java.util.Date)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReceivedTime</h4>
+<pre>public&nbsp;void&nbsp;setReceivedTime(java.util.Date&nbsp;time)</pre>
+</li>
+</ul>
+<a name="getMessageType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMessageType</h4>
+<pre>public&nbsp;int&nbsp;getMessageType()</pre>
+</li>
+</ul>
+<a name="getRecipientDisplayName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRecipientDisplayName</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getRecipientDisplayName()</pre>
+</li>
+</ul>
+<a name="getOriginalMsgReceivedTime()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOriginalMsgReceivedTime</h4>
+<pre>public&nbsp;java.util.Date&nbsp;getOriginalMsgReceivedTime()</pre>
+</li>
+</ul>
+<a name="getSenderName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSenderName</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getSenderName()</pre>
+</li>
+</ul>
+<a name="getRecipientUID()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRecipientUID</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getRecipientUID()</pre>
+</li>
+</ul>
+<a name="setExpiredNotificationParameters(java.lang.String, java.lang.String, java.util.Date)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setExpiredNotificationParameters</h4>
+<pre>public&nbsp;void&nbsp;setExpiredNotificationParameters(java.lang.String&nbsp;recipientUID,
+                                    java.lang.String&nbsp;recipientDisplayName,
+                                    java.util.Date&nbsp;originalTime)</pre>
+<div class="block">Sets parameters for undelivered expired message notification
+ sent by OfflineMessages service</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recipientUID</code> - original recipient Sametime ID</dd><dd><code>recipientDisplayName</code> - original recipient display name</dd><dd><code>originalTime</code> - time of arriving of the original message to the sender server</dd></dl>
+</li>
+</ul>
+<a name="isSentByService()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isSentByService</h4>
+<pre>public&nbsp;boolean&nbsp;isSentByService()</pre>
+<div class="block">Verifies that a given offline message was sent by OfflineMessages service</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if the message was sent by the service, 
+ otherwise - false</dd></dl>
+</li>
+</ul>
+<a name="load(com.lotus.sametime.core.util.NdrInputStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>load</h4>
+<pre>public&nbsp;void&nbsp;load(<a href="../../../../com/lotus/sametime/core/util/NdrInputStream.html" title="class in com.lotus.sametime.core.util">NdrInputStream</a>&nbsp;inStream)
+          throws java.io.IOException</pre>
+<div class="block">Loads object data from input data stream</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>inStream</code> - NdrInputStream object</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd></dl>
+</li>
+</ul>
+<a name="dump(com.lotus.sametime.core.util.NdrOutputStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>dump</h4>
+<pre>public&nbsp;void&nbsp;dump(<a href="../../../../com/lotus/sametime/core/util/NdrOutputStream.html" title="class in com.lotus.sametime.core.util">NdrOutputStream</a>&nbsp;outStream)
+          throws java.io.IOException</pre>
+<div class="block">Dumps object data into output data stream</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>outStream</code> - NdrOutputStream object</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd></dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="setMessage(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setMessage</h4>
+<pre>public&nbsp;void&nbsp;setMessage(java.lang.String&nbsp;msg)</pre>
+</li>
+</ul>
+<a name="compareTo(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>compareTo</h4>
+<pre>public&nbsp;int&nbsp;compareTo(java.lang.Object&nbsp;other)</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>compareTo</code>&nbsp;in interface&nbsp;<code>java.lang.Comparable</code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../com/lotus/sametime/offlinemessages/Constants.html" title="class in com.lotus.sametime.offlinemessages"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../com/lotus/sametime/offlinemessages/OfflineMessageComp.html" title="class in com.lotus.sametime.offlinemessages"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?com/lotus/sametime/offlinemessages/OfflineMessage.html" target="_top">Frames</a></li>
+<li><a href="OfflineMessage.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

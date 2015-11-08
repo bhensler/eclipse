@@ -1,0 +1,1431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Conference (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Conference (IBM Sametime 9.0 SDK: IBM Sametime Audio Video Integration API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/ibm/telephony/conferencing/AbstractConferenceManager.html" title="class in com.ibm.telephony.conferencing"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/ibm/telephony/conferencing/Conference.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Conference.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.telephony.conferencing</FONT>
+<BR>
+Interface Conference</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html" title="interface in com.ibm.telephony.conferencing">PropertyContainer</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../../../com/ibm/telephony/conferencing/SipConference.html" title="interface in com.ibm.telephony.conferencing">SipConference</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../com/ibm/telephony/conferencing/spi/DefaultConference.html" title="class in com.ibm.telephony.conferencing.spi">DefaultConference</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>Conference</B><DT>extends <A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html" title="interface in com.ibm.telephony.conferencing">PropertyContainer</A></DL>
+</PRE>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#APPLICATION_TYPE_STATIC_PROPERTY">APPLICATION_TYPE_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#AUX_DIAL_STATIC_PROPERTY">AUX_DIAL_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property returned by a service provider in the conference XML document when a conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#AVAILABLE_PROPERTY">AVAILABLE_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property set by a service provider on the conference object to denote a telephony conference as available.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CALL_ENDED_PROPERTY">CALL_ENDED_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property set by a service provider on the conference object to denote a telephony conference has ended.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFERENCE_DOCUMENT">CONFERENCE_DOCUMENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property in initial properties passed into processStartConferenceControl containing the 
+  ConferenceDocument as XML.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFERENCE_IS_CLIENT_HOSTED">CONFERENCE_IS_CLIENT_HOSTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property in initial properties passed into processStartConferenceControl indicating 
+  whether the conference is client (as opposed to server) hosted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFERENCE_IS_POINT_TO_POINT">CONFERENCE_IS_POINT_TO_POINT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property in initial properties passed into processStartConferenceControl indicating 
+  whether the conference is point-to-point or not.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFERENCE_OPTION_FOUR">CONFERENCE_OPTION_FOUR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optional conference property enabled by a service provider at deployment time and passed into the service provider
+        when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFERENCE_OPTION_ONE">CONFERENCE_OPTION_ONE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optional conference property enabled by a service provider at deployment time and passed into the service provider
+        when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFERENCE_OPTION_THREE">CONFERENCE_OPTION_THREE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optional conference property enabled by a service provider at deployment time and passed into the service provider
+        when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFERENCE_OPTION_TWO">CONFERENCE_OPTION_TWO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optional conference property enabled by a service provider at deployment time and passed into the service provider
+        when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFERENCE_SERVER_INSTALLED">CONFERENCE_SERVER_INSTALLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed back from Server if and only if a Sametime Conferencing Server 
+  (i.e with Conference Focus) is being used.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFERENCE_URI">CONFERENCE_URI</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property either passed into the service provider for a pre-defined conference, or returned for ad-hoc.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#CONFIGURATION_PROPERTY">CONFIGURATION_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#ENCRYPTION_KEY_STATIC_PROPERTY">ENCRYPTION_KEY_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property in Conference Document indicating the encryption key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#INITIAL_ROSTER_PROPERTY">INITIAL_ROSTER_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#LOCKED_PROPERTY">LOCKED_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the overall conference lock state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#MODERATOR_PASSCODE_STATIC_PROPERTY">MODERATOR_PASSCODE_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed into the service provider when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#MUTED">MUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#MUTED_PROPERTY">MUTED_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the overall conference mute state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#MUTED_VIDEO_PROPERTY">MUTED_VIDEO_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the overall conference video mute state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#PASSCODE_STATIC_PROPERTY">PASSCODE_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed into the service provider when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#PLACE_BEING_DISPOSED_PROPERTY">PLACE_BEING_DISPOSED_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property indicating that a place is being disposed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#PROMOTE_SERVICE_PROVIDER_ID_STATIC_PROPERTY">PROMOTE_SERVICE_PROVIDER_ID_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed in to indicate which service provider should process the request for promotion from pt-pt to
+  n-way.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#PROVIDER_DATA_PROPERTY">PROVIDER_DATA_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property for service provider use, set to provider-defined string value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#RECORDING_FILE_LOCATION">RECORDING_FILE_LOCATION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property set by a service provider on the conference object to denote the file system location of a telephony conference recording.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#RECORDING_ID">RECORDING_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property set by a service provider on the conference object to denote a unique id for a telephony conference recording.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#RECORDING_PROPERTY">RECORDING_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property set by a service provider on the conference object when a telephony conference is being recorded.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#RECORDING_STREAM_LOCATION">RECORDING_STREAM_LOCATION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property set by a service provider on the conference object to denote the address of a telephony conference recording stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#SERVICE_LOCATION">SERVICE_LOCATION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed into the service provider when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#SERVICE_PROVIDER_ID_STATIC_PROPERTY">SERVICE_PROVIDER_ID_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed in to indicate which service provider should process the request.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#SILENCED">SILENCED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#SIP_CONTROL_STATIC_PROPERTY">SIP_CONTROL_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property returned by a service provider in the conference XML document to indicate whether conference
+  is SIP enabled (controlled).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#ST_COMMUNITY_ID">ST_COMMUNITY_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed into the service provider when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#ST_MEETING_ID">ST_MEETING_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed into the service provider when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#ST_MEETING_ROOM_ID">ST_MEETING_ROOM_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed into the service provider when a new conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#SUPPRESS_SERVICE_ERROR_MSG_PROPERTY">SUPPRESS_SERVICE_ERROR_MSG_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property passed back by the Service if the Service Error messages
+  should be suppressed (not displayed) if the client is already disconnected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#TALKER_EVENTS_ENABLED_PROPERTY">TALKER_EVENTS_ENABLED_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates that talking state events for individual participants is enabled/disabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#TOLL_DIAL_STATIC_PROPERTY">TOLL_DIAL_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property returned by a service provider in the conference XML document when a conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#TOLLFREE_DIAL_STATIC_PROPERTY">TOLLFREE_DIAL_STATIC_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property returned by a service provider in the conference XML document when a conference is created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#UNMUTED">UNMUTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#USER_DISCONNECTED_PROPERTY">USER_DISCONNECTED_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property set by a service provider to indicate that a member disconnected from the Call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#VALID_PROPERTY">VALID_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property set by a service provider on the conference object to denote a telephony conference as valid.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#VIDEO_IN_USE_PROPERTY">VIDEO_IN_USE_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conference property indicating whether external video is in use for a given call.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#VIDEO_LAYOUT_ARRANGEMENT_PROPERTY">VIDEO_LAYOUT_ARRANGEMENT_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indicates the common video layout arrangement seen by all participants 
+ 
+  Values: An XML String
+ 
+        Example 1:
+  <video-layout> <!- unscaled filmstrip ->
+    <frame id=xxx width="800" height="200">
+      <user top="0" left="0" width="0.5" height="1">user name1</user>
+      <user top="0" left="0.25" width="0.5" height="1">user name2</user>
+      <user top="0" left="0.5" width="0.5" height="1">user name3</user>
+      <user top="0" left="0.75" width="0.5" height="1">user name4</user>
+    </frame>
+  </video-layout>
+ 
+  Example 2:
+  <video-layout>
+    <frame id=xxx width="200" height="200">
+      <user top="0" left="0" width="1" height="1">user name1</user>
+    </frame>  
+    <frame id=yyy width="200" height="200">
+      <user top="0" left="0" width="1" height="1">user name2</user>
+    </frame>
+    <frame id=zzz width="200" height="200">
+      <user top="0" left="0" width="1" height="1">user name3</user>
+    </frame>
+    <frame id=aaa width="200" height="200">
+      <user top="0" left="0" width="1" height="1">user name4</user>
+    </frame>
+  </video-layout>
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#addConferenceListener(com.ibm.telephony.conferencing.event.ConferenceListener)">addConferenceListener</A></B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceListener.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#getId()">getId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#getLogId()">getLogId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method returns the log identifier used for correlating log entries
+ within a given conference.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#mediaControl(com.ibm.telephony.conferencing.User, int, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">mediaControl</A></B>(<A HREF="../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+             int&nbsp;controlFlag,
+             int&nbsp;mediaFlag,
+             <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#registerUser(java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">registerUser</A></B>(java.lang.String&nbsp;userName,
+             java.lang.String&nbsp;userRole,
+             java.lang.String&nbsp;userPin,
+             <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is a required call to setup the service provider for all
+ subsequent actions for users.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#removeConferenceListener(com.ibm.telephony.conferencing.event.ConferenceListener)">removeConferenceListener</A></B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceListener.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/ibm/telephony/conferencing/Conference.html#stopControl(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">stopControl</A></B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.telephony.conferencing.PropertyContainer"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.telephony.conferencing.<A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html" title="interface in com.ibm.telephony.conferencing">PropertyContainer</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html#addPropertyContainerListener(com.ibm.telephony.conferencing.event.PropertyContainerListener)">addPropertyContainerListener</A>, <A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html#removePropertyContainerListener(com.ibm.telephony.conferencing.event.PropertyContainerListener)">removePropertyContainerListener</A>, <A HREF="../../../../com/ibm/telephony/conferencing/PropertyContainer.html#setProperty(com.ibm.telephony.conferencing.Property, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)">setProperty</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CONFERENCE_DOCUMENT"><!-- --></A><H3>
+CONFERENCE_DOCUMENT</H3>
+<PRE>
+static final java.lang.String <B>CONFERENCE_DOCUMENT</B></PRE>
+<DL>
+<DD>Property in initial properties passed into processStartConferenceControl containing the 
+  ConferenceDocument as XML.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFERENCE_DOCUMENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFERENCE_IS_POINT_TO_POINT"><!-- --></A><H3>
+CONFERENCE_IS_POINT_TO_POINT</H3>
+<PRE>
+static final java.lang.String <B>CONFERENCE_IS_POINT_TO_POINT</B></PRE>
+<DL>
+<DD>Property in initial properties passed into processStartConferenceControl indicating 
+  whether the conference is point-to-point or not. Also can be placed in DefaultConference
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFERENCE_IS_POINT_TO_POINT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFERENCE_IS_CLIENT_HOSTED"><!-- --></A><H3>
+CONFERENCE_IS_CLIENT_HOSTED</H3>
+<PRE>
+static final java.lang.String <B>CONFERENCE_IS_CLIENT_HOSTED</B></PRE>
+<DL>
+<DD>Property in initial properties passed into processStartConferenceControl indicating 
+  whether the conference is client (as opposed to server) hosted. Also can be placed in DefaultConference
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFERENCE_IS_CLIENT_HOSTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFERENCE_OPTION_ONE"><!-- --></A><H3>
+CONFERENCE_OPTION_ONE</H3>
+<PRE>
+static final java.lang.String <B>CONFERENCE_OPTION_ONE</B></PRE>
+<DL>
+<DD>Optional conference property enabled by a service provider at deployment time and passed into the service provider
+        when a new conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFERENCE_OPTION_ONE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFERENCE_OPTION_TWO"><!-- --></A><H3>
+CONFERENCE_OPTION_TWO</H3>
+<PRE>
+static final java.lang.String <B>CONFERENCE_OPTION_TWO</B></PRE>
+<DL>
+<DD>Optional conference property enabled by a service provider at deployment time and passed into the service provider
+        when a new conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFERENCE_OPTION_TWO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFERENCE_OPTION_THREE"><!-- --></A><H3>
+CONFERENCE_OPTION_THREE</H3>
+<PRE>
+static final java.lang.String <B>CONFERENCE_OPTION_THREE</B></PRE>
+<DL>
+<DD>Optional conference property enabled by a service provider at deployment time and passed into the service provider
+        when a new conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFERENCE_OPTION_THREE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFERENCE_OPTION_FOUR"><!-- --></A><H3>
+CONFERENCE_OPTION_FOUR</H3>
+<PRE>
+static final java.lang.String <B>CONFERENCE_OPTION_FOUR</B></PRE>
+<DL>
+<DD>Optional conference property enabled by a service provider at deployment time and passed into the service provider
+        when a new conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFERENCE_OPTION_FOUR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TOLLFREE_DIAL_STATIC_PROPERTY"><!-- --></A><H3>
+TOLLFREE_DIAL_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>TOLLFREE_DIAL_STATIC_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property returned by a service provider in the conference XML document when a conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.TOLLFREE_DIAL_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TOLL_DIAL_STATIC_PROPERTY"><!-- --></A><H3>
+TOLL_DIAL_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>TOLL_DIAL_STATIC_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property returned by a service provider in the conference XML document when a conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.TOLL_DIAL_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="AUX_DIAL_STATIC_PROPERTY"><!-- --></A><H3>
+AUX_DIAL_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>AUX_DIAL_STATIC_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property returned by a service provider in the conference XML document when a conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.AUX_DIAL_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SIP_CONTROL_STATIC_PROPERTY"><!-- --></A><H3>
+SIP_CONTROL_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>SIP_CONTROL_STATIC_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property returned by a service provider in the conference XML document to indicate whether conference
+  is SIP enabled (controlled).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.SIP_CONTROL_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SERVICE_PROVIDER_ID_STATIC_PROPERTY"><!-- --></A><H3>
+SERVICE_PROVIDER_ID_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>SERVICE_PROVIDER_ID_STATIC_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property passed in to indicate which service provider should process the request. Use for
+  validateConference and createConference only. If not provided on those methods, an algorithim will
+  be used to determine the target service in a multiple service scenario.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.SERVICE_PROVIDER_ID_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROMOTE_SERVICE_PROVIDER_ID_STATIC_PROPERTY"><!-- --></A><H3>
+PROMOTE_SERVICE_PROVIDER_ID_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>PROMOTE_SERVICE_PROVIDER_ID_STATIC_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property passed in to indicate which service provider should process the request for promotion from pt-pt to
+  n-way. Only set if different service provider is used for pt-pt.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.PROMOTE_SERVICE_PROVIDER_ID_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ENCRYPTION_KEY_STATIC_PROPERTY"><!-- --></A><H3>
+ENCRYPTION_KEY_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>ENCRYPTION_KEY_STATIC_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property in Conference Document indicating the encryption key. Should be Set by rich client if rich client
+ is moderator, set by Conference Manager if Web AV client is moderator
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.ENCRYPTION_KEY_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROVIDER_DATA_PROPERTY"><!-- --></A><H3>
+PROVIDER_DATA_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>PROVIDER_DATA_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property for service provider use, set to provider-defined string value.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.PROVIDER_DATA_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFERENCE_SERVER_INSTALLED"><!-- --></A><H3>
+CONFERENCE_SERVER_INSTALLED</H3>
+<PRE>
+static final java.lang.String <B>CONFERENCE_SERVER_INSTALLED</B></PRE>
+<DL>
+<DD>Conference property passed back from Server if and only if a Sametime Conferencing Server 
+  (i.e with Conference Focus) is being used. This does not indicate that internal A/V
+  Conference versus external service provider is being used, only that the a Sametime
+  Conferencing Server is hosting the Telephony Service rather than a regular Sametime
+  Community Server. Sametime Community Servers will not set this property.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFERENCE_SERVER_INSTALLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SUPPRESS_SERVICE_ERROR_MSG_PROPERTY"><!-- --></A><H3>
+SUPPRESS_SERVICE_ERROR_MSG_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>SUPPRESS_SERVICE_ERROR_MSG_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property passed back by the Service if the Service Error messages
+  should be suppressed (not displayed) if the client is already disconnected.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.SUPPRESS_SERVICE_ERROR_MSG_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PASSCODE_STATIC_PROPERTY"><!-- --></A><H3>
+PASSCODE_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>PASSCODE_STATIC_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property passed into the service provider when a new conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.PASSCODE_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MODERATOR_PASSCODE_STATIC_PROPERTY"><!-- --></A><H3>
+MODERATOR_PASSCODE_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>MODERATOR_PASSCODE_STATIC_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property passed into the service provider when a new conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.MODERATOR_PASSCODE_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="APPLICATION_TYPE_STATIC_PROPERTY"><!-- --></A><H3>
+APPLICATION_TYPE_STATIC_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>APPLICATION_TYPE_STATIC_PROPERTY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.APPLICATION_TYPE_STATIC_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="AVAILABLE_PROPERTY"><!-- --></A><H3>
+AVAILABLE_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>AVAILABLE_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property set by a service provider on the conference object to denote a telephony conference as available.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.AVAILABLE_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="VALID_PROPERTY"><!-- --></A><H3>
+VALID_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>VALID_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property set by a service provider on the conference object to denote a telephony conference as valid.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.VALID_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RECORDING_ID"><!-- --></A><H3>
+RECORDING_ID</H3>
+<PRE>
+static final java.lang.String <B>RECORDING_ID</B></PRE>
+<DL>
+<DD>Conference property set by a service provider on the conference object to denote a unique id for a telephony conference recording.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.RECORDING_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RECORDING_PROPERTY"><!-- --></A><H3>
+RECORDING_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>RECORDING_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property set by a service provider on the conference object when a telephony conference is being recorded.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.RECORDING_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RECORDING_STREAM_LOCATION"><!-- --></A><H3>
+RECORDING_STREAM_LOCATION</H3>
+<PRE>
+static final java.lang.String <B>RECORDING_STREAM_LOCATION</B></PRE>
+<DL>
+<DD>Conference property set by a service provider on the conference object to denote the address of a telephony conference recording stream.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.RECORDING_STREAM_LOCATION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RECORDING_FILE_LOCATION"><!-- --></A><H3>
+RECORDING_FILE_LOCATION</H3>
+<PRE>
+static final java.lang.String <B>RECORDING_FILE_LOCATION</B></PRE>
+<DL>
+<DD>Conference property set by a service provider on the conference object to denote the file system location of a telephony conference recording.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.RECORDING_FILE_LOCATION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SERVICE_LOCATION"><!-- --></A><H3>
+SERVICE_LOCATION</H3>
+<PRE>
+static final java.lang.String <B>SERVICE_LOCATION</B></PRE>
+<DL>
+<DD>Conference property passed into the service provider when a new conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.SERVICE_LOCATION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ST_MEETING_ID"><!-- --></A><H3>
+ST_MEETING_ID</H3>
+<PRE>
+static final java.lang.String <B>ST_MEETING_ID</B></PRE>
+<DL>
+<DD>Conference property passed into the service provider when a new conference is created. This Id can be used to retrieve the Meeting Information using the Online Meeting ToolKit
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.ST_MEETING_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ST_MEETING_ROOM_ID"><!-- --></A><H3>
+ST_MEETING_ROOM_ID</H3>
+<PRE>
+static final java.lang.String <B>ST_MEETING_ROOM_ID</B></PRE>
+<DL>
+<DD>Conference property passed into the service provider when a new conference is created. This Id identifies an optional associated persistent meeting room.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.ST_MEETING_ROOM_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ST_COMMUNITY_ID"><!-- --></A><H3>
+ST_COMMUNITY_ID</H3>
+<PRE>
+static final java.lang.String <B>ST_COMMUNITY_ID</B></PRE>
+<DL>
+<DD>Conference property passed into the service provider when a new conference is created.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.ST_COMMUNITY_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFERENCE_URI"><!-- --></A><H3>
+CONFERENCE_URI</H3>
+<PRE>
+static final java.lang.String <B>CONFERENCE_URI</B></PRE>
+<DL>
+<DD>Conference property either passed into the service provider for a pre-defined conference, or returned for ad-hoc.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFERENCE_URI">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CALL_ENDED_PROPERTY"><!-- --></A><H3>
+CALL_ENDED_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>CALL_ENDED_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property set by a service provider on the conference object to denote a telephony conference has ended.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CALL_ENDED_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="USER_DISCONNECTED_PROPERTY"><!-- --></A><H3>
+USER_DISCONNECTED_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>USER_DISCONNECTED_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property set by a service provider to indicate that a member disconnected from the Call. This string
+  is a prefix and is appended with the memberId.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.USER_DISCONNECTED_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MUTED_PROPERTY"><!-- --></A><H3>
+MUTED_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>MUTED_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the overall conference mute state. 
+ 
+        It is expected that people joining the conference after it has been muted will be automatically
+        muted
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.MUTED_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UNMUTED"><!-- --></A><H3>
+UNMUTED</H3>
+<PRE>
+static final java.lang.String <B>UNMUTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.UNMUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SILENCED"><!-- --></A><H3>
+SILENCED</H3>
+<PRE>
+static final java.lang.String <B>SILENCED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.SILENCED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MUTED"><!-- --></A><H3>
+MUTED</H3>
+<PRE>
+static final java.lang.String <B>MUTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.MUTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MUTED_VIDEO_PROPERTY"><!-- --></A><H3>
+MUTED_VIDEO_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>MUTED_VIDEO_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the overall conference video mute state. 
+ 
+  Values: MUTED, UNMUTED, SILENCED
+ 
+        It is expected that people joining the conference after it has been muted will be automatically
+        muted
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.MUTED_VIDEO_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LOCKED_PROPERTY"><!-- --></A><H3>
+LOCKED_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>LOCKED_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the overall conference lock state.
+ 
+        A value of "true" indicates the conference has been locked preventing additional persons from attending. 
+        A value of "false" indicates the service provider should allow joining providing other attendance policies 
+        have been considered
+
+        Default:        false
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.LOCKED_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TALKER_EVENTS_ENABLED_PROPERTY"><!-- --></A><H3>
+TALKER_EVENTS_ENABLED_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>TALKER_EVENTS_ENABLED_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates that talking state events for individual participants is enabled/disabled.
+ 
+        A value of "true" indicates the conference controller should deliver events when a participant starts and stops
+        talking. 
+        A value of "false" indicates that no events will be delivered.
+
+        Default:        false
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.TALKER_EVENTS_ENABLED_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INITIAL_ROSTER_PROPERTY"><!-- --></A><H3>
+INITIAL_ROSTER_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>INITIAL_ROSTER_PROPERTY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.INITIAL_ROSTER_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CONFIGURATION_PROPERTY"><!-- --></A><H3>
+CONFIGURATION_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>CONFIGURATION_PROPERTY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.CONFIGURATION_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PLACE_BEING_DISPOSED_PROPERTY"><!-- --></A><H3>
+PLACE_BEING_DISPOSED_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>PLACE_BEING_DISPOSED_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property indicating that a place is being disposed. It should contain a timestamp so we can, just in case,
+ remove it if it sits too long. This property is set when an MCU goes down and we want to mark the place so that
+ subsequent calls will fail quickly until the place is cleaned up. It takes time to clean up all calls on an MCU so
+ until this completes, we want calls on a place associated with that MCU to fail.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.PLACE_BEING_DISPOSED_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="VIDEO_IN_USE_PROPERTY"><!-- --></A><H3>
+VIDEO_IN_USE_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>VIDEO_IN_USE_PROPERTY</B></PRE>
+<DL>
+<DD>Conference property indicating whether external video is in use for a given call.
+ When the client detects this call property with the value true, it will adjust
+ the call window title to reflect that the call is a video call. This optional
+ property allows TCSPI implementations, if they wish to do so, to indicate the
+ use of external video that the client would not be aware of otherwise. This
+ property can be published at any point after the call begins.
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.5.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.VIDEO_IN_USE_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="VIDEO_LAYOUT_ARRANGEMENT_PROPERTY"><!-- --></A><H3>
+VIDEO_LAYOUT_ARRANGEMENT_PROPERTY</H3>
+<PRE>
+static final java.lang.String <B>VIDEO_LAYOUT_ARRANGEMENT_PROPERTY</B></PRE>
+<DL>
+<DD>Indicates the common video layout arrangement seen by all participants 
+ 
+  Values: An XML String
+ 
+        Example 1:
+  <video-layout> <!- unscaled filmstrip ->
+    <frame id=xxx width="800" height="200">
+      <user top="0" left="0" width="0.5" height="1">user name1</user>
+      <user top="0" left="0.25" width="0.5" height="1">user name2</user>
+      <user top="0" left="0.5" width="0.5" height="1">user name3</user>
+      <user top="0" left="0.75" width="0.5" height="1">user name4</user>
+    </frame>
+  </video-layout>
+ 
+  Example 2:
+  <video-layout>
+    <frame id=xxx width="200" height="200">
+      <user top="0" left="0" width="1" height="1">user name1</user>
+    </frame>  
+    <frame id=yyy width="200" height="200">
+      <user top="0" left="0" width="1" height="1">user name2</user>
+    </frame>
+    <frame id=zzz width="200" height="200">
+      <user top="0" left="0" width="1" height="1">user name3</user>
+    </frame>
+    <frame id=aaa width="200" height="200">
+      <user top="0" left="0" width="1" height="1">user name4</user>
+    </frame>
+  </video-layout>
+ 
+        Type is expected to be APPLICATION_PUBLIC_PROPERTY_TYPE
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.ibm.telephony.conferencing.Conference.VIDEO_LAYOUT_ARRANGEMENT_PROPERTY">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getId()"><!-- --></A><H3>
+getId</H3>
+<PRE>
+java.lang.String <B>getId</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLogId()"><!-- --></A><H3>
+getLogId</H3>
+<PRE>
+java.lang.String <B>getLogId</B>()</PRE>
+<DL>
+<DD>This method returns the log identifier used for correlating log entries
+ within a given conference.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String<DT><B>See Also:</B><DD><A HREF="../../../../com/ibm/telephony/conferencing/log/ConferenceLog.html" title="class in com.ibm.telephony.conferencing.log"><CODE>ConferenceLog</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerUser(java.lang.String, java.lang.String, java.lang.String, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+registerUser</H3>
+<PRE>
+void <B>registerUser</B>(java.lang.String&nbsp;userName,
+                  java.lang.String&nbsp;userRole,
+                  java.lang.String&nbsp;userPin,
+                  <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD>This method is a required call to setup the service provider for all
+ subsequent actions for users. The user name is used to identify a user as 
+ a resource user and will return a unique user object. This user can then be used 
+ to provide user based conference control. 
+ 
+ For any single user name registerUser may be called multiple 
+ times with out affecting state. However, once the initial role is set it 
+ is expected that User.setProperty to change a users role after registration.
+ 
+ Successful request:    listener.registerUser is called
+ Event contents:                original name, role, and a User object scoped to the conference.
+ 
+ Failed Request:                listener.requestFailed with appropriate error code
+ Possible error codes:
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>userName</CODE> - uniquely identifies the user.<DD><CODE>userRole</CODE> - the initial role of the user<DD><CODE>userPin</CODE> - the pin code if any<DD><CODE>listener</CODE> - the listener that receives the response.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopControl(com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+stopControl</H3>
+<PRE>
+void <B>stopControl</B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mediaControl(com.ibm.telephony.conferencing.User, int, int, com.ibm.telephony.conferencing.event.ConferenceResponseHandler)"><!-- --></A><H3>
+mediaControl</H3>
+<PRE>
+void <B>mediaControl</B>(<A HREF="../../../../com/ibm/telephony/conferencing/User.html" title="interface in com.ibm.telephony.conferencing">User</A>&nbsp;user,
+                  int&nbsp;controlFlag,
+                  int&nbsp;mediaFlag,
+                  <A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceResponseHandler.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceResponseHandler</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addConferenceListener(com.ibm.telephony.conferencing.event.ConferenceListener)"><!-- --></A><H3>
+addConferenceListener</H3>
+<PRE>
+void <B>addConferenceListener</B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceListener.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeConferenceListener(com.ibm.telephony.conferencing.event.ConferenceListener)"><!-- --></A><H3>
+removeConferenceListener</H3>
+<PRE>
+void <B>removeConferenceListener</B>(<A HREF="../../../../com/ibm/telephony/conferencing/event/ConferenceListener.html" title="interface in com.ibm.telephony.conferencing.event">ConferenceListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/ibm/telephony/conferencing/AbstractConferenceManager.html" title="class in com.ibm.telephony.conferencing"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/ibm/telephony/conferencing/ConferenceException.html" title="class in com.ibm.telephony.conferencing"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/ibm/telephony/conferencing/Conference.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Conference.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

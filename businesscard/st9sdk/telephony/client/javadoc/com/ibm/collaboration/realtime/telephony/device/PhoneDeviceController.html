@@ -1,0 +1,674 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PhoneDeviceController (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PhoneDeviceController (IBM Sametime 9.0.0 SDK: IBM Sametime Telephony API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PhoneDeviceController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.telephony.device</FONT>
+<BR>
+Interface PhoneDeviceController</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceNotifier</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/service/device/AbstractPhoneDeviceController.html" title="class in com.ibm.collaboration.realtime.telephony.service.device">AbstractPhoneDeviceController</A></DD>
+</DL>
+<HR>
+<B>Deprecated.</B>&nbsp;<I>For internal use only starting with Sametime 8.5.2.</I>
+<P>
+<DL>
+<DT><PRE><FONT SIZE="-1">@Deprecated
+</FONT>public interface <B>PhoneDeviceController</B><DT>extends <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A></DL>
+</PRE>
+
+<P>
+PhoneDeviceController provides control over telephone devices, such as
+ softphones or desktop phones
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 7.5.1</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#CAPABILITY_CALL_FORWARDING">CAPABILITY_CALL_FORWARDING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Call forwarding options can get determined and set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#CAPABILITY_FORWARD_BUSY">CAPABILITY_FORWARD_BUSY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Calls can be forwarded when the phone is busy.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#CAPABILITY_FORWARD_DO_NOT_DISTURB">CAPABILITY_FORWARD_DO_NOT_DISTURB</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Calls can be forwarded when the phone is in do-not-disturb mode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#CAPABILITY_FORWARD_IMMEDIATE">CAPABILITY_FORWARD_IMMEDIATE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Calls can be forwarded immediately.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#CAPABILITY_FORWARD_NO_ANSWER">CAPABILITY_FORWARD_NO_ANSWER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Calls can be forwarded if there's no answer after a certain number of rings.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#CAPABILITY_FORWARD_NO_ANSWER_RING_COUNT">CAPABILITY_FORWARD_NO_ANSWER_RING_COUNT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The number of rings after which a call is forwarded can be determined and set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#CAPABILITY_MESSAGE_WAITING">CAPABILITY_MESSAGE_WAITING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;The message waiting indicator state can be determined and set.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceController"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_DO_NOT_DISTURB">CAPABILITY_DO_NOT_DISTURB</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_FEATURE_ID">CAPABILITY_FEATURE_ID</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MICROPHONE_BOOST">CAPABILITY_MICROPHONE_BOOST</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MICROPHONE_VOLUME">CAPABILITY_MICROPHONE_VOLUME</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MUTE_MICROPHONE">CAPABILITY_MUTE_MICROPHONE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_MUTE_SPEAKER">CAPABILITY_MUTE_SPEAKER</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE">CAPABILITY_SET_MICROPHONE_VOLUME_RELATIVE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE">CAPABILITY_SET_SPEAKER_VOLUME_RELATIVE</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SHOW_PROPERTIES">CAPABILITY_SHOW_PROPERTIES</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#CAPABILITY_SPEAKER_VOLUME">CAPABILITY_SPEAKER_VOLUME</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#getAvailablePhoneDevices()">getAvailablePhoneDevices</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns a list of available telephone devices, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/CallForwardingOptions.html" title="interface in com.ibm.collaboration.realtime.telephony.device">CallForwardingOptions</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#getCallForwardingOptions()">getCallForwardingOptions</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the phone's call forwarding options, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#getPhoneDevice()">getPhoneDevice</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Returns the current telephone device, if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#isCallForwardingEnabled()">isCallForwardingEnabled</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if call forwarding is currently enabled, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#isMessageWaiting()">isMessageWaiting</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Determines if the message waiting indicator is on,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#setCallForwardingEnabled(boolean)">setCallForwardingEnabled</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Enables or disables call forwarding, if supported by the service
+ provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#setCallForwardingOptions(com.ibm.collaboration.realtime.telephony.device.CallForwardingOptions)">setCallForwardingOptions</A></B>(<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/CallForwardingOptions.html" title="interface in com.ibm.collaboration.realtime.telephony.device">CallForwardingOptions</A>&nbsp;options)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the phone's call forwarding options, if supported
+ by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#setMessageWaiting(boolean)">setMessageWaiting</A></B>(boolean&nbsp;flag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Turns the message waiting indicator on or off,
+ if supported by the service provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#setPhoneDevice(java.lang.String)">setPhoneDevice</A></B>(java.lang.String&nbsp;device)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Sets the telephone device, if supported by the service provider.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceController"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceController</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#decreaseMicrophoneVolume()">decreaseMicrophoneVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#decreaseSpeakerVolume()">decreaseSpeakerVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getDeviceAddress()">getDeviceAddress</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getFeature(java.lang.String)">getFeature</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getMicrophoneVolume()">getMicrophoneVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#getSpeakerVolume()">getSpeakerVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#increaseMicrophoneVolume()">increaseMicrophoneVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#increaseSpeakerVolume()">increaseSpeakerVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isCapabilitySupported(java.lang.String)">isCapabilitySupported</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isDoNotDisturb()">isDoNotDisturb</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isFeatureEnabled(java.lang.String)">isFeatureEnabled</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isMicrophoneBoostEnabled()">isMicrophoneBoostEnabled</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isMicrophoneMuted()">isMicrophoneMuted</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#isSpeakerMuted()">isSpeakerMuted</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#muteMicrophone()">muteMicrophone</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#muteSpeaker()">muteSpeaker</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setDoNotDisturb(boolean)">setDoNotDisturb</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeature(java.lang.String, java.lang.Object)">setFeature</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setFeatureEnabled(java.lang.String, boolean)">setFeatureEnabled</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setMicrophoneBoostEnabled(boolean)">setMicrophoneBoostEnabled</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setMicrophoneVolume(double)">setMicrophoneVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#setSpeakerVolume(double)">setSpeakerVolume</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#showProperties()">showProperties</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#unmuteMicrophone()">unmuteMicrophone</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceController.html#unmuteSpeaker()">unmuteSpeaker</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.telephony.device.DeviceNotifier"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.telephony.device.<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html" title="interface in com.ibm.collaboration.realtime.telephony.device">DeviceNotifier</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html#addListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">addListener</A>, <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/DeviceNotifier.html#removeListener(com.ibm.collaboration.realtime.telephony.device.DeviceListener)">removeListener</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CAPABILITY_CALL_FORWARDING"><!-- --></A><H3>
+CAPABILITY_CALL_FORWARDING</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_CALL_FORWARDING</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Call forwarding options can get determined and set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.PhoneDeviceController.CAPABILITY_CALL_FORWARDING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_FORWARD_BUSY"><!-- --></A><H3>
+CAPABILITY_FORWARD_BUSY</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_FORWARD_BUSY</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Calls can be forwarded when the phone is busy.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.PhoneDeviceController.CAPABILITY_FORWARD_BUSY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_FORWARD_DO_NOT_DISTURB"><!-- --></A><H3>
+CAPABILITY_FORWARD_DO_NOT_DISTURB</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_FORWARD_DO_NOT_DISTURB</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Calls can be forwarded when the phone is in do-not-disturb mode.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.PhoneDeviceController.CAPABILITY_FORWARD_DO_NOT_DISTURB">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_FORWARD_IMMEDIATE"><!-- --></A><H3>
+CAPABILITY_FORWARD_IMMEDIATE</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_FORWARD_IMMEDIATE</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Calls can be forwarded immediately.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.PhoneDeviceController.CAPABILITY_FORWARD_IMMEDIATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_FORWARD_NO_ANSWER"><!-- --></A><H3>
+CAPABILITY_FORWARD_NO_ANSWER</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_FORWARD_NO_ANSWER</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Calls can be forwarded if there's no answer after a certain number of rings.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.PhoneDeviceController.CAPABILITY_FORWARD_NO_ANSWER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_FORWARD_NO_ANSWER_RING_COUNT"><!-- --></A><H3>
+CAPABILITY_FORWARD_NO_ANSWER_RING_COUNT</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_FORWARD_NO_ANSWER_RING_COUNT</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The number of rings after which a call is forwarded can be determined and set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.PhoneDeviceController.CAPABILITY_FORWARD_NO_ANSWER_RING_COUNT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CAPABILITY_MESSAGE_WAITING"><!-- --></A><H3>
+CAPABILITY_MESSAGE_WAITING</H3>
+<PRE>
+static final java.lang.String <B>CAPABILITY_MESSAGE_WAITING</B></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>The message waiting indicator state can be determined and set.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#com.ibm.collaboration.realtime.telephony.device.PhoneDeviceController.CAPABILITY_MESSAGE_WAITING">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getAvailablePhoneDevices()"><!-- --></A><H3>
+getAvailablePhoneDevices</H3>
+<PRE>
+java.util.List <B>getAvailablePhoneDevices</B>()
+                                        throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns a list of available telephone devices, if supported
+ by the service provider. Use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#getPhoneDevice()"><CODE>getPhoneDevice()</CODE></A> to
+ determine which device is currently being used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>List of strings for names of available telephone devices.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCallForwardingOptions()"><!-- --></A><H3>
+getCallForwardingOptions</H3>
+<PRE>
+<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/CallForwardingOptions.html" title="interface in com.ibm.collaboration.realtime.telephony.device">CallForwardingOptions</A> <B>getCallForwardingOptions</B>()
+                                               throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the phone's call forwarding options, if supported
+ by the service provider. To simply determine if call forwarding
+ is enabled, use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#isCallForwardingEnabled()"><CODE>isCallForwardingEnabled()</CODE></A> instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Call forwarding options, null if none specified.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPhoneDevice()"><!-- --></A><H3>
+getPhoneDevice</H3>
+<PRE>
+java.lang.String <B>getPhoneDevice</B>()
+                                throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Returns the current telephone device, if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Name of current telephone device, null for default device.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isCallForwardingEnabled()"><!-- --></A><H3>
+isCallForwardingEnabled</H3>
+<PRE>
+boolean <B>isCallForwardingEnabled</B>()
+                                throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if call forwarding is currently enabled, if supported
+ by the service provider. To determine if call forwarding is enabled
+ and get the current forwarding options, use <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#getCallForwardingOptions()"><CODE>getCallForwardingOptions()</CODE></A>
+ instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if call forwarding is enabled, false if disabled.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isMessageWaiting()"><!-- --></A><H3>
+isMessageWaiting</H3>
+<PRE>
+boolean <B>isMessageWaiting</B>()
+                         throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Determines if the message waiting indicator is on,
+ if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if the message waiting indicator is on, false if the indicator is off.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCallForwardingEnabled(boolean)"><!-- --></A><H3>
+setCallForwardingEnabled</H3>
+<PRE>
+void <B>setCallForwardingEnabled</B>(boolean&nbsp;flag)
+                              throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Enables or disables call forwarding, if supported by the service
+ provider. Before enabling call forwarding, call forwarding options
+ must be specified either on the phone device or by using
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#setCallForwardingOptions(com.ibm.collaboration.realtime.telephony.device.CallForwardingOptions)"><CODE>setCallForwardingOptions(CallForwardingOptions)</CODE></A>. Call
+ forwarding can also be enabled or disabled when using the
+ setCallForwardingOptions method, so it is not necessary to use
+ both methods together.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true to enable call forwarding, false to disable
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidOperationException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidOperationException</A></CODE> - if you enable call forwarding and no options have been specified
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCallForwardingOptions(com.ibm.collaboration.realtime.telephony.device.CallForwardingOptions)"><!-- --></A><H3>
+setCallForwardingOptions</H3>
+<PRE>
+void <B>setCallForwardingOptions</B>(<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/CallForwardingOptions.html" title="interface in com.ibm.collaboration.realtime.telephony.device">CallForwardingOptions</A>&nbsp;options)
+                              throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the phone's call forwarding options, if supported
+ by the service provider. Also enables call forwarding, if
+ <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/CallForwardingOptions.html#isEnabled()"><CODE>CallForwardingOptions.isEnabled()</CODE></A> is true.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>options</CODE> - call forwarding options
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the options are null or invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMessageWaiting(boolean)"><!-- --></A><H3>
+setMessageWaiting</H3>
+<PRE>
+void <B>setMessageWaiting</B>(boolean&nbsp;flag)
+                       throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Turns the message waiting indicator on or off,
+ if supported by the service provider.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>flag</CODE> - true to turn the message waiting indicator on, false to turn it off
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPhoneDevice(java.lang.String)"><!-- --></A><H3>
+setPhoneDevice</H3>
+<PRE>
+void <B>setPhoneDevice</B>(java.lang.String&nbsp;device)
+                    throws <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Sets the telephone device, if supported by the service provider. The input
+ should be one of the devices returned by <A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html#getAvailablePhoneDevices()"><CODE>getAvailablePhoneDevices()</CODE></A>,
+ or null for the default device.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>device</CODE> - telephone device, null to use default device
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/InvalidParameterException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">InvalidParameterException</A></CODE> - if the device is invalid
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/UnsupportedCapabilityException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">UnsupportedCapabilityException</A></CODE> - if this operation is not supported
+<DD><CODE><A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/exception/TelephonyServiceException.html" title="class in com.ibm.collaboration.realtime.telephony.exception">TelephonyServiceException</A></CODE> - if the operation fails for some other reason</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/MediaPlayer.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/ibm/collaboration/realtime/telephony/device/VideoChatDeviceController.html" title="interface in com.ibm.collaboration.realtime.telephony.device"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?com/ibm/collaboration/realtime/telephony/device/PhoneDeviceController.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PhoneDeviceController.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<META NAME="GENERATOR" CONTENT="Java2HTML Version 1.0.7">
+<TITLE>Client (Java2HTML)</TITLE>
+</HEAD>
+<BODY><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">Client</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+<pre ID="Classes">
+<A NAME="1"><A><FONT ID="MultiLineComment">/*
+<A NAME="2"><A> * Licensed Materials - Property of IBM
+<A NAME="3"><A> *
+<A NAME="4"><A> * L-MCOS-96LQPJ
+<A NAME="5"><A> *
+<A NAME="6"><A> * (C) Copyright IBM Corp. 2002, 2013. All rights reserved.
+<A NAME="7"><A> *
+<A NAME="8"><A> * US Government Users Restricted Rights- Use, duplication or 
+<A NAME="9"><A> * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+<A NAME="10"><A> */</FONT>
+<A NAME="11"><A>
+<A NAME="12"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.comparch.*;
+<A NAME="13"><A><FONT ID="Import">import</FONT> com.lotus.sametime.community.*;
+<A NAME="14"><A><FONT ID="Import">import</FONT> com.lotus.sametime.commui.*;
+<A NAME="15"><A><FONT ID="Import">import</FONT> com.lotus.sametime.awarenessui.list.AwarenessList;
+<A NAME="16"><A><FONT ID="Import">import</FONT> com.lotus.sametime.awarenessui.tree.STTreeAVController;
+<A NAME="17"><A><FONT ID="Import">import</FONT> com.lotus.sametime.awarenessui.av.AVController;
+<A NAME="18"><A><FONT ID="Import">import</FONT> com.lotus.sametime.guiutils.tree.*;
+<A NAME="19"><A><FONT ID="Import">import</FONT> com.lotus.sametime.awarenessui.*;
+<A NAME="20"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.util.NdrOutputStream;
+<A NAME="21"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.constants.*;
+<A NAME="22"><A><FONT ID="Import">import</FONT> com.lotus.sametime.core.types.*;
+<A NAME="23"><A>
+<A NAME="24"><A><FONT ID="Import">import</FONT> java.awt.*;
+<A NAME="25"><A><FONT ID="Import">import</FONT> java.awt.event.*;
+<A NAME="26"><A><FONT ID="Import">import</FONT> java.io.IOException;
+<A NAME="27"><A><FONT ID="Import">import</FONT> java.util.Vector;
+<A NAME="28"><A><FONT ID="Import">import</FONT> java.util.Enumeration;
+<A NAME="29"><A>
+<A NAME="30"><A><FONT ID="FormalComment">/**
+<A NAME="31"><A> * The client for the offline message sample.
+<A NAME="32"><A> *
+<A NAME="33"><A> * @author Assaf Azaria, July 2001.
+<A NAME="34"><A> */</FONT>
+<A NAME="35"><A><FONT ID="Public">public</FONT> <FONT ID="Class">class</FONT> Client <FONT ID="Extends">extends</FONT> Frame <FONT ID="Implements">implements</FONT> LoginListener, ActionListener,
+<A NAME="36"><A>    ResolveViewListener
+<A NAME="37"><A>{
+<A NAME="38"><A>    <FONT ID="FormalComment">/**
+<A NAME="39"><A>     * The service type of the offline message server app.
+<A NAME="40"><A>     */</FONT>
+<A NAME="41"><A>    <FONT ID="Static">static</FONT> <FONT ID="Final">final</FONT> <FONT ID="Int">int</FONT> SERVICE_TYPE = <FONT ID="IntegerLiteral">0x80000055</FONT>;
+<A NAME="42"><A>
+<A NAME="43"><A>    <FONT ID="FormalComment">/**
+<A NAME="44"><A>     * The session object.
+<A NAME="45"><A>     */</FONT>
+<A NAME="46"><A>    <FONT ID="Private">private</FONT> STSession m_session;
+<A NAME="47"><A>
+<A NAME="48"><A>    <FONT ID="FormalComment">/**
+<A NAME="49"><A>     * The channel service.
+<A NAME="50"><A>     */</FONT>
+<A NAME="51"><A>    <FONT ID="Private">private</FONT> ChannelService m_channelService;
+<A NAME="52"><A>
+<A NAME="53"><A>    <FONT ID="FormalComment">/**
+<A NAME="54"><A>     * The awareness list.
+<A NAME="55"><A>     */</FONT>
+<A NAME="56"><A>    <FONT ID="Private">private</FONT> AwarenessList m_list;
+<A NAME="57"><A>
+<A NAME="58"><A>    <FONT ID="FormalComment">/**
+<A NAME="59"><A>     * The 'add users' button.
+<A NAME="60"><A>     */</FONT>
+<A NAME="61"><A>    <FONT ID="Private">private</FONT> Button m_btnAddUsers;
+<A NAME="62"><A>
+<A NAME="63"><A>    <FONT ID="FormalComment">/**
+<A NAME="64"><A>     * The add dialog.
+<A NAME="65"><A>     */</FONT>
+<A NAME="66"><A>    <FONT ID="Private">private</FONT> AddDialog m_addDialog;
+<A NAME="67"><A>
+<A NAME="68"><A>    <FONT ID="FormalComment">/**
+<A NAME="69"><A>     * Construct a new client.
+<A NAME="70"><A>     */</FONT>
+<A NAME="71"><A>    <FONT ID="Public">public</FONT> Client(String name, String password, String hostName)
+<A NAME="72"><A>    {
+<A NAME="73"><A>        <FONT ID="Super">super</FONT>(<FONT ID="StringLiteral">"Offline Message Client"</FONT>);
+<A NAME="74"><A>
+<A NAME="75"><A>        <FONT ID="SingleLineComment">// Create and load the session of components.
+<A NAME="76"><A></FONT>        <FONT ID="Try">try</FONT>
+<A NAME="77"><A>        {
+<A NAME="78"><A>            m_session = <FONT ID="New">new</FONT> STSession(<FONT ID="StringLiteral">"OfflineMessagesClient"</FONT>);
+<A NAME="79"><A>            m_session.loadAllComponents();
+<A NAME="80"><A>            m_session.start();
+<A NAME="81"><A>        }
+<A NAME="82"><A>        <FONT ID="Catch">catch</FONT>(DuplicateObjectException e)
+<A NAME="83"><A>        {
+<A NAME="84"><A>            e.printStackTrace();
+<A NAME="85"><A>            exit();
+<A NAME="86"><A>        }
+<A NAME="87"><A>
+<A NAME="88"><A>        <FONT ID="SingleLineComment">// Get a reference to the needed components.
+<A NAME="89"><A></FONT>        m_channelService =
+<A NAME="90"><A>            (ChannelService)m_session.getCompApi(ChannelService.COMP_NAME);
+<A NAME="91"><A>
+<A NAME="92"><A>        createUI();
+<A NAME="93"><A>        login(name, password, hostName);
+<A NAME="94"><A>    }
+<A NAME="95"><A>
+<A NAME="96"><A>    <FONT ID="FormalComment">/**
+<A NAME="97"><A>     * Set up the ui components.
+<A NAME="98"><A>     */</FONT>
+<A NAME="99"><A>    <FONT ID="Void">void</FONT> createUI()
+<A NAME="100"><A>    {
+<A NAME="101"><A>        setLayout(<FONT ID="New">new</FONT> BorderLayout());
+<A NAME="102"><A>
+<A NAME="103"><A>        m_list = <FONT ID="New">new</FONT> AwarenessList(m_session, <FONT ID="True">true</FONT>);
+<A NAME="104"><A>        m_list.setBackground(Color.white);
+<A NAME="105"><A>
+<A NAME="106"><A>        <FONT ID="SingleLineComment">// We need to overide to default controller to add the 'offline message'
+<A NAME="107"><A></FONT>        <FONT ID="SingleLineComment">// menu item.
+<A NAME="108"><A></FONT>        m_list.setController(<FONT ID="New">new</FONT> MyListController(m_list.getModel()));
+<A NAME="109"><A>
+<A NAME="110"><A>        m_btnAddUsers = <FONT ID="New">new</FONT> Button(<FONT ID="StringLiteral">"Add Users"</FONT>);
+<A NAME="111"><A>        Panel btnPanel = <FONT ID="New">new</FONT> Panel(<FONT ID="New">new</FONT> GridLayout(<FONT ID="IntegerLiteral">0</FONT>,<FONT ID="IntegerLiteral">1</FONT>));
+<A NAME="112"><A>        btnPanel.add(m_btnAddUsers);
+<A NAME="113"><A>        m_btnAddUsers.addActionListener(<FONT ID="This">this</FONT>);
+<A NAME="114"><A>        m_btnAddUsers.setEnabled(<FONT ID="False">false</FONT>);
+<A NAME="115"><A>
+<A NAME="116"><A>        add(<FONT ID="StringLiteral">"South"</FONT>, btnPanel);
+<A NAME="117"><A>        add(<FONT ID="StringLiteral">"Center"</FONT>, m_list);
+<A NAME="118"><A>
+<A NAME="119"><A>        addWindowListener(<FONT ID="New">new</FONT> WindowAdapter()
+<A NAME="120"><A>            {
+<A NAME="121"><A>                <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> windowClosing(WindowEvent event)
+<A NAME="122"><A>                {
+<A NAME="123"><A>                    setVisible(<FONT ID="False">false</FONT>);
+<A NAME="124"><A>                    exit();
+<A NAME="125"><A>                }
+<A NAME="126"><A>            });
+<A NAME="127"><A>    }
+<A NAME="128"><A>
+<A NAME="129"><A>    <FONT ID="FormalComment">/**
+<A NAME="130"><A>     * Login to the sametime server.
+<A NAME="131"><A>     */</FONT>
+<A NAME="132"><A>    <FONT ID="Void">void</FONT> login(String name, String password, String hostName)
+<A NAME="133"><A>    {
+<A NAME="134"><A>        CommunityService commService
+<A NAME="135"><A>            = (CommunityService)m_session.getCompApi(CommunityService.COMP_NAME);
+<A NAME="136"><A>
+<A NAME="137"><A>        commService.addLoginListener(<FONT ID="This">this</FONT>);
+<A NAME="138"><A>        commService.loginByPassword(hostName, name, password);
+<A NAME="139"><A>    }
+<A NAME="140"><A>
+<A NAME="141"><A>    <FONT ID="SingleLineComment">//
+<A NAME="142"><A></FONT>    <FONT ID="SingleLineComment">// Login listener.
+<A NAME="143"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="144"><A></FONT>
+<A NAME="145"><A>    <FONT ID="FormalComment">/**
+<A NAME="146"><A>     * Indicates that we were successfully logged in to the Sametime community.
+<A NAME="147"><A>     *
+<A NAME="148"><A>     * @param event The event object.
+<A NAME="149"><A>     * @see LoginEvent#getCommunity
+<A NAME="150"><A>     */</FONT>
+<A NAME="151"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedIn(LoginEvent event)
+<A NAME="152"><A>    {
+<A NAME="153"><A>        System.out.println(<FONT ID="StringLiteral">"CLIENT: LoggedIn"</FONT>);
+<A NAME="154"><A>
+<A NAME="155"><A>        m_btnAddUsers.setEnabled(<FONT ID="True">true</FONT>);
+<A NAME="156"><A>    }
+<A NAME="157"><A>
+<A NAME="158"><A>    <FONT ID="FormalComment">/**
+<A NAME="159"><A>     * Indicates that we were successfully logged out of the Sametime community, or a login
+<A NAME="160"><A>     * request was refused.
+<A NAME="161"><A>     *
+<A NAME="162"><A>     * @param event The event object.
+<A NAME="163"><A>     * @see LoginEvent#getReason
+<A NAME="164"><A>     * @see LoginEvent#getCommunity
+<A NAME="165"><A>     */</FONT>
+<A NAME="166"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> loggedOut(LoginEvent event)
+<A NAME="167"><A>    {
+<A NAME="168"><A>        System.out.println(<FONT ID="StringLiteral">"CLIENT: LoggedOut "</FONT> + event.getReason());
+<A NAME="169"><A>        exit();
+<A NAME="170"><A>    }
+<A NAME="171"><A>
+<A NAME="172"><A>    <FONT ID="SingleLineComment">//
+<A NAME="173"><A></FONT>    <FONT ID="SingleLineComment">// 'Add users' button events.
+<A NAME="174"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="175"><A></FONT>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> actionPerformed(ActionEvent event)
+<A NAME="176"><A>    {
+<A NAME="177"><A>        <FONT ID="If">if</FONT> (event.getSource() == m_btnAddUsers)
+<A NAME="178"><A>        {
+<A NAME="179"><A>            m_addDialog = <FONT ID="New">new</FONT> AddDialog(<FONT ID="This">this</FONT>, m_session, <FONT ID="StringLiteral">"Add Users"</FONT>);
+<A NAME="180"><A>            m_addDialog.addResolveViewListener(<FONT ID="This">this</FONT>);
+<A NAME="181"><A>            m_addDialog.setVisible(<FONT ID="True">true</FONT>);
+<A NAME="182"><A>        }
+<A NAME="183"><A>    }
+<A NAME="184"><A>
+<A NAME="185"><A>    <FONT ID="SingleLineComment">//
+<A NAME="186"><A></FONT>    <FONT ID="SingleLineComment">// Resolve view listener, events from the add dialog.
+<A NAME="187"><A></FONT>    <FONT ID="SingleLineComment">//
+<A NAME="188"><A></FONT>
+<A NAME="189"><A>    <FONT ID="FormalComment">/**
+<A NAME="190"><A>     * Indicates a resolve operation was successful.
+<A NAME="191"><A>     *
+<A NAME="192"><A>     * @param            event The event object.
+<A NAME="193"><A>     * @see              ResolveViewEvent#getUser
+<A NAME="194"><A>     */</FONT>
+<A NAME="195"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> resolved(ResolveViewEvent event)
+<A NAME="196"><A>    {
+<A NAME="197"><A>        <FONT ID="SingleLineComment">// Add the selected users to the tree.
+<A NAME="198"><A></FONT>        STUser[] usersToAdd = { event.getUser() };
+<A NAME="199"><A>        m_list.addUsers(usersToAdd);
+<A NAME="200"><A>    }
+<A NAME="201"><A>
+<A NAME="202"><A>    <FONT ID="FormalComment">/**
+<A NAME="203"><A>     * Indicates that a resolve request failed.
+<A NAME="204"><A>     *
+<A NAME="205"><A>     * @param            event The event object.
+<A NAME="206"><A>     * @see              ResolveViewEvent#getReason
+<A NAME="207"><A>     */</FONT>
+<A NAME="208"><A>    <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> resolveFailed(ResolveViewEvent event)
+<A NAME="209"><A>    {}
+<A NAME="210"><A>
+<A NAME="211"><A>
+<A NAME="212"><A>    <FONT ID="FormalComment">/**
+<A NAME="213"><A>     * Send the given message to the offline message sa.
+<A NAME="214"><A>     *
+<A NAME="215"><A>     * @param user The currently offline receiver of the message.
+<A NAME="216"><A>     * @param message The message.
+<A NAME="217"><A>     */</FONT>
+<A NAME="218"><A>    <FONT ID="Void">void</FONT> sendOfflineMessage(STUser user, String message)
+<A NAME="219"><A>    {
+<A NAME="220"><A>        NdrOutputStream outStream = <FONT ID="New">new</FONT> NdrOutputStream();
+<A NAME="221"><A>        <FONT ID="Try">try</FONT>
+<A NAME="222"><A>        {
+<A NAME="223"><A>            user.getId().dump(outStream);
+<A NAME="224"><A>            outStream.writeUTF(user.getName());
+<A NAME="225"><A>            outStream.writeUTF(message);
+<A NAME="226"><A>        }
+<A NAME="227"><A>        <FONT ID="Catch">catch</FONT>(IOException e)
+<A NAME="228"><A>        {
+<A NAME="229"><A>            e.printStackTrace();
+<A NAME="230"><A>            <FONT ID="Return">return</FONT>;
+<A NAME="231"><A>        }
+<A NAME="232"><A>
+<A NAME="233"><A>        Channel channel =
+<A NAME="234"><A>                m_channelService.createChannel(SERVICE_TYPE, <FONT ID="IntegerLiteral">0</FONT>, <FONT ID="IntegerLiteral">0</FONT>,
+<A NAME="235"><A>                                               EncLevel.ENC_LEVEL_ALL,
+<A NAME="236"><A>                                               outStream.toByteArray(), <FONT ID="Null">null</FONT>);
+<A NAME="237"><A>        channel.open();
+<A NAME="238"><A>    }
+<A NAME="239"><A>
+<A NAME="240"><A>    <FONT ID="FormalComment">/**
+<A NAME="241"><A>     * Application entry point.
+<A NAME="242"><A>     */</FONT>
+<A NAME="243"><A>    <FONT ID="Public">public</FONT> <FONT ID="Static">static</FONT> <FONT ID="Void">void</FONT> main(String[] args)
+<A NAME="244"><A>    {
+<A NAME="245"><A>        <FONT ID="If">if</FONT> (args.length != <FONT ID="IntegerLiteral">3</FONT>)
+<A NAME="246"><A>        {
+<A NAME="247"><A>            System.err.println(<FONT ID="StringLiteral">"Usage: Client [name] [password] [serverName]"</FONT>);
+<A NAME="248"><A>            System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="249"><A>        }
+<A NAME="250"><A>
+<A NAME="251"><A>        <A HREF="Client.java.html">Client</A> client = <FONT ID="New">new</FONT> <A HREF="Client.java.html">Client</A>(args[<FONT ID="IntegerLiteral">0</FONT>], args[<FONT ID="IntegerLiteral">1</FONT>], args[<FONT ID="IntegerLiteral">2</FONT>]);
+<A NAME="252"><A>        client.pack();
+<A NAME="253"><A>        client.setSize(<FONT ID="IntegerLiteral">200</FONT>, <FONT ID="IntegerLiteral">400</FONT>);
+<A NAME="254"><A>        client.setVisible(<FONT ID="True">true</FONT>);
+<A NAME="255"><A>    }
+<A NAME="256"><A>
+<A NAME="257"><A>    <FONT ID="FormalComment">/**
+<A NAME="258"><A>     * Terminate the application.
+<A NAME="259"><A>     */</FONT>
+<A NAME="260"><A>    <FONT ID="Void">void</FONT> exit()
+<A NAME="261"><A>    {
+<A NAME="262"><A>        m_session.stop();
+<A NAME="263"><A>        m_session.unloadSession();
+<A NAME="264"><A>        System.exit(<FONT ID="IntegerLiteral">0</FONT>);
+<A NAME="265"><A>    }
+<A NAME="266"><A>
+<A NAME="267"><A>    <FONT ID="FormalComment">/**
+<A NAME="268"><A>     * A custom controller. Adds the 'offline message' menu item.
+<A NAME="269"><A>     */</FONT>
+<A NAME="270"><A>    <FONT ID="Class">class</FONT> MyListController <FONT ID="Extends">extends</FONT> AVController <FONT ID="Implements">implements</FONT> ActionListener
+<A NAME="271"><A>    {
+<A NAME="272"><A>        <FONT ID="FormalComment">/**
+<A NAME="273"><A>         * The menu item.
+<A NAME="274"><A>         */</FONT>
+<A NAME="275"><A>        MenuItem m_offlineMessage;
+<A NAME="276"><A>
+<A NAME="277"><A>        <FONT ID="FormalComment">/**
+<A NAME="278"><A>         * A flag stating whether regular chat is enabled.
+<A NAME="279"><A>         */</FONT>
+<A NAME="280"><A>        <FONT ID="Boolean">boolean</FONT> m_chatEnabled;
+<A NAME="281"><A>
+<A NAME="282"><A>        <FONT ID="FormalComment">/**
+<A NAME="283"><A>         * Construct a new controller.
+<A NAME="284"><A>         */</FONT>
+<A NAME="285"><A>        <FONT ID="Public">public</FONT> MyListController(AwarenessModel model)
+<A NAME="286"><A>        {
+<A NAME="287"><A>            <FONT ID="Super">super</FONT>(model);
+<A NAME="288"><A>
+<A NAME="289"><A>            m_offlineMessage = <FONT ID="New">new</FONT> MenuItem(<FONT ID="StringLiteral">"Offline message"</FONT>);
+<A NAME="290"><A>            m_offlineMessage.addActionListener(<FONT ID="This">this</FONT>);
+<A NAME="291"><A>        }
+<A NAME="292"><A>
+<A NAME="293"><A>        <FONT ID="FormalComment">/**
+<A NAME="294"><A>         * A menu item was picked.
+<A NAME="295"><A>         */</FONT>
+<A NAME="296"><A>        <FONT ID="Public">public</FONT> <FONT ID="Void">void</FONT> actionPerformed(ActionEvent event)
+<A NAME="297"><A>        {
+<A NAME="298"><A>            <FONT ID="If">if</FONT> (event.getSource() == m_offlineMessage)
+<A NAME="299"><A>            {
+<A NAME="300"><A>                TreeNode node = (TreeNode)m_selectedNodes.firstElement();
+<A NAME="301"><A>
+<A NAME="302"><A>                STUser user = (STUser)node.getKey();
+<A NAME="303"><A>                <A HREF="MessageFrame.java.html">MessageFrame</A> frame = <FONT ID="New">new</FONT> <A HREF="MessageFrame.java.html">MessageFrame</A>(Client.<FONT ID="This">this</FONT>, user);
+<A NAME="304"><A>                frame.pack();
+<A NAME="305"><A>                frame.setVisible(<FONT ID="True">true</FONT>);
+<A NAME="306"><A>            }
+<A NAME="307"><A>        }
+<A NAME="308"><A>
+<A NAME="309"><A>        <FONT ID="FormalComment">/**
+<A NAME="310"><A>        * Set the state of the popup menu items according to the
+<A NAME="311"><A>        * selected nodes.
+<A NAME="312"><A>        *
+<A NAME="313"><A>        * @param nodes The selected nodes.
+<A NAME="314"><A>        */</FONT>
+<A NAME="315"><A>        <FONT ID="Protected">protected</FONT> <FONT ID="Void">void</FONT> enablePopupItems(Vector nodes)
+<A NAME="316"><A>        {
+<A NAME="317"><A>            <FONT ID="SingleLineComment">// We only add our menu in case a regular chat can't happen.
+<A NAME="318"><A></FONT>            <FONT ID="If">if</FONT>(!m_chatEnabled)
+<A NAME="319"><A>            {
+<A NAME="320"><A>                m_popup.removeAll();
+<A NAME="321"><A>                m_popup.add(m_offlineMessage);
+<A NAME="322"><A>            }
+<A NAME="323"><A>            <FONT ID="Else">else</FONT>
+<A NAME="324"><A>            {
+<A NAME="325"><A>                <FONT ID="Super">super</FONT>.enablePopupItems(nodes);
+<A NAME="326"><A>            }
+<A NAME="327"><A>        }
+<A NAME="328"><A>
+<A NAME="329"><A>        <FONT ID="FormalComment">/**
+<A NAME="330"><A>         * Handle the selection changed event.
+<A NAME="331"><A>         *
+<A NAME="332"><A>         * @param selectedNodes The newly selected nodes.
+<A NAME="333"><A>         */</FONT>
+<A NAME="334"><A>        <FONT ID="Protected">protected</FONT> <FONT ID="Void">void</FONT> handleSelectionChanged(Vector selectedNodes)
+<A NAME="335"><A>        {
+<A NAME="336"><A>            <FONT ID="SingleLineComment">// initialize values
+<A NAME="337"><A></FONT>            m_chatEnabled = <FONT ID="False">false</FONT>;
+<A NAME="338"><A>
+<A NAME="339"><A>            <FONT ID="Boolean">boolean</FONT> onlineUser = <FONT ID="False">false</FONT>;
+<A NAME="340"><A>            <FONT ID="SingleLineComment">// Check for offline users.
+<A NAME="341"><A></FONT>            <FONT ID="For">for</FONT> (Enumeration e = selectedNodes.elements(); e.hasMoreElements();)
+<A NAME="342"><A>            {
+<A NAME="343"><A>                AwarenessNode node = (AwarenessNode)e.nextElement();
+<A NAME="344"><A>
+<A NAME="345"><A>                <FONT ID="SingleLineComment">// Check if it's an online user.
+<A NAME="346"><A></FONT>                <FONT ID="If">if</FONT>(node.isOnline())
+<A NAME="347"><A>                {
+<A NAME="348"><A>                    onlineUser = <FONT ID="True">true</FONT>;
+<A NAME="349"><A>                    <FONT ID="Break">break</FONT>;
+<A NAME="350"><A>                }
+<A NAME="351"><A>            }
+<A NAME="352"><A>            m_chatEnabled = onlineUser &amp;&amp; m_messageEnabled;
+<A NAME="353"><A>        }
+<A NAME="354"><A>    }
+<A NAME="355"><A>}
+<A NAME="356"><A>
+<A NAME="357"><A></pre><TABLE id="Header" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td colspan="2" width="33%" ><p align="left">&nbsp;</p>
+</td>
+<td align="center" colspan="2" width="33%" </td>
+<p align="center"><font size="4">Client</font></p>
+</td>
+<td align="right" colspan="2" width="33%">
+<p align="right"><font size="3">&nbsp;</font></p>
+</td>
+</tr>
+</TABLE>
+
+</BODY>
+</HTML>

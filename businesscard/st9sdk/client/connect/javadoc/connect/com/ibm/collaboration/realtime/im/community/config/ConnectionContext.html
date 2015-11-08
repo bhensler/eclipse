@@ -1,0 +1,980 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ConnectionContext (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ConnectionContext (IBM Sametime Software Development Toolkit 9.0: Lotus Sametime Connect API Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html" title="class in com.ibm.collaboration.realtime.im.community.config"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../../index.html?com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ConnectionContext.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.ibm.collaboration.realtime.im.community.config</FONT>
+<BR>
+Class ConnectionContext</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../../../resources/inherit.gif" ALT="extended by "><B>com.ibm.collaboration.realtime.im.community.config.ConnectionContext</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD>com.ibm.collaboration.realtime.core.IValidatable, java.lang.Cloneable</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>ConnectionContext</B><DT>extends java.lang.Object<DT>implements java.lang.Cloneable, com.ibm.collaboration.realtime.core.IValidatable</DL>
+</PRE>
+
+<P>
+ConnectionContext represents the connection settings / information used with a Community.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>Sametime 8.0.2</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html#getConnectionContext()"><CODE>CommunityConfig.getConnectionContext()</CODE></A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_BROWSER">CONN_TYPE_BROWSER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: Use Browser Settings</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_DIRECT">CONN_TYPE_DIRECT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: UDirect Connection</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_HTTP_DIRECT">CONN_TYPE_HTTP_DIRECT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: Direct HTTP Connection</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_HTTP">CONN_TYPE_PROXY_HTTP</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: HTTP Proxy</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_HTTPS">CONN_TYPE_PROXY_HTTPS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: HTTPS Proxy</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_REVERSE">CONN_TYPE_PROXY_REVERSE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: Reverse Proxy</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_SOCKS4">CONN_TYPE_PROXY_SOCKS4</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: Socks4 Proxy</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_SOCKS5">CONN_TYPE_PROXY_SOCKS5</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: Socks5 Proxy</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_TLS_DIRECT">CONN_TYPE_TLS_DIRECT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: TLS Direct Connection</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#ConnectionContext()">ConnectionContext</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()">getConnectionType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the the connection type used by this connection object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getProxyHost()">getProxyHost</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the connection's proxy host.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getProxyPassIsCommunityPassword()">getProxyPassIsCommunityPassword</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getProxyPasswordKey()">getProxyPasswordKey</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getProxyPort()">getProxyPort</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the connection's proxy port.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getProxyUserIsCommunityUser()">getProxyUserIsCommunityUser</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getProxyUserName()">getProxyUserName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the connection's proxy user name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.net.URL</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getReverseProxyUrl()">getReverseProxyUrl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the connection's reverse proxy URL.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getReverseProxyUrlString()">getReverseProxyUrlString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the connection's reverse proxy URL.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#isDirty()">isDirty</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns whether or not any persistable field in this ConnectionContext is dirty so 
+ that we do not needlessly save the community configuration.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#isUsingProxy()">isUsingProxy</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Utility method to indicate whether the connection type is a proxy
+ (HTTP, HTTPS, Socks4, Socks5, Reverse)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#proxyResolvesLocally()">proxyResolvesLocally</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns whether the proxy host should resolve locally or not.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)">setConnectionType</A></B>(java.lang.String&nbsp;connectionType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the connection type to use with this connection object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setIsDirty(boolean)">setIsDirty</A></B>(boolean&nbsp;isDirty)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setProxyHost(java.lang.String)">setProxyHost</A></B>(java.lang.String&nbsp;proxyHost)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the proxy host to use with this connection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setProxyPassIsCommunityPassword(boolean)">setProxyPassIsCommunityPassword</A></B>(boolean&nbsp;proxyPassIsCommunityPassword)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setProxyPasswordKey(java.lang.String)">setProxyPasswordKey</A></B>(java.lang.String&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setProxyPort(int)">setProxyPort</A></B>(int&nbsp;proxyPort)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the proxy port to use with this connection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setProxyResolvesLocally(boolean)">setProxyResolvesLocally</A></B>(boolean&nbsp;proxyResolvesLocally)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether the proxy should resolve locally or not.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setProxyUserIsCommunityUser(boolean)">setProxyUserIsCommunityUser</A></B>(boolean&nbsp;proxyUserIsCommunityUser)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setProxyUserName(java.lang.String)">setProxyUserName</A></B>(java.lang.String&nbsp;proxyUserName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the proxy user name for this connection.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.ibm.collaboration.realtime.core.IValidatable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.ibm.collaboration.realtime.core.IValidatable</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>validate</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CONN_TYPE_BROWSER"><!-- --></A><H3>
+CONN_TYPE_BROWSER</H3>
+<PRE>
+public static java.lang.String <B>CONN_TYPE_BROWSER</B></PRE>
+<DL>
+<DD>Connection Type: Use Browser Settings
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)"><CODE>setConnectionType(String)</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()"><CODE>getConnectionType()</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="CONN_TYPE_DIRECT"><!-- --></A><H3>
+CONN_TYPE_DIRECT</H3>
+<PRE>
+public static java.lang.String <B>CONN_TYPE_DIRECT</B></PRE>
+<DL>
+<DD>Connection Type: UDirect Connection
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)"><CODE>setConnectionType(String)</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()"><CODE>getConnectionType()</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="CONN_TYPE_TLS_DIRECT"><!-- --></A><H3>
+CONN_TYPE_TLS_DIRECT</H3>
+<PRE>
+public static java.lang.String <B>CONN_TYPE_TLS_DIRECT</B></PRE>
+<DL>
+<DD>Connection Type: TLS Direct Connection
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)"><CODE>setConnectionType(String)</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()"><CODE>getConnectionType()</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="CONN_TYPE_HTTP_DIRECT"><!-- --></A><H3>
+CONN_TYPE_HTTP_DIRECT</H3>
+<PRE>
+public static java.lang.String <B>CONN_TYPE_HTTP_DIRECT</B></PRE>
+<DL>
+<DD>Connection Type: Direct HTTP Connection
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)"><CODE>setConnectionType(String)</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()"><CODE>getConnectionType()</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="CONN_TYPE_PROXY_SOCKS4"><!-- --></A><H3>
+CONN_TYPE_PROXY_SOCKS4</H3>
+<PRE>
+public static java.lang.String <B>CONN_TYPE_PROXY_SOCKS4</B></PRE>
+<DL>
+<DD>Connection Type: Socks4 Proxy
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)"><CODE>setConnectionType(String)</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()"><CODE>getConnectionType()</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="CONN_TYPE_PROXY_SOCKS5"><!-- --></A><H3>
+CONN_TYPE_PROXY_SOCKS5</H3>
+<PRE>
+public static java.lang.String <B>CONN_TYPE_PROXY_SOCKS5</B></PRE>
+<DL>
+<DD>Connection Type: Socks5 Proxy
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)"><CODE>setConnectionType(String)</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()"><CODE>getConnectionType()</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="CONN_TYPE_PROXY_HTTP"><!-- --></A><H3>
+CONN_TYPE_PROXY_HTTP</H3>
+<PRE>
+public static java.lang.String <B>CONN_TYPE_PROXY_HTTP</B></PRE>
+<DL>
+<DD>Connection Type: HTTP Proxy
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)"><CODE>setConnectionType(String)</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()"><CODE>getConnectionType()</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="CONN_TYPE_PROXY_HTTPS"><!-- --></A><H3>
+CONN_TYPE_PROXY_HTTPS</H3>
+<PRE>
+public static java.lang.String <B>CONN_TYPE_PROXY_HTTPS</B></PRE>
+<DL>
+<DD>Connection Type: HTTPS Proxy
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)"><CODE>setConnectionType(String)</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()"><CODE>getConnectionType()</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="CONN_TYPE_PROXY_REVERSE"><!-- --></A><H3>
+CONN_TYPE_PROXY_REVERSE</H3>
+<PRE>
+public static java.lang.String <B>CONN_TYPE_PROXY_REVERSE</B></PRE>
+<DL>
+<DD>Connection Type: Reverse Proxy
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#setConnectionType(java.lang.String)"><CODE>setConnectionType(String)</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#getConnectionType()"><CODE>getConnectionType()</CODE></A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="ConnectionContext()"><!-- --></A><H3>
+ConnectionContext</H3>
+<PRE>
+public <B>ConnectionContext</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="isDirty()"><!-- --></A><H3>
+isDirty</H3>
+<PRE>
+public boolean <B>isDirty</B>()</PRE>
+<DL>
+<DD>Returns whether or not any persistable field in this ConnectionContext is dirty so 
+ that we do not needlessly save the community configuration.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if any persistable field has changed, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setIsDirty(boolean)"><!-- --></A><H3>
+setIsDirty</H3>
+<PRE>
+public void <B>setIsDirty</B>(boolean&nbsp;isDirty)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConnectionType()"><!-- --></A><H3>
+getConnectionType</H3>
+<PRE>
+public java.lang.String <B>getConnectionType</B>()</PRE>
+<DL>
+<DD>Returns the the connection type used by this connection object.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The connection type.<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_BROWSER"><CODE>CONN_TYPE_BROWSER</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_DIRECT"><CODE>CONN_TYPE_DIRECT</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_HTTP_DIRECT"><CODE>CONN_TYPE_HTTP_DIRECT</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_HTTP"><CODE>CONN_TYPE_PROXY_HTTP</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_HTTPS"><CODE>CONN_TYPE_PROXY_HTTPS</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_REVERSE"><CODE>CONN_TYPE_PROXY_REVERSE</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_SOCKS4"><CODE>CONN_TYPE_PROXY_SOCKS4</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_SOCKS5"><CODE>CONN_TYPE_PROXY_SOCKS5</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_TLS_DIRECT"><CODE>CONN_TYPE_TLS_DIRECT</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setConnectionType(java.lang.String)"><!-- --></A><H3>
+setConnectionType</H3>
+<PRE>
+public void <B>setConnectionType</B>(java.lang.String&nbsp;connectionType)</PRE>
+<DL>
+<DD>Set the connection type to use with this connection object.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>connectionType</CODE> - Connection type.<DT><B>See Also:</B><DD><A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_BROWSER"><CODE>CONN_TYPE_BROWSER</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_DIRECT"><CODE>CONN_TYPE_DIRECT</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_HTTP_DIRECT"><CODE>CONN_TYPE_HTTP_DIRECT</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_HTTP"><CODE>CONN_TYPE_PROXY_HTTP</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_HTTPS"><CODE>CONN_TYPE_PROXY_HTTPS</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_REVERSE"><CODE>CONN_TYPE_PROXY_REVERSE</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_SOCKS4"><CODE>CONN_TYPE_PROXY_SOCKS4</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_PROXY_SOCKS5"><CODE>CONN_TYPE_PROXY_SOCKS5</CODE></A>, 
+<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html#CONN_TYPE_TLS_DIRECT"><CODE>CONN_TYPE_TLS_DIRECT</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProxyHost()"><!-- --></A><H3>
+getProxyHost</H3>
+<PRE>
+public java.lang.String <B>getProxyHost</B>()</PRE>
+<DL>
+<DD>Returns the connection's proxy host.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Proxy host if specified, null otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProxyHost(java.lang.String)"><!-- --></A><H3>
+setProxyHost</H3>
+<PRE>
+public void <B>setProxyHost</B>(java.lang.String&nbsp;proxyHost)</PRE>
+<DL>
+<DD>Set the proxy host to use with this connection.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>proxyHost</CODE> - Proxy host.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProxyPasswordKey()"><!-- --></A><H3>
+getProxyPasswordKey</H3>
+<PRE>
+public java.lang.String <B>getProxyPasswordKey</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProxyPasswordKey(java.lang.String)"><!-- --></A><H3>
+setProxyPasswordKey</H3>
+<PRE>
+public void <B>setProxyPasswordKey</B>(java.lang.String&nbsp;key)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProxyUserIsCommunityUser(boolean)"><!-- --></A><H3>
+setProxyUserIsCommunityUser</H3>
+<PRE>
+public void <B>setProxyUserIsCommunityUser</B>(boolean&nbsp;proxyUserIsCommunityUser)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProxyUserIsCommunityUser()"><!-- --></A><H3>
+getProxyUserIsCommunityUser</H3>
+<PRE>
+public boolean <B>getProxyUserIsCommunityUser</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProxyPassIsCommunityPassword(boolean)"><!-- --></A><H3>
+setProxyPassIsCommunityPassword</H3>
+<PRE>
+public void <B>setProxyPassIsCommunityPassword</B>(boolean&nbsp;proxyPassIsCommunityPassword)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProxyPassIsCommunityPassword()"><!-- --></A><H3>
+getProxyPassIsCommunityPassword</H3>
+<PRE>
+public boolean <B>getProxyPassIsCommunityPassword</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProxyPort()"><!-- --></A><H3>
+getProxyPort</H3>
+<PRE>
+public int <B>getProxyPort</B>()</PRE>
+<DL>
+<DD>Returns the connection's proxy port.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Proxy port.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProxyPort(int)"><!-- --></A><H3>
+setProxyPort</H3>
+<PRE>
+public void <B>setProxyPort</B>(int&nbsp;proxyPort)</PRE>
+<DL>
+<DD>Set the proxy port to use with this connection.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>proxyPort</CODE> - Proxy port.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="proxyResolvesLocally()"><!-- --></A><H3>
+proxyResolvesLocally</H3>
+<PRE>
+public boolean <B>proxyResolvesLocally</B>()</PRE>
+<DL>
+<DD>Returns whether the proxy host should resolve locally or not.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if proxy resolves locally, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProxyResolvesLocally(boolean)"><!-- --></A><H3>
+setProxyResolvesLocally</H3>
+<PRE>
+public void <B>setProxyResolvesLocally</B>(boolean&nbsp;proxyResolvesLocally)</PRE>
+<DL>
+<DD>Set whether the proxy should resolve locally or not.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>proxyResolvesLocally</CODE> - <code>true</code> if proxy resolves locally, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProxyUserName()"><!-- --></A><H3>
+getProxyUserName</H3>
+<PRE>
+public java.lang.String <B>getProxyUserName</B>()</PRE>
+<DL>
+<DD>Returns the connection's proxy user name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Proxy user name if specified, null otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProxyUserName(java.lang.String)"><!-- --></A><H3>
+setProxyUserName</H3>
+<PRE>
+public void <B>setProxyUserName</B>(java.lang.String&nbsp;proxyUserName)</PRE>
+<DL>
+<DD>Set the proxy user name for this connection.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>proxyUserName</CODE> - Proxy user name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getReverseProxyUrl()"><!-- --></A><H3>
+getReverseProxyUrl</H3>
+<PRE>
+public java.net.URL <B>getReverseProxyUrl</B>()
+                                throws java.net.MalformedURLException</PRE>
+<DL>
+<DD>Returns the connection's reverse proxy URL.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Reverse proxy URL if specified, null otherwise.
+<DT><B>Throws:</B>
+<DD><CODE>java.net.MalformedURLException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getReverseProxyUrlString()"><!-- --></A><H3>
+getReverseProxyUrlString</H3>
+<PRE>
+public java.lang.String <B>getReverseProxyUrlString</B>()</PRE>
+<DL>
+<DD>Returns the connection's reverse proxy URL.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Reverse proxy URL String if specified, null otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isUsingProxy()"><!-- --></A><H3>
+isUsingProxy</H3>
+<PRE>
+public boolean <B>isUsingProxy</B>()</PRE>
+<DL>
+<DD>Utility method to indicate whether the connection type is a proxy
+ (HTTP, HTTPS, Socks4, Socks5, Reverse)
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if connection is using a proxy, <code>false</code> otherwise.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../serialized-form.html"><FONT CLASS="NavBarFont1"><B>Serialized</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../../com/ibm/collaboration/realtime/im/community/config/CommunityConfig.html" title="class in com.ibm.collaboration.realtime.im.community.config"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../../index.html?com/ibm/collaboration/realtime/im/community/config/ConnectionContext.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ConnectionContext.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<font size='-1'><p>Licensed Materials - Property of IBM<br/>(C) Copyright IBM Corp. 2006, 2013  All Rights Reserved.</p></font>
+</BODY>
+</HTML>

@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<title>STEvent</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="STEvent";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/core/comparch/STEventListener.html" title="interface in com.lotus.sametime.core.comparch"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/core/comparch/STEvent.html" target="_top">Frames</a></li>
+<li><a href="STEvent.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_java.util.EventObject">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">com.lotus.sametime.core.comparch</div>
+<h2 title="Class STEvent" class="title">Class STEvent</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>java.util.EventObject</li>
+<li>
+<ul class="inheritance">
+<li>com.lotus.sametime.core.comparch.STEvent</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd>java.io.Serializable</dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../../com/lotus/sametime/placessa/ActivityServiceEvent.html" title="class in com.lotus.sametime.placessa">ActivityServiceEvent</a>, <a href="../../../../../com/lotus/sametime/community/AdminMsgEvent.html" title="class in com.lotus.sametime.community">AdminMsgEvent</a>, <a href="../../../../../com/lotus/sametime/onlinedirectory/AlertEvent.html" title="class in com.lotus.sametime.onlinedirectory">AlertEvent</a>, <a href="../../../../../com/lotus/sametime/announcement/AnnouncementEvent.html" title="class in com.lotus.sametime.announcement">AnnouncementEvent</a>, <a href="../../../../../com/lotus/sametime/awareness/AttributeEvent.html" title="class in com.lotus.sametime.awareness">AttributeEvent</a>, <a href="../../../../../com/lotus/sametime/generalawareness/AttributeEvent.html" title="class in com.lotus.sametime.generalawareness">AttributeEvent</a>, <a href="../../../../../com/lotus/sametime/community/AwarenessPermissionEvent.html" title="class in com.lotus.sametime.community">AwarenessPermissionEvent</a>, <a href="../../../../../com/lotus/sametime/awareness/AwarenessServiceEvent.html" title="class in com.lotus.sametime.awareness">AwarenessServiceEvent</a>, <a href="../../../../../com/lotus/sametime/awarenessui/AwarenessViewEvent.html" title="class in com.lotus.sametime.awarenessui">AwarenessViewEvent</a>, <a href="../../../../../com/lotus/sametime/buddylist/BLEvent.html" title="class in com.lotus.sametime.buddylist">BLEvent</a>, <a href="../../../../../com/lotus/sametime/cachedresolvemanager/api/CachedResolveErrorEvent.html" title="class in com.lotus.sametime.cachedresolvemanager.api">CachedResolveErrorEvent</a>, <a href="../../../../../com/lotus/sametime/cachedresolvemanager/CachedResolveEvent.html" title="class in com.lotus.sametime.cachedresolvemanager">CachedResolveEvent</a>, <a href="../../../../../com/lotus/sametime/capability/CapabilityEvent.html" title="class in com.lotus.sametime.capability">CapabilityEvent</a>, <a href="../../../../../com/lotus/sametime/capability/CapabilityImplEvent.html" title="class in com.lotus.sametime.capability">CapabilityImplEvent</a>, <a href="../../../../../com/lotus/sametime/community/ChannelEvent.html" title="class in com.lotus.sametime.community">ChannelEvent</a>, <a href="../../../../../com/lotus/sametime/commui/CommUIEvent.html" title="class in com.lotus.sametime.commui">CommUIEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/CommunityEventsServiceEvent.html" title="class in com.lotus.sametime.communityevents">CommunityEventsServiceEvent</a>, <a href="../../../../../com/lotus/sametime/conf/ConfEvent.html" title="class in com.lotus.sametime.conf">ConfEvent</a>, <a href="../../../../../com/lotus/sametime/configuration/ConfigChangeEvent.html" title="class in com.lotus.sametime.configuration">ConfigChangeEvent</a>, <a href="../../../../../com/lotus/sametime/configuration/ConfigServiceEvent.html" title="class in com.lotus.sametime.configuration">ConfigServiceEvent</a>, <a href="../../../../../com/lotus/sametime/directory/DirectoryEvent.html" title="class in com.lotus.sametime.directory">DirectoryEvent</a>, <a href="../../../../../com/lotus/sametime/directoryui/DirectoryListViewEvent.html" title="class in com.lotus.sametime.directoryui">DirectoryListViewEvent</a>, <a href="../../../../../com/lotus/sametime/filetransfer/FileTransferEvent.html" title="class in com.lotus.sametime.filetransfer">FileTransferEvent</a>, <a href="../../../../../com/lotus/sametime/filetransferui/FileTransferUIEvent.html" title="class in com.lotus.sametime.filetransferui">FileTransferUIEvent</a>, <a href="../../../../../com/lotus/sametime/generalawareness/GeneralAwarenessServiceEvent.html" title="class in com.lotus.sametime.generalawareness">GeneralAwarenessServiceEvent</a>, <a href="../../../../../com/lotus/sametime/genericadaptermanager/GenericErrorEvent.html" title="class in com.lotus.sametime.genericadaptermanager">GenericErrorEvent</a>, <a href="../../../../../com/lotus/sametime/genericadaptermanager/GenericEvent.html" title="class in com.lotus.sametime.genericadaptermanager">GenericEvent</a>, <a href="../../../../../com/lotus/sametime/lookup/GroupContentEvent.html" title="class in com.lotus.sametime.lookup">GroupContentEvent</a>, <a href="../../../../../com/lotus/sametime/groupsa/GroupSaEvent.html" title="class in com.lotus.sametime.groupsa">GroupSaEvent</a>, <a href="../../../../../com/lotus/sametime/homecluster/HomeClusterEvent.html" title="class in com.lotus.sametime.homecluster">HomeClusterEvent</a>, <a href="../../../../../com/lotus/sametime/im/ImEvent.html" title="class in com.lotus.sametime.im">ImEvent</a>, <a href="../../../../../com/lotus/sametime/interrupt/InterruptEvent.html" title="class in com.lotus.sametime.interrupt">InterruptEvent</a>, <a href="../../../../../com/lotus/sametime/core/comparch/InvokeEvent.html" title="class in com.lotus.sametime.core.comparch">InvokeEvent</a>, <a href="../../../../../com/lotus/sametime/onlinedirectory/LocateEvent.html" title="class in com.lotus.sametime.onlinedirectory">LocateEvent</a>, <a href="../../../../../com/lotus/sametime/location/LocationEvent.html" title="class in com.lotus.sametime.location">LocationEvent</a>, <a href="../../../../../com/lotus/sametime/loginattribute/LoginAttributeEvent.html" title="class in com.lotus.sametime.loginattribute">LoginAttributeEvent</a>, <a href="../../../../../com/lotus/sametime/community/LoginEvent.html" title="class in com.lotus.sametime.community">LoginEvent</a>, <a href="../../../../../com/lotus/sametime/lookup/LookupEvent.html" title="class in com.lotus.sametime.lookup">LookupEvent</a>, <a href="../../../../../com/lotus/sametime/lookupsa/LookupSAEvent.html" title="class in com.lotus.sametime.lookupsa">LookupSAEvent</a>, <a href="../../../../../com/lotus/sametime/placessa/MessageEvent.html" title="class in com.lotus.sametime.placessa">MessageEvent</a>, <a href="../../../../../com/lotus/sametime/community/MultiCastEvent.html" title="class in com.lotus.sametime.community">MultiCastEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/MultipleSelectiveStatusListEvent.html" title="class in com.lotus.sametime.communityevents">MultipleSelectiveStatusListEvent</a>, <a href="../../../../../com/lotus/sametime/community/MyNameEvent.html" title="class in com.lotus.sametime.community">MyNameEvent</a>, <a href="../../../../../com/lotus/sametime/community/MyPrivacyEvent.html" title="class in com.lotus.sametime.community">MyPrivacyEvent</a>, <a href="../../../../../com/lotus/sametime/places/MyselfEvent.html" title="class in com.lotus.sametime.places">MyselfEvent</a>, <a href="../../../../../com/lotus/sametime/community/MyStatusEvent.html" title="class in com.lotus.sametime.community">MyStatusEvent</a>, <a href="../../../../../com/lotus/sametime/names/NamesEvent.html" title="class in com.lotus.sametime.names">NamesEvent</a>, <a href="../../../../../com/lotus/sametime/onlinedirectory/OnlineDirectoryServiceEvent.html" title="class in com.lotus.sametime.onlinedirectory">OnlineDirectoryServiceEvent</a>, <a href="../../../../../com/lotus/sametime/community/OTMEvent.html" title="class in com.lotus.sametime.community">OTMEvent</a>, <a href="../../../../../com/lotus/sametime/places/PlaceEvent.html" title="class in com.lotus.sametime.places">PlaceEvent</a>, <a href="../../../../../com/lotus/sametime/placessa/PlaceEvent.html" title="class in com.lotus.sametime.placessa">PlaceEvent</a>, <a href="../../../../../com/lotus/sametime/places/PlaceMemberEvent.html" title="class in com.lotus.sametime.places">PlaceMemberEvent</a>, <a href="../../../../../com/lotus/sametime/placessa/PlaceMemberEvent.html" title="class in com.lotus.sametime.placessa">PlaceMemberEvent</a>, <a href="../../../../../com/lotus/sametime/placessa/PlacesAdminEvent.html" title="class in com.lotus.sametime.placessa">PlacesAdminEvent</a>, <a href="../../../../../com/lotus/sametime/placessa/PlacesDirectoryEvent.html" title="class in com.lotus.sametime.placessa">PlacesDirectoryEvent</a>, <a href="../../../../../com/lotus/sametime/places/PlacesServiceEvent.html" title="class in com.lotus.sametime.places">PlacesServiceEvent</a>, <a href="../../../../../com/lotus/sametime/policy/PolicyEvent.html" title="class in com.lotus.sametime.policy">PolicyEvent</a>, <a href="../../../../../com/lotus/sametime/post/PostEvent.html" title="class in com.lotus.sametime.post">PostEvent</a>, <a href="../../../../../com/lotus/sametime/reflector/ReflectorEvent.html" title="class in com.lotus.sametime.reflector">ReflectorEvent</a>, <a href="../../../../../com/lotus/sametime/reflector/ReflectorFinderEvent.html" title="class in com.lotus.sametime.reflector">ReflectorFinderEvent</a>, <a href="../../../../../com/lotus/sametime/lookup/ResolveEvent.html" title="class in com.lotus.sametime.lookup">ResolveEvent</a>, <a href="../../../../../com/lotus/sametime/commui/ResolveViewEvent.html" title="class in com.lotus.sametime.commui">ResolveViewEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/SALoginEvent.html" title="class in com.lotus.sametime.communityevents">SALoginEvent</a>, <a href="../../../../../com/lotus/sametime/lookupsa/SAResolveEvent.html" title="class in com.lotus.sametime.lookupsa">SAResolveEvent</a>, <a href="../../../../../com/lotus/sametime/places/SectionEvent.html" title="class in com.lotus.sametime.places">SectionEvent</a>, <a href="../../../../../com/lotus/sametime/placessa/SectionEvent.html" title="class in com.lotus.sametime.placessa">SectionEvent</a>, <a href="../../../../../com/lotus/sametime/telephonymanager/SelectedAttributeEvent.html" title="class in com.lotus.sametime.telephonymanager">SelectedAttributeEvent</a>, <a href="../../../../../com/lotus/sametime/selectivestatus/SelectiveStatusEvent.html" title="class in com.lotus.sametime.selectivestatus">SelectiveStatusEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/SendSnapshotEvent.html" title="class in com.lotus.sametime.communityevents">SendSnapshotEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/ServiceAvailableEvent.html" title="class in com.lotus.sametime.communityevents">ServiceAvailableEvent</a>, <a href="../../../../../com/lotus/sametime/community/ServiceEvent.html" title="class in com.lotus.sametime.community">ServiceEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/SingleSelectiveStatusListEvent.html" title="class in com.lotus.sametime.communityevents">SingleSelectiveStatusListEvent</a>, <a href="../../../../../com/lotus/sametime/awareness/StatusEvent.html" title="class in com.lotus.sametime.awareness">StatusEvent</a>, <a href="../../../../../com/lotus/sametime/core/comparch/STCompEvent.html" title="class in com.lotus.sametime.core.comparch">STCompEvent</a>, <a href="../../../../../com/lotus/sametime/storage/StorageEvent.html" title="class in com.lotus.sametime.storage">StorageEvent</a>, <a href="../../../../../com/lotus/sametime/storagesa/StorageEvent.html" title="class in com.lotus.sametime.storagesa">StorageEvent</a>, <a href="../../../../../com/lotus/sametime/telephonymanager/api/TelephonyAdapterErrorEvent.html" title="class in com.lotus.sametime.telephonymanager.api">TelephonyAdapterErrorEvent</a>, <a href="../../../../../com/lotus/sametime/telephonymanager/TelephonyEvent.html" title="class in com.lotus.sametime.telephonymanager">TelephonyEvent</a>, <a href="../../../../../com/lotus/sametime/token/TokenEvent.html" title="class in com.lotus.sametime.token">TokenEvent</a>, <a href="../../../../../com/lotus/sametime/userattributesa/UserAttributeSAEvent.html" title="class in com.lotus.sametime.userattributesa">UserAttributeSAEvent</a>, <a href="../../../../../com/lotus/sametime/userattributesa/UserAttributeSAServiceEvent.html" title="class in com.lotus.sametime.userattributesa">UserAttributeSAServiceEvent</a>, <a href="../../../../../com/lotus/sametime/userinfo/UserInfoEvent.html" title="class in com.lotus.sametime.userinfo">UserInfoEvent</a>, <a href="../../../../../com/lotus/sametime/placessa/UserInPlaceEvent.html" title="class in com.lotus.sametime.placessa">UserInPlaceEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/UserLoginEvent.html" title="class in com.lotus.sametime.communityevents">UserLoginEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/UserLoginFailedEvent.html" title="class in com.lotus.sametime.communityevents">UserLoginFailedEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/UserOnlineEvent.html" title="class in com.lotus.sametime.communityevents">UserOnlineEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/UserPrivacyEvent.html" title="class in com.lotus.sametime.communityevents">UserPrivacyEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/UserPrivacyModeEvent.html" title="class in com.lotus.sametime.communityevents">UserPrivacyModeEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/UserStatusEvent.html" title="class in com.lotus.sametime.communityevents">UserStatusEvent</a>, <a href="../../../../../com/lotus/sametime/communityevents/UserStorageEvent.html" title="class in com.lotus.sametime.communityevents">UserStorageEvent</a>, <a href="../../../../../com/lotus/sametime/buddylist/xml/XmlBuddyListEvent.html" title="class in com.lotus.sametime.buddylist.xml">XmlBuddyListEvent</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <span class="strong">STEvent</span>
+extends java.util.EventObject</pre>
+<div class="block">A Sametime event. The methods in this class are used internally by
+ Sametime components.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../serialized-form.html#com.lotus.sametime.core.comparch.STEvent">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_java.util.EventObject">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;java.util.EventObject</h3>
+<code>source</code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../com/lotus/sametime/core/comparch/STEvent.html#STEvent(java.lang.Object, int)">STEvent</a></strong>(java.lang.Object&nbsp;source,
+       int&nbsp;id)</code>
+<div class="block">Constructs a new Sametime event.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/comparch/STEvent.html#getId()">getId</a></strong>()</code>
+<div class="block">Gets the ID.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/comparch/STEvent.html#isConsumed()">isConsumed</a></strong>()</code>
+<div class="block">Whether the event was consumed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/comparch/STEvent.html#setConsumed(boolean)">setConsumed</a></strong>(boolean&nbsp;state)</code>
+<div class="block">Sets the 'consumed' state of the event.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/lotus/sametime/core/comparch/STEvent.html#toString()">toString</a></strong>()</code>
+<div class="block">Returns a string representation of this event.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.util.EventObject">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.util.EventObject</h3>
+<code>getSource</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="STEvent(java.lang.Object, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>STEvent</h4>
+<pre>public&nbsp;STEvent(java.lang.Object&nbsp;source,
+       int&nbsp;id)</pre>
+<div class="block">Constructs a new Sametime event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - The event source.</dd><dd><code>id</code> - The event ID.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getId</h4>
+<pre>public&nbsp;int&nbsp;getId()</pre>
+<div class="block">Gets the ID.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The ID of this event.</dd></dl>
+</li>
+</ul>
+<a name="isConsumed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isConsumed</h4>
+<pre>public&nbsp;boolean&nbsp;isConsumed()</pre>
+<div class="block">Whether the event was consumed.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>True if the event was consumed, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="setConsumed(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setConsumed</h4>
+<pre>public&nbsp;void&nbsp;setConsumed(boolean&nbsp;state)</pre>
+<div class="block">Sets the 'consumed' state of the event.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>state</code> - True if consumed, false otherwise.</dd></dl>
+</li>
+</ul>
+<a name="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;toString()</pre>
+<div class="block">Returns a string representation of this event.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.util.EventObject</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>A string representation of this event.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a>
+<div class="skip"><a href="#skip-navbar_bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../com/lotus/sametime/core/comparch/STCompPart.html" title="class in com.lotus.sametime.core.comparch"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/lotus/sametime/core/comparch/STEventListener.html" title="interface in com.lotus.sametime.core.comparch"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?com/lotus/sametime/core/comparch/STEvent.html" target="_top">Frames</a></li>
+<li><a href="STEvent.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_java.util.EventObject">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>

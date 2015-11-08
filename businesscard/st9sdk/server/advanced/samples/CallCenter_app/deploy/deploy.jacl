@@ -1,0 +1,209 @@
+# ***************************************************************** 
+#                                                                   
+# Licensed Materials - Property of IBM                              
+#                                                                   
+# 5724-E76, 5724-L21, 5724-i67, 5724-L64, 5655-M44                  
+#                                                                   
+# Copyright IBM Corp. 2014  All Rights Reserved.                    
+#                                                                   
+# US Government Users Restricted Rights - Use, duplication or       
+# disclosure restricted by GSA ADP Schedule Contract with           
+# IBM Corp.                                                         
+#                                                                   
+# ***************************************************************** 
+
+set serverName server1
+
+set JdbcProvider ""
+
+set db2jarDirectory "" 
+
+set fileName C:\\CallCenter.ear
+
+set appName "Call Center STA Sample"
+
+proc getString { message { default "" } } {
+
+	set value ""
+
+	while { [ string length $value ] == 0 } {
+		puts ""
+		  if { [ string length $default ] != 0 } {
+			puts "$message (Enter for default $default)"
+		  } else {
+			puts $message
+		}
+		gets stdin value
+
+		if { [ string length $value ] == 0 && [ string length $default ] != 0 } { 
+			set value $default
+		}
+	  } 
+
+	return $value
+}
+
+proc startServer { serverName } {
+
+    global WAS_INSTALL_ROOT 
+
+    
+    puts ""
+    puts "Starting server $serverName"
+
+    exec "$WAS_INSTALL_ROOT\\profiles\\ST_Advanced_Profile\\bin\\startServer.bat" $serverName
+
+    puts "Started server $serverName"
+    puts ""
+}
+
+
+proc createDerbyJdbcDriverProvider { scope name derbyJarDirectory } {
+
+	global AdminConfig 
+	
+
+	set providerName [ list name $name ]
+	set providerType [ list providerType "Derby JDBC Driver Provider" ]	
+	set classpath [ list classpath $derbyJarDirectory ]
+
+	set implementationClassName [ list implementationClassName org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource ]
+	
+
+	set jdbcProviderAttr [ list $providerName $providerType $implementationClassName $classpath ]
+
+	puts ""
+		puts "Creating Derby JDBC Provider"
+		puts "    name:      $name "
+	puts "    classpath: $derbyJarDirectory "
+	puts ""
+
+	$AdminConfig create JDBCProvider $scope $jdbcProviderAttr
+}
+
+proc createDerbyJdbcDataSource { provider name jndiName dbName} {
+
+	global serverName
+	global AdminConfig 
+	
+
+	set wasRra [ $AdminConfig getid "/Server:$serverName/J2CResourceAdapter:WebSphere Relational Resource Adapter/" ]
+
+	set dsName [ list name $name ]
+	set dsJndiName [ list jndiName $jndiName ]
+	set dsHelperClass [ list datasourceHelperClassname com.ibm.websphere.rsadapter.DerbyDataStoreHelper ] 
+	set dsRRA [ list relationalResourceAdapter $wasRra ]
+
+	set dbNameAttr [ list [ list name databaseName ] [ list value $dbName ] [ list type java.lang.String ] ]
+	set dbDriverType [ list [ list name driverType ] [ list value 4 ] [ list type java.lang.Integer ] ]
+	set dsAttrList [ list $dbNameAttr $dbDriverType ]
+	set dsResProps [ list resourceProperties $dsAttrList ]
+	set dsPropertySet [ list propertySet [ list $dsResProps ] ] 
+
+	set dsAttr [ list $dsName $dsJndiName $dsHelperClass $dsRRA $dsPropertySet ]
+
+	puts ""
+		puts "Creating Derby JDBC Data Source"
+		puts "    name:                 $name "
+		puts "    JNDI name:            $jndiName "
+		puts "    database name:        $dbName "
+	puts ""
+
+	$AdminConfig create DataSource $provider $dsAttr
+}
+
+###################################
+#
+# Main script
+#
+###################################
+
+
+# Getting parameters
+
+set confirm ""
+while { $confirm != "Y" && $confirm != "y"   } {
+
+	set serverName [ getString "Enter the WAS app server name" $serverName ]
+	set fileName [ getString "Enter the file path for Call Center sample app EAR" $fileName ]
+
+
+	puts ""
+	puts "Application Server Name:       $serverName "
+	puts "Call Center EAR file path:     $fileName "
+	puts ""
+
+
+	set confirm ""
+	while { $confirm != "Y" && $confirm != "N" && $confirm != "y" && $confirm != "n" } {
+		set confirm [ getString "Is the information entered correct (Y/N) ?" ]
+	}
+}
+
+# Environment
+
+set cellName [ $AdminControl getCell ]
+set nodeName [ $AdminControl getNode ]
+
+
+set node [ $AdminConfig getid "/Node:$nodeName/" ]
+set server [ $AdminConfig getid "/Node:$nodeName/Server:$serverName/" ]
+
+
+set WAS_INSTALL_ROOT [ $AdminTask showVariables [ list -scope "Node=$nodeName" -variableName WAS_INSTALL_ROOT ] ]
+
+set derbyJarDirectory [ $AdminTask showVariables [ list -scope "Node=$nodeName" -variableName DERBY_JDBC_DRIVER_PATH ] ]
+
+set flag "false"
+#Get existing Derby JDBC Provider
+set jps [$AdminConfig list JDBCProvider]
+foreach jp $jps {
+	set jpname [lindex [lindex [$AdminConfig show $jp {name}] 0] 1]
+	if {($jpname == "Derby JDBC Provider")} {
+		puts ""
+		puts "Derby JDBC Provider already exists"
+		set JdbcProvider $jp
+		set flag "true"
+		break
+	}
+}
+
+if {($flag == "false")} {	
+	JdbcProvider [ createDerbyJdbcDriverProvider $server "Derby JDBC Provider" $derbyJarDirectory ]
+}
+
+set staDataSource [ createDerbyJdbcDataSource $JdbcProvider CallCenterSource jdbc/CallCenterDB "CallCenterDB"]
+
+#$AdminConfig save
+#$AdminControl stopServer $serverName
+#startServer $serverName
+
+#Install Call Center ear
+puts ""
+puts "Now installing call center EAR"
+puts ""
+
+set temp [catch { set  installed [$AdminApp install $fileName "-node $nodeName -server $serverName"] } errMsg ]
+if { $temp != 0 } {
+		set msg "Exception installing EAR $fileName to $nodeName $serverName"
+		puts "AdminApp.install Exception=$errMsg"
+}
+if { [llength $installed] > 0 } {
+		puts $installed
+}
+
+$AdminConfig save
+
+#start application 
+set appMgrID [$AdminControl queryNames type=ApplicationManager,node=$nodeName,process=$serverName,*]
+set temp [ catch { set  started [$AdminControl invoke $appMgrID startApplication [list $appName ] ] } ]
+if { [llength $started] > 0 } {
+	puts $started
+}
+
+puts ""
+puts "Application deployed successfully"
+puts ""
+
+
+set temp [catch {set  started [$AdminControl invoke $appMgrID startApplication CallCenter.ear]}]

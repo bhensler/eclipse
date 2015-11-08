@@ -1,0 +1,1 @@
+For instructions and background on this service, see the orgtree-devguide.pdf in the Sametime SDK.

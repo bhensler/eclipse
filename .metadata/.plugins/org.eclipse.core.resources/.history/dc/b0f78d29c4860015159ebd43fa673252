@@ -1,0 +1,158 @@
+package com.sametime.bb;
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Properties;
+import java.util.Base64;
+
+import com.ibm.sametime.userinfo.userInfobbapi.DetailItem;
+import com.ibm.sametime.userinfo.userInfobbapi.RequestContext;
+import com.ibm.sametime.userinfo.userInfobbapi.Response;
+import com.ibm.sametime.userinfo.userInfobbapi.UserInfoBlackBoxAPI;
+import com.ibm.sametime.userinfo.userInfobbapi.UserInfoException;
+
+public class ConnectionsStandaloneBlackbox implements UserInfoBlackBoxAPI {
+
+	// constants
+	private static final String SQL = "SELECT EMPL.PROF_UID UID";
+
+	// declarations
+	private boolean valid = false;
+	private String url = null;
+	private String username = null;
+	private String password = null;
+
+	public void init() throws UserInfoException {
+		try {
+			// load class
+			Class.forName("com.ibm.db2.jcc.DB2Driver");
+
+			// read properties
+			FileInputStream fin = new FileInputStream("LCUserInfoConfig.properties");
+			Properties props = new Properties();
+			props.load(fin);
+
+			// read properties
+			this.url = props.getProperty("url");
+			this.username = props.getProperty("username");
+			this.password = props.getProperty("password");
+
+			// close file and mark valid
+			fin.close();
+			this.valid = true;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new UserInfoException("Unable to initialize");
+		}
+	}
+
+	public Response processRequest(RequestContext ctx) throws UserInfoException {
+		// declarations
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		// create empty response
+		Response response = new Response();
+
+		// only process request if the blackbox is correctly configured
+		if (!this.valid) {
+			return response;
+		}
+
+		// get user id
+		String userid = ctx.getUid();
+
+		try {
+			// perform database lookup
+
+			conn = DriverManager.getConnection(this.url, this.username, this.password);
+			ps = conn.prepareStatement(SQL);
+			ps.setString(1, userid);
+			rs = ps.executeQuery();
+
+			if (rs.next()) {
+				String display_name = rs.getString("dsp_name");
+				String blog_url = rs.getString("blog_url");
+				String title = rs.getString("title");
+				String timezone = rs.getString("timezone");
+				byte[] photo_bytes = rs.getBytes("photo_bytes");
+				String mimetype = rs.getString("photo_mimetype");
+
+				// set data in response
+				response.setRetrievedDetail("MailAddress", this.createTextDetailItem("MailAddress", userid));
+				response.setRetrievedDetail("Name", this.createTextDetailItem("Name", display_name));
+				response.setRetrievedDetail("Title", this.createTextDetailItem("Title", title));
+				response.setRetrievedDetail("Telephone", this.createTextDetailItem("Telephone", timezone));
+				response.setRetrievedDetail("Company", this.createTextDetailItem("Company", blog_url));
+				response.setRetrievedDetail("Photo", this.createImageDetailItem("Photo", mimetype, photo_bytes));
+			}
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+
+			// return empty response
+			return response;
+
+		} finally {
+			// release resources
+			if (null != rs) {
+				try {
+					rs.close();
+				} catch (Exception e) {
+				}
+			}
+
+			if (null != ps) {
+				try {
+					ps.close();
+				} catch (Exception e) {
+				}
+			}
+
+			if (null != conn) {
+				try {
+					conn.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+
+		// return
+		return response;
+	}
+
+	public void terminate() {
+
+	}
+
+	private DetailItem createTextDetailItem(String name, String value) {
+		DetailItem i = new DetailItem();
+		i.setName(name);
+		i.setType("text/plain");
+		i.setTextValue(this.nullSafeString(value));
+		return i;
+	}
+
+	private DetailItem createImageDetailItem(String name, String mimetype, byte[] bytes) {
+		DetailItem i = new DetailItem();
+		i.setName(name);
+		if (null != mimetype && mimetype.equalsIgnoreCase("image/pjpeg")) {
+			i.setType("image/jpeg");
+		} else {
+			i.setType("image/gif");
+		}
+		String base64 = Base64.encodeBytes(bytes, Base64.DONT_BREAK_LINES);
+		i.setTextValue(base64);
+		return i;
+	}
+
+	private String nullSafeString(String s) {
+		return (null == s) ? "" : s;
+	}
+}
